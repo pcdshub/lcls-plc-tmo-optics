@@ -108,9 +108,9 @@ Axis 3: M1K4-Xup
     Enc:Offset, -24000.3
     Enc:ScaleFactorNumerator, 0.001
     Enc:SoftEndMaxControl:Enable, true
-    Enc:SoftEndMaxControl:Range, 1943
+    Enc:SoftEndMaxControl:Range, 1500
     Enc:SoftEndMinControl:Enable, true
-    Enc:SoftEndMinControl:Range, -676.2
+    Enc:SoftEndMinControl:Range, -1500
     General:UnitName, um
     Id, 3
     OtherSettings:AllowMotionCmdToSlave, true
@@ -141,7 +141,7 @@ Axis 4: M1K4-Xdwn
     Enc:SoftEndMaxControl:Enable, true
     Enc:SoftEndMaxControl:Range, 2048.5
     Enc:SoftEndMinControl:Enable, true
-    Enc:SoftEndMinControl:Range, -770.4
+    Enc:SoftEndMinControl:Range, -2000
     General:UnitName, um
     Id, 4
     OtherSettings:AllowMotionCmdToSlave, true
@@ -170,9 +170,9 @@ Axis 5: M1K4-Pitch
     Enc:Offset, -19509
     Enc:ScaleFactorNumerator, 0.001949317739
     Enc:SoftEndMaxControl:Enable, true
-    Enc:SoftEndMaxControl:Range, 2369.1
+    Enc:SoftEndMaxControl:Range, 275
     Enc:SoftEndMinControl:Enable, true
-    Enc:SoftEndMinControl:Range, -2129.8
+    Enc:SoftEndMinControl:Range, -25
     General:UnitName, urad
     Id, 5
     OtherSettings:AllowMotionCmdToSlave, true

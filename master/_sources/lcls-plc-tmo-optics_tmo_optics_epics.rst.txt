@@ -3,7 +3,7 @@ Data Types
 ----------
 
 
-    
+   
 LCLS_General.FB_BasicStats
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1013,7 +1013,7 @@ LCLS_General.ST_PendingEvent
       - | io: input
 
 
-                                        
+                      
 lcls_twincat_motion.DUT_MotionStage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -10273,7 +10273,7 @@ ST_PMPS_Aperture_IO
         | io: input
 
 
-                                                                                                            
+                                                                                                           
 Database Records
 ----------------
 
@@ -12790,11 +12790,113 @@ Database Records
       - | io: input
 
 
+    * - MR2K4:KBO:ENC:BEND:DS:ACTPOSARRAY_RBV
+      - waveform
+      - Main.fbBendDSRMSErrorM2K4.aEncActPos
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:BEND:DS:MEAN_RBV
+      - ai
+      - Main.fbBendDSRMSErrorM2K4.fEncMean
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:BEND:DS:RMS_RBV
+      - ai
+      - Main.fbBendDSRMSErrorM2K4.fCurrRMSError
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:BEND:DS:SETPOSARRAY_RBV
+      - waveform
+      - Main.fbBendDSRMSErrorM2K4.aEncSetPos
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:BEND:DS:STDEV_RBV
+      - ai
+      - Main.fbBendDSRMSErrorM2K4.fEncStDev
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:BEND:US:ACTPOSARRAY_RBV
+      - waveform
+      - Main.fbBendUSRMSErrorM2K4.aEncActPos
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:BEND:US:MEAN_RBV
+      - ai
+      - Main.fbBendUSRMSErrorM2K4.fEncMean
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:BEND:US:RMS_RBV
+      - ai
+      - Main.fbBendUSRMSErrorM2K4.fCurrRMSError
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:BEND:US:SETPOSARRAY_RBV
+      - waveform
+      - Main.fbBendUSRMSErrorM2K4.aEncSetPos
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:BEND:US:STDEV_RBV
+      - ai
+      - Main.fbBendUSRMSErrorM2K4.fEncStDev
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:PITCH:ACTPOSARRAY_RBV
+      - waveform
+      - Main.fbrYRMSErrorM2K4.aEncActPos
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:PITCH:MEAN_RBV
+      - ai
+      - Main.fbrYRMSErrorM2K4.fEncMean
+      - | io: input
+
+
     * - MR2K4:KBO:ENC:PITCH:REF_RBV
       - longin
       - Main.nEncRefrYM2K4
       - | field: EGU cnt
         | io: input
+
+
+    * - MR2K4:KBO:ENC:PITCH:RMS_RBV
+      - ai
+      - Main.fbrYRMSErrorM2K4.fCurrRMSError
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:PITCH:SETPOSARRAY_RBV
+      - waveform
+      - Main.fbrYRMSErrorM2K4.aEncSetPos
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:PITCH:STDEV_RBV
+      - ai
+      - Main.fbrYRMSErrorM2K4.fEncStDev
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:X:ACTPOSARRAY_RBV
+      - waveform
+      - Main.fbXRMSErrorM2K4.aEncActPos
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:X:MEAN_RBV
+      - ai
+      - Main.fbXRMSErrorM2K4.fEncMean
+      - | io: input
 
 
     * - MR2K4:KBO:ENC:X:REF_RBV
@@ -12804,11 +12906,59 @@ Database Records
         | io: input
 
 
+    * - MR2K4:KBO:ENC:X:RMS_RBV
+      - ai
+      - Main.fbXRMSErrorM2K4.fCurrRMSError
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:X:SETPOSARRAY_RBV
+      - waveform
+      - Main.fbXRMSErrorM2K4.aEncSetPos
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:X:STDEV_RBV
+      - ai
+      - Main.fbXRMSErrorM2K4.fEncStDev
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:Y:ACTPOSARRAY_RBV
+      - waveform
+      - Main.fbYRMSErrorM2K4.aEncActPos
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:Y:MEAN_RBV
+      - ai
+      - Main.fbYRMSErrorM2K4.fEncMean
+      - | io: input
+
+
     * - MR2K4:KBO:ENC:Y:REF_RBV
       - longin
       - Main.nEncRefYM2K4
       - | field: EGU cnt
         | io: input
+
+
+    * - MR2K4:KBO:ENC:Y:RMS_RBV
+      - ai
+      - Main.fbYRMSErrorM2K4.fCurrRMSError
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:Y:SETPOSARRAY_RBV
+      - waveform
+      - Main.fbYRMSErrorM2K4.aEncSetPos
+      - | io: input
+
+
+    * - MR2K4:KBO:ENC:Y:STDEV_RBV
+      - ai
+      - Main.fbYRMSErrorM2K4.fEncStDev
+      - | io: input
 
 
     * - MR2K4:KBO:MMS:BEND:DS:PLC:bAllBackwardEnable_RBV
@@ -14394,49 +14544,121 @@ Database Records
     * - MR2K4:KBO:RTD:BEND:DS:1_RBV
       - ai
       - Main.fM2K4DS_RTD_1
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
 
 
     * - MR2K4:KBO:RTD:BEND:DS:2_RBV
       - ai
       - Main.fM2K4DS_RTD_2
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
 
 
     * - MR2K4:KBO:RTD:BEND:DS:3_RBV
       - ai
       - Main.fM2K4DS_RTD_3
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
 
 
     * - MR2K4:KBO:RTD:BEND:US:1_RBV
       - ai
       - Main.fM2K4US_RTD_1
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
 
 
     * - MR2K4:KBO:RTD:BEND:US:2_RBV
       - ai
       - Main.fM2K4US_RTD_2
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
 
 
     * - MR2K4:KBO:RTD:BEND:US:3_RBV
       - ai
       - Main.fM2K4US_RTD_3
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
+
+
+    * - MR3K4:KBO:ENC:BEND:DS:ACTPOSARRAY_RBV
+      - waveform
+      - Main.fbBendDSRMSErrorM3K4.aEncActPos
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:BEND:DS:MEAN_RBV
+      - ai
+      - Main.fbBendDSRMSErrorM3K4.fEncMean
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:BEND:DS:RMS_RBV
+      - ai
+      - Main.fbBendDSRMSErrorM3K4.fCurrRMSError
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:BEND:DS:SETPOSARRAY_RBV
+      - waveform
+      - Main.fbBendDSRMSErrorM3K4.aEncSetPos
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:BEND:DS:STDEV_RBV
+      - ai
+      - Main.fbBendDSRMSErrorM3K4.fEncStDev
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:BEND:US:ACTPOSARRAY_RBV
+      - waveform
+      - Main.fbBendUSRMSErrorM3K4.aEncActPos
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:BEND:US:MEAN_RBV
+      - ai
+      - Main.fbBendUSRMSErrorM3K4.fEncMean
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:BEND:US:RMS_RBV
+      - ai
+      - Main.fbBendUSRMSErrorM3K4.fCurrRMSError
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:BEND:US:SETPOSARRAY_RBV
+      - waveform
+      - Main.fbBendUSRMSErrorM3K4.aEncSetPos
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:BEND:US:STDEV_RBV
+      - ai
+      - Main.fbBendUSRMSErrorM3K4.fEncStDev
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:PITCH:ACTPOSARRAY_RBV
+      - waveform
+      - Main.fbrXRMSErrorM3K4.aEncActPos
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:PITCH:MEAN_RBV
+      - ai
+      - Main.fbrXRMSErrorM3K4.fEncMean
+      - | io: input
 
 
     * - MR3K4:KBO:ENC:PITCH:REF_RBV
@@ -14446,6 +14668,36 @@ Database Records
         | io: input
 
 
+    * - MR3K4:KBO:ENC:PITCH:RMS_RBV
+      - ai
+      - Main.fbrXRMSErrorM3K4.fCurrRMSError
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:PITCH:SETPOSARRAY_RBV
+      - waveform
+      - Main.fbrXRMSErrorM3K4.aEncSetPos
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:PITCH:STDEV_RBV
+      - ai
+      - Main.fbrXRMSErrorM3K4.fEncStDev
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:X:ACTPOSARRAY_RBV
+      - waveform
+      - Main.fbXRMSErrorM3K4.aEncActPos
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:X:MEAN_RBV
+      - ai
+      - Main.fbXRMSErrorM3K4.fEncMean
+      - | io: input
+
+
     * - MR3K4:KBO:ENC:X:REF_RBV
       - longin
       - Main.nEncRefXM3K4
@@ -14453,11 +14705,59 @@ Database Records
         | io: input
 
 
+    * - MR3K4:KBO:ENC:X:RMS_RBV
+      - ai
+      - Main.fbXRMSErrorM3K4.fCurrRMSError
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:X:SETPOSARRAY_RBV
+      - waveform
+      - Main.fbXRMSErrorM3K4.aEncSetPos
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:X:STDEV_RBV
+      - ai
+      - Main.fbXRMSErrorM3K4.fEncStDev
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:Y:ACTPOSARRAY_RBV
+      - waveform
+      - Main.fbYRMSErrorM3K4.aEncActPos
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:Y:MEAN_RBV
+      - ai
+      - Main.fbYRMSErrorM3K4.fEncMean
+      - | io: input
+
+
     * - MR3K4:KBO:ENC:Y:REF_RBV
       - longin
       - Main.nEncRefYM3K4
       - | field: EGU cnt
         | io: input
+
+
+    * - MR3K4:KBO:ENC:Y:RMS_RBV
+      - ai
+      - Main.fbYRMSErrorM3K4.fCurrRMSError
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:Y:SETPOSARRAY_RBV
+      - waveform
+      - Main.fbYRMSErrorM3K4.aEncSetPos
+      - | io: input
+
+
+    * - MR3K4:KBO:ENC:Y:STDEV_RBV
+      - ai
+      - Main.fbYRMSErrorM3K4.fEncStDev
+      - | io: input
 
 
     * - MR3K4:KBO:MMS:BEND:DS:PLC:bAllBackwardEnable_RBV
@@ -16043,47 +16343,48 @@ Database Records
     * - MR3K4:KBO:RTD:BEND:DS:1_RBV
       - ai
       - Main.fM3K4DS_RTD_1
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
 
 
     * - MR3K4:KBO:RTD:BEND:DS:2_RBV
       - ai
       - Main.fM3K4DS_RTD_2
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
 
 
     * - MR3K4:KBO:RTD:BEND:DS:3_RBV
       - ai
       - Main.fM3K4DS_RTD_3
-      - | field: EGU cnt
+      - | field: ASLO 0.1
+        | field: EGU cnt
         | io: input
 
 
     * - MR3K4:KBO:RTD:BEND:US:1_RBV
       - ai
       - Main.fM3K4US_RTD_1
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
 
 
     * - MR3K4:KBO:RTD:BEND:US:2_RBV
       - ai
       - Main.fM3K4US_RTD_2
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
 
 
     * - MR3K4:KBO:RTD:BEND:US:3_RBV
       - ai
       - Main.fM3K4US_RTD_3
-      - | field: EGU C
-        | field: ESLO 0.1
+      - | field: ASLO 0.1
+        | field: EGU C
         | io: input
 
 

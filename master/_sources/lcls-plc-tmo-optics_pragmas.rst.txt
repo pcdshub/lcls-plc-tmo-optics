@@ -6,7 +6,7 @@ Pragmas
     :header: PLC Name, Total Pragmas, Errors
     :align: center
 
-    :ref:`tmo_optics <tmo_optics_overview_pragmas>`, 92, 0
+    :ref:`tmo_optics <tmo_optics_overview_pragmas>`, 102, 0
 
 
 .. _tmo_optics_overview_pragmas:
@@ -15,7 +15,7 @@ Pragmas
 tmo_optics
 ^^^^^^^^^^
 
-Total pragmas found: 92
+Total pragmas found: 102
 Total linter errors: 0
 
 
