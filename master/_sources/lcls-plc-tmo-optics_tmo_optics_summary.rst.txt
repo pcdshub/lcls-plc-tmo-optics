@@ -24,7 +24,7 @@ Settings
 Pragmas
 -------
 
-Total pragmas found: 66
+Total pragmas found: 92
 Total linter errors: 0
 
 
@@ -58,15 +58,15 @@ Constants
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        Constants.bFPUSupport, BOOL, 18968424 (8)
-        Constants.bLittleEndian, BOOL, 13174648 (8)
-        Constants.bSimulationMode, BOOL, 18968416 (8)
-        Constants.CompilerVersion, VERSION, 20648576 (64)
-        Constants.CompilerVersionNumeric, DWORD, 20648704 (32)
-        Constants.nPackMode, UINT, 20648640 (16)
-        Constants.nRegisterSize, WORD, 18968432 (16)
-        Constants.RuntimeVersion, VERSION, 20648512 (64)
-        Constants.RuntimeVersionNumeric, DWORD, 20648672 (32)
+        Constants.bFPUSupport, BOOL, 20649304 (8)
+        Constants.bLittleEndian, BOOL, 20649160 (8)
+        Constants.bSimulationMode, BOOL, 20649296 (8)
+        Constants.CompilerVersion, VERSION, 20649232 (64)
+        Constants.CompilerVersionNumeric, DWORD, 20649376 (32)
+        Constants.nPackMode, UINT, 20649328 (16)
+        Constants.nRegisterSize, WORD, 20649312 (16)
+        Constants.RuntimeVersion, VERSION, 20649168 (64)
+        Constants.RuntimeVersionNumeric, DWORD, 20649344 (32)
 
 
 DefaultGlobals
@@ -97,8 +97,8 @@ GVL_COM_Buffers
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_COM_Buffers.Serial_RXBuffer_M1K4, ComBuffer, 18963392 (2512)
-        GVL_COM_Buffers.Serial_TXBuffer_M1K4, ComBuffer, 18965904 (2512)
+        GVL_COM_Buffers.Serial_RXBuffer_M1K4, ComBuffer, 18963904 (2512)
+        GVL_COM_Buffers.Serial_TXBuffer_M1K4, ComBuffer, 18966416 (2512)
 
 
 GVL_Constants
@@ -164,8 +164,8 @@ GVL_M1K4
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_M1K4.M1K4_Pitch, HOMS_PitchMechanism, 18968448 (2496)
-        GVL_M1K4.M1K4_Pitch.diEncCnt, LINT, 18970880 (64)
+        GVL_M1K4.M1K4_Pitch, HOMS_PitchMechanism, 18968960 (2496)
+        GVL_M1K4.M1K4_Pitch.diEncCnt, LINT, 18971392 (64)
 
 
 GVL_M1K4_Constants
@@ -175,10 +175,10 @@ GVL_M1K4_Constants
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_M1K4_Constants.nXDWN_ENC_REF, ULINT, 18971136 (64)
-        GVL_M1K4_Constants.nXUP_ENC_REF, ULINT, 18971072 (64)
-        GVL_M1K4_Constants.nYDWN_ENC_REF, ULINT, 18971008 (64)
-        GVL_M1K4_Constants.nYUP_ENC_REF, ULINT, 18970944 (64)
+        GVL_M1K4_Constants.nXDWN_ENC_REF, ULINT, 18971648 (64)
+        GVL_M1K4_Constants.nXUP_ENC_REF, ULINT, 18971584 (64)
+        GVL_M1K4_Constants.nYDWN_ENC_REF, ULINT, 18971520 (64)
+        GVL_M1K4_Constants.nYUP_ENC_REF, ULINT, 18971456 (64)
 
 
 GVL_M2K4_Constants
@@ -188,9 +188,24 @@ GVL_M2K4_Constants
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_M2K4_Constants.nM2K4rY_ENC_REF, ULINT, 18971328 (64)
-        GVL_M2K4_Constants.nM2K4X_ENC_REF, ULINT, 18971200 (64)
-        GVL_M2K4_Constants.nM2K4Y_ENC_REF, ULINT, 18971264 (64)
+        GVL_M2K4_Constants.nM2K4rY_ENC_REF, ULINT, 18971840 (64)
+        GVL_M2K4_Constants.nM2K4X_ENC_REF, ULINT, 18971712 (64)
+        GVL_M2K4_Constants.nM2K4Y_ENC_REF, ULINT, 18971776 (64)
+
+
+GVL_M2K4_RTD
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_M2K4_RTD.nM2K4DS_RTD_1, INT, 18968944 (16)
+        GVL_M2K4_RTD.nM2K4DS_RTD_2, INT, 20649024 (16)
+        GVL_M2K4_RTD.nM2K4DS_RTD_3, INT, 20649040 (16)
+        GVL_M2K4_RTD.nM2K4US_RTD_1, INT, 13175136 (16)
+        GVL_M2K4_RTD.nM2K4US_RTD_2, INT, 13175152 (16)
+        GVL_M2K4_RTD.nM2K4US_RTD_3, INT, 18968928 (16)
 
 
 GVL_M3K4_Constants
@@ -200,9 +215,24 @@ GVL_M3K4_Constants
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_M3K4_Constants.nM3K4rX_ENC_REF, ULINT, 18971520 (64)
-        GVL_M3K4_Constants.nM3K4X_ENC_REF, ULINT, 18971392 (64)
-        GVL_M3K4_Constants.nM3K4Y_ENC_REF, ULINT, 18971456 (64)
+        GVL_M3K4_Constants.nM3K4rX_ENC_REF, ULINT, 18972032 (64)
+        GVL_M3K4_Constants.nM3K4X_ENC_REF, ULINT, 18971904 (64)
+        GVL_M3K4_Constants.nM3K4Y_ENC_REF, ULINT, 18971968 (64)
+
+
+GVL_M3K4_RTD
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_M3K4_RTD.nM3K4DS_RTD_1, INT, 20649104 (16)
+        GVL_M3K4_RTD.nM3K4DS_RTD_2, INT, 20649120 (16)
+        GVL_M3K4_RTD.nM3K4DS_RTD_3, INT, 20649136 (16)
+        GVL_M3K4_RTD.nM3K4US_RTD_1, INT, 20649056 (16)
+        GVL_M3K4_RTD.nM3K4US_RTD_2, INT, 20649072 (16)
+        GVL_M3K4_RTD.nM3K4US_RTD_3, INT, 20649088 (16)
 
 
 GVL_PMPS
@@ -212,12 +242,12 @@ GVL_PMPS
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_PMPS.g_FastFaultOutput1, FB_HardwareFFOutput, 18971584 (465408)
-        GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut, BOOL, 18971656 (8)
-        GVL_PMPS.g_FastFaultOutput2, FB_HardwareFFOutput, 19436992 (465408)
-        GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, BOOL, 19437064 (8)
-        GVL_PMPS.g_fbArbiter1, FB_Arbiter, 19902400 (372864)
-        GVL_PMPS.g_fbArbiter2, FB_Arbiter, 20275264 (372864)
+        GVL_PMPS.g_FastFaultOutput1, FB_HardwareFFOutput, 18972096 (465408)
+        GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut, BOOL, 18972168 (8)
+        GVL_PMPS.g_FastFaultOutput2, FB_HardwareFFOutput, 19437504 (465408)
+        GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, BOOL, 19437576 (8)
+        GVL_PMPS.g_fbArbiter1, FB_Arbiter, 19902912 (372864)
+        GVL_PMPS.g_fbArbiter2, FB_Arbiter, 20275776 (372864)
 
 
 GVL_Param_TcUnit
@@ -239,8 +269,8 @@ GVL_SerialIO
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_SerialIO.Serial_stComIn_M1K4, EL6inData22B, 20648128 (192)
-        GVL_SerialIO.Serial_stComOut_M1K4, EL6outData22B, 20648320 (192)
+        GVL_SerialIO.Serial_stComIn_M1K4, EL6inData22B, 20648640 (192)
+        GVL_SerialIO.Serial_stComOut_M1K4, EL6outData22B, 20648832 (192)
 
 
 GVL_TcUnit
@@ -637,7 +667,7 @@ Main
 .. raw:: html
 
    <details>
-       <summary>272 Symbols</summary>
+       <summary>297 Symbols</summary>
 
 .. csv-table::
     :header: Symbol, Type, Offset/Size
@@ -645,9 +675,21 @@ Main
 
         Main.bM1K4PitchBusy, BOOL, 8563640 (8)
         Main.bM1K4PitchDone, BOOL, 8563632 (8)
+        Main.bM2K4DS_RTD_1_Err, BOOL, 13175048 (8)
+        Main.bM2K4DS_RTD_2_Err, BOOL, 13175056 (8)
+        Main.bM2K4DS_RTD_3_Err, BOOL, 13175064 (8)
+        Main.bM2K4US_RTD_1_Err, BOOL, 13174640 (8)
+        Main.bM2K4US_RTD_2_Err, BOOL, 13174648 (8)
+        Main.bM2K4US_RTD_3_Err, BOOL, 13175040 (8)
+        Main.bM3K4DS_RTD_1_Err, BOOL, 13175096 (8)
+        Main.bM3K4DS_RTD_2_Err, BOOL, 13175104 (8)
+        Main.bM3K4DS_RTD_3_Err, BOOL, 13175112 (8)
+        Main.bM3K4US_RTD_1_Err, BOOL, 13175072 (8)
+        Main.bM3K4US_RTD_2_Err, BOOL, 13175080 (8)
+        Main.bM3K4US_RTD_3_Err, BOOL, 13175088 (8)
         Main.fbBenderM1K4, FB_Bender, 11410816 (128)
         Main.fbBenderRMSErrorM1K4, FB_RMSWatch, 10803136 (386624)
-        Main.fbLogHandler, FB_LogHandler, 13174656 (5785856)
+        Main.fbLogHandler, FB_LogHandler, 13175168 (5785856)
         Main.fbM1K4PitchControl, FB_PitchControl, 11189888 (220928)
         Main.fbM1K4PitchControl.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 11251968 (2048)
         Main.fbM1K4PitchControl.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 11250944 (1024)
@@ -701,6 +743,18 @@ Main
         Main.fbYRMSErrorM1K4, FB_RMSWatch, 9642880 (386624)
         Main.fEncLeverArm_mm, LREAL, 11415680 (64)
         Main.fEncRefPitchM1K4_urad, LREAL, 11415616 (64)
+        Main.fM2K4DS_RTD_1, REAL, 13174752 (32)
+        Main.fM2K4DS_RTD_2, REAL, 13174784 (32)
+        Main.fM2K4DS_RTD_3, REAL, 13174816 (32)
+        Main.fM2K4US_RTD_1, REAL, 13174656 (32)
+        Main.fM2K4US_RTD_2, REAL, 13174688 (32)
+        Main.fM2K4US_RTD_3, REAL, 13174720 (32)
+        Main.fM3K4DS_RTD_1, REAL, 13174944 (32)
+        Main.fM3K4DS_RTD_2, REAL, 13174976 (32)
+        Main.fM3K4DS_RTD_3, REAL, 13175008 (32)
+        Main.fM3K4US_RTD_1, REAL, 13174848 (32)
+        Main.fM3K4US_RTD_2, REAL, 13174880 (32)
+        Main.fM3K4US_RTD_3, REAL, 13174912 (32)
         Main.fMaxBenderRMSErrorM1K4, LREAL, 11189760 (64)
         Main.fMaxPitchRMSErrorM1K4, LREAL, 10803008 (64)
         Main.fMaxXRMSErrorM1K4, LREAL, 10416256 (64)
@@ -915,6 +969,7 @@ Main
         Main.nEncRefYM2K4, UDINT, 13174464 (32)
         Main.nEncRefYM3K4, UDINT, 13174560 (32)
         Main.nEncRefYupM1K4, UDINT, 11411072 (32)
+        Main.nM3K4DS_RTD_3, INT, 13175120 (16)
 
 .. raw:: html
 
@@ -1023,7 +1078,7 @@ TC_EVENTS
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        TC_EVENTS.LCLSGeneralEventClass, LCLSGeneralEventClass, 20701600 (960)
+        TC_EVENTS.LCLSGeneralEventClass, LCLSGeneralEventClass, 20702272 (960)
 
 
 TC_EVENT_CLASSES
@@ -1033,12 +1088,12 @@ TC_EVENT_CLASSES
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        TC_EVENT_CLASSES.LCLSGeneralEventClass, GUID, 20671520 (128)
-        TC_EVENT_CLASSES.TcGeneralAdsEventClass, GUID, 20671008 (128)
-        TC_EVENT_CLASSES.TcRouterEventClass, GUID, 20671136 (128)
-        TC_EVENT_CLASSES.TcRTimeEventClass, GUID, 20671264 (128)
-        TC_EVENT_CLASSES.TcSystemEventClass, GUID, 20670880 (128)
-        TC_EVENT_CLASSES.Win32EventClass, GUID, 20671392 (128)
+        TC_EVENT_CLASSES.LCLSGeneralEventClass, GUID, 20672192 (128)
+        TC_EVENT_CLASSES.TcGeneralAdsEventClass, GUID, 20671680 (128)
+        TC_EVENT_CLASSES.TcRouterEventClass, GUID, 20671808 (128)
+        TC_EVENT_CLASSES.TcRTimeEventClass, GUID, 20671936 (128)
+        TC_EVENT_CLASSES.TcSystemEventClass, GUID, 20671552 (128)
+        TC_EVENT_CLASSES.Win32EventClass, GUID, 20672064 (128)
 
 
 TwinCAT_LicenseInfoVarList
@@ -1048,7 +1103,7 @@ TwinCAT_LicenseInfoVarList
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        TwinCAT_LicenseInfoVarList._LicenseInfo, PlcLicenseInfo, 20648736 (2048)
+        TwinCAT_LicenseInfoVarList._LicenseInfo, PlcLicenseInfo, 20649408 (2048)
 
 
 TwinCAT_SystemInfoVarList
@@ -1063,17 +1118,17 @@ TwinCAT_SystemInfoVarList
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        TwinCAT_SystemInfoVarList.__PiezoDriver, _Implicit_Task_Info, 20656800 (704)
-        TwinCAT_SystemInfoVarList.__PlcTask, _Implicit_Task_Info, 20657504 (704)
-        TwinCAT_SystemInfoVarList.__SerialIO, _Implicit_Task_Info, 20656096 (704)
-        TwinCAT_SystemInfoVarList._AppInfo, PlcAppSystemInfo, 20650784 (2048)
-        TwinCAT_SystemInfoVarList._TaskInfo, PlcTaskSystemInfo, 20652864 (3072)
-        TwinCAT_SystemInfoVarList._TaskOid_PiezoDriver, OTCID, 20656000 (32)
-        TwinCAT_SystemInfoVarList._TaskOid_PlcTask, OTCID, 20656064 (32)
-        TwinCAT_SystemInfoVarList._TaskOid_SerialIO, OTCID, 20655936 (32)
-        TwinCAT_SystemInfoVarList._TaskPouOid_PiezoDriver, OTCID, 20655968 (32)
-        TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask, OTCID, 20656032 (32)
-        TwinCAT_SystemInfoVarList._TaskPouOid_SerialIO, OTCID, 20652832 (32)
+        TwinCAT_SystemInfoVarList.__PiezoDriver, _Implicit_Task_Info, 20657472 (704)
+        TwinCAT_SystemInfoVarList.__PlcTask, _Implicit_Task_Info, 20658176 (704)
+        TwinCAT_SystemInfoVarList.__SerialIO, _Implicit_Task_Info, 20656768 (704)
+        TwinCAT_SystemInfoVarList._AppInfo, PlcAppSystemInfo, 20651456 (2048)
+        TwinCAT_SystemInfoVarList._TaskInfo, PlcTaskSystemInfo, 20653504 (3072)
+        TwinCAT_SystemInfoVarList._TaskOid_PiezoDriver, OTCID, 20656672 (32)
+        TwinCAT_SystemInfoVarList._TaskOid_PlcTask, OTCID, 20656736 (32)
+        TwinCAT_SystemInfoVarList._TaskOid_SerialIO, OTCID, 20656608 (32)
+        TwinCAT_SystemInfoVarList._TaskPouOid_PiezoDriver, OTCID, 20656640 (32)
+        TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask, OTCID, 20656704 (32)
+        TwinCAT_SystemInfoVarList._TaskPouOid_SerialIO, OTCID, 20656576 (32)
 
 .. raw:: html
 

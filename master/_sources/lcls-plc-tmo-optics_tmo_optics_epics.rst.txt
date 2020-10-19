@@ -12790,7 +12790,7 @@ Database Records
       - | io: input
 
 
-    * - MR2K4:KBO:ENC:rY:REF_RBV
+    * - MR2K4:KBO:ENC:PITCH:REF_RBV
       - longin
       - Main.nEncRefrYM2K4
       - | field: EGU cnt
@@ -12811,7 +12811,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bAllBackwardEnable_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
       - | field: ONAM TRUE
@@ -12819,7 +12819,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bAllEnable_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bAllEnable_RBV
       - bi
       - Summary of axis permission to have power
       - | field: ONAM TRUE
@@ -12827,7 +12827,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bAllForwardEnable_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bAllForwardEnable_RBV
       - bi
       - Summary of axis permission to move forward
       - | field: ONAM TRUE
@@ -12835,7 +12835,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bBrakeRelease_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bBrakeRelease_RBV
       - bi
       - TRUE if brake released
       - | field: ONAM TRUE
@@ -12843,7 +12843,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bBusy_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
       - | field: ONAM FALSE
@@ -12851,7 +12851,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bDone_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
       - | field: ONAM FALSE
@@ -12859,7 +12859,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bEnable
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bEnable
       - bo
       - Used internally to request enables
       - | field: ONAM TRUE
@@ -12867,7 +12867,7 @@ Database Records
         | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bEnable_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bEnable_RBV
       - bi
       - Used internally to request enables
       - | field: ONAM TRUE
@@ -12875,7 +12875,7 @@ Database Records
         | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bEnableDone_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
       - | field: ONAM FALSE
@@ -12883,7 +12883,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bError_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bError_RBV
       - bi
       - TRUE if we
       - | field: ONAM FALSE
@@ -12891,7 +12891,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bExecute
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bExecute
       - bo
       - Used internally and by the IOC to start or stop
       - | field: ONAM TRUE
@@ -12899,7 +12899,7 @@ Database Records
         | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bExecute_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bExecute_RBV
       - bi
       - Used internally and by the IOC to start or stop
       - | field: ONAM TRUE
@@ -12907,7 +12907,7 @@ Database Records
         | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bGantryAxis_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bGantryAxis_RBV
       - bi
       - TRUE if gantry EPS active
       - | field: ONAM TRUE
@@ -12915,7 +12915,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bGantryBackwardEnable_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bGantryBackwardEnable_RBV
       - bi
       - TRUE if gantry ok to move backward
       - | field: ONAM TRUE
@@ -12923,7 +12923,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bGantryForwardEnable_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bGantryForwardEnable_RBV
       - bi
       - TRUE if gantry ok to move forward
       - | field: ONAM TRUE
@@ -12931,7 +12931,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bHardwareEnable_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bHardwareEnable_RBV
       - bi
       - TRUE if STO not hit
       - | field: ONAM TRUE
@@ -12939,7 +12939,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bHome_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bHome_RBV
       - bi
       - TRUE if at homing switch
       - | field: ONAM TRUE
@@ -12947,7 +12947,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bLimitBackwardEnable_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bLimitBackwardEnable_RBV
       - bi
       - FALSE if reverse limit hit
       - | field: ONAM TRUE
@@ -12955,7 +12955,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bLimitForwardEnable_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bLimitForwardEnable_RBV
       - bi
       - FALSE if forward limit hit
       - | field: ONAM TRUE
@@ -12963,7 +12963,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bPowerSelf_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bPowerSelf_RBV
       - bi
       - FALSE if axis is in PMPS
       - | field: ONAM TRUE
@@ -12971,7 +12971,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bReset
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bReset
       - bo
       - Used internally to reset errors
       - | field: ONAM TRUE
@@ -12979,7 +12979,7 @@ Database Records
         | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bReset_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bReset_RBV
       - bi
       - Used internally to reset errors
       - | field: ONAM TRUE
@@ -12987,7 +12987,7 @@ Database Records
         | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:bSafetyReady_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
       - | field: ONAM FALSE
@@ -12995,133 +12995,765 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:fAcceleration
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:fAcceleration
       - ao
       - Used internally and by the IOC to set acceleration
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:fAcceleration_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:fAcceleration_RBV
       - ai
       - Used internally and by the IOC to set acceleration
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:fDeceleration
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:fDeceleration
       - ao
       - Used internally and by the IOC to set deceleration
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:fDeceleration_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:fDeceleration_RBV
       - ai
       - Used internally and by the IOC to set deceleration
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:fHomePosition
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:fHomePosition
       - ao
       - Used internally and by the IOC to pick home position
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:fHomePosition_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:fHomePosition_RBV
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:fPosition
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:fPosition
       - ao
       - Used internally and by the IOC as the set position
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:fPosition_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:fPosition_RBV
       - ai
       - Used internally and by the IOC as the set position
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:fVelocity
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:fVelocity
       - ao
       - Used internally and by the IOC to set velocity
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:fVelocity_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:fVelocity_RBV
       - ai
       - Used internally and by the IOC to set velocity
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:nBrakeMode_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:nBrakeMode_RBV
       - mbbi
       - Describes when the brake will be released
       - | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:nCmdData
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:nCmdData
       - longout
       - Used internally and by the IOC to pass extra args
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:nCmdData_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:nCmdData_RBV
       - longin
       - Used internally and by the IOC to pass extra args
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:nCommand
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:nCommand
       - longout
       - Used internally and by the IOC to pick move type
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:nCommand_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:nCommand_RBV
       - longin
       - Used internally and by the IOC to pick move type
       - | io: output
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:nEnableMode_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:nEnableMode_RBV
       - mbbi
       - Describes when the axis will automatically get power
       - | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:nEncoderCount_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:nEncoderCount_RBV
       - longin
       - Count from encoder hardware
       - | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:nErrorId_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:nErrorId_RBV
       - longin
       - Error code if nonzero
       - | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:nHomingMode_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:nHomingMode_RBV
       - mbbi
       - Describes our homing strategy
       - | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:nMotionAxisID_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:nMotionAxisID_RBV
       - longin
       - Unique ID assigned to each axis in the NC
       - | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:sErrorMessage_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:sErrorMessage_RBV
       - waveform
       - Message to identify the error state
       - | io: input
 
 
-    * - MR2K4:KBO:MMS:rY:PLC:sName_RBV
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bError_RBV
+      - bi
+      - TRUE if we
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bError_RBV
+      - bi
+      - TRUE if we
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:sName_RBV
       - waveform
       - PLC program name
       - | io: input
@@ -13759,639 +14391,55 @@ Database Records
       - | io: input
 
 
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bAllBackwardEnable_RBV
-      - bi
-      - Summary of axis permission to move backward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bAllEnable_RBV
-      - bi
-      - Summary of axis permission to have power
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bAllForwardEnable_RBV
-      - bi
-      - Summary of axis permission to move forward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bBrakeRelease_RBV
-      - bi
-      - TRUE if brake released
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bBusy_RBV
-      - bi
-      - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bDone_RBV
-      - bi
-      - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bEnable
-      - bo
-      - Used internally to request enables
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bEnable_RBV
-      - bi
-      - Used internally to request enables
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bEnableDone_RBV
-      - bi
-      - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bError_RBV
-      - bi
-      - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bExecute
-      - bo
-      - Used internally and by the IOC to start or stop
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bExecute_RBV
-      - bi
-      - Used internally and by the IOC to start or stop
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bGantryAxis_RBV
-      - bi
-      - TRUE if gantry EPS active
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bGantryBackwardEnable_RBV
-      - bi
-      - TRUE if gantry ok to move backward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bGantryForwardEnable_RBV
-      - bi
-      - TRUE if gantry ok to move forward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bHardwareEnable_RBV
-      - bi
-      - TRUE if STO not hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bHome_RBV
-      - bi
-      - TRUE if at homing switch
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bLimitBackwardEnable_RBV
-      - bi
-      - FALSE if reverse limit hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bLimitForwardEnable_RBV
-      - bi
-      - FALSE if forward limit hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bPowerSelf_RBV
-      - bi
-      - FALSE if axis is in PMPS
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bReset
-      - bo
-      - Used internally to reset errors
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bReset_RBV
-      - bi
-      - Used internally to reset errors
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:bSafetyReady_RBV
-      - bi
-      - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:fAcceleration
-      - ao
-      - Used internally and by the IOC to set acceleration
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:fAcceleration_RBV
+    * - MR2K4:KBO:RTD:BEND:DS:1_RBV
       - ai
-      - Used internally and by the IOC to set acceleration
-      - | io: output
+      - Main.fM2K4DS_RTD_1
+      - | field: EGU C
+        | field: ESLO 0.1
+        | io: input
 
 
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:fDeceleration
-      - ao
-      - Used internally and by the IOC to set deceleration
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:fDeceleration_RBV
+    * - MR2K4:KBO:RTD:BEND:DS:2_RBV
       - ai
-      - Used internally and by the IOC to set deceleration
-      - | io: output
+      - Main.fM2K4DS_RTD_2
+      - | field: EGU C
+        | field: ESLO 0.1
+        | io: input
 
 
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:fHomePosition
-      - ao
-      - Used internally and by the IOC to pick home position
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:fHomePosition_RBV
+    * - MR2K4:KBO:RTD:BEND:DS:3_RBV
       - ai
-      - Used internally and by the IOC to pick home position
-      - | io: output
+      - Main.fM2K4DS_RTD_3
+      - | field: EGU C
+        | field: ESLO 0.1
+        | io: input
 
 
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:fPosition
-      - ao
-      - Used internally and by the IOC as the set position
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:fPosition_RBV
+    * - MR2K4:KBO:RTD:BEND:US:1_RBV
       - ai
-      - Used internally and by the IOC as the set position
-      - | io: output
+      - Main.fM2K4US_RTD_1
+      - | field: EGU C
+        | field: ESLO 0.1
+        | io: input
 
 
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:fVelocity
-      - ao
-      - Used internally and by the IOC to set velocity
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:fVelocity_RBV
+    * - MR2K4:KBO:RTD:BEND:US:2_RBV
       - ai
-      - Used internally and by the IOC to set velocity
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:nBrakeMode_RBV
-      - mbbi
-      - Describes when the brake will be released
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:nCmdData
-      - longout
-      - Used internally and by the IOC to pass extra args
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:nCmdData_RBV
-      - longin
-      - Used internally and by the IOC to pass extra args
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:nCommand
-      - longout
-      - Used internally and by the IOC to pick move type
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:nCommand_RBV
-      - longin
-      - Used internally and by the IOC to pick move type
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:nEnableMode_RBV
-      - mbbi
-      - Describes when the axis will automatically get power
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:nEncoderCount_RBV
-      - longin
-      - Count from encoder hardware
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:nErrorId_RBV
-      - longin
-      - Error code if nonzero
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:nHomingMode_RBV
-      - mbbi
-      - Describes our homing strategy
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:nMotionAxisID_RBV
-      - longin
-      - Unique ID assigned to each axis in the NC
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:sErrorMessage_RBV
-      - waveform
-      - Message to identify the error state
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:DS:PLC:sName_RBV
-      - waveform
-      - PLC program name
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bAllBackwardEnable_RBV
-      - bi
-      - Summary of axis permission to move backward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
+      - Main.fM2K4US_RTD_2
+      - | field: EGU C
+        | field: ESLO 0.1
         | io: input
 
 
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bAllEnable_RBV
-      - bi
-      - Summary of axis permission to have power
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bAllForwardEnable_RBV
-      - bi
-      - Summary of axis permission to move forward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bBrakeRelease_RBV
-      - bi
-      - TRUE if brake released
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bBusy_RBV
-      - bi
-      - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bDone_RBV
-      - bi
-      - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bEnable
-      - bo
-      - Used internally to request enables
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bEnable_RBV
-      - bi
-      - Used internally to request enables
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bEnableDone_RBV
-      - bi
-      - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bError_RBV
-      - bi
-      - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bExecute
-      - bo
-      - Used internally and by the IOC to start or stop
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bExecute_RBV
-      - bi
-      - Used internally and by the IOC to start or stop
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bGantryAxis_RBV
-      - bi
-      - TRUE if gantry EPS active
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bGantryBackwardEnable_RBV
-      - bi
-      - TRUE if gantry ok to move backward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bGantryForwardEnable_RBV
-      - bi
-      - TRUE if gantry ok to move forward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bHardwareEnable_RBV
-      - bi
-      - TRUE if STO not hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bHome_RBV
-      - bi
-      - TRUE if at homing switch
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bLimitBackwardEnable_RBV
-      - bi
-      - FALSE if reverse limit hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bLimitForwardEnable_RBV
-      - bi
-      - FALSE if forward limit hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bPowerSelf_RBV
-      - bi
-      - FALSE if axis is in PMPS
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bReset
-      - bo
-      - Used internally to reset errors
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bReset_RBV
-      - bi
-      - Used internally to reset errors
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:bSafetyReady_RBV
-      - bi
-      - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:fAcceleration
-      - ao
-      - Used internally and by the IOC to set acceleration
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:fAcceleration_RBV
+    * - MR2K4:KBO:RTD:BEND:US:3_RBV
       - ai
-      - Used internally and by the IOC to set acceleration
-      - | io: output
+      - Main.fM2K4US_RTD_3
+      - | field: EGU C
+        | field: ESLO 0.1
+        | io: input
 
 
-    * - MR2K4:KBO_BEND:MMS:US:PLC:fDeceleration
-      - ao
-      - Used internally and by the IOC to set deceleration
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:fDeceleration_RBV
-      - ai
-      - Used internally and by the IOC to set deceleration
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:fHomePosition
-      - ao
-      - Used internally and by the IOC to pick home position
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:fHomePosition_RBV
-      - ai
-      - Used internally and by the IOC to pick home position
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:fPosition
-      - ao
-      - Used internally and by the IOC as the set position
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:fPosition_RBV
-      - ai
-      - Used internally and by the IOC as the set position
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:fVelocity
-      - ao
-      - Used internally and by the IOC to set velocity
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:fVelocity_RBV
-      - ai
-      - Used internally and by the IOC to set velocity
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:nBrakeMode_RBV
-      - mbbi
-      - Describes when the brake will be released
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:nCmdData
-      - longout
-      - Used internally and by the IOC to pass extra args
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:nCmdData_RBV
-      - longin
-      - Used internally and by the IOC to pass extra args
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:nCommand
-      - longout
-      - Used internally and by the IOC to pick move type
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:nCommand_RBV
-      - longin
-      - Used internally and by the IOC to pick move type
-      - | io: output
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:nEnableMode_RBV
-      - mbbi
-      - Describes when the axis will automatically get power
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:nEncoderCount_RBV
-      - longin
-      - Count from encoder hardware
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:nErrorId_RBV
-      - longin
-      - Error code if nonzero
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:nHomingMode_RBV
-      - mbbi
-      - Describes our homing strategy
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:nMotionAxisID_RBV
-      - longin
-      - Unique ID assigned to each axis in the NC
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:sErrorMessage_RBV
-      - waveform
-      - Message to identify the error state
-      - | io: input
-
-
-    * - MR2K4:KBO_BEND:MMS:US:PLC:sName_RBV
-      - waveform
-      - PLC program name
-      - | io: input
-
-
-    * - MR3K4:KBO:ENC:rX:REF_RBV
+    * - MR3K4:KBO:ENC:PITCH:REF_RBV
       - longin
       - Main.nEncRefrXM3K4
       - | field: EGU cnt
@@ -14412,7 +14460,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bAllBackwardEnable_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
       - | field: ONAM TRUE
@@ -14420,7 +14468,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bAllEnable_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bAllEnable_RBV
       - bi
       - Summary of axis permission to have power
       - | field: ONAM TRUE
@@ -14428,7 +14476,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bAllForwardEnable_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bAllForwardEnable_RBV
       - bi
       - Summary of axis permission to move forward
       - | field: ONAM TRUE
@@ -14436,7 +14484,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bBrakeRelease_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bBrakeRelease_RBV
       - bi
       - TRUE if brake released
       - | field: ONAM TRUE
@@ -14444,7 +14492,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bBusy_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bBusy_RBV
       - bi
       - TRUE if in the middle of a command
       - | field: ONAM FALSE
@@ -14452,7 +14500,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bDone_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bDone_RBV
       - bi
       - TRUE if command finished successfully
       - | field: ONAM FALSE
@@ -14460,7 +14508,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bEnable
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bEnable
       - bo
       - Used internally to request enables
       - | field: ONAM TRUE
@@ -14468,7 +14516,7 @@ Database Records
         | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bEnable_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bEnable_RBV
       - bi
       - Used internally to request enables
       - | field: ONAM TRUE
@@ -14476,7 +14524,7 @@ Database Records
         | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bEnableDone_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bEnableDone_RBV
       - bi
       - TRUE if done enabling
       - | field: ONAM FALSE
@@ -14484,7 +14532,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bError_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bError_RBV
       - bi
       - TRUE if we
       - | field: ONAM FALSE
@@ -14492,7 +14540,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bExecute
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bExecute
       - bo
       - Used internally and by the IOC to start or stop
       - | field: ONAM TRUE
@@ -14500,7 +14548,7 @@ Database Records
         | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bExecute_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bExecute_RBV
       - bi
       - Used internally and by the IOC to start or stop
       - | field: ONAM TRUE
@@ -14508,7 +14556,7 @@ Database Records
         | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bGantryAxis_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bGantryAxis_RBV
       - bi
       - TRUE if gantry EPS active
       - | field: ONAM TRUE
@@ -14516,7 +14564,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bGantryBackwardEnable_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bGantryBackwardEnable_RBV
       - bi
       - TRUE if gantry ok to move backward
       - | field: ONAM TRUE
@@ -14524,7 +14572,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bGantryForwardEnable_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bGantryForwardEnable_RBV
       - bi
       - TRUE if gantry ok to move forward
       - | field: ONAM TRUE
@@ -14532,7 +14580,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bHardwareEnable_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bHardwareEnable_RBV
       - bi
       - TRUE if STO not hit
       - | field: ONAM TRUE
@@ -14540,7 +14588,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bHome_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bHome_RBV
       - bi
       - TRUE if at homing switch
       - | field: ONAM TRUE
@@ -14548,7 +14596,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bLimitBackwardEnable_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bLimitBackwardEnable_RBV
       - bi
       - FALSE if reverse limit hit
       - | field: ONAM TRUE
@@ -14556,7 +14604,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bLimitForwardEnable_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bLimitForwardEnable_RBV
       - bi
       - FALSE if forward limit hit
       - | field: ONAM TRUE
@@ -14564,7 +14612,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bPowerSelf_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bPowerSelf_RBV
       - bi
       - FALSE if axis is in PMPS
       - | field: ONAM TRUE
@@ -14572,7 +14620,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bReset
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bReset
       - bo
       - Used internally to reset errors
       - | field: ONAM TRUE
@@ -14580,7 +14628,7 @@ Database Records
         | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bReset_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bReset_RBV
       - bi
       - Used internally to reset errors
       - | field: ONAM TRUE
@@ -14588,7 +14636,7 @@ Database Records
         | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:bSafetyReady_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:bSafetyReady_RBV
       - bi
       - TRUE if safe to start a move
       - | field: ONAM FALSE
@@ -14596,133 +14644,765 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:fAcceleration
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:fAcceleration
       - ao
       - Used internally and by the IOC to set acceleration
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:fAcceleration_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:fAcceleration_RBV
       - ai
       - Used internally and by the IOC to set acceleration
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:fDeceleration
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:fDeceleration
       - ao
       - Used internally and by the IOC to set deceleration
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:fDeceleration_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:fDeceleration_RBV
       - ai
       - Used internally and by the IOC to set deceleration
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:fHomePosition
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:fHomePosition
       - ao
       - Used internally and by the IOC to pick home position
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:fHomePosition_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:fHomePosition_RBV
       - ai
       - Used internally and by the IOC to pick home position
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:fPosition
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:fPosition
       - ao
       - Used internally and by the IOC as the set position
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:fPosition_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:fPosition_RBV
       - ai
       - Used internally and by the IOC as the set position
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:fVelocity
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:fVelocity
       - ao
       - Used internally and by the IOC to set velocity
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:fVelocity_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:fVelocity_RBV
       - ai
       - Used internally and by the IOC to set velocity
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:nBrakeMode_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:nBrakeMode_RBV
       - mbbi
       - Describes when the brake will be released
       - | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:nCmdData
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:nCmdData
       - longout
       - Used internally and by the IOC to pass extra args
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:nCmdData_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:nCmdData_RBV
       - longin
       - Used internally and by the IOC to pass extra args
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:nCommand
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:nCommand
       - longout
       - Used internally and by the IOC to pick move type
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:nCommand_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:nCommand_RBV
       - longin
       - Used internally and by the IOC to pick move type
       - | io: output
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:nEnableMode_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:nEnableMode_RBV
       - mbbi
       - Describes when the axis will automatically get power
       - | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:nEncoderCount_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:nEncoderCount_RBV
       - longin
       - Count from encoder hardware
       - | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:nErrorId_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:nErrorId_RBV
       - longin
       - Error code if nonzero
       - | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:nHomingMode_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:nHomingMode_RBV
       - mbbi
       - Describes our homing strategy
       - | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:nMotionAxisID_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:nMotionAxisID_RBV
       - longin
       - Unique ID assigned to each axis in the NC
       - | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:sErrorMessage_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:sErrorMessage_RBV
       - waveform
       - Message to identify the error state
       - | io: input
 
 
-    * - MR3K4:KBO:MMS:rX:PLC:sName_RBV
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bError_RBV
+      - bi
+      - TRUE if we
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:sName_RBV
+      - waveform
+      - PLC program name
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bAllBackwardEnable_RBV
+      - bi
+      - Summary of axis permission to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bAllEnable_RBV
+      - bi
+      - Summary of axis permission to have power
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bAllForwardEnable_RBV
+      - bi
+      - Summary of axis permission to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bBrakeRelease_RBV
+      - bi
+      - TRUE if brake released
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bBusy_RBV
+      - bi
+      - TRUE if in the middle of a command
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bDone_RBV
+      - bi
+      - TRUE if command finished successfully
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bEnable
+      - bo
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bEnable_RBV
+      - bi
+      - Used internally to request enables
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bEnableDone_RBV
+      - bi
+      - TRUE if done enabling
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bError_RBV
+      - bi
+      - TRUE if we
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bExecute
+      - bo
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bExecute_RBV
+      - bi
+      - Used internally and by the IOC to start or stop
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bGantryAxis_RBV
+      - bi
+      - TRUE if gantry EPS active
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bGantryBackwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move backward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bGantryForwardEnable_RBV
+      - bi
+      - TRUE if gantry ok to move forward
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bHardwareEnable_RBV
+      - bi
+      - TRUE if STO not hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bHome_RBV
+      - bi
+      - TRUE if at homing switch
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bLimitBackwardEnable_RBV
+      - bi
+      - FALSE if reverse limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bLimitForwardEnable_RBV
+      - bi
+      - FALSE if forward limit hit
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bPowerSelf_RBV
+      - bi
+      - FALSE if axis is in PMPS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bReset
+      - bo
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bReset_RBV
+      - bi
+      - Used internally to reset errors
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:bSafetyReady_RBV
+      - bi
+      - TRUE if safe to start a move
+      - | field: ONAM FALSE
+        | field: ZNAM TRUE
+        | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:fAcceleration
+      - ao
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:fAcceleration_RBV
+      - ai
+      - Used internally and by the IOC to set acceleration
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:fDeceleration
+      - ao
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:fDeceleration_RBV
+      - ai
+      - Used internally and by the IOC to set deceleration
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:fHomePosition
+      - ao
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:fHomePosition_RBV
+      - ai
+      - Used internally and by the IOC to pick home position
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:fPosition
+      - ao
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:fPosition_RBV
+      - ai
+      - Used internally and by the IOC as the set position
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:fVelocity
+      - ao
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:fVelocity_RBV
+      - ai
+      - Used internally and by the IOC to set velocity
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:nBrakeMode_RBV
+      - mbbi
+      - Describes when the brake will be released
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:nCmdData
+      - longout
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:nCmdData_RBV
+      - longin
+      - Used internally and by the IOC to pass extra args
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:nCommand
+      - longout
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:nCommand_RBV
+      - longin
+      - Used internally and by the IOC to pick move type
+      - | io: output
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:nEnableMode_RBV
+      - mbbi
+      - Describes when the axis will automatically get power
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:nEncoderCount_RBV
+      - longin
+      - Count from encoder hardware
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:nErrorId_RBV
+      - longin
+      - Error code if nonzero
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:nHomingMode_RBV
+      - mbbi
+      - Describes our homing strategy
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:nMotionAxisID_RBV
+      - longin
+      - Unique ID assigned to each axis in the NC
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:sErrorMessage_RBV
+      - waveform
+      - Message to identify the error state
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:sName_RBV
       - waveform
       - PLC program name
       - | io: input
@@ -15360,636 +16040,51 @@ Database Records
       - | io: input
 
 
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bAllBackwardEnable_RBV
-      - bi
-      - Summary of axis permission to move backward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bAllEnable_RBV
-      - bi
-      - Summary of axis permission to have power
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bAllForwardEnable_RBV
-      - bi
-      - Summary of axis permission to move forward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bBrakeRelease_RBV
-      - bi
-      - TRUE if brake released
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bBusy_RBV
-      - bi
-      - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bDone_RBV
-      - bi
-      - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bEnable
-      - bo
-      - Used internally to request enables
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bEnable_RBV
-      - bi
-      - Used internally to request enables
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bEnableDone_RBV
-      - bi
-      - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bError_RBV
-      - bi
-      - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bExecute
-      - bo
-      - Used internally and by the IOC to start or stop
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bExecute_RBV
-      - bi
-      - Used internally and by the IOC to start or stop
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bGantryAxis_RBV
-      - bi
-      - TRUE if gantry EPS active
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bGantryBackwardEnable_RBV
-      - bi
-      - TRUE if gantry ok to move backward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bGantryForwardEnable_RBV
-      - bi
-      - TRUE if gantry ok to move forward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bHardwareEnable_RBV
-      - bi
-      - TRUE if STO not hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bHome_RBV
-      - bi
-      - TRUE if at homing switch
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bLimitBackwardEnable_RBV
-      - bi
-      - FALSE if reverse limit hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bLimitForwardEnable_RBV
-      - bi
-      - FALSE if forward limit hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bPowerSelf_RBV
-      - bi
-      - FALSE if axis is in PMPS
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bReset
-      - bo
-      - Used internally to reset errors
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bReset_RBV
-      - bi
-      - Used internally to reset errors
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:bSafetyReady_RBV
-      - bi
-      - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:fAcceleration
-      - ao
-      - Used internally and by the IOC to set acceleration
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:fAcceleration_RBV
+    * - MR3K4:KBO:RTD:BEND:DS:1_RBV
       - ai
-      - Used internally and by the IOC to set acceleration
-      - | io: output
+      - Main.fM3K4DS_RTD_1
+      - | field: EGU C
+        | field: ESLO 0.1
+        | io: input
 
 
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:fDeceleration
-      - ao
-      - Used internally and by the IOC to set deceleration
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:fDeceleration_RBV
+    * - MR3K4:KBO:RTD:BEND:DS:2_RBV
       - ai
-      - Used internally and by the IOC to set deceleration
-      - | io: output
+      - Main.fM3K4DS_RTD_2
+      - | field: EGU C
+        | field: ESLO 0.1
+        | io: input
 
 
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:fHomePosition
-      - ao
-      - Used internally and by the IOC to pick home position
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:fHomePosition_RBV
+    * - MR3K4:KBO:RTD:BEND:DS:3_RBV
       - ai
-      - Used internally and by the IOC to pick home position
-      - | io: output
+      - Main.fM3K4DS_RTD_3
+      - | field: EGU cnt
+        | io: input
 
 
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:fPosition
-      - ao
-      - Used internally and by the IOC as the set position
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:fPosition_RBV
+    * - MR3K4:KBO:RTD:BEND:US:1_RBV
       - ai
-      - Used internally and by the IOC as the set position
-      - | io: output
+      - Main.fM3K4US_RTD_1
+      - | field: EGU C
+        | field: ESLO 0.1
+        | io: input
 
 
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:fVelocity
-      - ao
-      - Used internally and by the IOC to set velocity
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:fVelocity_RBV
+    * - MR3K4:KBO:RTD:BEND:US:2_RBV
       - ai
-      - Used internally and by the IOC to set velocity
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:nBrakeMode_RBV
-      - mbbi
-      - Describes when the brake will be released
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:nCmdData
-      - longout
-      - Used internally and by the IOC to pass extra args
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:nCmdData_RBV
-      - longin
-      - Used internally and by the IOC to pass extra args
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:nCommand
-      - longout
-      - Used internally and by the IOC to pick move type
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:nCommand_RBV
-      - longin
-      - Used internally and by the IOC to pick move type
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:nEnableMode_RBV
-      - mbbi
-      - Describes when the axis will automatically get power
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:nEncoderCount_RBV
-      - longin
-      - Count from encoder hardware
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:nErrorId_RBV
-      - longin
-      - Error code if nonzero
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:nHomingMode_RBV
-      - mbbi
-      - Describes our homing strategy
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:nMotionAxisID_RBV
-      - longin
-      - Unique ID assigned to each axis in the NC
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:sErrorMessage_RBV
-      - waveform
-      - Message to identify the error state
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:DS:PLC:sName_RBV
-      - waveform
-      - PLC program name
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bAllBackwardEnable_RBV
-      - bi
-      - Summary of axis permission to move backward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
+      - Main.fM3K4US_RTD_2
+      - | field: EGU C
+        | field: ESLO 0.1
         | io: input
 
 
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bAllEnable_RBV
-      - bi
-      - Summary of axis permission to have power
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bAllForwardEnable_RBV
-      - bi
-      - Summary of axis permission to move forward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bBrakeRelease_RBV
-      - bi
-      - TRUE if brake released
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bBusy_RBV
-      - bi
-      - TRUE if in the middle of a command
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bDone_RBV
-      - bi
-      - TRUE if command finished successfully
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bEnable
-      - bo
-      - Used internally to request enables
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bEnable_RBV
-      - bi
-      - Used internally to request enables
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bEnableDone_RBV
-      - bi
-      - TRUE if done enabling
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bError_RBV
-      - bi
-      - TRUE if we
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bExecute
-      - bo
-      - Used internally and by the IOC to start or stop
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bExecute_RBV
-      - bi
-      - Used internally and by the IOC to start or stop
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bGantryAxis_RBV
-      - bi
-      - TRUE if gantry EPS active
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bGantryBackwardEnable_RBV
-      - bi
-      - TRUE if gantry ok to move backward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bGantryForwardEnable_RBV
-      - bi
-      - TRUE if gantry ok to move forward
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bHardwareEnable_RBV
-      - bi
-      - TRUE if STO not hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bHome_RBV
-      - bi
-      - TRUE if at homing switch
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bLimitBackwardEnable_RBV
-      - bi
-      - FALSE if reverse limit hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bLimitForwardEnable_RBV
-      - bi
-      - FALSE if forward limit hit
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bPowerSelf_RBV
-      - bi
-      - FALSE if axis is in PMPS
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bReset
-      - bo
-      - Used internally to reset errors
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bReset_RBV
-      - bi
-      - Used internally to reset errors
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:bSafetyReady_RBV
-      - bi
-      - TRUE if safe to start a move
-      - | field: ONAM FALSE
-        | field: ZNAM TRUE
-        | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:fAcceleration
-      - ao
-      - Used internally and by the IOC to set acceleration
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:fAcceleration_RBV
+    * - MR3K4:KBO:RTD:BEND:US:3_RBV
       - ai
-      - Used internally and by the IOC to set acceleration
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:fDeceleration
-      - ao
-      - Used internally and by the IOC to set deceleration
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:fDeceleration_RBV
-      - ai
-      - Used internally and by the IOC to set deceleration
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:fHomePosition
-      - ao
-      - Used internally and by the IOC to pick home position
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:fHomePosition_RBV
-      - ai
-      - Used internally and by the IOC to pick home position
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:fPosition
-      - ao
-      - Used internally and by the IOC as the set position
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:fPosition_RBV
-      - ai
-      - Used internally and by the IOC as the set position
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:fVelocity
-      - ao
-      - Used internally and by the IOC to set velocity
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:fVelocity_RBV
-      - ai
-      - Used internally and by the IOC to set velocity
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:nBrakeMode_RBV
-      - mbbi
-      - Describes when the brake will be released
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:nCmdData
-      - longout
-      - Used internally and by the IOC to pass extra args
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:nCmdData_RBV
-      - longin
-      - Used internally and by the IOC to pass extra args
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:nCommand
-      - longout
-      - Used internally and by the IOC to pick move type
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:nCommand_RBV
-      - longin
-      - Used internally and by the IOC to pick move type
-      - | io: output
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:nEnableMode_RBV
-      - mbbi
-      - Describes when the axis will automatically get power
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:nEncoderCount_RBV
-      - longin
-      - Count from encoder hardware
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:nErrorId_RBV
-      - longin
-      - Error code if nonzero
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:nHomingMode_RBV
-      - mbbi
-      - Describes our homing strategy
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:nMotionAxisID_RBV
-      - longin
-      - Unique ID assigned to each axis in the NC
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:sErrorMessage_RBV
-      - waveform
-      - Message to identify the error state
-      - | io: input
-
-
-    * - MR3K4:KBO_BEND:MMS:US:PLC:sName_RBV
-      - waveform
-      - PLC program name
-      - | io: input
+      - Main.fM3K4US_RTD_3
+      - | field: EGU C
+        | field: ESLO 0.1
+        | io: input
 
 
     * - PLC:TMO:OPTICS:Arbiter:01:ActiveInArbitration_RBV
