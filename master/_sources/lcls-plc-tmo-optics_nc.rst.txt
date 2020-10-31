@@ -289,6 +289,7 @@ Axis 9: M2K4-rY
     Enc:Offset, -194502.025
     Enc:ReferenceSystem, 1
     Enc:ScaleFactorNumerator, 0.005348
+    General:UnitName, urad
     Id, 9
     OtherSettings:AllowMotionCmdToSlave, true
     Velo:Maximum, 166.67
@@ -440,6 +441,7 @@ Axis 14: M3K4-rX
     Enc:Offset, -136547
     Enc:ReferenceSystem, 1
     Enc:ScaleFactorNumerator, 0.002577
+    General:UnitName, urad
     Id, 14
     OtherSettings:AllowMotionCmdToSlave, true
     Velo:Maximum, 140.84

@@ -97,8 +97,8 @@ GVL_COM_Buffers
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_COM_Buffers.Serial_RXBuffer_M1K4, ComBuffer, 22833920 (2512)
-        GVL_COM_Buffers.Serial_TXBuffer_M1K4, ComBuffer, 22836432 (2512)
+        GVL_COM_Buffers.Serial_RXBuffer_M1K4, ComBuffer, 22831424 (2512)
+        GVL_COM_Buffers.Serial_TXBuffer_M1K4, ComBuffer, 22833936 (2512)
 
 
 GVL_Constants
@@ -164,8 +164,8 @@ GVL_M1K4
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_M1K4.M1K4_Pitch, HOMS_PitchMechanism, 22831424 (2496)
-        GVL_M1K4.M1K4_Pitch.diEncCnt, LINT, 22833856 (64)
+        GVL_M1K4.M1K4_Pitch, HOMS_PitchMechanism, 22836480 (2496)
+        GVL_M1K4.M1K4_Pitch.diEncCnt, LINT, 22838912 (64)
 
 
 GVL_M1K4_Constants
@@ -200,12 +200,12 @@ GVL_M2K4_RTD
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_M2K4_RTD.nM2K4DS_RTD_1, INT, 22838960 (16)
+        GVL_M2K4_RTD.nM2K4DS_RTD_1, INT, 22836464 (16)
         GVL_M2K4_RTD.nM2K4DS_RTD_2, INT, 22839232 (16)
         GVL_M2K4_RTD.nM2K4DS_RTD_3, INT, 22839248 (16)
         GVL_M2K4_RTD.nM2K4US_RTD_1, INT, 17042656 (16)
         GVL_M2K4_RTD.nM2K4US_RTD_2, INT, 17042672 (16)
-        GVL_M2K4_RTD.nM2K4US_RTD_3, INT, 22838944 (16)
+        GVL_M2K4_RTD.nM2K4US_RTD_3, INT, 22836448 (16)
 
 
 GVL_M3K4_Constants
