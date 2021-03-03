@@ -3,7 +3,7 @@ Data Types
 ----------
 
 
-     
+    
 LCLS_General.FB_BasicStats
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1567,7 +1567,7 @@ lcls_twincat_optics.DUT_HOMS
         | io: input
 
 
-      
+       
 lcls_twincat_optics.FB_RMSWatch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
