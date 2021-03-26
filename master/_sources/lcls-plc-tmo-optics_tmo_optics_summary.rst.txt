@@ -36,6 +36,14 @@ Libraries
     :header: Library, Vendor, Default, Version
     :align: center
 
+        lcls-twincat-motion, SLAC, , 1.4.4
+        PMPS, SLAC - LCLS, , 0.17.0
+        Tc2_MC2, Beckhoff Automation GmbH, Unset, 
+        Tc2_SerialCom, Beckhoff Automation GmbH, Unset, 
+        Tc2_Standard, Beckhoff Automation GmbH, Unset, 
+        Tc2_System, Beckhoff Automation GmbH, Unset, 
+        Tc2_Utilities, Beckhoff Automation GmbH, Unset, 
+        Tc3_Module, Beckhoff Automation GmbH, Unset, 
 
 Symbols
 -------
@@ -667,7 +675,7 @@ Main
 .. raw:: html
 
    <details>
-       <summary>337 Symbols</summary>
+       <summary>339 Symbols</summary>
 
 .. csv-table::
     :header: Symbol, Type, Offset/Size
@@ -687,6 +695,7 @@ Main
         Main.bM3K4US_RTD_1_Err, BOOL, 17759488 (8)
         Main.bM3K4US_RTD_2_Err, BOOL, 17759496 (8)
         Main.bM3K4US_RTD_3_Err, BOOL, 17759504 (8)
+        Main.bMR1K1Veto, BOOL, 8558752 (8)
         Main.fbArbiterIO, FB_SubSysToArbiter_IO, 23545408 (136704)
         Main.fbArbiterIO.i_stCurrentBP, ST_BeamParams_IO, 23546208 (1216)
         Main.fbArbiterIO.q_stRequestedBP, ST_BeamParams_IO, 23547424 (1216)
@@ -758,6 +767,7 @@ Main
         Main.fbYRMSErrorM3K4, FB_RMSWatch, 16211648 (386624)
         Main.fEncLeverArm_mm, LREAL, 11684992 (64)
         Main.fEncRefPitchM1K4_urad, LREAL, 11684928 (64)
+        Main.ffFFO2ToFFO1, FB_FastFault, 9327872 (25088)
         Main.fM2K4DS_RTD_1, REAL, 17759168 (32)
         Main.fM2K4DS_RTD_2, REAL, 17759200 (32)
         Main.fM2K4DS_RTD_3, REAL, 17759232 (32)
