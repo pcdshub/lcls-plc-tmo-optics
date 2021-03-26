@@ -887,6 +887,14 @@ END_VAR
 
 <span class="o">//</span><span class="n">PMPS</span>
 <span class="n">fbArbiterIO</span> <span class="p">:</span> <span class="n">FB_SubSysToArbiter_IO</span><span class="p">;</span>
+
+<span class="n">ffFFO2ToFFO1</span> <span class="p">:</span> <span class="n">FB_FastFault</span> <span class="o">:=</span> <span class="p">(</span>
+    <span class="n">i_xAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">i_DevName</span> <span class="o">:=</span> <span class="s1">&#39;PMPS FFO2&#39;</span><span class="p">,</span>
+    <span class="n">i_Desc</span> <span class="o">:=</span> <span class="s1">&#39;Subordinate fast fault group, will clear on its own otherwise something is misconfigured in the diagnostic&#39;</span><span class="p">,</span>
+    <span class="n">i_TypeCode</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#D);</span>
+
+<span class="n">bMR1K1Veto</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 <span class="o">//</span> <span class="n">M1K4</span>
     <span class="n">M1K4</span><span class="o">.</span><span class="n">fbRunHOMS</span><span class="p">(</span><span class="n">stYup</span><span class="o">:=</span><span class="n">M1</span><span class="p">,</span>
@@ -1112,8 +1120,15 @@ END_VAR
 <span class="n">fbLogHandler</span><span class="p">();</span>
 
 <span class="o">//</span> <span class="n">PMPS</span>
-<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="o">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">i_xVeto</span><span class="o">:=</span><span class="p">);</span>
-<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">i_xVeto</span><span class="o">:=</span><span class="p">);</span>
+<span class="n">bMR1K1Veto</span> <span class="o">:=</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aStoppers</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_IN</span><span class="p">]</span>
+            <span class="n">AND</span> <span class="n">NOT</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aStoppers</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_OUT</span><span class="p">];</span>
+<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">i_xVeto</span> <span class="o">:=</span> <span class="n">bMR1K1Veto</span> <span class="n">OR</span>
+                                       <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aStoppers</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">ST3K4</span><span class="p">];</span>
+<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">Execute</span><span class="p">();</span>
+
+<span class="n">ffFFO2ToFFO1</span><span class="p">(</span><span class="n">i_xOK</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">q_xFastFaultOut</span><span class="p">,</span> <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">);</span>
+
+<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="o">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">i_xVeto</span><span class="o">:=</span> <span class="n">bMR1K1Veto</span> <span class="p">);</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -1195,11 +1210,11 @@ END_VAR
                             <span class="n">nCurrentEncoderCount</span> <span class="o">:=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">nEncCntYupM1K4</span><span class="p">,</span>
                             <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">);</span>
 
-<span class="n">fbStripProtMR2K4</span><span class="p">(</span><span class="n">FFO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span>
+<span class="n">fbStripProtMR2K4</span><span class="p">(</span><span class="n">FFO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
                             <span class="n">nCurrentEncoderCount</span> <span class="o">:=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">nEncCntYM2K4</span><span class="p">,</span>
                             <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">);</span>
 
-<span class="n">fbStripProtMR3K4</span><span class="p">(</span><span class="n">FFO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span>
+<span class="n">fbStripProtMR3K4</span><span class="p">(</span><span class="n">FFO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
                             <span class="n">nCurrentEncoderCount</span> <span class="o">:=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">nEncCntXM3K4</span><span class="p">,</span>
                             <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">);</span>
 
