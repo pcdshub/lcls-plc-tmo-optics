@@ -13,6 +13,7 @@
     <Implicit_KindOfTask>{53c45906-c0f6-4c74-8a83-a6d63730e956}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{a471daae-0097-49e8-972c-6815a1acdbe0}</Implicit_Jitter_Distribution>
     <LibraryReferences>{08d19610-54d5-4257-b832-59ae6935c63c}</LibraryReferences>
+    <CompilerDefines>K</CompilerDefines>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GVLs\GVL_COM_Buffers.TcGVL">
@@ -100,12 +101,6 @@
     <PlaceholderReference Include="Tc2_Utilities">
       <DefaultResolution>Tc2_Utilities, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_Utilities</Namespace>
-      <Parameters>
-        <Parameter xmlns="">
-          <Key>CMAXCHARACTERS</Key>
-          <Value>16#FFFFFFF0</Value>
-        </Parameter>
-      </Parameters>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc3_Module">
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
@@ -113,31 +108,20 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="tmo_optics.tmc">
-      <SubType>Content</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <LibraryReference Include="LCLS General,2.4.2,SLAC">
       <Namespace>LCLS_General</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-motion,1.4.4,SLAC">
+    <LibraryReference Include="lcls-twincat-motion,1.5.1,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-optics,0.1.1,SLAC">
+    <LibraryReference Include="lcls-twincat-optics,0.2.1,SLAC">
       <Namespace>lcls_twincat_optics</Namespace>
     </LibraryReference>
-    <LibraryReference Include="PMPS,0.17.0,SLAC - LCLS">
+    <LibraryReference Include="PMPS,2.0.0,SLAC - LCLS">
       <Namespace>PMPS</Namespace>
     </LibraryReference>
   </ItemGroup>
   <ItemGroup>
-    <PlaceholderResolution Include="lcls-twincat-motion">
-      <Resolution>lcls-twincat-motion, 1.4.4 (SLAC)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="PMPS">
-      <Resolution>PMPS, 0.17.0 (SLAC - LCLS)</Resolution>
-    </PlaceholderResolution>
     <PlaceholderResolution Include="Tc2_MC2">
       <Resolution>Tc2_MC2, 3.3.42.0 (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
@@ -148,16 +132,10 @@
       <Resolution>Tc2_Standard, 3.3.3.0 (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="Tc2_System">
-      <Resolution>Tc2_System, 3.4.22.0 (Beckhoff Automation GmbH)</Resolution>
+      <Resolution>Tc2_System, 3.4.24.0 (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="Tc2_Utilities">
-      <Resolution>Tc2_Utilities, 3.3.37.0 (Beckhoff Automation GmbH)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="Tc3_EventLogger">
-      <Resolution>Tc3_EventLogger, 3.1.22.0 (Beckhoff Automation GmbH)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="Tc3_JsonXml">
-      <Resolution>Tc3_JsonXml, 3.3.6.0 (Beckhoff Automation GmbH)</Resolution>
+      <Resolution>Tc2_Utilities, 3.3.41.0 (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="Tc3_Module">
       <Resolution>Tc3_Module, 3.3.21.0 (Beckhoff Automation GmbH)</Resolution>
@@ -165,6 +143,11 @@
     <PlaceholderResolution Include="TcUnit">
       <Resolution>TcUnit, 1.0.1.0 (www.tcunit.org)</Resolution>
     </PlaceholderResolution>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tmo_optics.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
