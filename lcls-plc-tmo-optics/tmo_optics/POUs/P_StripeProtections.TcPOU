@@ -42,10 +42,10 @@ Silicon surface: RBV <= 4820000: 0000_0000_0001_1110 (allow everything between 2
 	fbStripProtMR3K4 : FB_MirrorTwoCoatingProtection := (
 		sDevName := 'MR3K4',
 		nUpperCoatingBoundary := 5620000,
-		nLowerCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
+		nUpperCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
 		sUpperCoatingType := 'B4C',
 		nLowerCoatingBoundary := 4820000,
-		nUpperCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
+		nLowerCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
 		sLowerCoatingType := 'Si');		
 		
 END_VAR
