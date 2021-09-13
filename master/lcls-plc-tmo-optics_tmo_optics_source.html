@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -84,14 +87,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">lcls-plc-tmo-optics</span></p>
+              <p class="caption" role="heading"><span class="caption-text">lcls-plc-tmo-optics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_pragmas.html">Pragmas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_nc.html">NC Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_boxes.html">Boxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_links.html">Links</a></li>
 </ul>
-<p class="caption"><span class="caption-text">tmo_optics</span></p>
+<p class="caption" role="heading"><span class="caption-text">tmo_optics</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html">Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html#pragmas">Pragmas</a></li>
@@ -313,22 +316,22 @@
             <span class="n">pv</span><span class="p">:</span> <span class="n">PLC</span><span class="p">:</span><span class="n">TMO</span><span class="p">:</span><span class="n">OPTICS</span><span class="p">:</span><span class="n">FFO</span><span class="p">:</span><span class="mi">01</span>
     <span class="s1">&#39;}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output&#39;</span><span class="p">}</span>
-    <span class="n">g_FastFaultOutput1</span> <span class="p">:</span> <span class="n">FB_HardwareFFOutput</span> <span class="o">:=</span> <span class="p">(</span><span class="n">bAutoReset</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+    <span class="n">g_FastFaultOutput1</span> <span class="p">:</span> <span class="n">FB_HardwareFFOutput</span> <span class="o">:=</span> <span class="p">(</span><span class="n">bAutoReset</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">i_sNetID</span><span class="o">:=</span><span class="s1">&#39;172.21.92.73.1.1&#39;</span><span class="p">);</span>
     <span class="o">//</span> <span class="n">FFO</span> <span class="k">for</span> <span class="n">devices</span> <span class="n">downstream</span> <span class="n">of</span> <span class="n">ST1K4</span> <span class="p">(</span><span class="n">TMO</span> <span class="n">hutch</span> <span class="n">optics</span><span class="p">)</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">PLC</span><span class="p">:</span><span class="n">TMO</span><span class="p">:</span><span class="n">OPTICS</span><span class="p">:</span><span class="n">FFO</span><span class="p">:</span><span class="mi">02</span>
     <span class="s1">&#39;}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output&#39;</span><span class="p">}</span>
-    <span class="n">g_FastFaultOutput2</span> <span class="p">:</span> <span class="n">FB_HardwareFFOutput</span> <span class="o">:=</span> <span class="p">(</span><span class="n">bAutoReset</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+    <span class="n">g_FastFaultOutput2</span> <span class="p">:</span> <span class="n">FB_HardwareFFOutput</span> <span class="o">:=</span> <span class="p">(</span><span class="n">bAutoReset</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">i_sNetID</span><span class="o">:=</span><span class="s1">&#39;172.21.92.73.1.1&#39;</span><span class="p">);</span>
 
     <span class="o">//</span> <span class="n">Arbiter</span> <span class="k">for</span> <span class="n">devices</span> <span class="n">upstream</span> <span class="n">of</span> <span class="n">ST1K4</span> <span class="p">(</span><span class="n">M1K4</span><span class="p">)</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-            <span class="n">pv</span><span class="p">:</span> <span class="n">PLC</span><span class="p">:</span><span class="n">TMO</span><span class="p">:</span><span class="n">OPTICS</span><span class="p">:</span><span class="n">Arbiter</span><span class="p">:</span><span class="mi">01</span>
+            <span class="n">pv</span><span class="p">:</span> <span class="n">PLC</span><span class="p">:</span><span class="n">TMO</span><span class="p">:</span><span class="n">OPTICS</span><span class="p">:</span><span class="n">ARB</span><span class="p">:</span><span class="mi">01</span>
     <span class="s1">&#39;}</span>
     <span class="n">g_fbArbiter1</span> <span class="p">:</span> <span class="n">FB_Arbiter</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
     <span class="o">//</span> <span class="n">Arbiter</span> <span class="k">for</span> <span class="n">devices</span> <span class="n">downstream</span> <span class="n">of</span> <span class="n">ST1K4</span> <span class="p">(</span><span class="n">TMO</span> <span class="n">hutch</span> <span class="n">optics</span><span class="p">)</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-            <span class="n">pv</span><span class="p">:</span> <span class="n">PLC</span><span class="p">:</span><span class="n">TMO</span><span class="p">:</span><span class="n">OPTICS</span><span class="p">:</span><span class="n">Arbiter</span><span class="p">:</span><span class="mi">02</span>
+            <span class="n">pv</span><span class="p">:</span> <span class="n">PLC</span><span class="p">:</span><span class="n">TMO</span><span class="p">:</span><span class="n">OPTICS</span><span class="p">:</span><span class="n">ARB</span><span class="p">:</span><span class="mi">02</span>
     <span class="s1">&#39;}</span>
     <span class="n">g_fbArbiter2</span> <span class="p">:</span> <span class="n">FB_Arbiter</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 <span class="n">END_VAR</span>
@@ -1120,10 +1123,10 @@ END_VAR
 <span class="n">fbLogHandler</span><span class="p">();</span>
 
 <span class="o">//</span> <span class="n">PMPS</span>
-<span class="n">bMR1K1Veto</span> <span class="o">:=</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aStoppers</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_IN</span><span class="p">]</span>
-            <span class="n">AND</span> <span class="n">NOT</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aStoppers</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_OUT</span><span class="p">];</span>
+<span class="n">bMR1K1Veto</span> <span class="o">:=</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_IN</span><span class="p">]</span>
+            <span class="n">AND</span> <span class="n">NOT</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_OUT</span><span class="p">];</span>
 <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">i_xVeto</span> <span class="o">:=</span> <span class="n">bMR1K1Veto</span> <span class="n">OR</span>
-                                       <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aStoppers</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">ST3K4</span><span class="p">];</span>
+                                       <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">ST3K4</span><span class="p">];</span>
 <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">Execute</span><span class="p">();</span>
 
 <span class="n">ffFFO2ToFFO1</span><span class="p">(</span><span class="n">i_xOK</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">q_xFastFaultOut</span><span class="p">,</span> <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">);</span>
@@ -1133,6 +1136,19 @@ END_VAR
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl-m1k4">GVL_M1K4</a></p></li>
+<li><p><a class="reference internal" href="#gvl-m1k4-constants">GVL_M1K4_Constants</a></p></li>
+<li><p><a class="reference internal" href="#gvl-m2k4-constants">GVL_M2K4_Constants</a></p></li>
+<li><p><a class="reference internal" href="#gvl-m2k4-rtd">GVL_M2K4_RTD</a></p></li>
+<li><p><a class="reference internal" href="#gvl-m3k4-constants">GVL_M3K4_Constants</a></p></li>
+<li><p><a class="reference internal" href="#gvl-m3k4-rtd">GVL_M3K4_RTD</a></p></li>
+<li><p><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></p></li>
+<li><p><a class="reference internal" href="#p-stripeprotections">P_StripeProtections</a></p></li>
+</ul>
+</dd>
+</dl>
 </div>
 <div class="section" id="p-serial-com">
 <h2>P_Serial_Com<a class="headerlink" href="#p-serial-com" title="Permalink to this headline">¶</a></h2>
@@ -1170,10 +1186,10 @@ END_VAR
     <span class="n">fbStripProtMR1K4</span> <span class="p">:</span> <span class="n">FB_MirrorTwoCoatingProtection</span> <span class="o">:=</span> <span class="p">(</span>
             <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;MR1K4&#39;</span><span class="p">,</span>
             <span class="n">nUpperCoatingBoundary</span> <span class="o">:=</span> <span class="mi">19998960</span><span class="p">,</span>
-            <span class="n">nUpperCoatingBitmask</span> <span class="o">:=</span> <span class="mi">2</span><span class="c1">#0000_0000_0001_1110,</span>
+            <span class="n">nUpperCoatingBitmask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">),</span>
             <span class="n">sUpperCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">,</span>
             <span class="n">nLowerCoatingBoundary</span> <span class="o">:=</span> <span class="mi">15998960</span><span class="p">,</span>
-            <span class="n">nLowerCoatingBitMask</span> <span class="o">:=</span> <span class="mi">2</span><span class="c1">#1111_1111_1111_1000,</span>
+            <span class="n">nLowerCoatingBitMask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">),</span>
             <span class="n">sLowerCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">);</span>
 <span class="p">(</span><span class="o">*</span>
 <span class="n">MR2K4</span> <span class="p">(</span><span class="n">RBV</span> <span class="o">=</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">Y</span><span class="p">:</span><span class="n">CNT_RBV</span><span class="p">)</span>
@@ -1185,10 +1201,10 @@ END_VAR
     <span class="n">fbStripProtMR2K4</span> <span class="p">:</span> <span class="n">FB_MirrorTwoCoatingProtection</span> <span class="o">:=</span> <span class="p">(</span>
             <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;MR2K4&#39;</span><span class="p">,</span>
             <span class="n">nUpperCoatingBoundary</span> <span class="o">:=</span> <span class="mi">7776781</span><span class="p">,</span>
-            <span class="n">nUpperCoatingBitmask</span> <span class="o">:=</span> <span class="mi">2</span><span class="c1">#0000_0000_0001_1110,</span>
+            <span class="n">nUpperCoatingBitmask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">),</span>
             <span class="n">sUpperCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">,</span>
             <span class="n">nLowerCoatingBoundary</span> <span class="o">:=</span> <span class="mi">6976835</span><span class="p">,</span>
-            <span class="n">nLowerCoatingBitMask</span> <span class="o">:=</span> <span class="mi">2</span><span class="c1">#1111_1111_1111_1000,</span>
+            <span class="n">nLowerCoatingBitMask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">),</span>
             <span class="n">sLowerCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">);</span>
 <span class="p">(</span><span class="o">*</span>
 <span class="n">MR3K4</span> <span class="p">(</span><span class="n">RBV</span> <span class="o">=</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">X</span><span class="p">:</span><span class="n">CNT_RBV</span><span class="p">)</span>
@@ -1199,10 +1215,10 @@ END_VAR
     <span class="n">fbStripProtMR3K4</span> <span class="p">:</span> <span class="n">FB_MirrorTwoCoatingProtection</span> <span class="o">:=</span> <span class="p">(</span>
             <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;MR3K4&#39;</span><span class="p">,</span>
             <span class="n">nUpperCoatingBoundary</span> <span class="o">:=</span> <span class="mi">5620000</span><span class="p">,</span>
-            <span class="n">nUpperCoatingBitmask</span> <span class="o">:=</span> <span class="mi">2</span><span class="c1">#1111_1111_1111_1000,</span>
+            <span class="n">nUpperCoatingBitMask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">),</span>
             <span class="n">sUpperCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
             <span class="n">nLowerCoatingBoundary</span> <span class="o">:=</span> <span class="mi">4820000</span><span class="p">,</span>
-            <span class="n">nLowerCoatingBitMask</span> <span class="o">:=</span> <span class="mi">2</span><span class="c1">#0000_0000_0001_1110,</span>
+            <span class="n">nLowerCoatingBitmask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">),</span>
             <span class="n">sLowerCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">);</span>
 
 <span class="n">END_VAR</span>
@@ -1221,6 +1237,12 @@ END_VAR
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></p></li>
+</ul>
+</dd>
+</dl>
 </div>
 <div class="section" id="piezoserial">
 <h2>PiezoSerial<a class="headerlink" href="#piezoserial" title="Permalink to this headline">¶</a></h2>
@@ -1242,6 +1264,12 @@ END_VAR
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl-m1k4">GVL_M1K4</a></p></li>
+</ul>
+</dd>
+</dl>
 </div>
 </div>
 

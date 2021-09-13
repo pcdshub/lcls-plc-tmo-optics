@@ -20,6 +20,8 @@ GVL_COM_Buffers
     END_VAR
 
 
+
+
 GVL_M1K4
 ^^^^^^^^
 
@@ -34,6 +36,8 @@ GVL_M1K4
     		                                 diEncPosLimHi := 10149192,
     		                                 diEncPosLimLo := 10047105);
     END_VAR
+
+
 
 
 GVL_M1K4_Constants
@@ -51,6 +55,8 @@ GVL_M1K4_Constants
     END_VAR
 
 
+
+
 GVL_M2K4_Constants
 ^^^^^^^^^^^^^^^^^^
 
@@ -63,6 +69,8 @@ GVL_M2K4_Constants
     	nM2K4Y_ENC_REF : ULINT := 6099450;
     	nM2K4rY_ENC_REF : ULINT := 39050722;
     END_VAR
+
+
 
 
 GVL_M2K4_RTD
@@ -93,6 +101,8 @@ GVL_M2K4_RTD
     END_VAR
 
 
+
+
 GVL_M3K4_Constants
 ^^^^^^^^^^^^^^^^^^
 
@@ -105,6 +115,8 @@ GVL_M3K4_Constants
     	nM3K4Y_ENC_REF : ULINT := 6047240;
     	nM3K4rX_ENC_REF : ULINT := 48388188;
     END_VAR
+
+
 
 
 GVL_M3K4_RTD
@@ -135,6 +147,8 @@ GVL_M3K4_RTD
     END_VAR
 
 
+
+
 GVL_PMPS
 ^^^^^^^^
 
@@ -147,25 +161,27 @@ GVL_PMPS
     		pv: PLC:TMO:OPTICS:FFO:01
     	'}
     	{attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
-    	g_FastFaultOutput1 : FB_HardwareFFOutput := (bAutoReset:=TRUE);
+    	g_FastFaultOutput1 : FB_HardwareFFOutput := (bAutoReset:=TRUE, i_sNetID:='172.21.92.73.1.1');
     	// FFO for devices downstream of ST1K4 (TMO hutch optics)
     	{attribute 'pytmc' := '
     		pv: PLC:TMO:OPTICS:FFO:02
     	'}
     	{attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
-    	g_FastFaultOutput2 : FB_HardwareFFOutput := (bAutoReset:=TRUE);
+    	g_FastFaultOutput2 : FB_HardwareFFOutput := (bAutoReset:=TRUE, i_sNetID:='172.21.92.73.1.1');
 
     	// Arbiter for devices upstream of ST1K4 (M1K4)	
     	{attribute 'pytmc' := '
-    		pv: PLC:TMO:OPTICS:Arbiter:01
+    		pv: PLC:TMO:OPTICS:ARB:01
     	'}
     	g_fbArbiter1 : FB_Arbiter(1);
     	// Arbiter for devices downstream of ST1K4 (TMO hutch optics)	
     	{attribute 'pytmc' := '
-    		pv: PLC:TMO:OPTICS:Arbiter:02
+    		pv: PLC:TMO:OPTICS:ARB:02
     	'}
     	g_fbArbiter2 : FB_Arbiter(2);
     END_VAR
+
+
 
 
 GVL_SerialIO
@@ -179,6 +195,8 @@ GVL_SerialIO
     	Serial_stComIn_M1K4   AT %I*	:	EL6inData22B (*KL6inData22B*);
     	Serial_stComOut_M1K4  AT %Q*	:	EL6outData22B (*KL6outData22B*);
     END_VAR
+
+
 
 
 POUs
@@ -959,10 +977,10 @@ Main
     fbLogHandler();
 
     // PMPS
-    bMR1K1Veto := PMPS.PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
-                AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_OUT];
+    bMR1K1Veto := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN] 
+                AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT];
     GVL_PMPS.g_FastFaultOutput2.i_xVeto := bMR1K1Veto OR
-                                           PMPS.PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.ST3K4];
+                                           PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST3K4];
     GVL_PMPS.g_FastFaultOutput2.Execute();
 
     ffFFO2ToFFO1(i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
@@ -970,6 +988,17 @@ Main
     GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto:= bMR1K1Veto );
 
     END_PROGRAM
+
+
+Related:
+    * `GVL_M1K4`_
+    * `GVL_M1K4_Constants`_
+    * `GVL_M2K4_Constants`_
+    * `GVL_M2K4_RTD`_
+    * `GVL_M3K4_Constants`_
+    * `GVL_M3K4_RTD`_
+    * `GVL_PMPS`_
+    * `P_StripeProtections`_
 
 
 P_Serial_Com
@@ -996,6 +1025,8 @@ P_Serial_Com
     END_PROGRAM
 
 
+
+
 P_StripeProtections
 ^^^^^^^^^^^^^^^^^^^
 
@@ -1013,10 +1044,10 @@ P_StripeProtections
     	fbStripProtMR1K4 : FB_MirrorTwoCoatingProtection := (
     		sDevName := 'MR1K4',
     		nUpperCoatingBoundary := 19998960,
-    		nUpperCoatingBitmask := 2#0000_0000_0001_1110,
+    		nUpperCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
     		sUpperCoatingType := 'Si',
-    		nLowerCoatingBoundary := 15998960,
-    		nLowerCoatingBitMask := 2#1111_1111_1111_1000,
+    		nLowerCoatingBoundary := 15998960,	
+    		nLowerCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
     		sLowerCoatingType := 'B4C');
     (*
     MR2K4 (RBV = MR2K4:KBO:ENC:Y:CNT_RBV)
@@ -1028,10 +1059,10 @@ P_StripeProtections
     	fbStripProtMR2K4 : FB_MirrorTwoCoatingProtection := (
     		sDevName := 'MR2K4',
     		nUpperCoatingBoundary := 7776781,
-    		nUpperCoatingBitmask := 2#0000_0000_0001_1110,
+    		nUpperCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
     		sUpperCoatingType := 'Si',
     		nLowerCoatingBoundary := 6976835,
-    		nLowerCoatingBitMask := 2#1111_1111_1111_1000,
+    		nLowerCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
     		sLowerCoatingType := 'B4C');
     (*
     MR3K4 (RBV = MR3K4:KBO:ENC:X:CNT_RBV)
@@ -1042,10 +1073,10 @@ P_StripeProtections
     	fbStripProtMR3K4 : FB_MirrorTwoCoatingProtection := (
     		sDevName := 'MR3K4',
     		nUpperCoatingBoundary := 5620000,
-    		nUpperCoatingBitmask := 2#1111_1111_1111_1000,
+    		nUpperCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
     		sUpperCoatingType := 'B4C',
     		nLowerCoatingBoundary := 4820000,
-    		nLowerCoatingBitMask := 2#0000_0000_0001_1110,
+    		nLowerCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
     		sLowerCoatingType := 'Si');		
     		
     END_VAR
@@ -1062,6 +1093,10 @@ P_StripeProtections
     				neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
 
     END_PROGRAM
+
+
+Related:
+    * `GVL_PMPS`_
 
 
 PiezoSerial
@@ -1085,4 +1120,8 @@ PiezoSerial
     		                iq_stSerialTXBuffer:= Serial_TXBuffer_M1K4);
 
     END_PROGRAM
+
+
+Related:
+    * `GVL_M1K4`_
 
