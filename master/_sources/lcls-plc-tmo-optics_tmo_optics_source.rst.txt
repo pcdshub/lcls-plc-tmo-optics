@@ -249,7 +249,8 @@ Main
     		{attribute 'pytmc' := '
     			pv: MR1K4:SOMS:MMS:PITCH
     		'}
-    		M5 : DUT_MotionStage := (fVelocity := 150.0, bPowerSelf:=TRUE); // M1K4 Pitch Stepper
+    		M5 : DUT_MotionStage := (fVelocity := 150.0, bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M1K4 Pitch Stepper
+            fbMotionStage_m5 : FB_MotionStage;
     	
     		{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 1;
     								  .bLimitBackwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 2'}
@@ -299,10 +300,10 @@ Main
     		fMaxBenderRMSErrorM1K4 : LREAL;
     		fMinBenderRMSErrorM1K4 : LREAL;
 
-    	// Pitch Control
-    		fbM1K4PitchControl : FB_PitchControl;
-    		bM1K4PitchDone : BOOL;
-    		bM1K4PitchBusy : BOOL;
+    	// Piezo Pitch Control
+    		//fbM1K4PitchControl : FB_PitchControl;
+    		//bM1K4PitchDone : BOOL;
+    		//bM1K4PitchBusy : BOOL;
 
     	// Bender Control
     		fbBenderM1K4 : FB_Bender;
@@ -787,6 +788,7 @@ Main
     		fbMotionStage_m2(stMotionStage:=M2);
     		fbMotionStage_m3(stMotionStage:=M3);
     		fbMotionStage_m4(stMotionStage:=M4);
+            fbMotionStage_m5(stMotionStage:=M5);
     		fbMotionStage_m6(stMotionStage:=M6);
     	
     	// Calculate Pitch RMS Error:
@@ -807,15 +809,15 @@ Main
     							 fMinRMSError=>fMinBenderRMSErrorM1K4);
     	
     	// Pitch Control
-    		fbM1K4PitchControl(Pitch:=GVL_M1K4.M1K4_Pitch,
-    						   Stepper:=M5,
-    						   lrCurrentSetpoint:=M5.fPosition,
-    						   q_bDone=>bM1K4PitchDone,
-    						   q_bBusy=>bM1K4PitchBusy);
+    		//fbM1K4PitchControl(Pitch:=GVL_M1K4.M1K4_Pitch,
+    						   //Stepper:=M5,
+    						   //lrCurrentSetpoint:=M5.fPosition,
+    						  //q_bDone=>bM1K4PitchDone,
+    						   //q_bBusy=>bM1K4PitchBusy);
     	// When STO hit, need to reset SP
-    		IF NOT M5.bHardwareEnable THEN
-    			M5.fPosition := M5.stAxisStatus.fActPosition;
-    		END_IF
+    		//IF NOT M5.bHardwareEnable THEN
+    			//M5.fPosition := M5.stAxisStatus.fActPosition;
+    		//END_IF
     	
     	// Raw Encoder Counts For Epics
     		nEncCntYupM1K4 := ULINT_TO_UDINT(M1K4.fbRunHOMS.stYupEnc.Count);

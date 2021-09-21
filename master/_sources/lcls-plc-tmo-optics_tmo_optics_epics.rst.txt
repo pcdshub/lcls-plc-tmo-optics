@@ -99,7 +99,7 @@ LCLS_General.FB_BasicStats
       - | io: input
 
 
-   
+  
 LCLS_General.FB_Listener
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -937,7 +937,7 @@ LCLS_General.FB_LogMessage
       - | io: input
 
 
-   
+  
 LCLS_General.ST_PendingEvent
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1503,7 +1503,7 @@ lcls_twincat_motion.DUT_PositionState
       - | io: output
 
 
-                                                    
+                                                   
 lcls_twincat_optics.DUT_HOMS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1589,7 +1589,7 @@ lcls_twincat_optics.DUT_HOMS
         | io: input
 
 
-       
+     
 lcls_twincat_optics.FB_RMSWatch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1631,7 +1631,7 @@ lcls_twincat_optics.FB_RMSWatch
       - | io: input
 
 
-                       
+                 
 PMPS.FB_Arbiter
 ^^^^^^^^^^^^^^^
 
