@@ -14,6 +14,11 @@
     <Implicit_Jitter_Distribution>{a471daae-0097-49e8-972c-6815a1acdbe0}</Implicit_Jitter_Distribution>
     <LibraryReferences>{08d19610-54d5-4257-b832-59ae6935c63c}</LibraryReferences>
     <CompilerDefines>K</CompilerDefines>
+    <CombineIds>false</CombineIds>
+    <Company>SLAC</Company>
+    <Released>true</Released>
+    <Title>lcls-plc-tmo-optics</Title>
+    <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GVLs\GVL_COM_Buffers.TcGVL">
