@@ -127,6 +127,9 @@
     </LibraryReference>
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderResolution Include="PMPS">
+      <Resolution>PMPS, 2.1.0 (SLAC - LCLS)</Resolution>
+    </PlaceholderResolution>
     <PlaceholderResolution Include="Tc2_MC2">
       <Resolution>Tc2_MC2, 3.3.42.0 (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
