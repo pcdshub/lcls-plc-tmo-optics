@@ -36,6 +36,7 @@ Libraries
     :header: Library, Vendor, Default, Version
     :align: center
 
+        PMPS, SLAC - LCLS, , 2.1.0
         Tc2_MC2, Beckhoff Automation GmbH, Unset, 3.3.42.0
         Tc2_SerialCom, Beckhoff Automation GmbH, Unset, 3.3.7.0
         Tc2_Standard, Beckhoff Automation GmbH, Unset, 3.3.3.0
@@ -275,8 +276,8 @@ GVL_Param_TcUnit
         GVL_Param_TcUnit.MaxNumberOfAssertsForEachTestSuite, UINT, 8559232 (16)
         GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite, UINT, 8559216 (16)
         GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite, UINT, 4392320 (16)
-        GVL_Param_TcUnit.MaxNumberOfTestSuites, UINT, 8559200 (16)
         GVL_Param_TcUnit.MaxNumberOfTestSuites, UINT, 4390160 (16)
+        GVL_Param_TcUnit.MaxNumberOfTestSuites, UINT, 8559200 (16)
         GVL_Param_TcUnit.xUnitBufferSize, UDINT, 8559264 (32)
         GVL_Param_TcUnit.xUnitEnablePublish, BOOL, 8559248 (8)
         GVL_Param_TcUnit.xUnitFilePath, STRING(255), 8559296 (2048)
