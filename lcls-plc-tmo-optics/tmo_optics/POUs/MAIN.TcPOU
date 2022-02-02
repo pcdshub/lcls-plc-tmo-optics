@@ -427,7 +427,24 @@ VAR
 	//Emergency Stop for LAMP KBs (M2K4 and M3K4)
 		LAMPbSTOEnable1 AT %I* : BOOL;
 		LAMPbSTOEnable2 AT %I* : BOOL;
-
+			{attribute 'pytmc' := '
+				pv: MR2K4:KBO:FLOW:1
+				field: EGU GPH
+				io: i
+			'}
+			fM2K4_Flow_1 : REAL;
+			{attribute 'pytmc' := '
+				pv: MR2K4:KBO:FLOW:2
+				field: EGU GPH
+				io: i
+			'}
+			fM2K4_Flow_2 : REAL;
+			{attribute 'pytmc' := '
+				pv: MR2K4:KBO:PRESS:1
+				field: EGU bar
+				io: i
+			'}
+			fM2K4_Press_1 : REAL;
 	// LAMP KB BENDER RTDs
 	// M2K4 US RTDs
 			{attribute 'pytmc' := '
@@ -725,7 +742,11 @@ END_VAR]]></Declaration>
 		nEncCntXM3K4  := ULINT_TO_UDINT(M12.nRawEncoderULINT);
 		nEncCntYM3K4  := ULINT_TO_UDINT(M13.nRawEncoderULINT);
 		nEncCntrXM3K4 := ULINT_TO_UDINT(M14.nRawEncoderULINT);
-	
+	// LAMP KB Flow Pressure Sensors
+        fM2K4_Flow_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4_Flow_1);
+        fM2K4_Flow_2 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4_Flow_2);
+        fM2K4_Press_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4_Press_1);
+    
 	// LAMP KB Bender RTDs
 		fM2K4US_RTD_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_1);
 		fM2K4US_RTD_2 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_2);
