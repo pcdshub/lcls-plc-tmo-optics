@@ -429,6 +429,9 @@ Links
         tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.nM2K4US_RTD_1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4US1_M2K4US2, RTD Inputs Channel 1^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.nM2K4US_RTD_2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4US1_M2K4US2, RTD Inputs Channel 2^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.nM2K4US_RTD_3, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4US3_M2K4DS1, RTD Inputs Channel 1^Value
+        tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.nM2K4_Flow_1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3054_FLOW_PRESS, AI Standard Channel 1^Value
+        tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.nM2K4_Flow_2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3054_FLOW_PRESS, AI Standard Channel 2^Value
+        tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.nM2K4_Press_1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3054_FLOW_PRESS, AI Standard Channel 3^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M3K4_RTD.nM3K4DS_RTD_1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4US3_M3K4DS1, RTD Inputs Channel 2^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M3K4_RTD.nM3K4DS_RTD_2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4DS2_M3K4DS3, RTD Inputs Channel 1^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M3K4_RTD.nM3K4DS_RTD_3, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4DS2_M3K4DS3, RTD Inputs Channel 2^Value

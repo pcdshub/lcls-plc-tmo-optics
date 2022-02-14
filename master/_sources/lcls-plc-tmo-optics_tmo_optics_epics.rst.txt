@@ -14682,6 +14682,20 @@ Database Records
       - | io: input
 
 
+    * - MR2K4:KBO:FLOW:1_RBV
+      - ai
+      - Main.fM2K4_Flow_1
+      - | field: EGU GPH
+        | io: input
+
+
+    * - MR2K4:KBO:FLOW:2_RBV
+      - ai
+      - Main.fM2K4_Flow_2
+      - | field: EGU GPH
+        | io: input
+
+
     * - MR2K4:KBO:MMS:BEND:DS:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -16535,6 +16549,13 @@ Database Records
       - waveform
       - PLC program name
       - | io: input
+
+
+    * - MR2K4:KBO:PRESS:1_RBV
+      - ai
+      - Main.fM2K4_Press_1
+      - | field: EGU bar
+        | io: input
 
 
     * - MR2K4:KBO:RTD:BEND:DS:1_RBV
