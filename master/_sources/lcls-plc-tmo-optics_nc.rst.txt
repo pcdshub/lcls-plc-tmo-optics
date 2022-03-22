@@ -230,6 +230,10 @@ Axis 7: M2K4-X
     Enc:Offset, -30.6825
     Enc:ReferenceSystem, 1
     Enc:ScaleFactorNumerator, 5e-06
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, 1.8973
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, -3.266
     Id, 7
     OtherSettings:AllowMotionCmdToSlave, true
     Velo:Maximum, 20
@@ -260,6 +264,10 @@ Axis 8: M2K4-Y
     Enc:Offset, -30.18
     Enc:ReferenceSystem, 1
     Enc:ScaleFactorNumerator, 5e-06
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, 13.39
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, -12.5
     Id, 8
     OtherSettings:AllowMotionCmdToSlave, true
     Velo:Maximum, 1.25
@@ -290,6 +298,10 @@ Axis 9: M2K4-rY
     Enc:Offset, -194502.025
     Enc:ReferenceSystem, 1
     Enc:ScaleFactorNumerator, 0.005348
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, 15219.8
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, 13466.72
     General:UnitName, urad
     Id, 9
     OtherSettings:AllowMotionCmdToSlave, true
@@ -382,6 +394,10 @@ Axis 12: M3K4-X
     Enc:Offset, -31.1
     Enc:ReferenceSystem, 1
     Enc:ScaleFactorNumerator, 5e-06
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, 12.0995
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, -10.179
     Id, 12
     OtherSettings:AllowMotionCmdToSlave, true
     Velo:Maximum, 20
@@ -412,6 +428,10 @@ Axis 13: M3K4-Y
     Enc:Offset, -29.68
     Enc:ReferenceSystem, 1
     Enc:ScaleFactorNumerator, 5e-06
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, 3.637
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, -2.61
     Id, 13
     OtherSettings:AllowMotionCmdToSlave, true
     Velo:Maximum, 1.25
@@ -442,6 +462,10 @@ Axis 14: M3K4-rX
     Enc:Offset, -136547
     Enc:ReferenceSystem, 1
     Enc:ScaleFactorNumerator, 0.002577
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, -10569
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, -12760
     General:UnitName, urad
     Id, 14
     OtherSettings:AllowMotionCmdToSlave, true
