@@ -262,6 +262,50 @@ VAR
 		'}
 		M16 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
 		fbMotionStage_m16 : FB_MotionStage;
+    //M4K4 X
+		{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4X]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4X]^STM Status^Status^Digital input 2'}
+	    M17 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        fbMotionStageM17 : FB_MotionStage;
+    //M4K4 Y
+	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4Y]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4Y]^STM Status^Status^Digital input 2'}
+	    M18 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        fbMotionStageM18 : FB_MotionStage;
+    //M4K4 Z
+	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4Z]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4Z]^STM Status^Status^Digital input 1'}
+	    M19 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        fbMotionStageM19 : FB_MotionStage;
+    //M4K4 rX	
+	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4rX]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4rX]^STM Status^Status^Digital input 2'}
+	    M20 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        fbMotionStageM20 : FB_MotionStage;
+    //M5K4 X
+	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4X]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[EL7041-0052_M5K4X]^STM Status^Status^Digital input 2'}
+	    M21 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        fbMotionStageM21 : FB_MotionStage;
+    //M5K4 Y
+	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4Y]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[EL7041-0052_M5K4Y]^STM Status^Status^Digital input 2'}
+	
+	    M22 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        fbMotionStageM22 : FB_MotionStage;
+    //M5K4 Z
+	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4Z]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[EL7041-0052_M5K4Z]^STM Status^Status^Digital input 1'}
+	    M23 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        fbMotionStageM23 : FB_MotionStage;
+    //M5K4 rY
+	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4rY]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[EL7041-0052_M5K4rY]^STM Status^Status^Digital input 2'}
+	    M24 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        fbMotionStageM24 : FB_MotionStage;
+    //MR4K4 MR5K4 STO button
+    {attribute 'TcLinkTo' := 'TIIB[Term 109 (EL1004)]^Channel 1^Input'}
+    bDreamEnable AT %I* : BOOL;
 	
 	// Encoder Arrays/RMS Watch:
 		//MR2K4 X ENC RMS
@@ -667,6 +711,27 @@ END_VAR]]></Declaration>
 		//MR3K4 BEND
 			fbMotionStage_m15(stMotionStage:=M15);
 			fbMotionStage_m16(stMotionStage:=M16);
+        
+//MR4K4 and MR5K4
+            M17.bHardwareEnable := bDREAMEnable;
+            M18.bHardwareEnable := bDREAMEnable;
+            M19.bHardwareEnable := bDREAMEnable;
+            M20.bHardwareEnable := bDREAMEnable;
+            M21.bHardwareEnable := bDREAMEnable;
+            M22.bHardwareEnable := bDREAMEnable;
+            M23.bHardwareEnable := bDREAMEnable;
+            M24.bHardwareEnable := bDREAMEnable;
+        //MR4K4
+            fbMotionStageM17(stMotionStage:=M17);
+            fbMotionStageM18(stMotionStage:=M18);
+            fbMotionStageM19(stMotionStage:=M19);
+            fbMotionStageM20(stMotionStage:=M20);
+        //MR5K4
+            fbMotionStageM21(stMotionStage:=M21);
+            fbMotionStageM22(stMotionStage:=M22);
+            fbMotionStageM23(stMotionStage:=M23);
+            fbMotionStageM24(stMotionStage:=M24);
+            
 	
 	// Calculate Pitch RMS Error for LAMP KBs:
 		//MR2K4 X ENC RMS
