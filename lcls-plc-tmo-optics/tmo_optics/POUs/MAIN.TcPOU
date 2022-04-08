@@ -473,19 +473,27 @@ VAR
 		LAMPbSTOEnable2 AT %I* : BOOL;
 			{attribute 'pytmc' := '
 				pv: MR2K4:KBO:FLOW:1
-				field: EGU GPH
+				field: EGU lpm
+                field: LINR SLOPE
+                field: ASLO .00128
+                field: AOFF .05
 				io: i
 			'}
 			fM2K4_Flow_1 : REAL;
 			{attribute 'pytmc' := '
 				pv: MR2K4:KBO:FLOW:2
-				field: EGU GPH
+				field: EGU lpm
+                field: LINR SLOPE
+                field: ASLO .00128
+                field: AOFF .05
 				io: i
 			'}
 			fM2K4_Flow_2 : REAL;
 			{attribute 'pytmc' := '
 				pv: MR2K4:KBO:PRESS:1
 				field: EGU bar
+                field: LINR SLOPE
+                field: ASLO .000977
 				io: i
 			'}
 			fM2K4_Press_1 : REAL;

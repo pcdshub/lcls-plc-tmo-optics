@@ -1364,9 +1364,6 @@ External Setpoint Generation:
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
 				<Velo Maximum="1"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
-				<ParameterChanged>39</ParameterChanged>
-				<ParameterChanged>260</ParameterChanged>
-				<ParameterChanged>18</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-28.961399" MaxCount="#xffffffff">
@@ -1576,8 +1573,6 @@ External Setpoint Generation:
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
 				<Velo Maximum="1.1"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
-				<ParameterChanged>260</ParameterChanged>
-				<ParameterChanged>18</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-30.3992" MaxCount="#xffffffff">
@@ -1787,11 +1782,9 @@ External Setpoint Generation:
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
 				<Velo Maximum="1.1"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
-				<ParameterChanged>260</ParameterChanged>
-				<ParameterChanged>18</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5e-06" Offset="-687165.2842" MaxCount="#xffffffff">
+				<EncPara ScaleFactorNumerator="5e-06" Offset="-21445.3535" MaxCount="#xffffffff">
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
@@ -1999,7 +1992,6 @@ External Setpoint Generation:
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
 				<Velo Maximum="100"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
-				<ParameterChanged>260</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="0.0025826" Offset="-132192.8499" MaxCount="#xffffffff">
@@ -2209,9 +2201,6 @@ External Setpoint Generation:
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
 				<Velo Maximum="1"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
-				<ParameterChanged>260</ParameterChanged>
-				<ParameterChanged>39</ParameterChanged>
-				<ParameterChanged>18</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.80379" MaxCount="#xffffffff">
@@ -2421,8 +2410,6 @@ External Setpoint Generation:
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
 				<Velo Maximum="1.1"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
-				<ParameterChanged>260</ParameterChanged>
-				<ParameterChanged>18</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.7766" MaxCount="#xffffffff">
@@ -2632,11 +2619,9 @@ External Setpoint Generation:
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
 				<Velo Maximum="1.1"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
-				<ParameterChanged>260</ParameterChanged>
-				<ParameterChanged>18</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5e-06" Offset="-687164.418979" MaxCount="#xffffffff">
+				<EncPara ScaleFactorNumerator="5e-06" Offset="-21444.5039" MaxCount="#xffffffff">
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
@@ -2844,7 +2829,6 @@ External Setpoint Generation:
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
 				<Velo Maximum="180"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
-				<ParameterChanged>260</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="0.00504" Offset="-198169.78" MaxCount="#xffffffff">
@@ -2982,7 +2966,7 @@ Drive Status 4 (manually linked):
 			<Controller Name="Ctrl" CtrType="2">
 				<CtrPara PriorControlFactor="1">
 					<PosDiffControl Range="10"/>
-					<PID PosExtKp="4" DeadBandPosition="0.01"/>
+					<PID PosExtKp="10" DeadBandPosition="0.01"/>
 					<Observer BandWidth="20"/>
 				</CtrPara>
 			</Controller>
