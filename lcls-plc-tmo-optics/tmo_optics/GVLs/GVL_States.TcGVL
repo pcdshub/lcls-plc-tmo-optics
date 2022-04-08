@@ -5,7 +5,7 @@
 VAR_GLOBAL
         
     {attribute 'pytmc' := '
-     pv: MR1K4:HOMS:MMS:YUP:STATE;
+     pv: MR1K4:SOMS:MMS:YUP:STATE;
      io: io;
     '}
     fbMR1K4_Coating_States: FB_Coating_States_noPMPS; 
