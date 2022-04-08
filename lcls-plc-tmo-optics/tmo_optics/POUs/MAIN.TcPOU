@@ -281,11 +281,12 @@ VAR
     //M4K4 Z
 	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4Z]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4Z]^STM Status^Status^Digital input 1'}
-	    M19 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
-        fbMotionStageM19 : FB_MotionStage;
         {attribute 'pytmc' := '
 		    pv: MR4K4:KBO:MMS:Z
 		'}
+	    M19 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        fbMotionStageM19 : FB_MotionStage;
+
     //M4K4 rX	
 	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4rX]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4rX]^STM Status^Status^Digital input 2'}
