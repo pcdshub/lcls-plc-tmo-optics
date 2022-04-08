@@ -265,11 +265,17 @@ VAR
     //M4K4 X
 		{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4X]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4X]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+		    pv: MR4K4:KBO:MMS:X
+		'}
 	    M17 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM17 : FB_MotionStage;
     //M4K4 Y
 	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4Y]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4Y]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+		    pv: MR4K4:KBO:MMS:Y
+		'}
 	    M18 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM18 : FB_MotionStage;
     //M4K4 Z
@@ -277,36 +283,54 @@ VAR
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4Z]^STM Status^Status^Digital input 1'}
 	    M19 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM19 : FB_MotionStage;
+        {attribute 'pytmc' := '
+		    pv: MR4K4:KBO:MMS:Z
+		'}
     //M4K4 rX	
 	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4rX]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4rX]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+		    pv: MR4K4:KBO:MMS:rX
+		'}
 	    M20 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM20 : FB_MotionStage;
     //M5K4 X
 	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4X]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M5K4X]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+		    pv: MR5K4:KBO:MMS:X
+		'}
 	    M21 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM21 : FB_MotionStage;
     //M5K4 Y
 	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4Y]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M5K4Y]^STM Status^Status^Digital input 2'}
-	
+        {attribute 'pytmc' := '
+		    pv: MR5K4:KBO:MMS:Y
+		'}
 	    M22 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM22 : FB_MotionStage;
     //M5K4 Z
 	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4Z]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M5K4Z]^STM Status^Status^Digital input 1'}
+        {attribute 'pytmc' := '
+		    pv: MR5K4:KBO:MMS:Z
+		'}
 	    M23 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM23 : FB_MotionStage;
     //M5K4 rY
 	    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4rY]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M5K4rY]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+		    pv: MR5K4:KBO:MMS:rY
+		'}
 	    M24 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM24 : FB_MotionStage;
     //MR4K4 MR5K4 STO button
     {attribute 'TcLinkTo' := 'TIIB[Term 109 (EL1004)]^Channel 1^Input'}
-    bDreamEnable AT %I* : BOOL;
-	
+    bDreamEnable1 AT %I* : BOOL;
+	    {attribute 'TcLinkTo' := 'TIIB[Term 109 (EL1004)]^Channel 2^Input'}
+    bDreamEnable2 AT %I* : BOOL;
 	// Encoder Arrays/RMS Watch:
 		//MR2K4 X ENC RMS
 		{attribute 'pytmc' := '
@@ -721,14 +745,14 @@ END_VAR]]></Declaration>
 			fbMotionStage_m16(stMotionStage:=M16);
         
 //MR4K4 and MR5K4
-            M17.bHardwareEnable := bDREAMEnable;
-            M18.bHardwareEnable := bDREAMEnable;
-            M19.bHardwareEnable := bDREAMEnable;
-            M20.bHardwareEnable := bDREAMEnable;
-            M21.bHardwareEnable := bDREAMEnable;
-            M22.bHardwareEnable := bDREAMEnable;
-            M23.bHardwareEnable := bDREAMEnable;
-            M24.bHardwareEnable := bDREAMEnable;
+            M17.bHardwareEnable := bDREAMEnable1 and bDREAMenable2;
+            M18.bHardwareEnable := bDREAMEnable1 and bDREAMenable2;
+            M19.bHardwareEnable := bDREAMEnable1 and bDREAMenable2;
+            M20.bHardwareEnable := bDREAMEnable1 and bDREAMenable2;
+            M21.bHardwareEnable := bDREAMEnable1 and bDREAMenable2;
+            M22.bHardwareEnable := bDREAMEnable1 and bDREAMenable2;
+            M23.bHardwareEnable := bDREAMEnable1 and bDREAMenable2;
+            M24.bHardwareEnable := bDREAMEnable1 and bDREAMenable2;
         //MR4K4
             fbMotionStageM17(stMotionStage:=M17);
             fbMotionStageM18(stMotionStage:=M18);

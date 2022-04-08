@@ -1293,13 +1293,6 @@ External Setpoint Generation:
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
-					<Name>Main.bDreamEnable</Name>
-					<Comment>
-						<![CDATA[MR4K4 MR5K4 STO button]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>Main.LAMPbSTOEnable1</Name>
 					<Comment>
 						<![CDATA[Emergency Stop for LAMP KBs (M2K4 and M3K4)]]>
@@ -5246,6 +5239,17 @@ External Setpoint Generation:
 					<Name>GVL_M3K4_RTD.nM3K4DS_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
+				<Var>
+					<Name>Main.bDreamEnable1</Name>
+					<Comment>
+						<![CDATA[MR4K4 MR5K4 STO button]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.bDreamEnable2</Name>
+					<Type>BOOL</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
@@ -5761,6 +5765,13 @@ External Setpoint Generation:
 					<InOut>7</InOut>
 				</Var>
 			</Vars>
+			<UnrestoredVarLinks ImportTime="2022-04-08T14:33:07">
+				<OwnerA Name="InputDst" Prefix="TIPC^tmo_optics^tmo_optics Instance" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^Term 109 (EL1004)">
+						<Link VarA="Main.bDreamEnable" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
 			<TaskPouOids>
 				<TaskPouOid Prio="1" OTCID="#x08502001"/>
 				<TaskPouOid Prio="20" OTCID="#x08502003"/>
@@ -5813,7 +5824,8 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M24.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^Term 109 (EL1004)">
-				<Link VarA="PlcTask Inputs^Main.bDreamEnable" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.bDreamEnable1" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.bDreamEnable2" VarB="Channel 2^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL1004_M2K4_M3K4_STO">
 				<Link VarA="PlcTask Inputs^Main.LAMPbSTOEnable1" VarB="Channel 1^Input"/>
