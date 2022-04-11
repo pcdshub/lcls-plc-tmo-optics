@@ -5,7 +5,7 @@
 VAR_GLOBAL
         
     {attribute 'pytmc' := '
-     pv: MR1K4:SOMS:MMS:YUP:STATE;
+     pv: MR1K4:SOMS:COATING:STATE;
      io: io;
     '}
     fbMR1K4_Coating_States: FB_Coating_States_noPMPS; 
@@ -29,7 +29,7 @@ VAR_GLOBAL
         fVelocity := 150);
             
     {attribute 'pytmc' := '
-     pv: MR2K4:KBO:MMS:Y:STATE;
+     pv: MR2K4:KBO:COATING:STATE;
      io: io;
     '}
     fbMR2K4_Coating_States: FB_Coating_States_noPMPS; 
@@ -52,7 +52,7 @@ VAR_GLOBAL
         fDelta := 1,
         fVelocity := 0.150);
     {attribute 'pytmc' := '
-     pv: MR3K4:KBO:MMS:X:STATE;
+     pv: MR3K4:KBO:COATING:STATE;
      io: io;
     '}
     fbMR3K4_Coating_States: FB_Coating_States_noPMPS; 
