@@ -5035,6 +5035,18 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
+					<Comment>
+						<![CDATA[ M2K4 BENDER RTDs
+ M2K4 US RTDs]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>Main.fbArbiterIO.i_stCurrentBP</Name>
 					<Type GUID="{0C6A4924-E177-45F6-9AB0-6F9DB98D3474}">ST_BeamParams_IO</Type>
 					<SubVar>
@@ -5167,25 +5179,6 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
-					<Comment>
-						<![CDATA[Raw encoder count]]>
-					</Comment>
-					<Type>LINT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
-					<Comment>
-						<![CDATA[ M2K4 BENDER RTDs
- M2K4 US RTDs]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
@@ -5195,6 +5188,13 @@ External Setpoint Generation:
 						<![CDATA[ M2K4 DS RTDs]]>
 					</Comment>
 					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
+					<Comment>
+						<![CDATA[Raw encoder count]]>
+					</Comment>
+					<Type>LINT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_2</Name>
