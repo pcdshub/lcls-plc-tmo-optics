@@ -1362,12 +1362,19 @@ External Setpoint Generation:
 			<Name>M4K4 X</Name>
 			<AxisPara>
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
-				<Velo Maximum="1"/>
+				<Velo Maximum="0.3"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
+				<ParameterChanged>39</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-28.961399" MaxCount="#xffffffff">
+					<SoftEndMinControl Enable="true" Range="-11.05"/>
+					<SoftEndMaxControl Enable="true" Range="12.9"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
+					<ParameterChanged>14</ParameterChanged>
+					<ParameterChanged>11</ParameterChanged>
+					<ParameterChanged>13</ParameterChanged>
+					<ParameterChanged>12</ParameterChanged>
 				</EncPara>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
@@ -1571,12 +1578,19 @@ External Setpoint Generation:
 			<Name>M4K4 Y</Name>
 			<AxisPara>
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
-				<Velo Maximum="1.1"/>
+				<Velo Maximum="0.2"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
+				<ParameterChanged>39</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-30.3992" MaxCount="#xffffffff">
+					<SoftEndMinControl Enable="true" Range="-1.9"/>
+					<SoftEndMaxControl Enable="true" Range="2.05"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
+					<ParameterChanged>14</ParameterChanged>
+					<ParameterChanged>11</ParameterChanged>
+					<ParameterChanged>13</ParameterChanged>
+					<ParameterChanged>12</ParameterChanged>
 				</EncPara>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
@@ -1780,12 +1794,19 @@ External Setpoint Generation:
 			<Name>M4K4 Z</Name>
 			<AxisPara>
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
-				<Velo Maximum="1.1"/>
+				<Velo Maximum="0.2"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
+				<ParameterChanged>39</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-21445.3535" MaxCount="#xffffffff">
+					<SoftEndMinControl Enable="true" Range="-1.5"/>
+					<SoftEndMaxControl Enable="true" Range="0.85"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
+					<ParameterChanged>14</ParameterChanged>
+					<ParameterChanged>11</ParameterChanged>
+					<ParameterChanged>13</ParameterChanged>
+					<ParameterChanged>12</ParameterChanged>
 				</EncPara>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
@@ -1990,13 +2011,20 @@ External Setpoint Generation:
 			<AxisPara>
 				<General UnitName="urad"/>
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
-				<Velo Maximum="100"/>
+				<Velo Maximum="50"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
+				<ParameterChanged>39</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="0.0025826" Offset="-132192.8499" MaxCount="#xffffffff">
 					<FilterTime TPos="0.2"/>
+					<SoftEndMinControl Enable="true" Range="-141"/>
+					<SoftEndMaxControl Enable="true" Range="169"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
+					<ParameterChanged>14</ParameterChanged>
+					<ParameterChanged>11</ParameterChanged>
+					<ParameterChanged>13</ParameterChanged>
+					<ParameterChanged>12</ParameterChanged>
 				</EncPara>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
@@ -2200,12 +2228,19 @@ External Setpoint Generation:
 			<Name>M5K4 X</Name>
 			<AxisPara>
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
-				<Velo Maximum="1"/>
+				<Velo Maximum="0.2"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
+				<ParameterChanged>39</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.80379" MaxCount="#xffffffff">
+					<SoftEndMinControl Enable="true" Range="-1.8"/>
+					<SoftEndMaxControl Enable="true" Range="2.3"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
+					<ParameterChanged>14</ParameterChanged>
+					<ParameterChanged>11</ParameterChanged>
+					<ParameterChanged>13</ParameterChanged>
+					<ParameterChanged>12</ParameterChanged>
 				</EncPara>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
@@ -2409,12 +2444,19 @@ External Setpoint Generation:
 			<Name>M5K4 Y</Name>
 			<AxisPara>
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
-				<Velo Maximum="1.1"/>
+				<Velo Maximum="0.3"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
+				<ParameterChanged>39</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.7766" MaxCount="#xffffffff">
+					<SoftEndMinControl Enable="true" Range="-12.05"/>
+					<SoftEndMaxControl Enable="true" Range="12.03"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
+					<ParameterChanged>14</ParameterChanged>
+					<ParameterChanged>11</ParameterChanged>
+					<ParameterChanged>13</ParameterChanged>
+					<ParameterChanged>12</ParameterChanged>
 				</EncPara>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
@@ -2618,12 +2660,19 @@ External Setpoint Generation:
 			<Name>M5K4 Z</Name>
 			<AxisPara>
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
-				<Velo Maximum="1.1"/>
+				<Velo Maximum="0.2"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
+				<ParameterChanged>39</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-21444.5039" MaxCount="#xffffffff">
+					<SoftEndMinControl Enable="true" Range="-0.69"/>
+					<SoftEndMaxControl Enable="true" Range="1.02"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
+					<ParameterChanged>14</ParameterChanged>
+					<ParameterChanged>11</ParameterChanged>
+					<ParameterChanged>13</ParameterChanged>
+					<ParameterChanged>12</ParameterChanged>
 				</EncPara>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
@@ -2828,13 +2877,20 @@ External Setpoint Generation:
 			<AxisPara>
 				<General UnitName="urad"/>
 				<Dynamic AccelerationMaximum="100" DecelerationMaximum="100" Acceleration="100" Deceleration="100" DelayTime="0.008"/>
-				<Velo Maximum="180"/>
+				<Velo Maximum="50"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
+				<ParameterChanged>39</ParameterChanged>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="0.00504" Offset="-198169.78" MaxCount="#xffffffff">
 					<FilterTime TPos="0.2"/>
+					<SoftEndMinControl Enable="true" Range="-147"/>
+					<SoftEndMaxControl Enable="true" Range="132"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
+					<ParameterChanged>14</ParameterChanged>
+					<ParameterChanged>11</ParameterChanged>
+					<ParameterChanged>13</ParameterChanged>
+					<ParameterChanged>12</ParameterChanged>
 				</EncPara>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
