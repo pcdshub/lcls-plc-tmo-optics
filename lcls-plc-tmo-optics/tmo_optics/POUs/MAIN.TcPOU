@@ -413,7 +413,7 @@ VAR
 		fMinBendDSRMSErrorM3K4 : LREAL;
 		//MR4K4 X ENC RMS
 		{attribute 'pytmc' := '
-			pv: MR4K4:KBO:ENC:X:RMS
+			pv: MR4K4:KBO:ENC:X
 		'}
 		fbXRMSErrorM4K4 : FB_RMSWatch;
 		fMaxXRMSErrorM4K4 : LREAL;
@@ -421,7 +421,7 @@ VAR
         
         //MR4K4 Y ENC RMS
 		{attribute 'pytmc' := '
-			pv: MR4K4:KBO:ENC:Y:RMS
+			pv: MR4K4:KBO:ENC:Y
 		'}
 		fbYRMSErrorM4K4 : FB_RMSWatch;
 		fMaxYRMSErrorM4K4 : LREAL;
@@ -429,14 +429,14 @@ VAR
 		
         //MR4K4 Z ENC RMS
 		{attribute 'pytmc' := '
-			pv: MR4K4:KBO:ENC:Z:RMS
+			pv: MR4K4:KBO:ENC:Z
 		'}
 		fbZRMSErrorM4K4 : FB_RMSWatch;
 		fMaxZRMSErrorM4K4 : LREAL;
 		fMinZRMSErrorM4K4 : LREAL;
 		//MR4K4 rX ENC RMS
 		{attribute 'pytmc' := '
-			pv: MR4K4:KBO:ENC:PITCH:RMS
+			pv: MR4K4:KBO:ENC:PITCH
 		'}
 		fbPRMSErrorM4K4 : FB_RMSWatch;
 		fMaxPRMSErrorM4K4 : LREAL;
@@ -444,7 +444,7 @@ VAR
         
 		//MR5K4 X ENC RMS
 		{attribute 'pytmc' := '
-			pv: MR5K4:KBO:ENC:X:RMS
+			pv: MR5K4:KBO:ENC:X
 		'}
 		fbXRMSErrorM5K4 : FB_RMSWatch;
 		fMaxXRMSErrorM5K4 : LREAL;
@@ -452,7 +452,7 @@ VAR
         
         //MR5K4 Y ENC RMS
 		{attribute 'pytmc' := '
-			pv: MR5K4:KBO:ENC:Y:RMS
+			pv: MR5K4:KBO:ENC:Y
 		'}
 		fbYRMSErrorM5K4 : FB_RMSWatch;
 		fMaxYRMSErrorM5K4 : LREAL;
@@ -460,14 +460,14 @@ VAR
 		
         //MR5K4 Z ENC RMS
 		{attribute 'pytmc' := '
-			pv: MR5K4:KBO:ENC:Z:RMS
+			pv: MR5K4:KBO:ENC:Z
 		'}
 		fbZRMSErrorM5K4 : FB_RMSWatch;
 		fMaxZRMSErrorM5K4 : LREAL;
 		fMinZRMSErrorM5K4 : LREAL;
 		//MR5K4 rX ENC RMS
 		{attribute 'pytmc' := '
-			pv: MR5K4:KBO:ENC:PITCH:RMS
+			pv: MR5K4:KBO:ENC:PITCH
 		'}
 		fbPRMSErrorM5K4 : FB_RMSWatch;
 		fMaxPRMSErrorM5K4 : LREAL;
