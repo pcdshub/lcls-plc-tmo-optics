@@ -411,6 +411,67 @@ VAR
 		fbBendDSRMSErrorM3K4 : FB_RMSWatch;
 		fMaxBendDSRMSErrorM3K4 : LREAL;
 		fMinBendDSRMSErrorM3K4 : LREAL;
+		//MR4K4 X ENC RMS
+		{attribute 'pytmc' := '
+			pv: MR4K4:KBO:ENC:X:RMS
+		'}
+		fbXRMSErrorM4K4 : FB_RMSWatch;
+		fMaxXRMSErrorM4K4 : LREAL;
+		fMinXRMSErrorM4K4 : LREAL;
+        
+        //MR4K4 Y ENC RMS
+		{attribute 'pytmc' := '
+			pv: MR4K4:KBO:ENC:Y:RMS
+		'}
+		fbYRMSErrorM4K4 : FB_RMSWatch;
+		fMaxYRMSErrorM4K4 : LREAL;
+		fMinYRMSErrorM4K4 : LREAL;
+		
+        //MR4K4 Z ENC RMS
+		{attribute 'pytmc' := '
+			pv: MR4K4:KBO:ENC:Z:RMS
+		'}
+		fbZRMSErrorM4K4 : FB_RMSWatch;
+		fMaxZRMSErrorM4K4 : LREAL;
+		fMinZRMSErrorM4K4 : LREAL;
+		//MR4K4 rX ENC RMS
+		{attribute 'pytmc' := '
+			pv: MR4K4:KBO:ENC:PITCH:RMS
+		'}
+		fbPRMSErrorM4K4 : FB_RMSWatch;
+		fMaxPRMSErrorM4K4 : LREAL;
+		fMinPRMSErrorM4K4 : LREAL;
+        
+		//MR5K4 X ENC RMS
+		{attribute 'pytmc' := '
+			pv: MR5K4:KBO:ENC:X:RMS
+		'}
+		fbXRMSErrorM5K4 : FB_RMSWatch;
+		fMaxXRMSErrorM5K4 : LREAL;
+		fMinXRMSErrorM5K4 : LREAL;
+        
+        //MR5K4 Y ENC RMS
+		{attribute 'pytmc' := '
+			pv: MR5K4:KBO:ENC:Y:RMS
+		'}
+		fbYRMSErrorM5K4 : FB_RMSWatch;
+		fMaxYRMSErrorM5K4 : LREAL;
+		fMinYRMSErrorM5K4 : LREAL;
+		
+        //MR5K4 Z ENC RMS
+		{attribute 'pytmc' := '
+			pv: MR5K4:KBO:ENC:Z:RMS
+		'}
+		fbZRMSErrorM5K4 : FB_RMSWatch;
+		fMaxZRMSErrorM5K4 : LREAL;
+		fMinZRMSErrorM5K4 : LREAL;
+		//MR5K4 rX ENC RMS
+		{attribute 'pytmc' := '
+			pv: MR5K4:KBO:ENC:PITCH:RMS
+		'}
+		fbPRMSErrorM5K4 : FB_RMSWatch;
+		fMaxPRMSErrorM5K4 : LREAL;
+		fMinPRMSErrorM5K4 : LREAL;
 	
 	
 	// Encoder Reference Values
@@ -815,6 +876,39 @@ END_VAR]]></Declaration>
 		fbBendDSRMSErrorM3K4(stMotionStage:=M16,
 							 fMaxRMSError=>fMaxBendDSRMSErrorM3K4,
 							 fMinRMSError=>fMinBendDSRMSErrorM3K4);
+	// Calculate Pitch RMS Error for DREAM KBs:
+		//MR4K4 X ENC RMS
+		fbXRMSErrorM4K4(stMotionStage:=M17,
+						fMaxRMSError=>fMaxXRMSErrorM4K4,
+						fMinRMSError=>fMinXRMSErrorM4K4);
+		//MR4K4 Y ENC RMS
+		fbYRMSErrorM4K4(stMotionStage:=M18,
+						fMaxRMSError=>fMaxYRMSErrorM4K4,
+						fMinRMSError=>fMinYRMSErrorM4K4);
+		//MR4K4 Z ENC RMS
+		fbZRMSErrorM4K4(stMotionStage:=M19,
+						fMaxRMSError=>fMaxZRMSErrorM4K4,
+						fMinRMSError=>fMinZRMSErrorM4K4);
+		//MR4K4 rX ENC RMS
+		fbPRMSErrorM4K4(stMotionStage:=M20,
+						fMaxRMSError=>fMaxPRMSErrorM4K4,
+						fMinRMSError=>fMinPRMSErrorM4K4);
+		//MR5K4 X ENC RMS
+		fbXRMSErrorM5K4(stMotionStage:=M21,
+						fMaxRMSError=>fMaxXRMSErrorM5K4,
+						fMinRMSError=>fMinXRMSErrorM5K4);
+		//MR5K4 Y ENC RMS
+		fbYRMSErrorM5K4(stMotionStage:=M22,
+						fMaxRMSError=>fMaxYRMSErrorM5K4,
+						fMinRMSError=>fMinYRMSErrorM5K4);
+		//MR5K4 Z ENC RMS
+		fbZRMSErrorM5K4(stMotionStage:=M23,
+						fMaxRMSError=>fMaxZRMSErrorM5K4,
+						fMinRMSError=>fMinZRMSErrorM5K4);
+		//MR5K4 rY ENC RMS
+		fbPRMSErrorM5K4(stMotionStage:=M24,
+						fMaxRMSError=>fMaxPRMSErrorM5K4,
+						fMinRMSError=>fMinPRMSErrorM5K4);
 						 
 						 
 	//STO for LAMP KBs
