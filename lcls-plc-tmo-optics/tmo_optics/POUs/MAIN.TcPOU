@@ -295,7 +295,7 @@ VAR
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4rX]^STM Status^Status^Digital input 2;
                               .nRawEncoderULINT:=TIIB[EL5042_M4K4Z_M4K4rX]^FB Inputs Channel 2^Position'}
         {attribute 'pytmc' := '
-		    pv: MR4K4:KBO:MMS:rX
+		    pv: MR4K4:KBO:MMS:P
 		'}
 	    M20 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM20 : FB_MotionStage;
@@ -331,7 +331,7 @@ VAR
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M5K4rY]^STM Status^Status^Digital input 2;
                               .nRawEncoderULINT:=TIIB[EL5042_M5K4Z_M5K4rY]^FB Inputs Channel 2^Position'}
         {attribute 'pytmc' := '
-		    pv: MR5K4:KBO:MMS:rY
+		    pv: MR5K4:KBO:MMS:P
 		'}
 	    M24 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM24 : FB_MotionStage;
