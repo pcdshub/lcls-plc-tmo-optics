@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
-  <POU Name="FB_Coating_States_noPMPS" Id="{38f3b4f9-dba9-4cd8-86c7-313f03e23ef7}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_Coating_States_noPMPS EXTENDS FB_PositionStateBase
+  <POU Name="FB_Coating_States" Id="{dd48993e-b2f6-4df2-ba10-a9b50dee131a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Coating_States EXTENDS FB_PositionStateBase_WithPMPS
 VAR_INPUT
     {attribute 'pytmc' := '
       pv: SET

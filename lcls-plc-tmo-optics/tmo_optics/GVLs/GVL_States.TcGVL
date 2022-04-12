@@ -8,7 +8,7 @@ VAR_GLOBAL
      pv: MR1K4:SOMS:COATING:STATE;
      io: io;
     '}
-    fbMR1K4_Coating_States: FB_Coating_States_noPMPS; 
+    fbMR1K4_Coating_States: FB_Coating_States; 
     
     MR1K4_SiC : DUT_PositionState := (
         bUseRawCounts := TRUE,
@@ -17,7 +17,9 @@ VAR_GLOBAL
         sName := 'SiC',  
         nEncoderCount := 22000532,
         fDelta := 1000,
-        fVelocity := 150);
+        fVelocity := 150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#DAB2);
         
     MR1K4_B4C : DUT_PositionState := (
         bUseRawCounts := TRUE,
@@ -26,13 +28,15 @@ VAR_GLOBAL
         sName := 'B4C',  
         nEncoderCount := 5000141,
         fDelta := 1000,
-        fVelocity := 150);
+        fVelocity := 150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#DAB3);
             
     {attribute 'pytmc' := '
      pv: MR2K4:KBO:COATING:STATE;
      io: io;
     '}
-    fbMR2K4_Coating_States: FB_Coating_States_noPMPS; 
+    fbMR2K4_Coating_States: FB_Coating_States; 
     
     MR2K4_SiC : DUT_PositionState := (
         bUseRawCounts := TRUE,
@@ -41,7 +45,9 @@ VAR_GLOBAL
         sName := 'SiC',  
         nEncoderCount := 8701960,
         fDelta := 1,
-        fVelocity := 0.150);
+        fVelocity := 0.150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#DAD2);
         
     MR2K4_B4C : DUT_PositionState := (
         bUseRawCounts := TRUE,
@@ -50,12 +56,14 @@ VAR_GLOBAL
         sName := 'B4C',  
         nEncoderCount := 6636177,
         fDelta := 1,
-        fVelocity := 0.150);
+        fVelocity := 0.150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#DAD3);
     {attribute 'pytmc' := '
      pv: MR3K4:KBO:COATING:STATE;
      io: io;
     '}
-    fbMR3K4_Coating_States: FB_Coating_States_noPMPS; 
+    fbMR3K4_Coating_States: FB_Coating_States; 
     
     MR3K4_SiC : DUT_PositionState := (
         bUseRawCounts := TRUE,
@@ -64,7 +72,9 @@ VAR_GLOBAL
         sName := 'SiC',  
         nEncoderCount := 4719890,
         fDelta := 1,
-        fVelocity := 0.150);
+        fVelocity := 0.150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#ACE2);
         
     MR3K4_B4C : DUT_PositionState := (
         bUseRawCounts := TRUE,
@@ -73,7 +83,9 @@ VAR_GLOBAL
         sName := 'B4C',  
         nEncoderCount := 8220029,
         fDelta := 1,
-        fVelocity := 0.150);
+        fVelocity := 0.150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#ACE3);
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
