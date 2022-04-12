@@ -52,7 +52,10 @@
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html#symbols">Symbols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html">Data Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#database-records">Database Records</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">DUTs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DUTs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#enum-coating-states">ENUM_Coating_States</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="#gvls">GVLs</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-com-buffers">GVL_COM_Buffers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-m1k4">GVL_M1K4</a></li>
@@ -63,9 +66,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#gvl-m3k4-rtd">GVL_M3K4_RTD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-serialio">GVL_SerialIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gvl-states">GVL_States</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#pous">POUs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fb-coating-states">FB_Coating_States</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#main">Main</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#p-serial-com">P_Serial_Com</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#p-stripeprotections">P_StripeProtections</a></li>
@@ -100,6 +105,25 @@
              
   <section id="duts">
 <h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this headline"></a></h1>
+<section id="enum-coating-states">
+<h2>ENUM_Coating_States<a class="headerlink" href="#enum-coating-states" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified only&#39;</span><span class="p">}</span>
+<span class="n">TYPE</span> <span class="n">ENUM_Coating_States</span> <span class="p">:</span>
+<span class="p">(</span>
+    <span class="n">Unknown</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">SiC</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">B4C</span> <span class="o">:=</span> <span class="mi">2</span>
+<span class="p">);</span>
+<span class="n">END_TYPE</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#enum-coating-states">ENUM_Coating_States</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
 </section>
 <section id="gvls">
 <h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this headline"></a></h1>
@@ -266,9 +290,151 @@ END_VAR
 </pre></div>
 </div>
 </section>
+<section id="gvl-states">
+<h2>GVL_States<a class="headerlink" href="#gvl-states" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
+<span class="n">VAR_GLOBAL</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+     <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">COATING</span><span class="p">:</span><span class="n">STATE</span><span class="p">;</span>
+     <span class="n">io</span><span class="p">:</span> <span class="n">io</span><span class="p">;</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbMR1K4_Coating_States</span><span class="p">:</span> <span class="n">FB_Coating_States</span><span class="p">;</span>
+
+    <span class="n">MR1K4_SiC</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;SiC&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">22000532</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mi">150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB2);</span>
+
+    <span class="n">MR1K4_B4C</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">5000141</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mi">150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB3);</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+     <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">COATING</span><span class="p">:</span><span class="n">STATE</span><span class="p">;</span>
+     <span class="n">io</span><span class="p">:</span> <span class="n">io</span><span class="p">;</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbMR2K4_Coating_States</span><span class="p">:</span> <span class="n">FB_Coating_States</span><span class="p">;</span>
+
+    <span class="n">MR2K4_SiC</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;SiC&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">8701960</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD2);</span>
+
+    <span class="n">MR2K4_B4C</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">6636177</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD3);</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+     <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">COATING</span><span class="p">:</span><span class="n">STATE</span><span class="p">;</span>
+     <span class="n">io</span><span class="p">:</span> <span class="n">io</span><span class="p">;</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbMR3K4_Coating_States</span><span class="p">:</span> <span class="n">FB_Coating_States</span><span class="p">;</span>
+
+    <span class="n">MR3K4_SiC</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;SiC&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">4719890</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE2);</span>
+
+    <span class="n">MR3K4_B4C</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">8220029</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE3);</span>
+<span class="n">END_VAR</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#fb-coating-states">FB_Coating_States</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
 </section>
 <section id="pous">
 <h1>POUs<a class="headerlink" href="#pous" title="Permalink to this headline"></a></h1>
+<section id="fb-coating-states">
+<h2>FB_Coating_States<a class="headerlink" href="#fb-coating-states" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_Coating_States</span> <span class="n">EXTENDS</span> <span class="n">FB_PositionStateBase_WithPMPS</span>
+<span class="n">VAR_INPUT</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+      <span class="n">pv</span><span class="p">:</span> <span class="n">SET</span>
+      <span class="n">io</span><span class="p">:</span> <span class="n">io</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">enumSet</span> <span class="p">:</span> <span class="n">ENUM_Coating_States</span><span class="p">;</span>
+
+    <span class="n">stCoating1</span> <span class="p">:</span> <span class="n">DUT_PositionState</span><span class="p">;</span>
+    <span class="n">stCoating2</span> <span class="p">:</span> <span class="n">DUT_PositionState</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="n">VAR_OUTPUT</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+      <span class="n">pv</span><span class="p">:</span> <span class="n">GET</span><span class="p">;</span>
+      <span class="n">io</span><span class="p">:</span> <span class="n">i</span><span class="p">;</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">enumGet</span> <span class="p">:</span> <span class="n">ENUM_Coating_States</span><span class="p">;</span>
+  <span class="n">END_VAR</span>
+<span class="n">VAR</span>
+    <span class="n">bCoatingInit</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="k">if</span> <span class="n">NOT</span> <span class="n">bCoatingInit</span> <span class="n">THEN</span>
+    <span class="n">bCoatingInit</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+
+    <span class="n">arrStates</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">:=</span> <span class="n">stCoating1</span><span class="p">;</span>
+    <span class="n">arrStates</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">:=</span> <span class="n">stCoating2</span><span class="p">;</span>
+<span class="n">END_IF</span>
+
+<span class="n">setState</span> <span class="o">:=</span> <span class="n">enumSet</span><span class="p">;</span>
+<span class="n">Exec</span><span class="p">();</span>
+<span class="n">enumGet</span> <span class="o">:=</span> <span class="n">getState</span><span class="p">;</span>
+<span class="n">enumSet</span> <span class="o">:=</span> <span class="n">setState</span><span class="p">;</span>
+
+<span class="n">END_FUNCTION_BLOCK</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#enum-coating-states">ENUM_Coating_States</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="main">
 <h2>Main<a class="headerlink" href="#main" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">Main</span>
@@ -532,7 +698,84 @@ END_VAR
             <span class="s1">&#39;}</span>
             <span class="n">M16</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
             <span class="n">fbMotionStage_m16</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">M4K4</span> <span class="n">X</span>
+            <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4X]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">0052</span><span class="n">_M4K4X</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL5042_M4K4X_M4K4Y</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">X</span>
+            <span class="s1">&#39;}</span>
+        <span class="n">M17</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">fbMotionStageM17</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">M4K4</span> <span class="n">Y</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4Y]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">0052</span><span class="n">_M4K4Y</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL5042_M4K4X_M4K4Y</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Y</span>
+            <span class="s1">&#39;}</span>
+        <span class="n">M18</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">fbMotionStageM18</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">M4K4</span> <span class="n">Z</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4Z]^STM Status^Status^Digital input 2;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">0052</span><span class="n">_M4K4Z</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">1</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL5042_M4K4Z_M4K4rX</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Z</span>
+            <span class="s1">&#39;}</span>
+        <span class="n">M19</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">fbMotionStageM19</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
 
+    <span class="o">//</span><span class="n">M4K4</span> <span class="n">rX</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4rX]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">0052</span><span class="n">_M4K4rX</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL5042_M4K4Z_M4K4rX</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">PITCH</span>
+            <span class="s1">&#39;}</span>
+        <span class="n">M20</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">fbMotionStageM20</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">M5K4</span> <span class="n">X</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4X]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">0052</span><span class="n">_M5K4X</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL5042_M5K4X_M5K4Y</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">X</span>
+            <span class="s1">&#39;}</span>
+        <span class="n">M21</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">fbMotionStageM21</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">M5K4</span> <span class="n">Y</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4Y]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">0052</span><span class="n">_M5K4Y</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL5042_M5K4X_M5K4Y</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Y</span>
+            <span class="s1">&#39;}</span>
+        <span class="n">M22</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">fbMotionStageM22</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">M5K4</span> <span class="n">Z</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4Z]^STM Status^Status^Digital input 2;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">0052</span><span class="n">_M5K4Z</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">1</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL5042_M5K4Z_M5K4rY</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Z</span>
+            <span class="s1">&#39;}</span>
+        <span class="n">M23</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">fbMotionStageM23</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">M5K4</span> <span class="n">rY</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4rY]^STM Status^Status^Digital input 1;</span>
+                              <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">0052</span><span class="n">_M5K4rY</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL5042_M5K4Z_M5K4rY</span><span class="p">]</span><span class="o">^</span><span class="n">FB</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Position</span><span class="s1">&#39;}</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">PITCH</span>
+            <span class="s1">&#39;}</span>
+        <span class="n">M24</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">fbMotionStageM24</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">MR4K4</span> <span class="n">MR5K4</span> <span class="n">STO</span> <span class="n">button</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[Term 109 (EL1004)]^Channel 1^Input&#39;</span><span class="p">}</span>
+    <span class="n">bDreamEnable1</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[Term 109 (EL1004)]^Channel 2^Input&#39;</span><span class="p">}</span>
+    <span class="n">bDreamEnable2</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
     <span class="o">//</span> <span class="n">Encoder</span> <span class="n">Arrays</span><span class="o">/</span><span class="n">RMS</span> <span class="n">Watch</span><span class="p">:</span>
             <span class="o">//</span><span class="n">MR2K4</span> <span class="n">X</span> <span class="n">ENC</span> <span class="n">RMS</span>
             <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -604,6 +847,67 @@ END_VAR
             <span class="n">fbBendDSRMSErrorM3K4</span> <span class="p">:</span> <span class="n">FB_RMSWatch</span><span class="p">;</span>
             <span class="n">fMaxBendDSRMSErrorM3K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
             <span class="n">fMinBendDSRMSErrorM3K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="o">//</span><span class="n">MR4K4</span> <span class="n">X</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                    <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">X</span>
+            <span class="s1">&#39;}</span>
+            <span class="n">fbXRMSErrorM4K4</span> <span class="p">:</span> <span class="n">FB_RMSWatch</span><span class="p">;</span>
+            <span class="n">fMaxXRMSErrorM4K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="n">fMinXRMSErrorM4K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+
+        <span class="o">//</span><span class="n">MR4K4</span> <span class="n">Y</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                    <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">Y</span>
+            <span class="s1">&#39;}</span>
+            <span class="n">fbYRMSErrorM4K4</span> <span class="p">:</span> <span class="n">FB_RMSWatch</span><span class="p">;</span>
+            <span class="n">fMaxYRMSErrorM4K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="n">fMinYRMSErrorM4K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+
+        <span class="o">//</span><span class="n">MR4K4</span> <span class="n">Z</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                    <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">Z</span>
+            <span class="s1">&#39;}</span>
+            <span class="n">fbZRMSErrorM4K4</span> <span class="p">:</span> <span class="n">FB_RMSWatch</span><span class="p">;</span>
+            <span class="n">fMaxZRMSErrorM4K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="n">fMinZRMSErrorM4K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="o">//</span><span class="n">MR4K4</span> <span class="n">rX</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                    <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">PITCH</span>
+            <span class="s1">&#39;}</span>
+            <span class="n">fbPRMSErrorM4K4</span> <span class="p">:</span> <span class="n">FB_RMSWatch</span><span class="p">;</span>
+            <span class="n">fMaxPRMSErrorM4K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="n">fMinPRMSErrorM4K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+
+            <span class="o">//</span><span class="n">MR5K4</span> <span class="n">X</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                    <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">X</span>
+            <span class="s1">&#39;}</span>
+            <span class="n">fbXRMSErrorM5K4</span> <span class="p">:</span> <span class="n">FB_RMSWatch</span><span class="p">;</span>
+            <span class="n">fMaxXRMSErrorM5K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="n">fMinXRMSErrorM5K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+
+        <span class="o">//</span><span class="n">MR5K4</span> <span class="n">Y</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                    <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">Y</span>
+            <span class="s1">&#39;}</span>
+            <span class="n">fbYRMSErrorM5K4</span> <span class="p">:</span> <span class="n">FB_RMSWatch</span><span class="p">;</span>
+            <span class="n">fMaxYRMSErrorM5K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="n">fMinYRMSErrorM5K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+
+        <span class="o">//</span><span class="n">MR5K4</span> <span class="n">Z</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                    <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">Z</span>
+            <span class="s1">&#39;}</span>
+            <span class="n">fbZRMSErrorM5K4</span> <span class="p">:</span> <span class="n">FB_RMSWatch</span><span class="p">;</span>
+            <span class="n">fMaxZRMSErrorM5K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="n">fMinZRMSErrorM5K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="o">//</span><span class="n">MR5K4</span> <span class="n">rX</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+                    <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">PITCH</span>
+            <span class="s1">&#39;}</span>
+            <span class="n">fbPRMSErrorM5K4</span> <span class="p">:</span> <span class="n">FB_RMSWatch</span><span class="p">;</span>
+            <span class="n">fMaxPRMSErrorM5K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+            <span class="n">fMinPRMSErrorM5K4</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
 
 
     <span class="o">//</span> <span class="n">Encoder</span> <span class="n">Reference</span> <span class="n">Values</span>
@@ -699,19 +1003,27 @@ END_VAR
             <span class="n">LAMPbSTOEnable2</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
                     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
                             <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">FLOW</span><span class="p">:</span><span class="mi">1</span>
-                            <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">GPH</span>
+                            <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">lpm</span>
+                <span class="n">field</span><span class="p">:</span> <span class="n">LINR</span> <span class="n">SLOPE</span>
+                <span class="n">field</span><span class="p">:</span> <span class="n">ASLO</span> <span class="mf">.00128</span>
+                <span class="n">field</span><span class="p">:</span> <span class="n">AOFF</span> <span class="mf">.05</span>
                             <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
                     <span class="s1">&#39;}</span>
                     <span class="n">fM2K4_Flow_1</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
                     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
                             <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">FLOW</span><span class="p">:</span><span class="mi">2</span>
-                            <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">GPH</span>
+                            <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">lpm</span>
+                <span class="n">field</span><span class="p">:</span> <span class="n">LINR</span> <span class="n">SLOPE</span>
+                <span class="n">field</span><span class="p">:</span> <span class="n">ASLO</span> <span class="mf">.00128</span>
+                <span class="n">field</span><span class="p">:</span> <span class="n">AOFF</span> <span class="mf">.05</span>
                             <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
                     <span class="s1">&#39;}</span>
                     <span class="n">fM2K4_Flow_2</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
                     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
                             <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">PRESS</span><span class="p">:</span><span class="mi">1</span>
                             <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">bar</span>
+                <span class="n">field</span><span class="p">:</span> <span class="n">LINR</span> <span class="n">SLOPE</span>
+                <span class="n">field</span><span class="p">:</span> <span class="n">ASLO</span> <span class="mf">.000977</span>
                             <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
                     <span class="s1">&#39;}</span>
                     <span class="n">fM2K4_Press_1</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
@@ -936,6 +1248,27 @@ END_VAR
                     <span class="n">fbMotionStage_m15</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M15</span><span class="p">);</span>
                     <span class="n">fbMotionStage_m16</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M16</span><span class="p">);</span>
 
+<span class="o">//</span><span class="n">MR4K4</span> <span class="ow">and</span> <span class="n">MR5K4</span>
+            <span class="n">M17</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">bDREAMEnable1</span> <span class="ow">and</span> <span class="n">bDREAMenable2</span><span class="p">;</span>
+            <span class="n">M18</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">bDREAMEnable1</span> <span class="ow">and</span> <span class="n">bDREAMenable2</span><span class="p">;</span>
+            <span class="n">M19</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">bDREAMEnable1</span> <span class="ow">and</span> <span class="n">bDREAMenable2</span><span class="p">;</span>
+            <span class="n">M20</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">bDREAMEnable1</span> <span class="ow">and</span> <span class="n">bDREAMenable2</span><span class="p">;</span>
+            <span class="n">M21</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">bDREAMEnable1</span> <span class="ow">and</span> <span class="n">bDREAMenable2</span><span class="p">;</span>
+            <span class="n">M22</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">bDREAMEnable1</span> <span class="ow">and</span> <span class="n">bDREAMenable2</span><span class="p">;</span>
+            <span class="n">M23</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">bDREAMEnable1</span> <span class="ow">and</span> <span class="n">bDREAMenable2</span><span class="p">;</span>
+            <span class="n">M24</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="o">:=</span> <span class="n">bDREAMEnable1</span> <span class="ow">and</span> <span class="n">bDREAMenable2</span><span class="p">;</span>
+        <span class="o">//</span><span class="n">MR4K4</span>
+            <span class="n">fbMotionStageM17</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M17</span><span class="p">);</span>
+            <span class="n">fbMotionStageM18</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M18</span><span class="p">);</span>
+            <span class="n">fbMotionStageM19</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M19</span><span class="p">);</span>
+            <span class="n">fbMotionStageM20</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M20</span><span class="p">);</span>
+        <span class="o">//</span><span class="n">MR5K4</span>
+            <span class="n">fbMotionStageM21</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M21</span><span class="p">);</span>
+            <span class="n">fbMotionStageM22</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M22</span><span class="p">);</span>
+            <span class="n">fbMotionStageM23</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M23</span><span class="p">);</span>
+            <span class="n">fbMotionStageM24</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M24</span><span class="p">);</span>
+
+
     <span class="o">//</span> <span class="n">Calculate</span> <span class="n">Pitch</span> <span class="n">RMS</span> <span class="n">Error</span> <span class="k">for</span> <span class="n">LAMP</span> <span class="n">KBs</span><span class="p">:</span>
             <span class="o">//</span><span class="n">MR2K4</span> <span class="n">X</span> <span class="n">ENC</span> <span class="n">RMS</span>
             <span class="n">fbXRMSErrorM2K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M7</span><span class="p">,</span>
@@ -977,6 +1310,39 @@ END_VAR
             <span class="n">fbBendDSRMSErrorM3K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M16</span><span class="p">,</span>
                                                      <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxBendDSRMSErrorM3K4</span><span class="p">,</span>
                                                      <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinBendDSRMSErrorM3K4</span><span class="p">);</span>
+    <span class="o">//</span> <span class="n">Calculate</span> <span class="n">Pitch</span> <span class="n">RMS</span> <span class="n">Error</span> <span class="k">for</span> <span class="n">DREAM</span> <span class="n">KBs</span><span class="p">:</span>
+            <span class="o">//</span><span class="n">MR4K4</span> <span class="n">X</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="n">fbXRMSErrorM4K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M17</span><span class="p">,</span>
+                                            <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxXRMSErrorM4K4</span><span class="p">,</span>
+                                            <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinXRMSErrorM4K4</span><span class="p">);</span>
+            <span class="o">//</span><span class="n">MR4K4</span> <span class="n">Y</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="n">fbYRMSErrorM4K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M18</span><span class="p">,</span>
+                                            <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxYRMSErrorM4K4</span><span class="p">,</span>
+                                            <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinYRMSErrorM4K4</span><span class="p">);</span>
+            <span class="o">//</span><span class="n">MR4K4</span> <span class="n">Z</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="n">fbZRMSErrorM4K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M19</span><span class="p">,</span>
+                                            <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxZRMSErrorM4K4</span><span class="p">,</span>
+                                            <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinZRMSErrorM4K4</span><span class="p">);</span>
+            <span class="o">//</span><span class="n">MR4K4</span> <span class="n">rX</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="n">fbPRMSErrorM4K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M20</span><span class="p">,</span>
+                                            <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxPRMSErrorM4K4</span><span class="p">,</span>
+                                            <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinPRMSErrorM4K4</span><span class="p">);</span>
+            <span class="o">//</span><span class="n">MR5K4</span> <span class="n">X</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="n">fbXRMSErrorM5K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M21</span><span class="p">,</span>
+                                            <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxXRMSErrorM5K4</span><span class="p">,</span>
+                                            <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinXRMSErrorM5K4</span><span class="p">);</span>
+            <span class="o">//</span><span class="n">MR5K4</span> <span class="n">Y</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="n">fbYRMSErrorM5K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M22</span><span class="p">,</span>
+                                            <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxYRMSErrorM5K4</span><span class="p">,</span>
+                                            <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinYRMSErrorM5K4</span><span class="p">);</span>
+            <span class="o">//</span><span class="n">MR5K4</span> <span class="n">Z</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="n">fbZRMSErrorM5K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M23</span><span class="p">,</span>
+                                            <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxZRMSErrorM5K4</span><span class="p">,</span>
+                                            <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinZRMSErrorM5K4</span><span class="p">);</span>
+            <span class="o">//</span><span class="n">MR5K4</span> <span class="n">rY</span> <span class="n">ENC</span> <span class="n">RMS</span>
+            <span class="n">fbPRMSErrorM5K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M24</span><span class="p">,</span>
+                                            <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxPRMSErrorM5K4</span><span class="p">,</span>
+                                            <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinPRMSErrorM5K4</span><span class="p">);</span>
 
 
     <span class="o">//</span><span class="n">STO</span> <span class="k">for</span> <span class="n">LAMP</span> <span class="n">KBs</span>
@@ -1051,6 +1417,51 @@ END_VAR
             <span class="n">M11</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="n">R</span><span class="o">=</span> <span class="n">fM2K4DS_RTD_1</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="n">OR</span> <span class="n">bM2K4DS_RTD_1_Err</span><span class="p">;</span>
             <span class="n">M15</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="n">R</span><span class="o">=</span> <span class="n">fM3K4US_RTD_1</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="n">OR</span> <span class="n">bM3K4US_RTD_1_Err</span><span class="p">;</span>
             <span class="n">M16</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="n">R</span><span class="o">=</span> <span class="n">fM3K4DS_RTD_1</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="n">OR</span> <span class="n">bM3K4DS_RTD_1_Err</span><span class="p">;</span>
+    <span class="o">//</span> <span class="n">State</span> <span class="n">Movers</span> <span class="k">with</span> <span class="n">PMPS</span>
+        <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR1K4_SiC</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">);</span>
+        <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR1K4_B4C</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">);</span>
+      <span class="p">(</span><span class="o">*</span>  <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR2K4_SiC</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">);</span>
+        <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR2K4_B4C</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">);</span>
+        <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR3K4_SiC</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">);</span>
+        <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR3K4_B4C</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">);</span>  <span class="o">*</span><span class="p">)</span>
+    <span class="o">//</span><span class="n">MR1K4</span> <span class="n">Coating</span> <span class="n">States</span> <span class="k">with</span> <span class="n">PMPS</span>
+    <span class="n">M1</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span> <span class="kc">False</span><span class="p">;</span>
+    <span class="n">GVL_States</span><span class="o">.</span><span class="n">fbMR1K4_Coating_States</span><span class="p">(</span>
+        <span class="n">bEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">stCoating1</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR1K4_SiC</span><span class="p">,</span>
+        <span class="n">stCoating2</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR1K4_B4C</span><span class="p">,</span>
+        <span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M1</span><span class="p">,</span>
+        <span class="n">bBPOkAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">fbArbiter</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter1</span><span class="p">,</span>
+        <span class="n">fbFFHWO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span>
+        <span class="n">nTransitionAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB1,</span>
+        <span class="n">nUnknownAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB0);</span>
+
+    <span class="p">(</span><span class="o">*</span>   <span class="n">MR2K4</span> <span class="n">Coating</span> <span class="n">States</span> <span class="k">with</span> <span class="n">PMPS</span>
+    <span class="n">M8</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span> <span class="kc">False</span><span class="p">;</span>
+    <span class="n">GVL_States</span><span class="o">.</span><span class="n">fbMR2K4_Coating_States</span><span class="p">(</span>
+        <span class="n">bEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">stCoating1</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR2K4_SiC</span><span class="p">,</span>
+        <span class="n">stCoating2</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR2K4_B4C</span><span class="p">,</span>
+        <span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M8</span><span class="p">,</span>
+        <span class="n">bBPOkAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">fbArbiter</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter2</span><span class="p">,</span>
+        <span class="n">fbFFHWO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
+        <span class="n">nTransitionAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD1,</span>
+        <span class="n">nUnknownAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD0);</span>
+
+    <span class="n">MR3K4</span> <span class="n">Coating</span> <span class="n">States</span> <span class="k">with</span> <span class="n">PMPS</span>
+    <span class="n">M12</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span> <span class="kc">False</span><span class="p">;</span>
+    <span class="n">GVL_States</span><span class="o">.</span><span class="n">fbMR3K4_Coating_States</span><span class="p">(</span>
+        <span class="n">bEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">stCoating1</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR3K4_SiC</span><span class="p">,</span>
+        <span class="n">stCoating2</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR3K4_B4C</span><span class="p">,</span>
+        <span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M12</span><span class="p">,</span>
+        <span class="n">bBPOkAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">fbArbiter</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter2</span><span class="p">,</span>
+        <span class="n">fbFFHWO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
+        <span class="n">nTransitionAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE1,</span>
+        <span class="n">nUnknownAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE0);   *)</span>
 <span class="o">///////////////////////////////////////////////////</span>
 
 <span class="o">//</span> <span class="n">PMPS</span>
@@ -1085,6 +1496,7 @@ END_VAR
 <li><p><a class="reference internal" href="#gvl-m3k4-constants">GVL_M3K4_Constants</a></p></li>
 <li><p><a class="reference internal" href="#gvl-m3k4-rtd">GVL_M3K4_RTD</a></p></li>
 <li><p><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></p></li>
+<li><p><a class="reference internal" href="#gvl-states">GVL_States</a></p></li>
 <li><p><a class="reference internal" href="#p-stripeprotections">P_StripeProtections</a></p></li>
 </ul>
 </dd>

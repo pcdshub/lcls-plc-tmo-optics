@@ -422,6 +422,215 @@ Links
         , Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL5042_M3K4_BEND_USDS, FB Inputs Channel 2^Status^Ready
         , Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL5042_M3K4_BEND_USDS, FB Inputs Channel 2^Status^TxPDO State
         , Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL5042_M3K4_BEND_USDS, FB Inputs Channel 2^Status^Warning
+        Axes^M4K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Error
+        Axes^M4K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Moving negative
+        Axes^M4K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Moving positive
+        Axes^M4K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Ready
+        Axes^M4K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Ready to enable
+        Axes^M4K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Torque reduced
+        Axes^M4K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Warning
+        Axes^M4K4 X, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Digital input 1
+        Axes^M4K4 X, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Digital input 2
+        Axes^M4K4 X, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Sync error
+        Axes^M4K4 X, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^TxPDO Toggle
+        Axes^M4K4 X, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, WcState^InputToggle
+        Axes^M4K4 X, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, WcState^WcState
+        Axes^M4K4 X, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Control^Control^Enable
+        Axes^M4K4 X, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Control^Control^Reduce torque
+        Axes^M4K4 X, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Control^Control^Reset
+        Axes^M4K4 X, Drive^Outputs^Out^nDataOut2[0], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Velocity^Velocity
+        Axes^M4K4 X, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, WcState^InputToggle
+        Axes^M4K4 X, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, WcState^WcState
+        Axes^M4K4 X, Enc^Inputs^In^nDataIn1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 1^Position
+        Axes^M4K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 1^Status^Diag
+        Axes^M4K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 1^Status^Error
+        Axes^M4K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 1^Status^Input cycle counter
+        Axes^M4K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 1^Status^Ready
+        Axes^M4K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 1^Status^TxPDO State
+        Axes^M4K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 1^Status^Warning
+        Axes^M4K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Error
+        Axes^M4K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Moving negative
+        Axes^M4K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Moving positive
+        Axes^M4K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Ready
+        Axes^M4K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Ready to enable
+        Axes^M4K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Torque reduced
+        Axes^M4K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Warning
+        Axes^M4K4 Y, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Digital input 1
+        Axes^M4K4 Y, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Digital input 2
+        Axes^M4K4 Y, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Sync error
+        Axes^M4K4 Y, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^TxPDO Toggle
+        Axes^M4K4 Y, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, WcState^InputToggle
+        Axes^M4K4 Y, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, WcState^WcState
+        Axes^M4K4 Y, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Control^Control^Enable
+        Axes^M4K4 Y, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Control^Control^Reduce torque
+        Axes^M4K4 Y, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Control^Control^Reset
+        Axes^M4K4 Y, Drive^Outputs^Out^nDataOut2[0], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Velocity^Velocity
+        Axes^M4K4 Y, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, WcState^InputToggle
+        Axes^M4K4 Y, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, WcState^WcState
+        Axes^M4K4 Y, Enc^Inputs^In^nDataIn1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 2^Position
+        Axes^M4K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 2^Status^Diag
+        Axes^M4K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 2^Status^Error
+        Axes^M4K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 2^Status^Input cycle counter
+        Axes^M4K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 2^Status^Ready
+        Axes^M4K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 2^Status^TxPDO State
+        Axes^M4K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 2^Status^Warning
+        Axes^M4K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Error
+        Axes^M4K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Moving negative
+        Axes^M4K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Moving positive
+        Axes^M4K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Ready
+        Axes^M4K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Ready to enable
+        Axes^M4K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Torque reduced
+        Axes^M4K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Warning
+        Axes^M4K4 Z, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Digital input 1
+        Axes^M4K4 Z, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Digital input 2
+        Axes^M4K4 Z, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Sync error
+        Axes^M4K4 Z, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^TxPDO Toggle
+        Axes^M4K4 Z, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, WcState^InputToggle
+        Axes^M4K4 Z, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, WcState^WcState
+        Axes^M4K4 Z, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Control^Control^Enable
+        Axes^M4K4 Z, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Control^Control^Reduce torque
+        Axes^M4K4 Z, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Control^Control^Reset
+        Axes^M4K4 Z, Drive^Outputs^Out^nDataOut2[0], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Velocity^Velocity
+        Axes^M4K4 Z, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, WcState^InputToggle
+        Axes^M4K4 Z, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, WcState^WcState
+        Axes^M4K4 Z, Enc^Inputs^In^nDataIn1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 1^Position
+        Axes^M4K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 1^Status^Diag
+        Axes^M4K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 1^Status^Error
+        Axes^M4K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 1^Status^Input cycle counter
+        Axes^M4K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 1^Status^Ready
+        Axes^M4K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 1^Status^TxPDO State
+        Axes^M4K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 1^Status^Warning
+        Axes^M4K4 rX, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Error
+        Axes^M4K4 rX, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Moving negative
+        Axes^M4K4 rX, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Moving positive
+        Axes^M4K4 rX, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Ready
+        Axes^M4K4 rX, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Ready to enable
+        Axes^M4K4 rX, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Torque reduced
+        Axes^M4K4 rX, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Warning
+        Axes^M4K4 rX, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Digital input 1
+        Axes^M4K4 rX, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Digital input 2
+        Axes^M4K4 rX, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Sync error
+        Axes^M4K4 rX, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^TxPDO Toggle
+        Axes^M4K4 rX, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, WcState^InputToggle
+        Axes^M4K4 rX, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, WcState^WcState
+        Axes^M4K4 rX, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Control^Control^Enable
+        Axes^M4K4 rX, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Control^Control^Reduce torque
+        Axes^M4K4 rX, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Control^Control^Reset
+        Axes^M4K4 rX, Drive^Outputs^Out^nDataOut2[0], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Velocity^Velocity
+        Axes^M4K4 rX, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, WcState^InputToggle
+        Axes^M4K4 rX, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, WcState^WcState
+        Axes^M4K4 rX, Enc^Inputs^In^nDataIn1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 2^Position
+        Axes^M4K4 rX, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 2^Status^Diag
+        Axes^M4K4 rX, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 2^Status^Error
+        Axes^M4K4 rX, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 2^Status^Input cycle counter
+        Axes^M4K4 rX, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 2^Status^Ready
+        Axes^M4K4 rX, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 2^Status^TxPDO State
+        Axes^M4K4 rX, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 2^Status^Warning
+        Axes^M5K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Error
+        Axes^M5K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Moving negative
+        Axes^M5K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Moving positive
+        Axes^M5K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Ready
+        Axes^M5K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Ready to enable
+        Axes^M5K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Torque reduced
+        Axes^M5K4 X, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Warning
+        Axes^M5K4 X, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Digital input 1
+        Axes^M5K4 X, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Digital input 2
+        Axes^M5K4 X, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Sync error
+        Axes^M5K4 X, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^TxPDO Toggle
+        Axes^M5K4 X, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, WcState^InputToggle
+        Axes^M5K4 X, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, WcState^WcState
+        Axes^M5K4 X, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Control^Control^Enable
+        Axes^M5K4 X, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Control^Control^Reduce torque
+        Axes^M5K4 X, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Control^Control^Reset
+        Axes^M5K4 X, Drive^Outputs^Out^nDataOut2[0], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Velocity^Velocity
+        Axes^M5K4 X, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, WcState^InputToggle
+        Axes^M5K4 X, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, WcState^WcState
+        Axes^M5K4 X, Enc^Inputs^In^nDataIn1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 1^Position
+        Axes^M5K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 1^Status^Diag
+        Axes^M5K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 1^Status^Error
+        Axes^M5K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 1^Status^Input cycle counter
+        Axes^M5K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 1^Status^Ready
+        Axes^M5K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 1^Status^TxPDO State
+        Axes^M5K4 X, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 1^Status^Warning
+        Axes^M5K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Error
+        Axes^M5K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Moving negative
+        Axes^M5K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Moving positive
+        Axes^M5K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Ready
+        Axes^M5K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Ready to enable
+        Axes^M5K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Torque reduced
+        Axes^M5K4 Y, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Warning
+        Axes^M5K4 Y, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Digital input 1
+        Axes^M5K4 Y, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Digital input 2
+        Axes^M5K4 Y, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Sync error
+        Axes^M5K4 Y, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^TxPDO Toggle
+        Axes^M5K4 Y, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, WcState^InputToggle
+        Axes^M5K4 Y, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, WcState^WcState
+        Axes^M5K4 Y, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Control^Control^Enable
+        Axes^M5K4 Y, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Control^Control^Reduce torque
+        Axes^M5K4 Y, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Control^Control^Reset
+        Axes^M5K4 Y, Drive^Outputs^Out^nDataOut2[0], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Velocity^Velocity
+        Axes^M5K4 Y, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, WcState^InputToggle
+        Axes^M5K4 Y, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, WcState^WcState
+        Axes^M5K4 Y, Enc^Inputs^In^nDataIn1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 2^Position
+        Axes^M5K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 2^Status^Diag
+        Axes^M5K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 2^Status^Error
+        Axes^M5K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 2^Status^Input cycle counter
+        Axes^M5K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 2^Status^Ready
+        Axes^M5K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 2^Status^TxPDO State
+        Axes^M5K4 Y, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 2^Status^Warning
+        Axes^M5K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Error
+        Axes^M5K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Moving negative
+        Axes^M5K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Moving positive
+        Axes^M5K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Ready
+        Axes^M5K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Ready to enable
+        Axes^M5K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Torque reduced
+        Axes^M5K4 Z, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Warning
+        Axes^M5K4 Z, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Digital input 1
+        Axes^M5K4 Z, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Digital input 2
+        Axes^M5K4 Z, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Sync error
+        Axes^M5K4 Z, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^TxPDO Toggle
+        Axes^M5K4 Z, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, WcState^InputToggle
+        Axes^M5K4 Z, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, WcState^WcState
+        Axes^M5K4 Z, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Control^Control^Enable
+        Axes^M5K4 Z, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Control^Control^Reduce torque
+        Axes^M5K4 Z, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Control^Control^Reset
+        Axes^M5K4 Z, Drive^Outputs^Out^nDataOut2[0], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Velocity^Velocity
+        Axes^M5K4 Z, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, WcState^InputToggle
+        Axes^M5K4 Z, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, WcState^WcState
+        Axes^M5K4 Z, Enc^Inputs^In^nDataIn1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 1^Position
+        Axes^M5K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 1^Status^Diag
+        Axes^M5K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 1^Status^Error
+        Axes^M5K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 1^Status^Input cycle counter
+        Axes^M5K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 1^Status^Ready
+        Axes^M5K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 1^Status^TxPDO State
+        Axes^M5K4 Z, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 1^Status^Warning
+        Axes^M5K4 rY, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Error
+        Axes^M5K4 rY, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Moving negative
+        Axes^M5K4 rY, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Moving positive
+        Axes^M5K4 rY, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Ready
+        Axes^M5K4 rY, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Ready to enable
+        Axes^M5K4 rY, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Torque reduced
+        Axes^M5K4 rY, Drive^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Warning
+        Axes^M5K4 rY, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Digital input 1
+        Axes^M5K4 rY, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Digital input 2
+        Axes^M5K4 rY, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Sync error
+        Axes^M5K4 rY, Drive^Inputs^In^nState2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^TxPDO Toggle
+        Axes^M5K4 rY, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, WcState^InputToggle
+        Axes^M5K4 rY, Drive^Inputs^In^nState4, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, WcState^WcState
+        Axes^M5K4 rY, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Control^Control^Enable
+        Axes^M5K4 rY, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Control^Control^Reduce torque
+        Axes^M5K4 rY, Drive^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Control^Control^Reset
+        Axes^M5K4 rY, Drive^Outputs^Out^nDataOut2[0], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Velocity^Velocity
+        Axes^M5K4 rY, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, WcState^InputToggle
+        Axes^M5K4 rY, Enc^Inputs^In^nComState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, WcState^WcState
+        Axes^M5K4 rY, Enc^Inputs^In^nDataIn1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Position
+        Axes^M5K4 rY, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Status^Diag
+        Axes^M5K4 rY, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Status^Error
+        Axes^M5K4 rY, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Status^Input cycle counter
+        Axes^M5K4 rY, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Status^Ready
+        Axes^M5K4 rY, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Status^TxPDO State
+        Axes^M5K4 rY, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Status^Warning
+        InputDst, Main.bDreamEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^Term 109 (EL1004), Channel 1^Input
         tmo_optics Instance, PlcTask Inputs^GVL_M1K4.M1K4_Pitch.diEncCnt, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL5042_M1K4_PitchBender, FB Inputs Channel 1^Position
         tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.nM2K4DS_RTD_1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4US3_M2K4DS1, RTD Inputs Channel 2^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.nM2K4DS_RTD_2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4DS2_M2K4DS3, RTD Inputs Channel 1^Value
@@ -471,6 +680,18 @@ Links
         tmo_optics Instance, PlcTask Inputs^Main.M16.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL7041_M3K4_BEND_DS, STM Status^Status^Digital input 2
         tmo_optics Instance, PlcTask Inputs^Main.M16.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL7041_M3K4_BEND_DS, STM Status^Status^Digital input 1
         tmo_optics Instance, PlcTask Inputs^Main.M16.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL5042_M2K4_BEND_USDS, FB Inputs Channel 2^Position
+        tmo_optics Instance, PlcTask Inputs^Main.M17.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M4K4 X, Outputs^ToPlc
+        tmo_optics Instance, PlcTask Inputs^Main.M17.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Digital input 2
+        tmo_optics Instance, PlcTask Inputs^Main.M17.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4X, STM Status^Status^Digital input 1
+        tmo_optics Instance, PlcTask Inputs^Main.M17.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 1^Position
+        tmo_optics Instance, PlcTask Inputs^Main.M18.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M4K4 Y, Outputs^ToPlc
+        tmo_optics Instance, PlcTask Inputs^Main.M18.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Digital input 2
+        tmo_optics Instance, PlcTask Inputs^Main.M18.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Y, STM Status^Status^Digital input 1
+        tmo_optics Instance, PlcTask Inputs^Main.M18.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y, FB Inputs Channel 2^Position
+        tmo_optics Instance, PlcTask Inputs^Main.M19.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M4K4 Z, Outputs^ToPlc
+        tmo_optics Instance, PlcTask Inputs^Main.M19.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Digital input 1
+        tmo_optics Instance, PlcTask Inputs^Main.M19.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4Z, STM Status^Status^Digital input 2
+        tmo_optics Instance, PlcTask Inputs^Main.M19.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 1^Position
         tmo_optics Instance, PlcTask Inputs^Main.M1K4.fbRunHOMS.bSTOEnable1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL1004_M1K4_STO, Channel 1^Input
         tmo_optics Instance, PlcTask Inputs^Main.M1K4.fbRunHOMS.bSTOEnable2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL1004_M1K4_STO, Channel 2^Input
         tmo_optics Instance, PlcTask Inputs^Main.M1K4.fbRunHOMS.stXdwnEnc^Count, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL5042_M1K4_Xupdwn, FB Inputs Channel 2^Position
@@ -480,6 +701,26 @@ Links
         tmo_optics Instance, PlcTask Inputs^Main.M2.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M1K4-Ydwn, Outputs^ToPlc
         tmo_optics Instance, PlcTask Inputs^Main.M2.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL7041-1000_M1K4_Ydwn, STM Status^Status^Digital input 2
         tmo_optics Instance, PlcTask Inputs^Main.M2.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL7041-1000_M1K4_Ydwn, STM Status^Status^Digital input 1
+        tmo_optics Instance, PlcTask Inputs^Main.M20.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M4K4 rX, Outputs^ToPlc
+        tmo_optics Instance, PlcTask Inputs^Main.M20.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Digital input 2
+        tmo_optics Instance, PlcTask Inputs^Main.M20.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M4K4rX, STM Status^Status^Digital input 1
+        tmo_optics Instance, PlcTask Inputs^Main.M20.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4Z_M4K4rX, FB Inputs Channel 2^Position
+        tmo_optics Instance, PlcTask Inputs^Main.M21.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M5K4 X, Outputs^ToPlc
+        tmo_optics Instance, PlcTask Inputs^Main.M21.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Digital input 2
+        tmo_optics Instance, PlcTask Inputs^Main.M21.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4X, STM Status^Status^Digital input 1
+        tmo_optics Instance, PlcTask Inputs^Main.M21.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 1^Position
+        tmo_optics Instance, PlcTask Inputs^Main.M22.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M5K4 Y, Outputs^ToPlc
+        tmo_optics Instance, PlcTask Inputs^Main.M22.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Digital input 2
+        tmo_optics Instance, PlcTask Inputs^Main.M22.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Y, STM Status^Status^Digital input 1
+        tmo_optics Instance, PlcTask Inputs^Main.M22.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4X_M5K4Y, FB Inputs Channel 2^Position
+        tmo_optics Instance, PlcTask Inputs^Main.M23.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M5K4 Z, Outputs^ToPlc
+        tmo_optics Instance, PlcTask Inputs^Main.M23.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Digital input 1
+        tmo_optics Instance, PlcTask Inputs^Main.M23.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4Z, STM Status^Status^Digital input 2
+        tmo_optics Instance, PlcTask Inputs^Main.M23.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 1^Position
+        tmo_optics Instance, PlcTask Inputs^Main.M24.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M5K4 rY, Outputs^ToPlc
+        tmo_optics Instance, PlcTask Inputs^Main.M24.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Digital input 2
+        tmo_optics Instance, PlcTask Inputs^Main.M24.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL7041-0052_M5K4rY, STM Status^Status^Digital input 1
+        tmo_optics Instance, PlcTask Inputs^Main.M24.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Position
         tmo_optics Instance, PlcTask Inputs^Main.M3.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M1K4-Xup, Outputs^ToPlc
         tmo_optics Instance, PlcTask Inputs^Main.M3.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL7041-1000_M1K4_Xup, STM Status^Status^Digital input 2
         tmo_optics Instance, PlcTask Inputs^Main.M3.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL7041-1000_M1K4_Xup, STM Status^Status^Digital input 1
@@ -504,6 +745,8 @@ Links
         tmo_optics Instance, PlcTask Inputs^Main.M9.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL7041-0052_M2K4rY, STM Status^Status^Digital input 2
         tmo_optics Instance, PlcTask Inputs^Main.M9.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL7041-0052_M2K4rY, STM Status^Status^Digital input 1
         tmo_optics Instance, PlcTask Inputs^Main.M9.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL5042_M2K4rY_M3K4X, FB Inputs Channel 1^Position
+        tmo_optics Instance, PlcTask Inputs^Main.bDreamEnable1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^Term 109 (EL1004), Channel 1^Input
+        tmo_optics Instance, PlcTask Inputs^Main.bDreamEnable2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^Term 109 (EL1004), Channel 2^Input
         tmo_optics Instance, PlcTask Inputs^Main.fbArbiterIO.i_stCurrentBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Inputs^CurrentBP
         tmo_optics Instance, PlcTask Inputs^Main.fbArbiterIO.xTxPDO_state, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO state
         tmo_optics Instance, PlcTask Inputs^Main.fbArbiterIO.xTxPDO_toggle, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO toggle
@@ -517,7 +760,15 @@ Links
         tmo_optics Instance, PlcTask Outputs^Main.M14.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M3K4-rX, Inputs^FromPlc
         tmo_optics Instance, PlcTask Outputs^Main.M15.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M3K4-BEND-US, Inputs^FromPlc
         tmo_optics Instance, PlcTask Outputs^Main.M16.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M3K4-BEND-DS, Inputs^FromPlc
+        tmo_optics Instance, PlcTask Outputs^Main.M17.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M4K4 X, Inputs^FromPlc
+        tmo_optics Instance, PlcTask Outputs^Main.M18.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M4K4 Y, Inputs^FromPlc
+        tmo_optics Instance, PlcTask Outputs^Main.M19.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M4K4 Z, Inputs^FromPlc
         tmo_optics Instance, PlcTask Outputs^Main.M2.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M1K4-Ydwn, Inputs^FromPlc
+        tmo_optics Instance, PlcTask Outputs^Main.M20.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M4K4 rX, Inputs^FromPlc
+        tmo_optics Instance, PlcTask Outputs^Main.M21.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M5K4 X, Inputs^FromPlc
+        tmo_optics Instance, PlcTask Outputs^Main.M22.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M5K4 Y, Inputs^FromPlc
+        tmo_optics Instance, PlcTask Outputs^Main.M23.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M5K4 Z, Inputs^FromPlc
+        tmo_optics Instance, PlcTask Outputs^Main.M24.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M5K4 rY, Inputs^FromPlc
         tmo_optics Instance, PlcTask Outputs^Main.M3.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M1K4-Xup, Inputs^FromPlc
         tmo_optics Instance, PlcTask Outputs^Main.M4.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M1K4-Xdwn, Inputs^FromPlc
         tmo_optics Instance, PlcTask Outputs^Main.M5.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M1K4-Pitch, Inputs^FromPlc
