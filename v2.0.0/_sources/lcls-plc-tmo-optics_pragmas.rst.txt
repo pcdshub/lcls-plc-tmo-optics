@@ -1,0 +1,21 @@
+
+Pragmas
+-------
+
+.. csv-table::
+    :header: PLC Name, Total Pragmas, Errors
+    :align: center
+
+    :ref:`tmo_optics <tmo_optics_overview_pragmas>`, 150, 0
+
+
+.. _tmo_optics_overview_pragmas:
+
+
+tmo_optics
+^^^^^^^^^^
+
+Total pragmas found: 150
+Total linter errors: 0
+
+
