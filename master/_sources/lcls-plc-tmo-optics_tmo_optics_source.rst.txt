@@ -1567,10 +1567,11 @@ PRG_PMPS
     PROGRAM PRG_PMPS
     VAR
     END_VAR
-    GVL_PMPS.fbArbiterIO(Arbiter := GVL_PMPS.g_fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
-
     GVL_PMPS.bMR1K1Veto := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN] 
                 AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT];
+    			
+    GVL_PMPS.fbArbiterIO(i_bVeto:= GVL_PMPS.bMR1K1Veto, Arbiter := GVL_PMPS.g_fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
+
     GVL_PMPS.g_FastFaultOutput2.i_xVeto := GVL_PMPS.bMR1K1Veto OR
                                            PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST3K4];
     GVL_PMPS.g_FastFaultOutput2.Execute();
