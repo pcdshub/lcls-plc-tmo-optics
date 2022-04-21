@@ -14,9 +14,9 @@ VAR_GLOBAL
         bUseRawCounts := TRUE,
         bMoveOk := TRUE,
         bValid := TRUE,
-        sName := 'SiC',  
+        sName := 'Si',  
         nEncoderCount := 22000532,
-        fDelta := 1000,
+        fDelta := 100,
         fVelocity := 150,
         stBeamParams := PMPS_GVL.cstFullBeam,
         nRequestAssertionID := 16#DAB2);
@@ -27,7 +27,7 @@ VAR_GLOBAL
         bValid := TRUE,
         sName := 'B4C',  
         nEncoderCount := 5000141,
-        fDelta := 1000,
+        fDelta := 100,
         fVelocity := 150,
         stBeamParams := PMPS_GVL.cstFullBeam,
         nRequestAssertionID := 16#DAB3);

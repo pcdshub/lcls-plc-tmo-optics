@@ -5,7 +5,7 @@
 TYPE ENUM_Coating_States :
 (
 	Unknown := 0,
-    SiC := 1,
+    Si := 1,
     B4C := 2
 );
 END_TYPE
