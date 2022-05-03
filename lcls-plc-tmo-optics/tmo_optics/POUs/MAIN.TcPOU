@@ -565,15 +565,7 @@ VAR
 	//Emergency Stop for LAMP KBs (M2K4 and M3K4)
 		LAMPbSTOEnable1 AT %I* : BOOL;
 		LAMPbSTOEnable2 AT %I* : BOOL;
-			{attribute 'pytmc' := '
-				pv: MR2K4:KBO:FLOW:1
-				field: EGU lpm
-                field: LINR SLOPE
-                field: ASLO .00128
-                field: AOFF .05
-				io: i
-			'}
-			fM2K4_Flow_1 : REAL;
+		
 			{attribute 'pytmc' := '
 				pv: MR2K4:KBO:FLOW:2
 				field: EGU lpm
@@ -934,7 +926,7 @@ END_VAR]]></Declaration>
 		nEncCntYM3K4  := ULINT_TO_UDINT(M13.nRawEncoderULINT);
 		nEncCntrXM3K4 := ULINT_TO_UDINT(M14.nRawEncoderULINT);
 	// LAMP KB Flow Pressure Sensors
-        fM2K4_Flow_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4_Flow_1);
+        GVL_M2K4_RTD.fM2K4_Flow_1(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
         fM2K4_Flow_2 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4_Flow_2);
         fM2K4_Press_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4_Press_1);
     
