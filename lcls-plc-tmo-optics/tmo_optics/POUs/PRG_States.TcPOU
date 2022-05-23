@@ -91,12 +91,13 @@ END_VAR
       <ST><![CDATA[MR1K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
 MR1K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
 
-      (*  GVL_States.MR2K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-        GVL_States.MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);
-        GVL_States.MR3K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-        GVL_States.MR3K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);  *)
-    //MR1K4 Coating States with PMPS
+MR2K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
+
+MR3K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+MR3K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
     
+//MR1K4 Coating States with PMPS
 fbMR1K4_Coating_States(
     bEnable := TRUE,
     stCoating1 := MR1K4_SiC,
@@ -108,31 +109,29 @@ fbMR1K4_Coating_States(
     nTransitionAssertionID:= 16#DAB1, 
 	nUnknownAssertionID:= 16#DAB0);
     
-    (*   MR2K4 Coating States with PMPS
-    M8.bPowerSelf := False;    
-    GVL_States.fbMR2K4_Coating_States(
-        bEnable := TRUE,
-        stCoating1 := GVL_States.MR2K4_SiC,
-        stCoating2 := GVL_States.MR2K4_B4C,  
-	    stMotionStage:=M8,
-        bBPOkAutoReset := TRUE,
-        fbArbiter:=GVL_PMPS.g_fbArbiter2,
-        fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
-        nTransitionAssertionID:= 16#DAD1, 
-	    nUnknownAssertionID:= 16#DAD0);
-    
-    MR3K4 Coating States with PMPS
-    M12.bPowerSelf := False;        
-    GVL_States.fbMR3K4_Coating_States(
-        bEnable := TRUE,
-        stCoating1 := GVL_States.MR3K4_SiC,
-        stCoating2 := GVL_States.MR3K4_B4C,  
-	    stMotionStage:=M12,
-        bBPOkAutoReset := TRUE,
-        fbArbiter:=GVL_PMPS.g_fbArbiter2,
-        fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
-        nTransitionAssertionID:= 16#ACE1, 
-	    nUnknownAssertionID:= 16#ACE0);   *)]]></ST>
+// MR2K4 Coating States with PMPS
+fbMR2K4_Coating_States(
+    bEnable := TRUE,
+    stCoating1 := MR2K4_SiC,
+    stCoating2 := MR2K4_B4C,  
+	stMotionStage:=Main.M8,
+    bBPOkAutoReset := TRUE,
+    fbArbiter:=GVL_PMPS.g_fbArbiter2,
+    fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
+    nTransitionAssertionID:= 16#DAD1, 
+	nUnknownAssertionID:= 16#DAD0);
+
+// MR3K4 Coating States with PMPS       
+fbMR3K4_Coating_States(
+    bEnable := TRUE,
+    stCoating1 := MR3K4_SiC,
+    stCoating2 := MR3K4_B4C,  
+	stMotionStage:=Main.M12,
+    bBPOkAutoReset := TRUE,
+    fbArbiter:=GVL_PMPS.g_fbArbiter2,
+    fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
+    nTransitionAssertionID:= 16#ACE1, 
+	nUnknownAssertionID:= 16#ACE0);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
