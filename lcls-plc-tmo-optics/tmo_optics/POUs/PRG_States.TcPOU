@@ -43,7 +43,7 @@ VAR
         bValid := TRUE,
         sName := 'SiC',  
         nEncoderCount := 8701960,
-        fDelta := 1,
+        fDelta := 0.1,
         fVelocity := 0.150,
         stBeamParams := PMPS_GVL.cstFullBeam,
         nRequestAssertionID := 16#DAD2);
@@ -54,7 +54,7 @@ VAR
         bValid := TRUE,
         sName := 'B4C',  
         nEncoderCount := 6636177,
-        fDelta := 1,
+        fDelta := 0.1,
         fVelocity := 0.150,
         stBeamParams := PMPS_GVL.cstFullBeam,
         nRequestAssertionID := 16#DAD3);
@@ -70,7 +70,7 @@ VAR
         bValid := TRUE,
         sName := 'SiC',  
         nEncoderCount := 4719890,
-        fDelta := 1,
+        fDelta := 0.1,
         fVelocity := 0.150,
         stBeamParams := PMPS_GVL.cstFullBeam,
         nRequestAssertionID := 16#ACE2);
@@ -81,7 +81,7 @@ VAR
         bValid := TRUE,
         sName := 'B4C',  
         nEncoderCount := 8220029,
-        fDelta := 1,
+        fDelta := 0.1,
         fVelocity := 0.150,
         stBeamParams := PMPS_GVL.cstFullBeam,
         nRequestAssertionID := 16#ACE3);
