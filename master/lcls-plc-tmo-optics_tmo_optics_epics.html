@@ -53,7 +53,6 @@
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html#symbols">Symbols</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data Types</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#fb-coating-states">FB_Coating_States</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#lcls-general-fb-basicstats">LCLS_General.FB_BasicStats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-general-fb-listener">LCLS_General.FB_Listener</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-general-fb-loghandler">LCLS_General.FB_LogHandler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-general-fb-logmessage">LCLS_General.FB_LogMessage</a></li>
@@ -65,6 +64,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-motion-fb-positionstatemove">lcls_twincat_motion.FB_PositionStateMove</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-motion-fb-positionstatepmps">lcls_twincat_motion.FB_PositionStatePMPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-motion-fb-positionstatepmps-base">lcls_twincat_motion.FB_PositionStatePMPS_Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-motion-lcls-general-fb-basicstats">lcls_twincat_motion.LCLS_General.FB_BasicStats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-motion-lcls-general-fb-logmessage">lcls_twincat_motion.LCLS_General.FB_LogMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-optics-dut-homs">lcls_twincat_optics.DUT_HOMS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-optics-fb-rmswatch">lcls_twincat_optics.FB_RMSWatch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pmps-fb-arbiter">PMPS.FB_Arbiter</a></li>
@@ -1538,138 +1539,6 @@
 <td><p>$(SYMBOL).enumSet</p></td>
 <td><div class="line-block">
 <div class="line">io: output</div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="lcls-general-fb-basicstats">
-<h2>LCLS_General.FB_BasicStats<a class="headerlink" href="#lcls-general-fb-basicstats" title="Permalink to this headline"></a></h2>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Record</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
-<th class="head"><p>Pragma</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>$(PREFIX):STATS:ALWAYS_CALC</p></td>
-<td><p>bo</p></td>
-<td><p>$(SYMBOL).bAlwaysCalc</p></td>
-<td><div class="line-block">
-<div class="line">io: output</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX):STATS:ALWAYS_CALC_RBV</p></td>
-<td><p>bi</p></td>
-<td><p>$(SYMBOL).bAlwaysCalc</p></td>
-<td><div class="line-block">
-<div class="line">io: output</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX):STATS:DATA_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>$(SYMBOL).aSignal</p></td>
-<td><div class="line-block">
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX):STATS:EXECUTE</p></td>
-<td><p>bo</p></td>
-<td><p>$(SYMBOL).bExecute</p></td>
-<td><div class="line-block">
-<div class="line">io: output</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX):STATS:EXECUTE_RBV</p></td>
-<td><p>bi</p></td>
-<td><p>$(SYMBOL).bExecute</p></td>
-<td><div class="line-block">
-<div class="line">io: output</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX):STATS:MAX_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>$(SYMBOL).fMax</p></td>
-<td><div class="line-block">
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX):STATS:MEAN_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>$(SYMBOL).fMean</p></td>
-<td><div class="line-block">
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX):STATS:MIN_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>$(SYMBOL).fMin</p></td>
-<td><div class="line-block">
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX):STATS:NELM_RBV</p></td>
-<td><p>longin</p></td>
-<td><p>$(SYMBOL).nElems</p></td>
-<td><div class="line-block">
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX):STATS:RANGE_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>$(SYMBOL).fRange</p></td>
-<td><div class="line-block">
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX):STATS:RESET</p></td>
-<td><p>bo</p></td>
-<td><p>$(SYMBOL).bReset</p></td>
-<td><div class="line-block">
-<div class="line">io: output</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX):STATS:RESET_RBV</p></td>
-<td><p>bi</p></td>
-<td><p>$(SYMBOL).bReset</p></td>
-<td><div class="line-block">
-<div class="line">io: output</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX):STATS:STDEV_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>$(SYMBOL).fStDev</p></td>
-<td><div class="line-block">
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX):STATS:VALID_RBV</p></td>
-<td><p>bi</p></td>
-<td><p>$(SYMBOL).bValid</p></td>
-<td><div class="line-block">
-<div class="line">io: input</div>
 </div>
 </td>
 </tr>
@@ -6633,6 +6502,182 @@
 <td><p>$(SYMBOL).bMaintMode</p></td>
 <td><div class="line-block">
 <div class="line">io: output</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-twincat-motion-lcls-general-fb-basicstats">
+<h2>lcls_twincat_motion.LCLS_General.FB_BasicStats<a class="headerlink" href="#lcls-twincat-motion-lcls-general-fb-basicstats" title="Permalink to this headline"></a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):STATS:ALWAYS_CALC</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).bAlwaysCalc</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATS:ALWAYS_CALC_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).bAlwaysCalc</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):STATS:DATA_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).aSignal</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATS:EXECUTE</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).bExecute</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):STATS:EXECUTE_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).bExecute</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATS:MAX_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fMax</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):STATS:MEAN_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fMean</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATS:MIN_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fMin</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):STATS:NELM_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).nElems</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATS:RANGE_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fRange</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):STATS:RESET</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).bReset</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATS:RESET_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).bReset</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):STATS:STDEV_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fStDev</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATS:VALID_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).bValid</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-twincat-motion-lcls-general-fb-logmessage">
+<h2>lcls_twincat_motion.LCLS_General.FB_LogMessage<a class="headerlink" href="#lcls-twincat-motion-lcls-general-fb-logmessage" title="Permalink to this headline"></a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):Reset</p></td>
+<td><p>bo</p></td>
+<td><p>Rising-edge reset of trip</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Reset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Rising-edge reset of trip</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Tripped_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Log message FB tripped</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
 </div>
 </td>
 </tr>
@@ -20437,6 +20482,22 @@
 </div>
 </td>
 </tr>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Tripped by overall log count</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogHost</p></td>
+<td><p>waveform</p></td>
+<td><p>The log host IP address</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
 <tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogHost</p></td>
 <td><p>waveform</p></td>
 <td><p>The log host IP address</p></td>
@@ -20453,6 +20514,22 @@
 </div>
 </td>
 </tr>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogHost_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>The log host IP address</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogMessageCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Total log messages on the last cycle</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
 <tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogMessageCount_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>Total log messages on the last cycle</p></td>
@@ -20463,6 +20540,22 @@
 </tr>
 <tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogPort</p></td>
 <td><p>longout</p></td>
+<td><p>The log host UDP port</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogPort</p></td>
+<td><p>longout</p></td>
+<td><p>The log host UDP port</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogPort_RBV</p></td>
+<td><p>longin</p></td>
 <td><p>The log host UDP port</p></td>
 <td><div class="line-block">
 <div class="line">io: output</div>

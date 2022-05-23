@@ -1361,7 +1361,7 @@ Main
     		M16.bHardwareEnable R= fM3K4DS_RTD_1 > 1000 OR bM3K4DS_RTD_1_Err;
         // State Movers with PMPS
             GVL_States.MR1K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-            GVL_States.MR1K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);
+            GVL_States.MR1K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
           (*  GVL_States.MR2K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
             GVL_States.MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);
             GVL_States.MR3K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
@@ -1480,7 +1480,7 @@ P_StripeProtections
     		nUpperCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
     		sUpperCoatingType := 'Si',
     		nLowerCoatingBoundary := 15998960,	
-    		nLowerCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
+    		nLowerCoatingBitMask := F_eVExcludeRange(2.3E3, 7E3),
     		sLowerCoatingType := 'B4C');
     (*
     MR2K4 (RBV = MR2K4:KBO:ENC:Y:CNT_RBV)
