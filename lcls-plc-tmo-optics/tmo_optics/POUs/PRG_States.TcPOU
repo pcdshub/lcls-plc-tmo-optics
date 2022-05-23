@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_States" Id="{8bb23caf-de54-43ba-89ee-f35c37dbe6d9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_States
+VAR
+    {attribute 'pytmc' := '
+     pv: MR1K4:SOMS:COATING:STATE;
+     io: io;
+    '}
+    fbMR1K4_Coating_States: FB_Coating_States; 
+    
+    MR1K4_SiC : DUT_PositionState := (
+        bUseRawCounts := TRUE,
+        bMoveOk := TRUE,
+        bValid := TRUE,
+        sName := 'Si',  
+        nEncoderCount := 22000532,
+        fDelta := 100,
+        fVelocity := 150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#DAB2);
+        
+    MR1K4_B4C : DUT_PositionState := (
+        bUseRawCounts := TRUE,
+        bMoveOk := TRUE,
+        bValid := TRUE,
+        sName := 'B4C',  
+        nEncoderCount := 5000141,
+        fDelta := 100,
+        fVelocity := 150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#DAB3);
+            
+    {attribute 'pytmc' := '
+     pv: MR2K4:KBO:COATING:STATE;
+     io: io;
+    '}
+    fbMR2K4_Coating_States: FB_Coating_States; 
+    
+    MR2K4_SiC : DUT_PositionState := (
+        bUseRawCounts := TRUE,
+        bMoveOk := TRUE,
+        bValid := TRUE,
+        sName := 'SiC',  
+        nEncoderCount := 8701960,
+        fDelta := 1,
+        fVelocity := 0.150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#DAD2);
+        
+    MR2K4_B4C : DUT_PositionState := (
+        bUseRawCounts := TRUE,
+        bMoveOk := TRUE,
+        bValid := TRUE,
+        sName := 'B4C',  
+        nEncoderCount := 6636177,
+        fDelta := 1,
+        fVelocity := 0.150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#DAD3);
+    {attribute 'pytmc' := '
+     pv: MR3K4:KBO:COATING:STATE;
+     io: io;
+    '}
+    fbMR3K4_Coating_States: FB_Coating_States; 
+    
+    MR3K4_SiC : DUT_PositionState := (
+        bUseRawCounts := TRUE,
+        bMoveOk := TRUE,
+        bValid := TRUE,
+        sName := 'SiC',  
+        nEncoderCount := 4719890,
+        fDelta := 1,
+        fVelocity := 0.150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#ACE2);
+        
+    MR3K4_B4C : DUT_PositionState := (
+        bUseRawCounts := TRUE,
+        bMoveOk := TRUE,
+        bValid := TRUE,
+        sName := 'B4C',  
+        nEncoderCount := 8220029,
+        fDelta := 1,
+        fVelocity := 0.150,
+        stBeamParams := PMPS_GVL.cstFullBeam,
+        nRequestAssertionID := 16#ACE3);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[MR1K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+MR1K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
+
+      (*  GVL_States.MR2K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+        GVL_States.MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);
+        GVL_States.MR3K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+        GVL_States.MR3K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);  *)
+    //MR1K4 Coating States with PMPS
+    
+fbMR1K4_Coating_States(
+    bEnable := TRUE,
+    stCoating1 := MR1K4_SiC,
+    stCoating2 := MR1K4_B4C,  
+	stMotionStage:=Main.M1,
+    bBPOkAutoReset := TRUE,
+    fbArbiter:=GVL_PMPS.g_fbArbiter1,
+    fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
+    nTransitionAssertionID:= 16#DAB1, 
+	nUnknownAssertionID:= 16#DAB0);
+    
+    (*   MR2K4 Coating States with PMPS
+    M8.bPowerSelf := False;    
+    GVL_States.fbMR2K4_Coating_States(
+        bEnable := TRUE,
+        stCoating1 := GVL_States.MR2K4_SiC,
+        stCoating2 := GVL_States.MR2K4_B4C,  
+	    stMotionStage:=M8,
+        bBPOkAutoReset := TRUE,
+        fbArbiter:=GVL_PMPS.g_fbArbiter2,
+        fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
+        nTransitionAssertionID:= 16#DAD1, 
+	    nUnknownAssertionID:= 16#DAD0);
+    
+    MR3K4 Coating States with PMPS
+    M12.bPowerSelf := False;        
+    GVL_States.fbMR3K4_Coating_States(
+        bEnable := TRUE,
+        stCoating1 := GVL_States.MR3K4_SiC,
+        stCoating2 := GVL_States.MR3K4_B4C,  
+	    stMotionStage:=M12,
+        bBPOkAutoReset := TRUE,
+        fbArbiter:=GVL_PMPS.g_fbArbiter2,
+        fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
+        nTransitionAssertionID:= 16#ACE1, 
+	    nUnknownAssertionID:= 16#ACE0);   *)]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -10,7 +10,8 @@ VAR
 		{attribute 'pytmc' := '
 			pv: MR1K4:SOMS:MMS:YUP
 		'}
-		M1 : DUT_MotionStage := (fVelocity:=200.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // M1K4 Yup
+        //PMPS State Stage; bPowerSelf:=False
+		M1 : DUT_MotionStage := (sName:='MR1K4-Coatings', fVelocity:=200.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=False); // M1K4 Yup
 		fbMotionStage_m1 : FB_MotionStage;
 	
 		{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Ydwn]^STM Status^Status^Digital input 1;
@@ -974,26 +975,13 @@ END_VAR]]></Declaration>
 		M11.bHardwareEnable R= fM2K4DS_RTD_1 > 1000 OR bM2K4DS_RTD_1_Err;
 		M15.bHardwareEnable R= fM3K4US_RTD_1 > 1000 OR bM3K4US_RTD_1_Err;
 		M16.bHardwareEnable R= fM3K4DS_RTD_1 > 1000 OR bM3K4DS_RTD_1_Err;
-    // State Movers with PMPS
-        GVL_States.MR1K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-        GVL_States.MR1K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
+
       (*  GVL_States.MR2K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
         GVL_States.MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);
         GVL_States.MR3K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
         GVL_States.MR3K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);  *)
     //MR1K4 Coating States with PMPS
-    M1.bPowerSelf := False;
-    GVL_States.fbMR1K4_Coating_States(
-        bEnable := TRUE,
-        stCoating1 := GVL_States.MR1K4_SiC,
-        stCoating2 := GVL_States.MR1K4_B4C,  
-	    stMotionStage:=M1,
-        bBPOkAutoReset := TRUE,
-        fbArbiter:=GVL_PMPS.g_fbArbiter1,
-        fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
-        nTransitionAssertionID:= 16#DAB1, 
-	    nUnknownAssertionID:= 16#DAB0);
-    
+
     (*   MR2K4 Coating States with PMPS
     M8.bPowerSelf := False;    
     GVL_States.fbMR2K4_Coating_States(
@@ -1020,7 +1008,8 @@ END_VAR]]></Declaration>
         nTransitionAssertionID:= 16#ACE1, 
 	    nUnknownAssertionID:= 16#ACE0);   *)
 ///////////////////////////////////////////////////
-
+ // States
+    PRG_States();
 // PMPS
     PRG_PMPS();	
 
