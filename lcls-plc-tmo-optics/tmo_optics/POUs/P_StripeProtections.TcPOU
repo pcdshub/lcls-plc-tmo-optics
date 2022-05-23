@@ -16,7 +16,7 @@ From M. Seaberg
 		nUpperCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
 		sUpperCoatingType := 'Si',
 		nLowerCoatingBoundary := 15998960,	
-		nLowerCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
+		nLowerCoatingBitMask := F_eVExcludeRange(2.3E3, 7E3),
 		sLowerCoatingType := 'B4C');
 (*
 MR2K4 (RBV = MR2K4:KBO:ENC:Y:CNT_RBV)
