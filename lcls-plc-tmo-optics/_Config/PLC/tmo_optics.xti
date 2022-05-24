@@ -775,15 +775,15 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{ED852A19-2064-469F-8BE3-3AE04B42F37A}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
+			<Name GUID="{8ABF85A4-311B-46A1-A4DE-A10B4A594580}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
 			<BitSize>0</BitSize>
 			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
 			<Hides>
-				<Hide GUID="{DAFB44B3-C9CC-437A-9280-538926A6F776}"/>
+				<Hide GUID="{ED852A19-2064-469F-8BE3-3AE04B42F37A}"/>
 			</Hides>
 		</DataType>
 		<DataType>
-			<Name GUID="{BB824CCF-2AA1-47D5-81A0-5F982877DD81}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Name GUID="{166C5144-510E-44EC-8FF1-059718D4C536}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
 			<Comment>
 				<![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]>
 			</Comment>
@@ -805,7 +805,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>Status</Name>
-				<Type GUID="{ED852A19-2064-469F-8BE3-3AE04B42F37A}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
+				<Type GUID="{8ABF85A4-311B-46A1-A4DE-A10B4A594580}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
 				<Comment>
 					<![CDATA[ Status struct placeholder]]>
 				</Comment>
@@ -822,7 +822,7 @@ External Setpoint Generation:
 				<BitOffs>64</BitOffs>
 			</SubItem>
 			<Hides>
-				<Hide GUID="{1CF9CD34-BFD6-4362-B42B-9FFA5B79B070}"/>
+				<Hide GUID="{BB824CCF-2AA1-47D5-81A0-5F982877DD81}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -2208,7 +2208,7 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Encoders]]>
 					</Comment>
-					<Type GUID="{BB824CCF-2AA1-47D5-81A0-5F982877DD81}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{166C5144-510E-44EC-8FF1-059718D4C536}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2230,7 +2230,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{BB824CCF-2AA1-47D5-81A0-5F982877DD81}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{166C5144-510E-44EC-8FF1-059718D4C536}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2252,7 +2252,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{BB824CCF-2AA1-47D5-81A0-5F982877DD81}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{166C5144-510E-44EC-8FF1-059718D4C536}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2274,7 +2274,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{BB824CCF-2AA1-47D5-81A0-5F982877DD81}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{166C5144-510E-44EC-8FF1-059718D4C536}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -5047,6 +5047,13 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
+					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
+					<Comment>
+						<![CDATA[Raw encoder count]]>
+					</Comment>
+					<Type>LINT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
@@ -5060,13 +5067,6 @@ External Setpoint Generation:
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_2</Name>
 					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
-					<Comment>
-						<![CDATA[Raw encoder count]]>
-					</Comment>
-					<Type>LINT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
@@ -5788,8 +5788,8 @@ External Setpoint Generation:
 			</UnrestoredVarLinks>
 			<TaskPouOids>
 				<TaskPouOid Prio="1" OTCID="#x08502001"/>
-				<TaskPouOid Prio="3" OTCID="#x08502002"/>
 				<TaskPouOid Prio="20" OTCID="#x08502003"/>
+				<TaskPouOid Prio="3" OTCID="#x08502002"/>
 			</TaskPouOids>
 		</Instance>
 	</Project>
