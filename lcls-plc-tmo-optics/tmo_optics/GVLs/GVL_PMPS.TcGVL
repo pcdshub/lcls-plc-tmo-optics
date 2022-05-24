@@ -26,17 +26,6 @@ VAR_GLOBAL
 		pv: PLC:TMO:OPTICS:ARB:02
 	'}
 	g_fbArbiter2 : FB_Arbiter(2);
-    
-    //PMPS
-    fbArbiterIO : FB_SubSysToArbiter_IO;
-
-    ffFFO2ToFFO1 : FB_FastFault := (
-        i_xAutoReset := TRUE,
-        i_DevName := 'PMPS FFO2',
-        i_Desc := 'Subordinate fast fault group, will clear on its own otherwise something is misconfigured in the diagnostic',
-        i_TypeCode := 16#D);
-    
-
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
