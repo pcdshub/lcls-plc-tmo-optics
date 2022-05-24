@@ -9,7 +9,7 @@ VAR
     '}
     fbMR1K4_Coating_States: FB_Coating_States; 
     
-    MR1K4_SiC : DUT_PositionState := (
+    MR1K4_Si : DUT_PositionState := (
         bUseRawCounts := TRUE,
         bMoveOk := TRUE,
         bValid := TRUE,
@@ -37,11 +37,11 @@ VAR
     '}
     fbMR2K4_Coating_States: FB_Coating_States; 
     
-    MR2K4_SiC : DUT_PositionState := (
+    MR2K4_Si : DUT_PositionState := (
         bUseRawCounts := TRUE,
         bMoveOk := TRUE,
         bValid := TRUE,
-        sName := 'SiC',  
+        sName := 'Si',  
         nEncoderCount := 8701960,
         fDelta := 0.1,
         fVelocity := 0.150,
@@ -64,11 +64,11 @@ VAR
     '}
     fbMR3K4_Coating_States: FB_Coating_States; 
     
-    MR3K4_SiC : DUT_PositionState := (
+    MR3K4_Si : DUT_PositionState := (
         bUseRawCounts := TRUE,
         bMoveOk := TRUE,
         bValid := TRUE,
-        sName := 'SiC',  
+        sName := 'Si',  
         nEncoderCount := 4719890,
         fDelta := 0.1,
         fVelocity := 0.150,
@@ -88,19 +88,19 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[MR1K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+      <ST><![CDATA[MR1K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
 MR1K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
 
-MR2K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+MR2K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
 MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
 
-MR3K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+MR3K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
 MR3K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
     
 //MR1K4 Coating States with PMPS
 fbMR1K4_Coating_States(
     bEnable := TRUE,
-    stCoating1 := MR1K4_SiC,
+    stCoating1 := MR1K4_Si,
     stCoating2 := MR1K4_B4C,  
 	stMotionStage:=Main.M1,
     bBPOkAutoReset := TRUE,
@@ -112,7 +112,7 @@ fbMR1K4_Coating_States(
 // MR2K4 Coating States with PMPS
 fbMR2K4_Coating_States(
     bEnable := TRUE,
-    stCoating1 := MR2K4_SiC,
+    stCoating1 := MR2K4_Si,
     stCoating2 := MR2K4_B4C,  
 	stMotionStage:=Main.M8,
     bBPOkAutoReset := TRUE,
@@ -124,7 +124,7 @@ fbMR2K4_Coating_States(
 // MR3K4 Coating States with PMPS       
 fbMR3K4_Coating_States(
     bEnable := TRUE,
-    stCoating1 := MR3K4_SiC,
+    stCoating1 := MR3K4_Si,
     stCoating2 := MR3K4_B4C,  
 	stMotionStage:=Main.M12,
     bBPOkAutoReset := TRUE,
