@@ -16,7 +16,7 @@ From M. Seaberg
 		nUpperCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
 		sUpperCoatingType := 'Si',
 		nLowerCoatingBoundary := 15998960,	
-		nLowerCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
+		nLowerCoatingBitMask := F_eVExcludeRange(2.3E3, 7E3),
 		sLowerCoatingType := 'B4C');
 (*
 MR2K4 (RBV = MR2K4:KBO:ENC:Y:CNT_RBV)
@@ -31,7 +31,7 @@ Silicon surface: RBV >= 7776781: 0000_0000_0001_1110 (allow everything below 250
 		nUpperCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
 		sUpperCoatingType := 'Si',
 		nLowerCoatingBoundary := 6976835,
-		nLowerCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
+		nLowerCoatingBitMask := F_eVExcludeRange(2.3E3, 7E3),
 		sLowerCoatingType := 'B4C');
 (*
 MR3K4 (RBV = MR3K4:KBO:ENC:X:CNT_RBV)
@@ -42,7 +42,7 @@ Silicon surface: RBV <= 4820000: 0000_0000_0001_1110 (allow everything between 2
 	fbStripProtMR3K4 : FB_MirrorTwoCoatingProtection := (
 		sDevName := 'MR3K4',
 		nUpperCoatingBoundary := 5620000,
-		nUpperCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
+		nUpperCoatingBitMask := F_eVExcludeRange(2.3E3, 7E3),
 		sUpperCoatingType := 'B4C',
 		nLowerCoatingBoundary := 4820000,
 		nLowerCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),

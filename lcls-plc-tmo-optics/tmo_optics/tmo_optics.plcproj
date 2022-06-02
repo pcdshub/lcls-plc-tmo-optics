@@ -60,10 +60,6 @@
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
-    <Compile Include="GVLs\GVL_States.TcGVL">
-      <SubType>Code</SubType>
-      <LinkAlways>true</LinkAlways>
-    </Compile>
     <Compile Include="PiezoDriver.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -77,6 +73,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_PMPS.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_States.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\P_StripeProtections.TcPOU">
@@ -126,7 +125,7 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <LibraryReference Include="LCLS General,2.4.2,SLAC">
+    <LibraryReference Include="LCLS General,2.6.0,SLAC">
       <Namespace>LCLS_General</Namespace>
     </LibraryReference>
     <LibraryReference Include="lcls-twincat-motion,newest,SLAC">
