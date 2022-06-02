@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export PCDS_CONDA_VER=5.3.0
 source /cds/group/pcds/pyps/conda/pcds_conda
 
-`pydm --hide-nav-bar --hide-menu-bar -m '{"DISP_NAME":"MR1K4", "BASE_PV":"MR1K4:SOMS"}' /reg/g/pcds/epics/ioc/tmo/lcls-plc-tmo-optics/latest/somsScreens/mirrorScreen.py &`
+`pydm --hide-nav-bar --hide-menu-bar -m '{"BASE_PV":"MR1K4:SOMS"}' /reg/g/pcds/epics-dev/screens/pydm/offset_mirror_screens/latest/mirrorScreen.py &`
