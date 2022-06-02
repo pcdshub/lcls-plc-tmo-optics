@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/doctr-versions-menu.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -66,7 +67,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#gvl-m3k4-rtd">GVL_M3K4_RTD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-serialio">GVL_SerialIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gvl-states">GVL_States</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#pous">POUs</a><ul>
@@ -76,6 +76,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#p-stripeprotections">P_StripeProtections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#piezoserial">PiezoSerial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-pmps">PRG_PMPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-states">PRG_States</a></li>
 </ul>
 </li>
 </ul>
@@ -105,9 +106,9 @@
            <div itemprop="articleBody">
              
   <section id="duts">
-<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this headline"></a></h1>
+<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this heading"></a></h1>
 <section id="enum-coating-states">
-<h2>ENUM_Coating_States<a class="headerlink" href="#enum-coating-states" title="Permalink to this headline"></a></h2>
+<h2>ENUM_Coating_States<a class="headerlink" href="#enum-coating-states" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified only&#39;</span><span class="p">}</span>
 <span class="n">TYPE</span> <span class="n">ENUM_Coating_States</span> <span class="p">:</span>
 <span class="p">(</span>
@@ -127,9 +128,9 @@
 </section>
 </section>
 <section id="gvls">
-<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this headline"></a></h1>
+<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this heading"></a></h1>
 <section id="gvl-com-buffers">
-<h2>GVL_COM_Buffers<a class="headerlink" href="#gvl-com-buffers" title="Permalink to this headline"></a></h2>
+<h2>GVL_COM_Buffers<a class="headerlink" href="#gvl-com-buffers" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">M1K4</span>
     <span class="n">Serial_RXBuffer_M1K4</span> <span class="p">:</span> <span class="n">ComBuffer</span><span class="p">;</span>
@@ -139,7 +140,7 @@
 </div>
 </section>
 <section id="gvl-m1k4">
-<h2>GVL_M1K4<a class="headerlink" href="#gvl-m1k4" title="Permalink to this headline"></a></h2>
+<h2>GVL_M1K4<a class="headerlink" href="#gvl-m1k4" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">Pitch</span> <span class="n">Mechanism</span><span class="p">:</span>
@@ -153,7 +154,7 @@
 </div>
 </section>
 <section id="gvl-m1k4-constants">
-<h2>GVL_M1K4_Constants<a class="headerlink" href="#gvl-m1k4-constants" title="Permalink to this headline"></a></h2>
+<h2>GVL_M1K4_Constants<a class="headerlink" href="#gvl-m1k4-constants" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span> <span class="n">CONSTANT</span>
     <span class="o">//</span> <span class="n">Encoder</span> <span class="n">reference</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">nm</span>
@@ -166,7 +167,7 @@
 </div>
 </section>
 <section id="gvl-m2k4-constants">
-<h2>GVL_M2K4_Constants<a class="headerlink" href="#gvl-m2k4-constants" title="Permalink to this headline"></a></h2>
+<h2>GVL_M2K4_Constants<a class="headerlink" href="#gvl-m2k4-constants" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span> <span class="n">CONSTANT</span>
     <span class="o">//</span> <span class="n">Encoder</span> <span class="n">reference</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">nm</span>
@@ -178,7 +179,7 @@
 </div>
 </section>
 <section id="gvl-m2k4-rtd">
-<h2>GVL_M2K4_RTD<a class="headerlink" href="#gvl-m2k4-rtd" title="Permalink to this headline"></a></h2>
+<h2>GVL_M2K4_RTD<a class="headerlink" href="#gvl-m2k4-rtd" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">M2K4</span> <span class="n">BENDER</span> <span class="n">RTDs</span>
@@ -212,7 +213,7 @@
 </div>
 </section>
 <section id="gvl-m3k4-constants">
-<h2>GVL_M3K4_Constants<a class="headerlink" href="#gvl-m3k4-constants" title="Permalink to this headline"></a></h2>
+<h2>GVL_M3K4_Constants<a class="headerlink" href="#gvl-m3k4-constants" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span> <span class="n">CONSTANT</span>
     <span class="o">//</span> <span class="n">Encoder</span> <span class="n">reference</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">nm</span>
@@ -224,7 +225,7 @@
 </div>
 </section>
 <section id="gvl-m3k4-rtd">
-<h2>GVL_M3K4_RTD<a class="headerlink" href="#gvl-m3k4-rtd" title="Permalink to this headline"></a></h2>
+<h2>GVL_M3K4_RTD<a class="headerlink" href="#gvl-m3k4-rtd" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">M3K4</span> <span class="n">BENDER</span> <span class="n">RTDs</span>
@@ -250,7 +251,7 @@
 </div>
 </section>
 <section id="gvl-pmps">
-<h2>GVL_PMPS<a class="headerlink" href="#gvl-pmps" title="Permalink to this headline"></a></h2>
+<h2>GVL_PMPS<a class="headerlink" href="#gvl-pmps" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">FFO</span> <span class="k">for</span> <span class="n">devices</span> <span class="n">upstream</span> <span class="n">of</span> <span class="n">ST1K4</span> <span class="p">(</span><span class="n">M1K4</span><span class="p">)</span>
@@ -276,23 +277,12 @@
             <span class="n">pv</span><span class="p">:</span> <span class="n">PLC</span><span class="p">:</span><span class="n">TMO</span><span class="p">:</span><span class="n">OPTICS</span><span class="p">:</span><span class="n">ARB</span><span class="p">:</span><span class="mi">02</span>
     <span class="s1">&#39;}</span>
     <span class="n">g_fbArbiter2</span> <span class="p">:</span> <span class="n">FB_Arbiter</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-
-    <span class="o">//</span><span class="n">PMPS</span>
-    <span class="n">fbArbiterIO</span> <span class="p">:</span> <span class="n">FB_SubSysToArbiter_IO</span><span class="p">;</span>
-
-    <span class="n">ffFFO2ToFFO1</span> <span class="p">:</span> <span class="n">FB_FastFault</span> <span class="o">:=</span> <span class="p">(</span>
-        <span class="n">i_xAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">i_DevName</span> <span class="o">:=</span> <span class="s1">&#39;PMPS FFO2&#39;</span><span class="p">,</span>
-        <span class="n">i_Desc</span> <span class="o">:=</span> <span class="s1">&#39;Subordinate fast fault group, will clear on its own otherwise something is misconfigured in the diagnostic&#39;</span><span class="p">,</span>
-        <span class="n">i_TypeCode</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#D);</span>
-
-<span class="n">bMR1K1Veto</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
 </section>
 <section id="gvl-serialio">
-<h2>GVL_SerialIO<a class="headerlink" href="#gvl-serialio" title="Permalink to this headline"></a></h2>
+<h2>GVL_SerialIO<a class="headerlink" href="#gvl-serialio" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>VAR_GLOBAL
     //Better have your inputs and outputs!
     // M1K4
@@ -302,108 +292,11 @@ END_VAR
 </pre></div>
 </div>
 </section>
-<section id="gvl-states">
-<h2>GVL_States<a class="headerlink" href="#gvl-states" title="Permalink to this headline"></a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
-<span class="n">VAR_GLOBAL</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-     <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">COATING</span><span class="p">:</span><span class="n">STATE</span><span class="p">;</span>
-     <span class="n">io</span><span class="p">:</span> <span class="n">io</span><span class="p">;</span>
-    <span class="s1">&#39;}</span>
-    <span class="n">fbMR1K4_Coating_States</span><span class="p">:</span> <span class="n">FB_Coating_States</span><span class="p">;</span>
-
-    <span class="n">MR1K4_SiC</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
-        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">,</span>
-        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">22000532</span><span class="p">,</span>
-        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">100</span><span class="p">,</span>
-        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mi">150</span><span class="p">,</span>
-        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
-        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB2);</span>
-
-    <span class="n">MR1K4_B4C</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
-        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
-        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">5000141</span><span class="p">,</span>
-        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">100</span><span class="p">,</span>
-        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mi">150</span><span class="p">,</span>
-        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
-        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB3);</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-     <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">COATING</span><span class="p">:</span><span class="n">STATE</span><span class="p">;</span>
-     <span class="n">io</span><span class="p">:</span> <span class="n">io</span><span class="p">;</span>
-    <span class="s1">&#39;}</span>
-    <span class="n">fbMR2K4_Coating_States</span><span class="p">:</span> <span class="n">FB_Coating_States</span><span class="p">;</span>
-
-    <span class="n">MR2K4_SiC</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
-        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;SiC&#39;</span><span class="p">,</span>
-        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">8701960</span><span class="p">,</span>
-        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
-        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
-        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD2);</span>
-
-    <span class="n">MR2K4_B4C</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
-        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
-        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">6636177</span><span class="p">,</span>
-        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
-        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
-        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD3);</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-     <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">COATING</span><span class="p">:</span><span class="n">STATE</span><span class="p">;</span>
-     <span class="n">io</span><span class="p">:</span> <span class="n">io</span><span class="p">;</span>
-    <span class="s1">&#39;}</span>
-    <span class="n">fbMR3K4_Coating_States</span><span class="p">:</span> <span class="n">FB_Coating_States</span><span class="p">;</span>
-
-    <span class="n">MR3K4_SiC</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
-        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;SiC&#39;</span><span class="p">,</span>
-        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">4719890</span><span class="p">,</span>
-        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
-        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
-        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE2);</span>
-
-    <span class="n">MR3K4_B4C</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
-        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
-        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">8220029</span><span class="p">,</span>
-        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
-        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
-        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE3);</span>
-<span class="n">END_VAR</span>
-</pre></div>
-</div>
-<dl class="simple">
-<dt>Related:</dt><dd><ul class="simple">
-<li><p><a class="reference internal" href="#fb-coating-states">FB_Coating_States</a></p></li>
-</ul>
-</dd>
-</dl>
-</section>
 </section>
 <section id="pous">
-<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this headline"></a></h1>
+<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this heading"></a></h1>
 <section id="fb-coating-states">
-<h2>FB_Coating_States<a class="headerlink" href="#fb-coating-states" title="Permalink to this headline"></a></h2>
+<h2>FB_Coating_States<a class="headerlink" href="#fb-coating-states" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_Coating_States</span> <span class="n">EXTENDS</span> <span class="n">FB_PositionStateBase_WithPMPS</span>
 <span class="n">VAR_INPUT</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -448,7 +341,7 @@ END_VAR
 </dl>
 </section>
 <section id="main">
-<h2>Main<a class="headerlink" href="#main" title="Permalink to this headline"></a></h2>
+<h2>Main<a class="headerlink" href="#main" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">Main</span>
 <span class="n">VAR</span>
 <span class="o">//</span> <span class="n">M1K4</span>
@@ -458,7 +351,8 @@ END_VAR
             <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
                     <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">YUP</span>
             <span class="s1">&#39;}</span>
-            <span class="n">M1</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span><span class="o">:=</span><span class="mf">200.0</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Yup</span>
+        <span class="o">//</span><span class="n">PMPS</span> <span class="n">State</span> <span class="n">Stage</span><span class="p">;</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="kc">False</span>
+            <span class="n">M1</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="s1">&#39;MR1K4-Coatings&#39;</span><span class="p">,</span> <span class="n">fVelocity</span><span class="o">:=</span><span class="mf">200.0</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Yup</span>
             <span class="n">fbMotionStage_m1</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
 
             <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Ydwn]^STM Status^Status^Digital input 1;</span>
@@ -635,7 +529,8 @@ END_VAR
             <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Y</span>
             <span class="s1">&#39;}</span>
-            <span class="n">M8</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="o">//</span><span class="n">PMPS</span> <span class="n">State</span> <span class="n">Stage</span><span class="p">;</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="kc">False</span>
+            <span class="n">M8</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="s1">&#39;MR2K4-Coatings&#39;</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">);</span>
             <span class="n">fbMotionStage_m8</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR2K4</span> <span class="n">rY</span>
             <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable :=TIIB[EL7041-0052_M2K4rY]^STM Status^Status^Digital input 1;</span>
@@ -671,7 +566,8 @@ END_VAR
             <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">X</span>
             <span class="s1">&#39;}</span>
-            <span class="n">M12</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="o">//</span><span class="n">PMPS</span> <span class="n">State</span> <span class="n">Stage</span><span class="p">;</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="kc">False</span>
+            <span class="n">M12</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="s1">&#39;MR3K4-Coatings&#39;</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">);</span>
             <span class="n">fbMotionStage_m12</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR3K4</span> <span class="n">Y</span>
             <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable :=TIIB[EL7041-0052_M3K4Y]^STM Status^Status^Digital input 1;</span>
@@ -1420,64 +1316,16 @@ END_VAR
             <span class="n">M11</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="n">R</span><span class="o">=</span> <span class="n">fM2K4DS_RTD_1</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="n">OR</span> <span class="n">bM2K4DS_RTD_1_Err</span><span class="p">;</span>
             <span class="n">M15</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="n">R</span><span class="o">=</span> <span class="n">fM3K4US_RTD_1</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="n">OR</span> <span class="n">bM3K4US_RTD_1_Err</span><span class="p">;</span>
             <span class="n">M16</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="n">R</span><span class="o">=</span> <span class="n">fM3K4DS_RTD_1</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="n">OR</span> <span class="n">bM3K4DS_RTD_1_Err</span><span class="p">;</span>
-    <span class="o">//</span> <span class="n">State</span> <span class="n">Movers</span> <span class="k">with</span> <span class="n">PMPS</span>
-        <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR1K4_SiC</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">);</span>
-        <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR1K4_B4C</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">);</span>
-      <span class="p">(</span><span class="o">*</span>  <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR2K4_SiC</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">);</span>
-        <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR2K4_B4C</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">);</span>
-        <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR3K4_SiC</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">);</span>
-        <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR3K4_B4C</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">);</span>  <span class="o">*</span><span class="p">)</span>
-    <span class="o">//</span><span class="n">MR1K4</span> <span class="n">Coating</span> <span class="n">States</span> <span class="k">with</span> <span class="n">PMPS</span>
-    <span class="n">M1</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span> <span class="kc">False</span><span class="p">;</span>
-    <span class="n">GVL_States</span><span class="o">.</span><span class="n">fbMR1K4_Coating_States</span><span class="p">(</span>
-        <span class="n">bEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">stCoating1</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR1K4_SiC</span><span class="p">,</span>
-        <span class="n">stCoating2</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR1K4_B4C</span><span class="p">,</span>
-        <span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M1</span><span class="p">,</span>
-        <span class="n">bBPOkAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">fbArbiter</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter1</span><span class="p">,</span>
-        <span class="n">fbFFHWO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span>
-        <span class="n">nTransitionAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB1,</span>
-        <span class="n">nUnknownAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB0);</span>
 
-    <span class="p">(</span><span class="o">*</span>   <span class="n">MR2K4</span> <span class="n">Coating</span> <span class="n">States</span> <span class="k">with</span> <span class="n">PMPS</span>
-    <span class="n">M8</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span> <span class="kc">False</span><span class="p">;</span>
-    <span class="n">GVL_States</span><span class="o">.</span><span class="n">fbMR2K4_Coating_States</span><span class="p">(</span>
-        <span class="n">bEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">stCoating1</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR2K4_SiC</span><span class="p">,</span>
-        <span class="n">stCoating2</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR2K4_B4C</span><span class="p">,</span>
-        <span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M8</span><span class="p">,</span>
-        <span class="n">bBPOkAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">fbArbiter</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter2</span><span class="p">,</span>
-        <span class="n">fbFFHWO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
-        <span class="n">nTransitionAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD1,</span>
-        <span class="n">nUnknownAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD0);</span>
-
-    <span class="n">MR3K4</span> <span class="n">Coating</span> <span class="n">States</span> <span class="k">with</span> <span class="n">PMPS</span>
-    <span class="n">M12</span><span class="o">.</span><span class="n">bPowerSelf</span> <span class="o">:=</span> <span class="kc">False</span><span class="p">;</span>
-    <span class="n">GVL_States</span><span class="o">.</span><span class="n">fbMR3K4_Coating_States</span><span class="p">(</span>
-        <span class="n">bEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">stCoating1</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR3K4_SiC</span><span class="p">,</span>
-        <span class="n">stCoating2</span> <span class="o">:=</span> <span class="n">GVL_States</span><span class="o">.</span><span class="n">MR3K4_B4C</span><span class="p">,</span>
-        <span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M12</span><span class="p">,</span>
-        <span class="n">bBPOkAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
-        <span class="n">fbArbiter</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter2</span><span class="p">,</span>
-        <span class="n">fbFFHWO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
-        <span class="n">nTransitionAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE1,</span>
-        <span class="n">nUnknownAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE0);   *)</span>
-<span class="o">///////////////////////////////////////////////////</span>
-
+<span class="o">//</span> <span class="n">States</span>
+    <span class="n">PRG_States</span><span class="p">();</span>
 <span class="o">//</span> <span class="n">PMPS</span>
     <span class="n">PRG_PMPS</span><span class="p">();</span>
-
-
     <span class="n">P_StripeProtections</span><span class="p">();</span>
 <span class="o">////////////////////////////////</span>
 
 <span class="o">//</span> <span class="n">Logging</span>
 <span class="n">fbLogHandler</span><span class="p">();</span>
-
-<span class="o">//</span> <span class="n">PMPS</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -1490,16 +1338,15 @@ END_VAR
 <li><p><a class="reference internal" href="#gvl-m2k4-rtd">GVL_M2K4_RTD</a></p></li>
 <li><p><a class="reference internal" href="#gvl-m3k4-constants">GVL_M3K4_Constants</a></p></li>
 <li><p><a class="reference internal" href="#gvl-m3k4-rtd">GVL_M3K4_RTD</a></p></li>
-<li><p><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></p></li>
-<li><p><a class="reference internal" href="#gvl-states">GVL_States</a></p></li>
 <li><p><a class="reference internal" href="#prg-pmps">PRG_PMPS</a></p></li>
+<li><p><a class="reference internal" href="#prg-states">PRG_States</a></p></li>
 <li><p><a class="reference internal" href="#p-stripeprotections">P_StripeProtections</a></p></li>
 </ul>
 </dd>
 </dl>
 </section>
 <section id="p-serial-com">
-<h2>P_Serial_Com<a class="headerlink" href="#p-serial-com" title="Permalink to this headline"></a></h2>
+<h2>P_Serial_Com<a class="headerlink" href="#p-serial-com" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">P_Serial_Com</span>
 <span class="n">VAR</span>
     <span class="n">fbSerialLineControl_EL6001_M1K4</span><span class="p">:</span> <span class="n">SerialLineControl</span><span class="p">;</span>
@@ -1521,7 +1368,7 @@ END_VAR
 </div>
 </section>
 <section id="p-stripeprotections">
-<h2>P_StripeProtections<a class="headerlink" href="#p-stripeprotections" title="Permalink to this headline"></a></h2>
+<h2>P_StripeProtections<a class="headerlink" href="#p-stripeprotections" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">P_StripeProtections</span>
 <span class="n">VAR</span>
 <span class="p">(</span><span class="o">*</span>
@@ -1552,7 +1399,7 @@ END_VAR
             <span class="n">nUpperCoatingBitmask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">),</span>
             <span class="n">sUpperCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">,</span>
             <span class="n">nLowerCoatingBoundary</span> <span class="o">:=</span> <span class="mi">6976835</span><span class="p">,</span>
-            <span class="n">nLowerCoatingBitMask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">),</span>
+            <span class="n">nLowerCoatingBitMask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">),</span>
             <span class="n">sLowerCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">);</span>
 <span class="p">(</span><span class="o">*</span>
 <span class="n">MR3K4</span> <span class="p">(</span><span class="n">RBV</span> <span class="o">=</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">X</span><span class="p">:</span><span class="n">CNT_RBV</span><span class="p">)</span>
@@ -1563,7 +1410,7 @@ END_VAR
     <span class="n">fbStripProtMR3K4</span> <span class="p">:</span> <span class="n">FB_MirrorTwoCoatingProtection</span> <span class="o">:=</span> <span class="p">(</span>
             <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;MR3K4&#39;</span><span class="p">,</span>
             <span class="n">nUpperCoatingBoundary</span> <span class="o">:=</span> <span class="mi">5620000</span><span class="p">,</span>
-            <span class="n">nUpperCoatingBitMask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">),</span>
+            <span class="n">nUpperCoatingBitMask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">),</span>
             <span class="n">sUpperCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
             <span class="n">nLowerCoatingBoundary</span> <span class="o">:=</span> <span class="mi">4820000</span><span class="p">,</span>
             <span class="n">nLowerCoatingBitmask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">),</span>
@@ -1593,7 +1440,7 @@ END_VAR
 </dl>
 </section>
 <section id="piezoserial">
-<h2>PiezoSerial<a class="headerlink" href="#piezoserial" title="Permalink to this headline"></a></h2>
+<h2>PiezoSerial<a class="headerlink" href="#piezoserial" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PiezoSerial</span>
 <span class="n">VAR</span>
     <span class="o">//</span><span class="n">PI</span> <span class="n">Serial</span>
@@ -1620,22 +1467,39 @@ END_VAR
 </dl>
 </section>
 <section id="prg-pmps">
-<h2>PRG_PMPS<a class="headerlink" href="#prg-pmps" title="Permalink to this headline"></a></h2>
+<h2>PRG_PMPS<a class="headerlink" href="#prg-pmps" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_PMPS</span>
 <span class="n">VAR</span>
+    <span class="n">fb_vetoArbiter</span> <span class="p">:</span> <span class="n">FB_VetoArbiter</span><span class="p">;</span>
+
+    <span class="n">fbArbiterIO</span> <span class="p">:</span> <span class="n">FB_SubSysToArbiter_IO</span><span class="p">;</span>
+
+    <span class="n">ffFFO2ToFFO1</span> <span class="p">:</span> <span class="n">FB_FastFault</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">i_xAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">i_DevName</span> <span class="o">:=</span> <span class="s1">&#39;PMPS FFO2&#39;</span><span class="p">,</span>
+        <span class="n">i_Desc</span> <span class="o">:=</span> <span class="s1">&#39;Subordinate fast fault group, will clear on its own otherwise something is misconfigured in the diagnostic&#39;</span><span class="p">,</span>
+        <span class="n">i_TypeCode</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#D);</span>
+
+    <span class="n">bMR1K1_IN</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+    <span class="n">bST3K4_IN</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 <span class="n">END_VAR</span>
-<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">bMR1K1Veto</span> <span class="o">:=</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_IN</span><span class="p">]</span>
+<span class="n">bMR1K1_IN</span> <span class="o">:=</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_IN</span><span class="p">]</span>
             <span class="n">AND</span> <span class="n">NOT</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_OUT</span><span class="p">];</span>
 
-<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">fbArbiterIO</span><span class="p">(</span><span class="n">i_bVeto</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">bMR1K1Veto</span><span class="p">,</span> <span class="n">Arbiter</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter1</span><span class="p">,</span> <span class="n">fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">);</span>
+<span class="n">bST3K4_IN</span> <span class="o">:=</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">ST3K4</span><span class="p">];</span>
 
-<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">i_xVeto</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">bMR1K1Veto</span> <span class="n">OR</span>
-                                       <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">ST3K4</span><span class="p">];</span>
+<span class="n">fbArbiterIO</span><span class="p">(</span><span class="n">i_bVeto</span><span class="o">:=</span> <span class="n">bMR1K1_IN</span><span class="p">,</span> <span class="n">Arbiter</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter1</span><span class="p">,</span> <span class="n">fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">);</span>
+
+<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">i_xVeto</span> <span class="o">:=</span> <span class="n">bMR1K1_IN</span> <span class="n">OR</span> <span class="n">bST3K4_IN</span><span class="p">;</span>
+
 <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">Execute</span><span class="p">();</span>
 
-<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">ffFFO2ToFFO1</span><span class="p">(</span><span class="n">i_xOK</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">q_xFastFaultOut</span><span class="p">,</span> <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">);</span>
+<span class="n">ffFFO2ToFFO1</span><span class="p">(</span><span class="n">i_xOK</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">q_xFastFaultOut</span><span class="p">,</span> <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">);</span>
 
-<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="o">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">i_xVeto</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">bMR1K1Veto</span> <span class="p">);</span>
+<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="o">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">i_xVeto</span><span class="o">:=</span> <span class="n">bMR1K1_IN</span><span class="p">);</span>
+
+<span class="n">fb_vetoArbiter</span><span class="p">(</span><span class="n">bVeto</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">i_xVeto</span><span class="p">,</span> <span class="n">HigherAuthority</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter1</span><span class="p">,</span> <span class="n">LowerAuthority</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter2</span><span class="p">,</span>
+    <span class="n">FFO</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">);</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -1643,6 +1507,150 @@ END_VAR
 <dl class="simple">
 <dt>Related:</dt><dd><ul class="simple">
 <li><p><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-states">
+<h2>PRG_States<a class="headerlink" href="#prg-states" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_States</span>
+<span class="n">VAR</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+     <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">COATING</span><span class="p">:</span><span class="n">STATE</span><span class="p">;</span>
+     <span class="n">io</span><span class="p">:</span> <span class="n">io</span><span class="p">;</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbMR1K4_Coating_States</span><span class="p">:</span> <span class="n">FB_Coating_States</span><span class="p">;</span>
+
+    <span class="n">MR1K4_Si</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">22000532</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mi">150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB2);</span>
+
+    <span class="n">MR1K4_B4C</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">5000141</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mi">150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB3);</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+     <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">COATING</span><span class="p">:</span><span class="n">STATE</span><span class="p">;</span>
+     <span class="n">io</span><span class="p">:</span> <span class="n">io</span><span class="p">;</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbMR2K4_Coating_States</span><span class="p">:</span> <span class="n">FB_Coating_States</span><span class="p">;</span>
+
+    <span class="n">MR2K4_Si</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">8701960</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD2);</span>
+
+    <span class="n">MR2K4_B4C</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">6636177</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD3);</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+     <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">COATING</span><span class="p">:</span><span class="n">STATE</span><span class="p">;</span>
+     <span class="n">io</span><span class="p">:</span> <span class="n">io</span><span class="p">;</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbMR3K4_Coating_States</span><span class="p">:</span> <span class="n">FB_Coating_States</span><span class="p">;</span>
+
+    <span class="n">MR3K4_Si</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">4719890</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE2);</span>
+
+    <span class="n">MR3K4_B4C</span> <span class="p">:</span> <span class="n">DUT_PositionState</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">bUseRawCounts</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bMoveOk</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">bValid</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+        <span class="n">sName</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
+        <span class="n">nEncoderCount</span> <span class="o">:=</span> <span class="mi">8220029</span><span class="p">,</span>
+        <span class="n">fDelta</span> <span class="o">:=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">0.150</span><span class="p">,</span>
+        <span class="n">stBeamParams</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span>
+        <span class="n">nRequestAssertionID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE3);</span>
+<span class="n">END_VAR</span>
+<span class="n">MR1K4_Si</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">);</span>
+<span class="n">MR1K4_B4C</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">);</span>
+
+<span class="n">MR2K4_Si</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">);</span>
+<span class="n">MR2K4_B4C</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">);</span>
+
+<span class="n">MR3K4_Si</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">);</span>
+<span class="n">MR3K4_B4C</span><span class="o">.</span><span class="n">stBeamParams</span><span class="o">.</span><span class="n">neVRange</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">);</span>
+
+<span class="o">//</span><span class="n">MR1K4</span> <span class="n">Coating</span> <span class="n">States</span> <span class="k">with</span> <span class="n">PMPS</span>
+<span class="n">fbMR1K4_Coating_States</span><span class="p">(</span>
+    <span class="n">bEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">stCoating1</span> <span class="o">:=</span> <span class="n">MR1K4_Si</span><span class="p">,</span>
+    <span class="n">stCoating2</span> <span class="o">:=</span> <span class="n">MR1K4_B4C</span><span class="p">,</span>
+    <span class="n">stMotionStage</span><span class="o">:=</span><span class="n">Main</span><span class="o">.</span><span class="n">M1</span><span class="p">,</span>
+    <span class="n">bBPOkAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">fbArbiter</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter1</span><span class="p">,</span>
+    <span class="n">fbFFHWO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span>
+    <span class="n">nTransitionAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB1,</span>
+    <span class="n">nUnknownAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAB0);</span>
+
+<span class="o">//</span> <span class="n">MR2K4</span> <span class="n">Coating</span> <span class="n">States</span> <span class="k">with</span> <span class="n">PMPS</span>
+<span class="n">fbMR2K4_Coating_States</span><span class="p">(</span>
+    <span class="n">bEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">stCoating1</span> <span class="o">:=</span> <span class="n">MR2K4_Si</span><span class="p">,</span>
+    <span class="n">stCoating2</span> <span class="o">:=</span> <span class="n">MR2K4_B4C</span><span class="p">,</span>
+    <span class="n">stMotionStage</span><span class="o">:=</span><span class="n">Main</span><span class="o">.</span><span class="n">M8</span><span class="p">,</span>
+    <span class="n">bBPOkAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">fbArbiter</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter2</span><span class="p">,</span>
+    <span class="n">fbFFHWO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
+    <span class="n">nTransitionAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD1,</span>
+    <span class="n">nUnknownAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#DAD0);</span>
+
+<span class="o">//</span> <span class="n">MR3K4</span> <span class="n">Coating</span> <span class="n">States</span> <span class="k">with</span> <span class="n">PMPS</span>
+<span class="n">fbMR3K4_Coating_States</span><span class="p">(</span>
+    <span class="n">bEnable</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">stCoating1</span> <span class="o">:=</span> <span class="n">MR3K4_Si</span><span class="p">,</span>
+    <span class="n">stCoating2</span> <span class="o">:=</span> <span class="n">MR3K4_B4C</span><span class="p">,</span>
+    <span class="n">stMotionStage</span><span class="o">:=</span><span class="n">Main</span><span class="o">.</span><span class="n">M12</span><span class="p">,</span>
+    <span class="n">bBPOkAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">fbArbiter</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_fbArbiter2</span><span class="p">,</span>
+    <span class="n">fbFFHWO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
+    <span class="n">nTransitionAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE1,</span>
+    <span class="n">nUnknownAssertionID</span><span class="o">:=</span> <span class="mi">16</span><span class="c1">#ACE0);</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#fb-coating-states">FB_Coating_States</a></p></li>
+<li><p><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></p></li>
+<li><p><a class="reference internal" href="#main">Main</a></p></li>
 </ul>
 </dd>
 </dl>

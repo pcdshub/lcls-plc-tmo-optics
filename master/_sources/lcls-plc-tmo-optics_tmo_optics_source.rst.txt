@@ -206,17 +206,6 @@ GVL_PMPS
     		pv: PLC:TMO:OPTICS:ARB:02
     	'}
     	g_fbArbiter2 : FB_Arbiter(2);
-        
-        //PMPS
-        fbArbiterIO : FB_SubSysToArbiter_IO;
-
-        ffFFO2ToFFO1 : FB_FastFault := (
-            i_xAutoReset := TRUE,
-            i_DevName := 'PMPS FFO2',
-            i_Desc := 'Subordinate fast fault group, will clear on its own otherwise something is misconfigured in the diagnostic',
-            i_TypeCode := 16#D);
-        
-    bMR1K1Veto : BOOL;
     END_VAR
 
 
@@ -235,103 +224,6 @@ GVL_SerialIO
     END_VAR
 
 
-
-
-GVL_States
-^^^^^^^^^^
-
-::
-
-    {attribute 'qualified_only'}
-    VAR_GLOBAL
-            
-        {attribute 'pytmc' := '
-         pv: MR1K4:SOMS:COATING:STATE;
-         io: io;
-        '}
-        fbMR1K4_Coating_States: FB_Coating_States; 
-        
-        MR1K4_SiC : DUT_PositionState := (
-            bUseRawCounts := TRUE,
-            bMoveOk := TRUE,
-            bValid := TRUE,
-            sName := 'Si',  
-            nEncoderCount := 22000532,
-            fDelta := 100,
-            fVelocity := 150,
-            stBeamParams := PMPS_GVL.cstFullBeam,
-            nRequestAssertionID := 16#DAB2);
-            
-        MR1K4_B4C : DUT_PositionState := (
-            bUseRawCounts := TRUE,
-            bMoveOk := TRUE,
-            bValid := TRUE,
-            sName := 'B4C',  
-            nEncoderCount := 5000141,
-            fDelta := 100,
-            fVelocity := 150,
-            stBeamParams := PMPS_GVL.cstFullBeam,
-            nRequestAssertionID := 16#DAB3);
-                
-        {attribute 'pytmc' := '
-         pv: MR2K4:KBO:COATING:STATE;
-         io: io;
-        '}
-        fbMR2K4_Coating_States: FB_Coating_States; 
-        
-        MR2K4_SiC : DUT_PositionState := (
-            bUseRawCounts := TRUE,
-            bMoveOk := TRUE,
-            bValid := TRUE,
-            sName := 'SiC',  
-            nEncoderCount := 8701960,
-            fDelta := 1,
-            fVelocity := 0.150,
-            stBeamParams := PMPS_GVL.cstFullBeam,
-            nRequestAssertionID := 16#DAD2);
-            
-        MR2K4_B4C : DUT_PositionState := (
-            bUseRawCounts := TRUE,
-            bMoveOk := TRUE,
-            bValid := TRUE,
-            sName := 'B4C',  
-            nEncoderCount := 6636177,
-            fDelta := 1,
-            fVelocity := 0.150,
-            stBeamParams := PMPS_GVL.cstFullBeam,
-            nRequestAssertionID := 16#DAD3);
-        {attribute 'pytmc' := '
-         pv: MR3K4:KBO:COATING:STATE;
-         io: io;
-        '}
-        fbMR3K4_Coating_States: FB_Coating_States; 
-        
-        MR3K4_SiC : DUT_PositionState := (
-            bUseRawCounts := TRUE,
-            bMoveOk := TRUE,
-            bValid := TRUE,
-            sName := 'SiC',  
-            nEncoderCount := 4719890,
-            fDelta := 1,
-            fVelocity := 0.150,
-            stBeamParams := PMPS_GVL.cstFullBeam,
-            nRequestAssertionID := 16#ACE2);
-            
-        MR3K4_B4C : DUT_PositionState := (
-            bUseRawCounts := TRUE,
-            bMoveOk := TRUE,
-            bValid := TRUE,
-            sName := 'B4C',  
-            nEncoderCount := 8220029,
-            fDelta := 1,
-            fVelocity := 0.150,
-            stBeamParams := PMPS_GVL.cstFullBeam,
-            nRequestAssertionID := 16#ACE3);
-    END_VAR
-
-
-Related:
-    * `FB_Coating_States`_
 
 
 POUs
@@ -397,7 +289,8 @@ Main
     		{attribute 'pytmc' := '
     			pv: MR1K4:SOMS:MMS:YUP
     		'}
-    		M1 : DUT_MotionStage := (fVelocity:=200.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // M1K4 Yup
+            //PMPS State Stage; bPowerSelf:=False
+    		M1 : DUT_MotionStage := (sName:='MR1K4-Coatings', fVelocity:=200.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=FALSE); // M1K4 Yup
     		fbMotionStage_m1 : FB_MotionStage;
     	
     		{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Ydwn]^STM Status^Status^Digital input 1;
@@ -574,7 +467,8 @@ Main
     		{attribute 'pytmc' := '
     		pv: MR2K4:KBO:MMS:Y
     		'}
-    		M8 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+            //PMPS State Stage; bPowerSelf:=False
+    		M8 : DUT_MotionStage := (sName:='MR2K4-Coatings', nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=FALSE);
     		fbMotionStage_m8 : FB_MotionStage;
     	//MR2K4 rY
     		{attribute 'TcLinkTo' := '.bLimitForwardEnable :=TIIB[EL7041-0052_M2K4rY]^STM Status^Status^Digital input 1;
@@ -610,7 +504,8 @@ Main
     		{attribute 'pytmc' := '
     		pv: MR3K4:KBO:MMS:X
     		'}
-    		M12 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+            //PMPS State Stage; bPowerSelf:=False
+    		M12 : DUT_MotionStage := (sName:='MR3K4-Coatings', nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=FALSE);
     		fbMotionStage_m12 : FB_MotionStage;
     	//MR3K4 Y
     		{attribute 'TcLinkTo' := '.bLimitForwardEnable :=TIIB[EL7041-0052_M3K4Y]^STM Status^Status^Digital input 1;
@@ -1359,64 +1254,16 @@ Main
     		M11.bHardwareEnable R= fM2K4DS_RTD_1 > 1000 OR bM2K4DS_RTD_1_Err;
     		M15.bHardwareEnable R= fM3K4US_RTD_1 > 1000 OR bM3K4US_RTD_1_Err;
     		M16.bHardwareEnable R= fM3K4DS_RTD_1 > 1000 OR bM3K4DS_RTD_1_Err;
-        // State Movers with PMPS
-            GVL_States.MR1K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-            GVL_States.MR1K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
-          (*  GVL_States.MR2K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-            GVL_States.MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);
-            GVL_States.MR3K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-            GVL_States.MR3K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);  *)
-        //MR1K4 Coating States with PMPS
-        M1.bPowerSelf := False;
-        GVL_States.fbMR1K4_Coating_States(
-            bEnable := TRUE,
-            stCoating1 := GVL_States.MR1K4_SiC,
-            stCoating2 := GVL_States.MR1K4_B4C,  
-    	    stMotionStage:=M1,
-            bBPOkAutoReset := TRUE,
-            fbArbiter:=GVL_PMPS.g_fbArbiter1,
-            fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
-            nTransitionAssertionID:= 16#DAB1, 
-    	    nUnknownAssertionID:= 16#DAB0);
-        
-        (*   MR2K4 Coating States with PMPS
-        M8.bPowerSelf := False;    
-        GVL_States.fbMR2K4_Coating_States(
-            bEnable := TRUE,
-            stCoating1 := GVL_States.MR2K4_SiC,
-            stCoating2 := GVL_States.MR2K4_B4C,  
-    	    stMotionStage:=M8,
-            bBPOkAutoReset := TRUE,
-            fbArbiter:=GVL_PMPS.g_fbArbiter2,
-            fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
-            nTransitionAssertionID:= 16#DAD1, 
-    	    nUnknownAssertionID:= 16#DAD0);
-        
-        MR3K4 Coating States with PMPS
-        M12.bPowerSelf := False;        
-        GVL_States.fbMR3K4_Coating_States(
-            bEnable := TRUE,
-            stCoating1 := GVL_States.MR3K4_SiC,
-            stCoating2 := GVL_States.MR3K4_B4C,  
-    	    stMotionStage:=M12,
-            bBPOkAutoReset := TRUE,
-            fbArbiter:=GVL_PMPS.g_fbArbiter2,
-            fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
-            nTransitionAssertionID:= 16#ACE1, 
-    	    nUnknownAssertionID:= 16#ACE0);   *)
-    ///////////////////////////////////////////////////
 
+    // States
+        PRG_States();
     // PMPS
         PRG_PMPS();	
-
-    	
-    	P_StripeProtections();
+        P_StripeProtections();
     ////////////////////////////////
 
     // Logging
     fbLogHandler();
-
-    // PMPS
 
     END_PROGRAM
 
@@ -1428,9 +1275,8 @@ Related:
     * `GVL_M2K4_RTD`_
     * `GVL_M3K4_Constants`_
     * `GVL_M3K4_RTD`_
-    * `GVL_PMPS`_
-    * `GVL_States`_
     * `PRG_PMPS`_
+    * `PRG_States`_
     * `P_StripeProtections`_
 
 
@@ -1495,7 +1341,7 @@ P_StripeProtections
     		nUpperCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
     		sUpperCoatingType := 'Si',
     		nLowerCoatingBoundary := 6976835,
-    		nLowerCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
+    		nLowerCoatingBitMask := F_eVExcludeRange(2.3E3, 7E3),
     		sLowerCoatingType := 'B4C');
     (*
     MR3K4 (RBV = MR3K4:KBO:ENC:X:CNT_RBV)
@@ -1506,7 +1352,7 @@ P_StripeProtections
     	fbStripProtMR3K4 : FB_MirrorTwoCoatingProtection := (
     		sDevName := 'MR3K4',
     		nUpperCoatingBoundary := 5620000,
-    		nUpperCoatingBitMask := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3),
+    		nUpperCoatingBitMask := F_eVExcludeRange(2.3E3, 7E3),
     		sUpperCoatingType := 'B4C',
     		nLowerCoatingBoundary := 4820000,
     		nLowerCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
@@ -1566,23 +1412,184 @@ PRG_PMPS
 
     PROGRAM PRG_PMPS
     VAR
-    END_VAR
-    GVL_PMPS.bMR1K1Veto := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN] 
-                AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT];
-    			
-    GVL_PMPS.fbArbiterIO(i_bVeto:= GVL_PMPS.bMR1K1Veto, Arbiter := GVL_PMPS.g_fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
+        fb_vetoArbiter : FB_VetoArbiter;
+        
+        fbArbiterIO : FB_SubSysToArbiter_IO;
 
-    GVL_PMPS.g_FastFaultOutput2.i_xVeto := GVL_PMPS.bMR1K1Veto OR
-                                           PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST3K4];
+        ffFFO2ToFFO1 : FB_FastFault := (
+            i_xAutoReset := TRUE,
+            i_DevName := 'PMPS FFO2',
+            i_Desc := 'Subordinate fast fault group, will clear on its own otherwise something is misconfigured in the diagnostic',
+            i_TypeCode := 16#D);
+        
+        bMR1K1_IN : BOOL;
+        bST3K4_IN : BOOL;
+    END_VAR
+    bMR1K1_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN] 
+                AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT];
+
+    bST3K4_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST3K4];
+    			
+    fbArbiterIO(i_bVeto:= bMR1K1_IN, Arbiter := GVL_PMPS.g_fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
+
+    GVL_PMPS.g_FastFaultOutput2.i_xVeto := bMR1K1_IN OR bST3K4_IN;
+
     GVL_PMPS.g_FastFaultOutput2.Execute();
 
-    GVL_PMPS.ffFFO2ToFFO1(i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
+    ffFFO2ToFFO1(i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
 
-    GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto:= GVL_PMPS.bMR1K1Veto );
+    GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto:= bMR1K1_IN);
+
+    fb_vetoArbiter(bVeto := GVL_PMPS.g_FastFaultOutput2.i_xVeto, HigherAuthority := GVL_PMPS.g_fbArbiter1, LowerAuthority:= GVL_PMPS.g_fbArbiter2,
+        FFO:= GVL_PMPS.g_FastFaultOutput1);
 
     END_PROGRAM
 
 
 Related:
     * `GVL_PMPS`_
+
+
+PRG_States
+^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_States
+    VAR
+        {attribute 'pytmc' := '
+         pv: MR1K4:SOMS:COATING:STATE;
+         io: io;
+        '}
+        fbMR1K4_Coating_States: FB_Coating_States; 
+        
+        MR1K4_Si : DUT_PositionState := (
+            bUseRawCounts := TRUE,
+            bMoveOk := TRUE,
+            bValid := TRUE,
+            sName := 'Si',  
+            nEncoderCount := 22000532,
+            fDelta := 100,
+            fVelocity := 150,
+            stBeamParams := PMPS_GVL.cstFullBeam,
+            nRequestAssertionID := 16#DAB2);
+            
+        MR1K4_B4C : DUT_PositionState := (
+            bUseRawCounts := TRUE,
+            bMoveOk := TRUE,
+            bValid := TRUE,
+            sName := 'B4C',  
+            nEncoderCount := 5000141,
+            fDelta := 100,
+            fVelocity := 150,
+            stBeamParams := PMPS_GVL.cstFullBeam,
+            nRequestAssertionID := 16#DAB3);
+                
+        {attribute 'pytmc' := '
+         pv: MR2K4:KBO:COATING:STATE;
+         io: io;
+        '}
+        fbMR2K4_Coating_States: FB_Coating_States; 
+        
+        MR2K4_Si : DUT_PositionState := (
+            bUseRawCounts := TRUE,
+            bMoveOk := TRUE,
+            bValid := TRUE,
+            sName := 'Si',  
+            nEncoderCount := 8701960,
+            fDelta := 0.1,
+            fVelocity := 0.150,
+            stBeamParams := PMPS_GVL.cstFullBeam,
+            nRequestAssertionID := 16#DAD2);
+            
+        MR2K4_B4C : DUT_PositionState := (
+            bUseRawCounts := TRUE,
+            bMoveOk := TRUE,
+            bValid := TRUE,
+            sName := 'B4C',  
+            nEncoderCount := 6636177,
+            fDelta := 0.1,
+            fVelocity := 0.150,
+            stBeamParams := PMPS_GVL.cstFullBeam,
+            nRequestAssertionID := 16#DAD3);
+        {attribute 'pytmc' := '
+         pv: MR3K4:KBO:COATING:STATE;
+         io: io;
+        '}
+        fbMR3K4_Coating_States: FB_Coating_States; 
+        
+        MR3K4_Si : DUT_PositionState := (
+            bUseRawCounts := TRUE,
+            bMoveOk := TRUE,
+            bValid := TRUE,
+            sName := 'Si',  
+            nEncoderCount := 4719890,
+            fDelta := 0.1,
+            fVelocity := 0.150,
+            stBeamParams := PMPS_GVL.cstFullBeam,
+            nRequestAssertionID := 16#ACE2);
+            
+        MR3K4_B4C : DUT_PositionState := (
+            bUseRawCounts := TRUE,
+            bMoveOk := TRUE,
+            bValid := TRUE,
+            sName := 'B4C',  
+            nEncoderCount := 8220029,
+            fDelta := 0.1,
+            fVelocity := 0.150,
+            stBeamParams := PMPS_GVL.cstFullBeam,
+            nRequestAssertionID := 16#ACE3);
+    END_VAR
+    MR1K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+    MR1K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
+
+    MR2K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+    MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
+
+    MR3K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+    MR3K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
+        
+    //MR1K4 Coating States with PMPS
+    fbMR1K4_Coating_States(
+        bEnable := TRUE,
+        stCoating1 := MR1K4_Si,
+        stCoating2 := MR1K4_B4C,  
+    	stMotionStage:=Main.M1,
+        bBPOkAutoReset := TRUE,
+        fbArbiter:=GVL_PMPS.g_fbArbiter1,
+        fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
+        nTransitionAssertionID:= 16#DAB1, 
+    	nUnknownAssertionID:= 16#DAB0);
+        
+    // MR2K4 Coating States with PMPS
+    fbMR2K4_Coating_States(
+        bEnable := TRUE,
+        stCoating1 := MR2K4_Si,
+        stCoating2 := MR2K4_B4C,  
+    	stMotionStage:=Main.M8,
+        bBPOkAutoReset := TRUE,
+        fbArbiter:=GVL_PMPS.g_fbArbiter2,
+        fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
+        nTransitionAssertionID:= 16#DAD1, 
+    	nUnknownAssertionID:= 16#DAD0);
+
+    // MR3K4 Coating States with PMPS       
+    fbMR3K4_Coating_States(
+        bEnable := TRUE,
+        stCoating1 := MR3K4_Si,
+        stCoating2 := MR3K4_B4C,  
+    	stMotionStage:=Main.M12,
+        bBPOkAutoReset := TRUE,
+        fbArbiter:=GVL_PMPS.g_fbArbiter2,
+        fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
+        nTransitionAssertionID:= 16#ACE1, 
+    	nUnknownAssertionID:= 16#ACE0);
+
+    END_PROGRAM
+
+
+Related:
+    * `FB_Coating_States`_
+    * `GVL_PMPS`_
+    * `Main`_
 

@@ -1127,6 +1127,102 @@ FB_Coating_States
 
 
   
+LCLS_General.FB_BasicStats
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):STATS:ALWAYS_CALC
+      - bo
+      - $(SYMBOL).bAlwaysCalc
+      - | io: output
+
+
+    * - $(PREFIX):STATS:ALWAYS_CALC_RBV
+      - bi
+      - $(SYMBOL).bAlwaysCalc
+      - | io: output
+
+
+    * - $(PREFIX):STATS:DATA_RBV
+      - ai
+      - $(SYMBOL).aSignal
+      - | io: input
+
+
+    * - $(PREFIX):STATS:EXECUTE
+      - bo
+      - $(SYMBOL).bExecute
+      - | io: output
+
+
+    * - $(PREFIX):STATS:EXECUTE_RBV
+      - bi
+      - $(SYMBOL).bExecute
+      - | io: output
+
+
+    * - $(PREFIX):STATS:MAX_RBV
+      - ai
+      - $(SYMBOL).fMax
+      - | io: input
+
+
+    * - $(PREFIX):STATS:MEAN_RBV
+      - ai
+      - $(SYMBOL).fMean
+      - | io: input
+
+
+    * - $(PREFIX):STATS:MIN_RBV
+      - ai
+      - $(SYMBOL).fMin
+      - | io: input
+
+
+    * - $(PREFIX):STATS:NELM_RBV
+      - longin
+      - $(SYMBOL).nElems
+      - | io: input
+
+
+    * - $(PREFIX):STATS:RANGE_RBV
+      - ai
+      - $(SYMBOL).fRange
+      - | io: input
+
+
+    * - $(PREFIX):STATS:RESET
+      - bo
+      - $(SYMBOL).bReset
+      - | io: output
+
+
+    * - $(PREFIX):STATS:RESET_RBV
+      - bi
+      - $(SYMBOL).bReset
+      - | io: output
+
+
+    * - $(PREFIX):STATS:STDEV_RBV
+      - ai
+      - $(SYMBOL).fStDev
+      - | io: input
+
+
+    * - $(PREFIX):STATS:VALID_RBV
+      - bi
+      - $(SYMBOL).bValid
+      - | io: input
+
+
+     
 LCLS_General.FB_Listener
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1964,7 +2060,7 @@ LCLS_General.FB_LogMessage
       - | io: input
 
 
- 
+  
 LCLS_General.ST_PendingEvent
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -4953,133 +5049,7 @@ lcls_twincat_motion.FB_PositionStatePMPS_Base
       - | io: output
 
 
-       
-lcls_twincat_motion.LCLS_General.FB_BasicStats
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. list-table::
-    :header-rows: 1
-    :align: center
-
-    * - Record
-      - Type
-      - Description
-      - Pragma
-    * - $(PREFIX):STATS:ALWAYS_CALC
-      - bo
-      - $(SYMBOL).bAlwaysCalc
-      - | io: output
-
-
-    * - $(PREFIX):STATS:ALWAYS_CALC_RBV
-      - bi
-      - $(SYMBOL).bAlwaysCalc
-      - | io: output
-
-
-    * - $(PREFIX):STATS:DATA_RBV
-      - ai
-      - $(SYMBOL).aSignal
-      - | io: input
-
-
-    * - $(PREFIX):STATS:EXECUTE
-      - bo
-      - $(SYMBOL).bExecute
-      - | io: output
-
-
-    * - $(PREFIX):STATS:EXECUTE_RBV
-      - bi
-      - $(SYMBOL).bExecute
-      - | io: output
-
-
-    * - $(PREFIX):STATS:MAX_RBV
-      - ai
-      - $(SYMBOL).fMax
-      - | io: input
-
-
-    * - $(PREFIX):STATS:MEAN_RBV
-      - ai
-      - $(SYMBOL).fMean
-      - | io: input
-
-
-    * - $(PREFIX):STATS:MIN_RBV
-      - ai
-      - $(SYMBOL).fMin
-      - | io: input
-
-
-    * - $(PREFIX):STATS:NELM_RBV
-      - longin
-      - $(SYMBOL).nElems
-      - | io: input
-
-
-    * - $(PREFIX):STATS:RANGE_RBV
-      - ai
-      - $(SYMBOL).fRange
-      - | io: input
-
-
-    * - $(PREFIX):STATS:RESET
-      - bo
-      - $(SYMBOL).bReset
-      - | io: output
-
-
-    * - $(PREFIX):STATS:RESET_RBV
-      - bi
-      - $(SYMBOL).bReset
-      - | io: output
-
-
-    * - $(PREFIX):STATS:STDEV_RBV
-      - ai
-      - $(SYMBOL).fStDev
-      - | io: input
-
-
-    * - $(PREFIX):STATS:VALID_RBV
-      - bi
-      - $(SYMBOL).bValid
-      - | io: input
-
-
-   
-lcls_twincat_motion.LCLS_General.FB_LogMessage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. list-table::
-    :header-rows: 1
-    :align: center
-
-    * - Record
-      - Type
-      - Description
-      - Pragma
-    * - $(PREFIX):Reset
-      - bo
-      - Rising-edge reset of trip
-      - | io: output
-
-
-    * - $(PREFIX):Reset_RBV
-      - bi
-      - Rising-edge reset of trip
-      - | io: output
-
-
-    * - $(PREFIX):Tripped_RBV
-      - bi
-      - Log message FB tripped
-      - | io: input
-
-
-                              
+                                  
 lcls_twincat_optics.DUT_HOMS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -15445,25 +15415,7 @@ Database Records
       - | io: input
 
 
-    * - $(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV
-      - bi
-      - Tripped by overall log count
-      - | io: input
-
-
     * - $(PREFIX)LCLSGeneral:LogHost
-      - waveform
-      - The log host IP address
-      - | io: output
-
-
-    * - $(PREFIX)LCLSGeneral:LogHost
-      - waveform
-      - The log host IP address
-      - | io: output
-
-
-    * - $(PREFIX)LCLSGeneral:LogHost_RBV
       - waveform
       - The log host IP address
       - | io: output
@@ -15481,26 +15433,8 @@ Database Records
       - | io: input
 
 
-    * - $(PREFIX)LCLSGeneral:LogMessageCount_RBV
-      - longin
-      - Total log messages on the last cycle
-      - | io: input
-
-
     * - $(PREFIX)LCLSGeneral:LogPort
       - longout
-      - The log host UDP port
-      - | io: output
-
-
-    * - $(PREFIX)LCLSGeneral:LogPort
-      - longout
-      - The log host UDP port
-      - | io: output
-
-
-    * - $(PREFIX)LCLSGeneral:LogPort_RBV
-      - longin
       - The log host UDP port
       - | io: output
 
@@ -16644,7 +16578,7 @@ Database Records
 
     * - MR1K4:SOMS:COATING:STATE:BUSY_RBV
       - bi
-      - GVL_States.fbMR1K4_Coating_States.bBusy
+      - PRG_States.fbMR1K4_Coating_States.bBusy
       - | field: ONAM True
         | field: ZNAM False
         | io: input
@@ -16652,7 +16586,7 @@ Database Records
 
     * - MR1K4:SOMS:COATING:STATE:DONE_RBV
       - bi
-      - GVL_States.fbMR1K4_Coating_States.bDone
+      - PRG_States.fbMR1K4_Coating_States.bDone
       - | field: ONAM True
         | field: ZNAM False
         | io: input
@@ -16660,7 +16594,7 @@ Database Records
 
     * - MR1K4:SOMS:COATING:STATE:ERR_RBV
       - bi
-      - GVL_States.fbMR1K4_Coating_States.bError
+      - PRG_States.fbMR1K4_Coating_States.bError
       - | field: ONAM True
         | field: ZNAM False
         | io: input
@@ -16668,49 +16602,49 @@ Database Records
 
     * - MR1K4:SOMS:COATING:STATE:ERRID_RBV
       - longin
-      - GVL_States.fbMR1K4_Coating_States.nErrorId
+      - PRG_States.fbMR1K4_Coating_States.nErrorId
       - | io: input
 
 
     * - MR1K4:SOMS:COATING:STATE:ERRMSG_RBV
       - waveform
-      - GVL_States.fbMR1K4_Coating_States.sErrorMessage
+      - PRG_States.fbMR1K4_Coating_States.sErrorMessage
       - | io: input
 
 
     * - MR1K4:SOMS:COATING:STATE:GET_RBV
       - mbbi
-      - GVL_States.fbMR1K4_Coating_States.enumGet
+      - PRG_States.fbMR1K4_Coating_States.enumGet
       - | io: input
 
 
     * - MR1K4:SOMS:COATING:STATE:PMPS:ARB:ENABLE
       - bo
-      - GVL_States.fbMR1K4_Coating_States.bArbiterEnabled
+      - PRG_States.fbMR1K4_Coating_States.bArbiterEnabled
       - | io: output
 
 
     * - MR1K4:SOMS:COATING:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - GVL_States.fbMR1K4_Coating_States.bArbiterEnabled
+      - PRG_States.fbMR1K4_Coating_States.bArbiterEnabled
       - | io: output
 
 
     * - MR1K4:SOMS:COATING:STATE:PMPS:MAINT
       - bo
-      - GVL_States.fbMR1K4_Coating_States.fbStatePMPS.bMaintMode
+      - PRG_States.fbMR1K4_Coating_States.fbStatePMPS.bMaintMode
       - | io: output
 
 
     * - MR1K4:SOMS:COATING:STATE:PMPS:MAINT_RBV
       - bi
-      - GVL_States.fbMR1K4_Coating_States.fbStatePMPS.bMaintMode
+      - PRG_States.fbMR1K4_Coating_States.fbStatePMPS.bMaintMode
       - | io: output
 
 
     * - MR1K4:SOMS:COATING:STATE:RESET
       - bo
-      - GVL_States.fbMR1K4_Coating_States.bReset
+      - PRG_States.fbMR1K4_Coating_States.bReset
       - | field: ONAM True
         | field: ZNAM False
         | io: output
@@ -16718,7 +16652,7 @@ Database Records
 
     * - MR1K4:SOMS:COATING:STATE:RESET_RBV
       - bi
-      - GVL_States.fbMR1K4_Coating_States.bReset
+      - PRG_States.fbMR1K4_Coating_States.bReset
       - | field: ONAM True
         | field: ZNAM False
         | io: output
@@ -16726,13 +16660,13 @@ Database Records
 
     * - MR1K4:SOMS:COATING:STATE:SET
       - mbbo
-      - GVL_States.fbMR1K4_Coating_States.enumSet
+      - PRG_States.fbMR1K4_Coating_States.enumSet
       - | io: output
 
 
     * - MR1K4:SOMS:COATING:STATE:SET_RBV
       - mbbi
-      - GVL_States.fbMR1K4_Coating_States.enumSet
+      - PRG_States.fbMR1K4_Coating_States.enumSet
       - | io: output
 
 
@@ -20233,7 +20167,7 @@ Database Records
 
     * - MR2K4:KBO:COATING:STATE:BUSY_RBV
       - bi
-      - GVL_States.fbMR2K4_Coating_States.bBusy
+      - PRG_States.fbMR2K4_Coating_States.bBusy
       - | field: ONAM True
         | field: ZNAM False
         | io: input
@@ -20241,7 +20175,7 @@ Database Records
 
     * - MR2K4:KBO:COATING:STATE:DONE_RBV
       - bi
-      - GVL_States.fbMR2K4_Coating_States.bDone
+      - PRG_States.fbMR2K4_Coating_States.bDone
       - | field: ONAM True
         | field: ZNAM False
         | io: input
@@ -20249,7 +20183,7 @@ Database Records
 
     * - MR2K4:KBO:COATING:STATE:ERR_RBV
       - bi
-      - GVL_States.fbMR2K4_Coating_States.bError
+      - PRG_States.fbMR2K4_Coating_States.bError
       - | field: ONAM True
         | field: ZNAM False
         | io: input
@@ -20257,49 +20191,49 @@ Database Records
 
     * - MR2K4:KBO:COATING:STATE:ERRID_RBV
       - longin
-      - GVL_States.fbMR2K4_Coating_States.nErrorId
+      - PRG_States.fbMR2K4_Coating_States.nErrorId
       - | io: input
 
 
     * - MR2K4:KBO:COATING:STATE:ERRMSG_RBV
       - waveform
-      - GVL_States.fbMR2K4_Coating_States.sErrorMessage
+      - PRG_States.fbMR2K4_Coating_States.sErrorMessage
       - | io: input
 
 
     * - MR2K4:KBO:COATING:STATE:GET_RBV
       - mbbi
-      - GVL_States.fbMR2K4_Coating_States.enumGet
+      - PRG_States.fbMR2K4_Coating_States.enumGet
       - | io: input
 
 
     * - MR2K4:KBO:COATING:STATE:PMPS:ARB:ENABLE
       - bo
-      - GVL_States.fbMR2K4_Coating_States.bArbiterEnabled
+      - PRG_States.fbMR2K4_Coating_States.bArbiterEnabled
       - | io: output
 
 
     * - MR2K4:KBO:COATING:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - GVL_States.fbMR2K4_Coating_States.bArbiterEnabled
+      - PRG_States.fbMR2K4_Coating_States.bArbiterEnabled
       - | io: output
 
 
     * - MR2K4:KBO:COATING:STATE:PMPS:MAINT
       - bo
-      - GVL_States.fbMR2K4_Coating_States.fbStatePMPS.bMaintMode
+      - PRG_States.fbMR2K4_Coating_States.fbStatePMPS.bMaintMode
       - | io: output
 
 
     * - MR2K4:KBO:COATING:STATE:PMPS:MAINT_RBV
       - bi
-      - GVL_States.fbMR2K4_Coating_States.fbStatePMPS.bMaintMode
+      - PRG_States.fbMR2K4_Coating_States.fbStatePMPS.bMaintMode
       - | io: output
 
 
     * - MR2K4:KBO:COATING:STATE:RESET
       - bo
-      - GVL_States.fbMR2K4_Coating_States.bReset
+      - PRG_States.fbMR2K4_Coating_States.bReset
       - | field: ONAM True
         | field: ZNAM False
         | io: output
@@ -20307,7 +20241,7 @@ Database Records
 
     * - MR2K4:KBO:COATING:STATE:RESET_RBV
       - bi
-      - GVL_States.fbMR2K4_Coating_States.bReset
+      - PRG_States.fbMR2K4_Coating_States.bReset
       - | field: ONAM True
         | field: ZNAM False
         | io: output
@@ -20315,13 +20249,13 @@ Database Records
 
     * - MR2K4:KBO:COATING:STATE:SET
       - mbbo
-      - GVL_States.fbMR2K4_Coating_States.enumSet
+      - PRG_States.fbMR2K4_Coating_States.enumSet
       - | io: output
 
 
     * - MR2K4:KBO:COATING:STATE:SET_RBV
       - mbbi
-      - GVL_States.fbMR2K4_Coating_States.enumSet
+      - PRG_States.fbMR2K4_Coating_States.enumSet
       - | io: output
 
 
@@ -23468,7 +23402,7 @@ Database Records
 
     * - MR3K4:KBO:COATING:STATE:BUSY_RBV
       - bi
-      - GVL_States.fbMR3K4_Coating_States.bBusy
+      - PRG_States.fbMR3K4_Coating_States.bBusy
       - | field: ONAM True
         | field: ZNAM False
         | io: input
@@ -23476,7 +23410,7 @@ Database Records
 
     * - MR3K4:KBO:COATING:STATE:DONE_RBV
       - bi
-      - GVL_States.fbMR3K4_Coating_States.bDone
+      - PRG_States.fbMR3K4_Coating_States.bDone
       - | field: ONAM True
         | field: ZNAM False
         | io: input
@@ -23484,7 +23418,7 @@ Database Records
 
     * - MR3K4:KBO:COATING:STATE:ERR_RBV
       - bi
-      - GVL_States.fbMR3K4_Coating_States.bError
+      - PRG_States.fbMR3K4_Coating_States.bError
       - | field: ONAM True
         | field: ZNAM False
         | io: input
@@ -23492,49 +23426,49 @@ Database Records
 
     * - MR3K4:KBO:COATING:STATE:ERRID_RBV
       - longin
-      - GVL_States.fbMR3K4_Coating_States.nErrorId
+      - PRG_States.fbMR3K4_Coating_States.nErrorId
       - | io: input
 
 
     * - MR3K4:KBO:COATING:STATE:ERRMSG_RBV
       - waveform
-      - GVL_States.fbMR3K4_Coating_States.sErrorMessage
+      - PRG_States.fbMR3K4_Coating_States.sErrorMessage
       - | io: input
 
 
     * - MR3K4:KBO:COATING:STATE:GET_RBV
       - mbbi
-      - GVL_States.fbMR3K4_Coating_States.enumGet
+      - PRG_States.fbMR3K4_Coating_States.enumGet
       - | io: input
 
 
     * - MR3K4:KBO:COATING:STATE:PMPS:ARB:ENABLE
       - bo
-      - GVL_States.fbMR3K4_Coating_States.bArbiterEnabled
+      - PRG_States.fbMR3K4_Coating_States.bArbiterEnabled
       - | io: output
 
 
     * - MR3K4:KBO:COATING:STATE:PMPS:ARB:ENABLE_RBV
       - bi
-      - GVL_States.fbMR3K4_Coating_States.bArbiterEnabled
+      - PRG_States.fbMR3K4_Coating_States.bArbiterEnabled
       - | io: output
 
 
     * - MR3K4:KBO:COATING:STATE:PMPS:MAINT
       - bo
-      - GVL_States.fbMR3K4_Coating_States.fbStatePMPS.bMaintMode
+      - PRG_States.fbMR3K4_Coating_States.fbStatePMPS.bMaintMode
       - | io: output
 
 
     * - MR3K4:KBO:COATING:STATE:PMPS:MAINT_RBV
       - bi
-      - GVL_States.fbMR3K4_Coating_States.fbStatePMPS.bMaintMode
+      - PRG_States.fbMR3K4_Coating_States.fbStatePMPS.bMaintMode
       - | io: output
 
 
     * - MR3K4:KBO:COATING:STATE:RESET
       - bo
-      - GVL_States.fbMR3K4_Coating_States.bReset
+      - PRG_States.fbMR3K4_Coating_States.bReset
       - | field: ONAM True
         | field: ZNAM False
         | io: output
@@ -23542,7 +23476,7 @@ Database Records
 
     * - MR3K4:KBO:COATING:STATE:RESET_RBV
       - bi
-      - GVL_States.fbMR3K4_Coating_States.bReset
+      - PRG_States.fbMR3K4_Coating_States.bReset
       - | field: ONAM True
         | field: ZNAM False
         | io: output
@@ -23550,13 +23484,13 @@ Database Records
 
     * - MR3K4:KBO:COATING:STATE:SET
       - mbbo
-      - GVL_States.fbMR3K4_Coating_States.enumSet
+      - PRG_States.fbMR3K4_Coating_States.enumSet
       - | io: output
 
 
     * - MR3K4:KBO:COATING:STATE:SET_RBV
       - mbbi
-      - GVL_States.fbMR3K4_Coating_States.enumSet
+      - PRG_States.fbMR3K4_Coating_States.enumSet
       - | io: output
 
 

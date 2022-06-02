@@ -630,10 +630,14 @@ Links
         Axes^M5K4 rY, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Status^Ready
         Axes^M5K4 rY, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Status^TxPDO State
         Axes^M5K4 rY, Enc^Inputs^In^nState1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M5K4Z_M5K4rY, FB Inputs Channel 2^Status^Warning
+        InputDst, GVL_PMPS.fbArbiterIO.i_stCurrentBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Inputs^CurrentBP
+        InputDst, GVL_PMPS.fbArbiterIO.xTxPDO_state, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO state
+        InputDst, GVL_PMPS.fbArbiterIO.xTxPDO_toggle, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO toggle
         InputDst, Main.bDreamEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^Term 109 (EL1004), Channel 1^Input
         InputDst, Main.fbArbiterIO.i_stCurrentBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Inputs^CurrentBP
         InputDst, Main.fbArbiterIO.xTxPDO_state, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO state
         InputDst, Main.fbArbiterIO.xTxPDO_toggle, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO toggle
+        OutputSrc, GVL_PMPS.fbArbiterIO.q_stRequestedBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Outputs^RequestedBP
         OutputSrc, Main.fbArbiterIO.q_stRequestedBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Outputs^RequestedBP
         tmo_optics Instance, PlcTask Inputs^GVL_M1K4.M1K4_Pitch.diEncCnt, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL5042_M1K4_PitchBender, FB Inputs Channel 1^Position
         tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.nM2K4DS_RTD_1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4US3_M2K4DS1, RTD Inputs Channel 2^Value
@@ -651,9 +655,6 @@ Links
         tmo_optics Instance, PlcTask Inputs^GVL_M3K4_RTD.nM3K4US_RTD_1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4US1_M3K4US2, RTD Inputs Channel 1^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M3K4_RTD.nM3K4US_RTD_2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4US1_M3K4US2, RTD Inputs Channel 2^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M3K4_RTD.nM3K4US_RTD_3, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4US3_M3K4DS1, RTD Inputs Channel 1^Value
-        tmo_optics Instance, PlcTask Inputs^GVL_PMPS.fbArbiterIO.i_stCurrentBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Inputs^CurrentBP
-        tmo_optics Instance, PlcTask Inputs^GVL_PMPS.fbArbiterIO.xTxPDO_state, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO state
-        tmo_optics Instance, PlcTask Inputs^GVL_PMPS.fbArbiterIO.xTxPDO_toggle, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO toggle
         tmo_optics Instance, PlcTask Inputs^Main.LAMPbSTOEnable1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL1004_M2K4_M3K4_STO, Channel 1^Input
         tmo_optics Instance, PlcTask Inputs^Main.LAMPbSTOEnable2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL1004_M2K4_M3K4_STO, Channel 2^Input
         tmo_optics Instance, PlcTask Inputs^Main.M1.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M1K4-Yup, Outputs^ToPlc
@@ -754,7 +755,9 @@ Links
         tmo_optics Instance, PlcTask Inputs^Main.M9.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL5042_M2K4rY_M3K4X, FB Inputs Channel 1^Position
         tmo_optics Instance, PlcTask Inputs^Main.bDreamEnable1, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^Term 109 (EL1004), Channel 1^Input
         tmo_optics Instance, PlcTask Inputs^Main.bDreamEnable2, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^Term 109 (EL1004), Channel 2^Input
-        tmo_optics Instance, PlcTask Outputs^GVL_PMPS.fbArbiterIO.q_stRequestedBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Outputs^RequestedBP
+        tmo_optics Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.i_stCurrentBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Inputs^CurrentBP
+        tmo_optics Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_state, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO state
+        tmo_optics Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_toggle, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO toggle
         tmo_optics Instance, PlcTask Outputs^GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_FFO, Channel 1^Output
         tmo_optics Instance, PlcTask Outputs^GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_FFO, Channel 2^Output
         tmo_optics Instance, PlcTask Outputs^Main.M1.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M1K4-Yup, Inputs^FromPlc
@@ -781,6 +784,7 @@ Links
         tmo_optics Instance, PlcTask Outputs^Main.M7.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M2K4-X, Inputs^FromPlc
         tmo_optics Instance, PlcTask Outputs^Main.M8.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M2K4-Y, Inputs^FromPlc
         tmo_optics Instance, PlcTask Outputs^Main.M9.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^M2K4-rY, Inputs^FromPlc
+        tmo_optics Instance, PlcTask Outputs^PRG_PMPS.fbArbiterIO.q_stRequestedBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Outputs^RequestedBP
         tmo_optics Instance, SerialIO Inputs^GVL_SerialIO.Serial_stComIn_M1K4^D[0], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL6001_M1K4_PitchFine, COM Inputs^Data In 0
         tmo_optics Instance, SerialIO Inputs^GVL_SerialIO.Serial_stComIn_M1K4^D[10], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL6001_M1K4_PitchFine, COM Inputs^Data In 10
         tmo_optics Instance, SerialIO Inputs^GVL_SerialIO.Serial_stComIn_M1K4^D[11], TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL6001_M1K4_PitchFine, COM Inputs^Data In 11
