@@ -10,7 +10,8 @@ VAR
 		{attribute 'pytmc' := '
 			pv: MR1K4:SOMS:MMS:YUP
 		'}
-		M1 : DUT_MotionStage := (fVelocity:=200.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // M1K4 Yup
+        //PMPS State Stage; bPowerSelf:=False
+		M1 : DUT_MotionStage := (sName:='MR1K4-Coatings', fVelocity:=200.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=FALSE); // M1K4 Yup
 		fbMotionStage_m1 : FB_MotionStage;
 	
 		{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Ydwn]^STM Status^Status^Digital input 1;
@@ -187,7 +188,8 @@ VAR
 		{attribute 'pytmc' := '
 		pv: MR2K4:KBO:MMS:Y
 		'}
-		M8 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        //PMPS State Stage; bPowerSelf:=False
+		M8 : DUT_MotionStage := (sName:='MR2K4-Coatings', nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=FALSE);
 		fbMotionStage_m8 : FB_MotionStage;
 	//MR2K4 rY
 		{attribute 'TcLinkTo' := '.bLimitForwardEnable :=TIIB[EL7041-0052_M2K4rY]^STM Status^Status^Digital input 1;
@@ -223,7 +225,8 @@ VAR
 		{attribute 'pytmc' := '
 		pv: MR3K4:KBO:MMS:X
 		'}
-		M12 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
+        //PMPS State Stage; bPowerSelf:=False
+		M12 : DUT_MotionStage := (sName:='MR3K4-Coatings', nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=FALSE);
 		fbMotionStage_m12 : FB_MotionStage;
 	//MR3K4 Y
 		{attribute 'TcLinkTo' := '.bLimitForwardEnable :=TIIB[EL7041-0052_M3K4Y]^STM Status^Status^Digital input 1;
@@ -702,8 +705,7 @@ fbLogHandler : FB_LogHandler;
 
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-// M1K4
+      <ST><![CDATA[// M1K4
 	M1K4.fbRunHOMS(stYup:=M1,
 				   stYdwn:=M2,
 				   stXup:=M3,
@@ -974,65 +976,16 @@ END_VAR]]></Declaration>
 		M11.bHardwareEnable R= fM2K4DS_RTD_1 > 1000 OR bM2K4DS_RTD_1_Err;
 		M15.bHardwareEnable R= fM3K4US_RTD_1 > 1000 OR bM3K4US_RTD_1_Err;
 		M16.bHardwareEnable R= fM3K4DS_RTD_1 > 1000 OR bM3K4DS_RTD_1_Err;
-    // State Movers with PMPS
-        GVL_States.MR1K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-        GVL_States.MR1K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
-      (*  GVL_States.MR2K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-        GVL_States.MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);
-        GVL_States.MR3K4_SiC.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-        GVL_States.MR3K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(0, 350) AND F_eVExcludeRange(2.3E3, 7E3);  *)
-    //MR1K4 Coating States with PMPS
-    M1.bPowerSelf := False;
-    GVL_States.fbMR1K4_Coating_States(
-        bEnable := TRUE,
-        stCoating1 := GVL_States.MR1K4_SiC,
-        stCoating2 := GVL_States.MR1K4_B4C,  
-	    stMotionStage:=M1,
-        bBPOkAutoReset := TRUE,
-        fbArbiter:=GVL_PMPS.g_fbArbiter1,
-        fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
-        nTransitionAssertionID:= 16#DAB1, 
-	    nUnknownAssertionID:= 16#DAB0);
-    
-    (*   MR2K4 Coating States with PMPS
-    M8.bPowerSelf := False;    
-    GVL_States.fbMR2K4_Coating_States(
-        bEnable := TRUE,
-        stCoating1 := GVL_States.MR2K4_SiC,
-        stCoating2 := GVL_States.MR2K4_B4C,  
-	    stMotionStage:=M8,
-        bBPOkAutoReset := TRUE,
-        fbArbiter:=GVL_PMPS.g_fbArbiter2,
-        fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
-        nTransitionAssertionID:= 16#DAD1, 
-	    nUnknownAssertionID:= 16#DAD0);
-    
-    MR3K4 Coating States with PMPS
-    M12.bPowerSelf := False;        
-    GVL_States.fbMR3K4_Coating_States(
-        bEnable := TRUE,
-        stCoating1 := GVL_States.MR3K4_SiC,
-        stCoating2 := GVL_States.MR3K4_B4C,  
-	    stMotionStage:=M12,
-        bBPOkAutoReset := TRUE,
-        fbArbiter:=GVL_PMPS.g_fbArbiter2,
-        fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
-        nTransitionAssertionID:= 16#ACE1, 
-	    nUnknownAssertionID:= 16#ACE0);   *)
-///////////////////////////////////////////////////
 
+// States
+    PRG_States();
 // PMPS
     PRG_PMPS();	
-
-	
-	P_StripeProtections();
+    P_StripeProtections();
 ////////////////////////////////
 
 // Logging
-fbLogHandler();
-
-// PMPS
-]]></ST>
+fbLogHandler();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
