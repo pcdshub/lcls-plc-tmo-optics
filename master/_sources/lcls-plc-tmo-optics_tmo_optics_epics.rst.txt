@@ -1126,7 +1126,7 @@ FB_Coating_States
       - | io: output
 
 
-  
+   
 LCLS_General.FB_BasicStats
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -20453,21 +20453,15 @@ Database Records
 
     * - MR2K4:KBO:FLOW:1_RBV
       - ai
-      - Main.fM2K4_Flow_1
-      - | field: AOFF .05
-        | field: ASLO .00128
-        | field: EGU lpm
-        | field: LINR SLOPE
+      - GVL_M2K4_RTD.fM2K4_Flow_1_val
+      - | field: EGU lpm
         | io: input
 
 
     * - MR2K4:KBO:FLOW:2_RBV
       - ai
-      - Main.fM2K4_Flow_2
-      - | field: AOFF .05
-        | field: ASLO .00128
-        | field: EGU lpm
-        | field: LINR SLOPE
+      - GVL_M2K4_RTD.fM2K4_Flow_2_val
+      - | field: EGU lpm
         | io: input
 
 
@@ -22328,10 +22322,8 @@ Database Records
 
     * - MR2K4:KBO:PRESS:1_RBV
       - ai
-      - Main.fM2K4_Press_1
-      - | field: ASLO .000977
-        | field: EGU bar
-        | field: LINR SLOPE
+      - GVL_M2K4_RTD.fM2K4_Press_1_val
+      - | field: EGU bar
         | io: input
 
 
