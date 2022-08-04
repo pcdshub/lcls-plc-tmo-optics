@@ -673,9 +673,9 @@ Axis 20: M4K4 rX
     Enc:Offset, -132192.8499
     Enc:ScaleFactorNumerator, 0.0025826
     Enc:SoftEndMaxControl:Enable, true
-    Enc:SoftEndMaxControl:Range, 169
+    Enc:SoftEndMaxControl:Range, 500
     Enc:SoftEndMinControl:Enable, true
-    Enc:SoftEndMinControl:Range, -141
+    Enc:SoftEndMinControl:Range, -500
     General:UnitName, urad
     Id, 20
     OtherSettings:AllowMotionCmdToSlave, true
@@ -803,9 +803,9 @@ Axis 24: M5K4 rY
     Enc:Offset, -198169.78
     Enc:ScaleFactorNumerator, 0.00504
     Enc:SoftEndMaxControl:Enable, true
-    Enc:SoftEndMaxControl:Range, 132
+    Enc:SoftEndMaxControl:Range, 500
     Enc:SoftEndMinControl:Enable, true
-    Enc:SoftEndMinControl:Range, -147
+    Enc:SoftEndMinControl:Range, -500
     General:UnitName, urad
     Id, 24
     OtherSettings:AllowMotionCmdToSlave, true
