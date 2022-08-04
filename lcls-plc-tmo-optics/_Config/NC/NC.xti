@@ -2018,8 +2018,8 @@ External Setpoint Generation:
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="0.0025826" Offset="-132192.8499" MaxCount="#xffffffff">
 					<FilterTime TPos="0.2"/>
-					<SoftEndMinControl Enable="true" Range="-141"/>
-					<SoftEndMaxControl Enable="true" Range="169"/>
+					<SoftEndMinControl Enable="true" Range="-500"/>
+					<SoftEndMaxControl Enable="true" Range="500"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 					<ParameterChanged>14</ParameterChanged>
 					<ParameterChanged>11</ParameterChanged>
@@ -2884,8 +2884,8 @@ External Setpoint Generation:
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="0.00504" Offset="-198169.78" MaxCount="#xffffffff">
 					<FilterTime TPos="0.2"/>
-					<SoftEndMinControl Enable="true" Range="-147"/>
-					<SoftEndMaxControl Enable="true" Range="132"/>
+					<SoftEndMinControl Enable="true" Range="-500"/>
+					<SoftEndMaxControl Enable="true" Range="500"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 					<ParameterChanged>14</ParameterChanged>
 					<ParameterChanged>11</ParameterChanged>
