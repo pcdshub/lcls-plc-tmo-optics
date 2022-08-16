@@ -1368,8 +1368,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-28.961399" MaxCount="#xffffffff">
-					<SoftEndMinControl Enable="true" Range="-11.05"/>
-					<SoftEndMaxControl Enable="true" Range="12.9"/>
+					<SoftEndMinControl Enable="true" Range="-11.2"/>
+					<SoftEndMaxControl Enable="true" Range="13.2"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 					<ParameterChanged>14</ParameterChanged>
 					<ParameterChanged>11</ParameterChanged>
@@ -1584,8 +1584,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-30.3992" MaxCount="#xffffffff">
-					<SoftEndMinControl Enable="true" Range="-1.9"/>
-					<SoftEndMaxControl Enable="true" Range="2.05"/>
+					<SoftEndMinControl Enable="true" Range="-2.2"/>
+					<SoftEndMaxControl Enable="true" Range="2.3"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 					<ParameterChanged>14</ParameterChanged>
 					<ParameterChanged>11</ParameterChanged>
@@ -2234,8 +2234,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.80379" MaxCount="#xffffffff">
-					<SoftEndMinControl Enable="true" Range="-1.8"/>
-					<SoftEndMaxControl Enable="true" Range="2.3"/>
+					<SoftEndMinControl Enable="true" Range="-2.1"/>
+					<SoftEndMaxControl Enable="true" Range="2.6"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 					<ParameterChanged>14</ParameterChanged>
 					<ParameterChanged>11</ParameterChanged>
@@ -2450,8 +2450,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.7766" MaxCount="#xffffffff">
-					<SoftEndMinControl Enable="true" Range="-12.05"/>
-					<SoftEndMaxControl Enable="true" Range="12.03"/>
+					<SoftEndMinControl Enable="true" Range="-12.3"/>
+					<SoftEndMaxControl Enable="true" Range="12.33"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 					<ParameterChanged>14</ParameterChanged>
 					<ParameterChanged>11</ParameterChanged>
