@@ -4,9 +4,9 @@
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
     // M4K4 RTDs
-    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Value
-                              .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Underrange
-                              .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Overrange
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Value;
+                              .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Underrange;
+                              .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Overrange;
                               .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Error'}
     nM4K4_Chin_Left_RTD : FB_TempSensor;
     {attribute 'pytmc' := '
@@ -15,9 +15,9 @@ VAR_GLOBAL
 		io: i
     '}
 	fM4K4_Chin_Left_RTD_val : REAL;
-    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Value
-                              .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Underrange
-                              .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Overrange
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Value;
+                              .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Underrange;
+                              .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Overrange;
                               .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Error'}
     nM4K4_Chin_Right_RTD : FB_TempSensor;
     {attribute 'pytmc' := '
@@ -26,9 +26,9 @@ VAR_GLOBAL
 		io: i
     '}
 	fM4K4_Chin_Right_RTD_val : REAL;
-    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Value
-                              .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Underrange
-                              .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Overrange
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Value;
+                              .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Underrange;
+                              .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Overrange;
                               .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Error'}
     nM4K4_Chin_Tail_RTD : FB_TempSensor;
     {attribute 'pytmc' := '
