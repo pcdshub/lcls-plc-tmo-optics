@@ -662,13 +662,6 @@ VAR
 
     // MR4K4 RTDS
         {attribute 'pytmc' := '
-			pv: MR4K4:KBO:RTD:CHIN:L
-			field: ASLO 0.1
-			field: EGU C
-			io: i
-		'}
-		fM4K4_ChinL_RTD : REAL;
-        {attribute 'pytmc' := '
 			pv: MR4K4:KBO:RTD:CHIN:R
 			field: ASLO 0.1
 			field: EGU C
@@ -983,13 +976,13 @@ END_VAR]]></Declaration>
 		fM3K4DS_RTD_2 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_2);
 		fM3K4DS_RTD_3 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_3);
 	// DREAM KB Internal RTDs	
-		fM4K4_ChinL_RTD := INT_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Left_RTD);
-		fM4K4_ChinR_RTD := INT_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Right_RTD);
-		fM4K4_Tail_RTD := INT_TO_REAL(GVL_M4K4_RTD.nM4K4_Tail_RTD);
+        GVL_M4K4_RTD.fM4K4_Chin_Left_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.fTemp);
+        GVL_M4K4_RTD.fM4K4_Chin_Right_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.fTemp);
+        GVL_M4K4_RTD.fM4K4_Chin_Tail_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.fTemp);
 
-		fM5K4_ChinL_RTD := INT_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Left_RTD);
-		fM5K4_ChinR_RTD := INT_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Right_RTD);
-		fM5K4_Tail_RTD := INT_TO_REAL(GVL_M5K4_RTD.nM5K4_Tail_RTD);
+        GVL_M5K4_RTD.fM5K4_Chin_Left_RTD_val := LREAL_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.fTemp);
+        GVL_M5K4_RTD.fM5K4_Chin_Right_RTD_val := LREAL_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.fTemp);
+        GVL_M5K4_RTD.fM5K4_Chin_Tail_RTD_val := LREAL_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.fTemp);
 	// RTD not connected if T=0
 		bM2K4US_RTD_1_Err := fM2K4US_RTD_1 = 0;
 		bM2K4US_RTD_2_Err := fM2K4US_RTD_2 = 0;
