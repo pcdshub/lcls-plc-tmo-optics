@@ -659,44 +659,6 @@ VAR
 			io: i
 		'}
 		fM3K4DS_RTD_3 AT %I* : REAL;
-
-    // MR4K4 RTDS
-        {attribute 'pytmc' := '
-			pv: MR4K4:KBO:RTD:CHIN:R
-			field: ASLO 0.1
-			field: EGU C
-			io: i
-		'}
-		fM4K4_ChinR_RTD : REAL;
-        {attribute 'pytmc' := '
-			pv: MR4K4:KBO:RTD:TAIL
-			field: ASLO 0.1
-			field: EGU C
-			io: i
-		'}
-		fM4K4_Tail_RTD : REAL;
-    // MR5K4 RTDS
-        {attribute 'pytmc' := '
-			pv: MR5K4:KBO:RTD:CHIN:L
-			field: ASLO 0.1
-			field: EGU C
-			io: i
-		'}
-		fM5K4_ChinL_RTD : REAL;
-        {attribute 'pytmc' := '
-			pv: MR5K4:KBO:RTD:CHIN:R
-			field: ASLO 0.1
-			field: EGU C
-			io: i
-		'}
-		fM5K4_ChinR_RTD : REAL;
-        {attribute 'pytmc' := '
-			pv: MR5K4:KBO:RTD:TAIL
-			field: ASLO 0.1
-			field: EGU C
-			io: i
-		'}
-		fM5K4_Tail_RTD : REAL;
 	
 	// RTD error bit
 		bM2K4US_RTD_1_Err AT %I*: BOOL;
