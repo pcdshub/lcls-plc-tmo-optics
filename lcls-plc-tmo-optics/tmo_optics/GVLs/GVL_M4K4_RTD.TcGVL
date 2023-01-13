@@ -14,7 +14,7 @@ VAR_GLOBAL
 		field: EGU C
 		io: i
     '}
-	fM4K4_Chin_Left_RTD_val : REAL;
+    fM4K4_Chin_Left_RTD_val : REAL;
     {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Value;
                               .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Underrange;
                               .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Overrange;
@@ -25,7 +25,7 @@ VAR_GLOBAL
 		field: EGU C
 		io: i
     '}
-	fM4K4_Chin_Right_RTD_val : REAL;
+    fM4K4_Chin_Right_RTD_val : REAL;
     {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Value;
                               .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Underrange;
                               .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Overrange;
@@ -36,7 +36,7 @@ VAR_GLOBAL
 		field: EGU C
 		io: i
     '}
-	fM4K4_Chin_Tail_RTD_val : REAL;
+    fM4K4_Chin_Tail_RTD_val : REAL;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
