@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_M4K4_RTD" Id="{19277b42-a3a6-4fd4-a7a6-d9afc99a2052}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+    // M4K4 RTDs
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Value;
+                              .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Underrange;
+                              .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Overrange;
+                              .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Error'}
+    nM4K4_Chin_Left_RTD : FB_TempSensor;
+    {attribute 'pytmc' := '
+		pv: MR4K4:KBO:RTD:CHIN:L
+		field: EGU C
+		io: i
+    '}
+    fM4K4_Chin_Left_RTD_val : REAL;
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Value;
+                              .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Underrange;
+                              .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Overrange;
+                              .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Error'}
+    nM4K4_Chin_Right_RTD : FB_TempSensor;
+    {attribute 'pytmc' := '
+		pv: MR4K4:KBO:RTD:CHIN:R
+		field: EGU C
+		io: i
+    '}
+    fM4K4_Chin_Right_RTD_val : REAL;
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Value;
+                              .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Underrange;
+                              .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Overrange;
+                              .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Error'}
+    nM4K4_Chin_Tail_RTD : FB_TempSensor;
+    {attribute 'pytmc' := '
+		pv: MR4K4:KBO:RTD:TAIL
+		field: EGU C
+		io: i
+    '}
+    fM4K4_Chin_Tail_RTD_val : REAL;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

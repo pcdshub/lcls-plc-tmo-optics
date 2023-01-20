@@ -775,15 +775,15 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{28B0A8A5-349C-45BA-9ED5-C22470A561D4}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
+			<Name GUID="{ECE0C996-F7F1-455B-B541-9AF11C38362A}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
 			<BitSize>0</BitSize>
 			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
 			<Hides>
-				<Hide GUID="{94915EAA-1CED-4C76-A16A-3C23318EB5AC}"/>
+				<Hide GUID="{A3CB6D0B-B5B3-4037-9285-219C2634865B}"/>
 			</Hides>
 		</DataType>
 		<DataType>
-			<Name GUID="{C51A2745-957C-4A6B-B313-08A3F9BFCE80}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Name GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
 			<Comment>
 				<![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]>
 			</Comment>
@@ -805,7 +805,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>Status</Name>
-				<Type GUID="{28B0A8A5-349C-45BA-9ED5-C22470A561D4}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
+				<Type GUID="{ECE0C996-F7F1-455B-B541-9AF11C38362A}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
 				<Comment>
 					<![CDATA[ Status struct placeholder]]>
 				</Comment>
@@ -822,7 +822,7 @@ External Setpoint Generation:
 				<BitOffs>64</BitOffs>
 			</SubItem>
 			<Hides>
-				<Hide GUID="{C58DE5B8-5725-445E-84A2-AB3B7E08AF7A}"/>
+				<Hide GUID="{EC24069F-47F7-4326-BE51-27F9DFBC52EF}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -2208,7 +2208,7 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Encoders]]>
 					</Comment>
-					<Type GUID="{C51A2745-957C-4A6B-B313-08A3F9BFCE80}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2230,7 +2230,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{C51A2745-957C-4A6B-B313-08A3F9BFCE80}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2252,7 +2252,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{C51A2745-957C-4A6B-B313-08A3F9BFCE80}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2274,7 +2274,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{C51A2745-957C-4A6B-B313-08A3F9BFCE80}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -5167,6 +5167,61 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
+					<Comment>
+						<![CDATA[Raw encoder count]]>
+					</Comment>
+					<Type>LINT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
 					<Comment>
 						<![CDATA[ M2K4 BENDER RTDs
@@ -5177,13 +5232,6 @@ External Setpoint Generation:
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
 					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
-					<Comment>
-						<![CDATA[Raw encoder count]]>
-					</Comment>
-					<Type>LINT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
@@ -5202,6 +5250,18 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>
+					<Comment>
+						<![CDATA[ M3K4 BENDER RTDs
+ M3K4 US RTDs]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M3K4_RTD.nM3K4US_RTD_2</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -5226,18 +5286,6 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>
-					<Comment>
-						<![CDATA[ M3K4 BENDER RTDs
- M3K4 US RTDs]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M3K4_RTD.nM3K4US_RTD_2</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_M3K4_RTD.nM3K4US_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
@@ -5254,6 +5302,54 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>GVL_M3K4_RTD.nM3K4DS_RTD_3</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.iRaw</Name>
 					<Type>INT</Type>
 				</Var>
 			</Vars>
@@ -5839,6 +5935,34 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_state" VarB="SYNC Inputs^TxPDO state" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_toggle" VarB="SYNC Inputs^TxPDO toggle" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_PMPS.fbArbiterIO.q_stRequestedBP" VarB="IO Outputs^RequestedBP" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 110 (EK1100)^EL3204_M4K4">
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bError" VarB="RTD Inputs Channel 3^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bOverrange" VarB="RTD Inputs Channel 3^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bUnderrange" VarB="RTD Inputs Channel 3^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.iRaw" VarB="RTD Inputs Channel 3^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 110 (EK1100)^EL3204_M5K4">
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bError" VarB="RTD Inputs Channel 3^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bOverrange" VarB="RTD Inputs Channel 3^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange" VarB="RTD Inputs Channel 3^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.iRaw" VarB="RTD Inputs Channel 3^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^EL5042_M4K4X_M4K4Y">
 				<Link VarA="PlcTask Inputs^Main.M17.nRawEncoderULINT" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
