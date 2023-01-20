@@ -775,15 +775,15 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{A3CB6D0B-B5B3-4037-9285-219C2634865B}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
+			<Name GUID="{ECE0C996-F7F1-455B-B541-9AF11C38362A}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
 			<BitSize>0</BitSize>
 			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
 			<Hides>
-				<Hide GUID="{EDFC6903-28AA-4627-A712-531FF5CE4FDD}"/>
+				<Hide GUID="{A3CB6D0B-B5B3-4037-9285-219C2634865B}"/>
 			</Hides>
 		</DataType>
 		<DataType>
-			<Name GUID="{EC24069F-47F7-4326-BE51-27F9DFBC52EF}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Name GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
 			<Comment>
 				<![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]>
 			</Comment>
@@ -805,7 +805,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>Status</Name>
-				<Type GUID="{A3CB6D0B-B5B3-4037-9285-219C2634865B}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
+				<Type GUID="{ECE0C996-F7F1-455B-B541-9AF11C38362A}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
 				<Comment>
 					<![CDATA[ Status struct placeholder]]>
 				</Comment>
@@ -822,7 +822,7 @@ External Setpoint Generation:
 				<BitOffs>64</BitOffs>
 			</SubItem>
 			<Hides>
-				<Hide GUID="{D7DD3D30-81BE-4CE8-B0FE-9086F6AAF7FB}"/>
+				<Hide GUID="{EC24069F-47F7-4326-BE51-27F9DFBC52EF}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -2208,7 +2208,7 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Encoders]]>
 					</Comment>
-					<Type GUID="{EC24069F-47F7-4326-BE51-27F9DFBC52EF}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2230,7 +2230,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{EC24069F-47F7-4326-BE51-27F9DFBC52EF}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2252,7 +2252,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{EC24069F-47F7-4326-BE51-27F9DFBC52EF}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2274,7 +2274,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{EC24069F-47F7-4326-BE51-27F9DFBC52EF}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -5167,6 +5167,61 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
+					<Comment>
+						<![CDATA[Raw encoder count]]>
+					</Comment>
+					<Type>LINT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
 					<Comment>
 						<![CDATA[ M2K4 BENDER RTDs
@@ -5177,13 +5232,6 @@ External Setpoint Generation:
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
 					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
-					<Comment>
-						<![CDATA[Raw encoder count]]>
-					</Comment>
-					<Type>LINT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
@@ -5205,6 +5253,18 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
+					<Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>
+					<Comment>
+						<![CDATA[ M3K4 BENDER RTDs
+ M3K4 US RTDs]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M3K4_RTD.nM3K4US_RTD_2</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_M2K4_RTD.fM2K4_Flow_1.iRaw</Name>
 					<Comment>
 						<![CDATA[ Connect this input to the terminal]]>
@@ -5223,18 +5283,6 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Connect this input to the terminal]]>
 					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>
-					<Comment>
-						<![CDATA[ M3K4 BENDER RTDs
- M3K4 US RTDs]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M3K4_RTD.nM3K4US_RTD_2</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -5302,54 +5350,6 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.iRaw</Name>
 					<Type>INT</Type>
 				</Var>
 			</Vars>
@@ -5919,8 +5919,8 @@ External Setpoint Generation:
 			</UnrestoredVarLinks>
 			<TaskPouOids>
 				<TaskPouOid Prio="1" OTCID="#x08502001"/>
-				<TaskPouOid Prio="20" OTCID="#x08502003"/>
 				<TaskPouOid Prio="3" OTCID="#x08502002"/>
+				<TaskPouOid Prio="20" OTCID="#x08502003"/>
 			</TaskPouOids>
 		</Instance>
 	</Project>

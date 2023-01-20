@@ -938,6 +938,14 @@ END_VAR]]></Declaration>
         fM3K4DS_RTD_2 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_2);
         fM3K4DS_RTD_3 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_3);
     // DREAM KB Internal RTDs   
+        GVL_M4K4_RTD.nM4K4_Chin_Left_RTD();
+        GVL_M4K4_RTD.nM4K4_Chin_Right_RTD();
+        GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD();
+
+        GVL_M5K4_RTD.nM5K4_Chin_Left_RTD();
+        GVL_M5K4_RTD.nM5K4_Chin_Right_RTD();
+        GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD();
+
         GVL_M4K4_RTD.fM4K4_Chin_Left_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.fTemp);
         GVL_M4K4_RTD.fM4K4_Chin_Right_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.fTemp);
         GVL_M4K4_RTD.fM4K4_Chin_Tail_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.fTemp);
