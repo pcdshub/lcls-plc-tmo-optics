@@ -9722,8 +9722,8 @@ Term 110 (EK1100)
    </details>
 
 
-Term 111 (EL3204)
-^^^^^^^^^^^^^^^^^
+EL3204_M4K4
+^^^^^^^^^^^
 
 
 .. raw:: html
@@ -9735,7 +9735,7 @@ Term 111 (EL3204)
     :header: Name, Data
     :align: center
 
-    Name, Term 111 (EL3204)
+    Name, EL3204_M4K4
     ID, 111
         BootStrapData, 0010f400f410f400
         SyncMan, 001080002600010001000000800080008000001026010000
@@ -9827,8 +9827,8 @@ PDO RTD Inputs Channel 4 (Index #x1a03, Flags #x0011, SyncMan 3)
    </details>
 
 
-Term 112 (EL3204)
-^^^^^^^^^^^^^^^^^
+EL3204_M5K4
+^^^^^^^^^^^
 
 
 .. raw:: html
@@ -9840,7 +9840,7 @@ Term 112 (EL3204)
     :header: Name, Data
     :align: center
 
-    Name, Term 112 (EL3204)
+    Name, EL3204_M5K4
     ID, 112
         BootStrapData, 0010f400f410f400
         SyncMan, 001080002600010001000000800080008000001026010000
