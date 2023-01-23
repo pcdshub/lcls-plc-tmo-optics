@@ -911,15 +911,7 @@ END_VAR]]></Declaration>
         nEncCntYM3K4  := ULINT_TO_UDINT(M13.nRawEncoderULINT);
         nEncCntrXM3K4 := ULINT_TO_UDINT(M14.nRawEncoderULINT);
     
-    // LAMP KB Flow Pressure Sensors
-        GVL_M2K4_RTD.fM2K4_Flow_1(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
-        GVL_M2K4_RTD.fM2K4_Flow_1_val := GVL_M2K4_RTD.fM2K4_Flow_1.fReal;
-        
-        GVL_M2K4_RTD.fM2K4_Flow_2(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
-        GVL_M2K4_RTD.fM2K4_Flow_2_val := GVL_M2K4_RTD.fM2K4_Flow_2.fReal;
-        
-        GVL_M2K4_RTD.fM2K4_Press_1(iTermBits:=12, fTermMax:=4.0, fTermMin:=0);
-        GVL_M2K4_RTD.fM2K4_Press_1_val := GVL_M2K4_RTD.fM2K4_Press_1.fReal;
+;
     
     // LAMP KB Bender RTDs
         fM2K4US_RTD_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_1);
@@ -937,22 +929,10 @@ END_VAR]]></Declaration>
         fM3K4DS_RTD_1 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_1);
         fM3K4DS_RTD_2 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_2);
         fM3K4DS_RTD_3 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_3);
-    // DREAM KB Internal RTDs   
-        GVL_M4K4_RTD.nM4K4_Chin_Left_RTD();
-        GVL_M4K4_RTD.nM4K4_Chin_Right_RTD();
-        GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD();
 
-        GVL_M5K4_RTD.nM5K4_Chin_Left_RTD();
-        GVL_M5K4_RTD.nM5K4_Chin_Right_RTD();
-        GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD();
 
-        GVL_M4K4_RTD.fM4K4_Chin_Left_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.fTemp);
-        GVL_M4K4_RTD.fM4K4_Chin_Right_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.fTemp);
-        GVL_M4K4_RTD.fM4K4_Chin_Tail_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.fTemp);
 
-        GVL_M5K4_RTD.fM5K4_Chin_Left_RTD_val := LREAL_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.fTemp);
-        GVL_M5K4_RTD.fM5K4_Chin_Right_RTD_val := LREAL_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.fTemp);
-        GVL_M5K4_RTD.fM5K4_Chin_Tail_RTD_val := LREAL_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.fTemp);
+
     // RTD not connected if T=0
         bM2K4US_RTD_1_Err := fM2K4US_RTD_1 = 0;
         bM2K4US_RTD_2_Err := fM2K4US_RTD_2 = 0;
@@ -972,7 +952,8 @@ END_VAR]]></Declaration>
         M11.bHardwareEnable R= fM2K4DS_RTD_1 > 1000 OR bM2K4DS_RTD_1_Err;
         M15.bHardwareEnable R= fM3K4US_RTD_1 > 1000 OR bM3K4US_RTD_1_Err;
         M16.bHardwareEnable R= fM3K4DS_RTD_1 > 1000 OR bM3K4DS_RTD_1_Err;
-
+// Environment
+    PRG_Environment();
 // States
     PRG_States();
 // PMPS
