@@ -775,15 +775,15 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{3468E391-288C-4D0D-AFD4-2FF26FBC1BD5}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
+			<Name GUID="{2220E81C-4D60-4969-8085-811D6FC37A03}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
 			<BitSize>0</BitSize>
 			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
 			<Hides>
-				<Hide GUID="{ECE0C996-F7F1-455B-B541-9AF11C38362A}"/>
+				<Hide GUID="{3468E391-288C-4D0D-AFD4-2FF26FBC1BD5}"/>
 			</Hides>
 		</DataType>
 		<DataType>
-			<Name GUID="{1EB1FA01-66AA-4DED-8585-4826CF6574A0}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Name GUID="{87D3555B-D8B3-416A-91C5-F30F4C9FC983}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
 			<Comment>
 				<![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]>
 			</Comment>
@@ -805,7 +805,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>Status</Name>
-				<Type GUID="{3468E391-288C-4D0D-AFD4-2FF26FBC1BD5}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
+				<Type GUID="{2220E81C-4D60-4969-8085-811D6FC37A03}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
 				<Comment>
 					<![CDATA[ Status struct placeholder]]>
 				</Comment>
@@ -822,7 +822,7 @@ External Setpoint Generation:
 				<BitOffs>64</BitOffs>
 			</SubItem>
 			<Hides>
-				<Hide GUID="{DEC06CFB-0403-408C-8784-CC13EAB658D2}"/>
+				<Hide GUID="{1EB1FA01-66AA-4DED-8585-4826CF6574A0}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -2204,7 +2204,7 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Encoders]]>
 					</Comment>
-					<Type GUID="{1EB1FA01-66AA-4DED-8585-4826CF6574A0}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{87D3555B-D8B3-416A-91C5-F30F4C9FC983}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2226,7 +2226,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{1EB1FA01-66AA-4DED-8585-4826CF6574A0}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{87D3555B-D8B3-416A-91C5-F30F4C9FC983}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2248,7 +2248,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{1EB1FA01-66AA-4DED-8585-4826CF6574A0}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{87D3555B-D8B3-416A-91C5-F30F4C9FC983}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2270,7 +2270,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{1EB1FA01-66AA-4DED-8585-4826CF6574A0}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{87D3555B-D8B3-416A-91C5-F30F4C9FC983}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -5947,8 +5947,8 @@ External Setpoint Generation:
 			</UnrestoredVarLinks>
 			<TaskPouOids>
 				<TaskPouOid Prio="1" OTCID="#x08502001"/>
-				<TaskPouOid Prio="20" OTCID="#x08502003"/>
 				<TaskPouOid Prio="3" OTCID="#x08502002"/>
+				<TaskPouOid Prio="20" OTCID="#x08502003"/>
 			</TaskPouOids>
 		</Instance>
 	</Project>
@@ -6142,6 +6142,7 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M1K4.fbRunHOMS.bSTOEnable2" VarB="Channel 2^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL3054_M1K4_FLOW_PRESS">
+				<Link VarA="PlcTask Inputs^GVL_M1K4.fM1K4_Flow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_M1K4.fM1K4_Flow_2.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_M1K4.fM1K4_Press_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 			</OwnerB>

@@ -10,7 +10,7 @@ VAR_GLOBAL
 		                                 diEncPosLimHi := 10149192,
 		                                 diEncPosLimLo := 10047105);
     // M1K4 Flow Press Sensors
-    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_MR1K4_FLOW_PRESS]^AI Standard Channel 1^Value'}
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M1K4_FLOW_PRESS]^AI Standard Channel 1^Value'}
     fM1K4_Flow_1 : FB_AnalogInput;
     {attribute 'pytmc' := '
 		pv: MR1K4:KBO:FLOW:1
