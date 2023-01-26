@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_Environment" Id="{d7d13681-7518-4597-8191-c148d0adcca3}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Environment
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[    // MR1K4 Flow Pressure Sensors
+    GVL_M1K4.fM1K4_Flow_1(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
+    GVL_M1K4.fM1K4_Flow_1_val := GVL_M1K4.fM1K4_Flow_1.fReal;
+
+    GVL_M1K4.fM1K4_Flow_2(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
+    GVL_M1K4.fM1K4_Flow_2_val := GVL_M1K4.fM1K4_Flow_2.fReal;
+
+    GVL_M1K4.fM1K4_Press_1(iTermBits:=12, fTermMax:=4.0, fTermMin:=0);
+    GVL_M1K4.fM1K4_Press_1_val := GVL_M1K4.fM1K4_Press_1.fReal;
+
+    // LAMP KB Flow Pressure Sensors
+    GVL_M2K4_RTD.fM2K4_Flow_1(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
+    GVL_M2K4_RTD.fM2K4_Flow_1_val := GVL_M2K4_RTD.fM2K4_Flow_1.fReal;
+        
+    GVL_M2K4_RTD.fM2K4_Flow_2(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
+    GVL_M2K4_RTD.fM2K4_Flow_2_val := GVL_M2K4_RTD.fM2K4_Flow_2.fReal;
+        
+    GVL_M2K4_RTD.fM2K4_Press_1(iTermBits:=12, fTermMax:=4.0, fTermMin:=0);
+    GVL_M2K4_RTD.fM2K4_Press_1_val := GVL_M2K4_RTD.fM2K4_Press_1.fReal;
+
+    // DREAM KB Internal RTDs   
+    GVL_M4K4_RTD.nM4K4_Chin_Left_RTD();
+    GVL_M4K4_RTD.nM4K4_Chin_Right_RTD();
+    GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD();
+
+    GVL_M5K4_RTD.nM5K4_Chin_Left_RTD();
+    GVL_M5K4_RTD.nM5K4_Chin_Right_RTD();
+    GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -8,35 +8,34 @@ VAR_GLOBAL
                               .bUnderrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 1^Status^Underrange;
                               .bOverrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 1^Status^Overrange;
                               .bError := TIIB[EL3204_M5K4]^RTD Inputs Channel 1^Status^Error'}
-    nM5K4_Chin_Left_RTD : FB_TempSensor;
     {attribute 'pytmc' := '
         pv: MR5K4:KBO:RTD:CHIN:L
         field: EGU C
         io: i
     '}
-    fM5K4_Chin_Left_RTD_val : REAL;
+    nM5K4_Chin_Left_RTD : FB_TempSensor;
+
     {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M5K4]^RTD Inputs Channel 2^Value;
                               .bUnderrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 2^Status^Underrange;
                               .bOverrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 2^Status^Overrange;
                               .bError := TIIB[EL3204_M5K4]^RTD Inputs Channel 2^Status^Error'}
-    nM5K4_Chin_Right_RTD : FB_TempSensor;
     {attribute 'pytmc' := '
         pv: MR5K4:KBO:RTD:CHIN:R
         field: EGU C
         io: i
     '}
-    fM5K4_Chin_Right_RTD_val : REAL;
+    nM5K4_Chin_Right_RTD : FB_TempSensor;
+
     {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M5K4]^RTD Inputs Channel 3^Value;
                               .bUnderrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 3^Status^Underrange;
                               .bOverrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 3^Status^Overrange;
                               .bError := TIIB[EL3204_M5K4]^RTD Inputs Channel 3^Status^Error'}
-    nM5K4_Chin_Tail_RTD : FB_TempSensor;
     {attribute 'pytmc' := '
         pv: MR5K4:KBO:RTD:TAIL
         field: EGU C
         io: i
     '}
-    fM5K4_Chin_Tail_RTD_val : REAL;
+    nM5K4_Chin_Tail_RTD : FB_TempSensor;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

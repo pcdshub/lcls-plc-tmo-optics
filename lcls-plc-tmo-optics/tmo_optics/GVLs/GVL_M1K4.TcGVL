@@ -9,6 +9,31 @@ VAR_GLOBAL
 		                                 ReqPosLimLo := -25,
 		                                 diEncPosLimHi := 10149192,
 		                                 diEncPosLimLo := 10047105);
+    // M1K4 Flow Press Sensors
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M1K4_FLOW_PRESS]^AI Standard Channel 1^Value'}
+    fM1K4_Flow_1 : FB_AnalogInput;
+    {attribute 'pytmc' := '
+		pv: MR1K4:KBO:FLOW:1
+        field: EGU lpm
+        io: i
+    '}   
+    fM1K4_Flow_1_val : LREAL;
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M1K4_FLOW_PRESS]^AI Standard Channel 2^Value'}
+    fM1K4_Flow_2 : FB_AnalogInput;
+    {attribute 'pytmc' := '
+		pv: MR1K4:KBO:FLOW:2
+        field: EGU lpm
+        io: i
+    '} 
+    fM1K4_Flow_2_val : LREAL; 
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M1K4_FLOW_PRESS]^AI Standard Channel 3^Value'}
+    fM1K4_Press_1 : FB_AnalogInput;
+    {attribute 'pytmc' := '
+		pv: MR1K4:KBO:PRESS:1
+        field: EGU bar
+        io: i
+    '}      
+    fM1K4_Press_1_val : LREAL;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
