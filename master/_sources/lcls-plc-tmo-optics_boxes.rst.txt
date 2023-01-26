@@ -6467,8 +6467,8 @@ Term 48 (EL9011)
    </details>
 
 
-Term 66 (EL3054)
-^^^^^^^^^^^^^^^^
+EL3054_M1K4_FLOW_PRESS
+^^^^^^^^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -6480,7 +6480,7 @@ Term 66 (EL3054)
     :header: Name, Data
     :align: center
 
-    Name, Term 66 (EL3054)
+    Name, EL3054_M1K4_FLOW_PRESS
     ID, 66
         BootStrapData, 0010f400f410f400
         SyncMan, 001080002600010001000000800080008000001026010000

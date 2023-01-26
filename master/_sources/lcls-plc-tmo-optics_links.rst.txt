@@ -643,6 +643,9 @@ Links
         OutputSrc, GVL_PMPS.fbArbiterIO.q_stRequestedBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Outputs^RequestedBP
         OutputSrc, Main.fbArbiterIO.q_stRequestedBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE, IO Outputs^RequestedBP
         tmo_optics Instance, PlcTask Inputs^GVL_M1K4.M1K4_Pitch.diEncCnt, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL5042_M1K4_PitchBender, FB Inputs Channel 1^Position
+        tmo_optics Instance, PlcTask Inputs^GVL_M1K4.fM1K4_Flow_1.iRaw, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL3054_M1K4_FLOW_PRESS, AI Standard Channel 1^Value
+        tmo_optics Instance, PlcTask Inputs^GVL_M1K4.fM1K4_Flow_2.iRaw, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL3054_M1K4_FLOW_PRESS, AI Standard Channel 2^Value
+        tmo_optics Instance, PlcTask Inputs^GVL_M1K4.fM1K4_Press_1.iRaw, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL3054_M1K4_FLOW_PRESS, AI Standard Channel 3^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.fM2K4_Flow_1.iRaw, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3054_FLOW_PRESS, AI Standard Channel 1^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.fM2K4_Flow_2.iRaw, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3054_FLOW_PRESS, AI Standard Channel 2^Value
         tmo_optics Instance, PlcTask Inputs^GVL_M2K4_RTD.fM2K4_Press_1.iRaw, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3054_FLOW_PRESS, AI Standard Channel 3^Value

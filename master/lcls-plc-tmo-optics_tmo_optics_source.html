@@ -128,6 +128,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#p-serial-com">P_Serial_Com</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#p-stripeprotections">P_StripeProtections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#piezoserial">PiezoSerial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-environment">PRG_Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-pmps">PRG_PMPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-states">PRG_States</a></li>
 </ul>
@@ -243,6 +244,31 @@
                                              <span class="n">ReqPosLimLo</span> <span class="o">:=</span> <span class="o">-</span><span class="mi">25</span><span class="p">,</span>
                                              <span class="n">diEncPosLimHi</span> <span class="o">:=</span> <span class="mi">10149192</span><span class="p">,</span>
                                              <span class="n">diEncPosLimLo</span> <span class="o">:=</span> <span class="mi">10047105</span><span class="p">);</span>
+    <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Flow</span> <span class="n">Press</span> <span class="n">Sensors</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3054_M1K4_FLOW_PRESS]^AI Standard Channel 1^Value&#39;</span><span class="p">}</span>
+    <span class="n">fM1K4_Flow_1</span> <span class="p">:</span> <span class="n">FB_AnalogInput</span><span class="p">;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">FLOW</span><span class="p">:</span><span class="mi">1</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">lpm</span>
+        <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fM1K4_Flow_1_val</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3054_M1K4_FLOW_PRESS]^AI Standard Channel 2^Value&#39;</span><span class="p">}</span>
+    <span class="n">fM1K4_Flow_2</span> <span class="p">:</span> <span class="n">FB_AnalogInput</span><span class="p">;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">FLOW</span><span class="p">:</span><span class="mi">2</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">lpm</span>
+        <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fM1K4_Flow_2_val</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3054_M1K4_FLOW_PRESS]^AI Standard Channel 3^Value&#39;</span><span class="p">}</span>
+    <span class="n">fM1K4_Press_1</span> <span class="p">:</span> <span class="n">FB_AnalogInput</span><span class="p">;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">PRESS</span><span class="p">:</span><span class="mi">1</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">bar</span>
+        <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fM1K4_Press_1_val</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
@@ -371,35 +397,34 @@
                               <span class="o">.</span><span class="n">bUnderrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M4K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Underrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bOverrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M4K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Overrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bError</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M4K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Error</span><span class="s1">&#39;}</span>
-    <span class="n">nM4K4_Chin_Left_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">RTD</span><span class="p">:</span><span class="n">CHIN</span><span class="p">:</span><span class="n">L</span>
             <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">C</span>
             <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
     <span class="s1">&#39;}</span>
-    <span class="n">fM4K4_Chin_Left_RTD_val</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
+    <span class="n">nM4K4_Chin_Left_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
+
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Value;</span>
                               <span class="o">.</span><span class="n">bUnderrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M4K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Underrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bOverrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M4K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Overrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bError</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M4K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Error</span><span class="s1">&#39;}</span>
-    <span class="n">nM4K4_Chin_Right_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">RTD</span><span class="p">:</span><span class="n">CHIN</span><span class="p">:</span><span class="n">R</span>
             <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">C</span>
             <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
     <span class="s1">&#39;}</span>
-    <span class="n">fM4K4_Chin_Right_RTD_val</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
+    <span class="n">nM4K4_Chin_Right_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
+
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Value;</span>
                               <span class="o">.</span><span class="n">bUnderrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M4K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Underrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bOverrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M4K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Overrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bError</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M4K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Error</span><span class="s1">&#39;}</span>
-    <span class="n">nM4K4_Chin_Tail_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">RTD</span><span class="p">:</span><span class="n">TAIL</span>
             <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">C</span>
             <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
     <span class="s1">&#39;}</span>
-    <span class="n">fM4K4_Chin_Tail_RTD_val</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
+    <span class="n">nM4K4_Chin_Tail_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
@@ -413,35 +438,34 @@
                               <span class="o">.</span><span class="n">bUnderrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M5K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Underrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bOverrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M5K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Overrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bError</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M5K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Error</span><span class="s1">&#39;}</span>
-    <span class="n">nM5K4_Chin_Left_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">RTD</span><span class="p">:</span><span class="n">CHIN</span><span class="p">:</span><span class="n">L</span>
         <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">C</span>
         <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
     <span class="s1">&#39;}</span>
-    <span class="n">fM5K4_Chin_Left_RTD_val</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
+    <span class="n">nM5K4_Chin_Left_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
+
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3204_M5K4]^RTD Inputs Channel 2^Value;</span>
                               <span class="o">.</span><span class="n">bUnderrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M5K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Underrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bOverrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M5K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Overrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bError</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M5K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Error</span><span class="s1">&#39;}</span>
-    <span class="n">nM5K4_Chin_Right_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">RTD</span><span class="p">:</span><span class="n">CHIN</span><span class="p">:</span><span class="n">R</span>
         <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">C</span>
         <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
     <span class="s1">&#39;}</span>
-    <span class="n">fM5K4_Chin_Right_RTD_val</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
+    <span class="n">nM5K4_Chin_Right_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
+
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3204_M5K4]^RTD Inputs Channel 3^Value;</span>
                               <span class="o">.</span><span class="n">bUnderrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M5K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Underrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bOverrange</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M5K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Overrange</span><span class="p">;</span>
                               <span class="o">.</span><span class="n">bError</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3204_M5K4</span><span class="p">]</span><span class="o">^</span><span class="n">RTD</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Error</span><span class="s1">&#39;}</span>
-    <span class="n">nM5K4_Chin_Tail_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">RTD</span><span class="p">:</span><span class="n">TAIL</span>
         <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">C</span>
         <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
     <span class="s1">&#39;}</span>
-    <span class="n">fM5K4_Chin_Tail_RTD_val</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
+    <span class="n">nM5K4_Chin_Tail_RTD</span> <span class="p">:</span> <span class="n">FB_TempSensor</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
@@ -1447,15 +1471,7 @@ END_VAR
         <span class="n">nEncCntYM3K4</span>  <span class="o">:=</span> <span class="n">ULINT_TO_UDINT</span><span class="p">(</span><span class="n">M13</span><span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="p">);</span>
         <span class="n">nEncCntrXM3K4</span> <span class="o">:=</span> <span class="n">ULINT_TO_UDINT</span><span class="p">(</span><span class="n">M14</span><span class="o">.</span><span class="n">nRawEncoderULINT</span><span class="p">);</span>
 
-    <span class="o">//</span> <span class="n">LAMP</span> <span class="n">KB</span> <span class="n">Flow</span> <span class="n">Pressure</span> <span class="n">Sensors</span>
-        <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_1</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">5.0427</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mf">0.050472</span><span class="p">);</span>
-        <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_1_val</span> <span class="o">:=</span> <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_1</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
-
-        <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_2</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">5.0427</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mf">0.050472</span><span class="p">);</span>
-        <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_2_val</span> <span class="o">:=</span> <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_2</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
-
-        <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Press_1</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">4.0</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mi">0</span><span class="p">);</span>
-        <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Press_1_val</span> <span class="o">:=</span> <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Press_1</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
+<span class="p">;</span>
 
     <span class="o">//</span> <span class="n">LAMP</span> <span class="n">KB</span> <span class="n">Bender</span> <span class="n">RTDs</span>
         <span class="n">fM2K4US_RTD_1</span> <span class="o">:=</span> <span class="n">INT_TO_REAL</span><span class="p">(</span><span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">nM2K4US_RTD_1</span><span class="p">);</span>
@@ -1473,22 +1489,10 @@ END_VAR
         <span class="n">fM3K4DS_RTD_1</span> <span class="o">:=</span> <span class="n">INT_TO_REAL</span><span class="p">(</span><span class="n">GVL_M3K4_RTD</span><span class="o">.</span><span class="n">nM3K4DS_RTD_1</span><span class="p">);</span>
         <span class="n">fM3K4DS_RTD_2</span> <span class="o">:=</span> <span class="n">INT_TO_REAL</span><span class="p">(</span><span class="n">GVL_M3K4_RTD</span><span class="o">.</span><span class="n">nM3K4DS_RTD_2</span><span class="p">);</span>
         <span class="n">fM3K4DS_RTD_3</span> <span class="o">:=</span> <span class="n">INT_TO_REAL</span><span class="p">(</span><span class="n">GVL_M3K4_RTD</span><span class="o">.</span><span class="n">nM3K4DS_RTD_3</span><span class="p">);</span>
-    <span class="o">//</span> <span class="n">DREAM</span> <span class="n">KB</span> <span class="n">Internal</span> <span class="n">RTDs</span>
-        <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Left_RTD</span><span class="p">();</span>
-        <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Right_RTD</span><span class="p">();</span>
-        <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Tail_RTD</span><span class="p">();</span>
 
-        <span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">nM5K4_Chin_Left_RTD</span><span class="p">();</span>
-        <span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">nM5K4_Chin_Right_RTD</span><span class="p">();</span>
-        <span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">nM5K4_Chin_Tail_RTD</span><span class="p">();</span>
 
-        <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">fM4K4_Chin_Left_RTD_val</span> <span class="o">:=</span> <span class="n">LREAL_TO_REAL</span><span class="p">(</span><span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Left_RTD</span><span class="o">.</span><span class="n">fTemp</span><span class="p">);</span>
-        <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">fM4K4_Chin_Right_RTD_val</span> <span class="o">:=</span> <span class="n">LREAL_TO_REAL</span><span class="p">(</span><span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Right_RTD</span><span class="o">.</span><span class="n">fTemp</span><span class="p">);</span>
-        <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">fM4K4_Chin_Tail_RTD_val</span> <span class="o">:=</span> <span class="n">LREAL_TO_REAL</span><span class="p">(</span><span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Tail_RTD</span><span class="o">.</span><span class="n">fTemp</span><span class="p">);</span>
 
-        <span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">fM5K4_Chin_Left_RTD_val</span> <span class="o">:=</span> <span class="n">LREAL_TO_REAL</span><span class="p">(</span><span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">nM5K4_Chin_Left_RTD</span><span class="o">.</span><span class="n">fTemp</span><span class="p">);</span>
-        <span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">fM5K4_Chin_Right_RTD_val</span> <span class="o">:=</span> <span class="n">LREAL_TO_REAL</span><span class="p">(</span><span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">nM5K4_Chin_Right_RTD</span><span class="o">.</span><span class="n">fTemp</span><span class="p">);</span>
-        <span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">fM5K4_Chin_Tail_RTD_val</span> <span class="o">:=</span> <span class="n">LREAL_TO_REAL</span><span class="p">(</span><span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">nM5K4_Chin_Tail_RTD</span><span class="o">.</span><span class="n">fTemp</span><span class="p">);</span>
+
     <span class="o">//</span> <span class="n">RTD</span> <span class="ow">not</span> <span class="n">connected</span> <span class="k">if</span> <span class="n">T</span><span class="o">=</span><span class="mi">0</span>
         <span class="n">bM2K4US_RTD_1_Err</span> <span class="o">:=</span> <span class="n">fM2K4US_RTD_1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="n">bM2K4US_RTD_2_Err</span> <span class="o">:=</span> <span class="n">fM2K4US_RTD_2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -1508,7 +1512,8 @@ END_VAR
         <span class="n">M11</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="n">R</span><span class="o">=</span> <span class="n">fM2K4DS_RTD_1</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="n">OR</span> <span class="n">bM2K4DS_RTD_1_Err</span><span class="p">;</span>
         <span class="n">M15</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="n">R</span><span class="o">=</span> <span class="n">fM3K4US_RTD_1</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="n">OR</span> <span class="n">bM3K4US_RTD_1_Err</span><span class="p">;</span>
         <span class="n">M16</span><span class="o">.</span><span class="n">bHardwareEnable</span> <span class="n">R</span><span class="o">=</span> <span class="n">fM3K4DS_RTD_1</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="n">OR</span> <span class="n">bM3K4DS_RTD_1_Err</span><span class="p">;</span>
-
+<span class="o">//</span> <span class="n">Environment</span>
+    <span class="n">PRG_Environment</span><span class="p">();</span>
 <span class="o">//</span> <span class="n">States</span>
     <span class="n">PRG_States</span><span class="p">();</span>
 <span class="o">//</span> <span class="n">PMPS</span>
@@ -1530,8 +1535,7 @@ END_VAR
 <li><p><a class="reference internal" href="#gvl-m2k4-rtd">GVL_M2K4_RTD</a></p></li>
 <li><p><a class="reference internal" href="#gvl-m3k4-constants">GVL_M3K4_Constants</a></p></li>
 <li><p><a class="reference internal" href="#gvl-m3k4-rtd">GVL_M3K4_RTD</a></p></li>
-<li><p><a class="reference internal" href="#gvl-m4k4-rtd">GVL_M4K4_RTD</a></p></li>
-<li><p><a class="reference internal" href="#gvl-m5k4-rtd">GVL_M5K4_RTD</a></p></li>
+<li><p><a class="reference internal" href="#prg-environment">PRG_Environment</a></p></li>
 <li><p><a class="reference internal" href="#prg-pmps">PRG_PMPS</a></p></li>
 <li><p><a class="reference internal" href="#prg-states">PRG_States</a></p></li>
 <li><p><a class="reference internal" href="#p-stripeprotections">P_StripeProtections</a></p></li>
@@ -1656,6 +1660,53 @@ END_VAR
 <dl class="simple">
 <dt>Related:</dt><dd><ul class="simple">
 <li><p><a class="reference internal" href="#gvl-m1k4">GVL_M1K4</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-environment">
+<h2>PRG_Environment<a class="headerlink" href="#prg-environment" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_Environment</span>
+<span class="n">VAR</span>
+<span class="n">END_VAR</span>
+<span class="o">//</span> <span class="n">MR1K4</span> <span class="n">Flow</span> <span class="n">Pressure</span> <span class="n">Sensors</span>
+    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_1</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">5.0427</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mf">0.050472</span><span class="p">);</span>
+    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_1_val</span> <span class="o">:=</span> <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_1</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
+
+    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_2</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">5.0427</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mf">0.050472</span><span class="p">);</span>
+    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_2_val</span> <span class="o">:=</span> <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_2</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
+
+    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Press_1</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">4.0</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Press_1_val</span> <span class="o">:=</span> <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Press_1</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
+
+    <span class="o">//</span> <span class="n">LAMP</span> <span class="n">KB</span> <span class="n">Flow</span> <span class="n">Pressure</span> <span class="n">Sensors</span>
+    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_1</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">5.0427</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mf">0.050472</span><span class="p">);</span>
+    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_1_val</span> <span class="o">:=</span> <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_1</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
+
+    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_2</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">5.0427</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mf">0.050472</span><span class="p">);</span>
+    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_2_val</span> <span class="o">:=</span> <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_2</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
+
+    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Press_1</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">4.0</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Press_1_val</span> <span class="o">:=</span> <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Press_1</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
+
+    <span class="o">//</span> <span class="n">DREAM</span> <span class="n">KB</span> <span class="n">Internal</span> <span class="n">RTDs</span>
+    <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Left_RTD</span><span class="p">();</span>
+    <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Right_RTD</span><span class="p">();</span>
+    <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Tail_RTD</span><span class="p">();</span>
+
+    <span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">nM5K4_Chin_Left_RTD</span><span class="p">();</span>
+    <span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">nM5K4_Chin_Right_RTD</span><span class="p">();</span>
+    <span class="n">GVL_M5K4_RTD</span><span class="o">.</span><span class="n">nM5K4_Chin_Tail_RTD</span><span class="p">();</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl-m1k4">GVL_M1K4</a></p></li>
+<li><p><a class="reference internal" href="#gvl-m2k4-rtd">GVL_M2K4_RTD</a></p></li>
+<li><p><a class="reference internal" href="#gvl-m4k4-rtd">GVL_M4K4_RTD</a></p></li>
+<li><p><a class="reference internal" href="#gvl-m5k4-rtd">GVL_M5K4_RTD</a></p></li>
 </ul>
 </dd>
 </dl>

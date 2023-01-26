@@ -1900,7 +1900,7 @@ LCLS_General.FB_BasicStats
       - | io: input
 
 
-     
+    
 LCLS_General.FB_Listener
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2850,7 +2850,7 @@ LCLS_General.ST_PendingEvent
       - | io: input
 
 
-                                        
+                                         
 lcls_twincat_motion.DUT_MotionStage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -7119,7 +7119,37 @@ lcls_twincat_motion.FB_PositionStatePMPS_Base
       - | io: output
 
 
-                                  
+        
+lcls_twincat_motion.PMPS.LCLS_General.FB_LogMessage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):Reset
+      - bo
+      - Rising-edge reset of trip
+      - | io: output
+
+
+    * - $(PREFIX):Reset_RBV
+      - bi
+      - Rising-edge reset of trip
+      - | io: output
+
+
+    * - $(PREFIX):Tripped_RBV
+      - bi
+      - Log message FB tripped
+      - | io: input
+
+
+                             
 lcls_twincat_optics.DUT_HOMS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -17336,6 +17366,27 @@ Database Records
       - | io: input
 
 
+    * - MR1K4:KBO:FLOW:1_RBV
+      - ai
+      - GVL_M1K4.fM1K4_Flow_1_val
+      - | field: EGU lpm
+        | io: input
+
+
+    * - MR1K4:KBO:FLOW:2_RBV
+      - ai
+      - GVL_M1K4.fM1K4_Flow_2_val
+      - | field: EGU lpm
+        | io: input
+
+
+    * - MR1K4:KBO:PRESS:1_RBV
+      - ai
+      - GVL_M1K4.fM1K4_Press_1_val
+      - | field: EGU bar
+        | io: input
+
+
     * - MR2K4:KBO:FLOW:1_RBV
       - ai
       - GVL_M2K4_RTD.fM2K4_Flow_1_val
@@ -17357,45 +17408,159 @@ Database Records
         | io: input
 
 
-    * - MR4K4:KBO:RTD:CHIN:L_RBV
-      - ai
-      - GVL_M4K4_RTD.fM4K4_Chin_Left_RTD_val
+    * - MR4K4:KBO:RTD:CHIN:L:CONN_RBV
+      - bi
+      - GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bConnected
       - | field: EGU C
+        | field: ONAM Connected
+        | field: ZNAM Disconnected
         | io: input
 
 
-    * - MR4K4:KBO:RTD:CHIN:R_RBV
-      - ai
-      - GVL_M4K4_RTD.fM4K4_Chin_Right_RTD_val
+    * - MR4K4:KBO:RTD:CHIN:L:ERR_RBV
+      - bi
+      - GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bError
       - | field: EGU C
+        | field: ONAM True
+        | field: ZNAM False
         | io: input
 
 
-    * - MR4K4:KBO:RTD:TAIL_RBV
+    * - MR4K4:KBO:RTD:CHIN:L:TEMP_RBV
       - ai
-      - GVL_M4K4_RTD.fM4K4_Chin_Tail_RTD_val
+      - GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.fTemp
       - | field: EGU C
+        | field: PREC 2
         | io: input
 
 
-    * - MR5K4:KBO:RTD:CHIN:L_RBV
-      - ai
-      - GVL_M5K4_RTD.fM5K4_Chin_Left_RTD_val
+    * - MR4K4:KBO:RTD:CHIN:R:CONN_RBV
+      - bi
+      - GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bConnected
       - | field: EGU C
+        | field: ONAM Connected
+        | field: ZNAM Disconnected
         | io: input
 
 
-    * - MR5K4:KBO:RTD:CHIN:R_RBV
-      - ai
-      - GVL_M5K4_RTD.fM5K4_Chin_Right_RTD_val
+    * - MR4K4:KBO:RTD:CHIN:R:ERR_RBV
+      - bi
+      - GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bError
       - | field: EGU C
+        | field: ONAM True
+        | field: ZNAM False
         | io: input
 
 
-    * - MR5K4:KBO:RTD:TAIL_RBV
+    * - MR4K4:KBO:RTD:CHIN:R:TEMP_RBV
       - ai
-      - GVL_M5K4_RTD.fM5K4_Chin_Tail_RTD_val
+      - GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.fTemp
       - | field: EGU C
+        | field: PREC 2
+        | io: input
+
+
+    * - MR4K4:KBO:RTD:TAIL:CONN_RBV
+      - bi
+      - GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bConnected
+      - | field: EGU C
+        | field: ONAM Connected
+        | field: ZNAM Disconnected
+        | io: input
+
+
+    * - MR4K4:KBO:RTD:TAIL:ERR_RBV
+      - bi
+      - GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bError
+      - | field: EGU C
+        | field: ONAM True
+        | field: ZNAM False
+        | io: input
+
+
+    * - MR4K4:KBO:RTD:TAIL:TEMP_RBV
+      - ai
+      - GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.fTemp
+      - | field: EGU C
+        | field: PREC 2
+        | io: input
+
+
+    * - MR5K4:KBO:RTD:CHIN:L:CONN_RBV
+      - bi
+      - GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bConnected
+      - | field: EGU C
+        | field: ONAM Connected
+        | field: ZNAM Disconnected
+        | io: input
+
+
+    * - MR5K4:KBO:RTD:CHIN:L:ERR_RBV
+      - bi
+      - GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bError
+      - | field: EGU C
+        | field: ONAM True
+        | field: ZNAM False
+        | io: input
+
+
+    * - MR5K4:KBO:RTD:CHIN:L:TEMP_RBV
+      - ai
+      - GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.fTemp
+      - | field: EGU C
+        | field: PREC 2
+        | io: input
+
+
+    * - MR5K4:KBO:RTD:CHIN:R:CONN_RBV
+      - bi
+      - GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bConnected
+      - | field: EGU C
+        | field: ONAM Connected
+        | field: ZNAM Disconnected
+        | io: input
+
+
+    * - MR5K4:KBO:RTD:CHIN:R:ERR_RBV
+      - bi
+      - GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bError
+      - | field: EGU C
+        | field: ONAM True
+        | field: ZNAM False
+        | io: input
+
+
+    * - MR5K4:KBO:RTD:CHIN:R:TEMP_RBV
+      - ai
+      - GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.fTemp
+      - | field: EGU C
+        | field: PREC 2
+        | io: input
+
+
+    * - MR5K4:KBO:RTD:TAIL:CONN_RBV
+      - bi
+      - GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bConnected
+      - | field: EGU C
+        | field: ONAM Connected
+        | field: ZNAM Disconnected
+        | io: input
+
+
+    * - MR5K4:KBO:RTD:TAIL:ERR_RBV
+      - bi
+      - GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bError
+      - | field: EGU C
+        | field: ONAM True
+        | field: ZNAM False
+        | io: input
+
+
+    * - MR5K4:KBO:RTD:TAIL:TEMP_RBV
+      - ai
+      - GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.fTemp
+      - | field: EGU C
+        | field: PREC 2
         | io: input
 
 

@@ -54,6 +54,31 @@ GVL_M1K4
     		                                 ReqPosLimLo := -25,
     		                                 diEncPosLimHi := 10149192,
     		                                 diEncPosLimLo := 10047105);
+        // M1K4 Flow Press Sensors
+        {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M1K4_FLOW_PRESS]^AI Standard Channel 1^Value'}
+        fM1K4_Flow_1 : FB_AnalogInput;
+        {attribute 'pytmc' := '
+    		pv: MR1K4:KBO:FLOW:1
+            field: EGU lpm
+            io: i
+        '}   
+        fM1K4_Flow_1_val : LREAL;
+        {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M1K4_FLOW_PRESS]^AI Standard Channel 2^Value'}
+        fM1K4_Flow_2 : FB_AnalogInput;
+        {attribute 'pytmc' := '
+    		pv: MR1K4:KBO:FLOW:2
+            field: EGU lpm
+            io: i
+        '} 
+        fM1K4_Flow_2_val : LREAL; 
+        {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M1K4_FLOW_PRESS]^AI Standard Channel 3^Value'}
+        fM1K4_Press_1 : FB_AnalogInput;
+        {attribute 'pytmc' := '
+    		pv: MR1K4:KBO:PRESS:1
+            field: EGU bar
+            io: i
+        '}      
+        fM1K4_Press_1_val : LREAL;
     END_VAR
 
 
@@ -206,35 +231,34 @@ GVL_M4K4_RTD
                                   .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Underrange;
                                   .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Overrange;
                                   .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Error'}
-        nM4K4_Chin_Left_RTD : FB_TempSensor;
         {attribute 'pytmc' := '
     		pv: MR4K4:KBO:RTD:CHIN:L
     		field: EGU C
     		io: i
         '}
-        fM4K4_Chin_Left_RTD_val : REAL;
+        nM4K4_Chin_Left_RTD : FB_TempSensor;
+
         {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Value;
                                   .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Underrange;
                                   .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Overrange;
                                   .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Error'}
-        nM4K4_Chin_Right_RTD : FB_TempSensor;
         {attribute 'pytmc' := '
     		pv: MR4K4:KBO:RTD:CHIN:R
     		field: EGU C
     		io: i
         '}
-        fM4K4_Chin_Right_RTD_val : REAL;
+        nM4K4_Chin_Right_RTD : FB_TempSensor;
+
         {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Value;
                                   .bUnderrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Underrange;
                                   .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Overrange;
                                   .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Error'}
-        nM4K4_Chin_Tail_RTD : FB_TempSensor;
         {attribute 'pytmc' := '
     		pv: MR4K4:KBO:RTD:TAIL
     		field: EGU C
     		io: i
         '}
-        fM4K4_Chin_Tail_RTD_val : REAL;
+        nM4K4_Chin_Tail_RTD : FB_TempSensor;
     END_VAR
 
 
@@ -252,35 +276,34 @@ GVL_M5K4_RTD
                                   .bUnderrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 1^Status^Underrange;
                                   .bOverrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 1^Status^Overrange;
                                   .bError := TIIB[EL3204_M5K4]^RTD Inputs Channel 1^Status^Error'}
-        nM5K4_Chin_Left_RTD : FB_TempSensor;
         {attribute 'pytmc' := '
             pv: MR5K4:KBO:RTD:CHIN:L
             field: EGU C
             io: i
         '}
-        fM5K4_Chin_Left_RTD_val : REAL;
+        nM5K4_Chin_Left_RTD : FB_TempSensor;
+
         {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M5K4]^RTD Inputs Channel 2^Value;
                                   .bUnderrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 2^Status^Underrange;
                                   .bOverrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 2^Status^Overrange;
                                   .bError := TIIB[EL3204_M5K4]^RTD Inputs Channel 2^Status^Error'}
-        nM5K4_Chin_Right_RTD : FB_TempSensor;
         {attribute 'pytmc' := '
             pv: MR5K4:KBO:RTD:CHIN:R
             field: EGU C
             io: i
         '}
-        fM5K4_Chin_Right_RTD_val : REAL;
+        nM5K4_Chin_Right_RTD : FB_TempSensor;
+
         {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3204_M5K4]^RTD Inputs Channel 3^Value;
                                   .bUnderrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 3^Status^Underrange;
                                   .bOverrange := TIIB[EL3204_M5K4]^RTD Inputs Channel 3^Status^Overrange;
                                   .bError := TIIB[EL3204_M5K4]^RTD Inputs Channel 3^Status^Error'}
-        nM5K4_Chin_Tail_RTD : FB_TempSensor;
         {attribute 'pytmc' := '
             pv: MR5K4:KBO:RTD:TAIL
             field: EGU C
             io: i
         '}
-        fM5K4_Chin_Tail_RTD_val : REAL;
+        nM5K4_Chin_Tail_RTD : FB_TempSensor;
     END_VAR
 
 
@@ -1299,15 +1322,7 @@ Main
             nEncCntYM3K4  := ULINT_TO_UDINT(M13.nRawEncoderULINT);
             nEncCntrXM3K4 := ULINT_TO_UDINT(M14.nRawEncoderULINT);
         
-        // LAMP KB Flow Pressure Sensors
-            GVL_M2K4_RTD.fM2K4_Flow_1(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
-            GVL_M2K4_RTD.fM2K4_Flow_1_val := GVL_M2K4_RTD.fM2K4_Flow_1.fReal;
-            
-            GVL_M2K4_RTD.fM2K4_Flow_2(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
-            GVL_M2K4_RTD.fM2K4_Flow_2_val := GVL_M2K4_RTD.fM2K4_Flow_2.fReal;
-            
-            GVL_M2K4_RTD.fM2K4_Press_1(iTermBits:=12, fTermMax:=4.0, fTermMin:=0);
-            GVL_M2K4_RTD.fM2K4_Press_1_val := GVL_M2K4_RTD.fM2K4_Press_1.fReal;
+    ;
         
         // LAMP KB Bender RTDs
             fM2K4US_RTD_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_1);
@@ -1325,22 +1340,10 @@ Main
             fM3K4DS_RTD_1 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_1);
             fM3K4DS_RTD_2 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_2);
             fM3K4DS_RTD_3 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_3);
-        // DREAM KB Internal RTDs   
-            GVL_M4K4_RTD.nM4K4_Chin_Left_RTD();
-            GVL_M4K4_RTD.nM4K4_Chin_Right_RTD();
-            GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD();
 
-            GVL_M5K4_RTD.nM5K4_Chin_Left_RTD();
-            GVL_M5K4_RTD.nM5K4_Chin_Right_RTD();
-            GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD();
 
-            GVL_M4K4_RTD.fM4K4_Chin_Left_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.fTemp);
-            GVL_M4K4_RTD.fM4K4_Chin_Right_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.fTemp);
-            GVL_M4K4_RTD.fM4K4_Chin_Tail_RTD_val := LREAL_TO_REAL(GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.fTemp);
 
-            GVL_M5K4_RTD.fM5K4_Chin_Left_RTD_val := LREAL_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.fTemp);
-            GVL_M5K4_RTD.fM5K4_Chin_Right_RTD_val := LREAL_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.fTemp);
-            GVL_M5K4_RTD.fM5K4_Chin_Tail_RTD_val := LREAL_TO_REAL(GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.fTemp);
+
         // RTD not connected if T=0
             bM2K4US_RTD_1_Err := fM2K4US_RTD_1 = 0;
             bM2K4US_RTD_2_Err := fM2K4US_RTD_2 = 0;
@@ -1360,7 +1363,8 @@ Main
             M11.bHardwareEnable R= fM2K4DS_RTD_1 > 1000 OR bM2K4DS_RTD_1_Err;
             M15.bHardwareEnable R= fM3K4US_RTD_1 > 1000 OR bM3K4US_RTD_1_Err;
             M16.bHardwareEnable R= fM3K4DS_RTD_1 > 1000 OR bM3K4DS_RTD_1_Err;
-
+    // Environment
+        PRG_Environment();
     // States
         PRG_States();
     // PMPS
@@ -1381,8 +1385,7 @@ Related:
     * `GVL_M2K4_RTD`_
     * `GVL_M3K4_Constants`_
     * `GVL_M3K4_RTD`_
-    * `GVL_M4K4_RTD`_
-    * `GVL_M5K4_RTD`_
+    * `PRG_Environment`_
     * `PRG_PMPS`_
     * `PRG_States`_
     * `P_StripeProtections`_
@@ -1511,6 +1514,53 @@ PiezoSerial
 
 Related:
     * `GVL_M1K4`_
+
+
+PRG_Environment
+^^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_Environment
+    VAR
+    END_VAR
+    // MR1K4 Flow Pressure Sensors
+        GVL_M1K4.fM1K4_Flow_1(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
+        GVL_M1K4.fM1K4_Flow_1_val := GVL_M1K4.fM1K4_Flow_1.fReal;
+
+        GVL_M1K4.fM1K4_Flow_2(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
+        GVL_M1K4.fM1K4_Flow_2_val := GVL_M1K4.fM1K4_Flow_2.fReal;
+
+        GVL_M1K4.fM1K4_Press_1(iTermBits:=12, fTermMax:=4.0, fTermMin:=0);
+        GVL_M1K4.fM1K4_Press_1_val := GVL_M1K4.fM1K4_Press_1.fReal;
+
+        // LAMP KB Flow Pressure Sensors
+        GVL_M2K4_RTD.fM2K4_Flow_1(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
+        GVL_M2K4_RTD.fM2K4_Flow_1_val := GVL_M2K4_RTD.fM2K4_Flow_1.fReal;
+            
+        GVL_M2K4_RTD.fM2K4_Flow_2(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
+        GVL_M2K4_RTD.fM2K4_Flow_2_val := GVL_M2K4_RTD.fM2K4_Flow_2.fReal;
+            
+        GVL_M2K4_RTD.fM2K4_Press_1(iTermBits:=12, fTermMax:=4.0, fTermMin:=0);
+        GVL_M2K4_RTD.fM2K4_Press_1_val := GVL_M2K4_RTD.fM2K4_Press_1.fReal;
+
+        // DREAM KB Internal RTDs   
+        GVL_M4K4_RTD.nM4K4_Chin_Left_RTD();
+        GVL_M4K4_RTD.nM4K4_Chin_Right_RTD();
+        GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD();
+
+        GVL_M5K4_RTD.nM5K4_Chin_Left_RTD();
+        GVL_M5K4_RTD.nM5K4_Chin_Right_RTD();
+        GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD();
+
+    END_PROGRAM
+
+
+Related:
+    * `GVL_M1K4`_
+    * `GVL_M2K4_RTD`_
+    * `GVL_M4K4_RTD`_
+    * `GVL_M5K4_RTD`_
 
 
 PRG_PMPS
