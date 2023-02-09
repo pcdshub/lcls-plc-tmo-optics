@@ -17336,21 +17336,21 @@ Database Records
       - | io: input
 
 
-    * - MR1K4:KBO:FLOW:1_RBV
+    * - MR1K4:SOMS:FLOW:1_RBV
       - ai
       - GVL_M1K4.fM1K4_Flow_1_val
       - | field: EGU lpm
         | io: input
 
 
-    * - MR1K4:KBO:FLOW:2_RBV
+    * - MR1K4:SOMS:FLOW:2_RBV
       - ai
       - GVL_M1K4.fM1K4_Flow_2_val
       - | field: EGU lpm
         | io: input
 
 
-    * - MR1K4:KBO:PRESS:1_RBV
+    * - MR1K4:SOMS:PRESS:1_RBV
       - ai
       - GVL_M1K4.fM1K4_Press_1_val
       - | field: EGU bar
