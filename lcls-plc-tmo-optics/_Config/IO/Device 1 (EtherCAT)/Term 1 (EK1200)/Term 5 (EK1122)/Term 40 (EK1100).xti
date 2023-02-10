@@ -25,7 +25,7 @@
 		<Box File="EL3202-0010_M3K4DS2_M3K4DS3.xti" Id="41">
 			<EtherCAT PortABoxInfo="#x0100002e"/>
 		</Box>
-		<Box File="EL3054_FLOW_PRESS.xti" Id="47">
+		<Box File="EL3054_FWM_PRSM.xti" Id="47">
 			<EtherCAT PortABoxInfo="#x01000029"/>
 		</Box>
 		<Box File="Term 48 (EL9011).xti" Id="48">
