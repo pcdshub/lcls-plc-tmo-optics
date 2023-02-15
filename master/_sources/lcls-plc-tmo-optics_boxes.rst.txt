@@ -6296,8 +6296,8 @@ PDO RTD Inputs Channel 2 (Index #x1a01, Flags #x0011, SyncMan 3)
    </details>
 
 
-EL3054_FLOW_PRESS
-^^^^^^^^^^^^^^^^^
+EL3054_FWM_PRSM
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -6309,7 +6309,7 @@ EL3054_FLOW_PRESS
     :header: Name, Data
     :align: center
 
-    Name, EL3054_FLOW_PRESS
+    Name, EL3054_FWM_PRSM
     ID, 47
         BootStrapData, 0010f400f410f400
         SyncMan, 001080002600010001000000800080008000001026010000
@@ -6467,8 +6467,8 @@ Term 48 (EL9011)
    </details>
 
 
-EL3054_M1K4_FLOW_PRESS
-^^^^^^^^^^^^^^^^^^^^^^
+EL3054_M1K4_FWM_PRSM
+^^^^^^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -6480,7 +6480,7 @@ EL3054_M1K4_FLOW_PRESS
     :header: Name, Data
     :align: center
 
-    Name, EL3054_M1K4_FLOW_PRESS
+    Name, EL3054_M1K4_FWM_PRSM
     ID, 66
         BootStrapData, 0010f400f410f400
         SyncMan, 001080002600010001000000800080008000001026010000
