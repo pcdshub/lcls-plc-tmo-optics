@@ -22,26 +22,26 @@ VAR_GLOBAL
 	nM2K4DS_RTD_3 AT %I* : INT;
 	
     // M2K4 Flow Press Sensors
-    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FLOW_PRESS]^AI Standard Channel 1^Value'}
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 1^Value'}
     fM2K4_Flow_1 : FB_AnalogInput;
     {attribute 'pytmc' := '
-		pv: MR2K4:KBO:FLOW:1
+		pv: MR2K4:KBO:FWM:1
         field: EGU lpm
         io: i
     '}   
     fM2K4_Flow_1_val : LREAL;
-    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FLOW_PRESS]^AI Standard Channel 2^Value'}
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 2^Value'}
     fM2K4_Flow_2 : FB_AnalogInput;
     {attribute 'pytmc' := '
-		pv: MR2K4:KBO:FLOW:2
+		pv: MR2K4:KBO:FWM:2
         field: EGU lpm
         io: i
     '} 
     fM2K4_Flow_2_val : LREAL; 
-    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FLOW_PRESS]^AI Standard Channel 3^Value'}
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 3^Value'}
     fM2K4_Press_1 : FB_AnalogInput;
     {attribute 'pytmc' := '
-		pv: MR2K4:KBO:PRESS:1
+		pv: MR2K4:KBO:PRSM:1
         field: EGU bar
         io: i
     '}      
