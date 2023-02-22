@@ -11,6 +11,9 @@ VAR_INPUT
     
     stCoating1 : DUT_PositionState;
     stCoating2 : DUT_PositionState;
+
+    sPmpsDeviceName: STRING;
+    sTransitionKey: STRING;
 END_VAR
 VAR_OUTPUT
 	{attribute 'pytmc' := '

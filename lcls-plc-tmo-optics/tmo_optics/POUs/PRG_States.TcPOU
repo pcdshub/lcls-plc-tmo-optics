@@ -8,29 +8,7 @@ VAR
      io: io;
     '}
     fbMR1K4_Coating_States: FB_Coating_States; 
-    
-    MR1K4_Si : DUT_PositionState := (
-        bUseRawCounts := TRUE,
-        bMoveOk := TRUE,
-        bValid := TRUE,
-        sName := 'Si',  
-        nEncoderCount := 22000532,
-        fDelta := 100,
-        fVelocity := 150,
-        stBeamParams := PMPS_GVL.cstFullBeam,
-        nRequestAssertionID := 16#DAB2);
         
-    MR1K4_B4C : DUT_PositionState := (
-        bUseRawCounts := TRUE,
-        bMoveOk := TRUE,
-        bValid := TRUE,
-        sName := 'B4C',  
-        nEncoderCount := 5000141,
-        fDelta := 100,
-        fVelocity := 150,
-        stBeamParams := PMPS_GVL.cstFullBeam,
-        nRequestAssertionID := 16#DAB3);
-            
     {attribute 'pytmc' := '
      pv: MR2K4:KBO:COATING:STATE;
      io: io;
@@ -88,26 +66,37 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[MR1K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-MR1K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
+      <ST><![CDATA[//MR2K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+//MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
 
-MR2K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-MR2K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
-
-MR3K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
-MR3K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
+//MR3K4_Si.stBeamParams.neVRange := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680);
+//MR3K4_B4C.stBeamParams.neVRange := F_eVExcludeRange(2.3E3, 7E3);
     
 //MR1K4 Coating States with PMPS
+fbMR1K4_Coating_States.stCoating1.stPMPS.sPmpsState := 'MR1K4:SOMS-SILICON';
+fbMR1K4_Coating_States.stCoating1.bMoveOk := TRUE;
+fbMR1K4_Coating_States.stCoating1.bValid := TRUE;
+fbMR1K4_Coating_States.stCoating1.sName := 'Si';
+fbMR1K4_Coating_States.stCoating1.nEncoderCount := 22000532;
+fbMR1K4_Coating_States.stCoating1.fDelta := 100;
+fbMR1K4_Coating_States.stCoating1.fVelocity := 150;
+
+fbMR1K4_Coating_States.stCoating2.stPMPS.sPmpsState := 'MR1K4:SOMS-B4C';
+fbMR1K4_Coating_States.stCoating2.bMoveOk := TRUE;
+fbMR1K4_Coating_States.stCoating2.bValid := TRUE;
+fbMR1K4_Coating_States.stCoating2.sName := 'B4C';
+fbMR1K4_Coating_States.stCoating2.nEncoderCount := 5000141;
+fbMR1K4_Coating_States.stCoating2.fDelta := 100;
+fbMR1K4_Coating_States.stCoating2.fVelocity := 150;
+
 fbMR1K4_Coating_States(
-    bEnable := TRUE,
-    stCoating1 := MR1K4_Si,
-    stCoating2 := MR1K4_B4C,  
+    bEnable := TRUE,  
 	stMotionStage:=Main.M1,
     bBPOkAutoReset := TRUE,
     fbArbiter:=GVL_PMPS.g_fbArbiter1,
     fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
-    nTransitionAssertionID:= 16#DAB1, 
-	nUnknownAssertionID:= 16#DAB0);
+    sPmpsDeviceName:='MR1K4:SOMS',
+    sTransitionKey:= 'MR1K4:SOMS-TRANSITION');
     
 // MR2K4 Coating States with PMPS
 fbMR2K4_Coating_States(

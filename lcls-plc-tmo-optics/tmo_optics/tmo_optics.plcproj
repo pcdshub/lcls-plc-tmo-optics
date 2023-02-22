@@ -139,13 +139,13 @@
     <LibraryReference Include="LCLS General,2.7.0,SLAC">
       <Namespace>LCLS_General</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-motion,1.8.0,SLAC">
+    <LibraryReference Include="lcls-twincat-motion,2.0.1,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
     </LibraryReference>
     <LibraryReference Include="lcls-twincat-optics,0.3.1,SLAC">
       <Namespace>lcls_twincat_optics</Namespace>
     </LibraryReference>
-    <LibraryReference Include="PMPS,2.1.0,SLAC - LCLS">
+    <LibraryReference Include="PMPS,3.0.13,SLAC - LCLS">
       <Namespace>PMPS</Namespace>
     </LibraryReference>
   </ItemGroup>
@@ -154,7 +154,7 @@
       <Resolution>lcls-twincat-motion, 1.8.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
-      <Resolution>PMPS, 2.1.0 (SLAC - LCLS)</Resolution>
+      <Resolution>PMPS, 3.0.13 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="Tc2_MC2">
       <Resolution>Tc2_MC2, 3.3.42.0 (Beckhoff Automation GmbH)</Resolution>
