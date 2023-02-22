@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
-  <DUT Name="ENUM_Coating_States" Id="{05cb8cdb-5c23-4ac8-8acb-4957d82ceecd}">
+  <DUT Name="ENUM_Si_B4C_Coating_States" Id="{05cb8cdb-5c23-4ac8-8acb-4957d82ceecd}">
     <Declaration><![CDATA[{attribute 'qualified only'}
-TYPE ENUM_Coating_States :
+TYPE ENUM_Si_B4C_Coating_States :
 (
 	Unknown := 0,
     Si := 1,

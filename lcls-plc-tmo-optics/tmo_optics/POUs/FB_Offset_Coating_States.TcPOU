@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_Offset_Coating_States" Id="{5a60fd87-8354-48d2-b6d8-eefea618623e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Offset_Coating_States EXTENDS FB_PositionStateBase_WithPMPS
+VAR_INPUT
+    {attribute 'pytmc' := '
+      pv: SET
+      io: io
+    '}
+    enumSet : ENUM_Si_B4C_Coating_States;
+    
+    stCoating1 : DUT_PositionState;
+    stCoating2 : DUT_PositionState;
+    
+    sCoating1Name : STRING;
+    sCoating2Name : STRING;
+
+    //sPmpsDeviceName: STRING;
+    //sTransitionKey: STRING;
+END_VAR
+VAR_OUTPUT
+	{attribute 'pytmc' := '
+      pv: GET;
+      io: i;
+    '}
+    enumGet : ENUM_Si_B4C_Coating_States;
+  END_VAR
+VAR
+    fbStateDefaults: FB_PositionState_Defaults;
+	bCoatingInit : BOOL;
+END_VAR
+VAR CONSTANT
+    // These are the default values
+    // Set values on states prior to passing in for non-default values
+    // Units in Mircons
+    fDelta: LREAL := 100;
+    fVelocity: LREAL := 150;
+    fAccel: LREAL := 200;
+    fDecel: LREAL := 200;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[if NOT bCoatingInit THEN
+    bCoatingInit := TRUE;
+
+    //Coating 1
+    stCoating1.sName := sCoating1Name;
+    stCoating1.bValid := TRUE;
+    stCoating1.bMoveOk := TRUE;
+    stCoating1.bUseRawCounts := TRUE;
+    fbStateDefaults(
+        stPositionState:=stCoating1,
+        fVeloDefault:=fVelocity,
+        fDeltaDefault:=fDelta,
+        fAccelDefault:=fAccel,
+        fDecelDefault:=fDecel
+    );
+    
+    //Coating 2
+    stCoating2.sName := sCoating2Name;
+    stCoating2.bValid := TRUE;
+    stCoating2.bMoveOk := TRUE;
+    stCoating2.bUseRawCounts := TRUE;
+    fbStateDefaults(
+        stPositionState:=stCoating2,
+        fVeloDefault:=fVelocity,
+        fDeltaDefault:=fDelta,
+        fAccelDefault:=fAccel,
+        fDecelDefault:=fDecel
+    );
+	
+    arrStates[1] := stCoating1;
+	arrStates[2] := stCoating2;
+END_IF
+
+setState := enumSet;
+Exec();
+enumGet := getState;
+enumSet := setState;
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

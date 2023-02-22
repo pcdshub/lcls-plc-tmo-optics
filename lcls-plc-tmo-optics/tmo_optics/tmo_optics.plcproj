@@ -21,7 +21,7 @@
     <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DUTs\ENUM_Coating_States.TcDUT">
+    <Compile Include="DUTs\ENUM_Si_B4C_Coating_States.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GVLs\GVL_COM_Buffers.TcGVL">
@@ -74,7 +74,10 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\FB_Coating_States.TcPOU">
+    <Compile Include="POUs\FB_Offset_Coating_States.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\FB_KBO_Coating_States.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Main.TcPOU">
@@ -110,6 +113,10 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="lcls2-cc-lib">
+      <DefaultResolution>lcls2-cc-lib, * (SLAC)</DefaultResolution>
+      <Namespace>lcls2_cc_lib</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_MC2">
       <DefaultResolution>Tc2_MC2, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_MC2</Namespace>
@@ -151,7 +158,10 @@
   </ItemGroup>
   <ItemGroup>
     <PlaceholderResolution Include="lcls-twincat-motion">
-      <Resolution>lcls-twincat-motion, 1.8.0 (SLAC)</Resolution>
+      <Resolution>lcls-twincat-motion, 2.0.1 (SLAC)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="lcls2-cc-lib">
+      <Resolution>lcls2-cc-lib, * (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
       <Resolution>PMPS, 3.0.13 (SLAC - LCLS)</Resolution>
