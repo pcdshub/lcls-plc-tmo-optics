@@ -18,7 +18,12 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[MOTION_GVL.fbStandardPMPSDB(
+    io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1,
+    bEnable:=TRUE,
+    sPLCName:='plc-tmo-optics'
+);
+
 bMR1K1_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
             AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT];
 
