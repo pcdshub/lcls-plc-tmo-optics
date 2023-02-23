@@ -3,29 +3,29 @@
   <GVL Name="GVL_PMPS" Id="{84ee0124-cb77-4ec5-a065-7899e334a73f}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
-	// FFO for devices upstream of ST1K4 (M1K4)
-	{attribute 'pytmc' := '
-		pv: PLC:TMO:OPTICS:FFO:01
-	'}
-	{attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
-	g_FastFaultOutput1 : FB_HardwareFFOutput := (bAutoReset:=TRUE, i_sNetID:='172.21.92.73.1.1');
-	// FFO for devices downstream of ST1K4 (TMO hutch optics)
-	{attribute 'pytmc' := '
-		pv: PLC:TMO:OPTICS:FFO:02
-	'}
-	{attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
-	g_FastFaultOutput2 : FB_HardwareFFOutput := (bAutoReset:=TRUE, i_sNetID:='172.21.92.73.1.1');
+    // FFO for devices upstream of ST1K4 (M1K4)
+    {attribute 'pytmc' := '
+        pv: PLC:TMO:OPTICS:FFO:01
+    '}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
+    g_FastFaultOutput1 : FB_HardwareFFOutput := (bAutoReset:=TRUE, i_sNetID:='172.21.92.73.1.1');
+    // FFO for devices downstream of ST1K4 (TMO hutch optics)
+    {attribute 'pytmc' := '
+        pv: PLC:TMO:OPTICS:FFO:02
+    '}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
+    g_FastFaultOutput2 : FB_HardwareFFOutput := (bAutoReset:=TRUE, i_sNetID:='172.21.92.73.1.1');
 
-	// Arbiter for devices upstream of ST1K4 (M1K4)	
-	{attribute 'pytmc' := '
-		pv: PLC:TMO:OPTICS:ARB:01
-	'}
-	g_fbArbiter1 : FB_Arbiter(1);
-	// Arbiter for devices downstream of ST1K4 (TMO hutch optics)	
-	{attribute 'pytmc' := '
-		pv: PLC:TMO:OPTICS:ARB:02
-	'}
-	g_fbArbiter2 : FB_Arbiter(2);
+    // Arbiter for devices upstream of ST1K4 (M1K4)
+    {attribute 'pytmc' := '
+        pv: PLC:TMO:OPTICS:ARB:01
+    '}
+    g_fbArbiter1 : FB_Arbiter(1);
+    // Arbiter for devices downstream of ST1K4 (TMO hutch optics)
+    {attribute 'pytmc' := '
+        pv: PLC:TMO:OPTICS:ARB:02
+    '}
+    g_fbArbiter2 : FB_Arbiter(2);
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

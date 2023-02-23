@@ -7,19 +7,19 @@ VAR
      pv: MR1K4:SOMS:COATING:STATE;
      io: io;
     '}
-    fbMR1K4_Coating_States: FB_Offset_Coating_States := (bBPOkAutoReset:= TRUE); 
-        
+    fbMR1K4_Coating_States: FB_Offset_Coating_States := (bBPOkAutoReset:= TRUE);
+
     {attribute 'pytmc' := '
      pv: MR2K4:KBO:COATING:STATE;
      io: io;
     '}
-    fbMR2K4_Coating_States: FB_KBO_Coating_States := (bBPOkAutoReset:= TRUE);  
+    fbMR2K4_Coating_States: FB_KBO_Coating_States := (bBPOkAutoReset:= TRUE);
 
     {attribute 'pytmc' := '
      pv: MR3K4:KBO:COATING:STATE;
      io: io;
     '}
-    fbMR3K4_Coating_States: FB_KBO_Coating_States := (bBPOkAutoReset:= TRUE); 
+    fbMR3K4_Coating_States: FB_KBO_Coating_States := (bBPOkAutoReset:= TRUE);
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -43,19 +43,19 @@ fbMR3K4_Coating_States.stCoating2.stPMPS.sPmpsState := 'MR3K4:KBO-B4C';
 fbMR3K4_Coating_States.stCoating2.nEncoderCount := 8220029;
 
 fbMR1K4_Coating_States(
-    bEnable := TRUE,  
-	stMotionStage:=Main.M1,
+    bEnable := TRUE,
+    stMotionStage:=Main.M1,
     sCoating1Name:='Si',
     sCoating2Name:='B4C',
     fbArbiter:=GVL_PMPS.g_fbArbiter1,
     fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
     sPmpsDeviceName:='MR1K4:SOMS',
     sTransitionKey:= 'MR1K4:SOMS-TRANSITION');
-    
+
 // MR2K4 Coating States with PMPS
 fbMR2K4_Coating_States(
     bEnable := TRUE,
-	stMotionStage:=Main.M8,
+    stMotionStage:=Main.M8,
     sCoating1Name:='Si',
     sCoating2Name:='B4C',
     fbArbiter:=GVL_PMPS.g_fbArbiter2,
@@ -64,10 +64,10 @@ fbMR2K4_Coating_States(
     sTransitionKey:= 'MR2K4:KBO-TRANSITION'
 );
 
-// MR3K4 Coating States with PMPS       
+// MR3K4 Coating States with PMPS
 fbMR3K4_Coating_States(
     bEnable := TRUE,
-	stMotionStage:=Main.M12,
+    stMotionStage:=Main.M12,
     bVerticalCoating:=FALSE,
     sCoating1Name:='Si',
     sCoating2Name:='B4C',

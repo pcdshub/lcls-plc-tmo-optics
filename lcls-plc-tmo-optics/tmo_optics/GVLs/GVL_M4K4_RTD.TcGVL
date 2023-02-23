@@ -9,9 +9,9 @@ VAR_GLOBAL
                               .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Overrange;
                               .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 1^Status^Error'}
     {attribute 'pytmc' := '
-		pv: MR4K4:KBO:RTD:CHIN:L
-		field: EGU C
-		io: i
+        pv: MR4K4:KBO:RTD:CHIN:L
+        field: EGU C
+        io: i
     '}
     nM4K4_Chin_Left_RTD : FB_TempSensor;
 
@@ -20,9 +20,9 @@ VAR_GLOBAL
                               .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Overrange;
                               .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 2^Status^Error'}
     {attribute 'pytmc' := '
-		pv: MR4K4:KBO:RTD:CHIN:R
-		field: EGU C
-		io: i
+        pv: MR4K4:KBO:RTD:CHIN:R
+        field: EGU C
+        io: i
     '}
     nM4K4_Chin_Right_RTD : FB_TempSensor;
 
@@ -31,9 +31,9 @@ VAR_GLOBAL
                               .bOverrange := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Overrange;
                               .bError := TIIB[EL3204_M4K4]^RTD Inputs Channel 3^Status^Error'}
     {attribute 'pytmc' := '
-		pv: MR4K4:KBO:RTD:TAIL
-		field: EGU C
-		io: i
+        pv: MR4K4:KBO:RTD:TAIL
+        field: EGU C
+        io: i
     '}
     nM4K4_Chin_Tail_RTD : FB_TempSensor;
 END_VAR]]></Declaration>

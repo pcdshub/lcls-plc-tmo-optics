@@ -8,10 +8,10 @@ VAR_INPUT
       io: io
     '}
     enumSet : ENUM_Si_B4C_Coating_States;
-    
+
     stCoating1 : DUT_PositionState;
     stCoating2 : DUT_PositionState;
-    
+
     sCoating1Name : STRING;
     sCoating2Name : STRING;
 
@@ -19,7 +19,7 @@ VAR_INPUT
     //sTransitionKey: STRING;
 END_VAR
 VAR_OUTPUT
-	{attribute 'pytmc' := '
+    {attribute 'pytmc' := '
       pv: GET;
       io: i;
     '}
@@ -27,7 +27,7 @@ VAR_OUTPUT
   END_VAR
 VAR
     fbStateDefaults: FB_PositionState_Defaults;
-	bCoatingInit : BOOL;
+    bCoatingInit : BOOL;
 END_VAR
 VAR CONSTANT
     // These are the default values
@@ -55,7 +55,7 @@ END_VAR
         fAccelDefault:=fAccel,
         fDecelDefault:=fDecel
     );
-    
+
     //Coating 2
     stCoating2.sName := sCoating2Name;
     stCoating2.bValid := TRUE;
@@ -68,9 +68,9 @@ END_VAR
         fAccelDefault:=fAccel,
         fDecelDefault:=fDecel
     );
-	
+
     arrStates[1] := stCoating1;
-	arrStates[2] := stCoating2;
+    arrStates[2] := stCoating2;
 END_IF
 
 setState := enumSet;
