@@ -161,7 +161,7 @@
       <Resolution>lcls-twincat-motion, 2.0.1 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls2-cc-lib">
-      <Resolution>lcls2-cc-lib, * (SLAC)</Resolution>
+      <Resolution>lcls2-cc-lib, 2.0.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
       <Resolution>PMPS, 3.0.14 (SLAC - LCLS)</Resolution>
