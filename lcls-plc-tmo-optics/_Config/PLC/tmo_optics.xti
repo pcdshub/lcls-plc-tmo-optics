@@ -1337,15 +1337,11 @@ External Setpoint Generation:
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
-					<Name>Main.bDreamEnable1</Name>
+					<Name>lcls_twincat_motion.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 					<Comment>
-						<![CDATA[MR4K4 MR5K4 STO button]]>
+						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
 					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.bDreamEnable2</Name>
-					<Type>BOOL</Type>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
 					<Name>lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
@@ -2365,6 +2361,28 @@ External Setpoint Generation:
 						<![CDATA[ Connect to encoder "Position" input]]>
 					</Comment>
 					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.bDreamEnable1</Name>
+					<Comment>
+						<![CDATA[MR4K4 MR5K4 STO button]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.bDreamEnable2</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.LAMPbSTOEnable1</Name>
+					<Comment>
+						<![CDATA[Emergency Stop for LAMP KBs (M2K4 and M3K4)]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.LAMPbSTOEnable2</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M7.Axis.NcToPlc</Name>
@@ -5013,15 +5031,8 @@ External Setpoint Generation:
 					</SubVar>
 				</Var>
 				<Var>
-					<Name>Main.LAMPbSTOEnable1</Name>
-					<Comment>
-						<![CDATA[Emergency Stop for LAMP KBs (M2K4 and M3K4)]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.LAMPbSTOEnable2</Name>
-					<Type>BOOL</Type>
+					<Name>Main.fM3K4DS_RTD_3</Name>
+					<Type>REAL</Type>
 				</Var>
 				<Var>
 					<Name>Main.bM2K4US_RTD_1_Err</Name>
@@ -5033,10 +5044,6 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.bM2K4US_RTD_2_Err</Name>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fM3K4DS_RTD_3</Name>
-					<Type>REAL</Type>
 				</Var>
 				<Var>
 					<Name>Main.bM2K4US_RTD_3_Err</Name>
@@ -5084,10 +5091,6 @@ External Setpoint Generation:
 						<![CDATA[ M2K4 BENDER RTDs
  M2K4 US RTDs]]>
 					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -5229,14 +5232,11 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
-					<Comment>
-						<![CDATA[ M2K4 DS RTDs]]>
-					</Comment>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -5268,6 +5268,13 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
+					<Comment>
+						<![CDATA[ M2K4 DS RTDs]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_2</Name>
 					<Type>INT</Type>
 				</Var>
@@ -5281,10 +5288,6 @@ External Setpoint Generation:
 						<![CDATA[ M3K4 BENDER RTDs
  M3K4 US RTDs]]>
 					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M3K4_RTD.nM3K4US_RTD_2</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -5306,6 +5309,10 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Connect this input to the terminal]]>
 					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M3K4_RTD.nM3K4US_RTD_2</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
