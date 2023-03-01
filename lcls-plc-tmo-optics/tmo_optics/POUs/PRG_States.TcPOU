@@ -60,7 +60,7 @@ fbMR2K4_Coating_States(
     sCoating2Name:='B4C',
     fbArbiter:=GVL_PMPS.g_fbArbiter2,
     fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
-    sPmpsDeviceName:='MR2K4:KB0',
+    sPmpsDeviceName:='MR2K4:KBO',
     sTransitionKey:= 'MR2K4:KBO-TRANSITION'
 );
 
@@ -73,7 +73,7 @@ fbMR3K4_Coating_States(
     sCoating2Name:='B4C',
     fbArbiter:=GVL_PMPS.g_fbArbiter2,
     fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
-    sPmpsDeviceName:='MR3K4:KB0',
+    sPmpsDeviceName:='MR3K4:KBO',
     sTransitionKey:= 'MR3K4:KBO-TRANSITION'
 );]]></ST>
     </Implementation>
