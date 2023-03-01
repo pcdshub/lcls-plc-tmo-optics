@@ -4,8 +4,8 @@
 #         Project: lcls-plc-tmo-optics.tsproj
 #        PLC name: tmo_optics (tmo_optics Instance)
 # Generated using: pytmc 2.14.1
-# Project version: R1.1.0-73-gc8115bc
-#    Project hash: c8115bcbe271efc529288038089f9bfe92183533
+# Project version: R1.1.0-84-gb53e442
+#    Project hash: b53e4423717bbe060ab92f7121dda23715aab47c
 #     PLC IP/host: 172.21.92.63
 #      PLC Net ID: 172.21.92.63.1.1
 #  ** Production mode IOC **
@@ -13,6 +13,7 @@
 #
 # Libraries:
 #
+#   lcls2-cc-lib: * -> * (SLAC)
 #   Tc2_MC2: * -> 3.3.42.0 (Beckhoff Automation GmbH)
 #   Tc2_SerialCom: * -> 3.3.7.0 (Beckhoff Automation GmbH)
 #   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
@@ -41,7 +42,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.92.63")
 epicsEnvSet("AMSID",            "172.21.92.63.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "5903")
+epicsEnvSet("ADS_MAX_PARAMS",   "7836")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -482,8 +483,10 @@ dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,ID
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=3")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TMO:OPTICS")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TMO:OPTICS,PROJECT=lcls-plc-tmo-optics.tsproj,HASH=c8115bc,VERSION=R1.1.0-73-gc8115bc,PYTMC=2.14.1,PLC_HOST=172.21.92.63")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TMO:OPTICS,PROJECT=lcls-plc-tmo-optics.tsproj,HASH=b53e442,VERSION=R1.1.0-84-gb53e442,PYTMC=2.14.1,PLC_HOST=172.21.92.63")
 
+#   lcls2-cc-lib: * -> * (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TMO:OPTICS,DEPENDENCY=lcls2-cc-lib,VERSION=*,VENDOR=SLAC")
 #   Tc2_MC2: * -> 3.3.42.0 (Beckhoff Automation GmbH)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TMO:OPTICS,DEPENDENCY=Tc2_MC2,VERSION=3.3.42.0,VENDOR=Beckhoff Automation GmbH")
 #   Tc2_SerialCom: * -> 3.3.7.0 (Beckhoff Automation GmbH)
@@ -502,8 +505,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("tmo_optics.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 4903
-callbackSetQueueSize(11806)
+# Total records: 6836
+callbackSetQueueSize(15672)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:TMO:OPTICS:")
