@@ -11,10 +11,8 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/docs-versions-menu.js"></script>
@@ -235,6 +233,7 @@
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html#gvl-tcunit">GVL_TcUnit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html#gvl-teststructs">GVL_TestStructs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html#lcls-general">LCLS_General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html#lcls-twincat-motion">lcls_twincat_motion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html#lcls-twincat-optics">lcls_twincat_optics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html#main">Main</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_summary.html#motion-gvl">MOTION_GVL</a></li>
@@ -254,8 +253,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html">Data Types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#fb-coating-states">FB_Coating_States</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-general-fb-basicstats">LCLS_General.FB_BasicStats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#fb-kbo-coating-states">FB_KBO_Coating_States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#fb-offset-coating-states">FB_Offset_Coating_States</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-general-fb-listener">LCLS_General.FB_Listener</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-general-fb-loghandler">LCLS_General.FB_LogHandler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-general-fb-logmessage">LCLS_General.FB_LogMessage</a></li>
@@ -268,6 +267,9 @@
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-twincat-motion-fb-positionstatemove">lcls_twincat_motion.FB_PositionStateMove</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-twincat-motion-fb-positionstatepmps">lcls_twincat_motion.FB_PositionStatePMPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-twincat-motion-fb-positionstatepmps-base">lcls_twincat_motion.FB_PositionStatePMPS_Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-twincat-motion-fb-standard-pmpsdb">lcls_twincat_motion.FB_Standard_PMPSDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-twincat-motion-lcls-general-fb-basicstats">lcls_twincat_motion.LCLS_General.FB_BasicStats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-twincat-motion-lcls-general-fb-logmessage">lcls_twincat_motion.LCLS_General.FB_LogMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-twincat-optics-dut-homs">lcls_twincat_optics.DUT_HOMS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#lcls-twincat-optics-fb-rmswatch">lcls_twincat_optics.FB_RMSWatch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#pmps-fb-arbiter">PMPS.FB_Arbiter</a></li>
@@ -276,6 +278,7 @@
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#pmps-fb-subsystoarbiter-io">PMPS.FB_SubSysToArbiter_IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#pmps-st-beamparams">PMPS.ST_BeamParams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#pmps-st-bp-arbinternal">PMPS.ST_BP_ArbInternal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#pmps-st-dbstateparams">PMPS.ST_DbStateParams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#pmps-st-ff">PMPS.ST_FF</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#pmps-st-ffinfo">PMPS.ST_FFInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#pmps-st-ffoverride">PMPS.ST_FFOverride</a></li>
@@ -288,7 +291,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_epics.html#database-records">Database Records</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html">DUTs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html#enum-coating-states">ENUM_Coating_States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html#enum-si-b4c-coating-states">ENUM_Si_B4C_Coating_States</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html#gvls">GVLs</a><ul>
@@ -306,7 +309,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html#pous">POUs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html#fb-coating-states">FB_Coating_States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html#fb-kbo-coating-states">FB_KBO_Coating_States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html#fb-offset-coating-states">FB_Offset_Coating_States</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html#main">Main</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html#p-serial-com">P_Serial_Com</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lcls-plc-tmo-optics_tmo_optics_source.html#p-stripeprotections">P_StripeProtections</a></li>
