@@ -13,7 +13,7 @@ VAR
         //PMPS State Stage; bPowerSelf:=False
         M1 : DUT_MotionStage := (sName:='MR1K4-Coatings', fVelocity:=200.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=FALSE); // M1K4 Yup
         fbMotionStage_m1 : FB_MotionStage;
-    
+
         {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Ydwn]^STM Status^Status^Digital input 1;
                                   .bLimitBackwardEnable:=TIIB[EL7041-1000_M1K4_Ydwn]^STM Status^Status^Digital input 2'}
         {attribute 'pytmc' := '
@@ -21,7 +21,7 @@ VAR
         '}
         M2 : DUT_MotionStage := (fVelocity:=200.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // M1K4 Ydwn
         fbMotionStage_m2 : FB_MotionStage;
-    
+
         {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Xup]^STM Status^Status^Digital input 1;
                                   .bLimitBackwardEnable:=TIIB[EL7041-1000_M1K4_Xup]^STM Status^Status^Digital input 2'}
         {attribute 'pytmc' := '
@@ -29,7 +29,7 @@ VAR
         '}
         M3 : DUT_MotionStage := (fVelocity:=1000.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // M1K4 Xup
         fbMotionStage_m3 : FB_MotionStage;
-    
+
         {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Xdwn]^STM Status^Status^Digital input 1;
                                   .bLimitBackwardEnable:=TIIB[EL7041-1000_M1K4_Xdwn]^STM Status^Status^Digital input 2'}
         {attribute 'pytmc' := '
@@ -37,7 +37,7 @@ VAR
         '}
         M4 : DUT_MotionStage := (fVelocity:=1000.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // M1K4 Xdwn
         fbMotionStage_m4 : FB_MotionStage;
-    
+
         {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_PitchCoarse]^STM Status^Status^Digital input 1;
                                   .bLimitBackwardEnable:=TIIB[EL7041-1000_M1K4_PitchCoarse]^STM Status^Status^Digital input 2'}
         {attribute 'pytmc' := '
@@ -45,7 +45,7 @@ VAR
         '}
         M5 : DUT_MotionStage := (fVelocity := 150.0, bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M1K4 Pitch Stepper
         fbMotionStage_m5 : FB_MotionStage;
-    
+
         {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 1;
                                   .bLimitBackwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 2'}
         {attribute 'pytmc' := '
@@ -72,21 +72,21 @@ VAR
         fbYRMSErrorM1K4 : FB_RMSWatch;
         fMaxYRMSErrorM1K4 : LREAL;
         fMinYRMSErrorM1K4 : LREAL;
-    
+
         {attribute 'pytmc' := '
             pv: MR1K4:SOMS:ENC:X
         '}
         fbXRMSErrorM1K4 : FB_RMSWatch;
         fMaxXRMSErrorM1K4 : LREAL;
         fMinXRMSErrorM1K4 : LREAL;
-    
+
         {attribute 'pytmc' := '
             pv: MR1K4:SOMS:ENC:PITCH
         '}
         fbPitchRMSErrorM1K4 : FB_RMSWatch;
         fMaxPitchRMSErrorM1K4 : LREAL;
         fMinPitchRMSErrorM1K4 : LREAL;
-    
+
         {attribute 'pytmc' := '
             pv: MR1K4:SOMS:ENC:BENDER
         '}
@@ -170,7 +170,7 @@ VAR
 
     // Common
     fEncLeverArm_mm : LREAL := 513.0;
-    
+
 // LAMP KB Motors
     //MR2K4 X
         {attribute 'TcLinkTo' := '.bLimitForwardEnable :=TIIB[EL7041-0052_M2K4X]^STM Status^Status^Digital input 1;
@@ -293,7 +293,7 @@ VAR
         M19 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM19 : FB_MotionStage;
 
-    //M4K4 rX   
+    //M4K4 rX
         {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4rX]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable:=TIIB[EL7041-0052_M4K4rX]^STM Status^Status^Digital input 2;
                               .nRawEncoderULINT:=TIIB[EL5042_M4K4Z_M4K4rX]^FB Inputs Channel 2^Position'}
@@ -371,7 +371,7 @@ VAR
         '}
         fbBendUSRMSErrorM2K4 : FB_RMSWatch;
         fMaxBendUSRMSErrorM2K4 : LREAL;
-        fMinBendUSRMSErrorM2K4 : LREAL; 
+        fMinBendUSRMSErrorM2K4 : LREAL;
         //MR2K4 DS BENDER ENC RMS
         {attribute 'pytmc' := '
             pv: MR2K4:KBO:ENC:BEND:DS
@@ -406,7 +406,7 @@ VAR
         '}
         fbBendUSRMSErrorM3K4 : FB_RMSWatch;
         fMaxBendUSRMSErrorM3K4 : LREAL;
-        fMinBendUSRMSErrorM3K4 : LREAL; 
+        fMinBendUSRMSErrorM3K4 : LREAL;
         //MR3K4 DS BENDER ENC RMS
         {attribute 'pytmc' := '
             pv: MR3K4:KBO:ENC:BEND:DS
@@ -421,7 +421,7 @@ VAR
         fbXRMSErrorM4K4 : FB_RMSWatch;
         fMaxXRMSErrorM4K4 : LREAL;
         fMinXRMSErrorM4K4 : LREAL;
-        
+
         //MR4K4 Y ENC RMS
         {attribute 'pytmc' := '
             pv: MR4K4:KBO:ENC:Y
@@ -429,7 +429,7 @@ VAR
         fbYRMSErrorM4K4 : FB_RMSWatch;
         fMaxYRMSErrorM4K4 : LREAL;
         fMinYRMSErrorM4K4 : LREAL;
-        
+
         //MR4K4 Z ENC RMS
         {attribute 'pytmc' := '
             pv: MR4K4:KBO:ENC:Z
@@ -444,7 +444,7 @@ VAR
         fbPRMSErrorM4K4 : FB_RMSWatch;
         fMaxPRMSErrorM4K4 : LREAL;
         fMinPRMSErrorM4K4 : LREAL;
-        
+
         //MR5K4 X ENC RMS
         {attribute 'pytmc' := '
             pv: MR5K4:KBO:ENC:X
@@ -452,7 +452,7 @@ VAR
         fbXRMSErrorM5K4 : FB_RMSWatch;
         fMaxXRMSErrorM5K4 : LREAL;
         fMinXRMSErrorM5K4 : LREAL;
-        
+
         //MR5K4 Y ENC RMS
         {attribute 'pytmc' := '
             pv: MR5K4:KBO:ENC:Y
@@ -460,7 +460,7 @@ VAR
         fbYRMSErrorM5K4 : FB_RMSWatch;
         fMaxYRMSErrorM5K4 : LREAL;
         fMinYRMSErrorM5K4 : LREAL;
-        
+
         //MR5K4 Z ENC RMS
         {attribute 'pytmc' := '
             pv: MR5K4:KBO:ENC:Z
@@ -475,8 +475,8 @@ VAR
         fbPRMSErrorM5K4 : FB_RMSWatch;
         fMaxPRMSErrorM5K4 : LREAL;
         fMinPRMSErrorM5K4 : LREAL;
-    
-    
+
+
     // Encoder Reference Values
         //MR2K4 X ENC REF
         {attribute 'pytmc' := '
@@ -659,7 +659,7 @@ VAR
             io: i
         '}
         fM3K4DS_RTD_3 AT %I* : REAL;
-    
+
     // RTD error bit
         bM2K4US_RTD_1_Err AT %I*: BOOL;
         bM2K4US_RTD_2_Err AT %I*: BOOL;
@@ -704,11 +704,11 @@ END_VAR]]></Declaration>
     // No slave motion through Epics
     M2.bExecute := FALSE; // M1K4-Ydwn
     M4.bExecute := FALSE; // M1K4-Xdwn
-    
+
     // Convert nCurrGantry to um (smaller number) to read out in epics
         M1K4.fCurrGantryY_um := LINT_TO_REAL(M1K4.nCurrGantryY) / 1000.0;
         M1K4.fCurrGantryX_um := LINT_TO_REAL(M1K4.nCurrGantryX) / 1000.0;
-    
+
     // FB_MotionStage's for non-piezo axes
         fbMotionStage_m1(stMotionStage:=M1);
         fbMotionStage_m2(stMotionStage:=M2);
@@ -716,24 +716,24 @@ END_VAR]]></Declaration>
         fbMotionStage_m4(stMotionStage:=M4);
         fbMotionStage_m5(stMotionStage:=M5);
         fbMotionStage_m6(stMotionStage:=M6);
-    
+
     // Calculate Pitch RMS Error:
         fbYRMSErrorM1K4(stMotionStage:=M1,
                         fMaxRMSError=>fMaxYRMSErrorM1K4,
                         fMinRMSError=>fMinYRMSErrorM1K4);
-        
+
         fbXRMSErrorM1K4(stMotionStage:=M3,
                         fMaxRMSError=>fMaxXRMSErrorM1K4,
                         fMinRMSError=>fMinXRMSErrorM1K4);
-        
+
         fbPitchRMSErrorM1K4(stMotionStage:=M5,
                             fMaxRMSError=>fMaxPitchRMSErrorM1K4,
                             fMinRMSError=>fMinPitchRMSErrorM1K4);
-        
+
         fbBenderRMSErrorM1K4(stMotionStage:=M6,
                              fMaxRMSError=>fMaxBenderRMSErrorM1K4,
                              fMinRMSError=>fMinBenderRMSErrorM1K4);
-    
+
     // Pitch Control
         //fbM1K4PitchControl(Pitch:=GVL_M1K4.M1K4_Pitch,
                            //Stepper:=M5,
@@ -744,14 +744,14 @@ END_VAR]]></Declaration>
         //IF NOT M5.bHardwareEnable THEN
             //M5.fPosition := M5.stAxisStatus.fActPosition;
         //END_IF
-    
+
     // Raw Encoder Counts For Epics
         nEncCntYupM1K4 := ULINT_TO_UDINT(M1K4.fbRunHOMS.stYupEnc.Count);
         nEncCntYdwnM1K4 := ULINT_TO_UDINT(M1K4.fbRunHOMS.stYdwnEnc.Count);
         nEncCntXupM1K4 := ULINT_TO_UDINT(M1K4.fbRunHOMS.stXupEnc.Count);
         nEncCntXdwnM1K4 := ULINT_TO_UDINT(M1K4.fbRunHOMS.stXdwnEnc.Count);
         nEncCntPitchM1K4 := LINT_TO_UDINT(GVL_M1K4.M1K4_Pitch.diEncCnt);
-    
+
     // Encoder Reference Values For Epics
         nEncRefYupM1K4 := ULINT_TO_UDINT(GVL_M1K4_Constants.nYUP_ENC_REF);
         nEncRefYdwnM1K4 := ULINT_TO_UDINT(GVL_M1K4_Constants.nYDWN_ENC_REF);
@@ -762,7 +762,7 @@ END_VAR]]></Declaration>
                                  ParameterNumber:=MC_AxisParameter.AxisEncoderOffset,
                                  ReadMode:=READMODE_CYCLIC,
                                  Value=>fEncRefPitchM1K4_urad);
-        
+
         nEncRefPitchM1K4 := LREAL_TO_UDINT(ABS(fEncRefPitchM1K4_urad) * fEncLeverArm_mm);
 //////////////////////////////////////////////////////////
 //M2K4 and M3K4
@@ -781,7 +781,7 @@ END_VAR]]></Declaration>
         //MR3K4 BEND
             fbMotionStage_m15(stMotionStage:=M15);
             fbMotionStage_m16(stMotionStage:=M16);
-        
+
 //MR4K4 and MR5K4
             M17.bHardwareEnable := bDREAMEnable1 and bDREAMenable2;
             M18.bHardwareEnable := bDREAMEnable1 and bDREAMenable2;
@@ -801,8 +801,8 @@ END_VAR]]></Declaration>
             fbMotionStageM22(stMotionStage:=M22);
             fbMotionStageM23(stMotionStage:=M23);
             fbMotionStageM24(stMotionStage:=M24);
-            
-    
+
+
     // Calculate Pitch RMS Error for LAMP KBs:
         //MR2K4 X ENC RMS
         fbXRMSErrorM2K4(stMotionStage:=M7,
@@ -877,8 +877,8 @@ END_VAR]]></Declaration>
         fbPRMSErrorM5K4(stMotionStage:=M24,
                         fMaxRMSError=>fMaxPRMSErrorM5K4,
                         fMinRMSError=>fMinPRMSErrorM5K4);
-                         
-                         
+
+
     //STO for LAMP KBs
         //MR2K4
         M7.bHardwareEnable := LAMPbSTOEnable1 AND LAMPbSTOEnable2;
@@ -894,7 +894,7 @@ END_VAR]]></Declaration>
         //MR3K4 BEND
         M15.bHardwareEnable := LAMPbSTOEnable1 AND LAMPbSTOEnable2;
         M16.bHardwareEnable := LAMPbSTOEnable1 AND LAMPbSTOEnable2;
-    
+
     // LAMP KB Encoder Reference Values For Epics
         nEncRefXM2K4  := ULINT_TO_UDINT(GVL_M2K4_Constants.nM2K4X_ENC_REF);
         nEncRefYM2K4  := ULINT_TO_UDINT(GVL_M2K4_Constants.nM2K4Y_ENC_REF);
@@ -902,30 +902,30 @@ END_VAR]]></Declaration>
         nEncRefXM3K4  := ULINT_TO_UDINT(GVL_M3K4_Constants.nM3K4X_ENC_REF);
         nEncRefYM3K4  := ULINT_TO_UDINT(GVL_M3K4_Constants.nM3K4Y_ENC_REF);
         nEncRefrXM3K4 := ULINT_TO_UDINT(GVL_M3K4_Constants.nM3K4rX_ENC_REF);
-    
+
     // LAMP KB Encoder Count Values For Epics
         nEncCntXM2K4  := ULINT_TO_UDINT(M7.nRawEncoderULINT);
-        nEncCntYM2K4  := ULINT_TO_UDINT(M8.nRawEncoderULINT);   
+        nEncCntYM2K4  := ULINT_TO_UDINT(M8.nRawEncoderULINT);
         nEncCntrYM2K4 := ULINT_TO_UDINT(M9.nRawEncoderULINT);
         nEncCntXM3K4  := ULINT_TO_UDINT(M12.nRawEncoderULINT);
         nEncCntYM3K4  := ULINT_TO_UDINT(M13.nRawEncoderULINT);
         nEncCntrXM3K4 := ULINT_TO_UDINT(M14.nRawEncoderULINT);
-    
+
 ;
-    
+
     // LAMP KB Bender RTDs
         fM2K4US_RTD_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_1);
         fM2K4US_RTD_2 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_2);
         fM2K4US_RTD_3 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_3);
-        
+
         fM2K4DS_RTD_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4DS_RTD_1);
         fM2K4DS_RTD_2 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4DS_RTD_2);
         fM2K4DS_RTD_3 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4DS_RTD_3);
-        
+
         fM3K4US_RTD_1 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4US_RTD_1);
         fM3K4US_RTD_2 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4US_RTD_2);
         fM3K4US_RTD_3 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4US_RTD_3);
-        
+
         fM3K4DS_RTD_1 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_1);
         fM3K4DS_RTD_2 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_2);
         fM3K4DS_RTD_3 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_3);
@@ -946,7 +946,7 @@ END_VAR]]></Declaration>
         bM3K4DS_RTD_1_Err := fM3K4DS_RTD_1 = 0;
         bM3K4DS_RTD_2_Err := fM3K4DS_RTD_2 = 0;
         bM3K4DS_RTD_3_Err := fM3K4DS_RTD_3 = 0;
-    
+
     // LAMP KB Bender RTD interlocks
         M10.bHardwareEnable R= fM2K4US_RTD_1 > 1000 OR bM2K4US_RTD_1_Err;
         M11.bHardwareEnable R= fM2K4DS_RTD_1 > 1000 OR bM2K4DS_RTD_1_Err;
@@ -957,7 +957,7 @@ END_VAR]]></Declaration>
 // States
     PRG_States();
 // PMPS
-    PRG_PMPS(); 
+    PRG_PMPS();
     P_StripeProtections();
 ////////////////////////////////
 
