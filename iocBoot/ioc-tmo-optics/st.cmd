@@ -4,8 +4,8 @@
 #         Project: lcls-plc-tmo-optics.tsproj
 #        PLC name: tmo_optics (tmo_optics Instance)
 # Generated using: pytmc 2.14.1
-# Project version: R1.1.0-84-gb53e442
-#    Project hash: b53e4423717bbe060ab92f7121dda23715aab47c
+# Project version: R1.1.0-101-g8a2409b
+#    Project hash: 8a2409b56640c3a45e38515de093b052caaf9773
 #     PLC IP/host: 172.21.92.63
 #      PLC Net ID: 172.21.92.63.1.1
 #  ** Production mode IOC **
@@ -13,7 +13,7 @@
 #
 # Libraries:
 #
-#   lcls2-cc-lib: * -> * (SLAC)
+#   lcls2-cc-lib: * -> 2.0.0 (SLAC)
 #   Tc2_MC2: * -> 3.3.42.0 (Beckhoff Automation GmbH)
 #   Tc2_SerialCom: * -> 3.3.7.0 (Beckhoff Automation GmbH)
 #   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
@@ -479,14 +479,14 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 
 ## TwinCAT task, application, and project information databases ##
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=1")
-dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=2")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=3")
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=2")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TMO:OPTICS")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TMO:OPTICS,PROJECT=lcls-plc-tmo-optics.tsproj,HASH=b53e442,VERSION=R1.1.0-84-gb53e442,PYTMC=2.14.1,PLC_HOST=172.21.92.63")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TMO:OPTICS,PROJECT=lcls-plc-tmo-optics.tsproj,HASH=8a2409b,VERSION=R1.1.0-101-g8a2409b,PYTMC=2.14.1,PLC_HOST=172.21.92.63")
 
-#   lcls2-cc-lib: * -> * (SLAC)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TMO:OPTICS,DEPENDENCY=lcls2-cc-lib,VERSION=*,VENDOR=SLAC")
+#   lcls2-cc-lib: * -> 2.0.0 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TMO:OPTICS,DEPENDENCY=lcls2-cc-lib,VERSION=2.0.0,VENDOR=SLAC")
 #   Tc2_MC2: * -> 3.3.42.0 (Beckhoff Automation GmbH)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TMO:OPTICS,DEPENDENCY=Tc2_MC2,VERSION=3.3.42.0,VENDOR=Beckhoff Automation GmbH")
 #   Tc2_SerialCom: * -> 3.3.7.0 (Beckhoff Automation GmbH)
