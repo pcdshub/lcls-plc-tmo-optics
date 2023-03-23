@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_StateParams" Id="{c38de5a6-ef83-4e67-bfb2-f153ba789e9f}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_StateParams
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+    aMR1K4stDbStateParams : ARRAY[0..3] OF ST_DbStateParams;
+    aMR2K4stDbStateParams : ARRAY[0..3] OF ST_DbStateParams;
+    aMR3K4stDbStateParams : ARRAY[0..3] OF ST_DbStateParams;
+END_VAR
+VAR
+    bInit : BOOL := TRUE;
+    bExecute : BOOL;
+    fbGetBPs : FB_JsonDocToSafeBP;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bInit = TRUE THEN
+    bInit := FALSE;
+    bExecute := TRUE;
+    aMR1K4stDbStateParams[0].sPmpsState := 'MR1K4:SOMS-OUT';
+    aMR1K4stDbStateParams[1].sPmpsState := 'MR1K4:SOMS-TRANSITION';
+    aMR1K4stDbStateParams[2].sPmpsState := 'MR1K4:SOMS-B4C';
+    aMR1K4stDbStateParams[3].sPmpsState := 'MR1K4:SOMS-SILICON';
+ELSE
+    bExecute := FALSE;
+END_IF
+    
+fbGetBPs(bExecute := bExecute,
+         jsonDoc := PMPS_GVL.BP_jsonDoc,
+         sDeviceName:='MR1K4:SOMS',
+         io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
+         arrStates := aMR1K4stDbStateParams);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

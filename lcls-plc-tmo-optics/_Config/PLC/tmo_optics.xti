@@ -775,24 +775,24 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{0AAAD7B9-1E17-47C5-8E92-9DDF90852041}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
+			<Name GUID="{055EC267-94ED-4F20-8723-53D7371FD186}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
 			<BitSize>0</BitSize>
 			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
 			<Hides>
-				<Hide GUID="{515A0C68-6EAB-43BF-951B-4BAE74BD0FF2}"/>
+				<Hide GUID="{17A8C716-893F-4643-8B89-6FD0BA1AD2C6}"/>
 			</Hides>
 		</DataType>
 		<DataType>
-			<Name GUID="{7AF5324A-DFCD-428B-97B5-CDD3F5AAE406}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Name GUID="{5B585D53-D885-4600-9D8E-E98C60F3E173}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
 			<Comment>
-				<![CDATA[Renishaw BiSS-C absolute encoder used with an EL5042]]>
+				<![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]>
 			</Comment>
 			<BitSize>128</BitSize>
 			<SubItem>
 				<Name>Count</Name>
 				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
 				<Comment>
-					<![CDATA[Connect to encoder "Position" input]]>
+					<![CDATA[ Connect to encoder "Position" input]]>
 				</Comment>
 				<BitSize>64</BitSize>
 				<BitOffs>0</BitOffs>
@@ -805,9 +805,9 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>Status</Name>
-				<Type GUID="{0AAAD7B9-1E17-47C5-8E92-9DDF90852041}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
+				<Type GUID="{055EC267-94ED-4F20-8723-53D7371FD186}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
 				<Comment>
-					<![CDATA[Status struct placeholder]]>
+					<![CDATA[ Status struct placeholder]]>
 				</Comment>
 				<BitSize>0</BitSize>
 				<BitOffs>64</BitOffs>
@@ -816,13 +816,13 @@ External Setpoint Generation:
 				<Name>Ref</Name>
 				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
 				<Comment>
-					<![CDATA[Encoder zero position (useful for aligned position with gantries)]]>
+					<![CDATA[ Encoder zero position (useful for aligned position with gantries)]]>
 				</Comment>
 				<BitSize>64</BitSize>
 				<BitOffs>64</BitOffs>
 			</SubItem>
 			<Hides>
-				<Hide GUID="{83DB48CB-274E-4D70-AFAB-4B568CD748F6}"/>
+				<Hide GUID="{22430443-0687-40A2-9984-44A54C272166}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -2252,89 +2252,89 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Encoders]]>
 					</Comment>
-					<Type GUID="{7AF5324A-DFCD-428B-97B5-CDD3F5AAE406}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5B585D53-D885-4600-9D8E-E98C60F3E173}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
-							<![CDATA[Connect to encoder "Position" input]]>
+							<![CDATA[ Connect to encoder "Position" input]]>
 						</Comment>
 					</SubVar>
 					<SubVar>
 						<Name>Status</Name>
 						<Comment>
-							<![CDATA[Status struct placeholder]]>
+							<![CDATA[ Status struct placeholder]]>
 						</Comment>
 					</SubVar>
 					<SubVar>
 						<Name>Ref</Name>
 						<Comment>
-							<![CDATA[Encoder zero position (useful for aligned position with gantries)]]>
+							<![CDATA[ Encoder zero position (useful for aligned position with gantries)]]>
 						</Comment>
 					</SubVar>
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{7AF5324A-DFCD-428B-97B5-CDD3F5AAE406}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5B585D53-D885-4600-9D8E-E98C60F3E173}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
-							<![CDATA[Connect to encoder "Position" input]]>
+							<![CDATA[ Connect to encoder "Position" input]]>
 						</Comment>
 					</SubVar>
 					<SubVar>
 						<Name>Status</Name>
 						<Comment>
-							<![CDATA[Status struct placeholder]]>
+							<![CDATA[ Status struct placeholder]]>
 						</Comment>
 					</SubVar>
 					<SubVar>
 						<Name>Ref</Name>
 						<Comment>
-							<![CDATA[Encoder zero position (useful for aligned position with gantries)]]>
+							<![CDATA[ Encoder zero position (useful for aligned position with gantries)]]>
 						</Comment>
 					</SubVar>
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{7AF5324A-DFCD-428B-97B5-CDD3F5AAE406}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5B585D53-D885-4600-9D8E-E98C60F3E173}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
-							<![CDATA[Connect to encoder "Position" input]]>
+							<![CDATA[ Connect to encoder "Position" input]]>
 						</Comment>
 					</SubVar>
 					<SubVar>
 						<Name>Status</Name>
 						<Comment>
-							<![CDATA[Status struct placeholder]]>
+							<![CDATA[ Status struct placeholder]]>
 						</Comment>
 					</SubVar>
 					<SubVar>
 						<Name>Ref</Name>
 						<Comment>
-							<![CDATA[Encoder zero position (useful for aligned position with gantries)]]>
+							<![CDATA[ Encoder zero position (useful for aligned position with gantries)]]>
 						</Comment>
 					</SubVar>
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{7AF5324A-DFCD-428B-97B5-CDD3F5AAE406}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5B585D53-D885-4600-9D8E-E98C60F3E173}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
-							<![CDATA[Connect to encoder "Position" input]]>
+							<![CDATA[ Connect to encoder "Position" input]]>
 						</Comment>
 					</SubVar>
 					<SubVar>
 						<Name>Status</Name>
 						<Comment>
-							<![CDATA[Status struct placeholder]]>
+							<![CDATA[ Status struct placeholder]]>
 						</Comment>
 					</SubVar>
 					<SubVar>
 						<Name>Ref</Name>
 						<Comment>
-							<![CDATA[Encoder zero position (useful for aligned position with gantries)]]>
+							<![CDATA[ Encoder zero position (useful for aligned position with gantries)]]>
 						</Comment>
 					</SubVar>
 				</Var>
