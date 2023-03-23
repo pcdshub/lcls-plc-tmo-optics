@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{1DB5F040-BD65-9B92-737D-2CE8881B823D}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{DD3A764D-C58A-3196-7ED3-46C350D7725F}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -55694,7 +55694,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
     </DataType>
     <DataType>
       <Name>FB_StateParams</Name>
-      <BitSize>248960</BitSize>
+      <BitSize>358400</BitSize>
       <SubItem>
         <Name>aMR1K4stDbStateParams</Name>
         <Type Namespace="PMPS">ST_DbStateParams</Type>
@@ -55768,10 +55768,16 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         <BitOffs>139456</BitOffs>
       </SubItem>
       <SubItem>
+        <Name>fbGetBPsMR3K4</Name>
+        <Type Namespace="PMPS">FB_JsonDocToSafeBP</Type>
+        <BitSize>109440</BitSize>
+        <BitOffs>248896</BitOffs>
+      </SubItem>
+      <SubItem>
         <Name>nJSONLoaded</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000071}">UXINT</Type>
         <BitSize>32</BitSize>
-        <BitOffs>248896</BitOffs>
+        <BitOffs>358336</BitOffs>
         <Default>
           <Value>0</Value>
         </Default>
@@ -55847,7 +55853,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>SerialIO Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84279296</ByteSize>
+          <ByteSize>84344832</ByteSize>
           <Symbol>
             <Name>GVL_SerialIO.Serial_stComIn_M1K4</Name>
             <Comment>Better have your inputs and outputs!
@@ -55870,7 +55876,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>SerialIO Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84279296</ByteSize>
+          <ByteSize>84344832</ByteSize>
           <Symbol>
             <Name>GVL_SerialIO.Serial_stComOut_M1K4</Name>
             <BitSize>192</BitSize>
@@ -55891,7 +55897,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>SerialIO Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84279296</ByteSize>
+          <ByteSize>84344832</ByteSize>
           <Symbol>
             <Name>P_Serial_Com.fbSerialLineControl_EL6001_M1K4</Name>
             <BitSize>10432</BitSize>
@@ -55989,7 +55995,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="Internal" CreateSymbols="true">19</AreaNo>
           <Name>PiezoDriver Internal</Name>
           <ContextId>1</ContextId>
-          <ByteSize>84279296</ByteSize>
+          <ByteSize>84344832</ByteSize>
           <Symbol>
             <Name>PiezoSerial.fbE621SerialDriver_M1K4</Name>
             <Comment>PI Serial</Comment>
@@ -56085,7 +56091,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="InputDst" CreateSymbols="true">32</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84279296</ByteSize>
+          <ByteSize>84344832</ByteSize>
           <Symbol>
             <Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
             <Comment> AMS Net ID used for FB_EcatDiag, among others </Comment>
@@ -60934,7 +60940,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">33</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84279296</ByteSize>
+          <ByteSize>84344832</ByteSize>
           <Symbol>
             <Name>Main.M1.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
@@ -62124,7 +62130,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="Internal" CreateSymbols="true">35</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84279296</ByteSize>
+          <ByteSize>84344832</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -72895,16 +72901,16 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
           </Symbol>
           <Symbol>
             <Name>PRG_PMPS.fbOutputStates</Name>
-            <BitSize>248960</BitSize>
+            <BitSize>358400</BitSize>
             <BaseType>FB_StateParams</BaseType>
-            <BitOffs>672573568</BitOffs>
+            <BitOffs>672822528</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">36</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84279296</ByteSize>
+          <ByteSize>84344832</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -72984,7 +72990,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2023-03-23T14:58:34</Value>
+          <Value>2023-03-23T15:10:49</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
@@ -72992,7 +72998,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>82894848</Value>
+          <Value>82911232</Value>
         </Property>
       </Properties>
     </Module>

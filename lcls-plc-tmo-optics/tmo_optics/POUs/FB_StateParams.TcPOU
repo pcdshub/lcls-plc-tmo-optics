@@ -14,6 +14,7 @@ VAR
     bExecute : BOOL;
     fbGetBPsMR1K4 : FB_JsonDocToSafeBP;
     fbGetBPsMR2K4 : FB_JsonDocToSafeBP;
+    fbGetBPsMR3K4 : FB_JsonDocToSafeBP;
     nJSONLoaded : UXINT := 16#00;
 END_VAR
 ]]></Declaration>
@@ -34,6 +35,11 @@ aMR2K4stDbStateParams[1].sPmpsState := 'MR2K4:KBO-TRANSITION';
 aMR2K4stDbStateParams[2].sPmpsState := 'MR2K4:KBO-B4C';
 aMR2K4stDbStateParams[3].sPmpsState := 'MR2K4:KBO-SILICON';
 
+aMR3K4stDbStateParams[0].sPmpsState := 'MR3K4:KBO-OUT';
+aMR3K4stDbStateParams[1].sPmpsState := 'MR3K4:KBO-TRANSITION';
+aMR3K4stDbStateParams[2].sPmpsState := 'MR3K4:KBO-B4C';
+aMR3K4stDbStateParams[3].sPmpsState := 'MR3K4:KBO-SILICON';
+
 fbGetBPsMR1K4(bExecute := bExecute,
         jsonDoc := PMPS_GVL.BP_jsonDoc,
         sDeviceName:='MR1K4:SOMS',
@@ -45,6 +51,12 @@ fbGetBPsMR2K4(bExecute := bExecute,
         sDeviceName:='MR2K4:KBO',
         io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
         arrStates := aMR2K4stDbStateParams);
+
+fbGetBPsMR3K4(bExecute := bExecute,
+        jsonDoc := PMPS_GVL.BP_jsonDoc,
+        sDeviceName:='MR3K4:KBO',
+        io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
+        arrStates := aMR3K4stDbStateParams);
 
 bExecute := FALSE;]]></ST>
     </Implementation>
