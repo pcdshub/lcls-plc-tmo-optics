@@ -16,6 +16,44 @@ VAR
     fbGetBPsMR2K4 : FB_JsonDocToSafeBP;
     fbGetBPsMR3K4 : FB_JsonDocToSafeBP;
     nJSONLoaded : UXINT := 16#00;
+
+    nMR1K4B4cBitMask : DWORD := 0;
+    nMR1K4SiBitMask : DWORD := 0;
+
+    nMR2K4B4cBitMask : DWORD := 0;
+    nMR2K4SiBitMask : DWORD := 0;
+
+    nMR3K4B4cBitMask : DWORD := 0;
+    nMR3K4SiBitMask : DWORD := 0;
+
+    nneVRangeInit : DWORD := 0;
+
+    fbStripProtMR1K4 : FB_MirrorTwoCoatingProtection := (
+        sDevName := 'MR1K4',
+        nUpperCoatingBoundary := 19998960,
+        nUpperCoatingBitmask := nMR1K4SiBitMask,
+        sUpperCoatingType := 'Si',
+        nLowerCoatingBoundary := 15998960,
+        nLowerCoatingBitMask := nMR1K4B4cBitMask,
+        sLowerCoatingType := 'B4C');
+
+     fbStripProtMR2K4 : FB_MirrorTwoCoatingProtection := (
+        sDevName := 'MR2K4',
+        nUpperCoatingBoundary := 7776781,
+        nUpperCoatingBitmask := nMR2K4SiBitMask,
+        sUpperCoatingType := 'Si',
+        nLowerCoatingBoundary := 6976835,
+        nLowerCoatingBitMask := nMR2K4B4cBitMask,
+        sLowerCoatingType := 'B4C');
+
+    fbStripProtMR3K4 : FB_MirrorTwoCoatingProtection := (
+        sDevName := 'MR3K4',
+        nUpperCoatingBoundary := 5620000,
+        nUpperCoatingBitmask := nMR3K4SiBitMask,
+        sUpperCoatingType := 'B4C',
+        nLowerCoatingBoundary := 4820000,
+        nLowerCoatingBitMask := nMR3K4B4cBitMask,
+        sLowerCoatingType := 'Si');
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -46,17 +84,49 @@ fbGetBPsMR1K4(bExecute := bExecute,
         io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
         arrStates := aMR1K4stDbStateParams);
 
+if aMR1K4stDbStateParams[2].bBeamParamsLoaded and aMR1K4stDbStateParams[3].bBeamParamsLoaded THEN
+    nMR1K4B4cBitMask := aMR1K4stDbStateParams[2].stBeamParams.neVRange;
+    nMR1K4SiBitMask := aMR1K4stDbStateParams[3].stBeamParams.neVRange;
+END_IF
+
 fbGetBPsMR2K4(bExecute := bExecute,
         jsonDoc := PMPS_GVL.BP_jsonDoc,
         sDeviceName:='MR2K4:KBO',
-        io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
+        io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
         arrStates := aMR2K4stDbStateParams);
+
+if aMR2K4stDbStateParams[2].bBeamParamsLoaded and aMR2K4stDbStateParams[3].bBeamParamsLoaded THEN
+    nMR2K4B4cBitMask := aMR2K4stDbStateParams[2].stBeamParams.neVRange;
+    nMR2K4SiBitMask := aMR2K4stDbStateParams[3].stBeamParams.neVRange;
+END_IF
 
 fbGetBPsMR3K4(bExecute := bExecute,
         jsonDoc := PMPS_GVL.BP_jsonDoc,
         sDeviceName:='MR3K4:KBO',
-        io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
+        io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput2,
         arrStates := aMR3K4stDbStateParams);
+
+if aMR3K4stDbStateParams[2].bBeamParamsLoaded and aMR3K4stDbStateParams[3].bBeamParamsLoaded THEN
+    nMR3K4B4cBitMask := aMR3K4stDbStateParams[2].stBeamParams.neVRange;
+    nMR3K4SiBitMask := aMR3K4stDbStateParams[3].stBeamParams.neVRange;
+END_IF
+
+fbStripProtMR1K4(FFO:=GVL_PMPS.g_FastFaultOutput1,
+                nCurrentEncoderCount := MAIN.nEncCntYupM1K4,
+                nUpperCoatingBitMask := nMR1K4SiBitMask,
+                nLowerCoatingBitMask := nMR1K4B4cBitMask,
+                neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
+fbStripProtMR2K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
+                nUpperCoatingBitMask := nMR2K4SiBitMask,
+                nLowerCoatingBitMask := nMR2K4B4cBitMask,
+                nCurrentEncoderCount := MAIN.nEncCntYM2K4,
+                neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
+
+fbStripProtMR3K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
+                nUpperCoatingBitMask := nMR3K4SiBitMask,
+                nLowerCoatingBitMask := nMR3K4B4cBitMask,
+                nCurrentEncoderCount := MAIN.nEncCntXM3K4,
+                neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
 
 bExecute := FALSE;]]></ST>
     </Implementation>
