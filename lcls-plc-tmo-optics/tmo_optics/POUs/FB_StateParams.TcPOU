@@ -10,28 +10,43 @@ VAR_OUTPUT
     aMR3K4stDbStateParams : ARRAY[0..3] OF ST_DbStateParams;
 END_VAR
 VAR
-    bInit : BOOL := TRUE;
+    bInit : BOOL;
     bExecute : BOOL;
-    fbGetBPs : FB_JsonDocToSafeBP;
+    fbGetBPsMR1K4 : FB_JsonDocToSafeBP;
+    fbGetBPsMR2K4 : FB_JsonDocToSafeBP;
+    nJSONLoaded : UXINT := 16#00;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF bInit = TRUE THEN
-    bInit := FALSE;
+      <ST><![CDATA[//takes time to get the json doc, about 10 cycles
+IF PMPS_GVL.BP_jsonDoc > nJSONLoaded and NOT bInit THEN
+    bInit := TRUE;
     bExecute := TRUE;
-    aMR1K4stDbStateParams[0].sPmpsState := 'MR1K4:SOMS-OUT';
-    aMR1K4stDbStateParams[1].sPmpsState := 'MR1K4:SOMS-TRANSITION';
-    aMR1K4stDbStateParams[2].sPmpsState := 'MR1K4:SOMS-B4C';
-    aMR1K4stDbStateParams[3].sPmpsState := 'MR1K4:SOMS-SILICON';
-ELSE
-    bExecute := FALSE;
 END_IF
-    
-fbGetBPs(bExecute := bExecute,
-         jsonDoc := PMPS_GVL.BP_jsonDoc,
-         sDeviceName:='MR1K4:SOMS',
-         io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
-         arrStates := aMR1K4stDbStateParams);]]></ST>
+
+aMR1K4stDbStateParams[0].sPmpsState := 'MR1K4:SOMS-OUT';
+aMR1K4stDbStateParams[1].sPmpsState := 'MR1K4:SOMS-TRANSITION';
+aMR1K4stDbStateParams[2].sPmpsState := 'MR1K4:SOMS-B4C';
+aMR1K4stDbStateParams[3].sPmpsState := 'MR1K4:SOMS-SILICON';
+
+aMR2K4stDbStateParams[0].sPmpsState := 'MR2K4:KBO-OUT';
+aMR2K4stDbStateParams[1].sPmpsState := 'MR2K4:KBO-TRANSITION';
+aMR2K4stDbStateParams[2].sPmpsState := 'MR2K4:KBO-B4C';
+aMR2K4stDbStateParams[3].sPmpsState := 'MR2K4:KBO-SILICON';
+
+fbGetBPsMR1K4(bExecute := bExecute,
+        jsonDoc := PMPS_GVL.BP_jsonDoc,
+        sDeviceName:='MR1K4:SOMS',
+        io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
+        arrStates := aMR1K4stDbStateParams);
+
+fbGetBPsMR2K4(bExecute := bExecute,
+        jsonDoc := PMPS_GVL.BP_jsonDoc,
+        sDeviceName:='MR2K4:KBO',
+        io_fbFFHWO:=GVL_PMPS.g_FastFaultOutput1,
+        arrStates := aMR2K4stDbStateParams);
+
+bExecute := FALSE;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
