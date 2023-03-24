@@ -49,10 +49,10 @@ VAR
     fbStripProtMR3K4 : FB_MirrorTwoCoatingProtection := (
         sDevName := 'MR3K4',
         nUpperCoatingBoundary := 5620000,
-        nUpperCoatingBitmask := nMR3K4SiBitMask,
+        nUpperCoatingBitmask := nMR3K4B4cBitMask,
         sUpperCoatingType := 'B4C',
         nLowerCoatingBoundary := 4820000,
-        nLowerCoatingBitMask := nMR3K4B4cBitMask,
+        nLowerCoatingBitMask := nMR3K4SiBitMask,
         sLowerCoatingType := 'Si');
 END_VAR
 ]]></Declaration>
@@ -123,8 +123,8 @@ fbStripProtMR2K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
 
 fbStripProtMR3K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
-                nUpperCoatingBitMask := nMR3K4SiBitMask,
-                nLowerCoatingBitMask := nMR3K4B4cBitMask,
+                nUpperCoatingBitMask := nMR3K4B4cBitMask,
+                nLowerCoatingBitMask := nMR3K4SiBitMask,
                 nCurrentEncoderCount := MAIN.nEncCntXM3K4,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
 
