@@ -13,20 +13,24 @@ VAR
         i_Desc := 'Subordinate fast fault group, will clear on its own otherwise something is misconfigured in the diagnostic',
         i_TypeCode := 16#D);
 
-    fbOutputStates : FB_StateParams;
+    //fbOutputStates : FB_StateParams;
 
     bMR1K1_IN : BOOL;
     bST3K4_IN : BOOL;
+    nJSONLoaded : UXINT := 16#00;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[MOTION_GVL.fbStandardPMPSDB(
     io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1,
     bEnable:=TRUE,
-    sPLCName:='plc-tmo-optics'
+    sPLCName:='plc-tmo-optics',
+    bRefreshBPs:=GVL_PMPS.bRefreshBPs,
 );
 
-fbOutputStates();
+//fbOutputStates(bRefreshCoatingBPs:=GVL_PMPS.bRefreshBPs);
+// Wait for JSON DOC to reload before setting refresh false.
+P_StripeProtections();
 
 bMR1K1_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
             AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT];
@@ -44,7 +48,12 @@ ffFFO2ToFFO1(i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, io_fbFFHWO :=
 GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto:= bMR1K1_IN);
 
 fb_vetoArbiter(bVeto := GVL_PMPS.g_FastFaultOutput2.i_xVeto, HigherAuthority := GVL_PMPS.g_fbArbiter1, LowerAuthority:= GVL_PMPS.g_fbArbiter2,
-    FFO:= GVL_PMPS.g_FastFaultOutput1);]]></ST>
+    FFO:= GVL_PMPS.g_FastFaultOutput1);
+
+// Wait for the JSON DOC to reload before setting refresh BPs False
+IF PMPS_GVL.BP_jsonDoc > nJSONLoaded THEN
+    GVL_PMPS.bRefreshBPs := FALSE;
+END_IF]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

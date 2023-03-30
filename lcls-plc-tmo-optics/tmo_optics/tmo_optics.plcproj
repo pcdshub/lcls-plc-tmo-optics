@@ -80,9 +80,6 @@
     <Compile Include="POUs\FB_KBO_Coating_States.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\FB_StateParams.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\Main.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -149,10 +146,10 @@
     <LibraryReference Include="LCLS General,2.8.1,SLAC">
       <Namespace>LCLS_General</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-motion,2.0.1,SLAC">
+    <LibraryReference Include="lcls-twincat-motion,0.0.0,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-optics,0.3.1,SLAC">
+    <LibraryReference Include="lcls-twincat-optics,0.0.0,SLAC">
       <Namespace>lcls_twincat_optics</Namespace>
     </LibraryReference>
     <LibraryReference Include="PMPS,3.0.14,SLAC - LCLS">
@@ -161,7 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <PlaceholderResolution Include="lcls-twincat-motion">
-      <Resolution>lcls-twincat-motion, 2.0.1 (SLAC)</Resolution>
+      <Resolution>lcls-twincat-motion, 0.0.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls2-cc-lib">
       <Resolution>lcls2-cc-lib, 2.0.0 (SLAC)</Resolution>

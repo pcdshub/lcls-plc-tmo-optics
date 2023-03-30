@@ -3,6 +3,7 @@
   <POU Name="FB_StateParams" Id="{c38de5a6-ef83-4e67-bfb2-f153ba789e9f}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_StateParams
 VAR_INPUT
+    bRefreshCoatingBPs : BOOL;
 END_VAR
 VAR_OUTPUT
     aMR1K4stDbStateParams : ARRAY[0..3] OF ST_DbStateParams;
@@ -17,6 +18,7 @@ VAR
     fbGetBPsMR3K4 : FB_JsonDocToSafeBP;
     nJSONLoaded : UXINT := 16#00;
 
+    nCountRefreshAttempts : DWORD := 0;
     nMR1K4B4cBitMask : DWORD := 0;
     nMR1K4SiBitMask : DWORD := 0;
 
@@ -25,8 +27,6 @@ VAR
 
     nMR3K4B4cBitMask : DWORD := 0;
     nMR3K4SiBitMask : DWORD := 0;
-
-    nneVRangeInit : DWORD := 0;
 
     fbStripProtMR1K4 : FB_MirrorTwoCoatingProtection := (
         sDevName := 'MR1K4',
@@ -61,6 +61,9 @@ END_VAR
 IF PMPS_GVL.BP_jsonDoc > nJSONLoaded and NOT bInit THEN
     bInit := TRUE;
     bExecute := TRUE;
+ELSIF PMPS_GVL.BP_jsonDoc > nJSONLoaded and bRefreshCoatingBPs THEN
+    bExecute := TRUE;
+    nCountRefreshAttempts := nCountRefreshAttempts + 1;
 END_IF
 
 aMR1K4stDbStateParams[0].sPmpsState := 'MR1K4:SOMS-OUT';
@@ -110,21 +113,15 @@ if aMR3K4stDbStateParams[2].bBeamParamsLoaded and aMR3K4stDbStateParams[3].bBeam
     nMR3K4B4cBitMask := aMR3K4stDbStateParams[2].stBeamParams.neVRange;
     nMR3K4SiBitMask := aMR3K4stDbStateParams[3].stBeamParams.neVRange;
 END_IF
-
 fbStripProtMR1K4(FFO:=GVL_PMPS.g_FastFaultOutput1,
                 nCurrentEncoderCount := MAIN.nEncCntYupM1K4,
-                nUpperCoatingBitMask := nMR1K4SiBitMask,
-                nLowerCoatingBitMask := nMR1K4B4cBitMask,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
+
 fbStripProtMR2K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
-                nUpperCoatingBitMask := nMR2K4SiBitMask,
-                nLowerCoatingBitMask := nMR2K4B4cBitMask,
                 nCurrentEncoderCount := MAIN.nEncCntYM2K4,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
 
 fbStripProtMR3K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
-                nUpperCoatingBitMask := nMR3K4B4cBitMask,
-                nLowerCoatingBitMask := nMR3K4SiBitMask,
                 nCurrentEncoderCount := MAIN.nEncCntXM3K4,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
 
