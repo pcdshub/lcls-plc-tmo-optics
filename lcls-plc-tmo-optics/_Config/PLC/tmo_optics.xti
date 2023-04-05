@@ -5079,18 +5079,6 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
-					<Comment>
-						<![CDATA[ M2K4 BENDER RTDs
- M2K4 US RTDs]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>PRG_PMPS.fbArbiterIO.i_stCurrentBP</Name>
 					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
 					<SubVar>
@@ -5229,22 +5217,15 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
 					<Comment>
-						<![CDATA[ M2K4 DS RTDs]]>
+						<![CDATA[ M2K4 BENDER RTDs
+ M2K4 US RTDs]]>
 					</Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_2</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -5273,6 +5254,25 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Connect this input to the terminal]]>
 					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
+					<Comment>
+						<![CDATA[ M2K4 DS RTDs]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_2</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>

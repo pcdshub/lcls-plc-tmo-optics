@@ -24,8 +24,7 @@ END_VAR
       <ST><![CDATA[MOTION_GVL.fbStandardPMPSDB(
     io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1,
     bEnable:=TRUE,
-    sPLCName:='plc-tmo-optics',
-    bRefreshBPs:=GVL_PMPS.bRefreshBPs,
+    sPLCName:='plc-tmo-optics'
 );
 
 //fbOutputStates(bRefreshCoatingBPs:=GVL_PMPS.bRefreshBPs);

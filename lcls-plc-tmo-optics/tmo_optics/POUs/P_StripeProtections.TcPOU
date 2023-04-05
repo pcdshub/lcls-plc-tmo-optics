@@ -48,18 +48,18 @@ END_VAR
       <ST><![CDATA[fbStripProtMR1K4(FFO:=GVL_PMPS.g_FastFaultOutput1,
                 nCurrentEncoderCount := MAIN.nEncCntYupM1K4,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange,
-                bRefreshCoatingBPs := GVL_PMPS.bRefreshBPs,
+                bReadPmpsDb:= MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb,
                 );
 
 fbStripProtMR2K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
                 nCurrentEncoderCount := MAIN.nEncCntYM2K4,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange,
-                bRefreshCoatingBPs := GVL_PMPS.bRefreshBPs);
+                bReadPmpsDb := MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb);
 
 fbStripProtMR3K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
                 nCurrentEncoderCount := MAIN.nEncCntXM3K4,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange,
-                bRefreshCoatingBPs := GVL_PMPS.bRefreshBPs);]]></ST>
+                bReadPmpsDb := MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
