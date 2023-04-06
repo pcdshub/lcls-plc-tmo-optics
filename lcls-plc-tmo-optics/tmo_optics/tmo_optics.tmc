@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{6BE3E35C-A191-A819-1F1D-B4E064BF8FDD}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{8618AEC6-1970-E76E-D0C9-25688355EC0D}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -54459,283 +54459,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">FB_MirrorTwoCoatingProtection</Name>
-      <BitSize>168960</BitSize>
-      <SubItem>
-        <Name>nCurrentEncoderCount</Name>
-        <Type>UDINT</Type>
-        <Comment> Current encoder count</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>32</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>neVRange</Name>
-        <Type>DWORD</Type>
-        <Comment> Current ev range from stCurrentBeamParams</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>64</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sDevName</Name>
-        <Type>STRING(80)</Type>
-        <Comment> Device name</Comment>
-        <BitSize>648</BitSize>
-        <BitOffs>96</BitOffs>
-        <Default>
-          <String/>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nUpperCoatingBoundary</Name>
-        <Type>UDINT</Type>
-        <Comment> Encoder count for upper boundary</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>768</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sUpperCoatingType</Name>
-        <Type>STRING(80)</Type>
-        <Comment> Type of coating</Comment>
-        <BitSize>648</BitSize>
-        <BitOffs>800</BitOffs>
-        <Default>
-          <String/>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nLowerCoatingBoundary</Name>
-        <Type>UDINT</Type>
-        <Comment> Encoder count for lower boundary</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>1472</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sLowerCoatingType</Name>
-        <Type>STRING(80)</Type>
-        <Comment> Type of coating</Comment>
-        <BitSize>648</BitSize>
-        <BitOffs>1504</BitOffs>
-        <Default>
-          <String/>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bAutoClear</Name>
-        <Type>BOOL</Type>
-        <Comment> Auto-clear these fast faults</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>2152</BitOffs>
-        <Default>
-          <Value>1</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bReadPmpsDb</Name>
-        <Type>BOOL</Type>
-        <Comment> Trigger a re-read of the JSON Beam Parameters</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>2160</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>FFO</Name>
-        <Type Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>2176</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>InOut</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>ffUpperCoating</Name>
-        <Type Namespace="PMPS">FB_FastFault</Type>
-        <BitSize>25088</BitSize>
-        <BitOffs>2208</BitOffs>
-        <Default>
-          <SubItem>
-            <Name>.i_xAutoReset</Name>
-            <Value>0</Value>
-          </SubItem>
-          <SubItem>
-            <Name>.i_TypeCode</Name>
-            <Value>1025</Value>
-          </SubItem>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>ffLowerCoating</Name>
-        <Type Namespace="PMPS">FB_FastFault</Type>
-        <BitSize>25088</BitSize>
-        <BitOffs>27296</BitOffs>
-        <Default>
-          <SubItem>
-            <Name>.i_xAutoReset</Name>
-            <Value>0</Value>
-          </SubItem>
-          <SubItem>
-            <Name>.i_TypeCode</Name>
-            <Value>1025</Value>
-          </SubItem>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>sFFBeamParamMismatch</Name>
-        <Type>STRING(80)</Type>
-        <BitSize>648</BitSize>
-        <BitOffs>52384</BitOffs>
-        <Default>
-          <String> mirror coating incompatible with beam photon energy</String>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>sFFBeamParamNotLoaded</Name>
-        <Type>STRING(80)</Type>
-        <BitSize>648</BitSize>
-        <BitOffs>53032</BitOffs>
-        <Default>
-          <String> mirror coating beam parameters not loaded</String>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>aDbStateParams</Name>
-        <Type Namespace="PMPS">ST_DbStateParams</Type>
-        <ArrayInfo>
-          <LBound>0</LBound>
-          <Elements>2</Elements>
-        </ArrayInfo>
-        <BitSize>4992</BitSize>
-        <BitOffs>53696</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>fbGetCoatingBPs</Name>
-        <Type Namespace="PMPS">FB_JsonDocToSafeBP</Type>
-        <BitSize>109440</BitSize>
-        <BitOffs>58688</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>ftReadJsonDocDone</Name>
-        <Type Namespace="Tc2_Standard">F_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>168128</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>bExecute</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>168192</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>bBPsLoaded</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>168200</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>nUpperCoatingBitmask</Name>
-        <Type>DWORD</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>168224</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>nLowerCoatingBitMask</Name>
-        <Type>DWORD</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>168256</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>i</Name>
-        <Type>INT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>168288</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>sDevState</Name>
-        <Type>STRING(80)</Type>
-        <BitSize>648</BitSize>
-        <BitOffs>168304</BitOffs>
-        <Default>
-          <String/>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>bInit</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>168952</BitOffs>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
       <Name Namespace="LCLS_General">FB_AnalogInput</Name>
       <BitSize>320</BitSize>
       <SubItem>
@@ -55934,6 +55657,277 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         <Hide GUID="{9E76D1D7-D744-4E3D-B111-F6F94B60E6AB}"/>
       </Hides>
     </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_optics">FB_MirrorTwoCoatingProtection</Name>
+      <BitSize>168960</BitSize>
+      <SubItem>
+        <Name>nCurrentEncoderCount</Name>
+        <Type>UDINT</Type>
+        <Comment> Current encoder count</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>neVRange</Name>
+        <Type>DWORD</Type>
+        <Comment> Current ev range from stCurrentBeamParams</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>64</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sDevName</Name>
+        <Type>STRING(80)</Type>
+        <Comment> Device name</Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>96</BitOffs>
+        <Default>
+          <String/>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nUpperCoatingBoundary</Name>
+        <Type>UDINT</Type>
+        <Comment> Encoder count for upper boundary</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>768</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sUpperCoatingType</Name>
+        <Type>STRING(80)</Type>
+        <Comment> Type of coating</Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>800</BitOffs>
+        <Default>
+          <String/>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nLowerCoatingBoundary</Name>
+        <Type>UDINT</Type>
+        <Comment> Encoder count for lower boundary</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>1472</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sLowerCoatingType</Name>
+        <Type>STRING(80)</Type>
+        <Comment> Type of coating</Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>1504</BitOffs>
+        <Default>
+          <String/>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bAutoClear</Name>
+        <Type>BOOL</Type>
+        <Comment> Auto-clear these fast faults</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>2152</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bReadPmpsDb</Name>
+        <Type>BOOL</Type>
+        <Comment> Trigger a re-read of the JSON Beam Parameters</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>2160</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>FFO</Name>
+        <Type Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2176</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ffUpperCoating</Name>
+        <Type Namespace="PMPS">FB_FastFault</Type>
+        <BitSize>25088</BitSize>
+        <BitOffs>2208</BitOffs>
+        <Default>
+          <SubItem>
+            <Name>.i_xAutoReset</Name>
+            <Value>0</Value>
+          </SubItem>
+          <SubItem>
+            <Name>.i_TypeCode</Name>
+            <Value>1025</Value>
+          </SubItem>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>ffLowerCoating</Name>
+        <Type Namespace="PMPS">FB_FastFault</Type>
+        <BitSize>25088</BitSize>
+        <BitOffs>27296</BitOffs>
+        <Default>
+          <SubItem>
+            <Name>.i_xAutoReset</Name>
+            <Value>0</Value>
+          </SubItem>
+          <SubItem>
+            <Name>.i_TypeCode</Name>
+            <Value>1025</Value>
+          </SubItem>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>sFFBeamParamMismatch</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>52384</BitOffs>
+        <Default>
+          <String> mirror coating incompatible with beam photon energy</String>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>sFFBeamParamNotLoaded</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>53032</BitOffs>
+        <Default>
+          <String> mirror coating beam parameters not loaded</String>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>aDbStateParams</Name>
+        <Type Namespace="PMPS">ST_DbStateParams</Type>
+        <ArrayInfo>
+          <LBound>0</LBound>
+          <Elements>2</Elements>
+        </ArrayInfo>
+        <BitSize>4992</BitSize>
+        <BitOffs>53696</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbGetCoatingBPs</Name>
+        <Type Namespace="PMPS">FB_JsonDocToSafeBP</Type>
+        <BitSize>109440</BitSize>
+        <BitOffs>58688</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ftReadJsonDocDone</Name>
+        <Type Namespace="Tc2_Standard">F_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>168128</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>bBPsLoaded</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>168192</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>nUpperCoatingBitmask</Name>
+        <Type>DWORD</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>168224</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>nLowerCoatingBitMask</Name>
+        <Type>DWORD</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>168256</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>i</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>168288</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>sDevState</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>168304</BitOffs>
+        <Default>
+          <String/>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>bInit</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>168952</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
   </DataTypes>
   <Modules>
     <Module GUID="{D7C1D1FD-2E7A-44CC-8FB4-AD582C20623F}" TcSmClass="TComPlcObjDef">
@@ -55998,7 +55992,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>SerialIO Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84344832</ByteSize>
+          <ByteSize>84410368</ByteSize>
           <Symbol>
             <Name>GVL_SerialIO.Serial_stComIn_M1K4</Name>
             <Comment>Better have your inputs and outputs!
@@ -56021,7 +56015,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>SerialIO Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84344832</ByteSize>
+          <ByteSize>84410368</ByteSize>
           <Symbol>
             <Name>GVL_SerialIO.Serial_stComOut_M1K4</Name>
             <BitSize>192</BitSize>
@@ -56042,7 +56036,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>SerialIO Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84344832</ByteSize>
+          <ByteSize>84410368</ByteSize>
           <Symbol>
             <Name>P_Serial_Com.fbSerialLineControl_EL6001_M1K4</Name>
             <BitSize>10432</BitSize>
@@ -56140,7 +56134,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="Internal" CreateSymbols="true">19</AreaNo>
           <Name>PiezoDriver Internal</Name>
           <ContextId>1</ContextId>
-          <ByteSize>84344832</ByteSize>
+          <ByteSize>84410368</ByteSize>
           <Symbol>
             <Name>PiezoSerial.fbE621SerialDriver_M1K4</Name>
             <Comment>PI Serial</Comment>
@@ -56236,7 +56230,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="InputDst" CreateSymbols="true">32</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84344832</ByteSize>
+          <ByteSize>84410368</ByteSize>
           <Symbol>
             <Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
             <Comment> AMS Net ID used for FB_EcatDiag, among others </Comment>
@@ -61085,7 +61079,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">33</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84344832</ByteSize>
+          <ByteSize>84410368</ByteSize>
           <Symbol>
             <Name>Main.M1.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
@@ -62275,7 +62269,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="Internal" CreateSymbols="true">35</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84344832</ByteSize>
+          <ByteSize>84410368</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -71681,41 +71675,6 @@ MR2K4 X ENC CNT</Comment>
             <BitOffs>664186112</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>P_StripeProtections.fbStripProtMR1K4</Name>
-            <Comment>
-MR1K4 (RBV = MR1K4:SOMS:ENC:YUP:CNT_RBV)
-B4C coating: RBV &lt;= 15998960: 1111_1111_1111_1000 (allow everything between 350eV and 2.3keV)
-Transition: 15998960 &lt; RBV &lt; 19998960: 0000_0000_0000_0000
-Silicon surface: RBV &gt;= 19998960: 0000_0000_0001_1110 (allow everything between 250eV and 450eV)
-From M. Seaberg
-</Comment>
-            <BitSize>168960</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_MirrorTwoCoatingProtection</BaseType>
-            <Default>
-              <SubItem>
-                <Name>.sDevName</Name>
-                <String>MR1K4:SOMS</String>
-              </SubItem>
-              <SubItem>
-                <Name>.nUpperCoatingBoundary</Name>
-                <Value>19998960</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.sUpperCoatingType</Name>
-                <String>SILICON</String>
-              </SubItem>
-              <SubItem>
-                <Name>.nLowerCoatingBoundary</Name>
-                <Value>15998960</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.sLowerCoatingType</Name>
-                <String>B4C</String>
-              </SubItem>
-            </Default>
-            <BitOffs>664452672</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_M1K4.fM1K4_Flow_1</Name>
             <Comment> M1K4 Flow Press Sensors</Comment>
             <BitSize>320</BitSize>
@@ -73116,6 +73075,41 @@ From M. Seaberg
             <BitOffs>666727968</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4</Name>
+            <Comment>
+MR1K4 (RBV = MR1K4:SOMS:ENC:YUP:CNT_RBV)
+B4C coating: RBV &lt;= 15998960: 1111_1111_1111_1000 (allow everything between 350eV and 2.3keV)
+Transition: 15998960 &lt; RBV &lt; 19998960: 0000_0000_0000_0000
+Silicon surface: RBV &gt;= 19998960: 0000_0000_0001_1110 (allow everything between 250eV and 450eV)
+From M. Seaberg
+</Comment>
+            <BitSize>168960</BitSize>
+            <BaseType Namespace="lcls_twincat_optics">FB_MirrorTwoCoatingProtection</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.sDevName</Name>
+                <String>MR1K4:SOMS</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nUpperCoatingBoundary</Name>
+                <Value>19998960</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sUpperCoatingType</Name>
+                <String>SILICON</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nLowerCoatingBoundary</Name>
+                <Value>15998960</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sLowerCoatingType</Name>
+                <String>B4C</String>
+              </SubItem>
+            </Default>
+            <BitOffs>672922496</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4</Name>
             <Comment>
 MR2K4 (RBV = MR2K4:KBO:ENC:Y:CNT_RBV)
@@ -73147,7 +73141,7 @@ Silicon surface: RBV &gt;= 7776781: 0000_0000_0001_1110 (allow everything below 
                 <String>B4C</String>
               </SubItem>
             </Default>
-            <BitOffs>672753536</BitOffs>
+            <BitOffs>673091456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4</Name>
@@ -73181,14 +73175,14 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <String>SILICON</String>
               </SubItem>
             </Default>
-            <BitOffs>673367168</BitOffs>
+            <BitOffs>673536128</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">36</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84344832</ByteSize>
+          <ByteSize>84410368</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -73268,7 +73262,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2023-04-06T13:56:36</Value>
+          <Value>2023-04-06T14:18:40</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
