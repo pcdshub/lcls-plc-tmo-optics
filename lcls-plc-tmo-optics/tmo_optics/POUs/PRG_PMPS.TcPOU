@@ -17,7 +17,6 @@ VAR
 
     bMR1K1_IN : BOOL;
     bST3K4_IN : BOOL;
-    nJSONLoaded : UXINT := 16#00;
 END_VAR
 ]]></Declaration>
     <Implementation>
