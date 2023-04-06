@@ -27,8 +27,6 @@ END_VAR
     sPLCName:='plc-tmo-optics'
 );
 
-//fbOutputStates(bRefreshCoatingBPs:=GVL_PMPS.bRefreshBPs);
-// Wait for JSON DOC to reload before setting refresh false.
 P_StripeProtections();
 
 bMR1K1_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
@@ -47,12 +45,7 @@ ffFFO2ToFFO1(i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, io_fbFFHWO :=
 GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto:= bMR1K1_IN);
 
 fb_vetoArbiter(bVeto := GVL_PMPS.g_FastFaultOutput2.i_xVeto, HigherAuthority := GVL_PMPS.g_fbArbiter1, LowerAuthority:= GVL_PMPS.g_fbArbiter2,
-    FFO:= GVL_PMPS.g_FastFaultOutput1);
-
-// Wait for the JSON DOC to reload before setting refresh BPs False
-IF PMPS_GVL.BP_jsonDoc > nJSONLoaded THEN
-    GVL_PMPS.bRefreshBPs := FALSE;
-END_IF]]></ST>
+    FFO:= GVL_PMPS.g_FastFaultOutput1);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
