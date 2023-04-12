@@ -27,22 +27,6 @@ GVLs
 ----
 
 
-Global_Version
-^^^^^^^^^^^^^^
-
-::
-
-    {attribute 'TcGenerated'}
-    // This function has been automatically generated from the project information.
-    VAR_GLOBAL CONSTANT
-        {attribute 'const_non_replaced'}
-        {attribute 'linkalways'}
-        stLibVersion_lcls_plc_tmo_optics : ST_LibVersion := (iMajor := 3, iMinor := 0, iBuild := 1, iRevision := 0, sVersion := '3.0.1');
-    END_VAR
-
-
-
-
 GVL_COM_Buffers
 ^^^^^^^^^^^^^^^
 
@@ -1521,7 +1505,6 @@ Main
         PRG_States();
     // PMPS
         PRG_PMPS();
-        P_StripeProtections();
     ////////////////////////////////
 
     // Logging
@@ -1540,7 +1523,6 @@ Related:
     * `PRG_Environment`_
     * `PRG_PMPS`_
     * `PRG_States`_
-    * `P_StripeProtections`_
 
 
 P_Serial_Com
@@ -1584,28 +1566,25 @@ P_StripeProtections
     From M. Seaberg
     *)
         fbStripProtMR1K4 : FB_MirrorTwoCoatingProtection := (
-            sDevName := 'MR1K4',
+            sDevName := 'MR1K4:SOMS',
             nUpperCoatingBoundary := 19998960,
-            nUpperCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
-            sUpperCoatingType := 'Si',
+            sUpperCoatingType := 'SILICON',
             nLowerCoatingBoundary := 15998960,
-            nLowerCoatingBitMask := F_eVExcludeRange(2.3E3, 7E3),
             sLowerCoatingType := 'B4C');
+
     (*
     MR2K4 (RBV = MR2K4:KBO:ENC:Y:CNT_RBV)
     B4C coating: RBV <= 6976835: 1111_1111_1111_1000 (allow everything between 350eV and 2.3keV)
     Transition: 6976835 < RBV < 7776781: 0000_0000_0000_0000
     Silicon surface: RBV >= 7776781: 0000_0000_0001_1110 (allow everything below 250eV and 450eV)
     *)
-
-        fbStripProtMR2K4 : FB_MirrorTwoCoatingProtection := (
-            sDevName := 'MR2K4',
+         fbStripProtMR2K4 : FB_MirrorTwoCoatingProtection := (
+            sDevName := 'MR2K4:KBO',
             nUpperCoatingBoundary := 7776781,
-            nUpperCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
-            sUpperCoatingType := 'Si',
+            sUpperCoatingType := 'SILICON',
             nLowerCoatingBoundary := 6976835,
-            nLowerCoatingBitMask := F_eVExcludeRange(2.3E3, 7E3),
             sLowerCoatingType := 'B4C');
+
     (*
     MR3K4 (RBV = MR3K4:KBO:ENC:X:CNT_RBV)
     B4C coating: RBV >= 5620000: 1111_1111_1111_1000 (allow everything between 350eV and 2.3keV)
@@ -1613,26 +1592,27 @@ P_StripeProtections
     Silicon surface: RBV <= 4820000: 0000_0000_0001_1110 (allow everything between 250eV and 450 eV)
     *)
         fbStripProtMR3K4 : FB_MirrorTwoCoatingProtection := (
-            sDevName := 'MR3K4',
+            sDevName := 'MR3K4:KBO',
             nUpperCoatingBoundary := 5620000,
-            nUpperCoatingBitMask := F_eVExcludeRange(2.3E3, 7E3),
             sUpperCoatingType := 'B4C',
             nLowerCoatingBoundary := 4820000,
-            nLowerCoatingBitmask := F_eVExcludeRange(1.5E3, 7E3) AND F_eVExcludeRange(480, 680),
-            sLowerCoatingType := 'Si');
-
+            sLowerCoatingType := 'SILICON');
     END_VAR
     fbStripProtMR1K4(FFO:=GVL_PMPS.g_FastFaultOutput1,
                     nCurrentEncoderCount := MAIN.nEncCntYupM1K4,
-                    neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
+                    neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange,
+                    bReadPmpsDb:= MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb,
+                    );
 
     fbStripProtMR2K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
                     nCurrentEncoderCount := MAIN.nEncCntYM2K4,
-                    neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
+                    neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange,
+                    bReadPmpsDb := MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb);
 
     fbStripProtMR3K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
                     nCurrentEncoderCount := MAIN.nEncCntXM3K4,
-                    neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange);
+                    neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange,
+                    bReadPmpsDb := MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb);
 
     END_PROGRAM
 
@@ -1732,6 +1712,8 @@ PRG_PMPS
             i_Desc := 'Subordinate fast fault group, will clear on its own otherwise something is misconfigured in the diagnostic',
             i_TypeCode := 16#D);
 
+        //fbOutputStates : FB_StateParams;
+
         bMR1K1_IN : BOOL;
         bST3K4_IN : BOOL;
     END_VAR
@@ -1740,6 +1722,8 @@ PRG_PMPS
         bEnable:=TRUE,
         sPLCName:='plc-tmo-optics'
     );
+
+    P_StripeProtections();
 
     bMR1K1_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
                 AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT];
@@ -1764,6 +1748,7 @@ PRG_PMPS
 
 Related:
     * `GVL_PMPS`_
+    * `P_StripeProtections`_
 
 
 PRG_States

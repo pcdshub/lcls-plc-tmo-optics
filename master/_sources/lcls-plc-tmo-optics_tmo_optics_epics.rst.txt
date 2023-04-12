@@ -9603,7 +9603,37 @@ FB_Offset_Coating_States
       - | io: output
 
 
-    
+   
+LCLS_General.DUT_EPS
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - $(PREFIX):sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - $(PREFIX):sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+  
 LCLS_General.FB_BasicStats
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -11029,6 +11059,60 @@ lcls_twincat_motion.DUT_MotionStage
     * - $(PREFIX):PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - $(PREFIX):PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - $(PREFIX):PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - $(PREFIX):PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - $(PREFIX):PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - $(PREFIX):PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - $(PREFIX):PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - $(PREFIX):PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - $(PREFIX):PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - $(PREFIX):PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -57705,6 +57789,60 @@ Database Records
       - | io: input
 
 
+    * - MR1K4:SOMS:MMS:YUP:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YUP:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YUP:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YUP:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YUP:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YUP:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YUP:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YUP:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YUP:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR2K4:KBO:MMS:BEND:US:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -58073,6 +58211,60 @@ Database Records
     * - MR2K4:KBO:MMS:BEND:US:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:US:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -58447,6 +58639,60 @@ Database Records
       - | io: input
 
 
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:BEND:DS:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR3K4:KBO:MMS:X:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -58815,6 +59061,60 @@ Database Records
     * - MR3K4:KBO:MMS:X:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:X:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:X:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:X:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:X:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:X:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:X:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:X:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:X:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:X:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -59189,6 +59489,60 @@ Database Records
       - | io: input
 
 
+    * - MR3K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:Y:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:Y:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:Y:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:Y:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:Y:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:Y:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR3K4:KBO:MMS:PITCH:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -59557,6 +59911,60 @@ Database Records
     * - MR3K4:KBO:MMS:PITCH:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -59931,6 +60339,60 @@ Database Records
       - | io: input
 
 
+    * - MR3K4:KBO:MMS:BEND:US:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:US:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR3K4:KBO:MMS:BEND:DS:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -60299,6 +60761,60 @@ Database Records
     * - MR3K4:KBO:MMS:BEND:DS:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR3K4:KBO:MMS:BEND:DS:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -60673,6 +61189,60 @@ Database Records
       - | io: input
 
 
+    * - MR4K4:KBO:MMS:X:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:X:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:X:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:X:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:X:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:X:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:X:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:X:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:X:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR4K4:KBO:MMS:Y:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -61044,6 +61614,60 @@ Database Records
       - | io: input
 
 
+    * - MR4K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Y:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Y:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Y:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Y:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Y:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Y:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR4K4:KBO:MMS:Z:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -61412,6 +62036,60 @@ Database Records
     * - MR4K4:KBO:MMS:Z:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Z:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Z:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Z:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Z:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Z:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Z:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Z:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Z:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:Z:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -61862,6 +62540,60 @@ Database Records
       - | io: input
 
 
+    * - MR1K4:SOMS:MMS:YDWN:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YDWN:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YDWN:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YDWN:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YDWN:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YDWN:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YDWN:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YDWN:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:YDWN:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR4K4:KBO:MMS:PITCH:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -62230,6 +62962,60 @@ Database Records
     * - MR4K4:KBO:MMS:PITCH:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR4K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -62604,6 +63390,60 @@ Database Records
       - | io: input
 
 
+    * - MR5K4:KBO:MMS:X:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:X:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:X:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:X:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:X:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:X:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:X:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:X:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:X:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR5K4:KBO:MMS:Y:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -62972,6 +63812,60 @@ Database Records
     * - MR5K4:KBO:MMS:Y:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Y:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Y:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Y:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Y:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Y:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Y:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -63346,6 +64240,60 @@ Database Records
       - | io: input
 
 
+    * - MR5K4:KBO:MMS:Z:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Z:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Z:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Z:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Z:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Z:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Z:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Z:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:Z:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR5K4:KBO:MMS:PITCH:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -63714,6 +64662,60 @@ Database Records
     * - MR5K4:KBO:MMS:PITCH:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR5K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -64088,6 +65090,60 @@ Database Records
       - | io: input
 
 
+    * - MR1K4:SOMS:MMS:XUP:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XUP:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XUP:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XUP:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XUP:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XUP:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XUP:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XUP:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XUP:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR1K4:SOMS:MMS:XDWN:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -64456,6 +65512,60 @@ Database Records
     * - MR1K4:SOMS:MMS:XDWN:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XDWN:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XDWN:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XDWN:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XDWN:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XDWN:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XDWN:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XDWN:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XDWN:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:XDWN:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -64830,6 +65940,60 @@ Database Records
       - | io: input
 
 
+    * - MR1K4:SOMS:MMS:PITCH:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:PITCH:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:PITCH:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:PITCH:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:PITCH:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:PITCH:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:PITCH:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:PITCH:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:PITCH:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR1K4:SOMS:MMS:BENDER:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -65198,6 +66362,60 @@ Database Records
     * - MR1K4:SOMS:MMS:BENDER:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:BENDER:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:BENDER:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:BENDER:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:BENDER:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:BENDER:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:BENDER:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:BENDER:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:BENDER:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR1K4:SOMS:MMS:BENDER:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 
@@ -65572,6 +66790,60 @@ Database Records
       - | io: input
 
 
+    * - MR2K4:KBO:MMS:X:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:X:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:X:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:X:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:X:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:X:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:X:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:X:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:X:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR2K4:KBO:MMS:Y:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -65943,6 +67215,60 @@ Database Records
       - | io: input
 
 
+    * - MR2K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:Y:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:Y:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:Y:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:Y:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:Y:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:Y:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:Y:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
     * - MR2K4:KBO:MMS:PITCH:PLC:bAllBackwardEnable_RBV
       - bi
       - Summary of axis permission to move backward
@@ -66311,6 +67637,60 @@ Database Records
     * - MR2K4:KBO:MMS:PITCH:PLC:sName_RBV
       - waveform
       - PLC program name
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:stEPSBackwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:stEPSForwardEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:nFlags_RBV
+      - longin
+      - Contains EPS flags
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:sFlagDesc_RBV
+      - waveform
+      - of nFlag variable, using
+      - | io: input
+
+
+    * - MR2K4:KBO:MMS:PITCH:PLC:stEPSPowerEnable:sMessage_RBV
+      - waveform
+      - Message from EPS to usr
       - | io: input
 
 

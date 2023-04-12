@@ -11,7 +11,8 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
@@ -61,7 +62,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#gvls">GVLs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#global-version">Global_Version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-com-buffers">GVL_COM_Buffers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-m1k4">GVL_M1K4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-m1k4-constants">GVL_M1K4_Constants</a></li>
@@ -137,18 +137,6 @@
 </section>
 <section id="gvls">
 <h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this heading"></a></h1>
-<section id="global-version">
-<h2>Global_Version<a class="headerlink" href="#global-version" title="Permalink to this heading"></a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcGenerated&#39;</span><span class="p">}</span>
-<span class="o">//</span> <span class="n">This</span> <span class="n">function</span> <span class="n">has</span> <span class="n">been</span> <span class="n">automatically</span> <span class="n">generated</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">project</span> <span class="n">information</span><span class="o">.</span>
-<span class="n">VAR_GLOBAL</span> <span class="n">CONSTANT</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;const_non_replaced&#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;linkalways&#39;</span><span class="p">}</span>
-    <span class="n">stLibVersion_lcls_plc_tmo_optics</span> <span class="p">:</span> <span class="n">ST_LibVersion</span> <span class="o">:=</span> <span class="p">(</span><span class="n">iMajor</span> <span class="o">:=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">iMinor</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">iBuild</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">iRevision</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sVersion</span> <span class="o">:=</span> <span class="s1">&#39;3.0.1&#39;</span><span class="p">);</span>
-<span class="n">END_VAR</span>
-</pre></div>
-</div>
-</section>
 <section id="gvl-com-buffers">
 <h2>GVL_COM_Buffers<a class="headerlink" href="#gvl-com-buffers" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR_GLOBAL</span>
@@ -1579,7 +1567,6 @@ END_VAR
     <span class="n">PRG_States</span><span class="p">();</span>
 <span class="o">//</span> <span class="n">PMPS</span>
     <span class="n">PRG_PMPS</span><span class="p">();</span>
-    <span class="n">P_StripeProtections</span><span class="p">();</span>
 <span class="o">////////////////////////////////</span>
 
 <span class="o">//</span> <span class="n">Logging</span>
@@ -1599,7 +1586,6 @@ END_VAR
 <li><p><a class="reference internal" href="#prg-environment">PRG_Environment</a></p></li>
 <li><p><a class="reference internal" href="#prg-pmps">PRG_PMPS</a></p></li>
 <li><p><a class="reference internal" href="#prg-states">PRG_States</a></p></li>
-<li><p><a class="reference internal" href="#p-stripeprotections">P_StripeProtections</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -1638,28 +1624,25 @@ END_VAR
 <span class="n">From</span> <span class="n">M</span><span class="o">.</span> <span class="n">Seaberg</span>
 <span class="o">*</span><span class="p">)</span>
     <span class="n">fbStripProtMR1K4</span> <span class="p">:</span> <span class="n">FB_MirrorTwoCoatingProtection</span> <span class="o">:=</span> <span class="p">(</span>
-        <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;MR1K4&#39;</span><span class="p">,</span>
+        <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;MR1K4:SOMS&#39;</span><span class="p">,</span>
         <span class="n">nUpperCoatingBoundary</span> <span class="o">:=</span> <span class="mi">19998960</span><span class="p">,</span>
-        <span class="n">nUpperCoatingBitmask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">),</span>
-        <span class="n">sUpperCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">,</span>
+        <span class="n">sUpperCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;SILICON&#39;</span><span class="p">,</span>
         <span class="n">nLowerCoatingBoundary</span> <span class="o">:=</span> <span class="mi">15998960</span><span class="p">,</span>
-        <span class="n">nLowerCoatingBitMask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">),</span>
         <span class="n">sLowerCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">);</span>
+
 <span class="p">(</span><span class="o">*</span>
 <span class="n">MR2K4</span> <span class="p">(</span><span class="n">RBV</span> <span class="o">=</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">Y</span><span class="p">:</span><span class="n">CNT_RBV</span><span class="p">)</span>
 <span class="n">B4C</span> <span class="n">coating</span><span class="p">:</span> <span class="n">RBV</span> <span class="o">&lt;=</span> <span class="mi">6976835</span><span class="p">:</span> <span class="mi">1111_1111_1111_1000</span> <span class="p">(</span><span class="n">allow</span> <span class="n">everything</span> <span class="n">between</span> <span class="mi">350</span><span class="n">eV</span> <span class="ow">and</span> <span class="mf">2.3</span><span class="n">keV</span><span class="p">)</span>
 <span class="n">Transition</span><span class="p">:</span> <span class="mi">6976835</span> <span class="o">&lt;</span> <span class="n">RBV</span> <span class="o">&lt;</span> <span class="mi">7776781</span><span class="p">:</span> <span class="mi">0000_0000_0000_0000</span>
 <span class="n">Silicon</span> <span class="n">surface</span><span class="p">:</span> <span class="n">RBV</span> <span class="o">&gt;=</span> <span class="mi">7776781</span><span class="p">:</span> <span class="mi">0000_0000_0001_1110</span> <span class="p">(</span><span class="n">allow</span> <span class="n">everything</span> <span class="n">below</span> <span class="mi">250</span><span class="n">eV</span> <span class="ow">and</span> <span class="mi">450</span><span class="n">eV</span><span class="p">)</span>
 <span class="o">*</span><span class="p">)</span>
-
-    <span class="n">fbStripProtMR2K4</span> <span class="p">:</span> <span class="n">FB_MirrorTwoCoatingProtection</span> <span class="o">:=</span> <span class="p">(</span>
-        <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;MR2K4&#39;</span><span class="p">,</span>
+     <span class="n">fbStripProtMR2K4</span> <span class="p">:</span> <span class="n">FB_MirrorTwoCoatingProtection</span> <span class="o">:=</span> <span class="p">(</span>
+        <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;MR2K4:KBO&#39;</span><span class="p">,</span>
         <span class="n">nUpperCoatingBoundary</span> <span class="o">:=</span> <span class="mi">7776781</span><span class="p">,</span>
-        <span class="n">nUpperCoatingBitmask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">),</span>
-        <span class="n">sUpperCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">,</span>
+        <span class="n">sUpperCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;SILICON&#39;</span><span class="p">,</span>
         <span class="n">nLowerCoatingBoundary</span> <span class="o">:=</span> <span class="mi">6976835</span><span class="p">,</span>
-        <span class="n">nLowerCoatingBitMask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">),</span>
         <span class="n">sLowerCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">);</span>
+
 <span class="p">(</span><span class="o">*</span>
 <span class="n">MR3K4</span> <span class="p">(</span><span class="n">RBV</span> <span class="o">=</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">ENC</span><span class="p">:</span><span class="n">X</span><span class="p">:</span><span class="n">CNT_RBV</span><span class="p">)</span>
 <span class="n">B4C</span> <span class="n">coating</span><span class="p">:</span> <span class="n">RBV</span> <span class="o">&gt;=</span> <span class="mi">5620000</span><span class="p">:</span> <span class="mi">1111_1111_1111_1000</span> <span class="p">(</span><span class="n">allow</span> <span class="n">everything</span> <span class="n">between</span> <span class="mi">350</span><span class="n">eV</span> <span class="ow">and</span> <span class="mf">2.3</span><span class="n">keV</span><span class="p">)</span>
@@ -1667,26 +1650,27 @@ END_VAR
 <span class="n">Silicon</span> <span class="n">surface</span><span class="p">:</span> <span class="n">RBV</span> <span class="o">&lt;=</span> <span class="mi">4820000</span><span class="p">:</span> <span class="mi">0000_0000_0001_1110</span> <span class="p">(</span><span class="n">allow</span> <span class="n">everything</span> <span class="n">between</span> <span class="mi">250</span><span class="n">eV</span> <span class="ow">and</span> <span class="mi">450</span> <span class="n">eV</span><span class="p">)</span>
 <span class="o">*</span><span class="p">)</span>
     <span class="n">fbStripProtMR3K4</span> <span class="p">:</span> <span class="n">FB_MirrorTwoCoatingProtection</span> <span class="o">:=</span> <span class="p">(</span>
-        <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;MR3K4&#39;</span><span class="p">,</span>
+        <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;MR3K4:KBO&#39;</span><span class="p">,</span>
         <span class="n">nUpperCoatingBoundary</span> <span class="o">:=</span> <span class="mi">5620000</span><span class="p">,</span>
-        <span class="n">nUpperCoatingBitMask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">2.3E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">),</span>
         <span class="n">sUpperCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;B4C&#39;</span><span class="p">,</span>
         <span class="n">nLowerCoatingBoundary</span> <span class="o">:=</span> <span class="mi">4820000</span><span class="p">,</span>
-        <span class="n">nLowerCoatingBitmask</span> <span class="o">:=</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mf">1.5E3</span><span class="p">,</span> <span class="mf">7E3</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_eVExcludeRange</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">680</span><span class="p">),</span>
-        <span class="n">sLowerCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;Si&#39;</span><span class="p">);</span>
-
+        <span class="n">sLowerCoatingType</span> <span class="o">:=</span> <span class="s1">&#39;SILICON&#39;</span><span class="p">);</span>
 <span class="n">END_VAR</span>
 <span class="n">fbStripProtMR1K4</span><span class="p">(</span><span class="n">FFO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span>
                 <span class="n">nCurrentEncoderCount</span> <span class="o">:=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">nEncCntYupM1K4</span><span class="p">,</span>
-                <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">);</span>
+                <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">,</span>
+                <span class="n">bReadPmpsDb</span><span class="o">:=</span> <span class="n">MOTION_GVL</span><span class="o">.</span><span class="n">fbStandardPMPSDB</span><span class="o">.</span><span class="n">bReadPmpsDb</span><span class="p">,</span>
+                <span class="p">);</span>
 
 <span class="n">fbStripProtMR2K4</span><span class="p">(</span><span class="n">FFO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
                 <span class="n">nCurrentEncoderCount</span> <span class="o">:=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">nEncCntYM2K4</span><span class="p">,</span>
-                <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">);</span>
+                <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">,</span>
+                <span class="n">bReadPmpsDb</span> <span class="o">:=</span> <span class="n">MOTION_GVL</span><span class="o">.</span><span class="n">fbStandardPMPSDB</span><span class="o">.</span><span class="n">bReadPmpsDb</span><span class="p">);</span>
 
 <span class="n">fbStripProtMR3K4</span><span class="p">(</span><span class="n">FFO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
                 <span class="n">nCurrentEncoderCount</span> <span class="o">:=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">nEncCntXM3K4</span><span class="p">,</span>
-                <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">);</span>
+                <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">,</span>
+                <span class="n">bReadPmpsDb</span> <span class="o">:=</span> <span class="n">MOTION_GVL</span><span class="o">.</span><span class="n">fbStandardPMPSDB</span><span class="o">.</span><span class="n">bReadPmpsDb</span><span class="p">);</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -1786,6 +1770,8 @@ END_VAR
         <span class="n">i_Desc</span> <span class="o">:=</span> <span class="s1">&#39;Subordinate fast fault group, will clear on its own otherwise something is misconfigured in the diagnostic&#39;</span><span class="p">,</span>
         <span class="n">i_TypeCode</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#D);</span>
 
+    <span class="o">//</span><span class="n">fbOutputStates</span> <span class="p">:</span> <span class="n">FB_StateParams</span><span class="p">;</span>
+
     <span class="n">bMR1K1_IN</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
     <span class="n">bST3K4_IN</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 <span class="n">END_VAR</span>
@@ -1794,6 +1780,8 @@ END_VAR
     <span class="n">bEnable</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
     <span class="n">sPLCName</span><span class="o">:=</span><span class="s1">&#39;plc-tmo-optics&#39;</span>
 <span class="p">);</span>
+
+<span class="n">P_StripeProtections</span><span class="p">();</span>
 
 <span class="n">bMR1K1_IN</span> <span class="o">:=</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_IN</span><span class="p">]</span>
             <span class="n">AND</span> <span class="n">NOT</span> <span class="n">PMPS</span><span class="o">.</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_OUT</span><span class="p">];</span>
@@ -1819,6 +1807,7 @@ END_VAR
 <dl class="simple">
 <dt>Related:</dt><dd><ul class="simple">
 <li><p><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></p></li>
+<li><p><a class="reference internal" href="#p-stripeprotections">P_StripeProtections</a></p></li>
 </ul>
 </dd>
 </dl>
