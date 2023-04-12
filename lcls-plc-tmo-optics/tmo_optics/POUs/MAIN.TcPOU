@@ -958,7 +958,6 @@ END_VAR]]></Declaration>
     PRG_States();
 // PMPS
     PRG_PMPS();
-    P_StripeProtections();
 ////////////////////////////////
 
 // Logging

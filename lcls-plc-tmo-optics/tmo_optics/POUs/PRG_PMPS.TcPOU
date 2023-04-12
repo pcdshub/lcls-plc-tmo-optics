@@ -13,6 +13,8 @@ VAR
         i_Desc := 'Subordinate fast fault group, will clear on its own otherwise something is misconfigured in the diagnostic',
         i_TypeCode := 16#D);
 
+    //fbOutputStates : FB_StateParams;
+
     bMR1K1_IN : BOOL;
     bST3K4_IN : BOOL;
 END_VAR
@@ -23,6 +25,8 @@ END_VAR
     bEnable:=TRUE,
     sPLCName:='plc-tmo-optics'
 );
+
+P_StripeProtections();
 
 bMR1K1_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
             AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT];

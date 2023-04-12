@@ -775,15 +775,15 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{0AAAD7B9-1E17-47C5-8E92-9DDF90852041}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
+			<Name GUID="{21552C67-D89E-40C0-B350-5821090902BC}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
 			<BitSize>0</BitSize>
 			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
 			<Hides>
-				<Hide GUID="{515A0C68-6EAB-43BF-951B-4BAE74BD0FF2}"/>
+				<Hide GUID="{08FAD7A1-0B92-4A91-9600-29E1EF3AB797}"/>
 			</Hides>
 		</DataType>
 		<DataType>
-			<Name GUID="{7AF5324A-DFCD-428B-97B5-CDD3F5AAE406}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Name GUID="{D1F05FB2-55C6-4AE1-957C-34B83AD308DD}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
 			<Comment>
 				<![CDATA[Renishaw BiSS-C absolute encoder used with an EL5042]]>
 			</Comment>
@@ -805,7 +805,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>Status</Name>
-				<Type GUID="{0AAAD7B9-1E17-47C5-8E92-9DDF90852041}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
+				<Type GUID="{21552C67-D89E-40C0-B350-5821090902BC}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
 				<Comment>
 					<![CDATA[Status struct placeholder]]>
 				</Comment>
@@ -822,7 +822,7 @@ External Setpoint Generation:
 				<BitOffs>64</BitOffs>
 			</SubItem>
 			<Hides>
-				<Hide GUID="{83DB48CB-274E-4D70-AFAB-4B568CD748F6}"/>
+				<Hide GUID="{004BF205-4E8A-40FD-B524-08ECF5D31BE6}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -2252,7 +2252,7 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Encoders]]>
 					</Comment>
-					<Type GUID="{7AF5324A-DFCD-428B-97B5-CDD3F5AAE406}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{D1F05FB2-55C6-4AE1-957C-34B83AD308DD}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2274,7 +2274,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{7AF5324A-DFCD-428B-97B5-CDD3F5AAE406}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{D1F05FB2-55C6-4AE1-957C-34B83AD308DD}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2296,7 +2296,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{7AF5324A-DFCD-428B-97B5-CDD3F5AAE406}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{D1F05FB2-55C6-4AE1-957C-34B83AD308DD}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2318,7 +2318,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{7AF5324A-DFCD-428B-97B5-CDD3F5AAE406}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{D1F05FB2-55C6-4AE1-957C-34B83AD308DD}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -5079,18 +5079,6 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
-					<Comment>
-						<![CDATA[ M2K4 BENDER RTDs
- M2K4 US RTDs]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>PRG_PMPS.fbArbiterIO.i_stCurrentBP</Name>
 					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
 					<SubVar>
@@ -5227,6 +5215,18 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_PMPS.fbArbiterIO.xTxPDO_state</Name>
 					<Type>BIT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
+					<Comment>
+						<![CDATA[ M2K4 BENDER RTDs
+ M2K4 US RTDs]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
