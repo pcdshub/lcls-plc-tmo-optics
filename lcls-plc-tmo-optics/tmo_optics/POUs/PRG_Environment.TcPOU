@@ -20,8 +20,8 @@ END_VAR
     GVL_M2K4_RTD.fM2K4_Flow_1(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
     GVL_M2K4_RTD.fM2K4_Flow_1_val := GVL_M2K4_RTD.fM2K4_Flow_1.fReal;
 
-    GVL_M2K4_RTD.fM2K4_Flow_2(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
-    GVL_M2K4_RTD.fM2K4_Flow_2_val := GVL_M2K4_RTD.fM2K4_Flow_2.fReal;
+    GVL_M3K4_RTD.fM3K4_Flow_1(iTermBits:=12, fTermMax:=5.0427, fTermMin:=0.050472);
+    GVL_M3K4_RTD.fM3K4_Flow_1_val := GVL_M3K4_RTD.fM3K4_Flow_1.fReal;
 
     GVL_M2K4_RTD.fM2K4_Press_1(iTermBits:=12, fTermMax:=4.0, fTermMin:=0);
     GVL_M2K4_RTD.fM2K4_Press_1_val := GVL_M2K4_RTD.fM2K4_Press_1.fReal;

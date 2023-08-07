@@ -30,14 +30,7 @@ VAR_GLOBAL
         io: i
     '}
     fM2K4_Flow_1_val : LREAL;
-    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 2^Value'}
-    fM2K4_Flow_2 : FB_AnalogInput;
-    {attribute 'pytmc' := '
-        pv: MR2K4:KBO:FWM:2
-        field: EGU lpm
-        io: i
-    '}
-    fM2K4_Flow_2_val : LREAL;
+
     {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 3^Value'}
     fM2K4_Press_1 : FB_AnalogInput;
     {attribute 'pytmc' := '
