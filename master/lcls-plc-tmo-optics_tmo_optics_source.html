@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DUTs &mdash; pcdshub/lcls-plc-tmo-optics  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
+      <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/docs-versions-menu.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -46,6 +50,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_pragmas.html">Pragmas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_nc.html">NC Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_ethercat.html">EtherCAT Terminals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_boxes.html">Boxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-optics_links.html">Links</a></li>
 </ul>
@@ -62,7 +67,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#gvls">GVLs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#global-version">Global_Version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-com-buffers">GVL_COM_Buffers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-m1k4">GVL_M1K4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-m1k4-constants">GVL_M1K4_Constants</a></li>
@@ -83,7 +87,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#p-serial-com">P_Serial_Com</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#p-stripeprotections">P_StripeProtections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#piezoserial">PiezoSerial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-1-plctask">PRG_1_PlcTask</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-environment">PRG_Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-mr1k4-soms">PRG_MR1K4_SOMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-mr2k4-kbo">PRG_MR2K4_KBO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-mr3k4-kbo">PRG_MR3K4_KBO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-pmps">PRG_PMPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-states">PRG_States</a></li>
 </ul>
@@ -115,9 +123,9 @@
            <div itemprop="articleBody">
              
   <section id="duts">
-<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this heading"></a></h1>
+<h1>DUTs<a class="headerlink" href="#duts" title="Link to this heading"></a></h1>
 <section id="enum-si-b4c-coating-states">
-<h2>ENUM_Si_B4C_Coating_States<a class="headerlink" href="#enum-si-b4c-coating-states" title="Permalink to this heading"></a></h2>
+<h2>ENUM_Si_B4C_Coating_States<a class="headerlink" href="#enum-si-b4c-coating-states" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified only&#39;</span><span class="p">}</span>
 <span class="n">TYPE</span> <span class="n">ENUM_Si_B4C_Coating_States</span> <span class="p">:</span>
 <span class="p">(</span>
@@ -137,21 +145,9 @@
 </section>
 </section>
 <section id="gvls">
-<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this heading"></a></h1>
-<section id="global-version">
-<h2>Global_Version<a class="headerlink" href="#global-version" title="Permalink to this heading"></a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcGenerated&#39;</span><span class="p">}</span>
-<span class="o">//</span> <span class="n">This</span> <span class="n">function</span> <span class="n">has</span> <span class="n">been</span> <span class="n">automatically</span> <span class="n">generated</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">project</span> <span class="n">information</span><span class="o">.</span>
-<span class="n">VAR_GLOBAL</span> <span class="n">CONSTANT</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;const_non_replaced&#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;linkalways&#39;</span><span class="p">}</span>
-    <span class="n">stLibVersion_lcls_plc_tmo_optics</span> <span class="p">:</span> <span class="n">ST_LibVersion</span> <span class="o">:=</span> <span class="p">(</span><span class="n">iMajor</span> <span class="o">:=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">iMinor</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">iBuild</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">iRevision</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sVersion</span> <span class="o">:=</span> <span class="s1">&#39;3.1.1&#39;</span><span class="p">);</span>
-<span class="n">END_VAR</span>
-</pre></div>
-</div>
-</section>
+<h1>GVLs<a class="headerlink" href="#gvls" title="Link to this heading"></a></h1>
 <section id="gvl-com-buffers">
-<h2>GVL_COM_Buffers<a class="headerlink" href="#gvl-com-buffers" title="Permalink to this heading"></a></h2>
+<h2>GVL_COM_Buffers<a class="headerlink" href="#gvl-com-buffers" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">M1K4</span>
     <span class="n">Serial_RXBuffer_M1K4</span> <span class="p">:</span> <span class="n">ComBuffer</span><span class="p">;</span>
@@ -161,7 +157,7 @@
 </div>
 </section>
 <section id="gvl-m1k4">
-<h2>GVL_M1K4<a class="headerlink" href="#gvl-m1k4" title="Permalink to this heading"></a></h2>
+<h2>GVL_M1K4<a class="headerlink" href="#gvl-m1k4" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">Pitch</span> <span class="n">Mechanism</span><span class="p">:</span>
@@ -170,37 +166,13 @@
                                          <span class="n">ReqPosLimLo</span> <span class="o">:=</span> <span class="o">-</span><span class="mi">25</span><span class="p">,</span>
                                          <span class="n">diEncPosLimHi</span> <span class="o">:=</span> <span class="mi">10149192</span><span class="p">,</span>
                                          <span class="n">diEncPosLimLo</span> <span class="o">:=</span> <span class="mi">10047105</span><span class="p">);</span>
-    <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Flow</span> <span class="n">Press</span> <span class="n">Sensors</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3054_M1K4_FWM_PRSM]^AI Standard Channel 1^Value&#39;</span><span class="p">}</span>
-    <span class="n">fM1K4_Flow_1</span> <span class="p">:</span> <span class="n">FB_AnalogInput</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-        <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">FWM</span><span class="p">:</span><span class="mi">1</span>
-        <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">lpm</span>
-        <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
-    <span class="s1">&#39;}</span>
-    <span class="n">fM1K4_Flow_1_val</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3054_M1K4_FWM_PRSM]^AI Standard Channel 2^Value&#39;</span><span class="p">}</span>
-    <span class="n">fM1K4_Flow_2</span> <span class="p">:</span> <span class="n">FB_AnalogInput</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-        <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">FWM</span><span class="p">:</span><span class="mi">2</span>
-        <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">lpm</span>
-        <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
-    <span class="s1">&#39;}</span>
-    <span class="n">fM1K4_Flow_2_val</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3054_M1K4_FWM_PRSM]^AI Standard Channel 3^Value&#39;</span><span class="p">}</span>
-    <span class="n">fM1K4_Press_1</span> <span class="p">:</span> <span class="n">FB_AnalogInput</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-        <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">PRSM</span><span class="p">:</span><span class="mi">1</span>
-        <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">bar</span>
-        <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
-    <span class="s1">&#39;}</span>
-    <span class="n">fM1K4_Press_1_val</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
+
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
 </section>
 <section id="gvl-m1k4-constants">
-<h2>GVL_M1K4_Constants<a class="headerlink" href="#gvl-m1k4-constants" title="Permalink to this heading"></a></h2>
+<h2>GVL_M1K4_Constants<a class="headerlink" href="#gvl-m1k4-constants" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span> <span class="n">CONSTANT</span>
     <span class="o">//</span> <span class="n">Encoder</span> <span class="n">reference</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">nm</span>
@@ -213,7 +185,7 @@
 </div>
 </section>
 <section id="gvl-m2k4-constants">
-<h2>GVL_M2K4_Constants<a class="headerlink" href="#gvl-m2k4-constants" title="Permalink to this heading"></a></h2>
+<h2>GVL_M2K4_Constants<a class="headerlink" href="#gvl-m2k4-constants" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span> <span class="n">CONSTANT</span>
     <span class="o">//</span> <span class="n">Encoder</span> <span class="n">reference</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">nm</span>
@@ -225,7 +197,7 @@
 </div>
 </section>
 <section id="gvl-m2k4-rtd">
-<h2>GVL_M2K4_RTD<a class="headerlink" href="#gvl-m2k4-rtd" title="Permalink to this heading"></a></h2>
+<h2>GVL_M2K4_RTD<a class="headerlink" href="#gvl-m2k4-rtd" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">M2K4</span> <span class="n">BENDER</span> <span class="n">RTDs</span>
@@ -245,39 +217,12 @@
     <span class="n">nM2K4DS_RTD_2</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">INT</span><span class="p">;</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 2^Value&#39;</span><span class="p">}</span>
     <span class="n">nM2K4DS_RTD_3</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">INT</span><span class="p">;</span>
-
-    <span class="o">//</span> <span class="n">M2K4</span> <span class="n">Flow</span> <span class="n">Press</span> <span class="n">Sensors</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 1^Value&#39;</span><span class="p">}</span>
-    <span class="n">fM2K4_Flow_1</span> <span class="p">:</span> <span class="n">FB_AnalogInput</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-        <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">FWM</span><span class="p">:</span><span class="mi">1</span>
-        <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">lpm</span>
-        <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
-    <span class="s1">&#39;}</span>
-    <span class="n">fM2K4_Flow_1_val</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 2^Value&#39;</span><span class="p">}</span>
-    <span class="n">fM2K4_Flow_2</span> <span class="p">:</span> <span class="n">FB_AnalogInput</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-        <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">FWM</span><span class="p">:</span><span class="mi">2</span>
-        <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">lpm</span>
-        <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
-    <span class="s1">&#39;}</span>
-    <span class="n">fM2K4_Flow_2_val</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 3^Value&#39;</span><span class="p">}</span>
-    <span class="n">fM2K4_Press_1</span> <span class="p">:</span> <span class="n">FB_AnalogInput</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
-        <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">PRSM</span><span class="p">:</span><span class="mi">1</span>
-        <span class="n">field</span><span class="p">:</span> <span class="n">EGU</span> <span class="n">bar</span>
-        <span class="n">io</span><span class="p">:</span> <span class="n">i</span>
-    <span class="s1">&#39;}</span>
-    <span class="n">fM2K4_Press_1_val</span> <span class="p">:</span> <span class="n">LREAL</span><span class="p">;</span>
-
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
 </section>
 <section id="gvl-m3k4-constants">
-<h2>GVL_M3K4_Constants<a class="headerlink" href="#gvl-m3k4-constants" title="Permalink to this heading"></a></h2>
+<h2>GVL_M3K4_Constants<a class="headerlink" href="#gvl-m3k4-constants" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span> <span class="n">CONSTANT</span>
     <span class="o">//</span> <span class="n">Encoder</span> <span class="n">reference</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">nm</span>
@@ -289,7 +234,7 @@
 </div>
 </section>
 <section id="gvl-m3k4-rtd">
-<h2>GVL_M3K4_RTD<a class="headerlink" href="#gvl-m3k4-rtd" title="Permalink to this heading"></a></h2>
+<h2>GVL_M3K4_RTD<a class="headerlink" href="#gvl-m3k4-rtd" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">M3K4</span> <span class="n">BENDER</span> <span class="n">RTDs</span>
@@ -310,12 +255,13 @@
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 2^Value&#39;</span><span class="p">}</span>
     <span class="n">nM3K4DS_RTD_3</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">INT</span><span class="p">;</span>
 
+
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
 </section>
 <section id="gvl-m4k4-rtd">
-<h2>GVL_M4K4_RTD<a class="headerlink" href="#gvl-m4k4-rtd" title="Permalink to this heading"></a></h2>
+<h2>GVL_M4K4_RTD<a class="headerlink" href="#gvl-m4k4-rtd" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">M4K4</span> <span class="n">RTDs</span>
@@ -356,7 +302,7 @@
 </div>
 </section>
 <section id="gvl-m5k4-rtd">
-<h2>GVL_M5K4_RTD<a class="headerlink" href="#gvl-m5k4-rtd" title="Permalink to this heading"></a></h2>
+<h2>GVL_M5K4_RTD<a class="headerlink" href="#gvl-m5k4-rtd" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">M5K4</span> <span class="n">RTDs</span>
@@ -397,7 +343,7 @@
 </div>
 </section>
 <section id="gvl-pmps">
-<h2>GVL_PMPS<a class="headerlink" href="#gvl-pmps" title="Permalink to this heading"></a></h2>
+<h2>GVL_PMPS<a class="headerlink" href="#gvl-pmps" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">FFO</span> <span class="k">for</span> <span class="n">devices</span> <span class="n">upstream</span> <span class="n">of</span> <span class="n">ST1K4</span> <span class="p">(</span><span class="n">M1K4</span><span class="p">)</span>
@@ -428,7 +374,7 @@
 </div>
 </section>
 <section id="gvl-serialio">
-<h2>GVL_SerialIO<a class="headerlink" href="#gvl-serialio" title="Permalink to this heading"></a></h2>
+<h2>GVL_SerialIO<a class="headerlink" href="#gvl-serialio" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>VAR_GLOBAL
     //Better have your inputs and outputs!
     // M1K4
@@ -440,9 +386,9 @@ END_VAR
 </section>
 </section>
 <section id="pous">
-<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this heading"></a></h1>
+<h1>POUs<a class="headerlink" href="#pous" title="Link to this heading"></a></h1>
 <section id="fb-kbo-coating-states">
-<h2>FB_KBO_Coating_States<a class="headerlink" href="#fb-kbo-coating-states" title="Permalink to this heading"></a></h2>
+<h2>FB_KBO_Coating_States<a class="headerlink" href="#fb-kbo-coating-states" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_KBO_Coating_States</span> <span class="n">EXTENDS</span> <span class="n">FB_PositionStateBase_WithPMPS</span>
 <span class="n">VAR_INPUT</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -538,7 +484,7 @@ END_VAR
 </dl>
 </section>
 <section id="fb-offset-coating-states">
-<h2>FB_Offset_Coating_States<a class="headerlink" href="#fb-offset-coating-states" title="Permalink to this heading"></a></h2>
+<h2>FB_Offset_Coating_States<a class="headerlink" href="#fb-offset-coating-states" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_Offset_Coating_States</span> <span class="n">EXTENDS</span> <span class="n">FB_PositionStateBase_WithPMPS</span>
 <span class="n">VAR_INPUT</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -623,7 +569,7 @@ END_VAR
 </dl>
 </section>
 <section id="main">
-<h2>Main<a class="headerlink" href="#main" title="Permalink to this heading"></a></h2>
+<h2>Main<a class="headerlink" href="#main" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">Main</span>
 <span class="n">VAR</span>
 <span class="o">//</span> <span class="n">M1K4</span>
@@ -634,7 +580,7 @@ END_VAR
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">YUP</span>
         <span class="s1">&#39;}</span>
         <span class="o">//</span><span class="n">PMPS</span> <span class="n">State</span> <span class="n">Stage</span><span class="p">;</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="kc">False</span>
-        <span class="n">M1</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="s1">&#39;MR1K4-Coatings&#39;</span><span class="p">,</span> <span class="n">fVelocity</span><span class="o">:=</span><span class="mf">200.0</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Yup</span>
+        <span class="n">M1</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="s1">&#39;MR1K4-Coatings&#39;</span><span class="p">,</span> <span class="n">fVelocity</span><span class="o">:=</span><span class="mf">200.0</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Yup</span>
         <span class="n">fbMotionStage_m1</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
 
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Ydwn]^STM Status^Status^Digital input 1;</span>
@@ -642,7 +588,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">YDWN</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M2</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span><span class="o">:=</span><span class="mf">200.0</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Ydwn</span>
+        <span class="n">M2</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span><span class="o">:=</span><span class="mf">200.0</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Ydwn</span>
         <span class="n">fbMotionStage_m2</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
 
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Xup]^STM Status^Status^Digital input 1;</span>
@@ -650,7 +596,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">XUP</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M3</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span><span class="o">:=</span><span class="mf">1000.0</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Xup</span>
+        <span class="n">M3</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span><span class="o">:=</span><span class="mf">1000.0</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Xup</span>
         <span class="n">fbMotionStage_m3</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
 
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Xdwn]^STM Status^Status^Digital input 1;</span>
@@ -658,7 +604,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">XDWN</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M4</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span><span class="o">:=</span><span class="mf">1000.0</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Xdwn</span>
+        <span class="n">M4</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span><span class="o">:=</span><span class="mf">1000.0</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Xdwn</span>
         <span class="n">fbMotionStage_m4</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
 
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_PitchCoarse]^STM Status^Status^Digital input 1;</span>
@@ -666,7 +612,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">PITCH</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M5</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">150.0</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Pitch</span> <span class="n">Stepper</span>
+        <span class="n">M5</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">150.0</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Pitch</span> <span class="n">Stepper</span>
         <span class="n">fbMotionStage_m5</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
 
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 1;</span>
@@ -674,7 +620,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">BENDER</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M6</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">150.0</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Bender</span>
+        <span class="n">M6</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">150.0</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Bender</span>
         <span class="n">fbMotionStage_m6</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.fbRunHOMS.bSTOEnable1:=TIIB[EL1004_M1K4_STO]^Channel 1^Input;</span>
@@ -802,7 +748,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">X</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M7</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M7</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStage_m7</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR2K4</span> <span class="n">Y</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable :=TIIB[EL7041-0052_M2K4Y]^STM Status^Status^Digital input 1;</span>
@@ -812,7 +758,7 @@ END_VAR
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Y</span>
         <span class="s1">&#39;}</span>
         <span class="o">//</span><span class="n">PMPS</span> <span class="n">State</span> <span class="n">Stage</span><span class="p">;</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="kc">False</span>
-        <span class="n">M8</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="s1">&#39;MR2K4-Coatings&#39;</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">);</span>
+        <span class="n">M8</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="s1">&#39;MR2K4-Coatings&#39;</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">);</span>
         <span class="n">fbMotionStage_m8</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR2K4</span> <span class="n">rY</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable :=TIIB[EL7041-0052_M2K4rY]^STM Status^Status^Digital input 1;</span>
@@ -821,7 +767,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">PITCH</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M9</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M9</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStage_m9</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR2K4</span> <span class="n">US</span> <span class="n">BEND</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable :=TIIB[EL7041_M2K4_BEND_US]^STM Status^Status^Digital input 1;</span>
@@ -830,7 +776,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">BEND</span><span class="p">:</span><span class="n">US</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M10</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M10</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStage_m10</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR2K4</span> <span class="n">DS</span> <span class="n">BEND</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable :=TIIB[EL7041_M2K4_BEND_DS]^STM Status^Status^Digital input 1;</span>
@@ -839,7 +785,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">BEND</span><span class="p">:</span><span class="n">DS</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M11</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M11</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStage_m11</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR3K4</span> <span class="n">X</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable :=TIIB[EL7041-0052_M3K4X]^STM Status^Status^Digital input 1;</span>
@@ -849,7 +795,7 @@ END_VAR
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">X</span>
         <span class="s1">&#39;}</span>
         <span class="o">//</span><span class="n">PMPS</span> <span class="n">State</span> <span class="n">Stage</span><span class="p">;</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="kc">False</span>
-        <span class="n">M12</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="s1">&#39;MR3K4-Coatings&#39;</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">);</span>
+        <span class="n">M12</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">sName</span><span class="o">:=</span><span class="s1">&#39;MR3K4-Coatings&#39;</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">);</span>
         <span class="n">fbMotionStage_m12</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR3K4</span> <span class="n">Y</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable :=TIIB[EL7041-0052_M3K4Y]^STM Status^Status^Digital input 1;</span>
@@ -858,7 +804,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Y</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M13</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M13</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStage_m13</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR3K4</span> <span class="n">rX</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable :=TIIB[EL7041-0052_M3K4rX]^STM Status^Status^Digital input 1;</span>
@@ -867,7 +813,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">PITCH</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M14</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M14</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStage_m14</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR3K4</span> <span class="n">US</span> <span class="n">BEND</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable :=TIIB[EL7041_M3K4_BEND_US]^STM Status^Status^Digital input 1;</span>
@@ -876,7 +822,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">BEND</span><span class="p">:</span><span class="n">US</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M15</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M15</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStage_m15</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
         <span class="o">//////////////////////////////////</span>
     <span class="o">//</span><span class="n">MR3K4</span> <span class="n">DS</span> <span class="n">BEND</span>
@@ -886,7 +832,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">BEND</span><span class="p">:</span><span class="n">DS</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M16</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M16</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">DURING_MOTION</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStage_m16</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">M4K4</span> <span class="n">X</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4X]^STM Status^Status^Digital input 1;</span>
@@ -895,7 +841,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">X</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M17</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M17</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStageM17</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">M4K4</span> <span class="n">Y</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4Y]^STM Status^Status^Digital input 1;</span>
@@ -904,7 +850,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Y</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M18</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M18</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStageM18</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">M4K4</span> <span class="n">Z</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M4K4Z]^STM Status^Status^Digital input 2;</span>
@@ -913,7 +859,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Z</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M19</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M19</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStageM19</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
 
     <span class="o">//</span><span class="n">M4K4</span> <span class="n">rX</span>
@@ -923,7 +869,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">PITCH</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M20</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M20</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStageM20</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">M5K4</span> <span class="n">X</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4X]^STM Status^Status^Digital input 1;</span>
@@ -932,7 +878,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">X</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M21</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M21</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStageM21</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">M5K4</span> <span class="n">Y</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4Y]^STM Status^Status^Digital input 1;</span>
@@ -941,7 +887,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Y</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M22</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M22</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStageM22</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">M5K4</span> <span class="n">Z</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4Z]^STM Status^Status^Digital input 2;</span>
@@ -950,7 +896,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">Z</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M23</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M23</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStageM23</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">M5K4</span> <span class="n">rY</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-0052_M5K4rY]^STM Status^Status^Digital input 1;</span>
@@ -959,7 +905,7 @@ END_VAR
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">PITCH</span>
         <span class="s1">&#39;}</span>
-        <span class="n">M24</span> <span class="p">:</span> <span class="n">DUT_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
+        <span class="n">M24</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span>
         <span class="n">fbMotionStageM24</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
     <span class="o">//</span><span class="n">MR4K4</span> <span class="n">MR5K4</span> <span class="n">STO</span> <span class="n">button</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[Term 109 (EL1004)]^Channel 1^Input&#39;</span><span class="p">}</span>
@@ -1604,7 +1550,7 @@ END_VAR
 </dl>
 </section>
 <section id="p-serial-com">
-<h2>P_Serial_Com<a class="headerlink" href="#p-serial-com" title="Permalink to this heading"></a></h2>
+<h2>P_Serial_Com<a class="headerlink" href="#p-serial-com" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">P_Serial_Com</span>
 <span class="n">VAR</span>
     <span class="n">fbSerialLineControl_EL6001_M1K4</span><span class="p">:</span> <span class="n">SerialLineControl</span><span class="p">;</span>
@@ -1626,7 +1572,7 @@ END_VAR
 </div>
 </section>
 <section id="p-stripeprotections">
-<h2>P_StripeProtections<a class="headerlink" href="#p-stripeprotections" title="Permalink to this heading"></a></h2>
+<h2>P_StripeProtections<a class="headerlink" href="#p-stripeprotections" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">P_StripeProtections</span>
 <span class="n">VAR</span>
 <span class="p">(</span><span class="o">*</span>
@@ -1673,17 +1619,22 @@ END_VAR
                 <span class="n">nCurrentEncoderCount</span> <span class="o">:=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">nEncCntYupM1K4</span><span class="p">,</span>
                 <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">,</span>
                 <span class="n">bReadPmpsDb</span><span class="o">:=</span> <span class="n">MOTION_GVL</span><span class="o">.</span><span class="n">fbStandardPMPSDB</span><span class="o">.</span><span class="n">bReadPmpsDb</span><span class="p">,</span>
+                <span class="n">bUsePmpsDb</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
                 <span class="p">);</span>
 
 <span class="n">fbStripProtMR2K4</span><span class="p">(</span><span class="n">FFO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
                 <span class="n">nCurrentEncoderCount</span> <span class="o">:=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">nEncCntYM2K4</span><span class="p">,</span>
                 <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">,</span>
-                <span class="n">bReadPmpsDb</span> <span class="o">:=</span> <span class="n">MOTION_GVL</span><span class="o">.</span><span class="n">fbStandardPMPSDB</span><span class="o">.</span><span class="n">bReadPmpsDb</span><span class="p">);</span>
+                <span class="n">bReadPmpsDb</span> <span class="o">:=</span> <span class="n">MOTION_GVL</span><span class="o">.</span><span class="n">fbStandardPMPSDB</span><span class="o">.</span><span class="n">bReadPmpsDb</span><span class="p">,</span>
+                <span class="n">bUsePmpsDb</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+                <span class="p">);</span>
 
 <span class="n">fbStripProtMR3K4</span><span class="p">(</span><span class="n">FFO</span><span class="o">:=</span><span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
                 <span class="n">nCurrentEncoderCount</span> <span class="o">:=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">nEncCntXM3K4</span><span class="p">,</span>
                 <span class="n">neVRange</span><span class="o">:=</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">neVRange</span><span class="p">,</span>
-                <span class="n">bReadPmpsDb</span> <span class="o">:=</span> <span class="n">MOTION_GVL</span><span class="o">.</span><span class="n">fbStandardPMPSDB</span><span class="o">.</span><span class="n">bReadPmpsDb</span><span class="p">);</span>
+                <span class="n">bReadPmpsDb</span> <span class="o">:=</span> <span class="n">MOTION_GVL</span><span class="o">.</span><span class="n">fbStandardPMPSDB</span><span class="o">.</span><span class="n">bReadPmpsDb</span><span class="p">,</span>
+                <span class="n">bUsePmpsDb</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+                <span class="p">);</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -1696,7 +1647,7 @@ END_VAR
 </dl>
 </section>
 <section id="piezoserial">
-<h2>PiezoSerial<a class="headerlink" href="#piezoserial" title="Permalink to this heading"></a></h2>
+<h2>PiezoSerial<a class="headerlink" href="#piezoserial" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PiezoSerial</span>
 <span class="n">VAR</span>
     <span class="o">//</span><span class="n">PI</span> <span class="n">Serial</span>
@@ -1722,32 +1673,33 @@ END_VAR
 </dd>
 </dl>
 </section>
+<section id="prg-1-plctask">
+<h2>PRG_1_PlcTask<a class="headerlink" href="#prg-1-plctask" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_1_PlcTask</span>
+<span class="n">VAR</span>
+<span class="n">END_VAR</span>
+<span class="n">PRG_MR1K4_SOMS</span><span class="p">();</span>
+<span class="n">PRG_MR2K4_KBO</span><span class="p">();</span>
+<span class="n">PRG_MR3K4_KBO</span><span class="p">();</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#prg-mr1k4-soms">PRG_MR1K4_SOMS</a></p></li>
+<li><p><a class="reference internal" href="#prg-mr2k4-kbo">PRG_MR2K4_KBO</a></p></li>
+<li><p><a class="reference internal" href="#prg-mr3k4-kbo">PRG_MR3K4_KBO</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="prg-environment">
-<h2>PRG_Environment<a class="headerlink" href="#prg-environment" title="Permalink to this heading"></a></h2>
+<h2>PRG_Environment<a class="headerlink" href="#prg-environment" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_Environment</span>
 <span class="n">VAR</span>
 <span class="n">END_VAR</span>
-<span class="o">//</span> <span class="n">MR1K4</span> <span class="n">Flow</span> <span class="n">Pressure</span> <span class="n">Sensors</span>
-    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_1</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">5.0427</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mf">0.050472</span><span class="p">);</span>
-    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_1_val</span> <span class="o">:=</span> <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_1</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
-
-    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_2</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">5.0427</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mf">0.050472</span><span class="p">);</span>
-    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_2_val</span> <span class="o">:=</span> <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Flow_2</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
-
-    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Press_1</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">4.0</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Press_1_val</span> <span class="o">:=</span> <span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">fM1K4_Press_1</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
-
-    <span class="o">//</span> <span class="n">LAMP</span> <span class="n">KB</span> <span class="n">Flow</span> <span class="n">Pressure</span> <span class="n">Sensors</span>
-    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_1</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">5.0427</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mf">0.050472</span><span class="p">);</span>
-    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_1_val</span> <span class="o">:=</span> <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_1</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
-
-    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_2</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">5.0427</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mf">0.050472</span><span class="p">);</span>
-    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_2_val</span> <span class="o">:=</span> <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Flow_2</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
-
-    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Press_1</span><span class="p">(</span><span class="n">iTermBits</span><span class="o">:=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fTermMax</span><span class="o">:=</span><span class="mf">4.0</span><span class="p">,</span> <span class="n">fTermMin</span><span class="o">:=</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Press_1_val</span> <span class="o">:=</span> <span class="n">GVL_M2K4_RTD</span><span class="o">.</span><span class="n">fM2K4_Press_1</span><span class="o">.</span><span class="n">fReal</span><span class="p">;</span>
-
-    <span class="o">//</span> <span class="n">DREAM</span> <span class="n">KB</span> <span class="n">Internal</span> <span class="n">RTDs</span>
+<span class="o">//</span> <span class="n">DREAM</span> <span class="n">KB</span> <span class="n">Internal</span> <span class="n">RTDs</span>
     <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Left_RTD</span><span class="p">();</span>
     <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Right_RTD</span><span class="p">();</span>
     <span class="n">GVL_M4K4_RTD</span><span class="o">.</span><span class="n">nM4K4_Chin_Tail_RTD</span><span class="p">();</span>
@@ -1761,16 +1713,81 @@ END_VAR
 </div>
 <dl class="simple">
 <dt>Related:</dt><dd><ul class="simple">
-<li><p><a class="reference internal" href="#gvl-m1k4">GVL_M1K4</a></p></li>
-<li><p><a class="reference internal" href="#gvl-m2k4-rtd">GVL_M2K4_RTD</a></p></li>
 <li><p><a class="reference internal" href="#gvl-m4k4-rtd">GVL_M4K4_RTD</a></p></li>
 <li><p><a class="reference internal" href="#gvl-m5k4-rtd">GVL_M5K4_RTD</a></p></li>
 </ul>
 </dd>
 </dl>
 </section>
+<section id="prg-mr1k4-soms">
+<h2>PRG_MR1K4_SOMS<a class="headerlink" href="#prg-mr1k4-soms" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_MR1K4_SOMS</span>
+<span class="n">VAR</span>
+    <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Flow</span> <span class="n">Press</span> <span class="n">Sensors</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.fbFlow_1.iRaw := TIIB[EL3054_M1K4_FWM_PRSM]^AI Standard Channel 1^Value;</span>
+                                 <span class="o">.</span><span class="n">fbFlow_2</span><span class="o">.</span><span class="n">iRaw</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3054_M1K4_FWM_PRSM</span><span class="p">]</span><span class="o">^</span><span class="n">AI</span> <span class="n">Standard</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Value</span><span class="p">;</span>
+                              <span class="o">.</span><span class="n">fbPress_1</span><span class="o">.</span><span class="n">iRaw</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3054_M1K4_FWM_PRSM</span><span class="p">]</span><span class="o">^</span><span class="n">AI</span> <span class="n">Standard</span> <span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Value</span>
+    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbCoolingPanel</span> <span class="p">:</span> <span class="n">FB_Axilon_Cooling_2f1p</span><span class="p">;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[EP2008-0001_M1K4_VCV]^Channel 1^Output&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">VCV</span>
+        <span class="n">io</span><span class="p">:</span> <span class="n">io</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">ZNAM</span> <span class="n">OFF</span>
+        <span class="n">field</span><span class="p">:</span> <span class="n">ONAM</span> <span class="n">ON</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">bActivateVarCool</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="n">fbCoolingPanel</span><span class="p">();</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+<section id="prg-mr2k4-kbo">
+<h2>PRG_MR2K4_KBO<a class="headerlink" href="#prg-mr2k4-kbo" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_MR2K4_KBO</span>
+<span class="n">VAR</span>
+
+    <span class="o">//</span> <span class="n">M2K4</span> <span class="n">Flow</span> <span class="n">Press</span> <span class="n">Sensors</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.fbFlow_1.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 1^Value;</span>
+                              <span class="o">.</span><span class="n">fbPress_1</span><span class="o">.</span><span class="n">iRaw</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3054_FWM_PRSM</span><span class="p">]</span><span class="o">^</span><span class="n">AI</span> <span class="n">Standard</span> <span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Value</span>
+    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">MR2K4</span><span class="p">:</span><span class="n">KBO</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbCoolingPanel</span> <span class="p">:</span> <span class="n">FB_Axilon_Cooling_1f1p</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="n">fbCoolingPanel</span><span class="p">();</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+<section id="prg-mr3k4-kbo">
+<h2>PRG_MR3K4_KBO<a class="headerlink" href="#prg-mr3k4-kbo" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_MR3K4_KBO</span>
+<span class="n">VAR</span>
+    <span class="o">//</span> <span class="n">M3K4</span> <span class="n">Flow</span> <span class="n">Press</span> <span class="n">Sensors</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.fbFlow_1.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 2^Value;</span>
+                              <span class="o">.</span><span class="n">fbPress_1</span><span class="o">.</span><span class="n">iRaw</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3054_FWM_PRSM</span><span class="p">]</span><span class="o">^</span><span class="n">AI</span> <span class="n">Standard</span> <span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Value</span>
+    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbCoolingPanel</span> <span class="p">:</span> <span class="n">FB_Axilon_Cooling_1f1p</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="n">fbCoolingPanel</span><span class="p">();</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
 <section id="prg-pmps">
-<h2>PRG_PMPS<a class="headerlink" href="#prg-pmps" title="Permalink to this heading"></a></h2>
+<h2>PRG_PMPS<a class="headerlink" href="#prg-pmps" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_PMPS</span>
 <span class="n">VAR</span>
     <span class="n">fb_vetoArbiter</span> <span class="p">:</span> <span class="n">FB_VetoArbiter</span><span class="p">;</span>
@@ -1826,7 +1843,7 @@ END_VAR
 </dl>
 </section>
 <section id="prg-states">
-<h2>PRG_States<a class="headerlink" href="#prg-states" title="Permalink to this heading"></a></h2>
+<h2>PRG_States<a class="headerlink" href="#prg-states" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_States</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -1926,7 +1943,7 @@ END_VAR
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2024, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
