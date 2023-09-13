@@ -22,13 +22,13 @@ VAR_GLOBAL
     nM3K4DS_RTD_3 AT %I* : INT;
 
     {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 2^Value'}
-    fM3K4_Flow_1 : FB_AnalogInput;
+    fM3K4_Flow_1 : FB_AnalogInput1;
     {attribute 'pytmc' := '
         pv: MR3K4:KBO:FWM:1
         field: EGU lpm
         io: i
     '}
-    fM3K4_Flow_1_val : LREAL;
+    fM3K4_Flow_1_val : REAL;
 
 END_VAR]]></Declaration>
   </GVL>

@@ -23,13 +23,13 @@ VAR_GLOBAL
 
     // M2K4 Flow Press Sensors
     {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 1^Value'}
-    fM2K4_Flow_1 : FB_AnalogInput;
+    fM2K4_Flow_1 : FB_AnalogInput1;
     {attribute 'pytmc' := '
         pv: MR2K4:KBO:FWM:1
         field: EGU lpm
         io: i
     '}
-    fM2K4_Flow_1_val : LREAL;
+    fM2K4_Flow_1_val : REAL;
 
     {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 3^Value'}
     fM2K4_Press_1 : FB_AnalogInput;

@@ -16,7 +16,7 @@
     <CompilerDefines>K</CompilerDefines>
     <CombineIds>false</CombineIds>
     <Company>SLAC</Company>
-    <Released>true</Released>
+    <Released>false</Released>
     <Title>lcls-plc-tmo-optics</Title>
     <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
@@ -72,6 +72,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\FB_AnalogInput1.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\FB_Offset_Coating_States.TcPOU">
@@ -157,6 +160,9 @@
     </LibraryReference>
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderResolution Include="LCLS General">
+      <Resolution>LCLS General, 2.8.2 (SLAC)</Resolution>
+    </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-motion">
       <Resolution>lcls-twincat-motion, 2.2.0 (SLAC)</Resolution>
     </PlaceholderResolution>
