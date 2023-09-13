@@ -3,19 +3,19 @@
   <POU Name="FB_AnalogInput1" Id="{96db7639-6b01-4d7a-bcbc-8bfc0195f2f2}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_AnalogInput1
 VAR_INPUT
-	// Connect this input to the terminal
+    // Connect this input to the terminal
     iRaw AT %I*: INT;
-	ratio: REAL;
+    ratio: REAL;
     // The number of bits correlated with the terminal's max value. This is not necessarily the resolution parameter.
     iTermBits: UINT:= 32767; // The terminal's maxium value in bits
     // The fReal value correlated with the terminal's max value
     fTermMax: REAL;
     // The fReal value correlated with the terminal's min value
     fTermMin: REAL;
-	rC: REAL; // the current transferred from the raw bits of EL3054
+    rC: REAL; // the current transferred from the raw bits of EL3054
 END_VAR
 VAR_OUTPUT
-	// The real flow rate read from the output
+    // The real flow rate read from the output
     fReal: REAL;
 END_VAR
 VAR
@@ -26,9 +26,9 @@ END_VAR
    ratio := INT_TO_REAL(iRaw)/UINT_TO_REAL(iTermBits);
    rC := 16.0*ratio + 4.0; // transfer the current mA base on raw bit reading
    IF rC >= 4.0 AND rC <= 20.0 THEN
-	   fReal := (fTermMax - fTermMin)*((rC - 4.0)/16) + fTermMin; // calibrate the real flow rate basic on the current calibrate from the raw bit
+       fReal := (fTermMax - fTermMin)*((rC - 4.0)/16) + fTermMin; // calibrate the real flow rate basic on the current calibrate from the raw bit
    ELSE
-      fReal := 0.0; 
+      fReal := 0.0;
    END_IF
    ]]></ST>
     </Implementation>
