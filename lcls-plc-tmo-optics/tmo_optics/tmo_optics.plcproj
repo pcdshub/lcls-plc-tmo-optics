@@ -74,9 +74,6 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\FB_AnalogInput1.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\FB_Offset_Coating_States.TcPOU">
       <SubType>Code</SubType>
     </Compile>
