@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{5E9335AF-F27E-BD70-22D4-FD2AAA1EEECA}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{DC509897-FEDD-AA3E-29A7-259FF0C2A248}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -585,7 +585,24 @@
       </SubItem>
     </DataType>
     <DataType>
-      <Name GUID="{5C8FF47F-7F83-4493-8D21-F1FF8A08F75A}" Namespace="PLC" TcBaseType="true">PlcAppSystemInfo</Name>
+      <Name GUID="{4591E628-DBCE-4E33-AE0B-7EB853AA256E}" Namespace="PLC" TcBaseType="true">EPlcPersistentStatus</Name>
+      <BitSize>8</BitSize>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000002}">USINT</BaseType>
+      <EnumInfo>
+        <Text>PS_None</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>PS_All</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>PS_Partial</Text>
+        <Enum>2</Enum>
+      </EnumInfo>
+    </DataType>
+    <DataType>
+      <Name GUID="{941FDF6E-37CE-4C30-AA23-3236AFA461E2}" Namespace="PLC" TcBaseType="true">PlcAppSystemInfo</Name>
       <BitSize>2048</BitSize>
       <SubItem>
         <Name>ObjId</Name>
@@ -666,6 +683,12 @@
         <BitOffs>224</BitOffs>
       </SubItem>
       <SubItem>
+        <Name>PersistentStatus</Name>
+        <Type GUID="{4591E628-DBCE-4E33-AE0B-7EB853AA256E}" Namespace="PLC">EPlcPersistentStatus</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>232</BitOffs>
+      </SubItem>
+      <SubItem>
         <Name>TComSrvPtr</Name>
         <Type GUID="{00000030-0000-0000-E000-000000000064}">ITComObjectServer</Type>
         <BitSize X64="64">32</BitSize>
@@ -693,6 +716,7 @@
         <Hide GUID="{5DCEB2BC-E196-43AD-80B7-EBACF31A430B}"/>
         <Hide GUID="{1B9FDDE4-B3B7-4F0F-AB14-24EDC2F643E7}"/>
         <Hide GUID="{C1C52E30-BC0B-44CA-BF39-E2FE7F2D145C}"/>
+        <Hide GUID="{5C8FF47F-7F83-4493-8D21-F1FF8A08F75A}"/>
       </Hides>
     </DataType>
     <DataType>
@@ -3437,31 +3461,31 @@
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83356116</GetCodeOffs>
+        <GetCodeOffs>83356164</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83356152</GetCodeOffs>
+        <GetCodeOffs>83356200</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83356160</GetCodeOffs>
+        <GetCodeOffs>83356208</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83356140</GetCodeOffs>
+        <GetCodeOffs>83356188</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83356156</GetCodeOffs>
+        <GetCodeOffs>83356204</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="0">__getbBusy</Name>
@@ -4700,15 +4724,15 @@
         <Name>nId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83356056</GetCodeOffs>
-        <SetCodeOffs>83356080</SetCodeOffs>
+        <GetCodeOffs>83356104</GetCodeOffs>
+        <SetCodeOffs>83356128</SetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83356096</GetCodeOffs>
-        <SetCodeOffs>83356108</SetCodeOffs>
+        <GetCodeOffs>83356144</GetCodeOffs>
+        <SetCodeOffs>83356156</SetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>ExtendName</Name>
@@ -4954,37 +4978,37 @@
         <Name>eSeverity</Name>
         <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
         <BitSize>16</BitSize>
-        <GetCodeOffs>83356208</GetCodeOffs>
+        <GetCodeOffs>83356256</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>ipSourceInfo</Name>
         <Type Namespace="LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83356188</GetCodeOffs>
+        <GetCodeOffs>83356236</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nEventId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83356276</GetCodeOffs>
+        <GetCodeOffs>83356324</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nUniqueId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83356280</GetCodeOffs>
+        <GetCodeOffs>83356328</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventClassName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83356236</GetCodeOffs>
+        <GetCodeOffs>83356284</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83356284</GetCodeOffs>
+        <GetCodeOffs>83356332</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>EqualsToEventClass</Name>
@@ -5583,7 +5607,7 @@
         <Name>nTimeSent</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>83356308</GetCodeOffs>
+        <GetCodeOffs>83356356</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>SetJsonAttribute</Name>
@@ -44004,7 +44028,7 @@ External Setpoint Generation:
         <Name>nTimestamp</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>83361528</GetCodeOffs>
+        <GetCodeOffs>83361576</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="45">__getnTimestamp</Name>
@@ -44924,9 +44948,351 @@ External Setpoint Generation:
       </Hides>
     </DataType>
     <DataType>
+      <Name GUID="{D12E7FB5-17AA-426E-9B82-E253AE65DC47}" TcBaseType="true" CName="TcEventType*">TcEventType</Name>
+      <BitSize>16</BitSize>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+      <EnumInfo>
+        <Text>Message</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>Alarm</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+      <Properties>
+        <Property>
+          <Name>plcAttribute_qualified_only</Name>
+        </Property>
+        <Property>
+          <Name>plcAttribute_strict</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name GUID="{4CF44F1F-8924-4AAC-8432-0F7294012F1B}" TcBaseType="true" CName="TcComparisonOperator*">TcComparisonOperator</Name>
+      <BitSize>16</BitSize>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+      <EnumInfo>
+        <Text>EqualTo</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>NotEqualTo</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>LessThan</Text>
+        <Enum>2</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>GreaterThan</Text>
+        <Enum>3</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>LessThanOrEqualTo</Text>
+        <Enum>4</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>GreaterThanOrEqualTo</Text>
+        <Enum>5</Enum>
+      </EnumInfo>
+      <Properties>
+        <Property>
+          <Name>plcAttribute_qualified_only</Name>
+        </Property>
+        <Property>
+          <Name>plcAttribute_strict</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name GUID="{B69885BA-DA24-48A8-A6FA-6099F5D3601B}" TcBaseType="true" CName="TcEventTimeStampType*">TcEventTimeStampType</Name>
+      <BitSize>16</BitSize>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+      <EnumInfo>
+        <Text>Raised</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>Confirmed</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>Cleared</Text>
+        <Enum>2</Enum>
+      </EnumInfo>
+      <Properties>
+        <Property>
+          <Name>plcAttribute_qualified_only</Name>
+        </Property>
+        <Property>
+          <Name>plcAttribute_strict</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name GUID="{27A7EA8A-FB15-4687-A4D8-6989F4A71351}" TcBaseType="true" CName="TcStringComparisonOperator*">TcStringComparisonOperator</Name>
+      <BitSize>16</BitSize>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+      <EnumInfo>
+        <Text>EqualTo</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>NotEqualTo</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>Like</Text>
+        <Enum>2</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>IsNull</Text>
+        <Enum>3</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>IsNotNull</Text>
+        <Enum>4</Enum>
+      </EnumInfo>
+      <Properties>
+        <Property>
+          <Name>plcAttribute_qualified_only</Name>
+        </Property>
+        <Property>
+          <Name>plcAttribute_strict</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name GUID="{CA520B34-C0F8-4AD3-9514-6B6626A12566}" TcBaseType="true" CName="TcLogicalOperator*">TcLogicalOperator</Name>
+      <BitSize>16</BitSize>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+      <EnumInfo>
+        <Text>And</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>Or</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+      <Properties>
+        <Property>
+          <Name>plcAttribute_qualified_only</Name>
+        </Property>
+        <Property>
+          <Name>plcAttribute_strict</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
       <Name GUID="{7404CD52-3776-4B1A-9525-B7C1D691DFC4}" TcBaseType="true" CName="ITcEventFilter*">ITcEventFilter</Name>
       <BitSize X64="64">32</BitSize>
       <BaseType GUID="{00000001-0000-0000-E000-000000000064}">ITcUnknown</BaseType>
+      <Method>
+        <Name>Clear</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+      </Method>
+      <Method>
+        <Name>AddEventTypeExpression</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>eType</Name>
+          <Type GUID="{D12E7FB5-17AA-426E-9B82-E253AE65DC47}">TcEventType</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>op</Name>
+          <Type GUID="{4CF44F1F-8924-4AAC-8432-0F7294012F1B}">TcComparisonOperator</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddEventClassExpression</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>eventClass</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000021}" ReferenceTo="true" Const="1">GUID</Type>
+          <BitSize X64="64">32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>op</Name>
+          <Type GUID="{4CF44F1F-8924-4AAC-8432-0F7294012F1B}">TcComparisonOperator</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddEventIdExpression</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>eventId</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>op</Name>
+          <Type GUID="{4CF44F1F-8924-4AAC-8432-0F7294012F1B}">TcComparisonOperator</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddSeverityExpression</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>severity</Name>
+          <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>op</Name>
+          <Type GUID="{4CF44F1F-8924-4AAC-8432-0F7294012F1B}">TcComparisonOperator</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddTimeStampExpression</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>eType</Name>
+          <Type GUID="{B69885BA-DA24-48A8-A6FA-6099F5D3601B}">TcEventTimeStampType</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>timeStamp</Name>
+          <Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
+          <BitSize>64</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>op</Name>
+          <Type GUID="{4CF44F1F-8924-4AAC-8432-0F7294012F1B}">TcComparisonOperator</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddSourceGuidExpression</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>sourceGuid</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000021}" ReferenceTo="true" Const="1">GUID</Type>
+          <BitSize X64="64">32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>op</Name>
+          <Type GUID="{4CF44F1F-8924-4AAC-8432-0F7294012F1B}">TcComparisonOperator</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddSourceIdExpression</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>sourceId</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>op</Name>
+          <Type GUID="{4CF44F1F-8924-4AAC-8432-0F7294012F1B}">TcComparisonOperator</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddSourceNameExpression</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>sourceName</Name>
+          <Type GUID="{18071995-0000-0000-0000-00000000001A}">PCCH</Type>
+          <BitSize X64="64">32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>op</Name>
+          <Type GUID="{27A7EA8A-FB15-4687-A4D8-6989F4A71351}">TcStringComparisonOperator</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddJsonAttributeExpression</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>path</Name>
+          <Type GUID="{18071995-0000-0000-0000-00000000001A}">PCCH</Type>
+          <BitSize X64="64">32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>value</Name>
+          <Type GUID="{18071995-0000-0000-0000-00000000001A}">PCCH</Type>
+          <BitSize X64="64">32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>op</Name>
+          <Type GUID="{27A7EA8A-FB15-4687-A4D8-6989F4A71351}">TcStringComparisonOperator</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddLogicalOperator</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>eType</Name>
+          <Type GUID="{CA520B34-C0F8-4AD3-9514-6B6626A12566}">TcLogicalOperator</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddNotOperator</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+      </Method>
+      <Method>
+        <Name>CreateExpressionGroup</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>pipGroup</Name>
+          <Type GUID="{7404CD52-3776-4B1A-9525-B7C1D691DFC4}" PointerTo="1">ITcEventFilter</Type>
+          <BitSize X64="64">32</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AddExpressionGroup</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>ipGroup</Name>
+          <Type GUID="{7404CD52-3776-4B1A-9525-B7C1D691DFC4}">ITcEventFilter</Type>
+          <BitSize X64="64">32</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>Validate</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>bResult</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000030}" ReferenceTo="true">BOOL</Type>
+          <BitSize X64="64">32</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>Clone</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <ReturnBitSize>32</ReturnBitSize>
+        <Parameter>
+          <Name>pipClone</Name>
+          <Type GUID="{7404CD52-3776-4B1A-9525-B7C1D691DFC4}" PointerTo="1">ITcEventFilter</Type>
+          <BitSize X64="64">32</BitSize>
+        </Parameter>
+      </Method>
     </DataType>
     <DataType>
       <Name GUID="{A36B5464-1369-43FB-8C93-7914F7BE824F}" TcBaseType="true" CName="ITcEventListener*">ITcEventListener</Name>
@@ -45703,31 +46069,31 @@ External Setpoint Generation:
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83361084</GetCodeOffs>
+        <GetCodeOffs>83361132</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83361128</GetCodeOffs>
+        <GetCodeOffs>83361176</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83361092</GetCodeOffs>
+        <GetCodeOffs>83361140</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83361116</GetCodeOffs>
+        <GetCodeOffs>83361164</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83361136</GetCodeOffs>
+        <GetCodeOffs>83361184</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="0">__getbBusy</Name>
@@ -55227,150 +55593,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
       </Hides>
     </DataType>
     <DataType>
-      <Name GUID="{11F7FC20-DBF4-4DAF-96C7-1FD6B6156B31}" TcBaseType="true" CName="TcSystemEventClass">TcSystemEventClass</Name>
-      <DisplayName TxtId="">TcSystemEventClass</DisplayName>
-      <EventId>
-        <Name Id="1">InternalError</Name>
-        <DisplayName TxtId="">InternalError</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="2">NoRTime</Name>
-        <DisplayName TxtId="">NoRTime</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="3">AllocationLockedMemoryError</Name>
-        <DisplayName TxtId="">AllocationLockedMemoryError</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4">InsertMailboxError</Name>
-        <DisplayName TxtId="">InsertMailboxError</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="5">WrongReceiveHMSG</Name>
-        <DisplayName TxtId="">WrongReceiveHMSG</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="6">TargetPortNotFound</Name>
-        <DisplayName TxtId="">TargetPortNotFound (possible cause: ADS server not started)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="7">TargetMachineNotFound</Name>
-        <DisplayName TxtId="">TargetMachineNotFound (possible cause: missing ADS route)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="8">UnknownCommandID</Name>
-        <DisplayName TxtId="">UnknownCommandID</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="9">BadTaskID</Name>
-        <DisplayName TxtId="">BadTaskID</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="10">NoIO</Name>
-        <DisplayName TxtId="">NoIO</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="11">UnknownAdsCommand</Name>
-        <DisplayName TxtId="">UnknownAdsCommand</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="12">Win32Error</Name>
-        <DisplayName TxtId="">Win32Error</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="13">PortNotConnected</Name>
-        <DisplayName TxtId="">PortNotConnected</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="14">InvalidAdsLength</Name>
-        <DisplayName TxtId="">InvalidAdsLength</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="15">InvalidAdsNetID</Name>
-        <DisplayName TxtId="">InvalidAdsNetID</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="16">LowInstallationLevel</Name>
-        <DisplayName TxtId="">LowInstallationLevel</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="17">NoDebugAvailable</Name>
-        <DisplayName TxtId="">NoDebugAvailable</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="18">PortDisabled</Name>
-        <DisplayName TxtId="">PortDisabled</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="19">PortAlreadyConnected</Name>
-        <DisplayName TxtId="">PortAlreadyConnected</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="20">AdsSyncWin32Error</Name>
-        <DisplayName TxtId="">AdsSyncWin32Error</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="21">AdsSyncTimeout</Name>
-        <DisplayName TxtId="">AdsSyncTimeout</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="22">AdsSyncAmsError</Name>
-        <DisplayName TxtId="">AdsSyncAmsError</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="23">AdsSyncNoIndexMap</Name>
-        <DisplayName TxtId="">AdsSyncNoIndexMap</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="24">InvalidAdsPort</Name>
-        <DisplayName TxtId="">InvalidAdsPort</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="25">NoMemory</Name>
-        <DisplayName TxtId="">NoMemory</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="26">TCPSendError</Name>
-        <DisplayName TxtId="">TCPSendError</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="27">HostUnreachable</Name>
-        <DisplayName TxtId="">HostUnreachable</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="28">InvalidAMSFragment</Name>
-        <DisplayName TxtId="">InvalidAMSFragment</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-    </DataType>
-    <DataType>
       <Name GUID="{98BCB284-F932-4EA4-B58B-68A1F1C34192}" TcBaseType="true" CName="TcGeneralAdsEventClass">TcGeneralAdsEventClass</Name>
       <DisplayName TxtId="">TcGeneralAdsEventClass</DisplayName>
       <EventId>
@@ -55683,164 +55905,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
       </Hides>
     </DataType>
     <DataType>
-      <Name GUID="{E3D84344-4CB3-44DB-8D94-12F9CE0E2F90}" TcBaseType="true" CName="TcRouterEventClass">TcRouterEventClass</Name>
-      <DisplayName TxtId="">TcRouterEventClass</DisplayName>
-      <EventId>
-        <Name Id="1280">NoLockedMemory</Name>
-        <DisplayName TxtId="">No locked memory can be allocated.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1281">ResizeMemory</Name>
-        <DisplayName TxtId="">The size of the router memory could not be changed.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1282">MailboxFull</Name>
-        <DisplayName TxtId="">The mailbox has reached the maximum number of possible messages. The current sent message was rejected.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1283">DebugBoxFull</Name>
-        <DisplayName TxtId="">The debug mailbox has reached the maximum number of possible messages. The sent message will not be displayed in the debug monitor.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1284">UnknownPortType</Name>
-        <DisplayName TxtId="">The port type is unknown.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1285">NotInitialized</Name>
-        <DisplayName TxtId="">TwinCAT Router is not initialised.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1286">PortAlreadyInUse</Name>
-        <DisplayName TxtId="">The desired port number is already assigned.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1287">NotRegistered</Name>
-        <DisplayName TxtId="">The Port is not registered.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1288">NoMoreQueues</Name>
-        <DisplayName TxtId="">The maximum number of Ports is reached.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1289">InvalidPort</Name>
-        <DisplayName TxtId="">The port is invalid.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1290">NotActivated</Name>
-        <DisplayName TxtId="">TwinCAT Router is not active.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1291">FragmentBoxFull</Name>
-        <DisplayName TxtId="">Fragment Box is full.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1292">FragmentTimeout</Name>
-        <DisplayName TxtId="">Fragment Timeout</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1293">ToBeRemoved</Name>
-        <DisplayName TxtId="">ToBeRemoved</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-    </DataType>
-    <DataType>
-      <Name GUID="{B63588AE-B30A-4DCE-A44F-F929FB114944}" TcBaseType="true" CName="TcRTimeEventClass">TcRTimeEventClass</Name>
-      <DisplayName TxtId="">TcRTimeEventClass</DisplayName>
-      <EventId>
-        <Name Id="4096">InternalError</Name>
-        <DisplayName TxtId="">An internal fatal error in the TwinCAT real-time system occurred.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4097">BadTimerPeriods</Name>
-        <DisplayName TxtId="">The timer period is invalid.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4098">InvalidTaskPtr</Name>
-        <DisplayName TxtId="">The task pointer has the invalid value ZERO.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4099">InvalidStackPtr</Name>
-        <DisplayName TxtId="">The task stack pointer has the invalid value ZERO.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4100">PrioExists</Name>
-        <DisplayName TxtId="">The demanded task priority is already assigned.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4101">NoMoreTCB</Name>
-        <DisplayName TxtId="">No more free TCB (Task Control Block) available. The maximum number of TCBs is 64.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4102">NoMoreSemas</Name>
-        <DisplayName TxtId="">No more free semaphores available. The maximum number of semaphores is 64.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4103">NoMoreQueues</Name>
-        <DisplayName TxtId="">No more free queues available. The maximum number of queues is 64.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4109">ExtIRQAlreadyDef</Name>
-        <DisplayName TxtId="">An external synchronisation interrupt is already applied.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4110">ExtIRQNotDef</Name>
-        <DisplayName TxtId="">No external synchronsiation interrupt is applied.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4111">ExtIRQInstallFailed</Name>
-        <DisplayName TxtId="">The apply of the external synchronisation interrupt failed.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4112">IRQNotLessOrEqual</Name>
-        <DisplayName TxtId="">Call of a service function in the wrong context.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4119">VMXNotSupported</Name>
-        <DisplayName TxtId="">Intel VT-x extension is not supported.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4120">VMXDisabled</Name>
-        <DisplayName TxtId="">Intel VT-x extension is not enabled in BIOS.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4121">VMXControlsMissing</Name>
-        <DisplayName TxtId="">Missing feature in Intel VT-x extension.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4122">VMXEnableFails</Name>
-        <DisplayName TxtId="">Enabling Intel VT-x fails.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-    </DataType>
-    <DataType>
       <Name GUID="{1D0C4BAC-ECF3-4F33-8F20-A12E77AB6387}" TcBaseType="true" CName="Win32EventClass">Win32EventClass</Name>
       <DisplayName TxtId="">Win32EventClass</DisplayName>
       <EventId>
@@ -56070,6 +56134,516 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         <Hide GUID="{9E76D1D7-D744-4E3D-B111-F6F94B60E6AB}"/>
       </Hides>
     </DataType>
+    <DataType>
+      <Name GUID="{BB2A9999-102E-421A-8D3D-B0660E07B1FE}" TcBaseType="true" CName="TcSystemEventClass">TcSystemEventClass</Name>
+      <DisplayName TxtId="">TcSystemEventClass</DisplayName>
+      <EventId>
+        <Name Id="1">InternalError</Name>
+        <DisplayName TxtId="">Internal error.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="2">NoRTime</Name>
+        <DisplayName TxtId="">No real-time.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="3">AllocationLockedMemoryError</Name>
+        <DisplayName TxtId="">Allocation locked – memory error.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4">InsertMailboxError</Name>
+        <DisplayName TxtId="">Mailbox full – the ADS message could not be sent. Reducing the number of ADS messages per cycle will help.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="5">WrongReceiveHMSG</Name>
+        <DisplayName TxtId="">Wrong HMSG.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="6">TargetPortNotFound</Name>
+        <DisplayName TxtId="">Target port not found – ADS server is not started or is not reachable.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="7">TargetMachineNotFound</Name>
+        <DisplayName TxtId="">Target computer not found – AMS route was not found.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="8">UnknownCommandID</Name>
+        <DisplayName TxtId="">Unknown command ID.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="9">BadTaskID</Name>
+        <DisplayName TxtId="">Invalid task ID.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="10">NoIO</Name>
+        <DisplayName TxtId="">No IO.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="11">UnknownAdsCommand</Name>
+        <DisplayName TxtId="">Unknown AMS command.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="12">Win32Error</Name>
+        <DisplayName TxtId="">Win32 error.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="13">PortNotConnected</Name>
+        <DisplayName TxtId="">Port not connected.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="14">InvalidAdsLength</Name>
+        <DisplayName TxtId="">Invalid AMS length.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="15">InvalidAdsNetID</Name>
+        <DisplayName TxtId="">Invalid AMS Net ID.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="16">LowInstallationLevel</Name>
+        <DisplayName TxtId="">Low installation level – TwinCAT 2 license error.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="17">NoDebugAvailable</Name>
+        <DisplayName TxtId="">No debugging available.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="18">PortDisabled</Name>
+        <DisplayName TxtId="">Port disabled – TwinCAT system service not started.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="19">PortAlreadyConnected</Name>
+        <DisplayName TxtId="">Port already connected.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="20">AdsSyncWin32Error</Name>
+        <DisplayName TxtId="">AMS Sync Win32 error.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="21">AdsSyncTimeout</Name>
+        <DisplayName TxtId="">AMS Sync Timeout.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="22">AdsSyncAmsError</Name>
+        <DisplayName TxtId="">AMS Sync error.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="23">AdsSyncNoIndexMap</Name>
+        <DisplayName TxtId="">No index map for AMS Sync available.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="24">InvalidAdsPort</Name>
+        <DisplayName TxtId="">Invalid AMS port.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="25">NoMemory</Name>
+        <DisplayName TxtId="">No memory.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="26">TCPSendError</Name>
+        <DisplayName TxtId="">TCP send error.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="27">HostUnreachable</Name>
+        <DisplayName TxtId="">Host unreachable.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="28">InvalidAMSFragment</Name>
+        <DisplayName TxtId="">Invalid AMS fragment.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="29">AdsSecTLSSendError</Name>
+        <DisplayName TxtId="">TLS send error – secure ADS connection failed.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="30">AdsSecAccessDenied</Name>
+        <DisplayName TxtId="">Access denied – secure ADS access denied.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <Translations>
+        <Text TxtId="Internal error.">
+          <Text LcId="1031">Interner Fehler.</Text>
+        </Text>
+        <Text TxtId="No real-time.">
+          <Text LcId="1031">Keine Echtzeit.</Text>
+        </Text>
+        <Text TxtId="Allocation locked – memory error.">
+          <Text LcId="1031">Zuweisung gesperrt - Speicherfehler.</Text>
+        </Text>
+        <Text TxtId="Mailbox full – the ADS message could not be sent. Reducing the number of ADS messages per cycle will help.">
+          <Text LcId="1031">Postfach voll – Es konnte die ADS Nachricht nicht versendet werden. Reduzieren der Anzahl der ADS Nachrichten pro Zyklus bringt Abhilfe.</Text>
+        </Text>
+        <Text TxtId="Wrong HMSG.">
+          <Text LcId="1031">Falsches HMSG.</Text>
+        </Text>
+        <Text TxtId="Target port not found – ADS server is not started or is not reachable.">
+          <Text LcId="1031">Ziel-Port nicht gefunden – ADS Server ist nicht gestartet oder erreichbar.</Text>
+        </Text>
+        <Text TxtId="Unknown command ID.">
+          <Text LcId="1031">Unbekannte Befehl-ID.</Text>
+        </Text>
+        <Text TxtId="Invalid task ID.">
+          <Text LcId="1031">Ungültige Task-ID.</Text>
+        </Text>
+        <Text TxtId="No IO.">
+          <Text LcId="1031">Kein IO.</Text>
+        </Text>
+        <Text TxtId="Unknown AMS command.">
+          <Text LcId="1031">Unbekannter AMS-Befehl.</Text>
+        </Text>
+        <Text TxtId="Win32 error.">
+          <Text LcId="1031">Win32 Fehler.</Text>
+        </Text>
+        <Text TxtId="Port not connected.">
+          <Text LcId="1031">Port nicht verbunden.</Text>
+        </Text>
+        <Text TxtId="Invalid AMS length.">
+          <Text LcId="1031">Ungültige AMS-Länge.</Text>
+        </Text>
+        <Text TxtId="Invalid AMS Net ID.">
+          <Text LcId="1031">Ungültige AMS Net ID.</Text>
+        </Text>
+        <Text TxtId="Low installation level – TwinCAT 2 license error.">
+          <Text LcId="1031">Installations-Level ist zu niedrig – TwinCAT 2 Lizenzfehler.</Text>
+        </Text>
+        <Text TxtId="No debugging available.">
+          <Text LcId="1031">Kein Debugging verfügbar.</Text>
+        </Text>
+        <Text TxtId="Port disabled – TwinCAT system service not started.">
+          <Text LcId="1031">Port deaktiviert – TwinCAT System Service nicht gestartet.</Text>
+        </Text>
+        <Text TxtId="Port already connected.">
+          <Text LcId="1031">Port bereits verbunden.</Text>
+        </Text>
+        <Text TxtId="AMS Sync Win32 error.">
+          <Text LcId="1031">AMS Sync Win32 Fehler.</Text>
+        </Text>
+        <Text TxtId="AMS Sync Timeout.">
+          <Text LcId="1031">AMS Sync Timeout.</Text>
+        </Text>
+        <Text TxtId="AMS Sync error.">
+          <Text LcId="1031">AMS Sync Fehler.</Text>
+        </Text>
+        <Text TxtId="No index map for AMS Sync available.">
+          <Text LcId="1031">Keine Index-Map für AMS Sync vorhanden.</Text>
+        </Text>
+        <Text TxtId="Invalid AMS port.">
+          <Text LcId="1031">Ungültiger AMS-Port.</Text>
+        </Text>
+        <Text TxtId="No memory.">
+          <Text LcId="1031">Kein Speicher.</Text>
+        </Text>
+        <Text TxtId="TCP send error.">
+          <Text LcId="1031">TCP Sendefehler.</Text>
+        </Text>
+        <Text TxtId="Host unreachable.">
+          <Text LcId="1031">Host nicht erreichbar.</Text>
+        </Text>
+        <Text TxtId="Invalid AMS fragment.">
+          <Text LcId="1031">Ungültiges AMS Fragment.</Text>
+        </Text>
+        <Text TxtId="TLS send error – secure ADS connection failed.">
+          <Text LcId="1031">TLS Sendefehler – Secure ADS Verbindung fehlgeschlagen.</Text>
+        </Text>
+        <Text TxtId="Access denied – secure ADS access denied.">
+          <Text LcId="1031">Zugriff Verweigert – Secure ADS Zugriff verweigert.</Text>
+        </Text>
+      </Translations>
+      <Hides>
+        <Hide GUID="{11F7FC20-DBF4-4DAF-96C7-1FD6B6156B31}"/>
+        <Hide GUID="{B2BBE2AF-D093-4B0F-BE44-FCF3140A3212}"/>
+        <Hide GUID="{EF57FA70-34C2-47F2-B661-D7FFBEC2C9A9}"/>
+        <Hide GUID="{EF9200FE-E527-4DE7-BF5A-C4237524B2D2}"/>
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{E759605A-2341-48FC-9F3F-C8FA405C4B24}" TcBaseType="true" CName="TcRouterEventClass">TcRouterEventClass</Name>
+      <DisplayName TxtId="">TcRouterEventClass</DisplayName>
+      <EventId>
+        <Name Id="1280">NoLockedMemory</Name>
+        <DisplayName TxtId="">Locked memory cannot be allocated.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1281">ResizeMemory</Name>
+        <DisplayName TxtId="">The router memory size could not be changed.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1282">MailboxFull</Name>
+        <DisplayName TxtId="">The mailbox has reached the maximum number of possible messages.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1283">DebugBoxFull</Name>
+        <DisplayName TxtId="">The debug mailbox has reached the maximum number of possible messages.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1284">UnknownPortType</Name>
+        <DisplayName TxtId="">The port type is unknown.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1285">NotInitialized</Name>
+        <DisplayName TxtId="">TwinCAT Router is not initialised.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1286">PortAlreadyInUse</Name>
+        <DisplayName TxtId="">The port number is already assigned.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1287">NotRegistered</Name>
+        <DisplayName TxtId="">The port is not registered.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1288">NoMoreQueues</Name>
+        <DisplayName TxtId="">The maximum number of ports has been reached.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1289">InvalidPort</Name>
+        <DisplayName TxtId="">The port is invalid.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1290">NotActivated</Name>
+        <DisplayName TxtId="">TwinCAT Router is not active.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1291">FragmentBoxFull</Name>
+        <DisplayName TxtId="">The mailbox has reached the maximum number for fragmented messages.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1292">FragmentTimeout</Name>
+        <DisplayName TxtId="">A fragment timeout has occurred.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1293">ToBeRemoved</Name>
+        <DisplayName TxtId="">The port is removed.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <Translations>
+        <Text TxtId="Locked memory cannot be allocated.">
+          <Text LcId="1031">Lockierter Speicher kann nicht zugewiesen werden.</Text>
+        </Text>
+        <Text TxtId="The router memory size could not be changed.">
+          <Text LcId="1031">Die Größe des Routerspeichers konnte nicht geändert werden.</Text>
+        </Text>
+        <Text TxtId="The mailbox has reached the maximum number of possible messages.">
+          <Text LcId="1031">Das Postfach hat die maximale Anzahl der möglichen Meldungen erreicht.</Text>
+        </Text>
+        <Text TxtId="The debug mailbox has reached the maximum number of possible messages.">
+          <Text LcId="1031">Das Debug Postfach hat die maximale Anzahl der möglichen Meldungen erreicht.</Text>
+        </Text>
+        <Text TxtId="The port type is unknown.">
+          <Text LcId="1031">Der Porttyp ist unbekannt.</Text>
+        </Text>
+        <Text TxtId="TwinCAT Router is not initialised.">
+          <Text LcId="1031">Der TwinCAT Router ist nicht initialisiert.</Text>
+        </Text>
+        <Text TxtId="The port number is already assigned.">
+          <Text LcId="1031">Die Portnummer ist bereits vergeben.</Text>
+        </Text>
+        <Text TxtId="The port is not registered.">
+          <Text LcId="1031">Der Port ist nicht registriert.</Text>
+        </Text>
+        <Text TxtId="The maximum number of ports has been reached.">
+          <Text LcId="1031">Die maximale Portanzahl ist erreicht.</Text>
+        </Text>
+        <Text TxtId="The port is invalid.">
+          <Text LcId="1031">Der Port ist ungültig.</Text>
+        </Text>
+        <Text TxtId="TwinCAT Router is not active.">
+          <Text LcId="1031">Der TwinCAT Router ist nicht aktiv.</Text>
+        </Text>
+        <Text TxtId="The mailbox has reached the maximum number for fragmented messages.">
+          <Text LcId="1031">Das Postfach hat die maximale Anzahl für fragmentierte Nachrichten erreicht.</Text>
+        </Text>
+        <Text TxtId="A fragment timeout has occurred.">
+          <Text LcId="1031">Fragment Timeout aufgetreten.</Text>
+        </Text>
+        <Text TxtId="The port is removed.">
+          <Text LcId="1031">Port wird entfernt.</Text>
+        </Text>
+      </Translations>
+      <Hides>
+        <Hide GUID="{E3D84344-4CB3-44DB-8D94-12F9CE0E2F90}"/>
+        <Hide GUID="{87452E42-EDD9-4DFF-AE3D-F4ED89F67122}"/>
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{92F05393-06A8-48C2-8871-EAA38C1E3990}" TcBaseType="true" CName="TcRTimeEventClass">TcRTimeEventClass</Name>
+      <DisplayName TxtId="">TcRTimeEventClass</DisplayName>
+      <EventId>
+        <Name Id="4096">InternalError</Name>
+        <DisplayName TxtId="">Internal error in the real-time system.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4097">BadTimerPeriods</Name>
+        <DisplayName TxtId="">Timer value is not valid.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4098">InvalidTaskPtr</Name>
+        <DisplayName TxtId="">The task pointer has the invalid value 0 (null).</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4099">InvalidStackPtr</Name>
+        <DisplayName TxtId="">The stack pointer has the invalid value 0 (null).</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4100">PrioExists</Name>
+        <DisplayName TxtId="">The task priority is already assigned.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4101">NoMoreTCB</Name>
+        <DisplayName TxtId="">No free TCB (Task Control Block) available. The maximum number of TCBs is 64.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4102">NoMoreSemas</Name>
+        <DisplayName TxtId="">No free semaphores available. The maximum number of semaphores is 64.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4103">NoMoreQueues</Name>
+        <DisplayName TxtId="">No free space available in the queue. The maximum number of positions in the queue is 64.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4109">ExtIRQAlreadyDef</Name>
+        <DisplayName TxtId="">An external synchronization interrupt is already applied.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4110">ExtIRQNotDef</Name>
+        <DisplayName TxtId="">No external synchronziation interrupt applied.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4111">ExtIRQInstallFailed</Name>
+        <DisplayName TxtId="">Application of the external synchronization interrupt failed.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4112">IRQNotLessOrEqual</Name>
+        <DisplayName TxtId="">Call of a service function in the wrong context.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4119">VMXNotSupported</Name>
+        <DisplayName TxtId="">Intel VT-x extension is not supported.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4120">VMXDisabled</Name>
+        <DisplayName TxtId="">Intel VT-x extension is not enabled in the BIOS.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4121">VMXControlsMissing</Name>
+        <DisplayName TxtId="">Missing function in Intel VT-x extension.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4122">VMXEnableFails</Name>
+        <DisplayName TxtId="">Activation of Intel VT-x fails.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <Translations>
+        <Text TxtId="Internal error in the real-time system.">
+          <Text LcId="1031">Interner Fehler im Echtzeit-System.</Text>
+        </Text>
+        <Text TxtId="Timer value is not valid.">
+          <Text LcId="1031">Timer-Wert ist nicht gültig.</Text>
+        </Text>
+        <Text TxtId="The task pointer has the invalid value 0 (null).">
+          <Text LcId="1031">Task-Pointer hat den ungültigen Wert 0 (null).</Text>
+        </Text>
+        <Text TxtId="The stack pointer has the invalid value 0 (null).">
+          <Text LcId="1031">Stack-Pointer hat den ungültigen Wert 0 (null).</Text>
+        </Text>
+        <Text TxtId="The task priority is already assigned.">
+          <Text LcId="1031">Die Task Priority ist bereits vergeben.</Text>
+        </Text>
+        <Text TxtId="No free TCB (Task Control Block) available. The maximum number of TCBs is 64.">
+          <Text LcId="1031">Kein freier TCB (Task Control Block) verfügbar. Maximale Anzahl von TCBs beträgt 64.</Text>
+        </Text>
+        <Text TxtId="No free semaphores available. The maximum number of semaphores is 64.">
+          <Text LcId="1031">Keine freien Semaphoren zur Verfügung. Maximale Anzahl der Semaphoren beträgt 64.</Text>
+        </Text>
+        <Text TxtId="No free space available in the queue. The maximum number of positions in the queue is 64.">
+          <Text LcId="1031">Kein freier Platz in der Warteschlange zur Verfügung. Maximale Anzahl der Plätze in der Warteschlange beträgt 64.</Text>
+        </Text>
+        <Text TxtId="An external synchronization interrupt is already applied.">
+          <Text LcId="1031">Ein externer Synchronisations-Interrupt wird bereits angewandt.</Text>
+        </Text>
+        <Text TxtId="No external synchronziation interrupt applied.">
+          <Text LcId="1031">Kein externer Synchronisations-Interrupt angewandt.</Text>
+        </Text>
+        <Text TxtId="Application of the external synchronization interrupt failed.">
+          <Text LcId="1031">Anwendung des externen Synchronisations-Interrupts ist fehlgeschlagen.</Text>
+        </Text>
+        <Text TxtId="Call of a service function in the wrong context.">
+          <Text LcId="1031">Aufruf einer Service-Funktion im falschen Kontext</Text>
+        </Text>
+        <Text TxtId="Intel VT-x extension is not supported.">
+          <Text LcId="1031">Intel VT-x Erweiterung wird nicht unterstützt.</Text>
+        </Text>
+        <Text TxtId="Intel VT-x extension is not enabled in the BIOS.">
+          <Text LcId="1031">Intel VT-x Erweiterung ist nicht aktiviert im BIOS.</Text>
+        </Text>
+        <Text TxtId="Missing function in Intel VT-x extension.">
+          <Text LcId="1031">Fehlende Funktion in Intel VT-x Erweiterung.</Text>
+        </Text>
+        <Text TxtId="Activation of Intel VT-x fails.">
+          <Text LcId="1031">Aktivieren von Intel VT-x schlägt fehl.</Text>
+        </Text>
+      </Translations>
+      <Hides>
+        <Hide GUID="{B63588AE-B30A-4DCE-A44F-F929FB114944}"/>
+        <Hide GUID="{8E99B0A5-4A45-447F-8419-990947BADC05}"/>
+        <Hide GUID="{677C6993-DDDD-4030-909A-ED03B92876B5}"/>
+      </Hides>
+    </DataType>
   </DataTypes>
   <Modules>
     <Module GUID="{D7C1D1FD-2E7A-44CC-8FB4-AD582C20623F}" TcSmClass="TComPlcObjDef">
@@ -56211,7 +56785,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
             <BitSize>2048</BitSize>
-            <BaseType GUID="{5C8FF47F-7F83-4493-8D21-F1FF8A08F75A}">PlcAppSystemInfo</BaseType>
+            <BaseType GUID="{941FDF6E-37CE-4C30-AA23-3236AFA461E2}">PlcAppSystemInfo</BaseType>
             <Properties>
               <Property>
                 <Name>no_init</Name>
@@ -72821,75 +73395,6 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
             <BitOffs>666679936</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>TC_EVENT_CLASSES.TcSystemEventClass</Name>
-            <Comment> 11F7FC20-DBF4-4DAF-96C7-1FD6B6156B31</Comment>
-            <BitSize>128</BitSize>
-            <BaseType GUID="{18071995-0000-0000-0000-000000000021}">GUID</BaseType>
-            <Default>
-              <SubItem>
-                <Name>.Data1</Name>
-                <Value>301464608</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data2</Name>
-                <Value>56308</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data3</Name>
-                <Value>19887</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[0]</Name>
-                <Value>150</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[1]</Name>
-                <Value>199</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[2]</Name>
-                <Value>31</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[3]</Name>
-                <Value>214</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[4]</Name>
-                <Value>182</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[5]</Name>
-                <Value>21</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[6]</Name>
-                <Value>107</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[7]</Name>
-                <Value>49</Value>
-              </SubItem>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>tc_no_symbol</Name>
-                <Value>unused;ST_TcSystemEventClass</Value>
-              </Property>
-              <Property>
-                <Name>const_non_replaced</Name>
-              </Property>
-              <Property>
-                <Name>suppress_warning_0</Name>
-                <Value>C0228</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>666696128</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>TC_EVENT_CLASSES.TcGeneralAdsEventClass</Name>
             <Comment> 98BCB284-F932-4EA4-B58B-68A1F1C34192</Comment>
             <BitSize>128</BitSize>
@@ -72956,145 +73461,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>666696256</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>TC_EVENT_CLASSES.TcRouterEventClass</Name>
-            <Comment> E3D84344-4CB3-44DB-8D94-12F9CE0E2F90</Comment>
-            <BitSize>128</BitSize>
-            <BaseType GUID="{18071995-0000-0000-0000-000000000021}">GUID</BaseType>
-            <Default>
-              <SubItem>
-                <Name>.Data1</Name>
-                <Value>3822601028</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data2</Name>
-                <Value>19635</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data3</Name>
-                <Value>17627</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[0]</Name>
-                <Value>141</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[1]</Name>
-                <Value>148</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[2]</Name>
-                <Value>18</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[3]</Name>
-                <Value>249</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[4]</Name>
-                <Value>206</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[5]</Name>
-                <Value>14</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[6]</Name>
-                <Value>47</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[7]</Name>
-                <Value>144</Value>
-              </SubItem>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>tc_no_symbol</Name>
-                <Value>unused;ST_TcRouterEventClass</Value>
-              </Property>
-              <Property>
-                <Name>const_non_replaced</Name>
-              </Property>
-              <Property>
-                <Name>suppress_warning_0</Name>
-                <Value>C0228</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>666696384</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>TC_EVENT_CLASSES.TcRTimeEventClass</Name>
-            <Comment> B63588AE-B30A-4DCE-A44F-F929FB114944</Comment>
-            <BitSize>128</BitSize>
-            <BaseType GUID="{18071995-0000-0000-0000-000000000021}">GUID</BaseType>
-            <Default>
-              <SubItem>
-                <Name>.Data1</Name>
-                <Value>3056961710</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data2</Name>
-                <Value>45834</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data3</Name>
-                <Value>19918</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[0]</Name>
-                <Value>164</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[1]</Name>
-                <Value>79</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[2]</Name>
-                <Value>249</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[3]</Name>
-                <Value>41</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[4]</Name>
-                <Value>251</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[5]</Name>
-                <Value>17</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[6]</Name>
-                <Value>73</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.Data4[7]</Name>
-                <Value>68</Value>
-              </SubItem>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>tc_no_symbol</Name>
-                <Value>unused;ST_TcRTimeEventClass</Value>
-              </Property>
-              <Property>
-                <Name>const_non_replaced</Name>
-              </Property>
-              <Property>
-                <Name>suppress_warning_0</Name>
-                <Value>C0228</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>666696512</BitOffs>
+            <BitOffs>666696128</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.Win32EventClass</Name>
@@ -73163,7 +73530,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>666696640</BitOffs>
+            <BitOffs>666696256</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.LCLSGeneralEventClass</Name>
@@ -73232,6 +73599,213 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
+            <BitOffs>666696384</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>TC_EVENT_CLASSES.TcSystemEventClass</Name>
+            <Comment> BB2A9999-102E-421A-8D3D-B0660E07B1FE</Comment>
+            <BitSize>128</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-000000000021}">GUID</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.Data1</Name>
+                <Value>3140131225</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data2</Name>
+                <Value>4142</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data3</Name>
+                <Value>16922</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[0]</Name>
+                <Value>141</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[1]</Name>
+                <Value>61</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[2]</Name>
+                <Value>176</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[3]</Name>
+                <Value>102</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[4]</Name>
+                <Value>14</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[5]</Name>
+                <Value>7</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[6]</Name>
+                <Value>177</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[7]</Name>
+                <Value>254</Value>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>tc_no_symbol</Name>
+                <Value>unused;ST_TcSystemEventClass</Value>
+              </Property>
+              <Property>
+                <Name>const_non_replaced</Name>
+              </Property>
+              <Property>
+                <Name>suppress_warning_0</Name>
+                <Value>C0228</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>666696512</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>TC_EVENT_CLASSES.TcRouterEventClass</Name>
+            <Comment> E759605A-2341-48FC-9F3F-C8FA405C4B24</Comment>
+            <BitSize>128</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-000000000021}">GUID</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.Data1</Name>
+                <Value>3881394266</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data2</Name>
+                <Value>9025</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data3</Name>
+                <Value>18684</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[0]</Name>
+                <Value>159</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[1]</Name>
+                <Value>63</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[2]</Name>
+                <Value>200</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[3]</Name>
+                <Value>250</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[4]</Name>
+                <Value>64</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[5]</Name>
+                <Value>92</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[6]</Name>
+                <Value>75</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[7]</Name>
+                <Value>36</Value>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>tc_no_symbol</Name>
+                <Value>unused;ST_TcRouterEventClass</Value>
+              </Property>
+              <Property>
+                <Name>const_non_replaced</Name>
+              </Property>
+              <Property>
+                <Name>suppress_warning_0</Name>
+                <Value>C0228</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>666696640</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>TC_EVENT_CLASSES.TcRTimeEventClass</Name>
+            <Comment> 92F05393-06A8-48C2-8871-EAA38C1E3990</Comment>
+            <BitSize>128</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-000000000021}">GUID</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.Data1</Name>
+                <Value>2465223571</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data2</Name>
+                <Value>1704</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data3</Name>
+                <Value>18626</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[0]</Name>
+                <Value>136</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[1]</Name>
+                <Value>113</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[2]</Name>
+                <Value>234</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[3]</Name>
+                <Value>163</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[4]</Name>
+                <Value>140</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[5]</Name>
+                <Value>30</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[6]</Name>
+                <Value>57</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.Data4[7]</Name>
+                <Value>144</Value>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>tc_no_symbol</Name>
+                <Value>unused;ST_TcRTimeEventClass</Value>
+              </Property>
+              <Property>
+                <Name>const_non_replaced</Name>
+              </Property>
+              <Property>
+                <Name>suppress_warning_0</Name>
+                <Value>C0228</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
             <BitOffs>666696768</BitOffs>
           </Symbol>
           <Symbol>
@@ -73255,7 +73829,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>666727104</BitOffs>
+            <BitOffs>666715968</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -73317,22 +73891,22 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
       <Deployment/>
       <EventClasses>
         <EventClass>
-          <Type GUID="{11F7FC20-DBF4-4DAF-96C7-1FD6B6156B31}">TcSystemEventClass</Type>
-        </EventClass>
-        <EventClass>
           <Type GUID="{98BCB284-F932-4EA4-B58B-68A1F1C34192}">TcGeneralAdsEventClass</Type>
-        </EventClass>
-        <EventClass>
-          <Type GUID="{E3D84344-4CB3-44DB-8D94-12F9CE0E2F90}">TcRouterEventClass</Type>
-        </EventClass>
-        <EventClass>
-          <Type GUID="{B63588AE-B30A-4DCE-A44F-F929FB114944}">TcRTimeEventClass</Type>
         </EventClass>
         <EventClass>
           <Type GUID="{1D0C4BAC-ECF3-4F33-8F20-A12E77AB6387}">Win32EventClass</Type>
         </EventClass>
         <EventClass>
           <Type GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Type>
+        </EventClass>
+        <EventClass>
+          <Type GUID="{BB2A9999-102E-421A-8D3D-B0660E07B1FE}">TcSystemEventClass</Type>
+        </EventClass>
+        <EventClass>
+          <Type GUID="{E759605A-2341-48FC-9F3F-C8FA405C4B24}">TcRouterEventClass</Type>
+        </EventClass>
+        <EventClass>
+          <Type GUID="{92F05393-06A8-48C2-8871-EAA38C1E3990}">TcRTimeEventClass</Type>
         </EventClass>
       </EventClasses>
       <Properties>
@@ -73342,7 +73916,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2023-08-14T17:36:31</Value>
+          <Value>2023-09-14T14:26:53</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
