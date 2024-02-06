@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="P_StripeProtections" Id="{40ffbfa8-833e-45b2-a6cd-32aa1c1e46a6}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM P_StripeProtections
 VAR
@@ -49,17 +49,22 @@ END_VAR
                 nCurrentEncoderCount := MAIN.nEncCntYupM1K4,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange,
                 bReadPmpsDb:= MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb,
+                bUsePmpsDb := TRUE,
                 );
 
 fbStripProtMR2K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
                 nCurrentEncoderCount := MAIN.nEncCntYM2K4,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange,
-                bReadPmpsDb := MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb);
+                bReadPmpsDb := MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb,
+                bUsePmpsDb := TRUE,
+                );
 
 fbStripProtMR3K4(FFO:=GVL_PMPS.g_FastFaultOutput2,
                 nCurrentEncoderCount := MAIN.nEncCntXM3K4,
                 neVRange:=PMPS_GVL.stCurrentBeamParameters.neVRange,
-                bReadPmpsDb := MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb);]]></ST>
+                bReadPmpsDb := MOTION_GVL.fbStandardPMPSDB.bReadPmpsDb,
+                bUsePmpsDb := TRUE,
+                );]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

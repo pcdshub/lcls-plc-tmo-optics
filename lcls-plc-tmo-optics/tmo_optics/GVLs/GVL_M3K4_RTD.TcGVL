@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_M3K4_RTD" Id="{90998761-d636-4558-a061-062aa9b508de}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -21,14 +21,6 @@ VAR_GLOBAL
     {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 2^Value'}
     nM3K4DS_RTD_3 AT %I* : INT;
 
-    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_FWM_PRSM]^AI Standard Channel 2^Value'}
-    fM3K4_Flow_1 : FB_AnalogInput;
-    {attribute 'pytmc' := '
-        pv: MR3K4:KBO:FWM:1
-        field: EGU lpm
-        io: i
-    '}
-    fM3K4_Flow_1_val : LREAL;
 
 END_VAR]]></Declaration>
   </GVL>

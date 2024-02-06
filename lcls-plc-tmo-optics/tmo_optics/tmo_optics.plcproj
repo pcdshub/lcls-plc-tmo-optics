@@ -83,7 +83,19 @@
     <Compile Include="POUs\Main.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_1_PlcTask.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\PRG_Environment.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_MR1K4_SOMS.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_MR2K4_KBO.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_MR3K4_KBO.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_PMPS.TcPOU">
@@ -113,6 +125,10 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="lcls-twincat-optics-nrw">
+      <DefaultResolution>lcls-twincat-optics-nrw, * (SLAC)</DefaultResolution>
+      <Namespace>lcls_twincat_optics_nrw</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="lcls2-cc-lib">
       <DefaultResolution>lcls2-cc-lib, * (SLAC)</DefaultResolution>
       <Namespace>lcls2_cc_lib</Namespace>
@@ -146,11 +162,8 @@
     <LibraryReference Include="LCLS General,2.8.2,SLAC">
       <Namespace>LCLS_General</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-motion,2.2.0,SLAC">
+    <LibraryReference Include="lcls-twincat-motion,4.0.5,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
-    </LibraryReference>
-    <LibraryReference Include="lcls-twincat-optics,0.6.1,SLAC">
-      <Namespace>lcls_twincat_optics</Namespace>
     </LibraryReference>
     <LibraryReference Include="PMPS,3.0.14,SLAC - LCLS">
       <Namespace>PMPS</Namespace>
@@ -161,7 +174,7 @@
       <Resolution>LCLS General, 2.8.2 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-motion">
-      <Resolution>lcls-twincat-motion, 2.2.0 (SLAC)</Resolution>
+      <Resolution>lcls-twincat-motion, 4.0.5 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls2-cc-lib">
       <Resolution>lcls2-cc-lib, 2.0.0 (SLAC)</Resolution>
