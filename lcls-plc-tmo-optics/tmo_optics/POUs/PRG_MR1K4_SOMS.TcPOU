@@ -12,6 +12,14 @@ VAR
         pv: MR1K4:SOMS
     '}
     fbCoolingPanel : FB_Axilon_Cooling_2f1p;
+    {attribute 'TcLinkTo' := 'TIIB[EP2008-0001_M1K4_VCV]^Channel 1^Output'}
+    {attribute 'pytmc' := '
+        pv: MR1K4:SOMS:VCV
+        io: io
+        field: ZNAM OFF
+        field: ONAM ON
+    '}
+    bActivateVarCool AT %Q* : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>

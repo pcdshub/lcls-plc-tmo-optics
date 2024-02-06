@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{9123C74C-37A6-BF6C-7359-F6C2DE5F294F}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{FE018CDB-8FA3-16B2-3AFD-349B03AB2AFC}">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -2925,6 +2925,10 @@ External Setpoint Generation:
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
+					<Name>Main.M16.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
 					<Name>Main.M16.bBrakeRelease</Name>
 					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
 					<Type>BOOL</Type>
@@ -2934,17 +2938,13 @@ External Setpoint Generation:
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
+					<Name>Main.M17.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
 					<Name>Main.M17.bBrakeRelease</Name>
 					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.M16.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M17.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbMotionStageM17.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -3051,6 +3051,10 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR1K4_SOMS.bActivateVarCool</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -3251,6 +3255,9 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 94 (EK1100)^Term 109 (EL1004)">
 				<Link VarA="PlcTask Inputs^Main.bDreamEnable1" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.bDreamEnable2" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^EP2008-0001_M1K4_VCV">
+				<Link VarA="PlcTask Outputs^PRG_MR1K4_SOMS.bActivateVarCool" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 20 (EK1100)^EL1004_M2K4_M3K4_STO">
 				<Link VarA="PlcTask Inputs^Main.LAMPbSTOEnable1" VarB="Channel 1^Input" Size="1"/>
