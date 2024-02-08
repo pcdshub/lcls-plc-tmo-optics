@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{2546BD08-7CD4-7267-B94D-6D2E786212F0}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{6817E784-7FDD-FCD4-2A18-4014C69B4BFB}">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -2547,41 +2547,6 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
-					<Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_1.iRaw</Name>
-					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbPress_1.iRaw</Name>
-					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_2.iRaw</Name>
-					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_MR2K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
-					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_MR2K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
-					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_MR3K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
-					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_MR3K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
-					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
@@ -2724,6 +2689,41 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_1.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbPress_1.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_2.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR2K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR2K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR3K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR3K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
 					<Type>INT</Type>
 				</Var>
 			</Vars>
