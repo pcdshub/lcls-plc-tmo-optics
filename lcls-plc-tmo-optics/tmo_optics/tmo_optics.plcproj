@@ -204,11 +204,6 @@
       <Resolution>TcUnit, 1.0.1.0 (www.tcunit.org)</Resolution>
     </PlaceholderResolution>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="tmo_optics.tmc">
-      <SubType>Content</SubType>
-    </None>
-  </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
