@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{BD9A3C64-8332-E6EF-23A1-C93A313364CB}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{DDA85E7A-AF7B-1BD3-03DC-AEE75BC0A3BD}">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -2711,10 +2711,6 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -2725,6 +2721,10 @@ External Setpoint Generation:
 				<Var>
 					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.iRaw</Name>
 					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bError</Name>
+					<Type>BOOL</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="2" ContextId="2" AreaNo="33">
