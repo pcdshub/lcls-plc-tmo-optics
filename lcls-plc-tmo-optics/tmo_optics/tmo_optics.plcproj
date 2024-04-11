@@ -162,7 +162,7 @@
     <LibraryReference Include="LCLS General,2.8.2,SLAC">
       <Namespace>LCLS_General</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-motion,4.0.5,SLAC">
+    <LibraryReference Include="lcls-twincat-motion,4.0.8,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
     </LibraryReference>
     <LibraryReference Include="PMPS,3.0.14,SLAC - LCLS">
@@ -174,7 +174,7 @@
       <Resolution>LCLS General, 2.8.2 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-motion">
-      <Resolution>lcls-twincat-motion, 4.0.5 (SLAC)</Resolution>
+      <Resolution>lcls-twincat-motion, 4.0.8 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-optics">
       <Resolution>lcls-twincat-optics, 0.7.0 (SLAC)</Resolution>
