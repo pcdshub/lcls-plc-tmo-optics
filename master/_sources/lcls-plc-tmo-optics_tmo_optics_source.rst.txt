@@ -544,13 +544,14 @@ Main
             M5 : ST_MotionStage := (fVelocity := 150.0, bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M1K4 Pitch Stepper
             fbMotionStage_m5 : FB_MotionStage;
 
-            {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 1;
+    (*        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 1;
                                       .bLimitBackwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 2'}
             {attribute 'pytmc' := '
                 pv: MR1K4:SOMS:MMS:BENDER
             '}
             M6 : ST_MotionStage := (fVelocity := 150.0, bPowerSelf:=TRUE); // M1K4 Bender
             fbMotionStage_m6 : FB_MotionStage;
+    *)
 
         {attribute 'TcLinkTo' := '.fbRunHOMS.bSTOEnable1:=TIIB[EL1004_M1K4_STO]^Channel 1^Input;
                                   .fbRunHOMS.bSTOEnable2:=TIIB[EL1004_M1K4_STO]^Channel 2^Input;
@@ -1195,9 +1196,10 @@ Main
                        bGantryAlreadyCoupledX=>M1K4.bGantryAlreadyCoupledX,
                        nCurrGantryY=>M1K4.nCurrGantryY,
                        nCurrGantryX=>M1K4.nCurrGantryX);
-        fbBenderM1K4(stBender:=M6,
+    (*    fbBenderM1K4(stBender:=M6,
                      bSTOEnable1:=M1K4.fbRunHOMS.bSTOEnable1,
                      bSTOEnable2:=M1K4.fbRunHOMS.bSTOEnable2);
+    *)
         // No slave motion through Epics
         M2.bExecute := FALSE; // M1K4-Ydwn
         M4.bExecute := FALSE; // M1K4-Xdwn
@@ -1212,7 +1214,7 @@ Main
             fbMotionStage_m3(stMotionStage:=M3);
             fbMotionStage_m4(stMotionStage:=M4);
             fbMotionStage_m5(stMotionStage:=M5);
-            fbMotionStage_m6(stMotionStage:=M6);
+    //        fbMotionStage_m6(stMotionStage:=M6);
 
         // Calculate Pitch RMS Error:
             fbYRMSErrorM1K4(stMotionStage:=M1,
@@ -1227,10 +1229,10 @@ Main
                                 fMaxRMSError=>fMaxPitchRMSErrorM1K4,
                                 fMinRMSError=>fMinPitchRMSErrorM1K4);
 
-            fbBenderRMSErrorM1K4(stMotionStage:=M6,
+    (*        fbBenderRMSErrorM1K4(stMotionStage:=M6,
                                  fMaxRMSError=>fMaxBenderRMSErrorM1K4,
                                  fMinRMSError=>fMinBenderRMSErrorM1K4);
-
+    *)
         // Pitch Control
             //fbM1K4PitchControl(Pitch:=GVL_M1K4.M1K4_Pitch,
                                //Stepper:=M5,
@@ -1614,6 +1616,8 @@ PRG_1_PlcTask
     PRG_MR1K4_SOMS();
     PRG_MR2K4_KBO();
     PRG_MR3K4_KBO();
+    PRG_MR4K4_KBO();
+    PRG_MR5K4_KBO();
 
     END_PROGRAM
 
@@ -1622,6 +1626,8 @@ Related:
     * `PRG_MR1K4_SOMS`_
     * `PRG_MR2K4_KBO`_
     * `PRG_MR3K4_KBO`_
+    * `PRG_MR4K4_KBO`_
+    * `PRG_MR5K4_KBO`_
 
 
 PRG_Environment
@@ -1718,6 +1724,52 @@ PRG_MR3K4_KBO
         '}
         {attribute 'pytmc' := '
             pv: MR3K4:KBO
+        '}
+        fbCoolingPanel : FB_Axilon_Cooling_1f1p;
+    END_VAR
+    fbCoolingPanel();
+
+    END_PROGRAM
+
+
+
+
+PRG_MR4K4_KBO
+^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_MR4K4_KBO
+    VAR
+            // MR4K4 Flow Press Sensors
+        {attribute 'TcLinkTo' := '.fbFlow_1.iRaw := TIIB[EL3054_FWM_PRSM_MR45K4]^AI Standard Channel 1^Value;
+                                  .fbPress_1.iRaw := TIIB[EL3054_FWM_PRSM_MR45K4]^AI Standard Channel 2^Value
+        '}
+        {attribute 'pytmc' := '
+            pv: MR4K4:KBO
+        '}
+        fbCoolingPanel : FB_Axilon_Cooling_1f1p;
+    END_VAR
+    fbCoolingPanel();
+
+    END_PROGRAM
+
+
+
+
+PRG_MR5K4_KBO
+^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_MR5K4_KBO
+    VAR
+        // MR5K4 Flow Press Sensors
+        {attribute 'TcLinkTo' := '.fbFlow_1.iRaw := TIIB[EL3054_FWM_PRSM_MR45K4]^AI Standard Channel 3^Value;
+                                  .fbPress_1.iRaw := TIIB[EL3054_FWM_PRSM_MR45K4]^AI Standard Channel 2^Value
+        '}
+        {attribute 'pytmc' := '
+            pv: MR5K4:KBO
         '}
         fbCoolingPanel : FB_Axilon_Cooling_1f1p;
     END_VAR

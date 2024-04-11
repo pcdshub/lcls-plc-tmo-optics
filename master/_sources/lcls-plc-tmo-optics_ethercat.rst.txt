@@ -148,7 +148,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-1000_M1K4_Xup
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -169,7 +171,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-1000_M1K4_Xdwn
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -190,7 +194,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-1000_M1K4_Yup
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -211,7 +217,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-1000_M1K4_Ydwn
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -232,28 +240,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-1000_M1K4_PitchCoarse
                                       </td>
-                                      <td>        </td>
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                                </td>
-                                      <td colspan="2">
-                                        EL7041-1000 1Ch. Stepper motor output stage (50V, 5A, standard)
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </li>
-
-
-                                <li>
-                                      <table width="100%">
-                                    <tr>
-                                      <td width="10%">
-                                        ID=12:
-                                      </td>
-                                      <td width="75%">EL7041-1000_M1K4_Bender
-                                      </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -274,7 +263,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL6001_M1K4_PitchFine
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -295,7 +286,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M1K4_Xupdwn
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -316,7 +309,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M1K4_Yupdwn
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -337,7 +332,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M1K4_PitchBender
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -358,7 +355,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL1004_M1K4_STO
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -379,7 +378,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL3054_M1K4_FWM_PRSM
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -400,7 +401,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL9505_M1K4_BenderLims
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR1K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -446,7 +449,9 @@ EtherCAT Terminals
                             </td>
                             <td width="75%">EP2008-0001_M1K4_VCV
                             </td>
-                            <td>        </td>
+                            <td>            <b>
+                                  SyncUnit MR1K4
+                                </b>        </td>
                           </tr>
                           <tr>
                             <td>
@@ -490,7 +495,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M2K4X_M2K4Y
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -511,7 +518,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M2K4rY_M3K4X
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -532,7 +541,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M3K4Y_M3K4rX
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -553,7 +564,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M2K4X
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -574,7 +587,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M2K4Y
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -595,7 +610,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M2K4rY
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -616,7 +633,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M3K4X
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -637,7 +656,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M3K4Y
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -658,7 +679,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M3K4rX
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -679,7 +702,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">Term 30 (EL9410)
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -700,7 +725,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M2K4_BEND_USDS
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -721,7 +748,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M3K4_BEND_USDS
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -742,7 +771,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041_M2K4_BEND_US
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -763,7 +794,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041_M2K4_BEND_DS
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -784,7 +817,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041_M3K4_BEND_US
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -805,7 +840,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041_M3K4_BEND_DS
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -826,7 +863,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL1004_M2K4_M3K4_STO
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -895,7 +934,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL3202-0010_M2K4US1_M2K4US2
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -916,7 +957,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL3202-0010_M2K4US3_M2K4DS1
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -937,7 +980,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL3202-0010_M2K4DS2_M2K4DS3
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -958,7 +1003,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL3202-0010_M3K4US1_M3K4US2
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -979,7 +1026,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL3202-0010_M3K4US3_M3K4DS1
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1000,7 +1049,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL3202-0010_M3K4DS2_M3K4DS3
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1021,7 +1072,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL3054_FWM_PRSM
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR23K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1117,7 +1170,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M4K4X_M4K4Y
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1138,7 +1193,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M4K4Z_M4K4rX
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1159,7 +1216,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M5K4X_M5K4Y
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1180,7 +1239,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL5042_M5K4Z_M5K4rY
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1224,7 +1285,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M4K4X
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1245,7 +1308,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M4K4Y
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1266,7 +1331,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M4K4Z
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1287,7 +1354,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M4K4rX
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1331,7 +1400,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M5K4X
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1352,7 +1423,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M5K4Y
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1373,7 +1446,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M5K4Z
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1394,7 +1469,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL7041-0052_M5K4rY
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1415,7 +1492,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">Term 109 (EL1004)
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1484,7 +1563,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL3204_M4K4
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1505,7 +1586,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">EL3204_M5K4
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1526,7 +1609,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">Term 113 (EL3202-0010)
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1547,7 +1632,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">Term 114 (EL3202-0010)
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1566,9 +1653,11 @@ EtherCAT Terminals
                                       <td width="10%">
                                         ID=115:
                                       </td>
-                                      <td width="75%">Term 115 (EL3054)
+                                      <td width="75%">EL3054_FWM_PRSM_MR45K4
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>
@@ -1589,7 +1678,9 @@ EtherCAT Terminals
                                       </td>
                                       <td width="75%">Term 116 (EL3054)
                                       </td>
-                                      <td>        </td>
+                                      <td>            <b>
+                                            SyncUnit MR45K4
+                                          </b>        </td>
                                     </tr>
                                     <tr>
                                       <td>

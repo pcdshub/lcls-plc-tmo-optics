@@ -18,7 +18,7 @@
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
@@ -92,6 +92,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#prg-mr1k4-soms">PRG_MR1K4_SOMS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-mr2k4-kbo">PRG_MR2K4_KBO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-mr3k4-kbo">PRG_MR3K4_KBO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-mr4k4-kbo">PRG_MR4K4_KBO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-mr5k4-kbo">PRG_MR5K4_KBO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-pmps">PRG_PMPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-states">PRG_States</a></li>
 </ul>
@@ -615,13 +617,14 @@ END_VAR
         <span class="n">M5</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">150.0</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">nEnableMode</span><span class="o">:=</span><span class="n">ENUM_StageEnableMode</span><span class="o">.</span><span class="n">ALWAYS</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Pitch</span> <span class="n">Stepper</span>
         <span class="n">fbMotionStage_m5</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
 
-        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 1;</span>
+<span class="p">(</span><span class="o">*</span>        <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 1;</span>
                                   <span class="o">.</span><span class="n">bLimitBackwardEnable</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL7041</span><span class="o">-</span><span class="mi">1000</span><span class="n">_M1K4_Bender</span><span class="p">]</span><span class="o">^</span><span class="n">STM</span> <span class="n">Status</span><span class="o">^</span><span class="n">Status</span><span class="o">^</span><span class="n">Digital</span> <span class="nb">input</span> <span class="mi">2</span><span class="s1">&#39;}</span>
         <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
             <span class="n">pv</span><span class="p">:</span> <span class="n">MR1K4</span><span class="p">:</span><span class="n">SOMS</span><span class="p">:</span><span class="n">MMS</span><span class="p">:</span><span class="n">BENDER</span>
         <span class="s1">&#39;}</span>
         <span class="n">M6</span> <span class="p">:</span> <span class="n">ST_MotionStage</span> <span class="o">:=</span> <span class="p">(</span><span class="n">fVelocity</span> <span class="o">:=</span> <span class="mf">150.0</span><span class="p">,</span> <span class="n">bPowerSelf</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">);</span> <span class="o">//</span> <span class="n">M1K4</span> <span class="n">Bender</span>
         <span class="n">fbMotionStage_m6</span> <span class="p">:</span> <span class="n">FB_MotionStage</span><span class="p">;</span>
+<span class="o">*</span><span class="p">)</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.fbRunHOMS.bSTOEnable1:=TIIB[EL1004_M1K4_STO]^Channel 1^Input;</span>
                               <span class="o">.</span><span class="n">fbRunHOMS</span><span class="o">.</span><span class="n">bSTOEnable2</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">EL1004_M1K4_STO</span><span class="p">]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
@@ -1266,9 +1269,10 @@ END_VAR
                    <span class="n">bGantryAlreadyCoupledX</span><span class="o">=&gt;</span><span class="n">M1K4</span><span class="o">.</span><span class="n">bGantryAlreadyCoupledX</span><span class="p">,</span>
                    <span class="n">nCurrGantryY</span><span class="o">=&gt;</span><span class="n">M1K4</span><span class="o">.</span><span class="n">nCurrGantryY</span><span class="p">,</span>
                    <span class="n">nCurrGantryX</span><span class="o">=&gt;</span><span class="n">M1K4</span><span class="o">.</span><span class="n">nCurrGantryX</span><span class="p">);</span>
-    <span class="n">fbBenderM1K4</span><span class="p">(</span><span class="n">stBender</span><span class="o">:=</span><span class="n">M6</span><span class="p">,</span>
+<span class="p">(</span><span class="o">*</span>    <span class="n">fbBenderM1K4</span><span class="p">(</span><span class="n">stBender</span><span class="o">:=</span><span class="n">M6</span><span class="p">,</span>
                  <span class="n">bSTOEnable1</span><span class="o">:=</span><span class="n">M1K4</span><span class="o">.</span><span class="n">fbRunHOMS</span><span class="o">.</span><span class="n">bSTOEnable1</span><span class="p">,</span>
                  <span class="n">bSTOEnable2</span><span class="o">:=</span><span class="n">M1K4</span><span class="o">.</span><span class="n">fbRunHOMS</span><span class="o">.</span><span class="n">bSTOEnable2</span><span class="p">);</span>
+<span class="o">*</span><span class="p">)</span>
     <span class="o">//</span> <span class="n">No</span> <span class="n">slave</span> <span class="n">motion</span> <span class="n">through</span> <span class="n">Epics</span>
     <span class="n">M2</span><span class="o">.</span><span class="n">bExecute</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span> <span class="o">//</span> <span class="n">M1K4</span><span class="o">-</span><span class="n">Ydwn</span>
     <span class="n">M4</span><span class="o">.</span><span class="n">bExecute</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span> <span class="o">//</span> <span class="n">M1K4</span><span class="o">-</span><span class="n">Xdwn</span>
@@ -1283,7 +1287,7 @@ END_VAR
         <span class="n">fbMotionStage_m3</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M3</span><span class="p">);</span>
         <span class="n">fbMotionStage_m4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M4</span><span class="p">);</span>
         <span class="n">fbMotionStage_m5</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M5</span><span class="p">);</span>
-        <span class="n">fbMotionStage_m6</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M6</span><span class="p">);</span>
+<span class="o">//</span>        <span class="n">fbMotionStage_m6</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M6</span><span class="p">);</span>
 
     <span class="o">//</span> <span class="n">Calculate</span> <span class="n">Pitch</span> <span class="n">RMS</span> <span class="n">Error</span><span class="p">:</span>
         <span class="n">fbYRMSErrorM1K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M1</span><span class="p">,</span>
@@ -1298,10 +1302,10 @@ END_VAR
                             <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxPitchRMSErrorM1K4</span><span class="p">,</span>
                             <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinPitchRMSErrorM1K4</span><span class="p">);</span>
 
-        <span class="n">fbBenderRMSErrorM1K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M6</span><span class="p">,</span>
+<span class="p">(</span><span class="o">*</span>        <span class="n">fbBenderRMSErrorM1K4</span><span class="p">(</span><span class="n">stMotionStage</span><span class="o">:=</span><span class="n">M6</span><span class="p">,</span>
                              <span class="n">fMaxRMSError</span><span class="o">=&gt;</span><span class="n">fMaxBenderRMSErrorM1K4</span><span class="p">,</span>
                              <span class="n">fMinRMSError</span><span class="o">=&gt;</span><span class="n">fMinBenderRMSErrorM1K4</span><span class="p">);</span>
-
+<span class="o">*</span><span class="p">)</span>
     <span class="o">//</span> <span class="n">Pitch</span> <span class="n">Control</span>
         <span class="o">//</span><span class="n">fbM1K4PitchControl</span><span class="p">(</span><span class="n">Pitch</span><span class="o">:=</span><span class="n">GVL_M1K4</span><span class="o">.</span><span class="n">M1K4_Pitch</span><span class="p">,</span>
                            <span class="o">//</span><span class="n">Stepper</span><span class="o">:=</span><span class="n">M5</span><span class="p">,</span>
@@ -1681,6 +1685,8 @@ END_VAR
 <span class="n">PRG_MR1K4_SOMS</span><span class="p">();</span>
 <span class="n">PRG_MR2K4_KBO</span><span class="p">();</span>
 <span class="n">PRG_MR3K4_KBO</span><span class="p">();</span>
+<span class="n">PRG_MR4K4_KBO</span><span class="p">();</span>
+<span class="n">PRG_MR5K4_KBO</span><span class="p">();</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -1690,6 +1696,8 @@ END_VAR
 <li><p><a class="reference internal" href="#prg-mr1k4-soms">PRG_MR1K4_SOMS</a></p></li>
 <li><p><a class="reference internal" href="#prg-mr2k4-kbo">PRG_MR2K4_KBO</a></p></li>
 <li><p><a class="reference internal" href="#prg-mr3k4-kbo">PRG_MR3K4_KBO</a></p></li>
+<li><p><a class="reference internal" href="#prg-mr4k4-kbo">PRG_MR4K4_KBO</a></p></li>
+<li><p><a class="reference internal" href="#prg-mr5k4-kbo">PRG_MR5K4_KBO</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -1777,6 +1785,44 @@ END_VAR
     <span class="s1">&#39;}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">MR3K4</span><span class="p">:</span><span class="n">KBO</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbCoolingPanel</span> <span class="p">:</span> <span class="n">FB_Axilon_Cooling_1f1p</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="n">fbCoolingPanel</span><span class="p">();</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+<section id="prg-mr4k4-kbo">
+<h2>PRG_MR4K4_KBO<a class="headerlink" href="#prg-mr4k4-kbo" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_MR4K4_KBO</span>
+<span class="n">VAR</span>
+        <span class="o">//</span> <span class="n">MR4K4</span> <span class="n">Flow</span> <span class="n">Press</span> <span class="n">Sensors</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.fbFlow_1.iRaw := TIIB[EL3054_FWM_PRSM_MR45K4]^AI Standard Channel 1^Value;</span>
+                              <span class="o">.</span><span class="n">fbPress_1</span><span class="o">.</span><span class="n">iRaw</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3054_FWM_PRSM_MR45K4</span><span class="p">]</span><span class="o">^</span><span class="n">AI</span> <span class="n">Standard</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Value</span>
+    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">MR4K4</span><span class="p">:</span><span class="n">KBO</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">fbCoolingPanel</span> <span class="p">:</span> <span class="n">FB_Axilon_Cooling_1f1p</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="n">fbCoolingPanel</span><span class="p">();</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+<section id="prg-mr5k4-kbo">
+<h2>PRG_MR5K4_KBO<a class="headerlink" href="#prg-mr5k4-kbo" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_MR5K4_KBO</span>
+<span class="n">VAR</span>
+    <span class="o">//</span> <span class="n">MR5K4</span> <span class="n">Flow</span> <span class="n">Press</span> <span class="n">Sensors</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.fbFlow_1.iRaw := TIIB[EL3054_FWM_PRSM_MR45K4]^AI Standard Channel 3^Value;</span>
+                              <span class="o">.</span><span class="n">fbPress_1</span><span class="o">.</span><span class="n">iRaw</span> <span class="o">:=</span> <span class="n">TIIB</span><span class="p">[</span><span class="n">EL3054_FWM_PRSM_MR45K4</span><span class="p">]</span><span class="o">^</span><span class="n">AI</span> <span class="n">Standard</span> <span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Value</span>
+    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">MR5K4</span><span class="p">:</span><span class="n">KBO</span>
     <span class="s1">&#39;}</span>
     <span class="n">fbCoolingPanel</span> <span class="p">:</span> <span class="n">FB_Axilon_Cooling_1f1p</span><span class="p">;</span>
 <span class="n">END_VAR</span>
