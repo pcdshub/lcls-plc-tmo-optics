@@ -5,12 +5,12 @@
   <Children>
     <Node>
       <Title>Scope YT NC Project</Title>
-      <Expanded>True</Expanded>
-      <FileName>C:\Users\divyak\Documents\Github_Files\lcls-plc-tmo-optics\lcls-plc-tmo-optics\lcls-plc-tmo-optics_scope\Scope YT NC Project.tcscopex</FileName>
+      <Expanded>False</Expanded>
+      <FileName>C:\Users\nrw\plcprojs\lcls-plc-tmo-optics\lcls-plc-tmo-optics_scope\Scope YT NC Project.tcscopex</FileName>
       <Children>
         <Node>
           <Title>DataPool</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
@@ -137,12 +137,12 @@
         </Node>
         <Node>
           <Title>NC Axis 1</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
               <Title>M1K4 Yup Position</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -161,7 +161,7 @@
             </Node>
             <Node>
               <Title>M1K4 Ydwn Position</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -180,7 +180,7 @@
             </Node>
             <Node>
               <Title>M1K4 Xup Position</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -199,7 +199,7 @@
             </Node>
             <Node>
               <Title>M1K4 Xdwn Position</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -218,7 +218,7 @@
             </Node>
             <Node>
               <Title>M1K4 Pitch Position</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -239,12 +239,12 @@
         </Node>
         <Node>
           <Title>LAMP KB Benders</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
               <Title>M2K4 US Position</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -263,7 +263,7 @@
             </Node>
             <Node>
               <Title>M2K4 DS Position</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -282,7 +282,7 @@
             </Node>
             <Node>
               <Title>M3K4 US Position</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -301,7 +301,7 @@
             </Node>
             <Node>
               <Title>M3K4 DS Position</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>

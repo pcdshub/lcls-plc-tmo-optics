@@ -41,6 +41,8 @@
 		</Box>
 		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120">
 			<SyncUnit Name="MR45K4" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="MR1K4" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="MR23K4" NoDeleteIfUnused="true"/>
 		</EtherCAT>
 	</Device>
 </TcSmItem>

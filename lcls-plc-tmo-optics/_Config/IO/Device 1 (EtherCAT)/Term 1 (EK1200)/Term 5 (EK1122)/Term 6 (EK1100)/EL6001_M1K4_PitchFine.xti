@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CEL60xxDef" SubType="9101">
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CEL60xxDef" SubType="9101">
 	<DataTypes>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
 			<BitSize>1</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -34,6 +34,7 @@
 			<Fmmu>0000000000000000001000020100000001000000000000000000000000000000</Fmmu>
 			<Fmmu>0000000000000000001400010100000002000000000000000000000000000000</Fmmu>
 			<BootStrapData>0010f400f410f400</BootStrapData>
+			<SuName>MR1K4</SuName>
 			<MBoxUserCmdData>02000300090000000e0000000000000000000000000000000000000000000000200080010100000001456e61626c65205254532f43545300</MBoxUserCmdData>
 			<MBoxUserCmdData>020003000900000008000000000000000000000000000000000000000000000020008011010000000a426175647261746500</MBoxUserCmdData>
 			<MBoxUserCmdData>020003000a0000001300000000000000000000000000000000000000000000002000801c020000000300457874656e6465642064617461206672616d6500</MBoxUserCmdData>
@@ -819,7 +820,6 @@
 			</Pdo>
 			<CoeProfile ProfileNo="39326601"/>
 			<CoeProfile ProfileNo="5001"/>
-			<EL60xxComPort BaudRate="9600" ByteSize="8" EnableRtsCts="true" LocalComPort="true" RxFifoFullThreshold="864"/>
 		</EtherCAT>
 	</Box>
 </TcSmItem>
