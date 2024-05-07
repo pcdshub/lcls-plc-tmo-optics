@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{BBB829C0-7AA7-D487-F3FC-200C97CDC462}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{29728868-18AF-E441-0717-0EEFD993AC03}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -68244,7 +68244,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>SerialIO Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84148224</ByteSize>
+          <ByteSize>84279296</ByteSize>
           <Symbol>
             <Name>GVL_SerialIO.Serial_stComIn_M1K4</Name>
             <Comment>Better have your inputs and outputs!
@@ -68267,7 +68267,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>SerialIO Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84148224</ByteSize>
+          <ByteSize>84279296</ByteSize>
           <Symbol>
             <Name>GVL_SerialIO.Serial_stComOut_M1K4</Name>
             <BitSize>192</BitSize>
@@ -68288,7 +68288,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>SerialIO Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84148224</ByteSize>
+          <ByteSize>84279296</ByteSize>
           <Symbol>
             <Name>P_Serial_Com.fbSerialLineControl_EL6001_M1K4</Name>
             <BitSize>10432</BitSize>
@@ -68386,7 +68386,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="Internal" CreateSymbols="true">19</AreaNo>
           <Name>PiezoDriver Internal</Name>
           <ContextId>1</ContextId>
-          <ByteSize>84148224</ByteSize>
+          <ByteSize>84279296</ByteSize>
           <Symbol>
             <Name>PiezoSerial.fbE621SerialDriver_M1K4</Name>
             <Comment>PI Serial</Comment>
@@ -68482,7 +68482,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="InputDst" CreateSymbols="true">32</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84148224</ByteSize>
+          <ByteSize>84279296</ByteSize>
           <Symbol>
             <Name>Main.bDreamEnable1</Name>
             <Comment>MR4K4 MR5K4 STO button</Comment>
@@ -69153,131 +69153,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </Property>
             </Properties>
             <BitOffs>640191040</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M6.Axis.NcToPlc</Name>
-            <BitSize>2048</BitSize>
-            <BaseType GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}">NCTOPLC_AXIS_REF</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640487936</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M6.bLimitForwardEnable</Name>
-            <Comment> NC Forward Limit Switch: TRUE if ok to move</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640495872</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M6.bLimitBackwardEnable</Name>
-            <Comment> NC Backward Limit Switch: TRUE if ok to move</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640495880</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M6.bHome</Name>
-            <Comment> NO Home Switch: TRUE if at home</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640495888</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M6.bHardwareEnable</Name>
-            <Comment> NC STO Input: TRUE if ok to move</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: PLC:bHardwareEnable
-        io: i
-        field: ZNAM FALSE
-        field: ONAM TRUE
-        field: DESC TRUE if STO not hit
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640495904</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M6.nRawEncoderULINT</Name>
-            <Comment> Raw encoder IO for ULINT (Biss-C)</Comment>
-            <BitSize>64</BitSize>
-            <BaseType>ULINT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640495936</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M6.nRawEncoderUINT</Name>
-            <Comment> Raw encoder IO for UINT (Relative Encoders)</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>UINT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640496000</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M6.nRawEncoderINT</Name>
-            <Comment> Raw encoder IO for INT (LVDT)</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640496016</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.fbMotionStage_m6.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-            <BitSize>2048</BitSize>
-            <BaseType GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}">NCTOPLC_AXIS_REF</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640515264</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1K4.fbRunHOMS.bSTOEnable1</Name>
@@ -72607,7 +72482,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">33</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84148224</ByteSize>
+          <ByteSize>84279296</ByteSize>
           <Symbol>
             <Name>Main.M1.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
@@ -72792,43 +72667,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </Property>
             </Properties>
             <BitOffs>640190016</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M6.Axis.PlcToNc</Name>
-            <BitSize>1024</BitSize>
-            <BaseType GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}">PLCTONC_AXIS_REF</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640486912</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M6.bBrakeRelease</Name>
-            <Comment> NC Brake Output: TRUE to release brake</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640495896</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.fbMotionStage_m6.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-            <BitSize>1024</BitSize>
-            <BaseType GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}">PLCTONC_AXIS_REF</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640514240</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M7.Axis.PlcToNc</Name>
@@ -73582,7 +73420,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="Internal" CreateSymbols="true">35</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84148224</ByteSize>
+          <ByteSize>84279296</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -80967,43 +80805,15 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>640188544</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Main.M6</Name>
-            <Comment> M1K4 Bender</Comment>
-            <BitSize>25920</BitSize>
-            <BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType>
-            <Default>
-              <SubItem>
-                <Name>.fVelocity</Name>
-                <Value>150</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.bPowerSelf</Name>
-                <Bool>true</Bool>
-              </SubItem>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 1;
-                                  .bLimitBackwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 2</Value>
-              </Property>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-            pv: MR1K4:SOMS:MMS:BENDER
-        </Value>
-              </Property>
-            </Properties>
-            <BitOffs>640486848</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.fbMotionStage_m6</Name>
-            <BitSize>298304</BitSize>
-            <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
-            <BitOffs>640512768</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>Main.M1K4</Name>
+            <Comment>        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7041-1000_M1K4_Bender]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+            pv: MR1K4:SOMS:MMS:BENDER
+        '}
+        M6 : ST_MotionStage := (fVelocity := 150.0, bPowerSelf:=TRUE); // M1K4 Bender
+        fbMotionStage_m6 : FB_MotionStage;
+</Comment>
             <BitSize>20672</BitSize>
             <BaseType Namespace="lcls_twincat_optics">DUT_HOMS</BaseType>
             <Properties>
@@ -84411,7 +84221,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">36</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84148224</ByteSize>
+          <ByteSize>84279296</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -84491,7 +84301,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-04-30T09:15:35</Value>
+          <Value>2024-05-07T11:07:51</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
@@ -84499,7 +84309,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>82935808</Value>
+          <Value>82894848</Value>
         </Property>
       </Properties>
     </Module>
