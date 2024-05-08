@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="PRG_MR4K4_KBO" Id="{816a5ad4-40d2-4d17-b279-60cc4d6772dd}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_MR4K4_KBO
+VAR
+        // MR4K4 Flow Press Sensors
+    {attribute 'TcLinkTo' := '.fbFlow_1.iRaw := TIIB[EL3054_FWM_PRSM_MR45K4]^AI Standard Channel 1^Value;
+                              .fbPress_1.iRaw := TIIB[EL3054_FWM_PRSM_MR45K4]^AI Standard Channel 2^Value
+    '}
+    {attribute 'pytmc' := '
+        pv: MR4K4:KBO
+    '}
+    fbCoolingPanel : FB_Axilon_Cooling_1f1p;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbCoolingPanel();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
