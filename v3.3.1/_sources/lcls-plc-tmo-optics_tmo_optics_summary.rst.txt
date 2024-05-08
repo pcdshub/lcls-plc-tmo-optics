@@ -1,0 +1,1560 @@
+
+Settings
+--------
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Setting
+      - Value
+      - Description
+    * - AMS Net ID
+      - 172.21.92.63.1.1
+      -
+    * - Target IP address
+      - 172.21.92.63
+      - Based on AMS Net ID by convention
+    * - AMS Port
+      - 851
+      -
+
+.. _tmo_optics_pragmas:
+
+Pragmas
+-------
+
+Total pragmas found: 172
+Total linter errors: 0
+
+
+
+Libraries
+---------
+
+.. csv-table::
+    :header: Library, Vendor, Default, Version
+    :align: center
+
+        LCLS General, SLAC, , 2.8.2
+        lcls-twincat-motion, SLAC, , 4.0.9
+        lcls-twincat-optics, SLAC, Unset, 0.7.0
+        lcls2-cc-lib, SLAC, Unset, 2.0.0
+        PMPS, SLAC - LCLS, , 3.0.14
+        Tc2_MC2, Beckhoff Automation GmbH, Unset, 3.3.42.0
+        Tc2_SerialCom, Beckhoff Automation GmbH, Unset, 3.3.7.0
+        Tc2_Standard, Beckhoff Automation GmbH, Unset, 3.3.3.0
+        Tc2_System, Beckhoff Automation GmbH, Unset, 3.4.24.0
+        Tc2_Utilities, Beckhoff Automation GmbH, Unset, 3.3.41.0
+        Tc3_Module, Beckhoff Automation GmbH, Unset, 3.3.21.0
+        TcUnit, www.tcunit.org, , 1.0.1.0
+
+Symbols
+-------
+
+
+
+
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        .TCPADS_MAXUDP_BUFFSIZE, UDINT, 3366432 (32)
+
+
+Constants
+^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Constants.bFPUSupport, BOOL, 665742880 (8)
+        Constants.bLittleEndian, BOOL, 663800752 (8)
+        Constants.bMulticoreSupport, BOOL, 665742888 (8)
+        Constants.bSimulationMode, BOOL, 663800760 (8)
+        Constants.CompilerVersion, VERSION, 665742784 (64)
+        Constants.CompilerVersionNumeric, DWORD, 665742944 (32)
+        Constants.nPackMode, UINT, 665742864 (16)
+        Constants.nRegisterSize, WORD, 665742848 (16)
+        Constants.RuntimeVersion, VERSION, 665742720 (64)
+        Constants.RuntimeVersionNumeric, DWORD, 665742912 (32)
+
+
+DefaultGlobals
+^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        DefaultGlobals.fTimeStamp, LREAL, 3072064 (64)
+        DefaultGlobals.stSys, ST_System, 3072000 (40)
+
+
+FB_DynMem_Manager
+^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        FB_DynMem_Manager.nInstanceCreations, UINT, 640584032 (16)
+
+
+GeneralConstants
+^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GeneralConstants.MAX_STATES, UINT, 3072048 (16)
+
+
+Global_Constants
+^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Global_Constants.EMPTY_EVENT_CLASS, GUID, 3365600 (128)
+        Global_Constants.EMPTY_EVENT_ID, UDINT, 3365728 (32)
+        Global_Constants.EMPTY_SEVERITY, TcEventSeverity, 3365488 (16)
+        Global_Constants.SUCCESS_EVENT, TcEventEntry, 3365760 (192)
+
+
+Global_Variables
+^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>274 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Global_Variables.ADSIGRP_DEVICE_DATA, UDINT, 3157440 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_CLEARI, UDINT, 3157344 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_CLEARO, UDINT, 3157376 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RISIZE, UDINT, 3157216 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_ROSIZE, UDINT, 3157312 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RWIB, UDINT, 3157152 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RWIOB, UDINT, 3157408 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RWIX, UDINT, 3157184 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RWOB, UDINT, 3157248 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RWOX, UDINT, 3157280 (32)
+        Global_Variables.ADSIGRP_SYM_DOWNLOAD, UDINT, 3157024 (32)
+        Global_Variables.ADSIGRP_SYM_HNDBYNAME, UDINT, 3156800 (32)
+        Global_Variables.ADSIGRP_SYM_INFOBYNAME, UDINT, 3156928 (32)
+        Global_Variables.ADSIGRP_SYM_INFOBYNAMEEX, UDINT, 3156992 (32)
+        Global_Variables.ADSIGRP_SYM_RELEASEHND, UDINT, 3156896 (32)
+        Global_Variables.ADSIGRP_SYM_UPLOAD, UDINT, 3157056 (32)
+        Global_Variables.ADSIGRP_SYM_UPLOADINFO, UDINT, 3157088 (32)
+        Global_Variables.ADSIGRP_SYM_VALBYHND, UDINT, 3156864 (32)
+        Global_Variables.ADSIGRP_SYM_VALBYNAME, UDINT, 3156832 (32)
+        Global_Variables.ADSIGRP_SYM_VERSION, UDINT, 3156960 (32)
+        Global_Variables.ADSIGRP_SYMNAME, UDINT, 3156736 (32)
+        Global_Variables.ADSIGRP_SYMNOTE, UDINT, 3157120 (32)
+        Global_Variables.ADSIGRP_SYMTAB, UDINT, 3156704 (32)
+        Global_Variables.ADSIGRP_SYMVAL, UDINT, 3156768 (32)
+        Global_Variables.ADSIOFFS_DEVDATA_ADSSTATE, UDINT, 3157472 (32)
+        Global_Variables.ADSIOFFS_DEVDATA_DEVSTATE, UDINT, 3157504 (32)
+        Global_Variables.ADSLOG_MSGTYPE_ERROR, DWORD, 3158560 (32)
+        Global_Variables.ADSLOG_MSGTYPE_HINT, DWORD, 3158496 (32)
+        Global_Variables.ADSLOG_MSGTYPE_LOG, DWORD, 3158592 (32)
+        Global_Variables.ADSLOG_MSGTYPE_MSGBOX, DWORD, 3158624 (32)
+        Global_Variables.ADSLOG_MSGTYPE_RESOURCE, DWORD, 3158656 (32)
+        Global_Variables.ADSLOG_MSGTYPE_STRING, DWORD, 3158688 (32)
+        Global_Variables.ADSLOG_MSGTYPE_WARN, DWORD, 3158528 (32)
+        Global_Variables.ADSSTATE_CONFIG, UINT, 3156592 (16)
+        Global_Variables.ADSSTATE_ERROR, UINT, 3156528 (16)
+        Global_Variables.ADSSTATE_EXCEPTION, UINT, 3156656 (16)
+        Global_Variables.ADSSTATE_IDLE, UINT, 3156368 (16)
+        Global_Variables.ADSSTATE_INCOMPATIBLE, UINT, 3156640 (16)
+        Global_Variables.ADSSTATE_INIT, UINT, 3156400 (16)
+        Global_Variables.ADSSTATE_INVALID, UINT, 3156352 (16)
+        Global_Variables.ADSSTATE_LOADCFG, UINT, 3156480 (16)
+        Global_Variables.ADSSTATE_MAXSTATES, UINT, 3156672 (16)
+        Global_Variables.ADSSTATE_POWERFAILURE, UINT, 3156496 (16)
+        Global_Variables.ADSSTATE_POWERGOOD, UINT, 3156512 (16)
+        Global_Variables.ADSSTATE_RECONFIG, UINT, 3156608 (16)
+        Global_Variables.ADSSTATE_RESET, UINT, 3156384 (16)
+        Global_Variables.ADSSTATE_RESUME, UINT, 3156576 (16)
+        Global_Variables.ADSSTATE_RUN, UINT, 3156432 (16)
+        Global_Variables.ADSSTATE_SAVECFG, UINT, 3156464 (16)
+        Global_Variables.ADSSTATE_SHUTDOWN, UINT, 3156544 (16)
+        Global_Variables.ADSSTATE_START, UINT, 3156416 (16)
+        Global_Variables.ADSSTATE_STOP, UINT, 3156448 (16)
+        Global_Variables.ADSSTATE_STOPPING, UINT, 3156624 (16)
+        Global_Variables.ADSSTATE_SUSPEND, UINT, 3156560 (16)
+        Global_Variables.AMSLOGGER_IGR_GENERAL, UDINT, 3224256 (32)
+        Global_Variables.AMSLOGGER_IOF_MODE, UDINT, 3224288 (32)
+        Global_Variables.AMSPORT_AMSLOGGER, UINT, 3222992 (16)
+        Global_Variables.AMSPORT_EVENTLOG, UINT, 3156064 (16)
+        Global_Variables.AMSPORT_LOGGER, UINT, 3073136 (16)
+        Global_Variables.AMSPORT_R0_CAM, UINT, 3156288 (16)
+        Global_Variables.AMSPORT_R0_CAMTOOL, UINT, 3156304 (16)
+        Global_Variables.AMSPORT_R0_CNC, UINT, 3156176 (16)
+        Global_Variables.AMSPORT_R0_IO, UINT, 3156096 (16)
+        Global_Variables.AMSPORT_R0_ISG, UINT, 3156160 (16)
+        Global_Variables.AMSPORT_R0_LINE, UINT, 3156192 (16)
+        Global_Variables.AMSPORT_R0_NC, UINT, 3156112 (16)
+        Global_Variables.AMSPORT_R0_NCSAF, UINT, 3156128 (16)
+        Global_Variables.AMSPORT_R0_NCSVB, UINT, 3156144 (16)
+        Global_Variables.AMSPORT_R0_PLC, UINT, 3156208 (16)
+        Global_Variables.AMSPORT_R0_PLC_RTS1, UINT, 3156224 (16)
+        Global_Variables.AMSPORT_R0_PLC_RTS2, UINT, 3156240 (16)
+        Global_Variables.AMSPORT_R0_PLC_RTS3, UINT, 3156256 (16)
+        Global_Variables.AMSPORT_R0_PLC_RTS4, UINT, 3156272 (16)
+        Global_Variables.AMSPORT_R0_RTIME, UINT, 3156080 (16)
+        Global_Variables.AMSPORT_R3_SCOPESERVER, UINT, 3156336 (16)
+        Global_Variables.AMSPORT_R3_SYSSERV, UINT, 3156320 (16)
+        Global_Variables.AMSPORT_TCPIPSRV, UINT, 3366464 (16)
+        Global_Variables.ASCII_DLE, BYTE, 3365456 (8)
+        Global_Variables.ASCII_ETX, BYTE, 3365448 (8)
+        Global_Variables.ASCII_NAK, BYTE, 3365464 (8)
+        Global_Variables.ASCII_STX, BYTE, 3363224 (8)
+        Global_Variables.BOOTDATAFLAGS_PERSISTENT_INVALID, BYTE, 3158720 (8)
+        Global_Variables.BOOTDATAFLAGS_PERSISTENT_LOADED, BYTE, 3156696 (8)
+        Global_Variables.BOOTDATAFLAGS_RETAIN_INVALID, BYTE, 3073128 (8)
+        Global_Variables.BOOTDATAFLAGS_RETAIN_LOADED, BYTE, 3072328 (8)
+        Global_Variables.BOOTDATAFLAGS_RETAIN_REQUESTED, BYTE, 3156688 (8)
+        Global_Variables.COMERRORADS_INVALID_BAUDRATE, UDINT, 3364352 (32)
+        Global_Variables.COMERRORADS_INVALID_CFGSTLEN, UDINT, 3364256 (32)
+        Global_Variables.COMERRORADS_INVALID_CFGSTVER, UDINT, 3364288 (32)
+        Global_Variables.COMERRORADS_INVALID_CMD, UDINT, 3364192 (32)
+        Global_Variables.COMERRORADS_INVALID_COMPORT, UDINT, 3364160 (32)
+        Global_Variables.COMERRORADS_INVALID_CTS_OUTCTRL, UDINT, 3364544 (32)
+        Global_Variables.COMERRORADS_INVALID_DATABITS, UDINT, 3364416 (32)
+        Global_Variables.COMERRORADS_INVALID_DATAPOINTER, UDINT, 3364224 (32)
+        Global_Variables.COMERRORADS_INVALID_DSR_OUTCTRL, UDINT, 3364576 (32)
+        Global_Variables.COMERRORADS_INVALID_DSR_SENS, UDINT, 3364608 (32)
+        Global_Variables.COMERRORADS_INVALID_DTR_CTRL, UDINT, 3364480 (32)
+        Global_Variables.COMERRORADS_INVALID_PARITY, UDINT, 3364384 (32)
+        Global_Variables.COMERRORADS_INVALID_RTS_CTRL, UDINT, 3364512 (32)
+        Global_Variables.COMERRORADS_INVALID_STOPBITS, UDINT, 3364448 (32)
+        Global_Variables.COMERRORADS_INVALID_TL, UDINT, 3364320 (32)
+        Global_Variables.COMERRORADS_NOT_INIT, UDINT, 3364640 (32)
+        Global_Variables.COMERRORADS_PORT_CONNECTED, UDINT, 3364704 (32)
+        Global_Variables.COMERRORADS_PORT_NOT_CONNECTED, UDINT, 3364736 (32)
+        Global_Variables.COMERRORADS_RD_BUFFER_OVERRUN, UDINT, 3364672 (32)
+        Global_Variables.COMERRORADS_RD_FAILURE, UDINT, 3364832 (32)
+        Global_Variables.COMERRORADS_RD_THREAD_TIMEOUT, UDINT, 3364768 (32)
+        Global_Variables.COMERRORADS_SERVER_INCOMPATIBLE, UDINT, 3364896 (32)
+        Global_Variables.COMERRORADS_WR_FAILURE, UDINT, 3364864 (32)
+        Global_Variables.COMERRORADS_WR_THREAD_TIMEOUT, UDINT, 3364800 (32)
+        Global_Variables.CONNECT_MODE_ENABLEDBG, DWORD, 3367456 (32)
+        Global_Variables.DATE_AND_TIME_SECPERDAY, DWORD, 3237216 (32)
+        Global_Variables.DATE_AND_TIME_SECPERWEEK, DWORD, 3237248 (32)
+        Global_Variables.DBG_OUTPUT_FILE, DWORD, 3243520 (32)
+        Global_Variables.DBG_OUTPUT_LOG, DWORD, 3243488 (32)
+        Global_Variables.DBG_OUTPUT_NONE, DWORD, 3243456 (32)
+        Global_Variables.DBG_OUTPUT_VISU, DWORD, 3243552 (32)
+        Global_Variables.DEFAULT_ADS_TIMEOUT, TIME, 3159392 (32)
+        Global_Variables.DEFAULT_BACKLASHVALUE, LREAL, 8492416 (64)
+        Global_Variables.DEFAULT_CSV_FIELD_DOUBLE_QUOTE, BYTE, 3360720 (8)
+        Global_Variables.DEFAULT_CSV_FIELD_SEP, BYTE, 3160984 (8)
+        Global_Variables.DEFAULT_CSV_RECORD_SEP_CR, BYTE, 3360728 (8)
+        Global_Variables.DEFAULT_CSV_RECORD_SEP_LF, BYTE, 3360736 (8)
+        Global_Variables.DEFAULT_HOME_POSITION, LREAL, 8492352 (64)
+        Global_Variables.EMPTY_ARG_VALUE, T_Arg, 3224864 (96)
+        Global_Variables.EMPTY_GUID_REGSTRING, STRING(38), 3362888 (312)
+        Global_Variables.EMPTY_GUID_STRING, STRING(36), 3362592 (296)
+        Global_Variables.EMPTY_GUID_STRUCT, GUID, 3362464 (128)
+        Global_Variables.EMPTY_ROUTE_ENTRY, ST_AmsRouteEntry, 3223008 (1184)
+        Global_Variables.eWatchdogConfig, E_WATCHDOG_TIME_CONFIG, 3159376 (16)
+        Global_Variables.FLOATREC_EXP_IS_INF, INT, 3224352 (16)
+        Global_Variables.FLOATREC_EXP_IS_NAN, INT, 3224336 (16)
+        Global_Variables.FLOATREC_MAX_DIGITS, INT, 3224368 (16)
+        Global_Variables.FLOATREC_MAX_PRECISION, INT, 3224384 (16)
+        Global_Variables.FLOATREC_MIN_PRECISION, INT, 3224400 (16)
+        Global_Variables.FMTERR_ARGTYPEINVALID, DWORD, 3224704 (32)
+        Global_Variables.FMTERR_ASTERISKPOSITION, DWORD, 3224480 (32)
+        Global_Variables.FMTERR_DESTBUFFOVERFLOW, DWORD, 3224800 (32)
+        Global_Variables.FMTERR_FLAGPOSITION, DWORD, 3224576 (32)
+        Global_Variables.FMTERR_INSUFFICIENTARGS, DWORD, 3224768 (32)
+        Global_Variables.FMTERR_INVALIDPOINTERINPUT, DWORD, 3224832 (32)
+        Global_Variables.FMTERR_NOERROR, DWORD, 3224416 (32)
+        Global_Variables.FMTERR_PERCENTSIGNPOSITION, DWORD, 3224448 (32)
+        Global_Variables.FMTERR_PRECISIONDOTPOSITION, DWORD, 3224640 (32)
+        Global_Variables.FMTERR_PRECISIONVALUE, DWORD, 3224544 (32)
+        Global_Variables.FMTERR_TYPEFIELDVALUE, DWORD, 3224672 (32)
+        Global_Variables.FMTERR_UNACCEPTEDPARAMETER, DWORD, 3224736 (32)
+        Global_Variables.FMTERR_WIDTHPRECISIONVALPOS, DWORD, 3224608 (32)
+        Global_Variables.FMTERR_WIDTHVALUE, DWORD, 3224512 (32)
+        Global_Variables.FOPEN_MODEAPPEND, DWORD, 3158816 (32)
+        Global_Variables.FOPEN_MODEBINARY, DWORD, 3158880 (32)
+        Global_Variables.FOPEN_MODEPLUS, DWORD, 3158848 (32)
+        Global_Variables.FOPEN_MODEREAD, DWORD, 3158752 (32)
+        Global_Variables.FOPEN_MODETEXT, DWORD, 3158912 (32)
+        Global_Variables.FOPEN_MODEWRITE, DWORD, 3158784 (32)
+        Global_Variables.FORMAT_DECASC_CODES, BYTE, 3225216 (80)
+        Global_Variables.FORMAT_HEXASC_CODES, BYTE, 3224960 (256)
+        Global_Variables.FORMAT_MAX_ARGS, INT, 3224320 (16)
+        Global_Variables.GLOBAL_DCF77_PULSE_SPLIT, TIME, 3160992 (32)
+        Global_Variables.GLOBAL_DCF77_SEQUENCE_CHECK, BOOL, 3160976 (8)
+        Global_Variables.GLOBAL_FORMAT_HASH_PREFIX_TYPE, E_HashPrefixTypes, 3160944 (16)
+        Global_Variables.GLOBAL_SBCS_TABLE, E_SBCSType, 3160960 (16)
+        Global_Variables.HKEY_MAX_BINARY_DATA_SIZE, UDINT, 3224224 (32)
+        Global_Variables.IPHELPERAPI_ADAPTERSINFO, UDINT, 3222656 (32)
+        Global_Variables.IPHELPERAPI_IPADDRBYHOSTNAME, UDINT, 3222688 (32)
+        Global_Variables.LISTEN_MODE_CLOSEALL, DWORD, 3367392 (32)
+        Global_Variables.LISTEN_MODE_USEOPENED, DWORD, 3367424 (32)
+        Global_Variables.MAX_ADAPTER_ADDRESS_LENGTH, UDINT, 3222560 (32)
+        Global_Variables.MAX_ADAPTER_DESCRIPTION_LENGTH, UDINT, 3222528 (32)
+        Global_Variables.MAX_ADAPTER_NAME_LENGTH, UDINT, 3222496 (32)
+        Global_Variables.MAX_AVERAGE_MEASURES, INT (2..100), 3160928 (16)
+        Global_Variables.MAX_LOCAL_ADAPTERS, UDINT, 3222720 (32)
+        Global_Variables.MAX_REMOTE_PCS, INT, 3222848 (16)
+        Global_Variables.MAX_RETRIES, INT, 3365472 (16)
+        Global_Variables.MAX_ROUTE_ADDR_LEN, BYTE, 3222872 (8)
+        Global_Variables.MAX_ROUTE_NAME_LEN, BYTE, 3222864 (8)
+        Global_Variables.MAX_ROUTE_TRANSPORT, BYTE, 3222984 (8)
+        Global_Variables.MAX_STRING_LENGTH, UDINT, 3159488 (32)
+        Global_Variables.MAX_THROTTLE_MODE, DWORD, 3367488 (32)
+        Global_Variables.MIN_ROUTE_TRANSPORT, BYTE, 3222976 (8)
+        Global_Variables.nWatchdogTime, BYTE, 3158744 (8)
+        Global_Variables.PI, LREAL, 3159424 (64)
+        Global_Variables.ROUTE_FLAG_DYNAMIC, DWORD, 3222912 (32)
+        Global_Variables.ROUTE_FLAG_NOOVERRIDE, DWORD, 3222944 (32)
+        Global_Variables.ROUTE_FLAG_TEMPORARY, DWORD, 3222880 (32)
+        Global_Variables.SYSTEMSERVICE_ADDREMOTE, UDINT, 3222752 (32)
+        Global_Variables.SYSTEMSERVICE_CHANGENETID, UDINT, 3158304 (32)
+        Global_Variables.SYSTEMSERVICE_CLOSEHANDLE, UDINT, 3157664 (32)
+        Global_Variables.SYSTEMSERVICE_CREATEFILE, UDINT, 3157632 (32)
+        Global_Variables.SYSTEMSERVICE_DELREMOTE, UDINT, 3222784 (32)
+        Global_Variables.SYSTEMSERVICE_ENUMREMOTE, UDINT, 3222816 (32)
+        Global_Variables.SYSTEMSERVICE_FCLOSE, UDINT, 3157728 (32)
+        Global_Variables.SYSTEMSERVICE_FDELETE, UDINT, 3158048 (32)
+        Global_Variables.SYSTEMSERVICE_FEOF, UDINT, 3158016 (32)
+        Global_Variables.SYSTEMSERVICE_FFILEFIND, UDINT, 3224192 (32)
+        Global_Variables.SYSTEMSERVICE_FGETS, UDINT, 3157888 (32)
+        Global_Variables.SYSTEMSERVICE_FOPEN, UDINT, 3157696 (32)
+        Global_Variables.SYSTEMSERVICE_FPRINTF, UDINT, 3157984 (32)
+        Global_Variables.SYSTEMSERVICE_FPUTS, UDINT, 3157920 (32)
+        Global_Variables.SYSTEMSERVICE_FREAD, UDINT, 3157760 (32)
+        Global_Variables.SYSTEMSERVICE_FRENAME, UDINT, 3158080 (32)
+        Global_Variables.SYSTEMSERVICE_FSCANF, UDINT, 3157952 (32)
+        Global_Variables.SYSTEMSERVICE_FSEEK, UDINT, 3157824 (32)
+        Global_Variables.SYSTEMSERVICE_FTELL, UDINT, 3157856 (32)
+        Global_Variables.SYSTEMSERVICE_FWRITE, UDINT, 3157792 (32)
+        Global_Variables.SYSTEMSERVICE_IPHELPERAPI, UDINT, 3222592 (32)
+        Global_Variables.SYSTEMSERVICE_IPHOSTNAME, UDINT, 3222624 (32)
+        Global_Variables.SYSTEMSERVICE_MKDIR, UDINT, 3158112 (32)
+        Global_Variables.SYSTEMSERVICE_OPENCREATE, UDINT, 3157536 (32)
+        Global_Variables.SYSTEMSERVICE_OPENREAD, UDINT, 3157568 (32)
+        Global_Variables.SYSTEMSERVICE_OPENWRITE, UDINT, 3157600 (32)
+        Global_Variables.SYSTEMSERVICE_REG_HKEYLOCALMACHINE, UDINT, 3158176 (32)
+        Global_Variables.SYSTEMSERVICE_RMDIR, UDINT, 3158144 (32)
+        Global_Variables.SYSTEMSERVICE_SENDEMAIL, UDINT, 3158208 (32)
+        Global_Variables.SYSTEMSERVICE_STARTPROCESS, UDINT, 3158272 (32)
+        Global_Variables.SYSTEMSERVICE_TIMESERVICES, UDINT, 3158240 (32)
+        Global_Variables.SYSTEMSTATEFLAGS_BSOD, BYTE, 3158728 (8)
+        Global_Variables.SYSTEMSTATEFLAGS_RTVIOLATION, BYTE, 3158736 (8)
+        Global_Variables.SYSTEMTIME_DATE_AND_TIME_MAX, T_ULARGE_INTEGER, 3231840 (64)
+        Global_Variables.SYSTEMTIME_DATE_AND_TIME_MAX64, ULINT, 3232192 (64)
+        Global_Variables.SYSTEMTIME_DATE_AND_TIME_MIN, T_ULARGE_INTEGER, 3231776 (64)
+        Global_Variables.SYSTEMTIME_DATE_AND_TIME_MIN64, ULINT, 3232128 (64)
+        Global_Variables.SYSTEMTIME_DATEDELTA_OFFSET, DWORD, 3231552 (32)
+        Global_Variables.SYSTEMTIME_MAX_MONTHDAYS, WORD, 3230704 (384)
+        Global_Variables.SYSTEMTIME_MAX_YEARSDAY, WORD, 3231088 (448)
+        Global_Variables.SYSTEMTIME_TICKSPERDAY, T_ULARGE_INTEGER, 3231712 (64)
+        Global_Variables.SYSTEMTIME_TICKSPERDAY64, ULINT, 3232064 (64)
+        Global_Variables.SYSTEMTIME_TICKSPERMSEC, T_ULARGE_INTEGER, 3231584 (64)
+        Global_Variables.SYSTEMTIME_TICKSPERMSEC64, ULINT, 3231936 (64)
+        Global_Variables.SYSTEMTIME_TICKSPERSEC, T_ULARGE_INTEGER, 3231648 (64)
+        Global_Variables.SYSTEMTIME_TICKSPERSEC64, ULINT, 3232000 (64)
+        Global_Variables.TCEVENT_FMTPRGSIZE, INT, 3159360 (16)
+        Global_Variables.TCEVENT_SRCNAMESIZE, INT, 3159344 (16)
+        Global_Variables.TCEVENTFLAG_AUTOFMTALL, WORD, 3159248 (16)
+        Global_Variables.TCEVENTFLAG_FMTSELF, WORD, 3159184 (16)
+        Global_Variables.TCEVENTFLAG_LOG, WORD, 3159200 (16)
+        Global_Variables.TCEVENTFLAG_MSGBOX, WORD, 3159216 (16)
+        Global_Variables.TCEVENTFLAG_PRIOCLASS, WORD, 3159168 (16)
+        Global_Variables.TCEVENTFLAG_SRCID, WORD, 3159232 (16)
+        Global_Variables.TCEVENTSTATE_CONFIRMED, WORD, 3159312 (16)
+        Global_Variables.TCEVENTSTATE_INVALID, WORD, 3159264 (16)
+        Global_Variables.TCEVENTSTATE_RESET, WORD, 3159296 (16)
+        Global_Variables.TCEVENTSTATE_RESETCON, WORD, 3159328 (16)
+        Global_Variables.TCEVENTSTATE_SIGNALED, WORD, 3159280 (16)
+        Global_Variables.TcMcGlobal, _TCMCGLOBAL, 8485344 (6976)
+        Global_Variables.TCPADS_IGR_ADAPTER_LINKSTATUS, UDINT, 3366784 (32)
+        Global_Variables.TCPADS_IGR_CLOSEBYHDL, UDINT, 3366528 (32)
+        Global_Variables.TCPADS_IGR_CONLIST, UDINT, 3366496 (32)
+        Global_Variables.TCPADS_IGR_MULTICAST_ADDBYHDL, UDINT, 3366720 (32)
+        Global_Variables.TCPADS_IGR_MULTICAST_DROPBYHDL, UDINT, 3366752 (32)
+        Global_Variables.TCPADS_IGR_PEERBYHDL, UDINT, 3366592 (32)
+        Global_Variables.TCPADS_IGR_RECVBYHDL, UDINT, 3366624 (32)
+        Global_Variables.TCPADS_IGR_RECVFROMBYHDL, UDINT, 3366656 (32)
+        Global_Variables.TCPADS_IGR_SENDBYHDL, UDINT, 3366560 (32)
+        Global_Variables.TCPADS_IGR_SENDTOBYHDL, UDINT, 3366688 (32)
+        Global_Variables.TCPADS_NULL_HSOCKET, T_HSOCKET, 3367040 (352)
+        Global_Variables.TCPADSCONLST_IOF_ACCEPT, UDINT, 3366912 (32)
+        Global_Variables.TCPADSCONLST_IOF_CLOSEALL, UDINT, 3366880 (32)
+        Global_Variables.TCPADSCONLST_IOF_CONNECT, UDINT, 3366816 (32)
+        Global_Variables.TCPADSCONLST_IOF_GETHNDLBYADDR, UDINT, 3366976 (32)
+        Global_Variables.TCPADSCONLST_IOF_GETLINKSTATUS, UDINT, 3367008 (32)
+        Global_Variables.TCPADSCONLST_IOF_LISTEN, UDINT, 3366848 (32)
+        Global_Variables.TCPADSCONLST_IOF_UDPBIND, UDINT, 3366944 (32)
+        Global_Variables.THROTTLE_MODE_DEFAULT, T_ThrottleTimes, 3367936 (416)
+        Global_Variables.THROTTLE_MODE_OFF, T_ThrottleTimes, 3367520 (416)
+        Global_Variables.TIMEOUT_QVZ, TIME, 3365536 (32)
+        Global_Variables.TIMEOUT_WVZ, TIME, 3365568 (32)
+        Global_Variables.TIMEOUT_ZVZ, TIME, 3365504 (32)
+        Global_Variables.TIMESERVICE_ADJUSTTIMETORTC, UDINT, 3158432 (32)
+        Global_Variables.TIMESERVICE_DATEANDTIME, UDINT, 3158336 (32)
+        Global_Variables.TIMESERVICE_RTCTIMEDIFF, UDINT, 3158400 (32)
+        Global_Variables.TIMESERVICE_SYSTEMTIMES, UDINT, 3158368 (32)
+        Global_Variables.TIMESERVICE_TIMEZONINFORMATION, UDINT, 3158464 (32)
+        Global_Variables.WEST_EUROPE_TZI, ST_TimeZoneInformation, 3232256 (864)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+Global_Version
+^^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>19 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Global_Version.stLibVersion_lcls_twincat_motion, ST_LibVersion, 8472768 (288)
+        Global_Version.stLibVersion_lcls_twincat_optics, ST_LibVersion, 638696128 (288)
+        Global_Version.stLibVersion_Tc2_ControllerToolbox, ST_LibVersion, 638696416 (288)
+        Global_Version.stLibVersion_Tc2_EtherCAT, ST_LibVersion, 3155200 (288)
+        Global_Version.stLibVersion_Tc2_IoFunctions, ST_LibVersion, 3363296 (288)
+        Global_Version.stLibVersion_Tc2_Math, ST_LibVersion, 8492480 (288)
+        Global_Version.stLibVersion_Tc2_MC2, ST_LibVersion, 8485056 (288)
+        Global_Version.stLibVersion_Tc2_ModbusSrv, ST_LibVersion, 3363584 (288)
+        Global_Version.stLibVersion_Tc2_SerialCom, ST_LibVersion, 3363872 (288)
+        Global_Version.stLibVersion_Tc2_Standard, ST_LibVersion, 3155488 (288)
+        Global_Version.stLibVersion_Tc2_System, ST_LibVersion, 3155776 (288)
+        Global_Version.stLibVersion_Tc2_Utilities, ST_LibVersion, 3160640 (288)
+        Global_Version.stLibVersion_Tc3_DynamicMemory, ST_LibVersion, 640578816 (288)
+        Global_Version.stLibVersion_Tc3_EventLogger, ST_LibVersion, 3366016 (288)
+        Global_Version.stLibVersion_Tc3_IPCDiag, ST_LibVersion, 640577472 (288)
+        Global_Version.stLibVersion_Tc3_JsonXml, ST_LibVersion, 3368352 (288)
+        Global_Version.stLibVersion_Tc3_Module, ST_LibVersion, 3160032 (288)
+        Global_Version.stLibVersion_TcUnit, ST_LibVersion, 7516192 (288)
+        Global_Version.stLibVersion_TcUnit, ST_LibVersion, 638693120 (288)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+GVL
+^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL.nLangId_OnlineMonitoring, DINT, 3365952 (32)
+
+
+GVL_COM_Buffers
+^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_COM_Buffers.Serial_RXBuffer_M1K4, ComBuffer, 663792640 (2512)
+        GVL_COM_Buffers.Serial_TXBuffer_M1K4, ComBuffer, 663795152 (2512)
+
+
+GVL_Constants
+^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_Constants.cPiezoMaxVoltage, LREAL, 638693504 (64)
+        GVL_Constants.cPiezoMinVoltage, LREAL, 638693568 (64)
+        GVL_Constants.cPiezoRange, REAL, 638693408 (32)
+        GVL_Constants.nGANTRY_TOLERANCE_NM_DEFAULT, LINT, 638693440 (64)
+
+
+GVL_INTERNAL
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_INTERNAL.UNINITIALIZED_CLASS_GUID, GUID, 3366304 (128)
+
+
+GVL_Logger
+^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>13 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_Logger.bTrickleTripped, BOOL, 3072040 (8)
+        GVL_Logger.cLogHost, STRING(15), 3072128 (128)
+        GVL_Logger.fbRootLogger, FB_LogMessage, 3073216 (81984)
+        GVL_Logger.iLogPort, UINT, 3072256 (16)
+        GVL_Logger.nGlobAccEvents, UDINT, 3073184 (32)
+        GVL_Logger.nLocalTrickleTripThreshold, TIME, 3072384 (32)
+        GVL_Logger.nLocalTripThreshold, TIME, 3072352 (32)
+        GVL_Logger.nMinTimeViolationAcceptable, INT, 3072336 (16)
+        GVL_Logger.nTrickleTripTime, TIME, 3072416 (32)
+        GVL_Logger.nTripResetPeriod, TIME, 3072448 (32)
+        GVL_Logger.sIpTidbit, STRING(6), 3072272 (56)
+        GVL_Logger.sPlcHostname, STRING(80), 3072480 (648)
+        GVL_Logger.TCPADS_MAXUDP_BUFFSIZE, UDINT, 3073152 (32)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+GVL_M1K4
+^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_M1K4.M1K4_Pitch, HOMS_PitchMechanism, 663797696 (2496)
+        GVL_M1K4.M1K4_Pitch.diEncCnt, LINT, 663800128 (64)
+
+
+GVL_M1K4_Constants
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_M1K4_Constants.nXDWN_ENC_REF, ULINT, 663800384 (64)
+        GVL_M1K4_Constants.nXUP_ENC_REF, ULINT, 663800320 (64)
+        GVL_M1K4_Constants.nYDWN_ENC_REF, ULINT, 663800256 (64)
+        GVL_M1K4_Constants.nYUP_ENC_REF, ULINT, 663800192 (64)
+
+
+GVL_M2K4_Constants
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_M2K4_Constants.nM2K4rY_ENC_REF, ULINT, 663800640 (64)
+        GVL_M2K4_Constants.nM2K4X_ENC_REF, ULINT, 663800512 (64)
+        GVL_M2K4_Constants.nM2K4Y_ENC_REF, ULINT, 663800576 (64)
+
+
+GVL_M2K4_RTD
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_M2K4_RTD.nM2K4DS_RTD_1, INT, 663797664 (16)
+        GVL_M2K4_RTD.nM2K4DS_RTD_2, INT, 663797680 (16)
+        GVL_M2K4_RTD.nM2K4DS_RTD_3, INT, 663800448 (16)
+        GVL_M2K4_RTD.nM2K4US_RTD_1, INT, 663212432 (16)
+        GVL_M2K4_RTD.nM2K4US_RTD_2, INT, 663212448 (16)
+        GVL_M2K4_RTD.nM2K4US_RTD_3, INT, 663212464 (16)
+
+
+GVL_M3K4_Constants
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_M3K4_Constants.nM3K4rX_ENC_REF, ULINT, 663800896 (64)
+        GVL_M3K4_Constants.nM3K4X_ENC_REF, ULINT, 663800768 (64)
+        GVL_M3K4_Constants.nM3K4Y_ENC_REF, ULINT, 663800832 (64)
+
+
+GVL_M3K4_RTD
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_M3K4_RTD.nM3K4DS_RTD_1, INT, 663800704 (16)
+        GVL_M3K4_RTD.nM3K4DS_RTD_2, INT, 663800720 (16)
+        GVL_M3K4_RTD.nM3K4DS_RTD_3, INT, 663800736 (16)
+        GVL_M3K4_RTD.nM3K4US_RTD_1, INT, 663800464 (16)
+        GVL_M3K4_RTD.nM3K4US_RTD_2, INT, 663800480 (16)
+        GVL_M3K4_RTD.nM3K4US_RTD_3, INT, 663800496 (16)
+
+
+GVL_M4K4_RTD
+^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>15 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_M4K4_RTD.nM4K4_Chin_Left_RTD, FB_TempSensor, 663800960 (256)
+        GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bError, BOOL, 663801160 (8)
+        GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bOverrange, BOOL, 663801176 (8)
+        GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bUnderrange, BOOL, 663801168 (8)
+        GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.iRaw, INT, 663801184 (16)
+        GVL_M4K4_RTD.nM4K4_Chin_Right_RTD, FB_TempSensor, 663801216 (256)
+        GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bError, BOOL, 663801416 (8)
+        GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bOverrange, BOOL, 663801432 (8)
+        GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bUnderrange, BOOL, 663801424 (8)
+        GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.iRaw, INT, 663801440 (16)
+        GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD, FB_TempSensor, 663801472 (256)
+        GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bError, BOOL, 663801672 (8)
+        GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bOverrange, BOOL, 663801688 (8)
+        GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bUnderrange, BOOL, 663801680 (8)
+        GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.iRaw, INT, 663801696 (16)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+GVL_M5K4_RTD
+^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>15 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_M5K4_RTD.nM5K4_Chin_Left_RTD, FB_TempSensor, 663801728 (256)
+        GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bError, BOOL, 663801928 (8)
+        GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bOverrange, BOOL, 663801944 (8)
+        GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bUnderrange, BOOL, 663801936 (8)
+        GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.iRaw, INT, 663801952 (16)
+        GVL_M5K4_RTD.nM5K4_Chin_Right_RTD, FB_TempSensor, 663801984 (256)
+        GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bError, BOOL, 663802184 (8)
+        GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bOverrange, BOOL, 663802200 (8)
+        GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bUnderrange, BOOL, 663802192 (8)
+        GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.iRaw, INT, 663802208 (16)
+        GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD, FB_TempSensor, 663802240 (256)
+        GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bError, BOOL, 663802440 (8)
+        GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bOverrange, BOOL, 663802456 (8)
+        GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange, BOOL, 663802448 (8)
+        GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.iRaw, INT, 663802464 (16)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+GVL_Param_TcUnit
+^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>12 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_Param_TcUnit.AdsLogMessageFifoRingBufferSize, UINT, 8494880 (16)
+        GVL_Param_TcUnit.LogExtendedResults, BOOL, 3369208 (8)
+        GVL_Param_TcUnit.MaxNumberOfAsserts, UINT, 3368656 (16)
+        GVL_Param_TcUnit.MaxNumberOfAssertsForEachTestSuite, UINT, 8492768 (16)
+        GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite, UINT, 3368640 (16)
+        GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite, UINT, 8492336 (16)
+        GVL_Param_TcUnit.MaxNumberOfTestSuites, UINT, 3366480 (16)
+        GVL_Param_TcUnit.MaxNumberOfTestSuites, UINT, 8492320 (16)
+        GVL_Param_TcUnit.TimeBetweenTestSuitesExecution, TIME, 8494912 (32)
+        GVL_Param_TcUnit.xUnitBufferSize, UDINT, 8492800 (32)
+        GVL_Param_TcUnit.xUnitEnablePublish, BOOL, 8492784 (8)
+        GVL_Param_TcUnit.xUnitFilePath, STRING(255), 8492832 (2048)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+GVL_PMPS
+^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_PMPS.g_FastFaultOutput1, FB_HardwareFFOutput, 663802496 (495296)
+        GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut, BOOL, 663802760 (8)
+        GVL_PMPS.g_FastFaultOutput2, FB_HardwareFFOutput, 664297792 (495296)
+        GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, BOOL, 664298056 (8)
+        GVL_PMPS.g_fbArbiter1, FB_Arbiter, 664793088 (474624)
+        GVL_PMPS.g_fbArbiter2, FB_Arbiter, 665267712 (474624)
+
+
+GVL_SerialIO
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_SerialIO.Serial_stComIn_M1K4, EL6inData22B, 665742336 (192)
+        GVL_SerialIO.Serial_stComOut_M1K4, EL6outData22B, 665742528 (192)
+
+
+GVL_TcUnit
+^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>19 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_TcUnit.AdsLogger, FB_ADSLogStringMessageFifoQueue, 3387328 (4128864)
+        GVL_TcUnit.AdsMessageQueue, FB_AdsLogStringMessageFifoQueue, 630372256 (8320864)
+        GVL_TcUnit.CurrentlyRunningOrderedTestInTestSuite, UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite), 630356256 (16000)
+        GVL_TcUnit.CurrentTestIsFinished, BOOL, 3369192 (8)
+        GVL_TcUnit.CurrentTestIsFinished, BOOL, 8494896 (8)
+        GVL_TcUnit.CurrentTestNameBeingCalled, STRING(255), 3369248 (2048)
+        GVL_TcUnit.CurrentTestNameBeingCalled, STRING(255), 630322176 (2048)
+        GVL_TcUnit.CurrentTestSuiteBeingCalled, POINTER TO FB_TestSuite, 3369216 (32)
+        GVL_TcUnit.CurrentTestSuiteBeingCalled, POINTER TO FB_TestSuite, 630322144 (32)
+        GVL_TcUnit.IgnoreCurrentTest, BOOL, 3369200 (8)
+        GVL_TcUnit.IgnoreCurrentTest, BOOL, 8494904 (8)
+        GVL_TcUnit.NumberOfInitializedTestSuites, UINT, 3371296 (16)
+        GVL_TcUnit.NumberOfInitializedTestSuites, UINT, 630324224 (16)
+        GVL_TcUnit.TcUnitRunner, FB_TcUnitRunner, 3368672 (512)
+        GVL_TcUnit.TcUnitRunner, FB_TcUnitRunner, 8494944 (621827200)
+        GVL_TcUnit.TestSuiteAddresses, POINTER TO FB_TestSuite, 3371328 (16000)
+        GVL_TcUnit.TestSuiteAddresses, POINTER TO FB_TestSuite, 630324256 (32000)
+        GVL_TcUnit.TestSuiteIsRegistered, BOOL, 3369184 (8)
+        GVL_TcUnit.TestSuiteIsRegistered, BOOL, 8492792 (8)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+GVL_TestStructs
+^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_TestStructs.TestPitch_LimitSwitches, HOMS_PitchMechanism, 638693632 (2496)
+
+
+lcls_twincat_optics
+^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt, LINT, 638696064 (64)
+
+
+Main
+^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>454 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Main.bDreamEnable1, BOOL, 630324240 (8)
+        Main.bDreamEnable2, BOOL, 630324248 (8)
+        Main.bM2K4DS_RTD_1_Err, BOOL, 655187688 (8)
+        Main.bM2K4DS_RTD_2_Err, BOOL, 655187696 (8)
+        Main.bM2K4DS_RTD_3_Err, BOOL, 655187704 (8)
+        Main.bM2K4US_RTD_1_Err, BOOL, 655187280 (8)
+        Main.bM2K4US_RTD_2_Err, BOOL, 655187288 (8)
+        Main.bM2K4US_RTD_3_Err, BOOL, 655187680 (8)
+        Main.bM3K4DS_RTD_1_Err, BOOL, 655187736 (8)
+        Main.bM3K4DS_RTD_2_Err, BOOL, 655187744 (8)
+        Main.bM3K4DS_RTD_3_Err, BOOL, 655187752 (8)
+        Main.bM3K4US_RTD_1_Err, BOOL, 655187712 (8)
+        Main.bM3K4US_RTD_2_Err, BOOL, 655187720 (8)
+        Main.bM3K4US_RTD_3_Err, BOOL, 655187728 (8)
+        Main.fbBendDSRMSErrorM2K4, FB_RMSWatch, 649768768 (386880)
+        Main.fbBendDSRMSErrorM3K4, FB_RMSWatch, 651703808 (386880)
+        Main.fbBenderM1K4, FB_Bender, 642379776 (128)
+        Main.fbBenderRMSErrorM1K4, FB_RMSWatch, 641992768 (386880)
+        Main.fbBendUSRMSErrorM2K4, FB_RMSWatch, 649381760 (386880)
+        Main.fbBendUSRMSErrorM3K4, FB_RMSWatch, 651316800 (386880)
+        Main.fbLogHandler, FB_LogHandler, 655187776 (5784896)
+        Main.fbMotionStage_m1, FB_MotionStage, 638891648 (298304)
+        Main.fbMotionStage_m1.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 638894144 (2048)
+        Main.fbMotionStage_m1.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 638893120 (1024)
+        Main.fbMotionStage_m10, FB_MotionStage, 643383296 (298304)
+        Main.fbMotionStage_m10.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 643385792 (2048)
+        Main.fbMotionStage_m10.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 643384768 (1024)
+        Main.fbMotionStage_m11, FB_MotionStage, 643707520 (298304)
+        Main.fbMotionStage_m11.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 643710016 (2048)
+        Main.fbMotionStage_m11.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 643708992 (1024)
+        Main.fbMotionStage_m12, FB_MotionStage, 644031744 (298304)
+        Main.fbMotionStage_m12.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 644034240 (2048)
+        Main.fbMotionStage_m12.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 644033216 (1024)
+        Main.fbMotionStage_m13, FB_MotionStage, 644355968 (298304)
+        Main.fbMotionStage_m13.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 644358464 (2048)
+        Main.fbMotionStage_m13.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 644357440 (1024)
+        Main.fbMotionStage_m14, FB_MotionStage, 644680192 (298304)
+        Main.fbMotionStage_m14.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 644682688 (2048)
+        Main.fbMotionStage_m14.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 644681664 (1024)
+        Main.fbMotionStage_m15, FB_MotionStage, 645004416 (298304)
+        Main.fbMotionStage_m15.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 645006912 (2048)
+        Main.fbMotionStage_m15.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 645005888 (1024)
+        Main.fbMotionStage_m16, FB_MotionStage, 645328640 (298304)
+        Main.fbMotionStage_m16.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 645331136 (2048)
+        Main.fbMotionStage_m16.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 645330112 (1024)
+        Main.fbMotionStage_m2, FB_MotionStage, 639215872 (298304)
+        Main.fbMotionStage_m2.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 639218368 (2048)
+        Main.fbMotionStage_m2.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 639217344 (1024)
+        Main.fbMotionStage_m3, FB_MotionStage, 639540096 (298304)
+        Main.fbMotionStage_m3.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 639542592 (2048)
+        Main.fbMotionStage_m3.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 639541568 (1024)
+        Main.fbMotionStage_m4, FB_MotionStage, 639864320 (298304)
+        Main.fbMotionStage_m4.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 639866816 (2048)
+        Main.fbMotionStage_m4.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 639865792 (1024)
+        Main.fbMotionStage_m5, FB_MotionStage, 640188544 (298304)
+        Main.fbMotionStage_m5.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 640191040 (2048)
+        Main.fbMotionStage_m5.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 640190016 (1024)
+        Main.fbMotionStage_m7, FB_MotionStage, 642410624 (298304)
+        Main.fbMotionStage_m7.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 642413120 (2048)
+        Main.fbMotionStage_m7.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 642412096 (1024)
+        Main.fbMotionStage_m8, FB_MotionStage, 642734848 (298304)
+        Main.fbMotionStage_m8.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 642737344 (2048)
+        Main.fbMotionStage_m8.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 642736320 (1024)
+        Main.fbMotionStage_m9, FB_MotionStage, 643059072 (298304)
+        Main.fbMotionStage_m9.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 643061568 (2048)
+        Main.fbMotionStage_m9.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 643060544 (1024)
+        Main.fbMotionStageM17, FB_MotionStage, 645652864 (298304)
+        Main.fbMotionStageM17.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 645655360 (2048)
+        Main.fbMotionStageM17.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 645654336 (1024)
+        Main.fbMotionStageM18, FB_MotionStage, 645977088 (298304)
+        Main.fbMotionStageM18.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 645979584 (2048)
+        Main.fbMotionStageM18.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 645978560 (1024)
+        Main.fbMotionStageM19, FB_MotionStage, 646301312 (298304)
+        Main.fbMotionStageM19.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 646303808 (2048)
+        Main.fbMotionStageM19.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 646302784 (1024)
+        Main.fbMotionStageM20, FB_MotionStage, 646625536 (298304)
+        Main.fbMotionStageM20.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 646628032 (2048)
+        Main.fbMotionStageM20.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 646627008 (1024)
+        Main.fbMotionStageM21, FB_MotionStage, 646949760 (298304)
+        Main.fbMotionStageM21.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 646952256 (2048)
+        Main.fbMotionStageM21.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 646951232 (1024)
+        Main.fbMotionStageM22, FB_MotionStage, 647273984 (298304)
+        Main.fbMotionStageM22.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 647276480 (2048)
+        Main.fbMotionStageM22.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 647275456 (1024)
+        Main.fbMotionStageM23, FB_MotionStage, 647598208 (298304)
+        Main.fbMotionStageM23.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 647600704 (2048)
+        Main.fbMotionStageM23.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 647599680 (1024)
+        Main.fbMotionStageM24, FB_MotionStage, 647922432 (298304)
+        Main.fbMotionStageM24.fbDriveVirtual.MasterAxis.NcToPlc, NCTOPLC_AXIS_REF, 647924928 (2048)
+        Main.fbMotionStageM24.fbDriveVirtual.MasterAxis.PlcToNc, PLCTONC_AXIS_REF, 647923904 (1024)
+        Main.fbPitchRMSErrorM1K4, FB_RMSWatch, 641605760 (386880)
+        Main.fbPRMSErrorM4K4, FB_RMSWatch, 653251840 (386880)
+        Main.fbPRMSErrorM5K4, FB_RMSWatch, 654799872 (386880)
+        Main.fbrXRMSErrorM3K4, FB_RMSWatch, 650929792 (386880)
+        Main.fbrYRMSErrorM2K4, FB_RMSWatch, 648994752 (386880)
+        Main.fbXRMSErrorM1K4, FB_RMSWatch, 641218752 (386880)
+        Main.fbXRMSErrorM2K4, FB_RMSWatch, 648220736 (386880)
+        Main.fbXRMSErrorM3K4, FB_RMSWatch, 650155776 (386880)
+        Main.fbXRMSErrorM4K4, FB_RMSWatch, 652090816 (386880)
+        Main.fbXRMSErrorM5K4, FB_RMSWatch, 653638848 (386880)
+        Main.fbYRMSErrorM1K4, FB_RMSWatch, 640831744 (386880)
+        Main.fbYRMSErrorM2K4, FB_RMSWatch, 648607744 (386880)
+        Main.fbYRMSErrorM3K4, FB_RMSWatch, 650542784 (386880)
+        Main.fbYRMSErrorM4K4, FB_RMSWatch, 652477824 (386880)
+        Main.fbYRMSErrorM5K4, FB_RMSWatch, 654025856 (386880)
+        Main.fbZRMSErrorM4K4, FB_RMSWatch, 652864832 (386880)
+        Main.fbZRMSErrorM5K4, FB_RMSWatch, 654412864 (386880)
+        Main.fEncLeverArm_mm, LREAL, 642384640 (64)
+        Main.fEncRefPitchM1K4_urad, LREAL, 642384576 (64)
+        Main.fM2K4DS_RTD_1, REAL, 655187392 (32)
+        Main.fM2K4DS_RTD_2, REAL, 655187424 (32)
+        Main.fM2K4DS_RTD_3, REAL, 655187456 (32)
+        Main.fM2K4US_RTD_1, REAL, 655187296 (32)
+        Main.fM2K4US_RTD_2, REAL, 655187328 (32)
+        Main.fM2K4US_RTD_3, REAL, 655187360 (32)
+        Main.fM3K4DS_RTD_1, REAL, 655187584 (32)
+        Main.fM3K4DS_RTD_2, REAL, 655187616 (32)
+        Main.fM3K4DS_RTD_3, REAL, 655187648 (32)
+        Main.fM3K4US_RTD_1, REAL, 655187488 (32)
+        Main.fM3K4US_RTD_2, REAL, 655187520 (32)
+        Main.fM3K4US_RTD_3, REAL, 655187552 (32)
+        Main.fMaxBendDSRMSErrorM2K4, LREAL, 650155648 (64)
+        Main.fMaxBendDSRMSErrorM3K4, LREAL, 652090688 (64)
+        Main.fMaxBenderRMSErrorM1K4, LREAL, 642379648 (64)
+        Main.fMaxBendUSRMSErrorM2K4, LREAL, 649768640 (64)
+        Main.fMaxBendUSRMSErrorM3K4, LREAL, 651703680 (64)
+        Main.fMaxPitchRMSErrorM1K4, LREAL, 641992640 (64)
+        Main.fMaxPRMSErrorM4K4, LREAL, 653638720 (64)
+        Main.fMaxPRMSErrorM5K4, LREAL, 655186752 (64)
+        Main.fMaxrXRMSErrorM3K4, LREAL, 651316672 (64)
+        Main.fMaxrYRMSErrorM2K4, LREAL, 649381632 (64)
+        Main.fMaxXRMSErrorM1K4, LREAL, 641605632 (64)
+        Main.fMaxXRMSErrorM2K4, LREAL, 648607616 (64)
+        Main.fMaxXRMSErrorM3K4, LREAL, 650542656 (64)
+        Main.fMaxXRMSErrorM4K4, LREAL, 652477696 (64)
+        Main.fMaxXRMSErrorM5K4, LREAL, 654025728 (64)
+        Main.fMaxYRMSErrorM1K4, LREAL, 641218624 (64)
+        Main.fMaxYRMSErrorM2K4, LREAL, 648994624 (64)
+        Main.fMaxYRMSErrorM3K4, LREAL, 650929664 (64)
+        Main.fMaxYRMSErrorM4K4, LREAL, 652864704 (64)
+        Main.fMaxYRMSErrorM5K4, LREAL, 654412736 (64)
+        Main.fMaxZRMSErrorM4K4, LREAL, 653251712 (64)
+        Main.fMaxZRMSErrorM5K4, LREAL, 654799744 (64)
+        Main.fMinBendDSRMSErrorM2K4, LREAL, 650155712 (64)
+        Main.fMinBendDSRMSErrorM3K4, LREAL, 652090752 (64)
+        Main.fMinBenderRMSErrorM1K4, LREAL, 642379712 (64)
+        Main.fMinBendUSRMSErrorM2K4, LREAL, 649768704 (64)
+        Main.fMinBendUSRMSErrorM3K4, LREAL, 651703744 (64)
+        Main.fMinPitchRMSErrorM1K4, LREAL, 641992704 (64)
+        Main.fMinPRMSErrorM4K4, LREAL, 653638784 (64)
+        Main.fMinPRMSErrorM5K4, LREAL, 655186816 (64)
+        Main.fMinrXRMSErrorM3K4, LREAL, 651316736 (64)
+        Main.fMinrYRMSErrorM2K4, LREAL, 649381696 (64)
+        Main.fMinXRMSErrorM1K4, LREAL, 641605696 (64)
+        Main.fMinXRMSErrorM2K4, LREAL, 648607680 (64)
+        Main.fMinXRMSErrorM3K4, LREAL, 650542720 (64)
+        Main.fMinXRMSErrorM4K4, LREAL, 652477760 (64)
+        Main.fMinXRMSErrorM5K4, LREAL, 654025792 (64)
+        Main.fMinYRMSErrorM1K4, LREAL, 641218688 (64)
+        Main.fMinYRMSErrorM2K4, LREAL, 648994688 (64)
+        Main.fMinYRMSErrorM3K4, LREAL, 650929728 (64)
+        Main.fMinYRMSErrorM4K4, LREAL, 652864768 (64)
+        Main.fMinYRMSErrorM5K4, LREAL, 654412800 (64)
+        Main.fMinZRMSErrorM4K4, LREAL, 653251776 (64)
+        Main.fMinZRMSErrorM5K4, LREAL, 654799808 (64)
+        Main.LAMPbSTOEnable1, BOOL, 655187264 (8)
+        Main.LAMPbSTOEnable2, BOOL, 655187272 (8)
+        Main.M1, ST_MotionStage, 638865728 (25920)
+        Main.M1.Axis.NcToPlc, NCTOPLC_AXIS_REF, 638866816 (2048)
+        Main.M1.Axis.PlcToNc, PLCTONC_AXIS_REF, 638865792 (1024)
+        Main.M1.bBrakeRelease, BOOL, 638874776 (8)
+        Main.M1.bHardwareEnable, BOOL, 638874784 (8)
+        Main.M1.bHome, BOOL, 638874768 (8)
+        Main.M1.bLimitBackwardEnable, BOOL, 638874760 (8)
+        Main.M1.bLimitForwardEnable, BOOL, 638874752 (8)
+        Main.M1.nRawEncoderINT, INT, 638874896 (16)
+        Main.M1.nRawEncoderUINT, UINT, 638874880 (16)
+        Main.M1.nRawEncoderULINT, ULINT, 638874816 (64)
+        Main.M10, ST_MotionStage, 643357376 (25920)
+        Main.M10.Axis.NcToPlc, NCTOPLC_AXIS_REF, 643358464 (2048)
+        Main.M10.Axis.PlcToNc, PLCTONC_AXIS_REF, 643357440 (1024)
+        Main.M10.bBrakeRelease, BOOL, 643366424 (8)
+        Main.M10.bHardwareEnable, BOOL, 643366432 (8)
+        Main.M10.bHome, BOOL, 643366416 (8)
+        Main.M10.bLimitBackwardEnable, BOOL, 643366408 (8)
+        Main.M10.bLimitForwardEnable, BOOL, 643366400 (8)
+        Main.M10.nRawEncoderINT, INT, 643366544 (16)
+        Main.M10.nRawEncoderUINT, UINT, 643366528 (16)
+        Main.M10.nRawEncoderULINT, ULINT, 643366464 (64)
+        Main.M11, ST_MotionStage, 643681600 (25920)
+        Main.M11.Axis.NcToPlc, NCTOPLC_AXIS_REF, 643682688 (2048)
+        Main.M11.Axis.PlcToNc, PLCTONC_AXIS_REF, 643681664 (1024)
+        Main.M11.bBrakeRelease, BOOL, 643690648 (8)
+        Main.M11.bHardwareEnable, BOOL, 643690656 (8)
+        Main.M11.bHome, BOOL, 643690640 (8)
+        Main.M11.bLimitBackwardEnable, BOOL, 643690632 (8)
+        Main.M11.bLimitForwardEnable, BOOL, 643690624 (8)
+        Main.M11.nRawEncoderINT, INT, 643690768 (16)
+        Main.M11.nRawEncoderUINT, UINT, 643690752 (16)
+        Main.M11.nRawEncoderULINT, ULINT, 643690688 (64)
+        Main.M12, ST_MotionStage, 644005824 (25920)
+        Main.M12.Axis.NcToPlc, NCTOPLC_AXIS_REF, 644006912 (2048)
+        Main.M12.Axis.PlcToNc, PLCTONC_AXIS_REF, 644005888 (1024)
+        Main.M12.bBrakeRelease, BOOL, 644014872 (8)
+        Main.M12.bHardwareEnable, BOOL, 644014880 (8)
+        Main.M12.bHome, BOOL, 644014864 (8)
+        Main.M12.bLimitBackwardEnable, BOOL, 644014856 (8)
+        Main.M12.bLimitForwardEnable, BOOL, 644014848 (8)
+        Main.M12.nRawEncoderINT, INT, 644014992 (16)
+        Main.M12.nRawEncoderUINT, UINT, 644014976 (16)
+        Main.M12.nRawEncoderULINT, ULINT, 644014912 (64)
+        Main.M13, ST_MotionStage, 644330048 (25920)
+        Main.M13.Axis.NcToPlc, NCTOPLC_AXIS_REF, 644331136 (2048)
+        Main.M13.Axis.PlcToNc, PLCTONC_AXIS_REF, 644330112 (1024)
+        Main.M13.bBrakeRelease, BOOL, 644339096 (8)
+        Main.M13.bHardwareEnable, BOOL, 644339104 (8)
+        Main.M13.bHome, BOOL, 644339088 (8)
+        Main.M13.bLimitBackwardEnable, BOOL, 644339080 (8)
+        Main.M13.bLimitForwardEnable, BOOL, 644339072 (8)
+        Main.M13.nRawEncoderINT, INT, 644339216 (16)
+        Main.M13.nRawEncoderUINT, UINT, 644339200 (16)
+        Main.M13.nRawEncoderULINT, ULINT, 644339136 (64)
+        Main.M14, ST_MotionStage, 644654272 (25920)
+        Main.M14.Axis.NcToPlc, NCTOPLC_AXIS_REF, 644655360 (2048)
+        Main.M14.Axis.PlcToNc, PLCTONC_AXIS_REF, 644654336 (1024)
+        Main.M14.bBrakeRelease, BOOL, 644663320 (8)
+        Main.M14.bHardwareEnable, BOOL, 644663328 (8)
+        Main.M14.bHome, BOOL, 644663312 (8)
+        Main.M14.bLimitBackwardEnable, BOOL, 644663304 (8)
+        Main.M14.bLimitForwardEnable, BOOL, 644663296 (8)
+        Main.M14.nRawEncoderINT, INT, 644663440 (16)
+        Main.M14.nRawEncoderUINT, UINT, 644663424 (16)
+        Main.M14.nRawEncoderULINT, ULINT, 644663360 (64)
+        Main.M15, ST_MotionStage, 644978496 (25920)
+        Main.M15.Axis.NcToPlc, NCTOPLC_AXIS_REF, 644979584 (2048)
+        Main.M15.Axis.PlcToNc, PLCTONC_AXIS_REF, 644978560 (1024)
+        Main.M15.bBrakeRelease, BOOL, 644987544 (8)
+        Main.M15.bHardwareEnable, BOOL, 644987552 (8)
+        Main.M15.bHome, BOOL, 644987536 (8)
+        Main.M15.bLimitBackwardEnable, BOOL, 644987528 (8)
+        Main.M15.bLimitForwardEnable, BOOL, 644987520 (8)
+        Main.M15.nRawEncoderINT, INT, 644987664 (16)
+        Main.M15.nRawEncoderUINT, UINT, 644987648 (16)
+        Main.M15.nRawEncoderULINT, ULINT, 644987584 (64)
+        Main.M16, ST_MotionStage, 645302720 (25920)
+        Main.M16.Axis.NcToPlc, NCTOPLC_AXIS_REF, 645303808 (2048)
+        Main.M16.Axis.PlcToNc, PLCTONC_AXIS_REF, 645302784 (1024)
+        Main.M16.bBrakeRelease, BOOL, 645311768 (8)
+        Main.M16.bHardwareEnable, BOOL, 645311776 (8)
+        Main.M16.bHome, BOOL, 645311760 (8)
+        Main.M16.bLimitBackwardEnable, BOOL, 645311752 (8)
+        Main.M16.bLimitForwardEnable, BOOL, 645311744 (8)
+        Main.M16.nRawEncoderINT, INT, 645311888 (16)
+        Main.M16.nRawEncoderUINT, UINT, 645311872 (16)
+        Main.M16.nRawEncoderULINT, ULINT, 645311808 (64)
+        Main.M17, ST_MotionStage, 645626944 (25920)
+        Main.M17.Axis.NcToPlc, NCTOPLC_AXIS_REF, 645628032 (2048)
+        Main.M17.Axis.PlcToNc, PLCTONC_AXIS_REF, 645627008 (1024)
+        Main.M17.bBrakeRelease, BOOL, 645635992 (8)
+        Main.M17.bHardwareEnable, BOOL, 645636000 (8)
+        Main.M17.bHome, BOOL, 645635984 (8)
+        Main.M17.bLimitBackwardEnable, BOOL, 645635976 (8)
+        Main.M17.bLimitForwardEnable, BOOL, 645635968 (8)
+        Main.M17.nRawEncoderINT, INT, 645636112 (16)
+        Main.M17.nRawEncoderUINT, UINT, 645636096 (16)
+        Main.M17.nRawEncoderULINT, ULINT, 645636032 (64)
+        Main.M18, ST_MotionStage, 645951168 (25920)
+        Main.M18.Axis.NcToPlc, NCTOPLC_AXIS_REF, 645952256 (2048)
+        Main.M18.Axis.PlcToNc, PLCTONC_AXIS_REF, 645951232 (1024)
+        Main.M18.bBrakeRelease, BOOL, 645960216 (8)
+        Main.M18.bHardwareEnable, BOOL, 645960224 (8)
+        Main.M18.bHome, BOOL, 645960208 (8)
+        Main.M18.bLimitBackwardEnable, BOOL, 645960200 (8)
+        Main.M18.bLimitForwardEnable, BOOL, 645960192 (8)
+        Main.M18.nRawEncoderINT, INT, 645960336 (16)
+        Main.M18.nRawEncoderUINT, UINT, 645960320 (16)
+        Main.M18.nRawEncoderULINT, ULINT, 645960256 (64)
+        Main.M19, ST_MotionStage, 646275392 (25920)
+        Main.M19.Axis.NcToPlc, NCTOPLC_AXIS_REF, 646276480 (2048)
+        Main.M19.Axis.PlcToNc, PLCTONC_AXIS_REF, 646275456 (1024)
+        Main.M19.bBrakeRelease, BOOL, 646284440 (8)
+        Main.M19.bHardwareEnable, BOOL, 646284448 (8)
+        Main.M19.bHome, BOOL, 646284432 (8)
+        Main.M19.bLimitBackwardEnable, BOOL, 646284424 (8)
+        Main.M19.bLimitForwardEnable, BOOL, 646284416 (8)
+        Main.M19.nRawEncoderINT, INT, 646284560 (16)
+        Main.M19.nRawEncoderUINT, UINT, 646284544 (16)
+        Main.M19.nRawEncoderULINT, ULINT, 646284480 (64)
+        Main.M1K4, DUT_HOMS, 640811072 (20672)
+        Main.M1K4.fbRunHOMS.bSTOEnable1, BOOL, 640812000 (8)
+        Main.M1K4.fbRunHOMS.bSTOEnable2, BOOL, 640812008 (8)
+        Main.M1K4.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.PEnc.Count, ULINT, 640822464 (64)
+        Main.M1K4.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.SEnc.Count, ULINT, 640822592 (64)
+        Main.M1K4.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.PEnc.Count, ULINT, 640812992 (64)
+        Main.M1K4.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.SEnc.Count, ULINT, 640813120 (64)
+        Main.M1K4.fbRunHOMS.stXdwnEnc, ST_RenishawAbsEnc, 640812416 (128)
+        Main.M1K4.fbRunHOMS.stXupEnc, ST_RenishawAbsEnc, 640812288 (128)
+        Main.M1K4.fbRunHOMS.stYdwnEnc, ST_RenishawAbsEnc, 640812160 (128)
+        Main.M1K4.fbRunHOMS.stYupEnc, ST_RenishawAbsEnc, 640812032 (128)
+        Main.M2, ST_MotionStage, 639189952 (25920)
+        Main.M2.Axis.NcToPlc, NCTOPLC_AXIS_REF, 639191040 (2048)
+        Main.M2.Axis.PlcToNc, PLCTONC_AXIS_REF, 639190016 (1024)
+        Main.M2.bBrakeRelease, BOOL, 639199000 (8)
+        Main.M2.bHardwareEnable, BOOL, 639199008 (8)
+        Main.M2.bHome, BOOL, 639198992 (8)
+        Main.M2.bLimitBackwardEnable, BOOL, 639198984 (8)
+        Main.M2.bLimitForwardEnable, BOOL, 639198976 (8)
+        Main.M2.nRawEncoderINT, INT, 639199120 (16)
+        Main.M2.nRawEncoderUINT, UINT, 639199104 (16)
+        Main.M2.nRawEncoderULINT, ULINT, 639199040 (64)
+        Main.M20, ST_MotionStage, 646599616 (25920)
+        Main.M20.Axis.NcToPlc, NCTOPLC_AXIS_REF, 646600704 (2048)
+        Main.M20.Axis.PlcToNc, PLCTONC_AXIS_REF, 646599680 (1024)
+        Main.M20.bBrakeRelease, BOOL, 646608664 (8)
+        Main.M20.bHardwareEnable, BOOL, 646608672 (8)
+        Main.M20.bHome, BOOL, 646608656 (8)
+        Main.M20.bLimitBackwardEnable, BOOL, 646608648 (8)
+        Main.M20.bLimitForwardEnable, BOOL, 646608640 (8)
+        Main.M20.nRawEncoderINT, INT, 646608784 (16)
+        Main.M20.nRawEncoderUINT, UINT, 646608768 (16)
+        Main.M20.nRawEncoderULINT, ULINT, 646608704 (64)
+        Main.M21, ST_MotionStage, 646923840 (25920)
+        Main.M21.Axis.NcToPlc, NCTOPLC_AXIS_REF, 646924928 (2048)
+        Main.M21.Axis.PlcToNc, PLCTONC_AXIS_REF, 646923904 (1024)
+        Main.M21.bBrakeRelease, BOOL, 646932888 (8)
+        Main.M21.bHardwareEnable, BOOL, 646932896 (8)
+        Main.M21.bHome, BOOL, 646932880 (8)
+        Main.M21.bLimitBackwardEnable, BOOL, 646932872 (8)
+        Main.M21.bLimitForwardEnable, BOOL, 646932864 (8)
+        Main.M21.nRawEncoderINT, INT, 646933008 (16)
+        Main.M21.nRawEncoderUINT, UINT, 646932992 (16)
+        Main.M21.nRawEncoderULINT, ULINT, 646932928 (64)
+        Main.M22, ST_MotionStage, 647248064 (25920)
+        Main.M22.Axis.NcToPlc, NCTOPLC_AXIS_REF, 647249152 (2048)
+        Main.M22.Axis.PlcToNc, PLCTONC_AXIS_REF, 647248128 (1024)
+        Main.M22.bBrakeRelease, BOOL, 647257112 (8)
+        Main.M22.bHardwareEnable, BOOL, 647257120 (8)
+        Main.M22.bHome, BOOL, 647257104 (8)
+        Main.M22.bLimitBackwardEnable, BOOL, 647257096 (8)
+        Main.M22.bLimitForwardEnable, BOOL, 647257088 (8)
+        Main.M22.nRawEncoderINT, INT, 647257232 (16)
+        Main.M22.nRawEncoderUINT, UINT, 647257216 (16)
+        Main.M22.nRawEncoderULINT, ULINT, 647257152 (64)
+        Main.M23, ST_MotionStage, 647572288 (25920)
+        Main.M23.Axis.NcToPlc, NCTOPLC_AXIS_REF, 647573376 (2048)
+        Main.M23.Axis.PlcToNc, PLCTONC_AXIS_REF, 647572352 (1024)
+        Main.M23.bBrakeRelease, BOOL, 647581336 (8)
+        Main.M23.bHardwareEnable, BOOL, 647581344 (8)
+        Main.M23.bHome, BOOL, 647581328 (8)
+        Main.M23.bLimitBackwardEnable, BOOL, 647581320 (8)
+        Main.M23.bLimitForwardEnable, BOOL, 647581312 (8)
+        Main.M23.nRawEncoderINT, INT, 647581456 (16)
+        Main.M23.nRawEncoderUINT, UINT, 647581440 (16)
+        Main.M23.nRawEncoderULINT, ULINT, 647581376 (64)
+        Main.M24, ST_MotionStage, 647896512 (25920)
+        Main.M24.Axis.NcToPlc, NCTOPLC_AXIS_REF, 647897600 (2048)
+        Main.M24.Axis.PlcToNc, PLCTONC_AXIS_REF, 647896576 (1024)
+        Main.M24.bBrakeRelease, BOOL, 647905560 (8)
+        Main.M24.bHardwareEnable, BOOL, 647905568 (8)
+        Main.M24.bHome, BOOL, 647905552 (8)
+        Main.M24.bLimitBackwardEnable, BOOL, 647905544 (8)
+        Main.M24.bLimitForwardEnable, BOOL, 647905536 (8)
+        Main.M24.nRawEncoderINT, INT, 647905680 (16)
+        Main.M24.nRawEncoderUINT, UINT, 647905664 (16)
+        Main.M24.nRawEncoderULINT, ULINT, 647905600 (64)
+        Main.M3, ST_MotionStage, 639514176 (25920)
+        Main.M3.Axis.NcToPlc, NCTOPLC_AXIS_REF, 639515264 (2048)
+        Main.M3.Axis.PlcToNc, PLCTONC_AXIS_REF, 639514240 (1024)
+        Main.M3.bBrakeRelease, BOOL, 639523224 (8)
+        Main.M3.bHardwareEnable, BOOL, 639523232 (8)
+        Main.M3.bHome, BOOL, 639523216 (8)
+        Main.M3.bLimitBackwardEnable, BOOL, 639523208 (8)
+        Main.M3.bLimitForwardEnable, BOOL, 639523200 (8)
+        Main.M3.nRawEncoderINT, INT, 639523344 (16)
+        Main.M3.nRawEncoderUINT, UINT, 639523328 (16)
+        Main.M3.nRawEncoderULINT, ULINT, 639523264 (64)
+        Main.M4, ST_MotionStage, 639838400 (25920)
+        Main.M4.Axis.NcToPlc, NCTOPLC_AXIS_REF, 639839488 (2048)
+        Main.M4.Axis.PlcToNc, PLCTONC_AXIS_REF, 639838464 (1024)
+        Main.M4.bBrakeRelease, BOOL, 639847448 (8)
+        Main.M4.bHardwareEnable, BOOL, 639847456 (8)
+        Main.M4.bHome, BOOL, 639847440 (8)
+        Main.M4.bLimitBackwardEnable, BOOL, 639847432 (8)
+        Main.M4.bLimitForwardEnable, BOOL, 639847424 (8)
+        Main.M4.nRawEncoderINT, INT, 639847568 (16)
+        Main.M4.nRawEncoderUINT, UINT, 639847552 (16)
+        Main.M4.nRawEncoderULINT, ULINT, 639847488 (64)
+        Main.M5, ST_MotionStage, 640162624 (25920)
+        Main.M5.Axis.NcToPlc, NCTOPLC_AXIS_REF, 640163712 (2048)
+        Main.M5.Axis.PlcToNc, PLCTONC_AXIS_REF, 640162688 (1024)
+        Main.M5.bBrakeRelease, BOOL, 640171672 (8)
+        Main.M5.bHardwareEnable, BOOL, 640171680 (8)
+        Main.M5.bHome, BOOL, 640171664 (8)
+        Main.M5.bLimitBackwardEnable, BOOL, 640171656 (8)
+        Main.M5.bLimitForwardEnable, BOOL, 640171648 (8)
+        Main.M5.nRawEncoderINT, INT, 640171792 (16)
+        Main.M5.nRawEncoderUINT, UINT, 640171776 (16)
+        Main.M5.nRawEncoderULINT, ULINT, 640171712 (64)
+        Main.M7, ST_MotionStage, 642384704 (25920)
+        Main.M7.Axis.NcToPlc, NCTOPLC_AXIS_REF, 642385792 (2048)
+        Main.M7.Axis.PlcToNc, PLCTONC_AXIS_REF, 642384768 (1024)
+        Main.M7.bBrakeRelease, BOOL, 642393752 (8)
+        Main.M7.bHardwareEnable, BOOL, 642393760 (8)
+        Main.M7.bHome, BOOL, 642393744 (8)
+        Main.M7.bLimitBackwardEnable, BOOL, 642393736 (8)
+        Main.M7.bLimitForwardEnable, BOOL, 642393728 (8)
+        Main.M7.nRawEncoderINT, INT, 642393872 (16)
+        Main.M7.nRawEncoderUINT, UINT, 642393856 (16)
+        Main.M7.nRawEncoderULINT, ULINT, 642393792 (64)
+        Main.M8, ST_MotionStage, 642708928 (25920)
+        Main.M8.Axis.NcToPlc, NCTOPLC_AXIS_REF, 642710016 (2048)
+        Main.M8.Axis.PlcToNc, PLCTONC_AXIS_REF, 642708992 (1024)
+        Main.M8.bBrakeRelease, BOOL, 642717976 (8)
+        Main.M8.bHardwareEnable, BOOL, 642717984 (8)
+        Main.M8.bHome, BOOL, 642717968 (8)
+        Main.M8.bLimitBackwardEnable, BOOL, 642717960 (8)
+        Main.M8.bLimitForwardEnable, BOOL, 642717952 (8)
+        Main.M8.nRawEncoderINT, INT, 642718096 (16)
+        Main.M8.nRawEncoderUINT, UINT, 642718080 (16)
+        Main.M8.nRawEncoderULINT, ULINT, 642718016 (64)
+        Main.M9, ST_MotionStage, 643033152 (25920)
+        Main.M9.Axis.NcToPlc, NCTOPLC_AXIS_REF, 643034240 (2048)
+        Main.M9.Axis.PlcToNc, PLCTONC_AXIS_REF, 643033216 (1024)
+        Main.M9.bBrakeRelease, BOOL, 643042200 (8)
+        Main.M9.bHardwareEnable, BOOL, 643042208 (8)
+        Main.M9.bHome, BOOL, 643042192 (8)
+        Main.M9.bLimitBackwardEnable, BOOL, 643042184 (8)
+        Main.M9.bLimitForwardEnable, BOOL, 643042176 (8)
+        Main.M9.nRawEncoderINT, INT, 643042320 (16)
+        Main.M9.nRawEncoderUINT, UINT, 643042304 (16)
+        Main.M9.nRawEncoderULINT, ULINT, 643042240 (64)
+        Main.mcReadParameterPitchM1K4, MC_ReadParameter, 642380224 (4352)
+        Main.nEncCntPitchM1K4, UDINT, 642380032 (32)
+        Main.nEncCntrXM3K4, UDINT, 655187232 (32)
+        Main.nEncCntrYM2K4, UDINT, 655187136 (32)
+        Main.nEncCntXdwnM1K4, UDINT, 642380000 (32)
+        Main.nEncCntXM2K4, UDINT, 655187072 (32)
+        Main.nEncCntXM3K4, UDINT, 655187168 (32)
+        Main.nEncCntXupM1K4, UDINT, 642379968 (32)
+        Main.nEncCntYdwnM1K4, UDINT, 642379936 (32)
+        Main.nEncCntYM2K4, UDINT, 655187104 (32)
+        Main.nEncCntYM3K4, UDINT, 655187200 (32)
+        Main.nEncCntYupM1K4, UDINT, 642379904 (32)
+        Main.nEncRefPitchM1K4, UDINT, 642380192 (32)
+        Main.nEncRefrXM3K4, UDINT, 655187040 (32)
+        Main.nEncRefrYM2K4, UDINT, 655186944 (32)
+        Main.nEncRefXdwnM1K4, UDINT, 642380160 (32)
+        Main.nEncRefXM2K4, UDINT, 655186880 (32)
+        Main.nEncRefXM3K4, UDINT, 655186976 (32)
+        Main.nEncRefXupM1K4, UDINT, 642380128 (32)
+        Main.nEncRefYdwnM1K4, UDINT, 642380096 (32)
+        Main.nEncRefYM2K4, UDINT, 655186912 (32)
+        Main.nEncRefYM3K4, UDINT, 655187008 (32)
+        Main.nEncRefYupM1K4, UDINT, 642380064 (32)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+MOTION_GVL
+^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        MOTION_GVL.fbPmpsFileReader, FB_JsonFileToJsonDoc, 7516480 (928512)
+        MOTION_GVL.fbStandardPMPSDB, FB_Standard_PMPSDB, 640486848 (90624)
+        MOTION_GVL.nMaxStateMotorCount, UINT, 3371312 (16)
+        MOTION_GVL.nMaxStates, UINT, 8472736 (16)
+
+
+MotionConstants
+^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        MotionConstants.MAX_STATE_MOTORS, UINT, 8472752 (16)
+
+
+P_Serial_Com
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        P_Serial_Com.fbSerialLineControl_EL6001_M1K4, SerialLineControl, 660975072 (10432)
+
+
+P_StripeProtections
+^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        P_StripeProtections.fbStripProtMR1K4, FB_MirrorTwoCoatingProtection, 663214336 (192768)
+        P_StripeProtections.fbStripProtMR2K4, FB_MirrorTwoCoatingProtection, 663407104 (192768)
+        P_StripeProtections.fbStripProtMR3K4, FB_MirrorTwoCoatingProtection, 663599872 (192768)
+
+
+ParameterList
+^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        ParameterList.cSourceNameSize, UDINT (81..10000), 3365984 (32)
+
+
+PiezoSerial
+^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PiezoSerial.fbE621SerialDriver_M1K4, FB_PI_E621_SerialDriver, 638744320 (109632)
+        PiezoSerial.rtInitParams_M1K4, R_TRIG, 638853952 (64)
+        PiezoSerial.tonTimeoutRst_M1K4, TON, 638854016 (224)
+
+
+PMPS_GVL
+^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>24 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PMPS_GVL.AccumulatedFF, UDINT, 8477664 (32)
+        PMPS_GVL.AUX_ATTENUATORS, UINT, 8477952 (16)
+        PMPS_GVL.BP_jsonDoc, SJsonValue, 8477696 (32)
+        PMPS_GVL.cnMaxStateArrayLen, INT, 8481568 (16)
+        PMPS_GVL.cst0RateBeam, ST_BeamParams, 8479808 (1760)
+        PMPS_GVL.cstFullBeam, ST_BeamParams, 8478048 (1760)
+        PMPS_GVL.DUMMY_AUX_ATT_ARRAY, ST_PMPS_Attenuator, 8481600 (1024)
+        PMPS_GVL.EXCLUDED_ASSERTION_ID, UDINT, 8477728 (32)
+        PMPS_GVL.FAST_TEST_VELOCITY, LREAL, 8477824 (64)
+        PMPS_GVL.g_areVBoundaries, REAL, 8476576 (1024)
+        PMPS_GVL.g_areVBoundariesK, REAL, 8483712 (1024)
+        PMPS_GVL.g_areVBoundariesL, REAL, 8482688 (1024)
+        PMPS_GVL.g_cBoundaries, INT, 8482624 (16)
+        PMPS_GVL.MAX_APERTURES, UINT, 8481584 (16)
+        PMPS_GVL.MAX_DEVICE_STATES, UDINT, 8477888 (32)
+        PMPS_GVL.MAX_VETO_DEVICES, UINT, 8477968 (16)
+        PMPS_GVL.PERange, PE_Ranges, 8477600 (32)
+        PMPS_GVL.reVHyst, REAL, 8482656 (32)
+        PMPS_GVL.stAttenuators, ST_PMPS_Attenuator, 8477984 (64)
+        PMPS_GVL.stCurrentBeamParameters, ST_BeamParams, 8474816 (1760)
+        PMPS_GVL.stRequestedBeamParameters, ST_BeamParams, 8473056 (1760)
+        PMPS_GVL.SuccessfulPreemption, UDINT, 8477632 (32)
+        PMPS_GVL.TRANS_SCALING_FACTOR, REAL, 8477920 (32)
+        PMPS_GVL.VISIBLE_TEST_VELOCITY, LREAL, 8477760 (64)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+PMPS_PARAM
+^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PMPS_PARAM.MAX_ASSERTIONS, UDINT, 8484736 (32)
+        PMPS_PARAM.MAX_FAST_FAULTS, UINT, 8482640 (16)
+        PMPS_PARAM.TRANS_MARGIN, REAL, 8484768 (32)
+
+
+PMPS_TOOLS
+^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PMPS_TOOLS.fbJson, FB_JsonSaxWriter, 8484800 (256)
+
+
+PRG_MR1K4_SOMS
+^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PRG_MR1K4_SOMS.bActivateVarCool, BOOL, 663212416 (8)
+        PRG_MR1K4_SOMS.fbCoolingPanel, FB_Axilon_Cooling_2f1p, 663211200 (1216)
+        PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_1.iRaw, INT, 663211424 (16)
+        PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_2.iRaw, INT, 663212128 (16)
+        PRG_MR1K4_SOMS.fbCoolingPanel.fbPress_1.iRaw, INT, 663211744 (16)
+
+
+PRG_MR2K4_KBO
+^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PRG_MR2K4_KBO.fbCoolingPanel, FB_Axilon_Cooling_1f1p, 663212480 (832)
+        PRG_MR2K4_KBO.fbCoolingPanel.fbFlow_1.iRaw, INT, 663212704 (16)
+        PRG_MR2K4_KBO.fbCoolingPanel.fbPress_1.iRaw, INT, 663213024 (16)
+
+
+PRG_MR3K4_KBO
+^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PRG_MR3K4_KBO.fbCoolingPanel, FB_Axilon_Cooling_1f1p, 663213312 (832)
+        PRG_MR3K4_KBO.fbCoolingPanel.fbFlow_1.iRaw, INT, 663213536 (16)
+        PRG_MR3K4_KBO.fbCoolingPanel.fbPress_1.iRaw, INT, 663213856 (16)
+
+
+PRG_MR4K4_KBO
+^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PRG_MR4K4_KBO.fbCoolingPanel, FB_Axilon_Cooling_1f1p, 640585472 (832)
+        PRG_MR4K4_KBO.fbCoolingPanel.fbFlow_1.iRaw, INT, 640585696 (16)
+        PRG_MR4K4_KBO.fbCoolingPanel.fbPress_1.iRaw, INT, 640586016 (16)
+
+
+PRG_MR5K4_KBO
+^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PRG_MR5K4_KBO.fbCoolingPanel, FB_Axilon_Cooling_1f1p, 640586304 (832)
+        PRG_MR5K4_KBO.fbCoolingPanel.fbFlow_1.iRaw, INT, 640586528 (16)
+        PRG_MR5K4_KBO.fbCoolingPanel.fbPress_1.iRaw, INT, 640586848 (16)
+
+
+PRG_PMPS
+^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PRG_PMPS.bMR1K1_IN, BOOL, 655187760 (8)
+        PRG_PMPS.bST3K4_IN, BOOL, 655187768 (8)
+        PRG_PMPS.fb_vetoArbiter, FB_VetoArbiter, 663019040 (27168)
+        PRG_PMPS.fbArbiterIO, FB_SubSysToArbiter_IO, 663046208 (138752)
+        PRG_PMPS.fbArbiterIO.i_stCurrentBP, ST_BeamParams_IO, 663047008 (1760)
+        PRG_PMPS.fbArbiterIO.q_stRequestedBP, ST_BeamParams_IO, 663048768 (1760)
+        PRG_PMPS.fbArbiterIO.xTxPDO_state, BIT, 663050529 (1)
+        PRG_PMPS.fbArbiterIO.xTxPDO_toggle, BIT, 663050528 (1)
+        PRG_PMPS.ffFFO2ToFFO1, FB_FastFault, 663184960 (25088)
+
+
+PRG_States
+^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PRG_States.fbMR1K4_Coating_States, FB_Offset_Coating_States, 660990016 (675968)
+        PRG_States.fbMR2K4_Coating_States, FB_KBO_Coating_States, 661665984 (676224)
+        PRG_States.fbMR3K4_Coating_States, FB_KBO_Coating_States, 662342208 (676224)
+
+
+TC_EVENT_CLASSES
+^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        TC_EVENT_CLASSES.LCLSGeneralEventClass, GUID, 665770112 (128)
+        TC_EVENT_CLASSES.TcGeneralAdsEventClass, GUID, 665769600 (128)
+        TC_EVENT_CLASSES.TcIPCDiagEventClass, GUID, 640587136 (128)
+        TC_EVENT_CLASSES.TcIPCDiagPlcApiEventClass, GUID, 640587264 (128)
+        TC_EVENT_CLASSES.TcRouterEventClass, GUID, 665769728 (128)
+        TC_EVENT_CLASSES.TcRTimeEventClass, GUID, 665769856 (128)
+        TC_EVENT_CLASSES.TcSystemEventClass, GUID, 665769472 (128)
+        TC_EVENT_CLASSES.Win32EventClass, GUID, 665769984 (128)
+
+
+TC_EVENTS
+^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        TC_EVENTS.LCLSGeneralEventClass, ST_LCLSGeneralEventClass, 665803136 (960)
+
+
+TwinCAT_LicenseInfoVarList
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        TwinCAT_LicenseInfoVarList._LicenseInfo, PlcLicenseInfo, 665742976 (2048)
+
+
+TwinCAT_SystemInfoVarList
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>11 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        TwinCAT_SystemInfoVarList.__PiezoDriver, _Implicit_Task_Info, 665751040 (704)
+        TwinCAT_SystemInfoVarList.__PlcTask, _Implicit_Task_Info, 665751744 (704)
+        TwinCAT_SystemInfoVarList.__SerialIO, _Implicit_Task_Info, 665750336 (704)
+        TwinCAT_SystemInfoVarList._AppInfo, PlcAppSystemInfo, 665745024 (2048)
+        TwinCAT_SystemInfoVarList._TaskInfo, PlcTaskSystemInfo, 665747072 (3072)
+        TwinCAT_SystemInfoVarList._TaskOid_PiezoDriver, OTCID, 665750240 (32)
+        TwinCAT_SystemInfoVarList._TaskOid_PlcTask, OTCID, 665750304 (32)
+        TwinCAT_SystemInfoVarList._TaskOid_SerialIO, OTCID, 665750176 (32)
+        TwinCAT_SystemInfoVarList._TaskPouOid_PiezoDriver, OTCID, 665750208 (32)
+        TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask, OTCID, 665750272 (32)
+        TwinCAT_SystemInfoVarList._TaskPouOid_SerialIO, OTCID, 665750144 (32)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
