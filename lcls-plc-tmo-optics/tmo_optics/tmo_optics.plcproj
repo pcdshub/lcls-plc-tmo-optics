@@ -98,6 +98,12 @@
     <Compile Include="POUs\PRG_MR3K4_KBO.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_MR4K4_KBO.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_MR5K4_KBO.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\PRG_PMPS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -162,7 +168,7 @@
     <LibraryReference Include="LCLS General,2.8.2,SLAC">
       <Namespace>LCLS_General</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-motion,4.0.8,SLAC">
+    <LibraryReference Include="lcls-twincat-motion,4.0.9,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
     </LibraryReference>
     <LibraryReference Include="PMPS,3.0.14,SLAC - LCLS">
@@ -174,7 +180,7 @@
       <Resolution>LCLS General, 2.8.2 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-motion">
-      <Resolution>lcls-twincat-motion, 4.0.8 (SLAC)</Resolution>
+      <Resolution>lcls-twincat-motion, 4.0.9 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-optics">
       <Resolution>lcls-twincat-optics, 0.7.0 (SLAC)</Resolution>

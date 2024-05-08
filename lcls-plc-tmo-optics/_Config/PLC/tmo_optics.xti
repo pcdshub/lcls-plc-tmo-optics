@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{128CEBC5-9FFE-EC8B-0C2A-801086200232}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{D5910105-A41C-5406-F16D-AF54E83F3886}">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1600,47 +1600,24 @@ External Setpoint Generation:
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.M6.Axis.NcToPlc</Name>
-					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M6.bLimitForwardEnable</Name>
-					<Comment><![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.M6.bLimitBackwardEnable</Name>
-					<Comment><![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.M6.bHome</Name>
-					<Comment><![CDATA[ NO Home Switch: TRUE if at home]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.M6.bHardwareEnable</Name>
-					<Comment><![CDATA[ NC STO Input: TRUE if ok to move]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.M6.nRawEncoderULINT</Name>
-					<Comment><![CDATA[ Raw encoder IO for ULINT (Biss-C)]]></Comment>
-					<Type>ULINT</Type>
-				</Var>
-				<Var>
-					<Name>Main.M6.nRawEncoderUINT</Name>
-					<Comment><![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>Main.M6.nRawEncoderINT</Name>
-					<Comment><![CDATA[ Raw encoder IO for INT (LVDT)]]></Comment>
+					<Name>PRG_MR4K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>Main.fbMotionStage_m6.fbDriveVirtual.MasterAxis.NcToPlc</Name>
-					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+					<Name>PRG_MR4K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR5K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR5K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
+					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.bSTOEnable1</Name>
@@ -2795,19 +2772,6 @@ External Setpoint Generation:
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.M6.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M6.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m6.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
 					<Name>Main.M7.Axis.PlcToNc</Name>
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
@@ -3176,6 +3140,12 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_toggle" VarB="SYNC Inputs^TxPDO toggle" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_PMPS.fbArbiterIO.q_stRequestedBP" VarB="IO Outputs^RequestedBP" AutoLink="true"/>
 			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 110 (EK1100)^EL3054_FWM_PRSM_MR45K4">
+				<Link VarA="PlcTask Inputs^PRG_MR4K4_KBO.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_MR4K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_MR5K4_KBO.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_MR5K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 110 (EK1100)^EL3204_M4K4">
 				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
@@ -3421,10 +3391,6 @@ External Setpoint Generation:
 				<Link VarA="SerialIO Outputs^GVL_SerialIO.Serial_stComOut_M1K4^D[8]" VarB="COM Outputs^Data Out 8"/>
 				<Link VarA="SerialIO Outputs^GVL_SerialIO.Serial_stComOut_M1K4^D[9]" VarB="COM Outputs^Data Out 9"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL7041-1000_M1K4_Bender">
-				<Link VarA="PlcTask Inputs^Main.M6.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^Main.M6.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
-			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL7041-1000_M1K4_PitchCoarse">
 				<Link VarA="PlcTask Inputs^Main.M5.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M5.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
@@ -3444,10 +3410,6 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL7041-1000_M1K4_Yup">
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
-			</OwnerB>
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M1K4-Bender">
-				<Link VarA="PlcTask Inputs^Main.M6.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
-				<Link VarA="PlcTask Outputs^Main.M6.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M1K4-Pitch">
 				<Link VarA="PlcTask Inputs^Main.M5.Axis.NcToPlc" VarB="Outputs^ToPlc"/>

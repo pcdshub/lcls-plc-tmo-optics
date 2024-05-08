@@ -8,7 +8,9 @@ END_VAR
     <Implementation>
       <ST><![CDATA[PRG_MR1K4_SOMS();
 PRG_MR2K4_KBO();
-PRG_MR3K4_KBO();]]></ST>
+PRG_MR3K4_KBO();
+PRG_MR4K4_KBO();
+PRG_MR5K4_KBO();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
