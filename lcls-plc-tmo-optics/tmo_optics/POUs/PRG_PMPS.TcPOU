@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_PMPS" Id="{0f3d8667-823e-4b6c-9348-207a75a704c2}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_PMPS
 VAR
@@ -17,6 +17,7 @@ VAR
 
     bMR1K1_IN : BOOL;
     bST3K4_IN : BOOL;
+    bMR1K3_IN : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -33,6 +34,9 @@ bMR1K1_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.M
 
 bST3K4_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST3K4];
 
+bMR1K3_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetodevices[PMPS.K_Stopper.MR1K3_IN]
+    AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_OUT];
+
 fbArbiterIO(i_bVeto:= bMR1K1_IN, Arbiter := GVL_PMPS.g_fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
 
 GVL_PMPS.g_FastFaultOutput2.i_xVeto := bMR1K1_IN OR bST3K4_IN;
@@ -41,7 +45,7 @@ GVL_PMPS.g_FastFaultOutput2.Execute();
 
 ffFFO2ToFFO1(i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
 
-GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto:= bMR1K1_IN);
+GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto:= bMR1K1_IN OR bMR1K3_IN);
 
 fb_vetoArbiter(bVeto := GVL_PMPS.g_FastFaultOutput2.i_xVeto, HigherAuthority := GVL_PMPS.g_fbArbiter1, LowerAuthority:= GVL_PMPS.g_fbArbiter2,
     FFO:= GVL_PMPS.g_FastFaultOutput1);]]></ST>

@@ -171,7 +171,7 @@
     <LibraryReference Include="lcls-twincat-motion,4.0.9,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
     </LibraryReference>
-    <LibraryReference Include="PMPS,3.0.14,SLAC - LCLS">
+    <LibraryReference Include="PMPS,3.3.0,SLAC - LCLS">
       <Namespace>PMPS</Namespace>
     </LibraryReference>
   </ItemGroup>
