@@ -37,9 +37,9 @@ bST3K4_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.S
 bMR1K3_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetodevices[PMPS.K_Stopper.MR1K3_IN]
     AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_OUT];
 
-fbArbiterIO(i_bVeto:= bMR1K1_IN, Arbiter := GVL_PMPS.g_fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
+fbArbiterIO(i_bVeto:= bMR1K1_IN OR bMR1K3_IN, Arbiter := GVL_PMPS.g_fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
 
-GVL_PMPS.g_FastFaultOutput2.i_xVeto := bMR1K1_IN OR bST3K4_IN OR bMR1K3_IN;
+GVL_PMPS.g_FastFaultOutput2.i_xVeto := bMR1K1_IN OR bST3K4_IN;
 
 GVL_PMPS.g_FastFaultOutput2.Execute();
 
