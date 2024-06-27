@@ -39,12 +39,9 @@ bMR1K3_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetodevices[PMPS.K_Stopper.M
 
 fbArbiterIO(i_bVeto:= bMR1K1_IN OR bMR1K3_IN, Arbiter := GVL_PMPS.g_fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
 
-GVL_PMPS.g_FastFaultOutput2.i_xVeto := bMR1K1_IN OR bST3K4_IN OR bMR1K3_IN;
-
-GVL_PMPS.g_FastFaultOutput2.Execute();
-
 ffFFO2ToFFO1(i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
 
+GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto:= bMR1K1_IN OR bMR1K3_IN OR bST3K4_IN);
 GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto:= bMR1K1_IN OR bMR1K3_IN);
 
 fb_vetoArbiter(bVeto := GVL_PMPS.g_FastFaultOutput2.i_xVeto, HigherAuthority := GVL_PMPS.g_fbArbiter1, LowerAuthority:= GVL_PMPS.g_fbArbiter2,
