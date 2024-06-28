@@ -96,6 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#pmps-st-ffinfo">PMPS.ST_FFInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pmps-st-ffoverride">PMPS.ST_FFOverride</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pmps-st-pmps-aperture">PMPS.ST_PMPS_Aperture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pmps-st-reactiveparams">PMPS.ST_ReactiveParams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pmps-t-hashtableentry">PMPS.T_HashTableEntry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#st-beamparams-io">ST_BeamParams_IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#st-loggingeventinfo">ST_LoggingEventInfo</a></li>
@@ -1416,6 +1417,26 @@
 <td><p>waveform</p></td>
 <td><p>PMPS Database Lookup Key</p></td>
 <td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PMPS:TRANS:ReParams:PressSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PMPS:TRANS:ReParams:TempSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -2741,6 +2762,26 @@
 <td><p>waveform</p></td>
 <td><p>PMPS Database Lookup Key</p></td>
 <td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PMPS:TRANS:ReParams:PressSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PMPS:TRANS:ReParams:TempSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -6597,6 +6638,26 @@
 </div>
 </td>
 </tr>
+<tr class="row-odd"><td><p>$(PREFIX):PMPS:TRANS:ReParams:PressSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PMPS:TRANS:ReParams:TempSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
 <tr class="row-odd"><td><p>$(PREFIX):RESET</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).bReset</p></td>
@@ -7029,6 +7090,26 @@
 </div>
 </td>
 </tr>
+<tr class="row-odd"><td><p>$(PREFIX):TRANS:ReParams:PressSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).stTransitionDb.stReactiveParams.nPressSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TRANS:ReParams:TempSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).stTransitionDb.stReactiveParams.nTempSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -7269,6 +7350,26 @@
 <td><p>waveform</p></td>
 <td><p>PMPS Database Lookup Key</p></td>
 <td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):TRANS:ReParams:PressSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).stTransitionDb.stReactiveParams.nPressSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TRANS:ReParams:TempSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).stTransitionDb.stReactiveParams.nTempSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -26833,6 +26934,26 @@
 </div>
 </td>
 </tr>
+<tr class="row-odd"><td><p>$(PREFIX):ReParams:PressSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).stReactiveParams.nPressSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ReParams:TempSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).stReactiveParams.nTempSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -27247,6 +27368,40 @@
 <td><p>$(SYMBOL).Width</p></td>
 <td><div class="line-block">
 <div class="line">field: EGU mm</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pmps-st-reactiveparams">
+<h2>PMPS.ST_ReactiveParams<a class="headerlink" href="#pmps-st-reactiveparams" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):PressSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).nPressSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):TempSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).nTempSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -65711,6 +65866,26 @@
 </div>
 </td>
 </tr>
+<tr class="row-odd"><td><p>MR1K4:SOMS:COATING:STATE:PMPS:TRANS:ReParams:PressSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>PRG_States.fbMR1K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MR1K4:SOMS:COATING:STATE:PMPS:TRANS:ReParams:TempSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>PRG_States.fbMR1K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
 <tr class="row-odd"><td><p>MR1K4:SOMS:COATING:STATE:ERRID_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>PRG_States.fbMR1K4_Coating_States.nErrorId</p></td>
@@ -67022,6 +67197,26 @@
 </div>
 </td>
 </tr>
+<tr class="row-odd"><td><p>MR2K4:KBO:COATING:STATE:PMPS:TRANS:ReParams:PressSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>PRG_States.fbMR2K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MR2K4:KBO:COATING:STATE:PMPS:TRANS:ReParams:TempSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>PRG_States.fbMR2K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
 <tr class="row-odd"><td><p>MR2K4:KBO:COATING:STATE:ERRID_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>PRG_States.fbMR2K4_Coating_States.nErrorId</p></td>
@@ -68329,6 +68524,26 @@
 <td><p>bi</p></td>
 <td><p>PRG_States.fbMR3K4_Coating_States.fbStatePMPS.stTransitionDb.stBeamParams.xValid</p></td>
 <td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MR3K4:KBO:COATING:STATE:PMPS:TRANS:ReParams:PressSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>PRG_States.fbMR3K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MR3K4:KBO:COATING:STATE:PMPS:TRANS:ReParams:TempSP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>PRG_States.fbMR3K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>

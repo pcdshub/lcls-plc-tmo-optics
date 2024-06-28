@@ -1010,6 +1010,22 @@ FB_KBO_Coating_States
       - | io: input
 
 
+    * - $(PREFIX):PMPS:TRANS:ReParams:PressSP_RBV
+      - ai
+      - $(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP
+      - | field: EGU "TORR"
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):PMPS:TRANS:ReParams:TempSP_RBV
+      - ai
+      - $(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP
+      - | field: EGU "C"
+        | field: PREC 2
+        | io: input
+
+
     * - $(PREFIX):RESET
       - bo
       - $(SYMBOL).bReset
@@ -2043,6 +2059,22 @@ FB_Offset_Coating_States
       - waveform
       - PMPS Database Lookup Key
       - | io: input
+
+
+    * - $(PREFIX):PMPS:TRANS:ReParams:PressSP_RBV
+      - ai
+      - $(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP
+      - | field: EGU "TORR"
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):PMPS:TRANS:ReParams:TempSP_RBV
+      - ai
+      - $(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP
+      - | field: EGU "C"
+        | field: PREC 2
+        | io: input
 
 
     * - $(PREFIX):RESET
@@ -5035,6 +5067,22 @@ lcls_twincat_motion.FB_PositionStateBase_WithPMPS
       - | io: input
 
 
+    * - $(PREFIX):PMPS:TRANS:ReParams:PressSP_RBV
+      - ai
+      - $(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP
+      - | field: EGU "TORR"
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):PMPS:TRANS:ReParams:TempSP_RBV
+      - ai
+      - $(SYMBOL).fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP
+      - | field: EGU "C"
+        | field: PREC 2
+        | io: input
+
+
     * - $(PREFIX):RESET
       - bo
       - $(SYMBOL).bReset
@@ -5371,6 +5419,22 @@ lcls_twincat_motion.FB_PositionStatePMPS
       - | io: input
 
 
+    * - $(PREFIX):TRANS:ReParams:PressSP_RBV
+      - ai
+      - $(SYMBOL).stTransitionDb.stReactiveParams.nPressSP
+      - | field: EGU "TORR"
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):TRANS:ReParams:TempSP_RBV
+      - ai
+      - $(SYMBOL).stTransitionDb.stReactiveParams.nTempSP
+      - | field: EGU "C"
+        | field: PREC 2
+        | io: input
+
+
  
 lcls_twincat_motion.FB_PositionStatePMPS_Base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -5557,6 +5621,22 @@ lcls_twincat_motion.FB_PositionStatePMPS_Base
       - waveform
       - PMPS Database Lookup Key
       - | io: input
+
+
+    * - $(PREFIX):TRANS:ReParams:PressSP_RBV
+      - ai
+      - $(SYMBOL).stTransitionDb.stReactiveParams.nPressSP
+      - | field: EGU "TORR"
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):TRANS:ReParams:TempSP_RBV
+      - ai
+      - $(SYMBOL).stTransitionDb.stReactiveParams.nTempSP
+      - | field: EGU "C"
+        | field: PREC 2
+        | io: input
 
 
      
@@ -20419,6 +20499,22 @@ PMPS.ST_DbStateParams
       - | io: input
 
 
+    * - $(PREFIX):ReParams:PressSP_RBV
+      - ai
+      - $(SYMBOL).stReactiveParams.nPressSP
+      - | field: EGU "TORR"
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):ReParams:TempSP_RBV
+      - ai
+      - $(SYMBOL).stReactiveParams.nTempSP
+      - | field: EGU "C"
+        | field: PREC 2
+        | io: input
+
+
  
 PMPS.ST_FF
 ^^^^^^^^^^
@@ -20740,6 +20836,34 @@ PMPS.ST_PMPS_Aperture
 
 
   
+PMPS.ST_ReactiveParams
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):PressSP_RBV
+      - ai
+      - $(SYMBOL).nPressSP
+      - | field: EGU "TORR"
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):TempSP_RBV
+      - ai
+      - $(SYMBOL).nTempSP
+      - | field: EGU "C"
+        | field: PREC 2
+        | io: input
+
+
+ 
 PMPS.T_HashTableEntry
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -49946,6 +50070,22 @@ Database Records
       - | io: input
 
 
+    * - MR1K4:SOMS:COATING:STATE:PMPS:TRANS:ReParams:PressSP_RBV
+      - ai
+      - PRG_States.fbMR1K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP
+      - | field: EGU "TORR"
+        | field: PREC 2
+        | io: input
+
+
+    * - MR1K4:SOMS:COATING:STATE:PMPS:TRANS:ReParams:TempSP_RBV
+      - ai
+      - PRG_States.fbMR1K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP
+      - | field: EGU "C"
+        | field: PREC 2
+        | io: input
+
+
     * - MR1K4:SOMS:COATING:STATE:ERRID_RBV
       - longin
       - PRG_States.fbMR1K4_Coating_States.nErrorId
@@ -50969,6 +51109,22 @@ Database Records
       - | io: input
 
 
+    * - MR2K4:KBO:COATING:STATE:PMPS:TRANS:ReParams:PressSP_RBV
+      - ai
+      - PRG_States.fbMR2K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP
+      - | field: EGU "TORR"
+        | field: PREC 2
+        | io: input
+
+
+    * - MR2K4:KBO:COATING:STATE:PMPS:TRANS:ReParams:TempSP_RBV
+      - ai
+      - PRG_States.fbMR2K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP
+      - | field: EGU "C"
+        | field: PREC 2
+        | io: input
+
+
     * - MR2K4:KBO:COATING:STATE:ERRID_RBV
       - longin
       - PRG_States.fbMR2K4_Coating_States.nErrorId
@@ -51990,6 +52146,22 @@ Database Records
       - bi
       - PRG_States.fbMR3K4_Coating_States.fbStatePMPS.stTransitionDb.stBeamParams.xValid
       - | io: input
+
+
+    * - MR3K4:KBO:COATING:STATE:PMPS:TRANS:ReParams:PressSP_RBV
+      - ai
+      - PRG_States.fbMR3K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nPressSP
+      - | field: EGU "TORR"
+        | field: PREC 2
+        | io: input
+
+
+    * - MR3K4:KBO:COATING:STATE:PMPS:TRANS:ReParams:TempSP_RBV
+      - ai
+      - PRG_States.fbMR3K4_Coating_States.fbStatePMPS.stTransitionDb.stReactiveParams.nTempSP
+      - | field: EGU "C"
+        | field: PREC 2
+        | io: input
 
 
     * - MR3K4:KBO:COATING:STATE:ERRID_RBV
