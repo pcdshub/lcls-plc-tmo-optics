@@ -171,7 +171,7 @@
     <LibraryReference Include="lcls-twincat-motion,4.0.9,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
     </LibraryReference>
-    <LibraryReference Include="PMPS,3.0.14,SLAC - LCLS">
+    <LibraryReference Include="PMPS,3.3.0,SLAC - LCLS">
       <Namespace>PMPS</Namespace>
     </LibraryReference>
   </ItemGroup>
@@ -189,7 +189,7 @@
       <Resolution>lcls2-cc-lib, 2.0.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
-      <Resolution>PMPS, 3.0.14 (SLAC - LCLS)</Resolution>
+      <Resolution>PMPS, 3.3.0 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="Tc2_MC2">
       <Resolution>Tc2_MC2, 3.3.42.0 (Beckhoff Automation GmbH)</Resolution>
