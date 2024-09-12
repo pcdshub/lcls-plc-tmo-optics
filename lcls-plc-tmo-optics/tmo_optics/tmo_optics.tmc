@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{B751D60F-6A36-0A2F-8955-4284BCC779DF}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{98D8E40B-E062-6F2F-8E5B-11A930123EFC}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -959,7 +959,7 @@
       <BaseType>STRING(255)</BaseType>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics.Tc2_ControllerToolbox">ST_CTRL_PI_PARAMS</Name>
+      <Name Namespace="lcls_twincat_optics_nrw.Tc2_ControllerToolbox">ST_CTRL_PI_PARAMS</Name>
       <BitSize>384</BitSize>
       <SubItem>
         <Name>tCtrlCycleTime</Name>
@@ -1033,7 +1033,7 @@
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">ST_PiezoAxis</Name>
+      <Name Namespace="lcls_twincat_optics_nrw">ST_PiezoAxis</Name>
       <BitSize>2240</BitSize>
       <SubItem>
         <Name>sIdn</Name>
@@ -1162,7 +1162,7 @@
       </SubItem>
       <SubItem>
         <Name>stPIParams</Name>
-        <Type Namespace="lcls_twincat_optics.Tc2_ControllerToolbox">ST_CTRL_PI_PARAMS</Type>
+        <Type Namespace="lcls_twincat_optics_nrw.Tc2_ControllerToolbox">ST_CTRL_PI_PARAMS</Type>
         <BitSize>384</BitSize>
         <BitOffs>1792</BitOffs>
         <Default>
@@ -2743,7 +2743,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">FB_PI_E621_SerialTransaction</Name>
+      <Name Namespace="lcls_twincat_optics_nrw">FB_PI_E621_SerialTransaction</Name>
       <BitSize>33248</BitSize>
       <SubItem>
         <Name>i_xExecute</Name>
@@ -3037,7 +3037,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">FB_PI_E621_SerialDriver</Name>
+      <Name Namespace="lcls_twincat_optics_nrw">FB_PI_E621_SerialDriver</Name>
       <BitSize>109632</BitSize>
       <SubItem>
         <Name>i_xExecute</Name>
@@ -3140,7 +3140,7 @@
       </SubItem>
       <SubItem>
         <Name>iq_stPiezoAxis</Name>
-        <Type Namespace="lcls_twincat_optics" ReferenceTo="true">ST_PiezoAxis</Type>
+        <Type Namespace="lcls_twincat_optics_nrw" ReferenceTo="true">ST_PiezoAxis</Type>
         <BitSize>32</BitSize>
         <BitOffs>66976</BitOffs>
         <Properties>
@@ -3200,7 +3200,7 @@
       </SubItem>
       <SubItem>
         <Name>fbPITransaction</Name>
-        <Type Namespace="lcls_twincat_optics">FB_PI_E621_SerialTransaction</Type>
+        <Type Namespace="lcls_twincat_optics_nrw">FB_PI_E621_SerialTransaction</Type>
         <BitSize>33248</BitSize>
         <BitOffs>67872</BitOffs>
       </SubItem>
@@ -3245,11 +3245,11 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">HOMS_PitchMechanism</Name>
+      <Name Namespace="lcls_twincat_optics_nrw">HOMS_PitchMechanism</Name>
       <BitSize>2496</BitSize>
       <SubItem>
         <Name>Piezo</Name>
-        <Type Namespace="lcls_twincat_optics">ST_PiezoAxis</Type>
+        <Type Namespace="lcls_twincat_optics_nrw">ST_PiezoAxis</Type>
         <Comment>Piezo</Comment>
         <BitSize>2240</BitSize>
         <BitOffs>0</BitOffs>
@@ -3472,31 +3472,31 @@
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83212152</GetCodeOffs>
+        <GetCodeOffs>83294004</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83212188</GetCodeOffs>
+        <GetCodeOffs>83294040</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83212196</GetCodeOffs>
+        <GetCodeOffs>83294048</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83212176</GetCodeOffs>
+        <GetCodeOffs>83294028</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83212192</GetCodeOffs>
+        <GetCodeOffs>83294044</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -4748,15 +4748,15 @@
         <Name>nId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83212088</GetCodeOffs>
-        <SetCodeOffs>83212112</SetCodeOffs>
+        <GetCodeOffs>83293940</GetCodeOffs>
+        <SetCodeOffs>83293964</SetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83212128</GetCodeOffs>
-        <SetCodeOffs>83212140</SetCodeOffs>
+        <GetCodeOffs>83293980</GetCodeOffs>
+        <SetCodeOffs>83293992</SetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -4997,31 +4997,31 @@
         <Name>eSeverity</Name>
         <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
         <BitSize>16</BitSize>
-        <GetCodeOffs>83212244</GetCodeOffs>
+        <GetCodeOffs>83294096</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>ipSourceInfo</Name>
         <Type Namespace="LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83212224</GetCodeOffs>
+        <GetCodeOffs>83294076</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nEventId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83212312</GetCodeOffs>
+        <GetCodeOffs>83294164</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nUniqueId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83212316</GetCodeOffs>
+        <GetCodeOffs>83294168</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventClassName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83212272</GetCodeOffs>
+        <GetCodeOffs>83294124</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -5033,7 +5033,7 @@
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83212320</GetCodeOffs>
+        <GetCodeOffs>83294172</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -5626,7 +5626,7 @@
         <Name>nTimeSent</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>83212348</GetCodeOffs>
+        <GetCodeOffs>83294200</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcDisplayTypeGUID</Name>
@@ -22225,14 +22225,14 @@ contributing fast faults, unless the FFO is currently vetoed.
         <Type>BOOL</Type>
         <Comment> is TRUE if a buffer is available.</Comment>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83215256</GetCodeOffs>
+        <GetCodeOffs>83297108</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nBufferSize</Name>
         <Type>UDINT</Type>
         <Comment> current buffer size in bytes.</Comment>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83215208</GetCodeOffs>
+        <GetCodeOffs>83297060</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="3">__getnBufferSize</Name>
@@ -23328,7 +23328,7 @@ contributing fast faults, unless the FFO is currently vetoed.
         <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc3_IPCDiag.Tc3_DynamicMemory">I_DynMem_Manager</Type>
         <Comment> dynamic memory manager used in the Tc3_IPCDiag library</Comment>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83215332</GetCodeOffs>
+        <GetCodeOffs>83297184</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>GetParameterByIdx</Name>
@@ -23987,7 +23987,7 @@ contributing fast faults, unless the FFO is currently vetoed.
         <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc3_IPCDiag.Tc3_DynamicMemory">I_DynMem_Manager</Type>
         <Comment> dynamic memory manager used in the Tc3_IPCDiag library</Comment>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83215388</GetCodeOffs>
+        <GetCodeOffs>83297240</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>Clear</Name>
@@ -46532,7 +46532,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">FB_RunHOMS</Name>
+      <Name Namespace="lcls_twincat_optics_nrw">FB_RunHOMS</Name>
       <BitSize>20416</BitSize>
       <SubItem>
         <Name>nYupEncRef</Name>
@@ -46870,11 +46870,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">DUT_HOMS</Name>
+      <Name Namespace="lcls_twincat_optics_nrw">DUT_HOMS</Name>
       <BitSize>20672</BitSize>
       <SubItem>
         <Name>fbRunHOMS</Name>
-        <Type Namespace="lcls_twincat_optics">FB_RunHOMS</Type>
+        <Type Namespace="lcls_twincat_optics_nrw">FB_RunHOMS</Type>
         <Comment> System initializiation</Comment>
         <BitSize>20416</BitSize>
         <BitOffs>0</BitOffs>
@@ -47477,7 +47477,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">FB_RMSWatch</Name>
+      <Name Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</Name>
       <BitSize>386880</BitSize>
       <SubItem>
         <Name>fMaxRMSError</Name>
@@ -47715,7 +47715,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">FB_Bender</Name>
+      <Name Namespace="lcls_twincat_optics_nrw">FB_Bender</Name>
       <BitSize>128</BitSize>
       <SubItem>
         <Name>stBender</Name>
@@ -49092,7 +49092,7 @@ External Setpoint Generation:
         <Name>nTimestamp</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>83218824</GetCodeOffs>
+        <GetCodeOffs>83300676</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcDisplayTypeGUID</Name>
@@ -49745,9 +49745,9 @@ External Setpoint Generation:
         <Type GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</Type>
         <Comment>Message or Alarm{Cleared,Confirmed,Raised} event information
 
-		Note that elements here do not follow the usual Hungarian notation / 
-		variable-type-prefixing naming convention due to the member names being
-		used directly in the generation of the JSON document.</Comment>
+        Note that elements here do not follow the usual Hungarian notation / 
+        variable-type-prefixing naming convention due to the member names being
+        used directly in the generation of the JSON document.</Comment>
         <BitSize>648</BitSize>
         <BitOffs>0</BitOffs>
         <Default>
@@ -49757,8 +49757,8 @@ External Setpoint Generation:
           <Property>
             <Name>plcAttribute_pytmc</Name>
             <Value>pv: Schema
-		io: i
-		field: DESC Schema string</Value>
+        io: i
+        field: DESC Schema string</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -49771,8 +49771,8 @@ External Setpoint Generation:
           <Property>
             <Name>plcAttribute_pytmc</Name>
             <Value>pv: Timestamp 
-		io: i
-		field: DESC Unix timestamp</Value>
+        io: i
+        field: DESC Unix timestamp</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -49785,8 +49785,8 @@ External Setpoint Generation:
           <Property>
             <Name>plcAttribute_pytmc</Name>
             <Value>pv: Hostname 
-		io: i
-		field: DESC PLC Hostname</Value>
+        io: i
+        field: DESC PLC Hostname</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -49799,12 +49799,12 @@ External Setpoint Generation:
           <Property>
             <Name>plcAttribute_pytmc</Name>
             <Value>pv: Severity
-		io: i
-		field: DESC TcEventSeverity	
-		field: ZRST Verbose
-		field: ONST Info
-		field: TWST Warning
-		field: THST Error</Value>
+        io: i
+        field: DESC TcEventSeverity	
+        field: ZRST Verbose
+        field: ONST Info
+        field: TWST Warning
+        field: THST Error</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -49817,8 +49817,8 @@ External Setpoint Generation:
           <Property>
             <Name>plcAttribute_pytmc</Name>
             <Value>pv: MessageID
-		io: i
-		field: DESC TwinCAT Message ID</Value>
+        io: i
+        field: DESC TwinCAT Message ID</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -49831,8 +49831,8 @@ External Setpoint Generation:
           <Property>
             <Name>plcAttribute_pytmc</Name>
             <Value>pv: EventClass
-		io: i
-		field: DESC TwinCAT Event class</Value>
+        io: i
+        field: DESC TwinCAT Event class</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -49845,7 +49845,7 @@ External Setpoint Generation:
           <Property>
             <Name>plcAttribute_pytmc</Name>
             <Value>pv: Message
-		io: i</Value>
+        io: i</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -49860,7 +49860,7 @@ External Setpoint Generation:
           <Property>
             <Name>plcAttribute_pytmc</Name>
             <Value>pv: Source
-		io: i</Value>
+        io: i</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -49875,8 +49875,8 @@ External Setpoint Generation:
           <Property>
             <Name>plcAttribute_pytmc</Name>
             <Value>pv: EventType
-		io: i
-		field: DESC The event type</Value>
+        io: i
+        field: DESC The event type</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -49889,8 +49889,8 @@ External Setpoint Generation:
           <Property>
             <Name>plcAttribute_pytmc</Name>
             <Value>pv: MessageJSON
-		io: i
-		field: DESC Metadata with the message</Value>
+        io: i
+        field: DESC Metadata with the message</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -51020,31 +51020,31 @@ External Setpoint Generation:
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83218376</GetCodeOffs>
+        <GetCodeOffs>83300228</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83218420</GetCodeOffs>
+        <GetCodeOffs>83300272</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83218384</GetCodeOffs>
+        <GetCodeOffs>83300236</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83218408</GetCodeOffs>
+        <GetCodeOffs>83300260</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83218428</GetCodeOffs>
+        <GetCodeOffs>83300280</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -60093,7 +60093,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">FB_Axilon_Cooling_1f1p</Name>
+      <Name Namespace="lcls_twincat_optics_nrw">FB_Axilon_Cooling_1f1p</Name>
       <BitSize>832</BitSize>
       <SubItem>
         <Name>fFlow_1_val</Name>
@@ -60166,9 +60166,9 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_optics">FB_Axilon_Cooling_2f1p</Name>
+      <Name Namespace="lcls_twincat_optics_nrw">FB_Axilon_Cooling_2f1p</Name>
       <BitSize>1216</BitSize>
-      <ExtendsType Namespace="lcls_twincat_optics">FB_Axilon_Cooling_1f1p</ExtendsType>
+      <ExtendsType Namespace="lcls_twincat_optics_nrw">FB_Axilon_Cooling_1f1p</ExtendsType>
       <SubItem>
         <Name>fFlow_2_val</Name>
         <Type>LREAL</Type>
@@ -60202,315 +60202,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         <Type Namespace="LCLS_General">FB_AnalogInput</Type>
         <BitSize>320</BitSize>
         <BitOffs>896</BitOffs>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name Namespace="lcls_twincat_optics">FB_MirrorTwoCoatingProtection</Name>
-      <BitSize>192896</BitSize>
-      <SubItem>
-        <Name>nCurrentEncoderCount</Name>
-        <Type>UDINT</Type>
-        <Comment> Current encoder count</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>32</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>neVRange</Name>
-        <Type>DWORD</Type>
-        <Comment> Current ev range from stCurrentBeamParams</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>64</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sDevName</Name>
-        <Type>STRING(80)</Type>
-        <Comment> Device name</Comment>
-        <BitSize>648</BitSize>
-        <BitOffs>96</BitOffs>
-        <Default>
-          <String/>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nUpperCoatingBoundary</Name>
-        <Type>UDINT</Type>
-        <Comment> Encoder count for upper boundary</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>768</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sUpperCoatingType</Name>
-        <Type>STRING(80)</Type>
-        <Comment> Type of coating</Comment>
-        <BitSize>648</BitSize>
-        <BitOffs>800</BitOffs>
-        <Default>
-          <String/>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nLowerCoatingBoundary</Name>
-        <Type>UDINT</Type>
-        <Comment> Encoder count for lower boundary</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>1472</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sLowerCoatingType</Name>
-        <Type>STRING(80)</Type>
-        <Comment> Type of coating</Comment>
-        <BitSize>648</BitSize>
-        <BitOffs>1504</BitOffs>
-        <Default>
-          <String/>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bAutoClear</Name>
-        <Type>BOOL</Type>
-        <Comment> Auto-clear these fast faults</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>2152</BitOffs>
-        <Default>
-          <Bool>true</Bool>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bReadPmpsDb</Name>
-        <Type>BOOL</Type>
-        <Comment> Trigger a re-read of the JSON Beam Parameters</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>2160</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bUsePmpsDb</Name>
-        <Type>BOOL</Type>
-        <Comment> Set TRUE to lookup Beam Parameters via DB.</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>2168</BitOffs>
-        <Default>
-          <Bool>false</Bool>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nUpperCoatingBitmask</Name>
-        <Type>DWORD</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>2176</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nLowerCoatingBitMask</Name>
-        <Type>DWORD</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>2208</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>FFO</Name>
-        <Type Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>2240</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>InOut</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>ffUpperCoating</Name>
-        <Type Namespace="PMPS">FB_FastFault</Type>
-        <BitSize>25088</BitSize>
-        <BitOffs>2272</BitOffs>
-        <Default>
-          <SubItem>
-            <Name>.i_xAutoReset</Name>
-            <Bool>false</Bool>
-          </SubItem>
-          <SubItem>
-            <Name>.i_TypeCode</Name>
-            <Value>1025</Value>
-          </SubItem>
-          <SubItem>
-            <Name>.i_Desc</Name>
-            <String> mirror coating incompatible with beam photon energy</String>
-          </SubItem>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>ffLowerCoating</Name>
-        <Type Namespace="PMPS">FB_FastFault</Type>
-        <BitSize>25088</BitSize>
-        <BitOffs>27360</BitOffs>
-        <Default>
-          <SubItem>
-            <Name>.i_xAutoReset</Name>
-            <Bool>false</Bool>
-          </SubItem>
-          <SubItem>
-            <Name>.i_TypeCode</Name>
-            <Value>1025</Value>
-          </SubItem>
-          <SubItem>
-            <Name>.i_Desc</Name>
-            <String> mirror coating incompatible with beam photon energy</String>
-          </SubItem>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>ffBeamParamsNotLoaded</Name>
-        <Type Namespace="PMPS">FB_FastFault</Type>
-        <BitSize>25088</BitSize>
-        <BitOffs>52448</BitOffs>
-        <Default>
-          <SubItem>
-            <Name>.i_xAutoReset</Name>
-            <Bool>true</Bool>
-          </SubItem>
-          <SubItem>
-            <Name>.i_TypeCode</Name>
-            <Value>1160</Value>
-          </SubItem>
-          <SubItem>
-            <Name>.i_Desc</Name>
-            <String> mirror coating beam parameters not loaded</String>
-          </SubItem>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>aDbStateParams</Name>
-        <Type Namespace="PMPS">ST_DbStateParams</Type>
-        <ArrayInfo>
-          <LBound>0</LBound>
-          <Elements>2</Elements>
-        </ArrayInfo>
-        <BitSize>5120</BitSize>
-        <BitOffs>77536</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>fbGetCoatingBPs</Name>
-        <Type Namespace="PMPS">FB_JsonDocToSafeBP</Type>
-        <BitSize>109440</BitSize>
-        <BitOffs>82688</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>ftReadJsonDocDone</Name>
-        <Type Namespace="Tc2_Standard">F_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>192128</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>bBPsLoaded</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>192192</BitOffs>
-        <Default>
-          <Bool>false</Bool>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>i</Name>
-        <Type>INT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>192208</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>sDevState</Name>
-        <Type>STRING(80)</Type>
-        <BitSize>648</BitSize>
-        <BitOffs>192224</BitOffs>
-        <Default>
-          <String/>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>bInit</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>192872</BitOffs>
       </SubItem>
       <Properties>
         <Property>
@@ -74280,6 +73971,544 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         </Property>
       </Properties>
     </DataType>
+    <DataType>
+      <Name Namespace="PMPS">FB_TempSensor_FFO</Name>
+      <BitSize>109056</BitSize>
+      <ExtendsType Namespace="LCLS_General">FB_TempSensor</ExtendsType>
+      <SubItem>
+        <Name>fFaultThreshold</Name>
+        <Type>LREAL</Type>
+        <Comment>Faults when the threshold is reached. Trigger value.</Comment>
+        <BitSize>64</BitSize>
+        <BitOffs>256</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: FAULT_SP
+        io: input
+        field: EGU C
+        field: PREC 2
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fHysteresis</Name>
+        <Type>LREAL</Type>
+        <Comment> percentage determining how far below the trigger value the fault should be released</Comment>
+        <BitSize>64</BitSize>
+        <BitOffs>320</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: FAULT_SP_HYS
+        io: input
+        field: EGU %
+        field: PREC 2
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sDevName</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>384</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bVeto</Name>
+        <Type>BOOL</Type>
+        <Comment> This Fault will be will not trip the beam if the bVeto is TRUE</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>1032</BitOffs>
+        <Default>
+          <Bool>false</Bool>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bAutoReset</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1040</BitOffs>
+        <Default>
+          <Bool>true</Bool>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>io_fbFFHWO</Name>
+        <Type Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>1056</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sPath</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>1088</BitOffs>
+        <Properties>
+          <Property>
+            <Name>instance-path</Name>
+          </Property>
+          <Property>
+            <Name>noinit</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bFAULT_OK</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1736</BitOffs>
+        <Default>
+          <Bool>false</Bool>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>FFO</Name>
+        <Type Namespace="PMPS">FB_FastFault</Type>
+        <BitSize>25088</BitSize>
+        <BitOffs>1760</BitOffs>
+        <Default>
+          <SubItem>
+            <Name>.i_Desc</Name>
+            <String>Fault occurs when the temprature trip point is reached</String>
+          </SubItem>
+          <SubItem>
+            <Name>.i_TypeCode</Name>
+            <Value>63232</Value>
+          </SubItem>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rtRESET</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>26848</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ftFAULT</Name>
+        <Type Namespace="Tc2_Standard">F_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>26912</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ftConnected</Name>
+        <Type Namespace="Tc2_Standard">F_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>26976</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbLogger</Name>
+        <Type Namespace="LCLS_General">FB_LogMessage</Type>
+        <BitSize>81984</BitSize>
+        <BitOffs>27072</BitOffs>
+        <Default>
+          <SubItem>
+            <Name>.eSubsystem</Name>
+            <EnumText>E_Subsystem.MPS</EnumText>
+          </SubItem>
+          <SubItem>
+            <Name>.nMinTimeViolationAcceptable</Name>
+            <Value>10</Value>
+          </SubItem>
+        </Default>
+      </SubItem>
+      <Action>
+        <Name>ACT_Logger</Name>
+      </Action>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_optics_nrw">FB_MirrorTwoCoatingProtection</Name>
+      <BitSize>629120</BitSize>
+      <SubItem>
+        <Name>nCurrentEncoderCount</Name>
+        <Type>UDINT</Type>
+        <Comment> Current encoder count</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>neVRange</Name>
+        <Type>DWORD</Type>
+        <Comment> Current ev range from stCurrentBeamParams</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>64</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sDevName</Name>
+        <Type>STRING(80)</Type>
+        <Comment> Device name</Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>96</BitOffs>
+        <Default>
+          <String/>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nUpperCoatingBoundary</Name>
+        <Type>UDINT</Type>
+        <Comment> Encoder count for upper boundary</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>768</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sUpperCoatingType</Name>
+        <Type>STRING(80)</Type>
+        <Comment> Type of coating</Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>800</BitOffs>
+        <Default>
+          <String/>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nLowerCoatingBoundary</Name>
+        <Type>UDINT</Type>
+        <Comment> Encoder count for lower boundary</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>1472</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sLowerCoatingType</Name>
+        <Type>STRING(80)</Type>
+        <Comment> Type of coating</Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>1504</BitOffs>
+        <Default>
+          <String/>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bAutoClear</Name>
+        <Type>BOOL</Type>
+        <Comment> Auto-clear these fast faults</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>2152</BitOffs>
+        <Default>
+          <Bool>true</Bool>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bReadPmpsDb</Name>
+        <Type>BOOL</Type>
+        <Comment> Trigger a re-read of the JSON Beam Parameters</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>2160</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bUsePmpsDb</Name>
+        <Type>BOOL</Type>
+        <Comment> Set TRUE to lookup Beam Parameters via DB.</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>2168</BitOffs>
+        <Default>
+          <Bool>false</Bool>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nUpperCoatingBitmask</Name>
+        <Type>DWORD</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2176</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nLowerCoatingBitMask</Name>
+        <Type>DWORD</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2208</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bMirrorTempFaults</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>2240</BitOffs>
+        <Default>
+          <Bool>false</Bool>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>FFO</Name>
+        <Type Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2272</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ffUpperCoating</Name>
+        <Type Namespace="PMPS">FB_FastFault</Type>
+        <BitSize>25088</BitSize>
+        <BitOffs>2304</BitOffs>
+        <Default>
+          <SubItem>
+            <Name>.i_xAutoReset</Name>
+            <Bool>false</Bool>
+          </SubItem>
+          <SubItem>
+            <Name>.i_TypeCode</Name>
+            <Value>1025</Value>
+          </SubItem>
+          <SubItem>
+            <Name>.i_Desc</Name>
+            <String> mirror coating incompatible with beam photon energy</String>
+          </SubItem>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>ffLowerCoating</Name>
+        <Type Namespace="PMPS">FB_FastFault</Type>
+        <BitSize>25088</BitSize>
+        <BitOffs>27392</BitOffs>
+        <Default>
+          <SubItem>
+            <Name>.i_xAutoReset</Name>
+            <Bool>false</Bool>
+          </SubItem>
+          <SubItem>
+            <Name>.i_TypeCode</Name>
+            <Value>1025</Value>
+          </SubItem>
+          <SubItem>
+            <Name>.i_Desc</Name>
+            <String> mirror coating incompatible with beam photon energy</String>
+          </SubItem>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>ffBeamParamsNotLoaded</Name>
+        <Type Namespace="PMPS">FB_FastFault</Type>
+        <BitSize>25088</BitSize>
+        <BitOffs>52480</BitOffs>
+        <Default>
+          <SubItem>
+            <Name>.i_xAutoReset</Name>
+            <Bool>true</Bool>
+          </SubItem>
+          <SubItem>
+            <Name>.i_TypeCode</Name>
+            <Value>1160</Value>
+          </SubItem>
+          <SubItem>
+            <Name>.i_Desc</Name>
+            <String> mirror coating beam parameters not loaded</String>
+          </SubItem>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>ffUpperCoatingLTemp</Name>
+        <Type Namespace="PMPS">FB_TempSensor_FFO</Type>
+        <Comment> Mirrors have two RTDs on the chin guard, Left and Right</Comment>
+        <BitSize>109056</BitSize>
+        <BitOffs>77568</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ffUpperCoatingRTemp</Name>
+        <Type Namespace="PMPS">FB_TempSensor_FFO</Type>
+        <BitSize>109056</BitSize>
+        <BitOffs>186624</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ffLowerCoatingLTemp</Name>
+        <Type Namespace="PMPS">FB_TempSensor_FFO</Type>
+        <BitSize>109056</BitSize>
+        <BitOffs>295680</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ffLowerCoatingRTemp</Name>
+        <Type Namespace="PMPS">FB_TempSensor_FFO</Type>
+        <BitSize>109056</BitSize>
+        <BitOffs>404736</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>aDbStateParams</Name>
+        <Type Namespace="PMPS">ST_DbStateParams</Type>
+        <ArrayInfo>
+          <LBound>0</LBound>
+          <Elements>2</Elements>
+        </ArrayInfo>
+        <BitSize>5120</BitSize>
+        <BitOffs>513792</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbGetCoatingBPs</Name>
+        <Type Namespace="PMPS">FB_JsonDocToSafeBP</Type>
+        <BitSize>109440</BitSize>
+        <BitOffs>518912</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ftReadJsonDocDone</Name>
+        <Type Namespace="Tc2_Standard">F_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>628352</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>bBPsLoaded</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>628416</BitOffs>
+        <Default>
+          <Bool>false</Bool>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>i</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>628432</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>sDevState</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>628448</BitOffs>
+        <Default>
+          <String/>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>bInit</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>629096</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
   </DataTypes>
   <Modules>
     <Module GUID="{D7C1D1FD-2E7A-44CC-8FB4-AD582C20623F}" TcSmClass="TComPlcObjDef" TargetPlatform="TwinCAT RT (x86)">
@@ -74344,7 +74573,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>SerialIO Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84213760</ByteSize>
+          <ByteSize>84475904</ByteSize>
           <Symbol>
             <Name>GVL_SerialIO.Serial_stComIn_M1K4</Name>
             <Comment>Better have your inputs and outputs!
@@ -74360,14 +74589,14 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665501504</BitOffs>
+            <BitOffs>666156032</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>SerialIO Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84213760</ByteSize>
+          <ByteSize>84475904</ByteSize>
           <Symbol>
             <Name>GVL_SerialIO.Serial_stComOut_M1K4</Name>
             <BitSize>192</BitSize>
@@ -74381,14 +74610,14 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665501696</BitOffs>
+            <BitOffs>666156224</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>SerialIO Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>84213760</ByteSize>
+          <ByteSize>84475904</ByteSize>
           <Symbol>
             <Name>P_Serial_Com.fbSerialLineControl_EL6001_M1K4</Name>
             <BitSize>10432</BitSize>
@@ -74405,7 +74634,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663551744</BitOffs>
+            <BitOffs>664206336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM_Buffers.Serial_TXBuffer_M1K4</Name>
@@ -74416,7 +74645,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663554256</BitOffs>
+            <BitOffs>664208848</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -74430,7 +74659,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665504192</BitOffs>
+            <BitOffs>666158752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_SerialIO</Name>
@@ -74444,7 +74673,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665509312</BitOffs>
+            <BitOffs>666160800</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_SerialIO</Name>
@@ -74458,7 +74687,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665509344</BitOffs>
+            <BitOffs>666163904</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__SerialIO</Name>
@@ -74479,26 +74708,26 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665509504</BitOffs>
+            <BitOffs>666164064</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="Internal" CreateSymbols="true">19</AreaNo>
           <Name>PiezoDriver Internal</Name>
           <ContextId>1</ContextId>
-          <ByteSize>84213760</ByteSize>
+          <ByteSize>84475904</ByteSize>
           <Symbol>
             <Name>PiezoSerial.fbE621SerialDriver_M1K4</Name>
             <Comment>PI Serial</Comment>
             <BitSize>109632</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_PI_E621_SerialDriver</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_PI_E621_SerialDriver</BaseType>
             <BitOffs>638815264</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K4.M1K4_Pitch</Name>
             <Comment> Pitch Mechanism:</Comment>
             <BitSize>2496</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">HOMS_PitchMechanism</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">HOMS_PitchMechanism</BaseType>
             <Default>
               <SubItem>
                 <Name>.ReqPosLimHi</Name>
@@ -74526,7 +74755,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663556800</BitOffs>
+            <BitOffs>664211392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PiezoDriver</Name>
@@ -74540,7 +74769,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665509376</BitOffs>
+            <BitOffs>666163936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PiezoDriver</Name>
@@ -74554,7 +74783,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665509408</BitOffs>
+            <BitOffs>666163968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PiezoDriver</Name>
@@ -74575,16 +74804,16 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665510208</BitOffs>
+            <BitOffs>666164768</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="InputDst" CreateSymbols="true">32</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84213760</ByteSize>
+          <ByteSize>84475904</ByteSize>
           <Symbol>
-            <Name>lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
+            <Name>lcls_twincat_optics_nrw.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
             <Comment>Raw encoder count</Comment>
             <BitSize>64</BitSize>
             <BaseType>LINT</BaseType>
@@ -78041,7 +78270,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663556768</BitOffs>
+            <BitOffs>662973280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
@@ -78060,20 +78289,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663556784</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
-            <Comment>Raw encoder count</Comment>
-            <BitSize>64</BitSize>
-            <BaseType>LINT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>663559232</BitOffs>
+            <BitOffs>662973296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
@@ -78092,7 +78308,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559552</BitOffs>
+            <BitOffs>664211360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
@@ -78112,7 +78328,20 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559568</BitOffs>
+            <BitOffs>664211376</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
+            <Comment>Raw encoder count</Comment>
+            <BitSize>64</BitSize>
+            <BaseType>LINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>664213824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_RTD.nM2K4DS_RTD_2</Name>
@@ -78131,7 +78360,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559584</BitOffs>
+            <BitOffs>664214144</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
@@ -78150,7 +78379,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559600</BitOffs>
+            <BitOffs>664214160</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>
@@ -78171,7 +78400,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559808</BitOffs>
+            <BitOffs>664214176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4US_RTD_2</Name>
@@ -78190,7 +78419,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559824</BitOffs>
+            <BitOffs>664214192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4US_RTD_3</Name>
@@ -78209,7 +78438,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559840</BitOffs>
+            <BitOffs>664214400</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4DS_RTD_1</Name>
@@ -78229,7 +78458,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559856</BitOffs>
+            <BitOffs>664214416</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4DS_RTD_2</Name>
@@ -78248,7 +78477,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559872</BitOffs>
+            <BitOffs>664214432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4DS_RTD_3</Name>
@@ -78267,7 +78496,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559888</BitOffs>
+            <BitOffs>664214448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bError</Name>
@@ -78291,7 +78520,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560328</BitOffs>
+            <BitOffs>664214856</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bUnderrange</Name>
@@ -78303,7 +78532,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560336</BitOffs>
+            <BitOffs>664214864</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bOverrange</Name>
@@ -78315,7 +78544,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560344</BitOffs>
+            <BitOffs>664214872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.iRaw</Name>
@@ -78327,7 +78556,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560352</BitOffs>
+            <BitOffs>664214880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bError</Name>
@@ -78351,7 +78580,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560584</BitOffs>
+            <BitOffs>664215112</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bUnderrange</Name>
@@ -78363,7 +78592,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560592</BitOffs>
+            <BitOffs>664215120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.bOverrange</Name>
@@ -78375,7 +78604,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560600</BitOffs>
+            <BitOffs>664215128</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Right_RTD.iRaw</Name>
@@ -78387,7 +78616,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560608</BitOffs>
+            <BitOffs>664215136</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bError</Name>
@@ -78411,7 +78640,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560840</BitOffs>
+            <BitOffs>664215368</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bUnderrange</Name>
@@ -78423,7 +78652,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560848</BitOffs>
+            <BitOffs>664215376</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.bOverrange</Name>
@@ -78435,7 +78664,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560856</BitOffs>
+            <BitOffs>664215384</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD.iRaw</Name>
@@ -78447,7 +78676,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663560864</BitOffs>
+            <BitOffs>664215392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bError</Name>
@@ -78471,7 +78700,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561096</BitOffs>
+            <BitOffs>664215624</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bUnderrange</Name>
@@ -78483,7 +78712,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561104</BitOffs>
+            <BitOffs>664215632</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.bOverrange</Name>
@@ -78495,7 +78724,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561112</BitOffs>
+            <BitOffs>664215640</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD.iRaw</Name>
@@ -78507,7 +78736,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561120</BitOffs>
+            <BitOffs>664215648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bError</Name>
@@ -78531,7 +78760,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561352</BitOffs>
+            <BitOffs>664215880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bUnderrange</Name>
@@ -78543,7 +78772,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561360</BitOffs>
+            <BitOffs>664215888</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.bOverrange</Name>
@@ -78555,7 +78784,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561368</BitOffs>
+            <BitOffs>664215896</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD.iRaw</Name>
@@ -78567,7 +78796,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561376</BitOffs>
+            <BitOffs>664215904</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bError</Name>
@@ -78591,7 +78820,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561608</BitOffs>
+            <BitOffs>664216136</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange</Name>
@@ -78603,7 +78832,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561616</BitOffs>
+            <BitOffs>664216144</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bOverrange</Name>
@@ -78615,7 +78844,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561624</BitOffs>
+            <BitOffs>664216152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.iRaw</Name>
@@ -78627,14 +78856,734 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>663561632</BitOffs>
+            <BitOffs>664216160</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673066440</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673066448</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673066456</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673066464</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673175496</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673175504</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673175512</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673175520</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673284552</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673284560</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673284568</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673284576</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673393608</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673393616</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673393624</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>673393632</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674027656</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674027664</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674027672</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674027680</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674136712</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674136720</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674136728</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674136736</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674245768</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674245776</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674245784</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674245792</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674354824</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674354832</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674354840</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674354848</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674656776</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674656784</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674656792</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674656800</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674765832</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674765840</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674765848</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674765856</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674874888</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674874896</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674874904</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674874912</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674983944</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674983952</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674983960</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>674983968</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">33</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84213760</ByteSize>
+          <ByteSize>84475904</ByteSize>
           <Symbol>
             <Name>Main.M1.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
@@ -79545,7 +80494,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>663561928</BitOffs>
+            <BitOffs>664216456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
@@ -79565,14 +80514,14 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>664057224</BitOffs>
+            <BitOffs>664711752</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="Internal" CreateSymbols="true">35</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84213760</ByteSize>
+          <ByteSize>84475904</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -86758,7 +87707,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <Symbol>
             <Name>GVL_TestStructs.TestPitch_LimitSwitches</Name>
             <BitSize>2496</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">HOMS_PitchMechanism</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">HOMS_PitchMechanism</BaseType>
             <Default>
               <SubItem>
                 <Name>.ReqPosLimHi</Name>
@@ -86785,7 +87734,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>638758400</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Global_Version.stLibVersion_lcls_twincat_optics</Name>
+            <Name>Global_Version.stLibVersion_lcls_twincat_optics_nrw</Name>
             <BitSize>288</BitSize>
             <BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType>
             <Default>
@@ -86795,7 +87744,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </SubItem>
               <SubItem>
                 <Name>.iMinor</Name>
-                <Value>7</Value>
+                <Value>0</Value>
               </SubItem>
               <SubItem>
                 <Name>.iBuild</Name>
@@ -86811,7 +87760,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </SubItem>
               <SubItem>
                 <Name>.sVersion</Name>
-                <String>0.7.0</String>
+                <String>0.0.0</String>
               </SubItem>
             </Default>
             <Properties>
@@ -87115,7 +88064,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         fbMotionStage_m6 : FB_MotionStage;
 </Comment>
             <BitSize>20672</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">DUT_HOMS</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">DUT_HOMS</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -87139,7 +88088,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <Name>Main.fbYRMSErrorM1K4</Name>
             <Comment> Encoder Arrays/RMS Watch:</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -87165,7 +88114,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <Symbol>
             <Name>Main.fbXRMSErrorM1K4</Name>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -87191,7 +88140,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <Symbol>
             <Name>Main.fbPitchRMSErrorM1K4</Name>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -87217,7 +88166,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <Symbol>
             <Name>Main.fbBenderRMSErrorM1K4</Name>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -87248,7 +88197,7 @@ bM1K4PitchDone : BOOL;
 bM1K4PitchBusy : BOOL;
  Bender Control</Comment>
             <BitSize>128</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_Bender</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_Bender</BaseType>
             <BitOffs>642126528</BitOffs>
           </Symbol>
           <Symbol>
@@ -88101,7 +89050,7 @@ PMPS State Stage; bPowerSelf:=False</Comment>
             <Comment> Encoder Arrays/RMS Watch:
 MR2K4 X ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88128,7 +89077,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbYRMSErrorM2K4</Name>
             <Comment>MR2K4 Y ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88155,7 +89104,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbrYRMSErrorM2K4</Name>
             <Comment>MR2K4 rY ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88182,7 +89131,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbBendUSRMSErrorM2K4</Name>
             <Comment>MR2K4 US BENDER ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88209,7 +89158,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbBendDSRMSErrorM2K4</Name>
             <Comment>MR2K4 DS BENDER ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88236,7 +89185,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbXRMSErrorM3K4</Name>
             <Comment>MR3K4 X ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88263,7 +89212,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbYRMSErrorM3K4</Name>
             <Comment>MR3K4 Y ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88290,7 +89239,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbrXRMSErrorM3K4</Name>
             <Comment>MR3K4 rX ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88317,7 +89266,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbBendUSRMSErrorM3K4</Name>
             <Comment>MR3K4 US BENDER ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88344,7 +89293,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbBendDSRMSErrorM3K4</Name>
             <Comment>MR3K4 DS BENDER ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88371,7 +89320,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbXRMSErrorM4K4</Name>
             <Comment>MR4K4 X ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88398,7 +89347,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbYRMSErrorM4K4</Name>
             <Comment>MR4K4 Y ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88425,7 +89374,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbZRMSErrorM4K4</Name>
             <Comment>MR4K4 Z ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88452,7 +89401,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbPRMSErrorM4K4</Name>
             <Comment>MR4K4 rX ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88479,7 +89428,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbXRMSErrorM5K4</Name>
             <Comment>MR5K4 X ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88506,7 +89455,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbYRMSErrorM5K4</Name>
             <Comment>MR5K4 Y ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88533,7 +89482,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbZRMSErrorM5K4</Name>
             <Comment>MR5K4 Z ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -88560,7 +89509,7 @@ MR2K4 X ENC RMS</Comment>
             <Name>Main.fbPRMSErrorM5K4</Name>
             <Comment>MR5K4 rX ENC RMS</Comment>
             <BitSize>386880</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_RMSWatch</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_RMSWatch</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -89110,7 +90059,7 @@ MR2K4 X ENC CNT</Comment>
             <Name>PRG_MR1K4_SOMS.fbCoolingPanel</Name>
             <Comment> M1K4 Flow Press Sensors</Comment>
             <BitSize>1216</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_Axilon_Cooling_2f1p</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_Axilon_Cooling_2f1p</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -89132,7 +90081,7 @@ MR2K4 X ENC CNT</Comment>
             <Name>PRG_MR2K4_KBO.fbCoolingPanel</Name>
             <Comment> M2K4 Flow Press Sensors</Comment>
             <BitSize>832</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_Axilon_Cooling_1f1p</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_Axilon_Cooling_1f1p</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -89153,7 +90102,7 @@ MR2K4 X ENC CNT</Comment>
             <Name>PRG_MR3K4_KBO.fbCoolingPanel</Name>
             <Comment> M3K4 Flow Press Sensors</Comment>
             <BitSize>832</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_Axilon_Cooling_1f1p</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_Axilon_Cooling_1f1p</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -89174,7 +90123,7 @@ MR2K4 X ENC CNT</Comment>
             <Name>PRG_MR4K4_KBO.fbCoolingPanel</Name>
             <Comment> MR4K4 Flow Press Sensors</Comment>
             <BitSize>832</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_Axilon_Cooling_1f1p</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_Axilon_Cooling_1f1p</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -89195,7 +90144,7 @@ MR2K4 X ENC CNT</Comment>
             <Name>PRG_MR5K4_KBO.fbCoolingPanel</Name>
             <Comment> MR5K4 Flow Press Sensors</Comment>
             <BitSize>832</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_Axilon_Cooling_1f1p</BaseType>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_Axilon_Cooling_1f1p</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -89213,109 +90162,6 @@ MR2K4 X ENC CNT</Comment>
             <BitOffs>662972032</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>P_StripeProtections.fbStripProtMR1K4</Name>
-            <Comment>
-MR1K4 (RBV = MR1K4:SOMS:ENC:YUP:CNT_RBV)
-B4C coating: RBV &lt;= 15998960: 1111_1111_1111_1000 (allow everything between 350eV and 2.3keV)
-Transition: 15998960 &lt; RBV &lt; 19998960: 0000_0000_0000_0000
-Silicon surface: RBV &gt;= 19998960: 0000_0000_0001_1110 (allow everything between 250eV and 450eV)
-From M. Seaberg
-</Comment>
-            <BitSize>192896</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_MirrorTwoCoatingProtection</BaseType>
-            <Default>
-              <SubItem>
-                <Name>.sDevName</Name>
-                <String>MR1K4:SOMS</String>
-              </SubItem>
-              <SubItem>
-                <Name>.nUpperCoatingBoundary</Name>
-                <Value>19998960</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.sUpperCoatingType</Name>
-                <String>SILICON</String>
-              </SubItem>
-              <SubItem>
-                <Name>.nLowerCoatingBoundary</Name>
-                <Value>15998960</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.sLowerCoatingType</Name>
-                <String>B4C</String>
-              </SubItem>
-            </Default>
-            <BitOffs>662973056</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>P_StripeProtections.fbStripProtMR2K4</Name>
-            <Comment>
-MR2K4 (RBV = MR2K4:KBO:ENC:Y:CNT_RBV)
-B4C coating: RBV &lt;= 6976835: 1111_1111_1111_1000 (allow everything between 350eV and 2.3keV)
-Transition: 6976835 &lt; RBV &lt; 7776781: 0000_0000_0000_0000
-Silicon surface: RBV &gt;= 7776781: 0000_0000_0001_1110 (allow everything below 250eV and 450eV)
-</Comment>
-            <BitSize>192896</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_MirrorTwoCoatingProtection</BaseType>
-            <Default>
-              <SubItem>
-                <Name>.sDevName</Name>
-                <String>MR2K4:KBO</String>
-              </SubItem>
-              <SubItem>
-                <Name>.nUpperCoatingBoundary</Name>
-                <Value>7776781</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.sUpperCoatingType</Name>
-                <String>SILICON</String>
-              </SubItem>
-              <SubItem>
-                <Name>.nLowerCoatingBoundary</Name>
-                <Value>6976835</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.sLowerCoatingType</Name>
-                <String>B4C</String>
-              </SubItem>
-            </Default>
-            <BitOffs>663165952</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>P_StripeProtections.fbStripProtMR3K4</Name>
-            <Comment>
-MR3K4 (RBV = MR3K4:KBO:ENC:X:CNT_RBV)
-B4C coating: RBV &gt;= 5620000: 1111_1111_1111_1000 (allow everything between 350eV and 2.3keV)
-Transition: 4820000 &lt; ENC &lt; 5620000: 0000_0000_0000_0000
-Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything between 250eV and 450 eV)
-</Comment>
-            <BitSize>192896</BitSize>
-            <BaseType Namespace="lcls_twincat_optics">FB_MirrorTwoCoatingProtection</BaseType>
-            <Default>
-              <SubItem>
-                <Name>.sDevName</Name>
-                <String>MR3K4:KBO</String>
-              </SubItem>
-              <SubItem>
-                <Name>.nUpperCoatingBoundary</Name>
-                <Value>5620000</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.sUpperCoatingType</Name>
-                <String>B4C</String>
-              </SubItem>
-              <SubItem>
-                <Name>.nLowerCoatingBoundary</Name>
-                <Value>4820000</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.sLowerCoatingType</Name>
-                <String>SILICON</String>
-              </SubItem>
-            </Default>
-            <BitOffs>663358848</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_M1K4_Constants.nYUP_ENC_REF</Name>
             <Comment> Encoder reference values in counts = nm</Comment>
             <BitSize>64</BitSize>
@@ -89328,7 +90174,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559296</BitOffs>
+            <BitOffs>664213888</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K4_Constants.nYDWN_ENC_REF</Name>
@@ -89342,7 +90188,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559360</BitOffs>
+            <BitOffs>664213952</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K4_Constants.nXUP_ENC_REF</Name>
@@ -89356,7 +90202,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559424</BitOffs>
+            <BitOffs>664214016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K4_Constants.nXDWN_ENC_REF</Name>
@@ -89370,7 +90216,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559488</BitOffs>
+            <BitOffs>664214080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_Constants.nM2K4X_ENC_REF</Name>
@@ -89385,7 +90231,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559616</BitOffs>
+            <BitOffs>664214208</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_Constants.nM2K4Y_ENC_REF</Name>
@@ -89399,7 +90245,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559680</BitOffs>
+            <BitOffs>664214272</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_Constants.nM2K4rY_ENC_REF</Name>
@@ -89413,52 +90259,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559744</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bLittleEndian</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>true</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>663559912</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bSimulationMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>false</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>663559920</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bFPUSupport</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>true</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>663559928</BitOffs>
+            <BitOffs>664214336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_Constants.nM3K4X_ENC_REF</Name>
@@ -89473,7 +90274,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663559936</BitOffs>
+            <BitOffs>664214464</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_Constants.nM3K4Y_ENC_REF</Name>
@@ -89487,7 +90288,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663560000</BitOffs>
+            <BitOffs>664214528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_Constants.nM3K4rX_ENC_REF</Name>
@@ -89501,7 +90302,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663560064</BitOffs>
+            <BitOffs>664214592</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD</Name>
@@ -89528,7 +90329,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663560128</BitOffs>
+            <BitOffs>664214656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Right_RTD</Name>
@@ -89554,7 +90355,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663560384</BitOffs>
+            <BitOffs>664214912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Tail_RTD</Name>
@@ -89580,7 +90381,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663560640</BitOffs>
+            <BitOffs>664215168</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Left_RTD</Name>
@@ -89607,7 +90408,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663560896</BitOffs>
+            <BitOffs>664215424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Right_RTD</Name>
@@ -89633,7 +90434,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663561152</BitOffs>
+            <BitOffs>664215680</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD</Name>
@@ -89659,7 +90460,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663561408</BitOffs>
+            <BitOffs>664215936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PMPS.g_FastFaultOutput1</Name>
@@ -89691,7 +90492,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>663561664</BitOffs>
+            <BitOffs>664216192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PMPS.g_FastFaultOutput2</Name>
@@ -89723,7 +90524,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>664056960</BitOffs>
+            <BitOffs>664711488</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PMPS.g_fbArbiter1</Name>
@@ -89744,7 +90545,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>664552256</BitOffs>
+            <BitOffs>665206784</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PMPS.g_fbArbiter2</Name>
@@ -89765,7 +90566,22 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665026880</BitOffs>
+            <BitOffs>665681408</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bLittleEndian</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>666156424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersion</Name>
@@ -89795,7 +90611,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665501888</BitOffs>
+            <BitOffs>666156432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersion</Name>
@@ -89825,7 +90641,37 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665501952</BitOffs>
+            <BitOffs>666156496</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bSimulationMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>false</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>666156560</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bFPUSupport</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>666156568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nRegisterSize</Name>
@@ -89840,7 +90686,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665502016</BitOffs>
+            <BitOffs>666156576</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nPackMode</Name>
@@ -89855,7 +90701,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665502032</BitOffs>
+            <BitOffs>666156592</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersionNumeric</Name>
@@ -89870,7 +90716,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665502048</BitOffs>
+            <BitOffs>666156608</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersionNumeric</Name>
@@ -89885,7 +90731,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665502080</BitOffs>
+            <BitOffs>666156640</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bMulticoreSupport</Name>
@@ -89899,7 +90745,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665502112</BitOffs>
+            <BitOffs>666156672</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_LicenseInfoVarList._LicenseInfo</Name>
@@ -90020,7 +90866,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665502144</BitOffs>
+            <BitOffs>666156704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskInfo</Name>
@@ -90038,7 +90884,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665506240</BitOffs>
+            <BitOffs>666160832</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
@@ -90052,7 +90898,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665509440</BitOffs>
+            <BitOffs>666164000</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</Name>
@@ -90066,7 +90912,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665509472</BitOffs>
+            <BitOffs>666164032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PlcTask</Name>
@@ -90087,7 +90933,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665510912</BitOffs>
+            <BitOffs>666165472</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcSystemEventClass</Name>
@@ -90159,7 +91005,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665528640</BitOffs>
+            <BitOffs>666183200</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcGeneralAdsEventClass</Name>
@@ -90231,7 +91077,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665528768</BitOffs>
+            <BitOffs>666183328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcRouterEventClass</Name>
@@ -90303,7 +91149,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665528896</BitOffs>
+            <BitOffs>666183456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcRTimeEventClass</Name>
@@ -90375,7 +91221,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665529024</BitOffs>
+            <BitOffs>666183584</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.Win32EventClass</Name>
@@ -90447,7 +91293,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665529152</BitOffs>
+            <BitOffs>666183712</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.LCLSGeneralEventClass</Name>
@@ -90519,7 +91365,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665529280</BitOffs>
+            <BitOffs>666183840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcIPCDiagEventClass</Name>
@@ -90591,7 +91437,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665529408</BitOffs>
+            <BitOffs>666184224</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcIPCDiagPlcApiEventClass</Name>
@@ -90663,7 +91509,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665529536</BitOffs>
+            <BitOffs>666184352</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
@@ -90689,14 +91535,151 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>665562560</BitOffs>
+            <BitOffs>666217120</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR1K4</Name>
+            <Comment>
+MR1K4 (RBV = MR1K4:SOMS:ENC:YUP:CNT_RBV)
+B4C coating: RBV &lt;= 15998960: 1111_1111_1111_1000 (allow everything between 350eV and 2.3keV)
+Transition: 15998960 &lt; RBV &lt; 19998960: 0000_0000_0000_0000
+Silicon surface: RBV &gt;= 19998960: 0000_0000_0001_1110 (allow everything between 250eV and 450eV)
+From M. Seaberg
+</Comment>
+            <BitSize>629120</BitSize>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_MirrorTwoCoatingProtection</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.sDevName</Name>
+                <String>MR1K4:SOMS</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nUpperCoatingBoundary</Name>
+                <Value>19998960</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sUpperCoatingType</Name>
+                <String>SILICON</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nLowerCoatingBoundary</Name>
+                <Value>15998960</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sLowerCoatingType</Name>
+                <String>B4C</String>
+              </SubItem>
+            </Default>
+            <BitOffs>672988672</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR2K4</Name>
+            <Comment>
+MR2K4 (RBV = MR2K4:KBO:ENC:Y:CNT_RBV)
+B4C coating: RBV &lt;= 6976835: 1111_1111_1111_1000 (allow everything between 350eV and 2.3keV)
+Transition: 6976835 &lt; RBV &lt; 7776781: 0000_0000_0000_0000
+Silicon surface: RBV &gt;= 7776781: 0000_0000_0001_1110 (allow everything below 250eV and 450eV)
+
+ MR2K4 Mirror Chin Guard RTDs</Comment>
+            <BitSize>629120</BitSize>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_MirrorTwoCoatingProtection</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.sDevName</Name>
+                <String>MR2K4:KBO</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nUpperCoatingBoundary</Name>
+                <Value>7776781</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sUpperCoatingType</Name>
+                <String>SILICON</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nLowerCoatingBoundary</Name>
+                <Value>6976835</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sLowerCoatingType</Name>
+                <String>B4C</String>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.ffUpperCoatingLTemp.iRaw := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Value;
+                              .ffUpperCoatingRTemp.iRaw := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Value;
+                              .ffLowerCoatingLTemp.iRaw := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Value;
+                              .ffLowerCoatingRTemp.iRaw := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Value;
+    </Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MR2K4:KBO
+    </Value>
+              </Property>
+            </Properties>
+            <BitOffs>673949888</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>P_StripeProtections.fbStripProtMR3K4</Name>
+            <Comment>
+MR3K4 (RBV = MR3K4:KBO:ENC:X:CNT_RBV)
+B4C coating: RBV &gt;= 5620000: 1111_1111_1111_1000 (allow everything between 350eV and 2.3keV)
+Transition: 4820000 &lt; ENC &lt; 5620000: 0000_0000_0000_0000
+Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything between 250eV and 450 eV)
+
+ MR3K4 Mirror Chin Guard RTDs</Comment>
+            <BitSize>629120</BitSize>
+            <BaseType Namespace="lcls_twincat_optics_nrw">FB_MirrorTwoCoatingProtection</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.sDevName</Name>
+                <String>MR3K4:KBO</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nUpperCoatingBoundary</Name>
+                <Value>5620000</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sUpperCoatingType</Name>
+                <String>B4C</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nLowerCoatingBoundary</Name>
+                <Value>4820000</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sLowerCoatingType</Name>
+                <String>SILICON</String>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.ffUpperCoatingLTemp.iRaw := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Value;
+                              .ffUpperCoatingRTemp.iRaw := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Value;
+                              .ffLowerCoatingLTemp.iRaw := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Value;
+                              .ffLowerCoatingRTemp.iRaw := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Value;
+    </Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MR3K4:KBO
+    </Value>
+              </Property>
+            </Properties>
+            <BitOffs>674579008</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">36</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>2</ContextId>
-          <ByteSize>84213760</ByteSize>
+          <ByteSize>84475904</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -90782,15 +91765,15 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-06-26T15:36:59</Value>
+          <Value>2024-09-11T16:33:39</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>905216</Value>
+          <Value>909312</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>82915328</Value>
+          <Value>83079168</Value>
         </Property>
       </Properties>
     </Module>
