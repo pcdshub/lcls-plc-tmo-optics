@@ -847,43 +847,6 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{8F4975B4-B3D9-9C2F-B09A-E19B3FB61C15}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_EL5042_Status</Name>
-			<BitSize>0</BitSize>
-			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
-		</DataType>
-		<DataType>
-			<Name GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
-			<Comment><![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]></Comment>
-			<BitSize>128</BitSize>
-			<SubItem>
-				<Name>Count</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
-				<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
-				<BitSize>64</BitSize>
-				<BitOffs>0</BitOffs>
-				<Properties>
-					<Property>
-						<Name>TcAddressType</Name>
-						<Value>Input</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>Status</Name>
-				<Type GUID="{8F4975B4-B3D9-9C2F-B09A-E19B3FB61C15}" Namespace="lcls_twincat_motion">ST_EL5042_Status</Type>
-				<Comment><![CDATA[ Status struct placeholder]]></Comment>
-				<BitSize>0</BitSize>
-				<BitOffs>64</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Ref</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
-				<Comment><![CDATA[ Encoder zero position (useful for aligned position with gantries)]]></Comment>
-				<BitSize>64</BitSize>
-				<BitOffs>64</BitOffs>
-			</SubItem>
-		</DataType>
-		<DataType>
 			<Name GUID="{7E016B85-166E-4B4F-AAC4-ECA8DDD44F13}">ST_PMPS_Attenuator_IO</Name>
 			<BitSize>64</BitSize>
 			<SubItem>
@@ -1161,6 +1124,43 @@ External Setpoint Generation:
 			</Hides>
 		</DataType>
 		<DataType>
+			<Name GUID="{8F4975B4-B3D9-9C2F-B09A-E19B3FB61C15}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_EL5042_Status</Name>
+			<BitSize>0</BitSize>
+			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
+		</DataType>
+		<DataType>
+			<Name GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Comment><![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]></Comment>
+			<BitSize>128</BitSize>
+			<SubItem>
+				<Name>Count</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
+				<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
+				<BitSize>64</BitSize>
+				<BitOffs>0</BitOffs>
+				<Properties>
+					<Property>
+						<Name>TcAddressType</Name>
+						<Value>Input</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>Status</Name>
+				<Type GUID="{8F4975B4-B3D9-9C2F-B09A-E19B3FB61C15}" Namespace="lcls_twincat_motion">ST_EL5042_Status</Type>
+				<Comment><![CDATA[ Status struct placeholder]]></Comment>
+				<BitSize>0</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Ref</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
+				<Comment><![CDATA[ Encoder zero position (useful for aligned position with gantries)]]></Comment>
+				<BitSize>64</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
 			<Name GUID="{875D2B22-B7EB-497E-B933-0C004593CCF3}" Namespace="MC" TcBaseType="true" HideType="true" IecDeclaration="DWORD;">PLCTONC_AXIS_REF_CTRL</Name>
 			<BitSize>32</BitSize>
 			<SubItem>
@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{B751D60F-6A36-0A2F-8955-4284BCC779DF}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{81FA48AF-9C07-B957-924C-934A08B8467F}">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1370,11 +1370,6 @@ External Setpoint Generation:
 			</Vars>
 			<Vars VarGrpType="1" ContextId="2" AreaNo="32">
 				<Name>PlcTask Inputs</Name>
-				<Var>
-					<Name>lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
-					<Comment><![CDATA[Raw encoder count]]></Comment>
-					<Type>LINT</Type>
-				</Var>
 				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
@@ -1589,52 +1584,6 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.fbMotionStage_m5.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1K4.fbRunHOMS.bSTOEnable1</Name>
-					<Comment><![CDATA[ STO Button]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1K4.fbRunHOMS.bSTOEnable2</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1K4.fbRunHOMS.stYupEnc</Name>
-					<Comment><![CDATA[ Encoders]]></Comment>
-					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1K4.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1K4.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1K4.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1K4.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.PEnc.Count</Name>
-					<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
-					<Type>ULINT</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1K4.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.SEnc.Count</Name>
-					<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
-					<Type>ULINT</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1K4.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.PEnc.Count</Name>
-					<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
-					<Type>ULINT</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1K4.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.SEnc.Count</Name>
-					<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
-					<Type>ULINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.bDreamEnable1</Name>
@@ -2494,6 +2443,67 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
+					<Comment><![CDATA[ M2K4 BENDER RTDs
+ M2K4 US RTDs]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
+					<Comment><![CDATA[Raw encoder count]]></Comment>
+					<Type>LINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fbRunHOMS.bSTOEnable1</Name>
+					<Comment><![CDATA[ STO Button]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fbRunHOMS.bSTOEnable2</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fbRunHOMS.stYupEnc</Name>
+					<Comment><![CDATA[ Encoders]]></Comment>
+					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fbRunHOMS.stYdwnEnc</Name>
+					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fbRunHOMS.stXupEnc</Name>
+					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fbRunHOMS.stXdwnEnc</Name>
+					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.PEnc.Count</Name>
+					<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.SEnc.Count</Name>
+					<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.PEnc.Count</Name>
+					<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.SEnc.Count</Name>
+					<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
 					<Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
 					<Type>INT</Type>
@@ -2546,16 +2556,6 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_MR5K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
-					<Comment><![CDATA[ M2K4 BENDER RTDs
- M2K4 US RTDs]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -2701,6 +2701,198 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.iRaw</Name>
 					<Type>INT</Type>
 				</Var>
 			</Vars>
@@ -3302,10 +3494,26 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4DS2_M2K4DS3">
 				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4DS_RTD_2" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4DS_RTD_3" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4US1_M2K4US2">
 				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4US_RTD_1" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4US_RTD_2" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4US3_M2K4DS1">
 				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4DS_RTD_1" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
@@ -3314,10 +3522,26 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4DS2_M3K4DS3">
 				<Link VarA="PlcTask Inputs^GVL_M3K4_RTD.nM3K4DS_RTD_2" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_M3K4_RTD.nM3K4DS_RTD_3" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4US1_M3K4US2">
 				<Link VarA="PlcTask Inputs^GVL_M3K4_RTD.nM3K4US_RTD_1" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_M3K4_RTD.nM3K4US_RTD_2" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4US3_M3K4DS1">
 				<Link VarA="PlcTask Inputs^GVL_M3K4_RTD.nM3K4DS_RTD_1" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>

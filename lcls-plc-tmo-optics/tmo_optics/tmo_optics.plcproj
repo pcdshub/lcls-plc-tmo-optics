@@ -183,7 +183,7 @@
       <Resolution>lcls-twincat-motion, 4.0.9 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-optics">
-      <Resolution>lcls-twincat-optics, 0.7.0 (SLAC)</Resolution>
+      <Resolution>lcls-twincat-optics, 0.8.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls2-cc-lib">
       <Resolution>lcls2-cc-lib, 2.0.0 (SLAC)</Resolution>
