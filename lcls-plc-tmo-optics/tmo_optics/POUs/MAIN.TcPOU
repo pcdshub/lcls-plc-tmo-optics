@@ -580,7 +580,7 @@ VAR
             '}
             fM2K4US_RTD_1 : REAL;
             {attribute 'pytmc' := '
-                pv: MR2K4:KBO:RTD:BEND:US:2
+                pv: MR2K4:KBO:RTD:CHIN:L
                 field: ASLO 0.1
                 field: EGU C
                 io: i
@@ -603,7 +603,7 @@ VAR
         '}
         fM2K4DS_RTD_1 : REAL;
         {attribute 'pytmc' := '
-            pv: MR2K4:KBO:RTD:BEND:DS:2
+            pv: MR2K4:KBO:RTD:CHIN:R
             field: ASLO 0.1
             field: EGU C
             io: i
@@ -625,7 +625,7 @@ VAR
         '}
         fM3K4US_RTD_1 : REAL;
         {attribute 'pytmc' := '
-            pv: MR3K4:KBO:RTD:BEND:US:2
+            pv: MR3K4:KBO:RTD:CHIN:L
             field: ASLO 0.1
             field: EGU C
             io: i
@@ -647,7 +647,7 @@ VAR
         '}
         fM3K4DS_RTD_1 : REAL;
         {attribute 'pytmc' := '
-            pv: MR3K4:KBO:RTD:BEND:DS:2
+            pv: MR3K4:KBO:RTD:CHIN:R
             field: ASLO 0.1
             field: EGU C
             io: i

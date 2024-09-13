@@ -25,9 +25,24 @@ Silicon surface: RBV >= 7776781: 0000_0000_0001_1110 (allow everything below 250
 *)
     // MR2K4 Mirror Chin Guard RTDs
     {attribute 'TcLinkTo' := '.ffUpperCoatingLTemp.iRaw := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Value;
+                              .ffUpperCoatingLTemp.bUnderrange := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Underrange;
+                              .ffUpperCoatingLTemp.bOverrange := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Overrange;
+                              .ffUpperCoatingLTemp.bError := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Error;
+
                               .ffUpperCoatingRTemp.iRaw := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Value;
+                              .ffUpperCoatingRTemp.bUnderrange := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Underrange;
+                              .ffUpperCoatingRTemp.bOverrange := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Overrange;
+                              .ffUpperCoatingRTemp.bError := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Error;
+
                               .ffLowerCoatingLTemp.iRaw := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Value;
+                              .ffLowerCoatingLTemp.bUnderrange := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Underrange;
+                              .ffLowerCoatingLTemp.bOverrange := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Overrange;
+                              .ffLowerCoatingLTemp.bError := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Error;
+
                               .ffLowerCoatingRTemp.iRaw := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Value;
+                              .ffLowerCoatingRTemp.bUnderrange := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Underrange;
+                              .ffLowerCoatingRTemp.bOverrange := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Overrange;
+                              .ffLowerCoatingRTemp.bError := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Error
     '}
     {attribute 'pytmc' := '
         pv: MR2K4:KBO
@@ -47,9 +62,25 @@ Silicon surface: RBV <= 4820000: 0000_0000_0001_1110 (allow everything between 2
 *)
     // MR3K4 Mirror Chin Guard RTDs
     {attribute 'TcLinkTo' := '.ffUpperCoatingLTemp.iRaw := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Value;
+                              .ffUpperCoatingLTemp.bUnderrange := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Underrange;
+                              .ffUpperCoatingLTemp.bOverrange := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Overrange;
+                              .ffUpperCoatingLTemp.bError := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Error;
+
+
                               .ffUpperCoatingRTemp.iRaw := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Value;
+                              .ffUpperCoatingRTemp.bUnderrange := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Underrange;
+                              .ffUpperCoatingRTemp.bOverrange := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Overrange;
+                              .ffUpperCoatingRTemp.bError := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Error;
+
                               .ffLowerCoatingLTemp.iRaw := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Value;
+                              .ffLowerCoatingLTemp.bUnderrange := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Underrange;
+                              .ffLowerCoatingLTemp.bOverrange := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Overrange;
+                              .ffLowerCoatingLTemp.bError := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Error;
+
                               .ffLowerCoatingRTemp.iRaw := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Value;
+                              .ffLowerCoatingRTemp.bUnderrange := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Underrange;
+                              .ffLowerCoatingRTemp.bOverrange := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Overrange;
+                              .ffLowerCoatingRTemp.bError := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Error
     '}
     {attribute 'pytmc' := '
         pv: MR3K4:KBO
