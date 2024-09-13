@@ -19989,6 +19989,58 @@ PMPS.FB_SubSysToArbiter_IO
       - | io: input
 
 
+ 
+PMPS.FB_TempSensor_FFO
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):CONN_RBV
+      - bi
+      - $(SYMBOL).bConnected
+      - | field: ONAM Connected
+        | field: ZNAM Disconnected
+        | io: input
+
+
+    * - $(PREFIX):ERR_RBV
+      - bi
+      - $(SYMBOL).bError
+      - | field: ONAM True
+        | field: ZNAM False
+        | io: input
+
+
+    * - $(PREFIX):FAULT_SP_HYS_RBV
+      - ai
+      - $(SYMBOL).fHysteresis
+      - | field: EGU %
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):FAULT_SP_RBV
+      - ai
+      - $(SYMBOL).fFaultThreshold
+      - | field: EGU C
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):TEMP_RBV
+      - ai
+      - $(SYMBOL).fTemp
+      - | field: EGU C
+        | field: PREC 2
+        | io: input
+
+
      
 PMPS.ST_BeamParams
 ^^^^^^^^^^^^^^^^^^
@@ -47290,7 +47342,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:RTD:BEND:DS:2_RBV
+    * - MR2K4:KBO:RTD:CHIN:R_RBV
       - ai
       - Main.fM2K4DS_RTD_2
       - | field: ASLO 0.1
@@ -47314,7 +47366,7 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:RTD:BEND:US:2_RBV
+    * - MR2K4:KBO:RTD:CHIN:L_RBV
       - ai
       - Main.fM2K4US_RTD_2
       - | field: ASLO 0.1
@@ -47338,7 +47390,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:RTD:BEND:DS:2_RBV
+    * - MR3K4:KBO:RTD:CHIN:R_RBV
       - ai
       - Main.fM3K4DS_RTD_2
       - | field: ASLO 0.1
@@ -47362,7 +47414,7 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:RTD:BEND:US:2_RBV
+    * - MR3K4:KBO:RTD:CHIN:L_RBV
       - ai
       - Main.fM3K4US_RTD_2
       - | field: ASLO 0.1

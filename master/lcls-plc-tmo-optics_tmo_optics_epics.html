@@ -89,6 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#pmps-fb-beamparamassertionpool">PMPS.FB_BeamParamAssertionPool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pmps-fb-hardwareffoutput">PMPS.FB_HardwareFFOutput</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pmps-fb-subsystoarbiter-io">PMPS.FB_SubSysToArbiter_IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pmps-fb-tempsensor-ffo">PMPS.FB_TempSensor_FFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pmps-st-beamparams">PMPS.ST_BeamParams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pmps-st-bp-arbinternal">PMPS.ST_BP_ArbInternal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pmps-st-dbstateparams">PMPS.ST_DbStateParams</a></li>
@@ -26270,6 +26271,70 @@
 <td><p>longin</p></td>
 <td><p>$(SYMBOL).nRequestCohort</p></td>
 <td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pmps-fb-tempsensor-ffo">
+<h2>PMPS.FB_TempSensor_FFO<a class="headerlink" href="#pmps-fb-tempsensor-ffo" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):CONN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).bConnected</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Connected</div>
+<div class="line">field: ZNAM Disconnected</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ERR_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).bError</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM True</div>
+<div class="line">field: ZNAM False</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):FAULT_SP_HYS_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fHysteresis</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU %</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):FAULT_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fFaultThreshold</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU C</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TEMP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).fTemp</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU C</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -62302,7 +62367,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>MR2K4:KBO:RTD:BEND:DS:2_RBV</p></td>
+<tr class="row-odd"><td><p>MR2K4:KBO:RTD:CHIN:R_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>Main.fM2K4DS_RTD_2</p></td>
 <td><div class="line-block">
@@ -62332,7 +62397,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>MR2K4:KBO:RTD:BEND:US:2_RBV</p></td>
+<tr class="row-even"><td><p>MR2K4:KBO:RTD:CHIN:L_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>Main.fM2K4US_RTD_2</p></td>
 <td><div class="line-block">
@@ -62362,7 +62427,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>MR3K4:KBO:RTD:BEND:DS:2_RBV</p></td>
+<tr class="row-odd"><td><p>MR3K4:KBO:RTD:CHIN:R_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>Main.fM3K4DS_RTD_2</p></td>
 <td><div class="line-block">
@@ -62392,7 +62457,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>MR3K4:KBO:RTD:BEND:US:2_RBV</p></td>
+<tr class="row-even"><td><p>MR3K4:KBO:RTD:CHIN:L_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>Main.fM3K4US_RTD_2</p></td>
 <td><div class="line-block">
