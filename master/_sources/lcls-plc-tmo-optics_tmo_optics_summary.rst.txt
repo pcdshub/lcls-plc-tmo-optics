@@ -1523,12 +1523,18 @@ PRG_MR5K4_KBO
 PRG_PMPS
 ^^^^^^^^
 
+.. raw:: html
+
+   <details>
+       <summary>11 Symbols</summary>
+
 .. csv-table::
     :header: Symbol, Type, Offset/Size
     :align: center
 
         PRG_PMPS.bMR1K1_IN, BOOL, 654934496 (8)
         PRG_PMPS.bMR1K3_IN, BOOL, 654934512 (8)
+        PRG_PMPS.bST1K4_IN, BOOL, 638758176 (8)
         PRG_PMPS.bST3K4_IN, BOOL, 654934504 (8)
         PRG_PMPS.fb_vetoArbiter, FB_VetoArbiter, 662776160 (27168)
         PRG_PMPS.fbArbiterIO, FB_SubSysToArbiter_IO, 662803328 (138752)
@@ -1537,6 +1543,11 @@ PRG_PMPS
         PRG_PMPS.fbArbiterIO.xTxPDO_state, BIT, 662807649 (1)
         PRG_PMPS.fbArbiterIO.xTxPDO_toggle, BIT, 662807648 (1)
         PRG_PMPS.ffFFO2ToFFO1, FB_FastFault, 662942080 (25088)
+
+.. raw:: html
+
+   </details>
+   <br />
 
 
 PRG_States
