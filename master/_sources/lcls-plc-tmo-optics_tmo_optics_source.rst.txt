@@ -105,16 +105,12 @@ GVL_M2K4_RTD
         // M2K4 US RTDs
         {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 1^Value'}
         nM2K4US_RTD_1 AT %I* : INT;
-        {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Value'}
-        nM2K4US_RTD_2 AT %I* : INT;
         {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M2K4US3_M2K4DS1]^RTD Inputs Channel 1^Value'}
         nM2K4US_RTD_3 AT %I* : INT;
 
         // M2K4 DS RTDs
         {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M2K4US3_M2K4DS1]^RTD Inputs Channel 2^Value'}
         nM2K4DS_RTD_1 AT %I* : INT;
-        {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Value'}
-        nM2K4DS_RTD_2 AT %I* : INT;
         {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 2^Value'}
         nM2K4DS_RTD_3 AT %I* : INT;
     END_VAR
@@ -150,16 +146,14 @@ GVL_M3K4_RTD
         // M3K4 US RTDs
         {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 1^Value'}
         nM3K4US_RTD_1 AT %I* : INT;
-        {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Value'}
-        nM3K4US_RTD_2 AT %I* : INT;
+
         {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M3K4US3_M3K4DS1]^RTD Inputs Channel 1^Value'}
         nM3K4US_RTD_3 AT %I* : INT;
 
         // M2K4 DS RTDs
         {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M3K4US3_M3K4DS1]^RTD Inputs Channel 2^Value'}
         nM3K4DS_RTD_1 AT %I* : INT;
-        {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Value'}
-        nM3K4DS_RTD_2 AT %I* : INT;
+
         {attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 2^Value'}
         nM3K4DS_RTD_3 AT %I* : INT;
 
@@ -1078,13 +1072,6 @@ Main
                 '}
                 fM2K4US_RTD_1 : REAL;
                 {attribute 'pytmc' := '
-                    pv: MR2K4:KBO:RTD:CHIN:L
-                    field: ASLO 0.1
-                    field: EGU C
-                    io: i
-                '}
-                fM2K4US_RTD_2 : REAL;
-                {attribute 'pytmc' := '
                     pv: MR2K4:KBO:RTD:BEND:US:3
                     field: ASLO 0.1
                     field: EGU C
@@ -1101,13 +1088,6 @@ Main
             '}
             fM2K4DS_RTD_1 : REAL;
             {attribute 'pytmc' := '
-                pv: MR2K4:KBO:RTD:CHIN:R
-                field: ASLO 0.1
-                field: EGU C
-                io: i
-            '}
-            fM2K4DS_RTD_2 : REAL;
-            {attribute 'pytmc' := '
                 pv: MR2K4:KBO:RTD:BEND:DS:3
                 field: ASLO 0.1
                 field: EGU C
@@ -1123,13 +1103,6 @@ Main
             '}
             fM3K4US_RTD_1 : REAL;
             {attribute 'pytmc' := '
-                pv: MR3K4:KBO:RTD:CHIN:L
-                field: ASLO 0.1
-                field: EGU C
-                io: i
-            '}
-            fM3K4US_RTD_2 : REAL;
-            {attribute 'pytmc' := '
                 pv: MR3K4:KBO:RTD:BEND:US:3
                 field: ASLO 0.1
                 field: EGU C
@@ -1144,13 +1117,6 @@ Main
                 io: i
             '}
             fM3K4DS_RTD_1 : REAL;
-            {attribute 'pytmc' := '
-                pv: MR3K4:KBO:RTD:CHIN:R
-                field: ASLO 0.1
-                field: EGU C
-                io: i
-            '}
-            fM3K4DS_RTD_2 : REAL;
             {attribute 'pytmc' := '
                 pv: MR3K4:KBO:RTD:BEND:DS:3
                 field: ASLO 0.1
@@ -1414,19 +1380,15 @@ Main
 
         // LAMP KB Bender RTDs
             fM2K4US_RTD_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_1);
-            fM2K4US_RTD_2 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_2);
             fM2K4US_RTD_3 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_3);
 
             fM2K4DS_RTD_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4DS_RTD_1);
-            fM2K4DS_RTD_2 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4DS_RTD_2);
             fM2K4DS_RTD_3 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4DS_RTD_3);
 
             fM3K4US_RTD_1 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4US_RTD_1);
-            fM3K4US_RTD_2 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4US_RTD_2);
             fM3K4US_RTD_3 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4US_RTD_3);
 
             fM3K4DS_RTD_1 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_1);
-            fM3K4DS_RTD_2 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_2);
             fM3K4DS_RTD_3 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_3);
 
 
@@ -1434,16 +1396,13 @@ Main
 
         // RTD not connected if T=0
             bM2K4US_RTD_1_Err := fM2K4US_RTD_1 = 0;
-            bM2K4US_RTD_2_Err := fM2K4US_RTD_2 = 0;
             bM2K4US_RTD_3_Err := fM2K4US_RTD_3 = 0;
             bM2K4DS_RTD_1_Err := fM2K4DS_RTD_1 = 0;
-            bM2K4DS_RTD_2_Err := fM2K4DS_RTD_2 = 0;
             bM2K4DS_RTD_3_Err := fM2K4DS_RTD_3 = 0;
+
             bM3K4US_RTD_1_Err := fM3K4US_RTD_1 = 0;
-            bM3K4US_RTD_2_Err := fM3K4US_RTD_2 = 0;
             bM3K4US_RTD_3_Err := fM3K4US_RTD_3 = 0;
             bM3K4DS_RTD_1_Err := fM3K4DS_RTD_1 = 0;
-            bM3K4DS_RTD_2_Err := fM3K4DS_RTD_2 = 0;
             bM3K4DS_RTD_3_Err := fM3K4DS_RTD_3 = 0;
 
         // LAMP KB Bender RTD interlocks
@@ -1754,8 +1713,33 @@ PRG_MR2K4_KBO
             pv: MR2K4:KBO
         '}
         fbCoolingPanel : FB_Axilon_Cooling_1f1p;
+        // M2K4 Mirror RTDs
+        {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Value;
+                                  .bUnderrange := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Underrange;
+                                  .bOverrange := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Overrange;
+                                  .bError := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Error'}
+        {attribute 'pytmc' := '
+            pv: MR2K4:KBO:RTD:CHIN:L
+            field: EGU C
+            io: i
+        '}
+        fbM2K4_Chin_Left_RTD : FB_TempSensor;
+
+        {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Value;
+                                  .bUnderrange := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Underrange;
+                                  .bOverrange := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Overrange;
+                                  .bError := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Error'}
+        {attribute 'pytmc' := '
+            pv: MR2K4:KBO:RTD:CHIN:R
+            field: EGU C
+            io: i
+        '}
+        fbM2K4_Chin_Right_RTD : FB_TempSensor;
+
     END_VAR
     fbCoolingPanel();
+    fbM2K4_Chin_Left_RTD();
+    fbM2K4_Chin_Right_RTD();
 
     END_PROGRAM
 
@@ -1777,8 +1761,33 @@ PRG_MR3K4_KBO
             pv: MR3K4:KBO
         '}
         fbCoolingPanel : FB_Axilon_Cooling_1f1p;
+
+        // M3K4 Mirror RTDs
+        {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Value;
+                                  .bUnderrange := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Underrange;
+                                  .bOverrange := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Overrange;
+                                  .bError := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Error'}
+        {attribute 'pytmc' := '
+            pv: MR3K4:KBO:RTD:CHIN:L
+            field: EGU C
+            io: i
+        '}
+        fbM3K4_Chin_Left_RTD : FB_TempSensor;
+
+        {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Value;
+                                  .bUnderrange := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Underrange;
+                                  .bOverrange := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Overrange;
+                                  .bError := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Error'}
+        {attribute 'pytmc' := '
+            pv: MR3K4:KBO:RTD:CHIN:R
+            field: EGU C
+            io: i
+        '}
+        fbM3K4_Chin_Right_RTD : FB_TempSensor;
     END_VAR
     fbCoolingPanel();
+    fbM3K4_Chin_Left_RTD();
+    fbM3K4_Chin_Right_RTD();
 
     END_PROGRAM
 
@@ -1853,6 +1862,7 @@ PRG_PMPS
         bMR1K1_IN : BOOL;
         bST3K4_IN : BOOL;
         bMR1K3_IN : BOOL;
+        bST1K4_IN : BOOL;
     END_VAR
     MOTION_GVL.fbStandardPMPSDB(
         io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1,
@@ -1866,6 +1876,7 @@ PRG_PMPS
                 AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT];
 
     bST3K4_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST3K4];
+    bST1K4_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST1K4];
 
     bMR1K3_IN := PMPS.PMPS_GVL.stCurrentBeamParameters.aVetodevices[PMPS.K_Stopper.MR1K3_IN]
         AND NOT PMPS.PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_OUT];
@@ -1874,7 +1885,8 @@ PRG_PMPS
 
     ffFFO2ToFFO1(i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1);
 
-    GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto:= bMR1K1_IN OR bMR1K3_IN OR bST3K4_IN);
+    GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto:= bMR1K1_IN OR bMR1K3_IN OR bST3K4_IN OR bST1K4_IN);
+
     GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto:= bMR1K1_IN OR bMR1K3_IN);
 
     fb_vetoArbiter(bVeto := GVL_PMPS.g_FastFaultOutput2.i_xVeto, HigherAuthority := GVL_PMPS.g_fbArbiter1, LowerAuthority:= GVL_PMPS.g_fbArbiter2,

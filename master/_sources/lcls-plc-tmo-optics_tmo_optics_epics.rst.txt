@@ -47342,14 +47342,6 @@ Database Records
         | io: input
 
 
-    * - MR2K4:KBO:RTD:CHIN:R_RBV
-      - ai
-      - Main.fM2K4DS_RTD_2
-      - | field: ASLO 0.1
-        | field: EGU C
-        | io: input
-
-
     * - MR2K4:KBO:RTD:BEND:DS:3_RBV
       - ai
       - Main.fM2K4DS_RTD_3
@@ -47361,14 +47353,6 @@ Database Records
     * - MR2K4:KBO:RTD:BEND:US:1_RBV
       - ai
       - Main.fM2K4US_RTD_1
-      - | field: ASLO 0.1
-        | field: EGU C
-        | io: input
-
-
-    * - MR2K4:KBO:RTD:CHIN:L_RBV
-      - ai
-      - Main.fM2K4US_RTD_2
       - | field: ASLO 0.1
         | field: EGU C
         | io: input
@@ -47390,14 +47374,6 @@ Database Records
         | io: input
 
 
-    * - MR3K4:KBO:RTD:CHIN:R_RBV
-      - ai
-      - Main.fM3K4DS_RTD_2
-      - | field: ASLO 0.1
-        | field: EGU C
-        | io: input
-
-
     * - MR3K4:KBO:RTD:BEND:DS:3_RBV
       - ai
       - Main.fM3K4DS_RTD_3
@@ -47409,14 +47385,6 @@ Database Records
     * - MR3K4:KBO:RTD:BEND:US:1_RBV
       - ai
       - Main.fM3K4US_RTD_1
-      - | field: ASLO 0.1
-        | field: EGU C
-        | io: input
-
-
-    * - MR3K4:KBO:RTD:CHIN:L_RBV
-      - ai
-      - Main.fM3K4US_RTD_2
       - | field: ASLO 0.1
         | field: EGU C
         | io: input
@@ -49039,6 +49007,58 @@ Database Records
         | io: input
 
 
+    * - MR2K4:KBO:RTD:CHIN:L:CONN_RBV
+      - bi
+      - PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bConnected
+      - | field: EGU C
+        | field: ONAM Connected
+        | field: ZNAM Disconnected
+        | io: input
+
+
+    * - MR2K4:KBO:RTD:CHIN:L:ERR_RBV
+      - bi
+      - PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bError
+      - | field: EGU C
+        | field: ONAM True
+        | field: ZNAM False
+        | io: input
+
+
+    * - MR2K4:KBO:RTD:CHIN:L:TEMP_RBV
+      - ai
+      - PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.fTemp
+      - | field: EGU C
+        | field: PREC 2
+        | io: input
+
+
+    * - MR2K4:KBO:RTD:CHIN:R:CONN_RBV
+      - bi
+      - PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bConnected
+      - | field: EGU C
+        | field: ONAM Connected
+        | field: ZNAM Disconnected
+        | io: input
+
+
+    * - MR2K4:KBO:RTD:CHIN:R:ERR_RBV
+      - bi
+      - PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bError
+      - | field: EGU C
+        | field: ONAM True
+        | field: ZNAM False
+        | io: input
+
+
+    * - MR2K4:KBO:RTD:CHIN:R:TEMP_RBV
+      - ai
+      - PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.fTemp
+      - | field: EGU C
+        | field: PREC 2
+        | io: input
+
+
     * - MR3K4:KBO:FWM:1_RBV
       - ai
       - PRG_MR3K4_KBO.fbCoolingPanel.fFlow_1_val
@@ -49060,6 +49080,58 @@ Database Records
       - | field: EGU bar
         | field: LOW 0.1
         | field: LSV MAJOR
+        | io: input
+
+
+    * - MR3K4:KBO:RTD:CHIN:L:CONN_RBV
+      - bi
+      - PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bConnected
+      - | field: EGU C
+        | field: ONAM Connected
+        | field: ZNAM Disconnected
+        | io: input
+
+
+    * - MR3K4:KBO:RTD:CHIN:L:ERR_RBV
+      - bi
+      - PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bError
+      - | field: EGU C
+        | field: ONAM True
+        | field: ZNAM False
+        | io: input
+
+
+    * - MR3K4:KBO:RTD:CHIN:L:TEMP_RBV
+      - ai
+      - PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.fTemp
+      - | field: EGU C
+        | field: PREC 2
+        | io: input
+
+
+    * - MR3K4:KBO:RTD:CHIN:R:CONN_RBV
+      - bi
+      - PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bConnected
+      - | field: EGU C
+        | field: ONAM Connected
+        | field: ZNAM Disconnected
+        | io: input
+
+
+    * - MR3K4:KBO:RTD:CHIN:R:ERR_RBV
+      - bi
+      - PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bError
+      - | field: EGU C
+        | field: ONAM True
+        | field: ZNAM False
+        | io: input
+
+
+    * - MR3K4:KBO:RTD:CHIN:R:TEMP_RBV
+      - ai
+      - PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.fTemp
+      - | field: EGU C
+        | field: PREC 2
         | io: input
 
 

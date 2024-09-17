@@ -578,10 +578,8 @@ GVL_M2K4_RTD
     :align: center
 
         GVL_M2K4_RTD.nM2K4DS_RTD_1, INT, 664211376 (16)
-        GVL_M2K4_RTD.nM2K4DS_RTD_2, INT, 664214144 (16)
         GVL_M2K4_RTD.nM2K4DS_RTD_3, INT, 664214160 (16)
         GVL_M2K4_RTD.nM2K4US_RTD_1, INT, 662973280 (16)
-        GVL_M2K4_RTD.nM2K4US_RTD_2, INT, 662973296 (16)
         GVL_M2K4_RTD.nM2K4US_RTD_3, INT, 664211360 (16)
 
 
@@ -605,10 +603,8 @@ GVL_M3K4_RTD
     :align: center
 
         GVL_M3K4_RTD.nM3K4DS_RTD_1, INT, 664214416 (16)
-        GVL_M3K4_RTD.nM3K4DS_RTD_2, INT, 664214432 (16)
         GVL_M3K4_RTD.nM3K4DS_RTD_3, INT, 664214448 (16)
         GVL_M3K4_RTD.nM3K4US_RTD_1, INT, 664214176 (16)
-        GVL_M3K4_RTD.nM3K4US_RTD_2, INT, 664214192 (16)
         GVL_M3K4_RTD.nM3K4US_RTD_3, INT, 664214400 (16)
 
 
@@ -801,7 +797,7 @@ Main
 .. raw:: html
 
    <details>
-       <summary>454 Symbols</summary>
+       <summary>450 Symbols</summary>
 
 .. csv-table::
     :header: Symbol, Type, Offset/Size
@@ -917,16 +913,12 @@ Main
         Main.fEncLeverArm_mm, LREAL, 642131392 (64)
         Main.fEncRefPitchM1K4_urad, LREAL, 642131328 (64)
         Main.fM2K4DS_RTD_1, REAL, 654934112 (32)
-        Main.fM2K4DS_RTD_2, REAL, 654934144 (32)
         Main.fM2K4DS_RTD_3, REAL, 654934176 (32)
         Main.fM2K4US_RTD_1, REAL, 654934016 (32)
-        Main.fM2K4US_RTD_2, REAL, 654934048 (32)
         Main.fM2K4US_RTD_3, REAL, 654934080 (32)
         Main.fM3K4DS_RTD_1, REAL, 654934304 (32)
-        Main.fM3K4DS_RTD_2, REAL, 654934336 (32)
         Main.fM3K4DS_RTD_3, REAL, 654934368 (32)
         Main.fM3K4US_RTD_1, REAL, 654934208 (32)
-        Main.fM3K4US_RTD_2, REAL, 654934240 (32)
         Main.fM3K4US_RTD_3, REAL, 654934272 (32)
         Main.fMaxBendDSRMSErrorM2K4, LREAL, 649902400 (64)
         Main.fMaxBendDSRMSErrorM3K4, LREAL, 651837440 (64)
@@ -1475,6 +1467,11 @@ PRG_MR1K4_SOMS
 PRG_MR2K4_KBO
 ^^^^^^^^^^^^^
 
+.. raw:: html
+
+   <details>
+       <summary>13 Symbols</summary>
+
 .. csv-table::
     :header: Symbol, Type, Offset/Size
     :align: center
@@ -1482,10 +1479,30 @@ PRG_MR2K4_KBO
         PRG_MR2K4_KBO.fbCoolingPanel, FB_Axilon_Cooling_1f1p, 663818752 (832)
         PRG_MR2K4_KBO.fbCoolingPanel.fbFlow_1.iRaw, INT, 663818976 (16)
         PRG_MR2K4_KBO.fbCoolingPanel.fbPress_1.iRaw, INT, 663819296 (16)
+        PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD, FB_TempSensor, 638759424 (256)
+        PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bError, BOOL, 638759624 (8)
+        PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bOverrange, BOOL, 638759640 (8)
+        PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bUnderrange, BOOL, 638759632 (8)
+        PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.iRaw, INT, 638759648 (16)
+        PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD, FB_TempSensor, 638759680 (256)
+        PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bError, BOOL, 638759880 (8)
+        PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bOverrange, BOOL, 638759896 (8)
+        PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bUnderrange, BOOL, 638759888 (8)
+        PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.iRaw, INT, 638759904 (16)
+
+.. raw:: html
+
+   </details>
+   <br />
 
 
 PRG_MR3K4_KBO
 ^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>13 Symbols</summary>
 
 .. csv-table::
     :header: Symbol, Type, Offset/Size
@@ -1494,6 +1511,21 @@ PRG_MR3K4_KBO
         PRG_MR3K4_KBO.fbCoolingPanel, FB_Axilon_Cooling_1f1p, 663819584 (832)
         PRG_MR3K4_KBO.fbCoolingPanel.fbFlow_1.iRaw, INT, 663819808 (16)
         PRG_MR3K4_KBO.fbCoolingPanel.fbPress_1.iRaw, INT, 663820128 (16)
+        PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD, FB_TempSensor, 638759936 (256)
+        PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bError, BOOL, 638760136 (8)
+        PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bOverrange, BOOL, 638760152 (8)
+        PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bUnderrange, BOOL, 638760144 (8)
+        PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.iRaw, INT, 638760160 (16)
+        PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD, FB_TempSensor, 638760192 (256)
+        PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bError, BOOL, 638760392 (8)
+        PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bOverrange, BOOL, 638760408 (8)
+        PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bUnderrange, BOOL, 638760400 (8)
+        PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.iRaw, INT, 638760416 (16)
+
+.. raw:: html
+
+   </details>
+   <br />
 
 
 PRG_MR4K4_KBO
@@ -1523,12 +1555,18 @@ PRG_MR5K4_KBO
 PRG_PMPS
 ^^^^^^^^
 
+.. raw:: html
+
+   <details>
+       <summary>11 Symbols</summary>
+
 .. csv-table::
     :header: Symbol, Type, Offset/Size
     :align: center
 
         PRG_PMPS.bMR1K1_IN, BOOL, 654934496 (8)
         PRG_PMPS.bMR1K3_IN, BOOL, 654934512 (8)
+        PRG_PMPS.bST1K4_IN, BOOL, 638758176 (8)
         PRG_PMPS.bST3K4_IN, BOOL, 654934504 (8)
         PRG_PMPS.fb_vetoArbiter, FB_VetoArbiter, 662776160 (27168)
         PRG_PMPS.fbArbiterIO, FB_SubSysToArbiter_IO, 662803328 (138752)
@@ -1537,6 +1575,11 @@ PRG_PMPS
         PRG_PMPS.fbArbiterIO.xTxPDO_state, BIT, 662807649 (1)
         PRG_PMPS.fbArbiterIO.xTxPDO_toggle, BIT, 662807648 (1)
         PRG_PMPS.ffFFO2ToFFO1, FB_FastFault, 662942080 (25088)
+
+.. raw:: html
+
+   </details>
+   <br />
 
 
 PRG_States
