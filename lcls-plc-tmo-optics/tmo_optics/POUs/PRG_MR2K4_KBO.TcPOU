@@ -12,10 +12,36 @@ VAR
         pv: MR2K4:KBO
     '}
     fbCoolingPanel : FB_Axilon_Cooling_1f1p;
+    // M2K4 Mirror RTDs
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Value;
+                              .bUnderrange := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Underrange;
+                              .bOverrange := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Overrange;
+                              .bError := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Error'}
+    {attribute 'pytmc' := '
+        pv: MR2K4:KBO:RTD:CHIN:L
+        field: EGU C
+        io: i
+    '}
+    fbM2K4_Chin_Left_RTD : FB_TempSensor;
+
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Value;
+                              .bUnderrange := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Underrange;
+                              .bOverrange := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Overrange;
+                              .bError := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Error'}
+    {attribute 'pytmc' := '
+        pv: MR2K4:KBO:RTD:CHIN:R
+        field: EGU C
+        io: i
+    '}
+    fbM2K4_Chin_Right_RTD : FB_TempSensor;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbCoolingPanel();]]></ST>
+      <ST><![CDATA[fbCoolingPanel();
+fbM2K4_Chin_Left_RTD();
+fbM2K4_Chin_Right_RTD();
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
