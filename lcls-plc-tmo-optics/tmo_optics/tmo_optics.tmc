@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{63F06E6F-5FF1-E1CC-76E9-A4CEBC9781E6}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{909E0B97-F04E-9B61-21C1-19945BF18463}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -3472,31 +3472,31 @@
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83375928</GetCodeOffs>
+        <GetCodeOffs>83375924</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83375964</GetCodeOffs>
+        <GetCodeOffs>83375960</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83375972</GetCodeOffs>
+        <GetCodeOffs>83375968</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83375952</GetCodeOffs>
+        <GetCodeOffs>83375948</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83375968</GetCodeOffs>
+        <GetCodeOffs>83375964</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -4748,15 +4748,15 @@
         <Name>nId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83375864</GetCodeOffs>
-        <SetCodeOffs>83375888</SetCodeOffs>
+        <GetCodeOffs>83375860</GetCodeOffs>
+        <SetCodeOffs>83375884</SetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83375904</GetCodeOffs>
-        <SetCodeOffs>83375916</SetCodeOffs>
+        <GetCodeOffs>83375900</GetCodeOffs>
+        <SetCodeOffs>83375912</SetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -4997,31 +4997,31 @@
         <Name>eSeverity</Name>
         <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
         <BitSize>16</BitSize>
-        <GetCodeOffs>83376020</GetCodeOffs>
+        <GetCodeOffs>83376016</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>ipSourceInfo</Name>
         <Type Namespace="LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83376000</GetCodeOffs>
+        <GetCodeOffs>83375996</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nEventId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83376088</GetCodeOffs>
+        <GetCodeOffs>83376084</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nUniqueId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83376092</GetCodeOffs>
+        <GetCodeOffs>83376088</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventClassName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83376048</GetCodeOffs>
+        <GetCodeOffs>83376044</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -5033,7 +5033,7 @@
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83376096</GetCodeOffs>
+        <GetCodeOffs>83376092</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -5626,7 +5626,7 @@
         <Name>nTimeSent</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>83376124</GetCodeOffs>
+        <GetCodeOffs>83376120</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcDisplayTypeGUID</Name>
@@ -22225,14 +22225,14 @@ contributing fast faults, unless the FFO is currently vetoed.
         <Type>BOOL</Type>
         <Comment> is TRUE if a buffer is available.</Comment>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83379032</GetCodeOffs>
+        <GetCodeOffs>83379028</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nBufferSize</Name>
         <Type>UDINT</Type>
         <Comment> current buffer size in bytes.</Comment>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83378984</GetCodeOffs>
+        <GetCodeOffs>83378980</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="3">__getnBufferSize</Name>
@@ -23328,7 +23328,7 @@ contributing fast faults, unless the FFO is currently vetoed.
         <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc3_IPCDiag.Tc3_DynamicMemory">I_DynMem_Manager</Type>
         <Comment> dynamic memory manager used in the Tc3_IPCDiag library</Comment>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83379108</GetCodeOffs>
+        <GetCodeOffs>83379104</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>GetParameterByIdx</Name>
@@ -23987,7 +23987,7 @@ contributing fast faults, unless the FFO is currently vetoed.
         <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc3_IPCDiag.Tc3_DynamicMemory">I_DynMem_Manager</Type>
         <Comment> dynamic memory manager used in the Tc3_IPCDiag library</Comment>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83379164</GetCodeOffs>
+        <GetCodeOffs>83379160</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>Clear</Name>
@@ -49092,7 +49092,7 @@ External Setpoint Generation:
         <Name>nTimestamp</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>83382600</GetCodeOffs>
+        <GetCodeOffs>83382596</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcDisplayTypeGUID</Name>
@@ -51020,31 +51020,31 @@ External Setpoint Generation:
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83382152</GetCodeOffs>
+        <GetCodeOffs>83382148</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>83382196</GetCodeOffs>
+        <GetCodeOffs>83382192</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83382160</GetCodeOffs>
+        <GetCodeOffs>83382156</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>83382184</GetCodeOffs>
+        <GetCodeOffs>83382180</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>83382204</GetCodeOffs>
+        <GetCodeOffs>83382200</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -78184,24 +78184,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>662969120</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>PRG_MR3K4_KBO.nM3K4US_RTD_2</Name>
-            <Comment>chin L
-chin R</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Value</Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>662969424</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
             <Comment> M2K4 BENDER RTDs
  M2K4 US RTDs</Comment>
@@ -78220,7 +78202,7 @@ chin R</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>662969440</BitOffs>
+            <BitOffs>662969424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
@@ -78230,6 +78212,26 @@ chin R</Comment>
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>TIIB[EL3202-0010_M2K4US3_M2K4DS1]^RTD Inputs Channel 1^Value</Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>662969440</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
+            <Comment> M2K4 DS RTDs</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIIB[EL3202-0010_M2K4US3_M2K4DS1]^RTD Inputs Channel 2^Value</Value>
               </Property>
               <Property>
                 <Name>TcAddressType</Name>
@@ -78586,14 +78588,13 @@ chin R</Comment>
             <BitOffs>662973536</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
-            <Comment> M2K4 DS RTDs</Comment>
+            <Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M2K4US3_M2K4DS1]^RTD Inputs Channel 2^Value</Value>
+                <Value>TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 2^Value</Value>
               </Property>
               <Property>
                 <Name>TcAddressType</Name>
@@ -78606,13 +78607,15 @@ chin R</Comment>
             <BitOffs>662974240</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
+            <Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>
+            <Comment> M3K4 BENDER RTDs
+ M3K4 US RTDs</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 2^Value</Value>
+                <Value>TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 1^Value</Value>
               </Property>
               <Property>
                 <Name>TcAddressType</Name>
@@ -79345,15 +79348,13 @@ chin R</Comment>
             <BitOffs>664637664</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>
-            <Comment> M3K4 BENDER RTDs
- M3K4 US RTDs</Comment>
+            <Name>GVL_M3K4_RTD.nM3K4US_RTD_3</Name>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 1^Value</Value>
+                <Value>TIIB[EL3202-0010_M3K4US3_M3K4DS1]^RTD Inputs Channel 1^Value</Value>
               </Property>
               <Property>
                 <Name>TcAddressType</Name>
@@ -79366,13 +79367,14 @@ chin R</Comment>
             <BitOffs>664866848</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_M3K4_RTD.nM3K4US_RTD_3</Name>
+            <Name>GVL_M3K4_RTD.nM3K4DS_RTD_1</Name>
+            <Comment> M2K4 DS RTDs</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M3K4US3_M3K4DS1]^RTD Inputs Channel 1^Value</Value>
+                <Value>TIIB[EL3202-0010_M3K4US3_M3K4DS1]^RTD Inputs Channel 2^Value</Value>
               </Property>
               <Property>
                 <Name>TcAddressType</Name>
@@ -79398,26 +79400,6 @@ chin R</Comment>
             <BitOffs>664869312</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_M3K4_RTD.nM3K4DS_RTD_1</Name>
-            <Comment> M2K4 DS RTDs</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M3K4US3_M3K4DS1]^RTD Inputs Channel 2^Value</Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>664869824</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4DS_RTD_3</Name>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -79434,7 +79416,7 @@ chin R</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>664869840</BitOffs>
+            <BitOffs>664869824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bError</Name>
@@ -79737,18 +79719,6 @@ chin R</Comment>
             <BitOffs>664871328</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>664871568</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bOverrange</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -79795,6 +79765,18 @@ chin R</Comment>
               </Property>
             </Properties>
             <BitOffs>664871560</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>664871568</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -80580,6 +80562,19 @@ chin R</Comment>
             <BitOffs>647022208</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>Main.M24.bBrakeRelease</Name>
+            <Comment> NC Brake Output: TRUE to release brake</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>647652312</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>Main.M23.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
             <BaseType GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}">PLCTONC_AXIS_REF</BaseType>
@@ -80627,19 +80622,6 @@ chin R</Comment>
               </Property>
             </Properties>
             <BitOffs>647643328</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.M24.bBrakeRelease</Name>
-            <Comment> NC Brake Output: TRUE to release brake</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>647652312</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fbMotionStageM24.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -90692,7 +90674,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>664869856</BitOffs>
+            <BitOffs>664869840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bSimulationMode</Name>
@@ -90707,7 +90689,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>664869864</BitOffs>
+            <BitOffs>664869848</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nRegisterSize</Name>
@@ -90716,6 +90698,21 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
             <BaseType>WORD</BaseType>
             <Default>
               <Value>32</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>664869856</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.nPackMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>UINT</BaseType>
+            <Default>
+              <Value>8</Value>
             </Default>
             <Properties>
               <Property>
@@ -91092,21 +91089,6 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
             <BitOffs>666811904</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Constants.nPackMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>UINT</BaseType>
-            <Default>
-              <Value>8</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>666811968</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>Constants.bFPUSupport</Name>
             <Comment> Does the target support multiple cores?</Comment>
             <BitSize>8</BitSize>
@@ -91119,7 +91101,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>666811984</BitOffs>
+            <BitOffs>666811968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bMulticoreSupport</Name>
@@ -91133,7 +91115,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>666811992</BitOffs>
+            <BitOffs>666811976</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersionNumeric</Name>
@@ -92046,7 +92028,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-10-25T10:53:55</Value>
+          <Value>2024-10-25T11:03:30</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>

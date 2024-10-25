@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{63F06E6F-5FF1-E1CC-76E9-A4CEBC9781E6}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{909E0B97-F04E-9B61-21C1-19945BF18463}">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -2509,12 +2509,6 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>PRG_MR3K4_KBO.nM3K4US_RTD_2</Name>
-					<Comment><![CDATA[chin L
-chin R]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
 					<Comment><![CDATA[ M2K4 BENDER RTDs
  M2K4 US RTDs]]></Comment>
@@ -2522,6 +2516,11 @@ chin R]]></Comment>
 				</Var>
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
+					<Comment><![CDATA[ M2K4 DS RTDs]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -2629,12 +2628,13 @@ chin R]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
-					<Comment><![CDATA[ M2K4 DS RTDs]]></Comment>
+					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
+					<Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>
+					<Comment><![CDATA[ M3K4 BENDER RTDs
+ M3K4 US RTDs]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -2830,24 +2830,18 @@ chin R]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>
-					<Comment><![CDATA[ M3K4 BENDER RTDs
- M3K4 US RTDs]]></Comment>
+					<Name>GVL_M3K4_RTD.nM3K4US_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M3K4_RTD.nM3K4US_RTD_3</Name>
+					<Name>GVL_M3K4_RTD.nM3K4DS_RTD_1</Name>
+					<Comment><![CDATA[ M2K4 DS RTDs]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
 					<Comment><![CDATA[Raw encoder count]]></Comment>
 					<Type>LINT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M3K4_RTD.nM3K4DS_RTD_1</Name>
-					<Comment><![CDATA[ M2K4 DS RTDs]]></Comment>
-					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_M3K4_RTD.nM3K4DS_RTD_3</Name>
@@ -2934,10 +2928,6 @@ chin R]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bOverrange</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -2947,6 +2937,10 @@ chin R]]></Comment>
 				</Var>
 				<Var>
 					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M5K4_RTD.nM5K4_Chin_Tail_RTD.bUnderrange</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -3226,6 +3220,11 @@ chin R]]></Comment>
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
+					<Name>Main.M24.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>Main.M23.Axis.PlcToNc</Name>
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
@@ -3241,11 +3240,6 @@ chin R]]></Comment>
 				<Var>
 					<Name>Main.M24.Axis.PlcToNc</Name>
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M24.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbMotionStageM24.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -3600,7 +3594,6 @@ chin R]]></Comment>
 				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.nM3K4US_RTD_2" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
