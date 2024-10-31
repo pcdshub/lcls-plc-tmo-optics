@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{E933418E-4170-00E5-2DC6-0A785AA1C402}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{DCC0ECCA-2F39-C81B-A03D-C221F72F29B3}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -21849,6 +21849,21 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
+      <Name>USINT (USINT#1..255)</Name>
+      <BitSize>8</BitSize>
+      <BaseType>USINT</BaseType>
+      <Properties>
+        <Property>
+          <Name>LowerBorder</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>UpperBorder</Name>
+          <Value>255</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
       <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc3_IPCDiag">E_IPCDiag_Datatype</Name>
       <Comment> parameter datatype 1..15</Comment>
       <BitSize>8</BitSize>
@@ -23456,7 +23471,7 @@ contributing fast faults, unless the FFO is currently vetoed.
         </Parameter>
         <Local>
           <Name>nParameterIdx</Name>
-          <Type>USINT (1..255)</Type>
+          <Type>USINT (USINT#1..255)</Type>
           <BitSize>8</BitSize>
         </Local>
         <Local>
@@ -27317,7 +27332,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Method>
     </DataType>
     <DataType>
-      <Name>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
+      <Name>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
       <BitSize>16</BitSize>
       <BaseType>UINT</BaseType>
       <Properties>
@@ -27328,21 +27343,6 @@ contributing fast faults, unless the FFO is currently vetoed.
         <Property>
           <Name>UpperBorder</Name>
           <Value>100</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Name>
-      <BitSize>16</BitSize>
-      <BaseType>UINT</BaseType>
-      <Properties>
-        <Property>
-          <Name>LowerBorder</Name>
-          <Value>1</Value>
-        </Property>
-        <Property>
-          <Name>UpperBorder</Name>
-          <Value>1000</Value>
         </Property>
       </Properties>
     </DataType>
@@ -27363,7 +27363,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </SubItem>
       <SubItem>
         <Name>PrintingTestSuiteResultNumber</Name>
-        <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+        <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
         <BitSize>16</BitSize>
         <BitOffs>96</BitOffs>
       </SubItem>
@@ -27401,12 +27401,12 @@ contributing fast faults, unless the FFO is currently vetoed.
         </Local>
         <Local>
           <Name>TestsInTestSuiteCounter</Name>
-          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
+          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
           <BitSize>16</BitSize>
         </Local>
         <Local>
           <Name>MaxNumberOfTestsToPrint</Name>
-          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
+          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
           <BitSize>16</BitSize>
         </Local>
         <Local>
@@ -28339,7 +28339,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </SubItem>
       <SubItem>
         <Name>WritingTestSuiteResultNumber</Name>
-        <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+        <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
         <BitSize>16</BitSize>
         <BitOffs>530208</BitOffs>
       </SubItem>
@@ -28738,6 +28738,21 @@ contributing fast faults, unless the FFO is currently vetoed.
         <Property>
           <Name>PouType</Name>
           <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
+      <BitSize>16</BitSize>
+      <BaseType>UINT</BaseType>
+      <Properties>
+        <Property>
+          <Name>LowerBorder</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>UpperBorder</Name>
+          <Value>100</Value>
         </Property>
       </Properties>
     </DataType>
@@ -30364,7 +30379,7 @@ contributing fast faults, unless the FFO is currently vetoed.
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
         <Local>
@@ -31899,7 +31914,7 @@ contributing fast faults, unless the FFO is currently vetoed.
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -32484,7 +32499,7 @@ contributing fast faults, unless the FFO is currently vetoed.
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -32932,7 +32947,7 @@ contributing fast faults, unless the FFO is currently vetoed.
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -33306,7 +33321,7 @@ contributing fast faults, unless the FFO is currently vetoed.
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -33814,21 +33829,6 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
-      <BitSize>16</BitSize>
-      <BaseType>UINT</BaseType>
-      <Properties>
-        <Property>
-          <Name>LowerBorder</Name>
-          <Value>1</Value>
-        </Property>
-        <Property>
-          <Name>UpperBorder</Name>
-          <Value>100</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
       <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.TcUnit">ST_AdsLogStringMessage</Name>
       <BitSize>4128</BitSize>
       <SubItem>
@@ -33981,6 +33981,146 @@ contributing fast faults, unless the FFO is currently vetoed.
           </Properties>
         </Parameter>
       </Method>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General">FB_TempSensor</Name>
+      <BitSize>256</BitSize>
+      <SubItem>
+        <Name>fResolution</Name>
+        <Type>LREAL</Type>
+        <Comment> Resolution parameter from the Beckhoff docs. Default is 0.1 for 0.1 degree resolution</Comment>
+        <BitSize>64</BitSize>
+        <BitOffs>64</BitOffs>
+        <Default>
+          <Value>0.1</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fTemp</Name>
+        <Type>LREAL</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>128</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: TEMP
+        io: input
+        field: EGU C
+        field: PREC 2
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bConnected</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>192</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: CONN
+        io: input
+        field: ONAM Connected
+        field: ZNAM Disconnected
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bError</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>200</BitOffs>
+        <Default>
+          <Bool>true</Bool>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bUnderrange</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>208</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bOverrange</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>216</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iRaw</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>224</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
       <Properties>
         <Property>
           <Name>PouType</Name>
@@ -59519,146 +59659,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="LCLS_General">FB_TempSensor</Name>
-      <BitSize>256</BitSize>
-      <SubItem>
-        <Name>fResolution</Name>
-        <Type>LREAL</Type>
-        <Comment> Resolution parameter from the Beckhoff docs. Default is 0.1 for 0.1 degree resolution</Comment>
-        <BitSize>64</BitSize>
-        <BitOffs>64</BitOffs>
-        <Default>
-          <Value>0.1</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>fTemp</Name>
-        <Type>LREAL</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>128</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-        pv: TEMP
-        io: input
-        field: EGU C
-        field: PREC 2
-    </Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bConnected</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>192</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-        pv: CONN
-        io: input
-        field: ONAM Connected
-        field: ZNAM Disconnected
-    </Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bError</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>200</BitOffs>
-        <Default>
-          <Bool>true</Bool>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-        pv: ERR
-        io: input
-        field: ONAM True
-        field: ZNAM False
-    </Value>
-          </Property>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bUnderrange</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>208</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bOverrange</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>216</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>iRaw</Name>
-        <Type>INT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>224</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
       <Name>VERSION</Name>
       <BitSize>64</BitSize>
       <SubItem>
@@ -74849,6 +74849,246 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <ContextId>2</ContextId>
           <ByteSize>85786624</ByteSize>
           <Symbol>
+            <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759624</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759632</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759640</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759648</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759880</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759888</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759896</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759904</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638760136</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638760144</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638760152</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638760160</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bError</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638760392</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bUnderrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638760400</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bOverrange</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638760408</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.iRaw</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>638760416</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>Main.M1.Axis.NcToPlc</Name>
             <BitSize>2048</BitSize>
             <BaseType GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}">NCTOPLC_AXIS_REF</BaseType>
@@ -78027,25 +78267,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>662973280</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Value</Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>662973296</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
             <Comment>Raw encoder count</Comment>
             <BitSize>64</BitSize>
@@ -78380,25 +78601,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>664211376</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_M2K4_RTD.nM2K4DS_RTD_2</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Value</Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>664214144</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -78439,25 +78641,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>664214176</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_M3K4_RTD.nM3K4US_RTD_2</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Value</Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>664214192</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4US_RTD_3</Name>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -78495,25 +78678,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </Property>
             </Properties>
             <BitOffs>664214416</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_M3K4_RTD.nM3K4DS_RTD_2</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Value</Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>664214432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4DS_RTD_3</Name>
@@ -87687,6 +87851,100 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>638758176</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD</Name>
+            <Comment> M2K4 Mirror RTDs</Comment>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Value;
+                              .bUnderrange := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Underrange;
+                              .bOverrange := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Overrange;
+                              .bError := TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 2^Status^Error</Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MR2K4:KBO:RTD:CHIN:L
+        field: EGU C
+        io: i
+    </Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759424</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD</Name>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Value;
+                              .bUnderrange := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Underrange;
+                              .bOverrange := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Overrange;
+                              .bError := TIIB[EL3202-0010_M2K4DS2_M2K4DS3]^RTD Inputs Channel 1^Status^Error</Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MR2K4:KBO:RTD:CHIN:R
+        field: EGU C
+        io: i
+    </Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759680</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD</Name>
+            <Comment> M3K4 Mirror RTDs</Comment>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Value;
+                              .bUnderrange := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Underrange;
+                              .bOverrange := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Overrange;
+                              .bError := TIIB[EL3202-0010_M3K4US1_M3K4US2]^RTD Inputs Channel 2^Status^Error</Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MR3K4:KBO:RTD:CHIN:L
+        field: EGU C
+        io: i
+    </Value>
+              </Property>
+            </Properties>
+            <BitOffs>638759936</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD</Name>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Value;
+                              .bUnderrange := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Underrange;
+                              .bOverrange := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Overrange;
+                              .bError := TIIB[EL3202-0010_M3K4DS2_M3K4DS3]^RTD Inputs Channel 1^Status^Error</Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MR3K4:KBO:RTD:CHIN:R
+        field: EGU C
+        io: i
+    </Value>
+              </Property>
+            </Properties>
+            <BitOffs>638760192</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>Global_Version.stLibVersion_Tc2_ControllerToolbox</Name>
             <BitSize>288</BitSize>
             <BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType>
@@ -89301,23 +89559,6 @@ MR2K4 X ENC CNT</Comment>
             <BitOffs>654934016</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Main.fM2K4US_RTD_2</Name>
-            <BitSize>32</BitSize>
-            <BaseType>REAL</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-                pv: MR2K4:KBO:RTD:CHIN:L
-                field: ASLO 0.1
-                field: EGU C
-                io: i
-            </Value>
-              </Property>
-            </Properties>
-            <BitOffs>654934048</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>Main.fM2K4US_RTD_3</Name>
             <BitSize>32</BitSize>
             <BaseType>REAL</BaseType>
@@ -89351,23 +89592,6 @@ MR2K4 X ENC CNT</Comment>
               </Property>
             </Properties>
             <BitOffs>654934112</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.fM2K4DS_RTD_2</Name>
-            <BitSize>32</BitSize>
-            <BaseType>REAL</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-            pv: MR2K4:KBO:RTD:CHIN:R
-            field: ASLO 0.1
-            field: EGU C
-            io: i
-        </Value>
-              </Property>
-            </Properties>
-            <BitOffs>654934144</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fM2K4DS_RTD_3</Name>
@@ -89405,23 +89629,6 @@ MR2K4 X ENC CNT</Comment>
             <BitOffs>654934208</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Main.fM3K4US_RTD_2</Name>
-            <BitSize>32</BitSize>
-            <BaseType>REAL</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-            pv: MR3K4:KBO:RTD:CHIN:L
-            field: ASLO 0.1
-            field: EGU C
-            io: i
-        </Value>
-              </Property>
-            </Properties>
-            <BitOffs>654934240</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>Main.fM3K4US_RTD_3</Name>
             <BitSize>32</BitSize>
             <BaseType>REAL</BaseType>
@@ -89455,23 +89662,6 @@ MR2K4 X ENC CNT</Comment>
               </Property>
             </Properties>
             <BitOffs>654934304</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Main.fM3K4DS_RTD_2</Name>
-            <BitSize>32</BitSize>
-            <BaseType>REAL</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-            pv: MR3K4:KBO:RTD:CHIN:R
-            field: ASLO 0.1
-            field: EGU C
-            io: i
-        </Value>
-              </Property>
-            </Properties>
-            <BitOffs>654934336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_PMPS.bMR1K1_IN</Name>
@@ -91838,7 +92028,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-09-13T14:00:34</Value>
+          <Value>2024-10-25T11:21:14</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>

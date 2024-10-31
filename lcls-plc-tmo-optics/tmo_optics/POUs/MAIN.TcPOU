@@ -580,13 +580,6 @@ VAR
             '}
             fM2K4US_RTD_1 : REAL;
             {attribute 'pytmc' := '
-                pv: MR2K4:KBO:RTD:CHIN:L
-                field: ASLO 0.1
-                field: EGU C
-                io: i
-            '}
-            fM2K4US_RTD_2 : REAL;
-            {attribute 'pytmc' := '
                 pv: MR2K4:KBO:RTD:BEND:US:3
                 field: ASLO 0.1
                 field: EGU C
@@ -603,13 +596,6 @@ VAR
         '}
         fM2K4DS_RTD_1 : REAL;
         {attribute 'pytmc' := '
-            pv: MR2K4:KBO:RTD:CHIN:R
-            field: ASLO 0.1
-            field: EGU C
-            io: i
-        '}
-        fM2K4DS_RTD_2 : REAL;
-        {attribute 'pytmc' := '
             pv: MR2K4:KBO:RTD:BEND:DS:3
             field: ASLO 0.1
             field: EGU C
@@ -625,13 +611,6 @@ VAR
         '}
         fM3K4US_RTD_1 : REAL;
         {attribute 'pytmc' := '
-            pv: MR3K4:KBO:RTD:CHIN:L
-            field: ASLO 0.1
-            field: EGU C
-            io: i
-        '}
-        fM3K4US_RTD_2 : REAL;
-        {attribute 'pytmc' := '
             pv: MR3K4:KBO:RTD:BEND:US:3
             field: ASLO 0.1
             field: EGU C
@@ -646,13 +625,6 @@ VAR
             io: i
         '}
         fM3K4DS_RTD_1 : REAL;
-        {attribute 'pytmc' := '
-            pv: MR3K4:KBO:RTD:CHIN:R
-            field: ASLO 0.1
-            field: EGU C
-            io: i
-        '}
-        fM3K4DS_RTD_2 : REAL;
         {attribute 'pytmc' := '
             pv: MR3K4:KBO:RTD:BEND:DS:3
             field: ASLO 0.1
@@ -917,19 +889,15 @@ END_VAR]]></Declaration>
 
     // LAMP KB Bender RTDs
         fM2K4US_RTD_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_1);
-        fM2K4US_RTD_2 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_2);
         fM2K4US_RTD_3 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4US_RTD_3);
 
         fM2K4DS_RTD_1 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4DS_RTD_1);
-        fM2K4DS_RTD_2 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4DS_RTD_2);
         fM2K4DS_RTD_3 := INT_TO_REAL(GVL_M2K4_RTD.nM2K4DS_RTD_3);
 
         fM3K4US_RTD_1 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4US_RTD_1);
-        fM3K4US_RTD_2 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4US_RTD_2);
         fM3K4US_RTD_3 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4US_RTD_3);
 
         fM3K4DS_RTD_1 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_1);
-        fM3K4DS_RTD_2 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_2);
         fM3K4DS_RTD_3 := INT_TO_REAL(GVL_M3K4_RTD.nM3K4DS_RTD_3);
 
 
@@ -937,16 +905,13 @@ END_VAR]]></Declaration>
 
     // RTD not connected if T=0
         bM2K4US_RTD_1_Err := fM2K4US_RTD_1 = 0;
-        bM2K4US_RTD_2_Err := fM2K4US_RTD_2 = 0;
         bM2K4US_RTD_3_Err := fM2K4US_RTD_3 = 0;
         bM2K4DS_RTD_1_Err := fM2K4DS_RTD_1 = 0;
-        bM2K4DS_RTD_2_Err := fM2K4DS_RTD_2 = 0;
         bM2K4DS_RTD_3_Err := fM2K4DS_RTD_3 = 0;
+
         bM3K4US_RTD_1_Err := fM3K4US_RTD_1 = 0;
-        bM3K4US_RTD_2_Err := fM3K4US_RTD_2 = 0;
         bM3K4US_RTD_3_Err := fM3K4US_RTD_3 = 0;
         bM3K4DS_RTD_1_Err := fM3K4DS_RTD_1 = 0;
-        bM3K4DS_RTD_2_Err := fM3K4DS_RTD_2 = 0;
         bM3K4DS_RTD_3_Err := fM3K4DS_RTD_3 = 0;
 
     // LAMP KB Bender RTD interlocks

@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{E933418E-4170-00E5-2DC6-0A785AA1C402}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{DCC0ECCA-2F39-C81B-A03D-C221F72F29B3}">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1370,6 +1370,70 @@ External Setpoint Generation:
 			</Vars>
 			<Vars VarGrpType="1" ContextId="2" AreaNo="32">
 				<Name>PlcTask Inputs</Name>
+				<Var>
+					<Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
 				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
@@ -2449,10 +2513,6 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_2</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
 					<Comment><![CDATA[Raw encoder count]]></Comment>
 					<Type>LINT</Type>
@@ -2573,10 +2633,6 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_2</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
@@ -2587,20 +2643,12 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M3K4_RTD.nM3K4US_RTD_2</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_M3K4_RTD.nM3K4US_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_M3K4_RTD.nM3K4DS_RTD_1</Name>
 					<Comment><![CDATA[ M2K4 DS RTDs]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M3K4_RTD.nM3K4DS_RTD_2</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -3492,8 +3540,11 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4DS2_M2K4DS3">
-				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4DS_RTD_2" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4DS_RTD_3" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
@@ -3505,7 +3556,10 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4US1_M2K4US2">
 				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4US_RTD_1" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4US_RTD_2" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
@@ -3520,8 +3574,11 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4US_RTD_3" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4DS2_M3K4DS3">
-				<Link VarA="PlcTask Inputs^GVL_M3K4_RTD.nM3K4DS_RTD_2" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_M3K4_RTD.nM3K4DS_RTD_3" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
@@ -3533,7 +3590,10 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M3K4US1_M3K4US2">
 				<Link VarA="PlcTask Inputs^GVL_M3K4_RTD.nM3K4US_RTD_1" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_M3K4_RTD.nM3K4US_RTD_2" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.iRaw" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bError" VarB="RTD Inputs Channel 2^Status^Error" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bOverrange" VarB="RTD Inputs Channel 2^Status^Overrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bUnderrange" VarB="RTD Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
