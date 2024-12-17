@@ -1,11 +1,11 @@
-#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.6.0/bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.6.1/bin/rhel7-x86_64/adsIoc
 ################### AUTO-GENERATED DO NOT EDIT ###################
 #
 #         Project: lcls-plc-tmo-optics.tsproj
 #        PLC name: tmo_optics (tmo_optics Instance)
-# Generated using: pytmc 2.14.1
-# Project version: R1.1.0-101-g8a2409b
-#    Project hash: 8a2409b56640c3a45e38515de093b052caaf9773
+# Generated using: pytmc 2.17.0
+# Project version: R1.1.0-169-geb358c0
+#    Project hash: eb358c0edce296410409f402e4804613164288ce
 #     PLC IP/host: 172.21.92.63
 #      PLC Net ID: 172.21.92.63.1.1
 #  ** Production mode IOC **
@@ -13,6 +13,7 @@
 #
 # Libraries:
 #
+#   lcls-twincat-optics: * -> 0.8.0 (SLAC)
 #   lcls2-cc-lib: * -> 2.0.0 (SLAC)
 #   Tc2_MC2: * -> 3.3.42.0 (Beckhoff Automation GmbH)
 #   Tc2_SerialCom: * -> 3.3.7.0 (Beckhoff Automation GmbH)
@@ -42,7 +43,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.92.63")
 epicsEnvSet("AMSID",            "172.21.92.63.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "7836")
+epicsEnvSet("ADS_MAX_PARAMS",   "5905")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -177,21 +178,6 @@ epicsEnvSet("MOTOR_PREFIX",    "MR1K4:SOMS:MMS:")
 epicsEnvSet("MOTOR_NAME",      "PITCH")
 epicsEnvSet("DESC",            "Main.M5 / M1K4-Pitch")
 epicsEnvSet("EGU",             "urad")
-epicsEnvSet("PREC",            "3")
-epicsEnvSet("AXISCONFIG",      "")
-epicsEnvSet("ECAXISFIELDINIT", "")
-epicsEnvSet("AMPLIFIER_FLAGS", "")
-
-EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
-dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
-dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
-dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
-
-epicsEnvSet("AXIS_NO",         "6")
-epicsEnvSet("MOTOR_PREFIX",    "MR1K4:SOMS:MMS:")
-epicsEnvSet("MOTOR_NAME",      "BENDER")
-epicsEnvSet("DESC",            "Main.M6 / M1K4-Bender")
-epicsEnvSet("EGU",             "um")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
 epicsEnvSet("ECAXISFIELDINIT", "")
@@ -479,12 +465,14 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 
 ## TwinCAT task, application, and project information databases ##
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=1")
-dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=3")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=2")
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=3")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TMO:OPTICS")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TMO:OPTICS,PROJECT=lcls-plc-tmo-optics.tsproj,HASH=8a2409b,VERSION=R1.1.0-101-g8a2409b,PYTMC=2.14.1,PLC_HOST=172.21.92.63")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TMO:OPTICS,PROJECT=lcls-plc-tmo-optics.tsproj,HASH=eb358c0,VERSION=R1.1.0-169-geb358c0,PYTMC=2.17.0,PLC_HOST=172.21.92.63")
 
+#   lcls-twincat-optics: * -> 0.8.0 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TMO:OPTICS,DEPENDENCY=lcls-twincat-optics,VERSION=0.8.0,VENDOR=SLAC")
 #   lcls2-cc-lib: * -> 2.0.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TMO:OPTICS,DEPENDENCY=lcls2-cc-lib,VERSION=2.0.0,VENDOR=SLAC")
 #   Tc2_MC2: * -> 3.3.42.0 (Beckhoff Automation GmbH)
@@ -505,8 +493,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("tmo_optics.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 6836
-callbackSetQueueSize(15672)
+# Total records: 4905
+callbackSetQueueSize(11810)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:TMO:OPTICS:")
