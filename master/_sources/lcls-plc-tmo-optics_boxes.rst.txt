@@ -10329,3 +10329,1527 @@ Term 121 (EL9011)
 
    </details>
 
+
+B940-009-R19-DRL-04 (EK1100)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, B940-009-R19-DRL-04 (EK1100)
+    ID, 144
+
+
+.. raw:: html
+
+   </details>
+
+
+SL2K4-EL5072-E1
+^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (6 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, SL2K4-EL5072-E1
+    ID, 145
+        BootStrapData, 0010f400f410f400
+        SyncMan, 001080002600010001000000800080008000001026010000
+        SyncMan, 801080002200010002000000800080008000801022010000
+        SyncMan, 001110002400010003000000000000001000001124010000
+        SyncMan, 801114002000010004000000000000001400801120010000
+        Fmmu, 0000000000000000001100020100000001000000000000000000000000000000
+        Fmmu, 0000000000000000801100010100000002000000000000000000000000000000
+        Fmmu, 00000000000000000d0800010100000003000000000000000000000000000000
+        CoeProfile, 33756041
+        CoeProfile, 33756041
+
+
+
+PDO IND Inputs Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Underrange", "", , "#x6000", "BIT"
+        "Status__Overrange", "", , "#x6000", "BIT"
+        "Status__Excitation error", "", , "#x6000", "BIT"
+        "Status__Input error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__Digital input", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6000", "BIT"
+        "Status__Set position done", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Diag", "", , "#x6000", "BIT"
+        "Status__TxPDO State", "", , "#x6000", "BIT"
+        "Status__Input cycle counter", "", , "#x6000", "BIT2"
+        "Position", "", , "#x6001", "DINT"
+        "Latch value", "", , "#x6001", "DINT"
+
+
+
+PDO IND Latch Timestamp Channel 1 (Index #x1a01, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Latch event Timestamp", "", , "#x6002", "ULINT"
+
+
+
+PDO IND Inputs Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Underrange", "", , "#x6010", "BIT"
+        "Status__Overrange", "", , "#x6010", "BIT"
+        "Status__Excitation error", "", , "#x6010", "BIT"
+        "Status__Input error", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__Digital input", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6010", "BIT"
+        "Status__Set position done", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Diag", "", , "#x6010", "BIT"
+        "Status__TxPDO State", "", , "#x6010", "BIT"
+        "Status__Input cycle counter", "", , "#x6010", "BIT2"
+        "Position", "", , "#x6011", "DINT"
+        "Latch value", "", , "#x6011", "DINT"
+
+
+
+PDO IND Latch Timestamp Channel 2 (Index #x1a03, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Latch event Timestamp", "", , "#x6012", "ULINT"
+
+
+
+PDO IND Outputs Channel 1 (Index #x1600, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Set position", "", , "#x7000", "BIT"
+        "Set position on digital input", "", , "#x7000", "BIT"
+        "Enable latch on digital input", "", , "#x7000", "BIT"
+        "None", "", , "", "ARRAY [0..28] OF BIT"
+        "Set position value", "", , "#x7000", "DINT"
+
+
+
+PDO IND Outputs Channel 2 (Index #x1601, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Set position", "", , "#x7010", "BIT"
+        "Set position on digital input", "", , "#x7010", "BIT"
+        "Enable latch on digital input", "", , "#x7010", "BIT"
+        "None", "", , "", "ARRAY [0..28] OF BIT"
+        "Set position value", "", , "#x7010", "DINT"
+
+
+.. raw:: html
+
+   </details>
+
+
+SL2K4-EL5072-E2
+^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (6 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, SL2K4-EL5072-E2
+    ID, 146
+        BootStrapData, 0010f400f410f400
+        SyncMan, 001080002600010001000000800080008000001026010000
+        SyncMan, 801080002200010002000000800080008000801022010000
+        SyncMan, 001110002400010003000000000000001000001124010000
+        SyncMan, 801114002000010004000000000000001400801120010000
+        Fmmu, 0000000000000000001100020100000001000000000000000000000000000000
+        Fmmu, 0000000000000000801100010100000002000000000000000000000000000000
+        Fmmu, 00000000000000000d0800010100000003000000000000000000000000000000
+        CoeProfile, 33756041
+        CoeProfile, 33756041
+
+
+
+PDO IND Inputs Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Underrange", "", , "#x6000", "BIT"
+        "Status__Overrange", "", , "#x6000", "BIT"
+        "Status__Excitation error", "", , "#x6000", "BIT"
+        "Status__Input error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__Digital input", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6000", "BIT"
+        "Status__Set position done", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Diag", "", , "#x6000", "BIT"
+        "Status__TxPDO State", "", , "#x6000", "BIT"
+        "Status__Input cycle counter", "", , "#x6000", "BIT2"
+        "Position", "", , "#x6001", "DINT"
+        "Latch value", "", , "#x6001", "DINT"
+
+
+
+PDO IND Latch Timestamp Channel 1 (Index #x1a01, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Latch event Timestamp", "", , "#x6002", "ULINT"
+
+
+
+PDO IND Inputs Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Underrange", "", , "#x6010", "BIT"
+        "Status__Overrange", "", , "#x6010", "BIT"
+        "Status__Excitation error", "", , "#x6010", "BIT"
+        "Status__Input error", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__Digital input", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6010", "BIT"
+        "Status__Set position done", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Diag", "", , "#x6010", "BIT"
+        "Status__TxPDO State", "", , "#x6010", "BIT"
+        "Status__Input cycle counter", "", , "#x6010", "BIT2"
+        "Position", "", , "#x6011", "DINT"
+        "Latch value", "", , "#x6011", "DINT"
+
+
+
+PDO IND Latch Timestamp Channel 2 (Index #x1a03, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Latch event Timestamp", "", , "#x6012", "ULINT"
+
+
+
+PDO IND Outputs Channel 1 (Index #x1600, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Set position", "", , "#x7000", "BIT"
+        "Set position on digital input", "", , "#x7000", "BIT"
+        "Enable latch on digital input", "", , "#x7000", "BIT"
+        "None", "", , "", "ARRAY [0..28] OF BIT"
+        "Set position value", "", , "#x7000", "DINT"
+
+
+
+PDO IND Outputs Channel 2 (Index #x1601, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Set position", "", , "#x7010", "BIT"
+        "Set position on digital input", "", , "#x7010", "BIT"
+        "Enable latch on digital input", "", , "#x7010", "BIT"
+        "None", "", , "", "ARRAY [0..28] OF BIT"
+        "Set position value", "", , "#x7010", "DINT"
+
+
+.. raw:: html
+
+   </details>
+
+
+SL2K4-EL7031-E3
+^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (18 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, SL2K4-EL7031-E3
+    ID, 147
+        BootStrapData, 0010f400f410f400
+        SyncMan, 001080002600010001000000400080008000001026010000
+        SyncMan, 801080002200010002000000400080008000801022010000
+        SyncMan, 001108002400010003000000000000000800001124010000
+        SyncMan, 801108002000010004000000000000000800801120010000
+        Fmmu, 0000000000000000001100020100000001000000000000000000000000000000
+        Fmmu, 0000000000000000801100010100000002000000000000000000000000000000
+        Fmmu, 00000000000000000d0800010100000003000000000000000000000000000000
+        CoeProfile, 33493897
+        CoeProfile, 46076809
+        CoeProfile, 46142345
+
+
+
+PDO ENC Status compact (Index #x1a00, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6000", "BIT"
+        "Status__Set counter done", "", , "#x6000", "BIT"
+        "Status__Counter underflow", "", , "#x6000", "BIT"
+        "Status__Counter overflow", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__", "", , "", "ARRAY [0..3] OF BIT"
+        "Status__Status of extern latch", "", , "#x6000", "BIT"
+        "Status__Sync error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6000", "BIT"
+        "Counter value", "", , "#x6000", "UINT"
+        "Latch value", "", , "#x6000", "UINT"
+
+
+
+PDO ENC Status (Index #x1a01, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6000", "BIT"
+        "Status__Set counter done", "", , "#x6000", "BIT"
+        "Status__Counter underflow", "", , "#x6000", "BIT"
+        "Status__Counter overflow", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__", "", , "", "ARRAY [0..3] OF BIT"
+        "Status__Status of extern latch", "", , "#x6000", "BIT"
+        "Status__Sync error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6000", "BIT"
+        "Counter value", "", , "#x6000", "UDINT"
+        "Latch value", "", , "#x6000", "UDINT"
+
+
+
+PDO ENC Timest. compact (Index #x1a02, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Timestamp", "", , "#x6000", "UDINT"
+
+
+
+PDO STM Status (Index #x1a03, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Ready to enable", "", , "#x6010", "BIT"
+        "Status__Ready", "", , "#x6010", "BIT"
+        "Status__Warning", "", , "#x6010", "BIT"
+        "Status__Error", "", , "#x6010", "BIT"
+        "Status__Moving positive", "", , "#x6010", "BIT"
+        "Status__Moving negative", "", , "#x6010", "BIT"
+        "Status__Torque reduced", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__Digital input 1", "", , "#x6010", "BIT"
+        "Status__Digital input 2", "", , "#x6010", "BIT"
+        "Status__Sync error", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6010", "BIT"
+
+
+
+PDO STM Synchron info data (Index #x1a04, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Info data 1", "", , "#x6010", "UINT"
+        "Info data 2", "", , "#x6010", "UINT"
+
+
+
+PDO POS Status compact (Index #x1a05, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Busy", "", , "#x6020", "BIT"
+        "Status__In-Target", "", , "#x6020", "BIT"
+        "Status__Warning", "", , "#x6020", "BIT"
+        "Status__Error", "", , "#x6020", "BIT"
+        "Status__Calibrated", "", , "#x6020", "BIT"
+        "Status__Accelerate", "", , "#x6020", "BIT"
+        "Status__Decelerate", "", , "#x6020", "BIT"
+        "Status__Ready to execute", "", , "#x6020", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BYTE"
+
+
+
+PDO POS Status (Index #x1a06, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Busy", "", , "#x6020", "BIT"
+        "Status__In-Target", "", , "#x6020", "BIT"
+        "Status__Warning", "", , "#x6020", "BIT"
+        "Status__Error", "", , "#x6020", "BIT"
+        "Status__Calibrated", "", , "#x6020", "BIT"
+        "Status__Accelerate", "", , "#x6020", "BIT"
+        "Status__Decelerate", "", , "#x6020", "BIT"
+        "Status__Ready to execute", "", , "#x6020", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Actual position", "", , "#x6020", "UDINT"
+        "Actual velocity", "", , "#x6020", "INT"
+        "Actual drive time", "", , "#x6020", "UDINT"
+
+
+
+PDO STM Internal position (Index #x1a07, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Internal position", "", , "#x6010", "UDINT"
+
+
+
+PDO STM External position (Index #x1a08, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "External position", "", , "#x6010", "UDINT"
+
+
+
+PDO POS Actual position lag (Index #x1a09, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Actual position lag", "", , "#x6020", "DINT"
+
+
+
+PDO ENC Control compact (Index #x1600, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..0] OF BIT"
+        "Control__Enable latch extern on positive edge", "", , "#x7000", "BIT"
+        "Control__Set counter", "", , "#x7000", "BIT"
+        "Control__Enable latch extern on negative edge", "", , "#x7000", "BIT"
+        "Control__", "", , "", "ARRAY [0..3] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Set counter value", "", , "#x7000", "UINT"
+
+
+
+PDO ENC Control (Index #x1601, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..0] OF BIT"
+        "Control__Enable latch extern on positive edge", "", , "#x7000", "BIT"
+        "Control__Set counter", "", , "#x7000", "BIT"
+        "Control__Enable latch extern on negative edge", "", , "#x7000", "BIT"
+        "Control__", "", , "", "ARRAY [0..3] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Set counter value", "", , "#x7000", "UDINT"
+
+
+
+PDO STM Control (Index #x1602, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Enable", "", , "#x7010", "BIT"
+        "Control__Reset", "", , "#x7010", "BIT"
+        "Control__Reduce torque", "", , "#x7010", "BIT"
+        "Control__", "", , "", "ARRAY [0..4] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+
+
+
+PDO STM Position (Index #x1603, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Position", "", , "#x7010", "UDINT"
+
+
+
+PDO STM Velocity (Index #x1604, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Velocity", "", , "#x7010", "INT"
+
+
+
+PDO POS Control compact (Index #x1605, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Execute", "", , "#x7020", "BIT"
+        "Control__Emergency stop", "", , "#x7020", "BIT"
+        "Control__", "", , "", "ARRAY [0..5] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7020", "UDINT"
+
+
+
+PDO POS Control (Index #x1606, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Execute", "", , "#x7020", "BIT"
+        "Control__Emergency stop", "", , "#x7020", "BIT"
+        "Control__", "", , "", "ARRAY [0..5] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7020", "UDINT"
+        "Velocity", "", , "#x7020", "INT"
+        "Start type", "", , "#x7020", "UINT"
+        "Acceleration", "", , "#x7020", "UINT"
+        "Deceleration", "", , "#x7020", "UINT"
+
+
+
+PDO POS Control 2 (Index #x1607, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..1] OF BIT"
+        "Control__Enable auto start", "", , "#x7021", "BIT"
+        "Control__", "", , "", "ARRAY [0..4] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7021", "UDINT"
+        "Velocity", "", , "#x7021", "INT"
+        "Start type", "", , "#x7021", "UINT"
+        "Acceleration", "", , "#x7021", "UINT"
+        "Deceleration", "", , "#x7021", "UINT"
+
+
+.. raw:: html
+
+   </details>
+
+
+SL2K4-EL7031-E4
+^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (18 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, SL2K4-EL7031-E4
+    ID, 148
+        BootStrapData, 0010f400f410f400
+        SyncMan, 001080002600010001000000400080008000001026010000
+        SyncMan, 801080002200010002000000400080008000801022010000
+        SyncMan, 001108002400010003000000000000000800001124010000
+        SyncMan, 801108002000010004000000000000000800801120010000
+        Fmmu, 0000000000000000001100020100000001000000000000000000000000000000
+        Fmmu, 0000000000000000801100010100000002000000000000000000000000000000
+        Fmmu, 00000000000000000d0800010100000003000000000000000000000000000000
+        CoeProfile, 33493897
+        CoeProfile, 46076809
+        CoeProfile, 46142345
+
+
+
+PDO ENC Status compact (Index #x1a00, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6000", "BIT"
+        "Status__Set counter done", "", , "#x6000", "BIT"
+        "Status__Counter underflow", "", , "#x6000", "BIT"
+        "Status__Counter overflow", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__", "", , "", "ARRAY [0..3] OF BIT"
+        "Status__Status of extern latch", "", , "#x6000", "BIT"
+        "Status__Sync error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6000", "BIT"
+        "Counter value", "", , "#x6000", "UINT"
+        "Latch value", "", , "#x6000", "UINT"
+
+
+
+PDO ENC Status (Index #x1a01, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6000", "BIT"
+        "Status__Set counter done", "", , "#x6000", "BIT"
+        "Status__Counter underflow", "", , "#x6000", "BIT"
+        "Status__Counter overflow", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__", "", , "", "ARRAY [0..3] OF BIT"
+        "Status__Status of extern latch", "", , "#x6000", "BIT"
+        "Status__Sync error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6000", "BIT"
+        "Counter value", "", , "#x6000", "UDINT"
+        "Latch value", "", , "#x6000", "UDINT"
+
+
+
+PDO ENC Timest. compact (Index #x1a02, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Timestamp", "", , "#x6000", "UDINT"
+
+
+
+PDO STM Status (Index #x1a03, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Ready to enable", "", , "#x6010", "BIT"
+        "Status__Ready", "", , "#x6010", "BIT"
+        "Status__Warning", "", , "#x6010", "BIT"
+        "Status__Error", "", , "#x6010", "BIT"
+        "Status__Moving positive", "", , "#x6010", "BIT"
+        "Status__Moving negative", "", , "#x6010", "BIT"
+        "Status__Torque reduced", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__Digital input 1", "", , "#x6010", "BIT"
+        "Status__Digital input 2", "", , "#x6010", "BIT"
+        "Status__Sync error", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6010", "BIT"
+
+
+
+PDO STM Synchron info data (Index #x1a04, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Info data 1", "", , "#x6010", "UINT"
+        "Info data 2", "", , "#x6010", "UINT"
+
+
+
+PDO POS Status compact (Index #x1a05, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Busy", "", , "#x6020", "BIT"
+        "Status__In-Target", "", , "#x6020", "BIT"
+        "Status__Warning", "", , "#x6020", "BIT"
+        "Status__Error", "", , "#x6020", "BIT"
+        "Status__Calibrated", "", , "#x6020", "BIT"
+        "Status__Accelerate", "", , "#x6020", "BIT"
+        "Status__Decelerate", "", , "#x6020", "BIT"
+        "Status__Ready to execute", "", , "#x6020", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BYTE"
+
+
+
+PDO POS Status (Index #x1a06, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Busy", "", , "#x6020", "BIT"
+        "Status__In-Target", "", , "#x6020", "BIT"
+        "Status__Warning", "", , "#x6020", "BIT"
+        "Status__Error", "", , "#x6020", "BIT"
+        "Status__Calibrated", "", , "#x6020", "BIT"
+        "Status__Accelerate", "", , "#x6020", "BIT"
+        "Status__Decelerate", "", , "#x6020", "BIT"
+        "Status__Ready to execute", "", , "#x6020", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Actual position", "", , "#x6020", "UDINT"
+        "Actual velocity", "", , "#x6020", "INT"
+        "Actual drive time", "", , "#x6020", "UDINT"
+
+
+
+PDO STM Internal position (Index #x1a07, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Internal position", "", , "#x6010", "UDINT"
+
+
+
+PDO STM External position (Index #x1a08, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "External position", "", , "#x6010", "UDINT"
+
+
+
+PDO POS Actual position lag (Index #x1a09, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Actual position lag", "", , "#x6020", "DINT"
+
+
+
+PDO ENC Control compact (Index #x1600, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..0] OF BIT"
+        "Control__Enable latch extern on positive edge", "", , "#x7000", "BIT"
+        "Control__Set counter", "", , "#x7000", "BIT"
+        "Control__Enable latch extern on negative edge", "", , "#x7000", "BIT"
+        "Control__", "", , "", "ARRAY [0..3] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Set counter value", "", , "#x7000", "UINT"
+
+
+
+PDO ENC Control (Index #x1601, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..0] OF BIT"
+        "Control__Enable latch extern on positive edge", "", , "#x7000", "BIT"
+        "Control__Set counter", "", , "#x7000", "BIT"
+        "Control__Enable latch extern on negative edge", "", , "#x7000", "BIT"
+        "Control__", "", , "", "ARRAY [0..3] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Set counter value", "", , "#x7000", "UDINT"
+
+
+
+PDO STM Control (Index #x1602, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Enable", "", , "#x7010", "BIT"
+        "Control__Reset", "", , "#x7010", "BIT"
+        "Control__Reduce torque", "", , "#x7010", "BIT"
+        "Control__", "", , "", "ARRAY [0..4] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+
+
+
+PDO STM Position (Index #x1603, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Position", "", , "#x7010", "UDINT"
+
+
+
+PDO STM Velocity (Index #x1604, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Velocity", "", , "#x7010", "INT"
+
+
+
+PDO POS Control compact (Index #x1605, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Execute", "", , "#x7020", "BIT"
+        "Control__Emergency stop", "", , "#x7020", "BIT"
+        "Control__", "", , "", "ARRAY [0..5] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7020", "UDINT"
+
+
+
+PDO POS Control (Index #x1606, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Execute", "", , "#x7020", "BIT"
+        "Control__Emergency stop", "", , "#x7020", "BIT"
+        "Control__", "", , "", "ARRAY [0..5] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7020", "UDINT"
+        "Velocity", "", , "#x7020", "INT"
+        "Start type", "", , "#x7020", "UINT"
+        "Acceleration", "", , "#x7020", "UINT"
+        "Deceleration", "", , "#x7020", "UINT"
+
+
+
+PDO POS Control 2 (Index #x1607, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..1] OF BIT"
+        "Control__Enable auto start", "", , "#x7021", "BIT"
+        "Control__", "", , "", "ARRAY [0..4] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7021", "UDINT"
+        "Velocity", "", , "#x7021", "INT"
+        "Start type", "", , "#x7021", "UINT"
+        "Acceleration", "", , "#x7021", "UINT"
+        "Deceleration", "", , "#x7021", "UINT"
+
+
+.. raw:: html
+
+   </details>
+
+
+SL2K4-EL7031-E5
+^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (18 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, SL2K4-EL7031-E5
+    ID, 149
+        BootStrapData, 0010f400f410f400
+        SyncMan, 001080002600010001000000400080008000001026010000
+        SyncMan, 801080002200010002000000400080008000801022010000
+        SyncMan, 001108002400010003000000000000000800001124010000
+        SyncMan, 801108002000010004000000000000000800801120010000
+        Fmmu, 0000000000000000001100020100000001000000000000000000000000000000
+        Fmmu, 0000000000000000801100010100000002000000000000000000000000000000
+        Fmmu, 00000000000000000d0800010100000003000000000000000000000000000000
+        CoeProfile, 33493897
+        CoeProfile, 46076809
+        CoeProfile, 46142345
+
+
+
+PDO ENC Status compact (Index #x1a00, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6000", "BIT"
+        "Status__Set counter done", "", , "#x6000", "BIT"
+        "Status__Counter underflow", "", , "#x6000", "BIT"
+        "Status__Counter overflow", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__", "", , "", "ARRAY [0..3] OF BIT"
+        "Status__Status of extern latch", "", , "#x6000", "BIT"
+        "Status__Sync error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6000", "BIT"
+        "Counter value", "", , "#x6000", "UINT"
+        "Latch value", "", , "#x6000", "UINT"
+
+
+
+PDO ENC Status (Index #x1a01, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6000", "BIT"
+        "Status__Set counter done", "", , "#x6000", "BIT"
+        "Status__Counter underflow", "", , "#x6000", "BIT"
+        "Status__Counter overflow", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__", "", , "", "ARRAY [0..3] OF BIT"
+        "Status__Status of extern latch", "", , "#x6000", "BIT"
+        "Status__Sync error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6000", "BIT"
+        "Counter value", "", , "#x6000", "UDINT"
+        "Latch value", "", , "#x6000", "UDINT"
+
+
+
+PDO ENC Timest. compact (Index #x1a02, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Timestamp", "", , "#x6000", "UDINT"
+
+
+
+PDO STM Status (Index #x1a03, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Ready to enable", "", , "#x6010", "BIT"
+        "Status__Ready", "", , "#x6010", "BIT"
+        "Status__Warning", "", , "#x6010", "BIT"
+        "Status__Error", "", , "#x6010", "BIT"
+        "Status__Moving positive", "", , "#x6010", "BIT"
+        "Status__Moving negative", "", , "#x6010", "BIT"
+        "Status__Torque reduced", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__Digital input 1", "", , "#x6010", "BIT"
+        "Status__Digital input 2", "", , "#x6010", "BIT"
+        "Status__Sync error", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6010", "BIT"
+
+
+
+PDO STM Synchron info data (Index #x1a04, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Info data 1", "", , "#x6010", "UINT"
+        "Info data 2", "", , "#x6010", "UINT"
+
+
+
+PDO POS Status compact (Index #x1a05, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Busy", "", , "#x6020", "BIT"
+        "Status__In-Target", "", , "#x6020", "BIT"
+        "Status__Warning", "", , "#x6020", "BIT"
+        "Status__Error", "", , "#x6020", "BIT"
+        "Status__Calibrated", "", , "#x6020", "BIT"
+        "Status__Accelerate", "", , "#x6020", "BIT"
+        "Status__Decelerate", "", , "#x6020", "BIT"
+        "Status__Ready to execute", "", , "#x6020", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BYTE"
+
+
+
+PDO POS Status (Index #x1a06, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Busy", "", , "#x6020", "BIT"
+        "Status__In-Target", "", , "#x6020", "BIT"
+        "Status__Warning", "", , "#x6020", "BIT"
+        "Status__Error", "", , "#x6020", "BIT"
+        "Status__Calibrated", "", , "#x6020", "BIT"
+        "Status__Accelerate", "", , "#x6020", "BIT"
+        "Status__Decelerate", "", , "#x6020", "BIT"
+        "Status__Ready to execute", "", , "#x6020", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Actual position", "", , "#x6020", "UDINT"
+        "Actual velocity", "", , "#x6020", "INT"
+        "Actual drive time", "", , "#x6020", "UDINT"
+
+
+
+PDO STM Internal position (Index #x1a07, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Internal position", "", , "#x6010", "UDINT"
+
+
+
+PDO STM External position (Index #x1a08, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "External position", "", , "#x6010", "UDINT"
+
+
+
+PDO POS Actual position lag (Index #x1a09, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Actual position lag", "", , "#x6020", "DINT"
+
+
+
+PDO ENC Control compact (Index #x1600, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..0] OF BIT"
+        "Control__Enable latch extern on positive edge", "", , "#x7000", "BIT"
+        "Control__Set counter", "", , "#x7000", "BIT"
+        "Control__Enable latch extern on negative edge", "", , "#x7000", "BIT"
+        "Control__", "", , "", "ARRAY [0..3] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Set counter value", "", , "#x7000", "UINT"
+
+
+
+PDO ENC Control (Index #x1601, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..0] OF BIT"
+        "Control__Enable latch extern on positive edge", "", , "#x7000", "BIT"
+        "Control__Set counter", "", , "#x7000", "BIT"
+        "Control__Enable latch extern on negative edge", "", , "#x7000", "BIT"
+        "Control__", "", , "", "ARRAY [0..3] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Set counter value", "", , "#x7000", "UDINT"
+
+
+
+PDO STM Control (Index #x1602, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Enable", "", , "#x7010", "BIT"
+        "Control__Reset", "", , "#x7010", "BIT"
+        "Control__Reduce torque", "", , "#x7010", "BIT"
+        "Control__", "", , "", "ARRAY [0..4] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+
+
+
+PDO STM Position (Index #x1603, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Position", "", , "#x7010", "UDINT"
+
+
+
+PDO STM Velocity (Index #x1604, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Velocity", "", , "#x7010", "INT"
+
+
+
+PDO POS Control compact (Index #x1605, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Execute", "", , "#x7020", "BIT"
+        "Control__Emergency stop", "", , "#x7020", "BIT"
+        "Control__", "", , "", "ARRAY [0..5] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7020", "UDINT"
+
+
+
+PDO POS Control (Index #x1606, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Execute", "", , "#x7020", "BIT"
+        "Control__Emergency stop", "", , "#x7020", "BIT"
+        "Control__", "", , "", "ARRAY [0..5] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7020", "UDINT"
+        "Velocity", "", , "#x7020", "INT"
+        "Start type", "", , "#x7020", "UINT"
+        "Acceleration", "", , "#x7020", "UINT"
+        "Deceleration", "", , "#x7020", "UINT"
+
+
+
+PDO POS Control 2 (Index #x1607, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..1] OF BIT"
+        "Control__Enable auto start", "", , "#x7021", "BIT"
+        "Control__", "", , "", "ARRAY [0..4] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7021", "UDINT"
+        "Velocity", "", , "#x7021", "INT"
+        "Start type", "", , "#x7021", "UINT"
+        "Acceleration", "", , "#x7021", "UINT"
+        "Deceleration", "", , "#x7021", "UINT"
+
+
+.. raw:: html
+
+   </details>
+
+
+SL2K4-EL7031-E6
+^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (18 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, SL2K4-EL7031-E6
+    ID, 150
+        BootStrapData, 0010f400f410f400
+        SyncMan, 001080002600010001000000400080008000001026010000
+        SyncMan, 801080002200010002000000400080008000801022010000
+        SyncMan, 001108002400010003000000000000000800001124010000
+        SyncMan, 801108002000010004000000000000000800801120010000
+        Fmmu, 0000000000000000001100020100000001000000000000000000000000000000
+        Fmmu, 0000000000000000801100010100000002000000000000000000000000000000
+        Fmmu, 00000000000000000d0800010100000003000000000000000000000000000000
+        CoeProfile, 33493897
+        CoeProfile, 46076809
+        CoeProfile, 46142345
+
+
+
+PDO ENC Status compact (Index #x1a00, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6000", "BIT"
+        "Status__Set counter done", "", , "#x6000", "BIT"
+        "Status__Counter underflow", "", , "#x6000", "BIT"
+        "Status__Counter overflow", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__", "", , "", "ARRAY [0..3] OF BIT"
+        "Status__Status of extern latch", "", , "#x6000", "BIT"
+        "Status__Sync error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6000", "BIT"
+        "Counter value", "", , "#x6000", "UINT"
+        "Latch value", "", , "#x6000", "UINT"
+
+
+
+PDO ENC Status (Index #x1a01, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Latch extern valid", "", , "#x6000", "BIT"
+        "Status__Set counter done", "", , "#x6000", "BIT"
+        "Status__Counter underflow", "", , "#x6000", "BIT"
+        "Status__Counter overflow", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__", "", , "", "ARRAY [0..3] OF BIT"
+        "Status__Status of extern latch", "", , "#x6000", "BIT"
+        "Status__Sync error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6000", "BIT"
+        "Counter value", "", , "#x6000", "UDINT"
+        "Latch value", "", , "#x6000", "UDINT"
+
+
+
+PDO ENC Timest. compact (Index #x1a02, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Timestamp", "", , "#x6000", "UDINT"
+
+
+
+PDO STM Status (Index #x1a03, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Ready to enable", "", , "#x6010", "BIT"
+        "Status__Ready", "", , "#x6010", "BIT"
+        "Status__Warning", "", , "#x6010", "BIT"
+        "Status__Error", "", , "#x6010", "BIT"
+        "Status__Moving positive", "", , "#x6010", "BIT"
+        "Status__Moving negative", "", , "#x6010", "BIT"
+        "Status__Torque reduced", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__", "", , "", "ARRAY [0..2] OF BIT"
+        "Status__Digital input 1", "", , "#x6010", "BIT"
+        "Status__Digital input 2", "", , "#x6010", "BIT"
+        "Status__Sync error", "", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__TxPDO Toggle", "", , "#x6010", "BIT"
+
+
+
+PDO STM Synchron info data (Index #x1a04, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Info data 1", "", , "#x6010", "UINT"
+        "Info data 2", "", , "#x6010", "UINT"
+
+
+
+PDO POS Status compact (Index #x1a05, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Busy", "", , "#x6020", "BIT"
+        "Status__In-Target", "", , "#x6020", "BIT"
+        "Status__Warning", "", , "#x6020", "BIT"
+        "Status__Error", "", , "#x6020", "BIT"
+        "Status__Calibrated", "", , "#x6020", "BIT"
+        "Status__Accelerate", "", , "#x6020", "BIT"
+        "Status__Decelerate", "", , "#x6020", "BIT"
+        "Status__Ready to execute", "", , "#x6020", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BYTE"
+
+
+
+PDO POS Status (Index #x1a06, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Busy", "", , "#x6020", "BIT"
+        "Status__In-Target", "", , "#x6020", "BIT"
+        "Status__Warning", "", , "#x6020", "BIT"
+        "Status__Error", "", , "#x6020", "BIT"
+        "Status__Calibrated", "", , "#x6020", "BIT"
+        "Status__Accelerate", "", , "#x6020", "BIT"
+        "Status__Decelerate", "", , "#x6020", "BIT"
+        "Status__Ready to execute", "", , "#x6020", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Actual position", "", , "#x6020", "UDINT"
+        "Actual velocity", "", , "#x6020", "INT"
+        "Actual drive time", "", , "#x6020", "UDINT"
+
+
+
+PDO STM Internal position (Index #x1a07, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Internal position", "", , "#x6010", "UDINT"
+
+
+
+PDO STM External position (Index #x1a08, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "External position", "", , "#x6010", "UDINT"
+
+
+
+PDO POS Actual position lag (Index #x1a09, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Actual position lag", "", , "#x6020", "DINT"
+
+
+
+PDO ENC Control compact (Index #x1600, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..0] OF BIT"
+        "Control__Enable latch extern on positive edge", "", , "#x7000", "BIT"
+        "Control__Set counter", "", , "#x7000", "BIT"
+        "Control__Enable latch extern on negative edge", "", , "#x7000", "BIT"
+        "Control__", "", , "", "ARRAY [0..3] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Set counter value", "", , "#x7000", "UINT"
+
+
+
+PDO ENC Control (Index #x1601, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..0] OF BIT"
+        "Control__Enable latch extern on positive edge", "", , "#x7000", "BIT"
+        "Control__Set counter", "", , "#x7000", "BIT"
+        "Control__Enable latch extern on negative edge", "", , "#x7000", "BIT"
+        "Control__", "", , "", "ARRAY [0..3] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Set counter value", "", , "#x7000", "UDINT"
+
+
+
+PDO STM Control (Index #x1602, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Enable", "", , "#x7010", "BIT"
+        "Control__Reset", "", , "#x7010", "BIT"
+        "Control__Reduce torque", "", , "#x7010", "BIT"
+        "Control__", "", , "", "ARRAY [0..4] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+
+
+
+PDO STM Position (Index #x1603, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Position", "", , "#x7010", "UDINT"
+
+
+
+PDO STM Velocity (Index #x1604, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Velocity", "", , "#x7010", "INT"
+
+
+
+PDO POS Control compact (Index #x1605, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Execute", "", , "#x7020", "BIT"
+        "Control__Emergency stop", "", , "#x7020", "BIT"
+        "Control__", "", , "", "ARRAY [0..5] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7020", "UDINT"
+
+
+
+PDO POS Control (Index #x1606, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__Execute", "", , "#x7020", "BIT"
+        "Control__Emergency stop", "", , "#x7020", "BIT"
+        "Control__", "", , "", "ARRAY [0..5] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7020", "UDINT"
+        "Velocity", "", , "#x7020", "INT"
+        "Start type", "", , "#x7020", "UINT"
+        "Acceleration", "", , "#x7020", "UINT"
+        "Deceleration", "", , "#x7020", "UINT"
+
+
+
+PDO POS Control 2 (Index #x1607, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Control__", "", , "", "ARRAY [0..1] OF BIT"
+        "Control__Enable auto start", "", , "#x7021", "BIT"
+        "Control__", "", , "", "ARRAY [0..4] OF BIT"
+        "Control__", "", , "", "ARRAY [0..0] OF BYTE"
+        "Target position", "", , "#x7021", "UDINT"
+        "Velocity", "", , "#x7021", "INT"
+        "Start type", "", , "#x7021", "UINT"
+        "Acceleration", "", , "#x7021", "UINT"
+        "Deceleration", "", , "#x7021", "UINT"
+
+
+.. raw:: html
+
+   </details>
+
+
+Term 156 (EL9011)
+^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, Term 156 (EL9011)
+    ID, 156
+
+
+.. raw:: html
+
+   </details>
+
