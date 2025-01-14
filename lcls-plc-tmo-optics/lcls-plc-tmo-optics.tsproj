@@ -3,7 +3,7 @@
 	<Project ProjectGUID="{469D9277-D01A-45EE-A69D-357039FEE32B}" TargetNetId="172.21.92.63.1.1" Target64Bit="true" RelativeTargetNetId="true" RelativeIpAddresses="true" ShowHideConfigurations="#x306">
 		<System>
 			<Licenses CacheOrCheckLicensesOnStartup="true">
-				<Target>
+				<Target BkhfOrder="01451158">
 					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
 					<TargetSelect TargetId="2">{BF78CFC7-2E63-42C3-8C07-BB6C346BFB8B}</TargetSelect>
 					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>
