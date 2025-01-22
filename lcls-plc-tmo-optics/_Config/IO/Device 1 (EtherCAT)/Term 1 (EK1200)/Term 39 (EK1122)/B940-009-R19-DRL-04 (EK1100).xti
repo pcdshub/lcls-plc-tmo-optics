@@ -13,16 +13,16 @@
 		<Box File="Term 146 (EL5072).xti" Id="146">
 			<EtherCAT PortABoxInfo="#x01000091"/>
 		</Box>
-		<Box File="Term 147 (EL7031).xti" Id="147">
+		<Box File="SL2K4_TOP.xti" Id="147">
 			<EtherCAT PortABoxInfo="#x01000092"/>
 		</Box>
-		<Box File="Term 148 (EL7031).xti" Id="148">
+		<Box File="SL2K4_NORTH.xti" Id="148">
 			<EtherCAT PortABoxInfo="#x01000093"/>
 		</Box>
-		<Box File="Term 149 (EL7031).xti" Id="149">
+		<Box File="SL2K4_BOTTOM.xti" Id="149">
 			<EtherCAT PortABoxInfo="#x01000094"/>
 		</Box>
-		<Box File="Term 150 (EL7031).xti" Id="150">
+		<Box File="SL2K4_SOUTH.xti" Id="150">
 			<EtherCAT PortABoxInfo="#x01000095"/>
 		</Box>
 		<Box File="Term 156 (EL9011).xti" Id="156">

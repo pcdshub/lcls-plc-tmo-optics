@@ -13,7 +13,7 @@
 		<Box File="Term 110 (EK1100).xti" Id="110">
 			<EtherCAT PortABoxInfo="#x0200005e"/>
 		</Box>
-		<Box File="Term 144 (EK1100).xti" Id="144">
+		<Box File="B940-009-R19-DRL-04 (EK1100).xti" Id="144">
 			<EtherCAT PortABoxInfo="#x0200006e"/>
 		</Box>
 	</Box>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="PRG_SL2K4_SCATTER" Id="{73f08289-cc73-400e-8f0d-0b51b6dae585}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_SL2K4_SCATTER
+VAR
+    {attribute 'pytmc' := '
+        pv: SL2K4:SCATTER
+        io: io
+    '}
+    fbSL2K4: FB_SLITS;
+    //GET PMPS Move Ok bit
+    // Default True until it is properly linked to PMPS bit
+    bMoveOk:BOOL :=TRUE;
+    {attribute 'pytmc' := '
+    pv: SL2K4:SCATTER:GO;
+    io: io;
+    field: ZNAM False;
+    field: ONAM True;
+    '}
+    bExecuteMotion :BOOL :=FALSE;
+    bTest:BOOL:=FALSE;
+
+    (*Offsets*)
+    (* Absolute encoder value at the HLS + Absolure eoncoder value at the centered beam *)
+    (*
+    rEncoderOffsetTop: REAL := -15; (* 0+(-15)*)
+    rEncoderOffsetBottom: REAL := -15; (* 0+(-15)*)
+    rEncoderOffsetNorth: REAL := -15;(* 0+(-15)*)
+    rEncoderOffsetSouth: REAL := -15;(* 0+(-15)*)
+    *)
+
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+
+fbSL2K4.bMoveOk := bMoveOk;
+
+(*
+fbSL2K4.rEncoderOffsetTop := rEncoderOffsetTop;
+fbSL2K4.rEncoderOffsetBottom := rEncoderOffsetBottom;
+fbSL2K4.rEncoderOffsetNorth := rEncoderOffsetNorth;
+fbSL2K4.rEncoderOffsetSouth := rEncoderOffsetSouth;
+*)
+
+fbSL2K4(stTopBlade:=  Main.M24,
+        stBottomBlade:= Main.M23,
+        stNorthBlade:=  Main.M25,
+        stSouthBlade:=  Main.M26,
+        bExecuteMotion:=bExecuteMotion,
+        io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
+        fbArbiter := GVL_PMPS.g_fbArbiter2);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
