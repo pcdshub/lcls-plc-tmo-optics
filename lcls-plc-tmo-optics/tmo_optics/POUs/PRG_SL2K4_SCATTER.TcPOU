@@ -3,12 +3,9 @@
   <POU Name="PRG_SL2K4_SCATTER" Id="{73f08289-cc73-400e-8f0d-0b51b6dae585}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SL2K4_SCATTER
 VAR
-    (*
-	
-	    {attribute 'pytmc' := '
-        pv: SL2K4:SCATTER
-        io: io
-    '}
+    {attribute 'pytmc' := '
+    pv: SL2K4:SCATTER
+    io: io'}
     fbSL2K4: FB_SLITS;
 
     bMoveOk:BOOL :=TRUE;
@@ -29,7 +26,6 @@ VAR
     rEncoderOffsetNorth: REAL := -15;(* 0+(-15)*)
     rEncoderOffsetSouth: REAL := -15;(* 0+(-15)*)
     *)
-    *)
 
 END_VAR]]></Declaration>
     <Implementation>
@@ -42,15 +38,14 @@ fbSL2K4.rEncoderOffsetNorth := rEncoderOffsetNorth;
 fbSL2K4.rEncoderOffsetSouth := rEncoderOffsetSouth;
 *)
 
-(*
-fbSL2K4(stTopBlade:=  M25,
-        stBottomBlade:= M26,
-        stNorthBlade:=  M27,
-        stSouthBlade:=  M28,
+
+fbSL2K4(stTopBlade:=  Main.M25,
+        stBottomBlade:= Main.M26,
+        stNorthBlade:=  Main.M27,
+        stSouthBlade:=  Main.M28,
         bExecuteMotion:=bExecuteMotion,
         io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
-        fbArbiter := GVL_PMPS.g_fbArbiter2);
-*)]]></ST>
+        fbArbiter := GVL_PMPS.g_fbArbiter2);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

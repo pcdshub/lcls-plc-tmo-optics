@@ -975,7 +975,6 @@ END_VAR]]></Declaration>
     
     M25.bLimitBackwardEnable := TRUE;
     M25.bLimitForwardEnable := TRUE;
-    M25.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
     M25.nHomingMode := ENUM_EpicsHomeCmd.NONE;
     M25.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     M25.bHardwareEnable := TRUE;
@@ -990,7 +989,6 @@ END_VAR]]></Declaration>
     
     M26.bLimitBackwardEnable := TRUE;
     M26.bLimitForwardEnable := TRUE;
-    M26.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
     M26.nHomingMode := ENUM_EpicsHomeCmd.NONE;
     M26.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     M26.bHardwareEnable := TRUE;
@@ -1005,7 +1003,6 @@ END_VAR]]></Declaration>
     
     M27.bLimitBackwardEnable := TRUE;
     M27.bLimitForwardEnable := TRUE;
-    M27.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
     M27.nHomingMode := ENUM_EpicsHomeCmd.NONE;
     M27.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     M27.bHardwareEnable := TRUE;
@@ -1020,7 +1017,6 @@ END_VAR]]></Declaration>
     
     M28.bLimitBackwardEnable := TRUE;
     M28.bLimitForwardEnable := TRUE;
-    M28.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
     M28.nHomingMode := ENUM_EpicsHomeCmd.NONE;
     M28.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     M28.bHardwareEnable := TRUE;
