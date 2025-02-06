@@ -49,6 +49,8 @@ VAR
         pv: SL2K4:SCATTER
         io: io
     '}
+
+    (*
     fbSL2K4: FB_SLITS;
 
     bMoveOk:BOOL :=TRUE;
@@ -68,6 +70,7 @@ VAR
     rEncoderOffsetBottom: REAL := -15; (* 0+(-15)*)
     rEncoderOffsetNorth: REAL := -15;(* 0+(-15)*)
     rEncoderOffsetSouth: REAL := -15;(* 0+(-15)*)
+    *)
     *)
 
 END_VAR]]></Declaration>
@@ -133,7 +136,7 @@ M28.bHardwareEnable := TRUE;
 M28.bPowerSelf :=  TRUE;
 
 
-fbSL2K4.bMoveOk := bMoveOk;
+// fbSL2K4.bMoveOk := bMoveOk;
 
 (*
 fbSL2K4.rEncoderOffsetTop := rEncoderOffsetTop;
@@ -142,13 +145,15 @@ fbSL2K4.rEncoderOffsetNorth := rEncoderOffsetNorth;
 fbSL2K4.rEncoderOffsetSouth := rEncoderOffsetSouth;
 *)
 
+(*
 fbSL2K4(stTopBlade:=  M25,
         stBottomBlade:= M26,
         stNorthBlade:=  M27,
         stSouthBlade:=  M28,
         bExecuteMotion:=bExecuteMotion,
         io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
-        fbArbiter := GVL_PMPS.g_fbArbiter2);]]></ST>
+        fbArbiter := GVL_PMPS.g_fbArbiter2);
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
