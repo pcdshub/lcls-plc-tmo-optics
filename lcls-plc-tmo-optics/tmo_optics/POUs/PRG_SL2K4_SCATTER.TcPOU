@@ -3,54 +3,12 @@
   <POU Name="PRG_SL2K4_SCATTER" Id="{73f08289-cc73-400e-8f0d-0b51b6dae585}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SL2K4_SCATTER
 VAR
-	// SL2K4-SCATTER: 4 Axes
-    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:TOP'}
-    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 1^Position'}
-    M25: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:TOP', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
-    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:NORTH'}
-    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 2^Position'}
-    M26: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:NORTH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
-    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:BOTTOM'}
-    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 1^Position'}
-    M27: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:BOTTOM', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
-    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:SOUTH'}
-    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 2^Position'}
-    M28: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:SOUTH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
-	
-	fbM25: FB_MotionStage;
-    fbM26: FB_MotionStage;
-	fbM27: FB_MotionStage;
-    fbM28: FB_MotionStage;
-
-    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 1^Position'}
-    M25_position AT %I* : DINT;
-    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 2^Position'}
-    M26_position AT %I* : DINT;
-    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 1^Position'}
-    M27_position AT %I* : DINT;
-    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 2^Position'}
-    M28_position AT %I* : DINT;
-    
-    M25_position_LINT : LINT;
-    M26_position_LINT : LINT;
-    M27_position_LINT : LINT;
-    M28_position_LINT : LINT;
-    
-    {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_TOP^Enc^Inputs^In^nDataIn1'}
-    M25_position_UDINT AT %Q*: UDINT;
-    {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_NORTH^Enc^Inputs^In^nDataIn1'}
-    M26_position_UDINT AT %Q*: UDINT;
-    {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_BOTTOM^Enc^Inputs^In^nDataIn1'}                            
-    M27_position_UDINT AT %Q*: UDINT;
-    {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_SOUTH^Enc^Inputs^In^nDataIn1'}
-    M28_position_UDINT AT %Q*: UDINT;
+    (*
 	
 	    {attribute 'pytmc' := '
         pv: SL2K4:SCATTER
         io: io
     '}
-
-    (*
     fbSL2K4: FB_SLITS;
 
     bMoveOk:BOOL :=TRUE;
@@ -75,68 +33,7 @@ VAR
 
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbM25(stMotionStage:=M25);
-
-M25_position_LINT := M25_position;
-M25_position_LINT := M25_position_LINT + 2147483648;
-M25_position_UDINT := LINT_TO_UDINT(M25_position_LINT);
-//NC bias = -1 * 2147483648 * scaling factor + actual bias we want
-
-M25.bLimitBackwardEnable := TRUE;
-M25.bLimitForwardEnable := TRUE;
-M25.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
-M25.nHomingMode := ENUM_EpicsHomeCmd.NONE;
-M25.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
-M25.bHardwareEnable := TRUE;
-M25.bPowerSelf :=  TRUE;
-
-fbM26(stMotionStage:=M26);
-
-M26_position_LINT := M26_position;
-M26_position_LINT := M26_position_LINT + 2147483648;
-M26_position_UDINT := LINT_TO_UDINT(M26_position_LINT);
-//NC bias = -1 * 2147483648 * scaling factor + actual bias we want
-
-M26.bLimitBackwardEnable := TRUE;
-M26.bLimitForwardEnable := TRUE;
-M26.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
-M26.nHomingMode := ENUM_EpicsHomeCmd.NONE;
-M26.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
-M26.bHardwareEnable := TRUE;
-M26.bPowerSelf :=  TRUE;
-
-fbM27(stMotionStage:=M27);
-
-M27_position_LINT := M27_position;
-M27_position_LINT := M27_position_LINT + 2147483648;
-M27_position_UDINT := LINT_TO_UDINT(M27_position_LINT);
-//NC bias = -1 * 2147483648 * scaling factor + actual bias we want
-
-M27.bLimitBackwardEnable := TRUE;
-M27.bLimitForwardEnable := TRUE;
-M27.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
-M27.nHomingMode := ENUM_EpicsHomeCmd.NONE;
-M27.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
-M27.bHardwareEnable := TRUE;
-M27.bPowerSelf :=  TRUE;
-
-fbM28(stMotionStage:=M28);
-
-M28_position_LINT := M28_position;
-M28_position_LINT := M28_position_LINT + 2147483648;
-M28_position_UDINT := LINT_TO_UDINT(M28_position_LINT);
-//NC bias = -1 * 2147483648 * scaling factor + actual bias we want
-
-M28.bLimitBackwardEnable := TRUE;
-M28.bLimitForwardEnable := TRUE;
-M28.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
-M28.nHomingMode := ENUM_EpicsHomeCmd.NONE;
-M28.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
-M28.bHardwareEnable := TRUE;
-M28.bPowerSelf :=  TRUE;
-
-
-// fbSL2K4.bMoveOk := bMoveOk;
+      <ST><![CDATA[// fbSL2K4.bMoveOk := bMoveOk;
 
 (*
 fbSL2K4.rEncoderOffsetTop := rEncoderOffsetTop;
