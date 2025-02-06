@@ -40,7 +40,7 @@ VAR
     M25_position_UDINT AT %Q*: UDINT;
     {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_NORTH^Enc^Inputs^In^nDataIn1'}
     M26_position_UDINT AT %Q*: UDINT;
-    {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_BOTTOM^Drive^Inputs^In^nDataIn1'}
+    {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_BOTTOM^Enc^Inputs^In^nDataIn1'}                            
     M27_position_UDINT AT %Q*: UDINT;
     {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_SOUTH^Enc^Inputs^In^nDataIn1'}
     M28_position_UDINT AT %Q*: UDINT;

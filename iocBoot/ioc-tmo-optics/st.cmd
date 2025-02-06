@@ -43,7 +43,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.92.63")
 epicsEnvSet("AMSID",            "172.21.92.63.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "6045")
+epicsEnvSet("ADS_MAX_PARAMS",   "6140")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -461,7 +461,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "25")
 epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "TOP")
-epicsEnvSet("DESC",            "Main.M25 / SL2K4_TOP")
+epicsEnvSet("DESC",            "PRG_SL2K4_SCATTER.M25 / SL2K4_TOP")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -476,7 +476,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "26")
 epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "NORTH")
-epicsEnvSet("DESC",            "Main.M26 / SL2K4_NORTH")
+epicsEnvSet("DESC",            "PRG_SL2K4_SCATTER.M26 / SL2K4_NORTH")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -491,7 +491,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "27")
 epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "BOTTOM")
-epicsEnvSet("DESC",            "Main.M27 / SL2K4_BOTTOM")
+epicsEnvSet("DESC",            "PRG_SL2K4_SCATTER.M27 / SL2K4_BOTTOM")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -506,7 +506,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "28")
 epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "SOUTH")
-epicsEnvSet("DESC",            "Main.M28 / SL2K4_SOUTH")
+epicsEnvSet("DESC",            "PRG_SL2K4_SCATTER.M28 / SL2K4_SOUTH")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -553,8 +553,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("tmo_optics.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 5045
-callbackSetQueueSize(12090)
+# Total records: 5140
+callbackSetQueueSize(12280)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:TMO:OPTICS:")
