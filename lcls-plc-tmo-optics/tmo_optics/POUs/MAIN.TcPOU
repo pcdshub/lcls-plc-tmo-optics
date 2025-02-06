@@ -647,21 +647,6 @@ VAR
         bM3K4DS_RTD_2_Err AT %I*: BOOL;
         bM3K4DS_RTD_3_Err AT %I*: BOOL;
 
-    // SL2K4-SCATTER: 4 Axes
-    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:TOP'}
-    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 1^Position'}
-    M25: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:TOP', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
-    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:NORTH'}
-    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 2^Position'}
-    M26: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:NORTH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
-    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:BOTTOM'}
-    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 1^Position'}
-    M27: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:BOTTOM', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
-    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:SOUTH'}
-    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 2^Position'}
-    M28: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:SOUTH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
-
-
 // Logging
 fbLogHandler : FB_LogHandler;
 
