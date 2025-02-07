@@ -15,37 +15,18 @@ VAR
     field: ZNAM False;
     field: ONAM True;
     '}
-    bExecuteMotion :BOOL :=FALSE;
-    bTest:BOOL:=FALSE;
-
-    (*Offsets*)
-    (* Absolute encoder value at the HLS + Absolure eoncoder value at the centered beam *)
-    (*
-    rEncoderOffsetTop: REAL := -15; (* 0+(-15)*)
-    rEncoderOffsetBottom: REAL := -15; (* 0+(-15)*)
-    rEncoderOffsetNorth: REAL := -15;(* 0+(-15)*)
-    rEncoderOffsetSouth: REAL := -15;(* 0+(-15)*)
-    *)
-
+    bExecuteMotion :BOOL :=TRUE;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// fbSL2K4.bMoveOk := bMoveOk;
-
-(*
-fbSL2K4.rEncoderOffsetTop := rEncoderOffsetTop;
-fbSL2K4.rEncoderOffsetBottom := rEncoderOffsetBottom;
-fbSL2K4.rEncoderOffsetNorth := rEncoderOffsetNorth;
-fbSL2K4.rEncoderOffsetSouth := rEncoderOffsetSouth;
-*)
-
-
-fbSL2K4(stTopBlade:=  Main.M25,
-        stBottomBlade:= Main.M26,
-        stNorthBlade:=  Main.M27,
+      <ST><![CDATA[fbSL2K4(stTopBlade:=  Main.M25,
+        stBottomBlade:= Main.M27,
+        stNorthBlade:=  Main.M26,
         stSouthBlade:=  Main.M28,
         bExecuteMotion:=bExecuteMotion,
         io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
-        fbArbiter := GVL_PMPS.g_fbArbiter2);]]></ST>
+        fbArbiter := GVL_PMPS.g_fbArbiter2);
+
+//fbSL2K4.M_CheckPMPS(2);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

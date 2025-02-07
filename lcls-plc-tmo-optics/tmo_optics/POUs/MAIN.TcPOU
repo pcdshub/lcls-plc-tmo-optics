@@ -340,7 +340,7 @@ VAR
         M24 : ST_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM24 : FB_MotionStage;
 
-    	// SL2K4-SCATTER: 4 Axes
+    // SL2K4-SCATTER: 4 Axes
     {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:TOP'}
     {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 1^Position'}
     M25: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:TOP', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
