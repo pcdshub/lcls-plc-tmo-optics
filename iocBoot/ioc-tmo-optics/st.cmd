@@ -1,11 +1,11 @@
-#!c:/Repos/ads-ioc/R0.6.1///bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.6.1/bin/rhel7-x86_64/adsIoc
 ################### AUTO-GENERATED DO NOT EDIT ###################
 #
 #         Project: lcls-plc-tmo-optics.tsproj
 #        PLC name: tmo_optics (tmo_optics Instance)
-# Generated using: pytmc 2.15.2.dev0+g73bd2d9.d20230727
-# Project version: unknown
-#    Project hash: unknown
+# Generated using: pytmc 2.17.0
+# Project version: fb74f24
+#    Project hash: fb74f247afc7f3e2384bd416efa0aa4a0f02aff1
 #     PLC IP/host: 172.21.92.63
 #      PLC Net ID: 172.21.92.63.1.1
 #  ** Production mode IOC **
@@ -27,7 +27,7 @@
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "" )
+epicsEnvSet("ENGINEER", "baljamal" )
 epicsEnvSet("LOCATION", "PLC:TMO:OPTICS" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
@@ -50,7 +50,7 @@ epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
 epicsEnvSet("ADS_TIME_SOURCE",  "0")
 
 # Add a route to the PLC automatically:
-system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.92.63 ^172.*$")
+system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.92.63 ^172.*")
 
 # adsAsynPortDriverConfigure(portName, ipaddr, amsaddr, amsport,
 #    asynParamTableSize, priority, noAutoConnect, defaultSampleTimeMS,
@@ -529,7 +529,7 @@ dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,ID
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=3")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TMO:OPTICS")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TMO:OPTICS,PROJECT=lcls-plc-tmo-optics.tsproj,HASH=unknown,VERSION=unknown,PYTMC=2.15.2.dev0+g73bd2d9.d20230727,PLC_HOST=172.21.92.63")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TMO:OPTICS,PROJECT=lcls-plc-tmo-optics.tsproj,HASH=fb74f24,VERSION=fb74f24,PYTMC=2.17.0,PLC_HOST=172.21.92.63")
 
 #   lcls-twincat-common-components: * (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TMO:OPTICS,DEPENDENCY=lcls-twincat-common-components,VERSION=*,VENDOR=SLAC")
