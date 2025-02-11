@@ -459,7 +459,7 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "25")
-epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
+epicsEnvSet("MOTOR_PREFIX",    "TMO:SL2K4:MMS:")
 epicsEnvSet("MOTOR_NAME",      "TOP")
 epicsEnvSet("DESC",            "Main.M25 / SL2K4_TOP")
 epicsEnvSet("EGU",             "mm")
@@ -474,8 +474,8 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "26")
-epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
-epicsEnvSet("MOTOR_NAME",      "NORTH")
+epicsEnvSet("MOTOR_PREFIX",    "TMO:SL2K4:MMS:")
+epicsEnvSet("MOTOR_NAME",      "NTH")
 epicsEnvSet("DESC",            "Main.M26 / SL2K4_NORTH")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
@@ -489,8 +489,8 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "27")
-epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
-epicsEnvSet("MOTOR_NAME",      "BOTTOM")
+epicsEnvSet("MOTOR_PREFIX",    "TMO:SL2K4:MMS:")
+epicsEnvSet("MOTOR_NAME",      "BTM")
 epicsEnvSet("DESC",            "Main.M27 / SL2K4_BOTTOM")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
@@ -504,8 +504,8 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 epicsEnvSet("AXIS_NO",         "28")
-epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
-epicsEnvSet("MOTOR_NAME",      "SOUTH")
+epicsEnvSet("MOTOR_PREFIX",    "TMO:SL2K4:MMS:")
+epicsEnvSet("MOTOR_NAME",      "STH")
 epicsEnvSet("DESC",            "Main.M28 / SL2K4_SOUTH")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")

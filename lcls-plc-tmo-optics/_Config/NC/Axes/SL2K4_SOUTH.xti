@@ -1428,7 +1428,7 @@ External Setpoint Generation:
 		<Name>__FILENAME__</Name>
 		<AxisPara>
 			<Dynamic AccelerationMaximum="0.25" DecelerationMaximum="0.25" Acceleration="0.25" Deceleration="0.25" Jerk="0.4"/>
-			<Velo RefSearch="5" RefSync="5" SlowManual="10" FastManual="10" Maximum="1"/>
+			<Velo RefSearch="0.05" RefSync="0.025" SlowManual="0.1" FastManual="0.1" Maximum="0.5"/>
 			<TargetPosControl Range="0.01"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="0.005" PulseDistanceNeg="0.005"/>
 		</AxisPara>

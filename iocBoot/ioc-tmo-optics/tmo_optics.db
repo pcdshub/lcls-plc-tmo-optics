@@ -51529,7 +51529,7 @@ record(waveform, "MR5K4:KBO:MMS:PITCH:PLC:stEPSP:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:TOP:PLC:bError_RBV") {
+record(bi, "TMO:SL2K4:MMS:TOP:PLC:bError_RBV") {
   field(DESC, "TRUE if we are in an error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51542,7 +51542,7 @@ record(bi, "SL2K4:SCATTER:MMS:TOP:PLC:bError_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:TOP:PLC:bHardwareEnable_RBV") {
+record(bi, "TMO:SL2K4:MMS:TOP:PLC:bHardwareEnable_RBV") {
   field(DESC, "TRUE if STO not hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51555,7 +51555,7 @@ record(bi, "SL2K4:SCATTER:MMS:TOP:PLC:bHardwareEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:TOP:PLC:bHomeCmd_RBV") {
+record(bi, "TMO:SL2K4:MMS:TOP:PLC:bHomeCmd_RBV") {
   field(DESC, "Start the homing routine")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51568,7 +51568,7 @@ record(bi, "SL2K4:SCATTER:MMS:TOP:PLC:bHomeCmd_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:TOP:PLC:bHomeCmd") {
+record(bo, "TMO:SL2K4:MMS:TOP:PLC:bHomeCmd") {
   field(DESC, "Start the homing routine")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
@@ -51579,7 +51579,7 @@ record(bo, "SL2K4:SCATTER:MMS:TOP:PLC:bHomeCmd") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:TOP:PLC:bReset_RBV") {
+record(bi, "TMO:SL2K4:MMS:TOP:PLC:bReset_RBV") {
   field(DESC, "Used internally to reset errors")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51592,7 +51592,7 @@ record(bi, "SL2K4:SCATTER:MMS:TOP:PLC:bReset_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:TOP:PLC:bReset") {
+record(bo, "TMO:SL2K4:MMS:TOP:PLC:bReset") {
   field(DESC, "Used internally to reset errors")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
@@ -51603,7 +51603,7 @@ record(bo, "SL2K4:SCATTER:MMS:TOP:PLC:bReset") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:TOP:PLC:bUserEnable_RBV") {
+record(bi, "TMO:SL2K4:MMS:TOP:PLC:bUserEnable_RBV") {
   # Used to disable power entirely for an axis
   field(DESC, "Used to disable powe...irely for an axis")
   field(SCAN, "I/O Intr")
@@ -51617,7 +51617,7 @@ record(bi, "SL2K4:SCATTER:MMS:TOP:PLC:bUserEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:TOP:PLC:bUserEnable") {
+record(bo, "TMO:SL2K4:MMS:TOP:PLC:bUserEnable") {
   # Used to disable power entirely for an axis
   field(DESC, "Used to disable powe...irely for an axis")
   field(DTYP, "asynInt32")
@@ -51629,7 +51629,7 @@ record(bo, "SL2K4:SCATTER:MMS:TOP:PLC:bUserEnable") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:fHomePosition_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:fHomePosition_RBV") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(SCAN, "I/O Intr")
@@ -51642,7 +51642,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:fHomePosition_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "SL2K4:SCATTER:MMS:TOP:PLC:fHomePosition") {
+record(ao, "TMO:SL2K4:MMS:TOP:PLC:fHomePosition") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(DTYP, "asynFloat64")
@@ -51653,7 +51653,7 @@ record(ao, "SL2K4:SCATTER:MMS:TOP:PLC:fHomePosition") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:fPosDiff_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:fPosDiff_RBV") {
   field(DESC, "Position lag difference")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51665,7 +51665,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:fPosDiff_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:nEncoderCount_RBV") {
+record(longin, "TMO:SL2K4:MMS:TOP:PLC:nEncoderCount_RBV") {
   field(DESC, "Count from encoder hardware")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51676,7 +51676,7 @@ record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:nEncoderCount_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:nErrorId_RBV") {
+record(longin, "TMO:SL2K4:MMS:TOP:PLC:nErrorId_RBV") {
   field(DESC, "Error code if nonzero")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51687,7 +51687,7 @@ record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:nErrorId_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:sErrorMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:TOP:PLC:sErrorMessage_RBV") {
   field(DESC, "Message to identify the error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51702,7 +51702,7 @@ record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:sErrorMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:PosLagEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:PosLagEn_RBV") {
   # TRUE if position lag monitor (also known as stall monitor) is enabled.
   field(DESC, "TRUE if position lag...itor) is enabled.")
   field(SCAN, "I/O Intr")
@@ -51714,7 +51714,7 @@ record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:PosLagEn_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:SLimMaxEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:SLimMaxEn_RBV") {
   # TRUE if controller static maximum limit is enabled.
   field(DESC, "TRUE if controller s...limit is enabled.")
   field(SCAN, "I/O Intr")
@@ -51726,7 +51726,7 @@ record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:SLimMaxEn_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:SLimMinEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:SLimMinEn_RBV") {
   # TRUE if controller static minimum limit is enabled.
   field(DESC, "TRUE if controller s...limit is enabled.")
   field(SCAN, "I/O Intr")
@@ -51738,7 +51738,7 @@ record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:SLimMinEn_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:MaxAccel_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:MaxAccel_RBV") {
   # Maximum rate of increase in speed of the axis in EU/s^2.
   field(DESC, "Maximum rate of incr...e axis in EU/s^2.")
   field(SCAN, "I/O Intr")
@@ -51751,7 +51751,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:MaxAccel_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:PosLagVal_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:PosLagVal_RBV") {
   field(DESC, "Maximum magnitude of position lag in EU.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51763,7 +51763,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:PosLagVal_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:PosLagTime_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:PosLagTime_RBV") {
   # Maximum allowable duration outside of maximum position lag value in seconds.
   field(DESC, "Maximum allowable du...value in seconds.")
   field(SCAN, "I/O Intr")
@@ -51776,7 +51776,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:PosLagTime_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:MaxDecel_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:MaxDecel_RBV") {
   # Maximum rate of decrease in speed of the axis in EU/s^2.
   field(DESC, "Maximum rate of decr...e axis in EU/s^2.")
   field(SCAN, "I/O Intr")
@@ -51789,7 +51789,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:MaxDecel_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:EncOffset_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:EncOffset_RBV") {
   field(DESC, "Encoder offset in EU.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51801,7 +51801,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:EncOffset_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:EncScaling_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:EncScaling_RBV") {
   # Encoder scaling numerator / denominator in EU/COUNT.
   field(DESC, "Encoder scaling nume...ator in EU/COUNT.")
   field(SCAN, "I/O Intr")
@@ -51814,7 +51814,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:EncScaling_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:SLimMax_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:SLimMax_RBV") {
   # Maximum commandable position of the axis in EU.
   field(DESC, "Maximum commandable ...f the axis in EU.")
   field(SCAN, "I/O Intr")
@@ -51827,7 +51827,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:SLimMax_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:SLimMin_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:SLimMin_RBV") {
   # Minimum commandable position of the axis in EU.
   field(DESC, "Minimum commandable ...f the axis in EU.")
   field(SCAN, "I/O Intr")
@@ -51840,7 +51840,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:SLimMin_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:MaxVel_RBV") {
+record(ai, "TMO:SL2K4:MMS:TOP:PLC:AxisPar:MaxVel_RBV") {
   # Maximum commandable speed of the axis in EU/s.
   field(DESC, "Maximum commandable ...the axis in EU/s.")
   field(SCAN, "I/O Intr")
@@ -51853,7 +51853,7 @@ record(ai, "SL2K4:SCATTER:MMS:TOP:PLC:AxisPar:MaxVel_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSB:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:TOP:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51864,7 +51864,7 @@ record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSB:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSB:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:TOP:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51879,7 +51879,7 @@ record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSB:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSB:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:TOP:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51894,7 +51894,7 @@ record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSF:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:TOP:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51905,7 +51905,7 @@ record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSF:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSF:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:TOP:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51920,7 +51920,7 @@ record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSF:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSF:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:TOP:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51935,7 +51935,7 @@ record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSF:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSP:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:TOP:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51946,7 +51946,7 @@ record(longin, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSP:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSP:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:TOP:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51961,7 +51961,7 @@ record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSP:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSP:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:TOP:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51976,7 +51976,7 @@ record(waveform, "SL2K4:SCATTER:MMS:TOP:PLC:stEPSP:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:NORTH:PLC:bError_RBV") {
+record(bi, "TMO:SL2K4:MMS:NTH:PLC:bError_RBV") {
   field(DESC, "TRUE if we are in an error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51989,7 +51989,7 @@ record(bi, "SL2K4:SCATTER:MMS:NORTH:PLC:bError_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:NORTH:PLC:bHardwareEnable_RBV") {
+record(bi, "TMO:SL2K4:MMS:NTH:PLC:bHardwareEnable_RBV") {
   field(DESC, "TRUE if STO not hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52002,7 +52002,7 @@ record(bi, "SL2K4:SCATTER:MMS:NORTH:PLC:bHardwareEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:NORTH:PLC:bHomeCmd_RBV") {
+record(bi, "TMO:SL2K4:MMS:NTH:PLC:bHomeCmd_RBV") {
   field(DESC, "Start the homing routine")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52015,7 +52015,7 @@ record(bi, "SL2K4:SCATTER:MMS:NORTH:PLC:bHomeCmd_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:NORTH:PLC:bHomeCmd") {
+record(bo, "TMO:SL2K4:MMS:NTH:PLC:bHomeCmd") {
   field(DESC, "Start the homing routine")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
@@ -52026,7 +52026,7 @@ record(bo, "SL2K4:SCATTER:MMS:NORTH:PLC:bHomeCmd") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:NORTH:PLC:bReset_RBV") {
+record(bi, "TMO:SL2K4:MMS:NTH:PLC:bReset_RBV") {
   field(DESC, "Used internally to reset errors")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52039,7 +52039,7 @@ record(bi, "SL2K4:SCATTER:MMS:NORTH:PLC:bReset_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:NORTH:PLC:bReset") {
+record(bo, "TMO:SL2K4:MMS:NTH:PLC:bReset") {
   field(DESC, "Used internally to reset errors")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
@@ -52050,7 +52050,7 @@ record(bo, "SL2K4:SCATTER:MMS:NORTH:PLC:bReset") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:NORTH:PLC:bUserEnable_RBV") {
+record(bi, "TMO:SL2K4:MMS:NTH:PLC:bUserEnable_RBV") {
   # Used to disable power entirely for an axis
   field(DESC, "Used to disable powe...irely for an axis")
   field(SCAN, "I/O Intr")
@@ -52064,7 +52064,7 @@ record(bi, "SL2K4:SCATTER:MMS:NORTH:PLC:bUserEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:NORTH:PLC:bUserEnable") {
+record(bo, "TMO:SL2K4:MMS:NTH:PLC:bUserEnable") {
   # Used to disable power entirely for an axis
   field(DESC, "Used to disable powe...irely for an axis")
   field(DTYP, "asynInt32")
@@ -52076,7 +52076,7 @@ record(bo, "SL2K4:SCATTER:MMS:NORTH:PLC:bUserEnable") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:fHomePosition_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:fHomePosition_RBV") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(SCAN, "I/O Intr")
@@ -52089,7 +52089,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:fHomePosition_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "SL2K4:SCATTER:MMS:NORTH:PLC:fHomePosition") {
+record(ao, "TMO:SL2K4:MMS:NTH:PLC:fHomePosition") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(DTYP, "asynFloat64")
@@ -52100,7 +52100,7 @@ record(ao, "SL2K4:SCATTER:MMS:NORTH:PLC:fHomePosition") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:fPosDiff_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:fPosDiff_RBV") {
   field(DESC, "Position lag difference")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52112,7 +52112,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:fPosDiff_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:nEncoderCount_RBV") {
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:nEncoderCount_RBV") {
   field(DESC, "Count from encoder hardware")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52123,7 +52123,7 @@ record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:nEncoderCount_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:nErrorId_RBV") {
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:nErrorId_RBV") {
   field(DESC, "Error code if nonzero")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52134,7 +52134,7 @@ record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:nErrorId_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:sErrorMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:sErrorMessage_RBV") {
   field(DESC, "Message to identify the error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52149,7 +52149,7 @@ record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:sErrorMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:PosLagEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:PosLagEn_RBV") {
   # TRUE if position lag monitor (also known as stall monitor) is enabled.
   field(DESC, "TRUE if position lag...itor) is enabled.")
   field(SCAN, "I/O Intr")
@@ -52161,7 +52161,7 @@ record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:PosLagEn_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:SLimMaxEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMaxEn_RBV") {
   # TRUE if controller static maximum limit is enabled.
   field(DESC, "TRUE if controller s...limit is enabled.")
   field(SCAN, "I/O Intr")
@@ -52173,7 +52173,7 @@ record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:SLimMaxEn_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:SLimMinEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMinEn_RBV") {
   # TRUE if controller static minimum limit is enabled.
   field(DESC, "TRUE if controller s...limit is enabled.")
   field(SCAN, "I/O Intr")
@@ -52185,7 +52185,7 @@ record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:SLimMinEn_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:MaxAccel_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:MaxAccel_RBV") {
   # Maximum rate of increase in speed of the axis in EU/s^2.
   field(DESC, "Maximum rate of incr...e axis in EU/s^2.")
   field(SCAN, "I/O Intr")
@@ -52198,7 +52198,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:MaxAccel_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:PosLagVal_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:PosLagVal_RBV") {
   field(DESC, "Maximum magnitude of position lag in EU.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52210,7 +52210,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:PosLagVal_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:PosLagTime_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:PosLagTime_RBV") {
   # Maximum allowable duration outside of maximum position lag value in seconds.
   field(DESC, "Maximum allowable du...value in seconds.")
   field(SCAN, "I/O Intr")
@@ -52223,7 +52223,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:PosLagTime_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:MaxDecel_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:MaxDecel_RBV") {
   # Maximum rate of decrease in speed of the axis in EU/s^2.
   field(DESC, "Maximum rate of decr...e axis in EU/s^2.")
   field(SCAN, "I/O Intr")
@@ -52236,7 +52236,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:MaxDecel_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:EncOffset_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:EncOffset_RBV") {
   field(DESC, "Encoder offset in EU.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52248,7 +52248,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:EncOffset_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:EncScaling_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:EncScaling_RBV") {
   # Encoder scaling numerator / denominator in EU/COUNT.
   field(DESC, "Encoder scaling nume...ator in EU/COUNT.")
   field(SCAN, "I/O Intr")
@@ -52261,7 +52261,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:EncScaling_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:SLimMax_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMax_RBV") {
   # Maximum commandable position of the axis in EU.
   field(DESC, "Maximum commandable ...f the axis in EU.")
   field(SCAN, "I/O Intr")
@@ -52274,7 +52274,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:SLimMax_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:SLimMin_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMin_RBV") {
   # Minimum commandable position of the axis in EU.
   field(DESC, "Minimum commandable ...f the axis in EU.")
   field(SCAN, "I/O Intr")
@@ -52287,7 +52287,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:SLimMin_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:MaxVel_RBV") {
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:MaxVel_RBV") {
   # Maximum commandable speed of the axis in EU/s.
   field(DESC, "Maximum commandable ...the axis in EU/s.")
   field(SCAN, "I/O Intr")
@@ -52300,7 +52300,7 @@ record(ai, "SL2K4:SCATTER:MMS:NORTH:PLC:AxisPar:MaxVel_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSB:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52311,7 +52311,7 @@ record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSB:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSB:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52326,7 +52326,7 @@ record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSB:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSB:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52341,7 +52341,7 @@ record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSF:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52352,7 +52352,7 @@ record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSF:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSF:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52367,7 +52367,7 @@ record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSF:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSF:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52382,7 +52382,7 @@ record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSF:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSP:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52393,7 +52393,7 @@ record(longin, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSP:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSP:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52408,7 +52408,7 @@ record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSP:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSP:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52423,7 +52423,7 @@ record(waveform, "SL2K4:SCATTER:MMS:NORTH:PLC:stEPSP:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bError_RBV") {
+record(bi, "TMO:SL2K4:MMS:BTM:PLC:bError_RBV") {
   field(DESC, "TRUE if we are in an error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52436,7 +52436,7 @@ record(bi, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bError_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bHardwareEnable_RBV") {
+record(bi, "TMO:SL2K4:MMS:BTM:PLC:bHardwareEnable_RBV") {
   field(DESC, "TRUE if STO not hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52449,7 +52449,7 @@ record(bi, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bHardwareEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bHomeCmd_RBV") {
+record(bi, "TMO:SL2K4:MMS:BTM:PLC:bHomeCmd_RBV") {
   field(DESC, "Start the homing routine")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52462,7 +52462,7 @@ record(bi, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bHomeCmd_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bHomeCmd") {
+record(bo, "TMO:SL2K4:MMS:BTM:PLC:bHomeCmd") {
   field(DESC, "Start the homing routine")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
@@ -52473,7 +52473,7 @@ record(bo, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bHomeCmd") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bReset_RBV") {
+record(bi, "TMO:SL2K4:MMS:BTM:PLC:bReset_RBV") {
   field(DESC, "Used internally to reset errors")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52486,7 +52486,7 @@ record(bi, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bReset_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bReset") {
+record(bo, "TMO:SL2K4:MMS:BTM:PLC:bReset") {
   field(DESC, "Used internally to reset errors")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
@@ -52497,7 +52497,7 @@ record(bo, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bReset") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bUserEnable_RBV") {
+record(bi, "TMO:SL2K4:MMS:BTM:PLC:bUserEnable_RBV") {
   # Used to disable power entirely for an axis
   field(DESC, "Used to disable powe...irely for an axis")
   field(SCAN, "I/O Intr")
@@ -52511,7 +52511,7 @@ record(bi, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bUserEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bUserEnable") {
+record(bo, "TMO:SL2K4:MMS:BTM:PLC:bUserEnable") {
   # Used to disable power entirely for an axis
   field(DESC, "Used to disable powe...irely for an axis")
   field(DTYP, "asynInt32")
@@ -52523,7 +52523,7 @@ record(bo, "SL2K4:SCATTER:MMS:BOTTOM:PLC:bUserEnable") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:fHomePosition_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:fHomePosition_RBV") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(SCAN, "I/O Intr")
@@ -52536,7 +52536,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:fHomePosition_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "SL2K4:SCATTER:MMS:BOTTOM:PLC:fHomePosition") {
+record(ao, "TMO:SL2K4:MMS:BTM:PLC:fHomePosition") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(DTYP, "asynFloat64")
@@ -52547,7 +52547,7 @@ record(ao, "SL2K4:SCATTER:MMS:BOTTOM:PLC:fHomePosition") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:fPosDiff_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:fPosDiff_RBV") {
   field(DESC, "Position lag difference")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52559,7 +52559,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:fPosDiff_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:nEncoderCount_RBV") {
+record(longin, "TMO:SL2K4:MMS:BTM:PLC:nEncoderCount_RBV") {
   field(DESC, "Count from encoder hardware")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52570,7 +52570,7 @@ record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:nEncoderCount_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:nErrorId_RBV") {
+record(longin, "TMO:SL2K4:MMS:BTM:PLC:nErrorId_RBV") {
   field(DESC, "Error code if nonzero")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52581,7 +52581,7 @@ record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:nErrorId_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:sErrorMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:BTM:PLC:sErrorMessage_RBV") {
   field(DESC, "Message to identify the error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52596,7 +52596,7 @@ record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:sErrorMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:PosLagEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:PosLagEn_RBV") {
   # TRUE if position lag monitor (also known as stall monitor) is enabled.
   field(DESC, "TRUE if position lag...itor) is enabled.")
   field(SCAN, "I/O Intr")
@@ -52608,7 +52608,7 @@ record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:PosLagEn_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:SLimMaxEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:SLimMaxEn_RBV") {
   # TRUE if controller static maximum limit is enabled.
   field(DESC, "TRUE if controller s...limit is enabled.")
   field(SCAN, "I/O Intr")
@@ -52620,7 +52620,7 @@ record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:SLimMaxEn_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:SLimMinEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:SLimMinEn_RBV") {
   # TRUE if controller static minimum limit is enabled.
   field(DESC, "TRUE if controller s...limit is enabled.")
   field(SCAN, "I/O Intr")
@@ -52632,7 +52632,7 @@ record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:SLimMinEn_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:MaxAccel_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:MaxAccel_RBV") {
   # Maximum rate of increase in speed of the axis in EU/s^2.
   field(DESC, "Maximum rate of incr...e axis in EU/s^2.")
   field(SCAN, "I/O Intr")
@@ -52645,7 +52645,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:MaxAccel_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:PosLagVal_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:PosLagVal_RBV") {
   field(DESC, "Maximum magnitude of position lag in EU.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52657,7 +52657,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:PosLagVal_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:PosLagTime_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:PosLagTime_RBV") {
   # Maximum allowable duration outside of maximum position lag value in seconds.
   field(DESC, "Maximum allowable du...value in seconds.")
   field(SCAN, "I/O Intr")
@@ -52670,7 +52670,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:PosLagTime_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:MaxDecel_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:MaxDecel_RBV") {
   # Maximum rate of decrease in speed of the axis in EU/s^2.
   field(DESC, "Maximum rate of decr...e axis in EU/s^2.")
   field(SCAN, "I/O Intr")
@@ -52683,7 +52683,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:MaxDecel_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:EncOffset_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:EncOffset_RBV") {
   field(DESC, "Encoder offset in EU.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52695,7 +52695,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:EncOffset_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:EncScaling_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:EncScaling_RBV") {
   # Encoder scaling numerator / denominator in EU/COUNT.
   field(DESC, "Encoder scaling nume...ator in EU/COUNT.")
   field(SCAN, "I/O Intr")
@@ -52708,7 +52708,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:EncScaling_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:SLimMax_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:SLimMax_RBV") {
   # Maximum commandable position of the axis in EU.
   field(DESC, "Maximum commandable ...f the axis in EU.")
   field(SCAN, "I/O Intr")
@@ -52721,7 +52721,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:SLimMax_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:SLimMin_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:SLimMin_RBV") {
   # Minimum commandable position of the axis in EU.
   field(DESC, "Minimum commandable ...f the axis in EU.")
   field(SCAN, "I/O Intr")
@@ -52734,7 +52734,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:SLimMin_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:MaxVel_RBV") {
+record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:MaxVel_RBV") {
   # Maximum commandable speed of the axis in EU/s.
   field(DESC, "Maximum commandable ...the axis in EU/s.")
   field(SCAN, "I/O Intr")
@@ -52747,7 +52747,7 @@ record(ai, "SL2K4:SCATTER:MMS:BOTTOM:PLC:AxisPar:MaxVel_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSB:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:BTM:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52758,7 +52758,7 @@ record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSB:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSB:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52773,7 +52773,7 @@ record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSB:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSB:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52788,7 +52788,7 @@ record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSF:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:BTM:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52799,7 +52799,7 @@ record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSF:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSF:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52814,7 +52814,7 @@ record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSF:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSF:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52829,7 +52829,7 @@ record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSF:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSP:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:BTM:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52840,7 +52840,7 @@ record(longin, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSP:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSP:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52855,7 +52855,7 @@ record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSP:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSP:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52870,7 +52870,7 @@ record(waveform, "SL2K4:SCATTER:MMS:BOTTOM:PLC:stEPSP:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:SOUTH:PLC:bError_RBV") {
+record(bi, "TMO:SL2K4:MMS:STH:PLC:bError_RBV") {
   field(DESC, "TRUE if we are in an error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52883,7 +52883,7 @@ record(bi, "SL2K4:SCATTER:MMS:SOUTH:PLC:bError_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:SOUTH:PLC:bHardwareEnable_RBV") {
+record(bi, "TMO:SL2K4:MMS:STH:PLC:bHardwareEnable_RBV") {
   field(DESC, "TRUE if STO not hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52896,7 +52896,7 @@ record(bi, "SL2K4:SCATTER:MMS:SOUTH:PLC:bHardwareEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:SOUTH:PLC:bHomeCmd_RBV") {
+record(bi, "TMO:SL2K4:MMS:STH:PLC:bHomeCmd_RBV") {
   field(DESC, "Start the homing routine")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52909,7 +52909,7 @@ record(bi, "SL2K4:SCATTER:MMS:SOUTH:PLC:bHomeCmd_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:SOUTH:PLC:bHomeCmd") {
+record(bo, "TMO:SL2K4:MMS:STH:PLC:bHomeCmd") {
   field(DESC, "Start the homing routine")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
@@ -52920,7 +52920,7 @@ record(bo, "SL2K4:SCATTER:MMS:SOUTH:PLC:bHomeCmd") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:SOUTH:PLC:bReset_RBV") {
+record(bi, "TMO:SL2K4:MMS:STH:PLC:bReset_RBV") {
   field(DESC, "Used internally to reset errors")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52933,7 +52933,7 @@ record(bi, "SL2K4:SCATTER:MMS:SOUTH:PLC:bReset_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:SOUTH:PLC:bReset") {
+record(bo, "TMO:SL2K4:MMS:STH:PLC:bReset") {
   field(DESC, "Used internally to reset errors")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
@@ -52944,7 +52944,7 @@ record(bo, "SL2K4:SCATTER:MMS:SOUTH:PLC:bReset") {
   info(archive, "VAL")
 }
 
-record(bi, "SL2K4:SCATTER:MMS:SOUTH:PLC:bUserEnable_RBV") {
+record(bi, "TMO:SL2K4:MMS:STH:PLC:bUserEnable_RBV") {
   # Used to disable power entirely for an axis
   field(DESC, "Used to disable powe...irely for an axis")
   field(SCAN, "I/O Intr")
@@ -52958,7 +52958,7 @@ record(bi, "SL2K4:SCATTER:MMS:SOUTH:PLC:bUserEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "SL2K4:SCATTER:MMS:SOUTH:PLC:bUserEnable") {
+record(bo, "TMO:SL2K4:MMS:STH:PLC:bUserEnable") {
   # Used to disable power entirely for an axis
   field(DESC, "Used to disable powe...irely for an axis")
   field(DTYP, "asynInt32")
@@ -52970,7 +52970,7 @@ record(bo, "SL2K4:SCATTER:MMS:SOUTH:PLC:bUserEnable") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:fHomePosition_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:fHomePosition_RBV") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(SCAN, "I/O Intr")
@@ -52983,7 +52983,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:fHomePosition_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "SL2K4:SCATTER:MMS:SOUTH:PLC:fHomePosition") {
+record(ao, "TMO:SL2K4:MMS:STH:PLC:fHomePosition") {
   # Used internally and by the IOC to pick home position
   field(DESC, "Used internally and ...ick home position")
   field(DTYP, "asynFloat64")
@@ -52994,7 +52994,7 @@ record(ao, "SL2K4:SCATTER:MMS:SOUTH:PLC:fHomePosition") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:fPosDiff_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:fPosDiff_RBV") {
   field(DESC, "Position lag difference")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53006,7 +53006,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:fPosDiff_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:nEncoderCount_RBV") {
+record(longin, "TMO:SL2K4:MMS:STH:PLC:nEncoderCount_RBV") {
   field(DESC, "Count from encoder hardware")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53017,7 +53017,7 @@ record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:nEncoderCount_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:nErrorId_RBV") {
+record(longin, "TMO:SL2K4:MMS:STH:PLC:nErrorId_RBV") {
   field(DESC, "Error code if nonzero")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53028,7 +53028,7 @@ record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:nErrorId_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:sErrorMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:STH:PLC:sErrorMessage_RBV") {
   field(DESC, "Message to identify the error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53043,7 +53043,7 @@ record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:sErrorMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:PosLagEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:STH:PLC:AxisPar:PosLagEn_RBV") {
   # TRUE if position lag monitor (also known as stall monitor) is enabled.
   field(DESC, "TRUE if position lag...itor) is enabled.")
   field(SCAN, "I/O Intr")
@@ -53055,7 +53055,7 @@ record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:PosLagEn_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:SLimMaxEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:STH:PLC:AxisPar:SLimMaxEn_RBV") {
   # TRUE if controller static maximum limit is enabled.
   field(DESC, "TRUE if controller s...limit is enabled.")
   field(SCAN, "I/O Intr")
@@ -53067,7 +53067,7 @@ record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:SLimMaxEn_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:SLimMinEn_RBV") {
+record(longin, "TMO:SL2K4:MMS:STH:PLC:AxisPar:SLimMinEn_RBV") {
   # TRUE if controller static minimum limit is enabled.
   field(DESC, "TRUE if controller s...limit is enabled.")
   field(SCAN, "I/O Intr")
@@ -53079,7 +53079,7 @@ record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:SLimMinEn_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:MaxAccel_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:AxisPar:MaxAccel_RBV") {
   # Maximum rate of increase in speed of the axis in EU/s^2.
   field(DESC, "Maximum rate of incr...e axis in EU/s^2.")
   field(SCAN, "I/O Intr")
@@ -53092,7 +53092,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:MaxAccel_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:PosLagVal_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:AxisPar:PosLagVal_RBV") {
   field(DESC, "Maximum magnitude of position lag in EU.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53104,7 +53104,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:PosLagVal_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:PosLagTime_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:AxisPar:PosLagTime_RBV") {
   # Maximum allowable duration outside of maximum position lag value in seconds.
   field(DESC, "Maximum allowable du...value in seconds.")
   field(SCAN, "I/O Intr")
@@ -53117,7 +53117,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:PosLagTime_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:MaxDecel_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:AxisPar:MaxDecel_RBV") {
   # Maximum rate of decrease in speed of the axis in EU/s^2.
   field(DESC, "Maximum rate of decr...e axis in EU/s^2.")
   field(SCAN, "I/O Intr")
@@ -53130,7 +53130,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:MaxDecel_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:EncOffset_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:AxisPar:EncOffset_RBV") {
   field(DESC, "Encoder offset in EU.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53142,7 +53142,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:EncOffset_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:EncScaling_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:AxisPar:EncScaling_RBV") {
   # Encoder scaling numerator / denominator in EU/COUNT.
   field(DESC, "Encoder scaling nume...ator in EU/COUNT.")
   field(SCAN, "I/O Intr")
@@ -53155,7 +53155,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:EncScaling_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:SLimMax_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:AxisPar:SLimMax_RBV") {
   # Maximum commandable position of the axis in EU.
   field(DESC, "Maximum commandable ...f the axis in EU.")
   field(SCAN, "I/O Intr")
@@ -53168,7 +53168,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:SLimMax_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:SLimMin_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:AxisPar:SLimMin_RBV") {
   # Minimum commandable position of the axis in EU.
   field(DESC, "Minimum commandable ...f the axis in EU.")
   field(SCAN, "I/O Intr")
@@ -53181,7 +53181,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:SLimMin_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:MaxVel_RBV") {
+record(ai, "TMO:SL2K4:MMS:STH:PLC:AxisPar:MaxVel_RBV") {
   # Maximum commandable speed of the axis in EU/s.
   field(DESC, "Maximum commandable ...the axis in EU/s.")
   field(SCAN, "I/O Intr")
@@ -53194,7 +53194,7 @@ record(ai, "SL2K4:SCATTER:MMS:SOUTH:PLC:AxisPar:MaxVel_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSB:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:STH:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53205,7 +53205,7 @@ record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSB:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSB:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:STH:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53220,7 +53220,7 @@ record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSB:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSB:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:STH:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53235,7 +53235,7 @@ record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSF:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:STH:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53246,7 +53246,7 @@ record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSF:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSF:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:STH:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53261,7 +53261,7 @@ record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSF:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSF:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:STH:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53276,7 +53276,7 @@ record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSF:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSP:nFlags_RBV") {
+record(longin, "TMO:SL2K4:MMS:STH:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53287,7 +53287,7 @@ record(longin, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSP:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSP:sFlagDesc_RBV") {
+record(waveform, "TMO:SL2K4:MMS:STH:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -53302,7 +53302,7 @@ record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSP:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "SL2K4:SCATTER:MMS:SOUTH:PLC:stEPSP:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:STH:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
