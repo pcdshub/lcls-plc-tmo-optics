@@ -19,8 +19,8 @@ VAR
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[fbSL2K4(stTopBlade:=  Main.M25,
-        stBottomBlade:= Main.M27,
-        stNorthBlade:=  Main.M26,
+        stBottomBlade:= Main.M26,
+        stNorthBlade:=  Main.M27,
         stSouthBlade:=  Main.M28,
         bExecuteMotion:=bExecuteMotion,
         io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,

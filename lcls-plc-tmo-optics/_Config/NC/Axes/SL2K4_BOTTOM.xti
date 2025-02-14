@@ -1424,17 +1424,19 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 	</DataTypes>
-	<Axis Id="27" CreateSymbols="true" AxisType="1" AxisFolder="SL2K4">
+	<Axis Id="26" CreateSymbols="true" AxisType="1" AxisFolder="SL2K4">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
 			<Dynamic AccelerationMaximum="0.25" DecelerationMaximum="0.25" Acceleration="0.25" Deceleration="0.25" Jerk="0.4"/>
 			<Velo RefSearch="0.05" RefSync="0.025" SlowManual="0.1" FastManual="0.1" Maximum="0.5"/>
+			<PositionAreaControl Enable="false"/>
+			<TargetPosControl Range="0.01"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="0.005" PulseDistanceNeg="0.005"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
 			<EncPara ScaleFactorNumerator="1e-06" Offset="-2147.483647" MaxCount="#xffffffff">
-				<SoftEndMinControl Enable="true" Range="-4.35"/>
-				<SoftEndMaxControl Enable="true" Range="-0.3"/>
+				<SoftEndMinControl Enable="true" Range="0.4"/>
+				<SoftEndMaxControl Enable="true" Range="4.6"/>
 				<Inc RefMode="2" RefSoftSyncMask="#x0000ffff"/>
 			</EncPara>
 			<Vars VarGrpType="1">
@@ -1588,7 +1590,7 @@ External Setpoint Generation:
 	</Axis>
 	<Mappings>
 		<OwnerA>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^SL2K4_BOTTOM">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^SL2K4_NORTH">
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Error" Size="1" OffsA="3"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving negative" Size="1" OffsA="5"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving positive" Size="1" OffsA="4"/>

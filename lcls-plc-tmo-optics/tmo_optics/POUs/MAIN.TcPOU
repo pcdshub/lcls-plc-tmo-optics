@@ -344,12 +344,12 @@ VAR
     {attribute 'pytmc' := 'pv: TMO:SL2K4:MMS:TOP'}
     {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 1^Position'}
     M25: ST_MotionStage := (sName := 'TMO:SL2K4:MMS:TOP', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
-    {attribute 'pytmc' := 'pv: TMO:SL2K4:MMS:NTH'}
+	{attribute 'pytmc' := 'pv: TMO:SL2K4:MMS:BTM'}
     {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 2^Position'}
-    M26: ST_MotionStage := (sName := 'TMO:SL2K4:MMS:NTH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
-    {attribute 'pytmc' := 'pv: TMO:SL2K4:MMS:BTM'}
+	M26: ST_MotionStage := (sName := 'TMO:SL2K4:MMS:BTM', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
+    {attribute 'pytmc' := 'pv: TMO:SL2K4:MMS:NTH'}
     {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 1^Position'}
-    M27: ST_MotionStage := (sName := 'TMO:SL2K4:MMS:BTM', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
+    M27: ST_MotionStage := (sName := 'TMO:SL2K4:MMS:NTH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);
     {attribute 'pytmc' := 'pv: TMO:SL2K4:MMS:STH'}
     {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 2^Position'}
     M28: ST_MotionStage := (sName := 'TMO:SL2K4:MMS:STH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=FALSE);

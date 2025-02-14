@@ -475,8 +475,8 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 
 epicsEnvSet("AXIS_NO",         "26")
 epicsEnvSet("MOTOR_PREFIX",    "TMO:SL2K4:MMS:")
-epicsEnvSet("MOTOR_NAME",      "NTH")
-epicsEnvSet("DESC",            "Main.M26 / SL2K4_NORTH")
+epicsEnvSet("MOTOR_NAME",      "BTM")
+epicsEnvSet("DESC",            "Main.M26 / SL2K4_BOTTOM")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -490,8 +490,8 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 
 epicsEnvSet("AXIS_NO",         "27")
 epicsEnvSet("MOTOR_PREFIX",    "TMO:SL2K4:MMS:")
-epicsEnvSet("MOTOR_NAME",      "BTM")
-epicsEnvSet("DESC",            "Main.M27 / SL2K4_BOTTOM")
+epicsEnvSet("MOTOR_NAME",      "NTH")
+epicsEnvSet("DESC",            "Main.M27 / SL2K4_NORTH")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")

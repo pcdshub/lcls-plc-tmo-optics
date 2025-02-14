@@ -2478,8 +2478,8 @@ External Setpoint Generation:
 			</Vars>
 		</Axis>
 		<Axis File="SL2K4_TOP.xti" Id="25"/>
-		<Axis File="SL2K4_NORTH.xti" Id="26"/>
-		<Axis File="SL2K4_BOTTOM.xti" Id="27"/>
+		<Axis File="SL2K4_BOTTOM.xti" Id="26"/>
+		<Axis File="SL2K4_NORTH.xti" Id="27"/>
 		<Axis File="SL2K4_SOUTH.xti" Id="28"/>
 	</NC>
 	<Mappings>

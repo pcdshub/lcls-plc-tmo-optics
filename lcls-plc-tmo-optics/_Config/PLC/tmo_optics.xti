@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{80A551C9-A006-4BAD-E9EA-A080693C42AB}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{7E367AFC-7D15-21FC-B273-8B8133DAF443}">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -4282,14 +4282,14 @@ MR4K4 MR5K4 STO button]]></Comment>
 				<Link VarA="PlcTask Outputs^Main.M24.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^SL2K4_BOTTOM">
-				<Link VarA="PlcTask Inputs^Main.M27.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
-				<Link VarA="PlcTask Outputs^Main.M27.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
+				<Link VarA="PlcTask Inputs^Main.M26.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
+				<Link VarA="PlcTask Outputs^Main.M26.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M27_position_UDINT" VarB="Enc^Inputs^In^nDataIn1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^SL2K4_NORTH">
-				<Link VarA="PlcTask Inputs^Main.M26.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
-				<Link VarA="PlcTask Outputs^Main.M26.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
+				<Link VarA="PlcTask Inputs^Main.M27.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M26_position_UDINT" VarB="Enc^Inputs^In^nDataIn1" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^Main.M27.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^SL2K4_SOUTH">
 				<Link VarA="PlcTask Inputs^Main.M28.Axis.NcToPlc" VarB="Outputs^ToPlc"/>

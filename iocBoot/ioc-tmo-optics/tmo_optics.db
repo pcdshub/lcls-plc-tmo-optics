@@ -51976,7 +51976,7 @@ record(waveform, "TMO:SL2K4:MMS:TOP:PLC:stEPSP:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "TMO:SL2K4:MMS:NTH:PLC:bError_RBV") {
+record(bi, "TMO:SL2K4:MMS:BTM:PLC:bError_RBV") {
   field(DESC, "TRUE if we are in an error state")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -51989,7 +51989,7 @@ record(bi, "TMO:SL2K4:MMS:NTH:PLC:bError_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "TMO:SL2K4:MMS:NTH:PLC:bHardwareEnable_RBV") {
+record(bi, "TMO:SL2K4:MMS:BTM:PLC:bHardwareEnable_RBV") {
   field(DESC, "TRUE if STO not hit")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52002,7 +52002,7 @@ record(bi, "TMO:SL2K4:MMS:NTH:PLC:bHardwareEnable_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "TMO:SL2K4:MMS:NTH:PLC:bHomeCmd_RBV") {
+record(bi, "TMO:SL2K4:MMS:BTM:PLC:bHomeCmd_RBV") {
   field(DESC, "Start the homing routine")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52015,458 +52015,11 @@ record(bi, "TMO:SL2K4:MMS:NTH:PLC:bHomeCmd_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "TMO:SL2K4:MMS:NTH:PLC:bHomeCmd") {
-  field(DESC, "Start the homing routine")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M26.bHomeCmd=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "TMO:SL2K4:MMS:NTH:PLC:bReset_RBV") {
-  field(DESC, "Used internally to reset errors")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.bReset?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "TMO:SL2K4:MMS:NTH:PLC:bReset") {
-  field(DESC, "Used internally to reset errors")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M26.bReset=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "TMO:SL2K4:MMS:NTH:PLC:bUserEnable_RBV") {
-  # Used to disable power entirely for an axis
-  field(DESC, "Used to disable powe...irely for an axis")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.bUserEnable?")
-  field(ZNAM, "DISABLE")
-  field(ONAM, "ENABLE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "TMO:SL2K4:MMS:NTH:PLC:bUserEnable") {
-  # Used to disable power entirely for an axis
-  field(DESC, "Used to disable powe...irely for an axis")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M26.bUserEnable=")
-  field(ZNAM, "DISABLE")
-  field(ONAM, "ENABLE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:fHomePosition_RBV") {
-  # Used internally and by the IOC to pick home position
-  field(DESC, "Used internally and ...ick home position")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.fHomePosition?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ao, "TMO:SL2K4:MMS:NTH:PLC:fHomePosition") {
-  # Used internally and by the IOC to pick home position
-  field(DESC, "Used internally and ...ick home position")
-  field(DTYP, "asynFloat64")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M26.fHomePosition=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:fPosDiff_RBV") {
-  field(DESC, "Position lag difference")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.fPosDiff?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(longin, "TMO:SL2K4:MMS:NTH:PLC:nEncoderCount_RBV") {
-  field(DESC, "Count from encoder hardware")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.nEncoderCount?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(longin, "TMO:SL2K4:MMS:NTH:PLC:nErrorId_RBV") {
-  field(DESC, "Error code if nonzero")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/TS_MS=10/Main.M26.nErrorId?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "TMO:SL2K4:MMS:NTH:PLC:sErrorMessage_RBV") {
-  field(DESC, "Message to identify the error state")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/TS_MS=10/Main.M26.sErrorMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(longin, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:PosLagEn_RBV") {
-  # TRUE if position lag monitor (also known as stall monitor) is enabled.
-  field(DESC, "TRUE if position lag...itor) is enabled.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.bCtrlEnablePosDiffControl?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(longin, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMaxEn_RBV") {
-  # TRUE if controller static maximum limit is enabled.
-  field(DESC, "TRUE if controller s...limit is enabled.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.bEncEnableSoftEndMaxControl?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(longin, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMinEn_RBV") {
-  # TRUE if controller static minimum limit is enabled.
-  field(DESC, "TRUE if controller s...limit is enabled.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.bEncEnableSoftEndMinControl?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:MaxAccel_RBV") {
-  # Maximum rate of increase in speed of the axis in EU/s^2.
-  field(DESC, "Maximum rate of incr...e axis in EU/s^2.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fAccelerationMax?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:PosLagVal_RBV") {
-  field(DESC, "Maximum magnitude of position lag in EU.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fCtrlPosDiffMax?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:PosLagTime_RBV") {
-  # Maximum allowable duration outside of maximum position lag value in seconds.
-  field(DESC, "Maximum allowable du...value in seconds.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fCtrlPosDiffMaxTime?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:MaxDecel_RBV") {
-  # Maximum rate of decrease in speed of the axis in EU/s^2.
-  field(DESC, "Maximum rate of decr...e axis in EU/s^2.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fDecelerationMax?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:EncOffset_RBV") {
-  field(DESC, "Encoder offset in EU.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fEncOffset?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:EncScaling_RBV") {
-  # Encoder scaling numerator / denominator in EU/COUNT.
-  field(DESC, "Encoder scaling nume...ator in EU/COUNT.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fEncScaleFactorInternal?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMax_RBV") {
-  # Maximum commandable position of the axis in EU.
-  field(DESC, "Maximum commandable ...f the axis in EU.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fEncSoftEndMax?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMin_RBV") {
-  # Minimum commandable position of the axis in EU.
-  field(DESC, "Minimum commandable ...f the axis in EU.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fEncSoftEndMin?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:MaxVel_RBV") {
-  # Maximum commandable speed of the axis in EU/s.
-  field(DESC, "Maximum commandable ...the axis in EU/s.")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fVeloMaximum?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(longin, "TMO:SL2K4:MMS:NTH:PLC:stEPSB:nFlags_RBV") {
-  field(DESC, "Contains EPS flags")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSBackwardEnable.nFlags?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSB:sFlagDesc_RBV") {
-  field(DESC, "semicolon-delimited nFlag variable")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSBackwardEnable.sFlagDesc?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSB:sMessage_RBV") {
-  field(DESC, "Message from EPS to usr")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSBackwardEnable.sMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(longin, "TMO:SL2K4:MMS:NTH:PLC:stEPSF:nFlags_RBV") {
-  field(DESC, "Contains EPS flags")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSForwardEnable.nFlags?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSF:sFlagDesc_RBV") {
-  field(DESC, "semicolon-delimited nFlag variable")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSForwardEnable.sFlagDesc?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSF:sMessage_RBV") {
-  field(DESC, "Message from EPS to usr")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSForwardEnable.sMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(longin, "TMO:SL2K4:MMS:NTH:PLC:stEPSP:nFlags_RBV") {
-  field(DESC, "Contains EPS flags")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSPowerEnable.nFlags?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSP:sFlagDesc_RBV") {
-  field(DESC, "semicolon-delimited nFlag variable")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSPowerEnable.sFlagDesc?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSP:sMessage_RBV") {
-  field(DESC, "Message from EPS to usr")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSPowerEnable.sMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(bi, "TMO:SL2K4:MMS:BTM:PLC:bError_RBV") {
-  field(DESC, "TRUE if we are in an error state")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/TS_MS=10/Main.M27.bError?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "TMO:SL2K4:MMS:BTM:PLC:bHardwareEnable_RBV") {
-  field(DESC, "TRUE if STO not hit")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.bHardwareEnable?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "TMO:SL2K4:MMS:BTM:PLC:bHomeCmd_RBV") {
-  field(DESC, "Start the homing routine")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.bHomeCmd?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
 record(bo, "TMO:SL2K4:MMS:BTM:PLC:bHomeCmd") {
   field(DESC, "Start the homing routine")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M27.bHomeCmd=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M26.bHomeCmd=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -52479,7 +52032,7 @@ record(bi, "TMO:SL2K4:MMS:BTM:PLC:bReset_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.bReset?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.bReset?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -52490,7 +52043,7 @@ record(bo, "TMO:SL2K4:MMS:BTM:PLC:bReset") {
   field(DESC, "Used internally to reset errors")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M27.bReset=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M26.bReset=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -52504,7 +52057,7 @@ record(bi, "TMO:SL2K4:MMS:BTM:PLC:bUserEnable_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.bUserEnable?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.bUserEnable?")
   field(ZNAM, "DISABLE")
   field(ONAM, "ENABLE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -52516,7 +52069,7 @@ record(bo, "TMO:SL2K4:MMS:BTM:PLC:bUserEnable") {
   field(DESC, "Used to disable powe...irely for an axis")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M27.bUserEnable=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M26.bUserEnable=")
   field(ZNAM, "DISABLE")
   field(ONAM, "ENABLE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -52530,7 +52083,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:fHomePosition_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.fHomePosition?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.fHomePosition?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52541,7 +52094,7 @@ record(ao, "TMO:SL2K4:MMS:BTM:PLC:fHomePosition") {
   field(DESC, "Used internally and ...ick home position")
   field(DTYP, "asynFloat64")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M27.fHomePosition=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M26.fHomePosition=")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
   info(archive, "VAL")
@@ -52553,7 +52106,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:fPosDiff_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.fPosDiff?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.fPosDiff?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52565,7 +52118,7 @@ record(longin, "TMO:SL2K4:MMS:BTM:PLC:nEncoderCount_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.nEncoderCount?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.nEncoderCount?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
@@ -52576,7 +52129,7 @@ record(longin, "TMO:SL2K4:MMS:BTM:PLC:nErrorId_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/TS_MS=10/Main.M27.nErrorId?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/TS_MS=10/Main.M26.nErrorId?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
@@ -52587,7 +52140,7 @@ record(waveform, "TMO:SL2K4:MMS:BTM:PLC:sErrorMessage_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/TS_MS=10/Main.M27.sErrorMessage?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/TS_MS=10/Main.M26.sErrorMessage?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -52603,7 +52156,7 @@ record(longin, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:PosLagEn_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.bCtrlEnablePosDiffControl?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.bCtrlEnablePosDiffControl?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
@@ -52615,7 +52168,7 @@ record(longin, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:SLimMaxEn_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.bEncEnableSoftEndMaxControl?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.bEncEnableSoftEndMaxControl?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
@@ -52627,7 +52180,7 @@ record(longin, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:SLimMinEn_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.bEncEnableSoftEndMinControl?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.bEncEnableSoftEndMinControl?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
@@ -52639,7 +52192,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:MaxAccel_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fAccelerationMax?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fAccelerationMax?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52651,7 +52204,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:PosLagVal_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fCtrlPosDiffMax?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fCtrlPosDiffMax?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52664,7 +52217,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:PosLagTime_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fCtrlPosDiffMaxTime?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fCtrlPosDiffMaxTime?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52677,7 +52230,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:MaxDecel_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fDecelerationMax?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fDecelerationMax?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52689,7 +52242,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:EncOffset_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fEncOffset?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fEncOffset?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52702,7 +52255,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:EncScaling_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fEncScaleFactorInternal?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fEncScaleFactorInternal?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52715,7 +52268,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:SLimMax_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fEncSoftEndMax?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fEncSoftEndMax?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52728,7 +52281,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:SLimMin_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fEncSoftEndMin?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fEncSoftEndMin?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52741,7 +52294,7 @@ record(ai, "TMO:SL2K4:MMS:BTM:PLC:AxisPar:MaxVel_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fVeloMaximum?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stAxisParametersExposed.fVeloMaximum?")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
   info(archive, "VAL")
@@ -52753,7 +52306,7 @@ record(longin, "TMO:SL2K4:MMS:BTM:PLC:stEPSB:nFlags_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSBackwardEnable.nFlags?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSBackwardEnable.nFlags?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
@@ -52764,7 +52317,7 @@ record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSB:sFlagDesc_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSBackwardEnable.sFlagDesc?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSBackwardEnable.sFlagDesc?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -52779,7 +52332,7 @@ record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSB:sMessage_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSBackwardEnable.sMessage?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSBackwardEnable.sMessage?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -52794,7 +52347,7 @@ record(longin, "TMO:SL2K4:MMS:BTM:PLC:stEPSF:nFlags_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSForwardEnable.nFlags?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSForwardEnable.nFlags?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
@@ -52805,7 +52358,7 @@ record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSF:sFlagDesc_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSForwardEnable.sFlagDesc?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSForwardEnable.sFlagDesc?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -52820,7 +52373,7 @@ record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSF:sMessage_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSForwardEnable.sMessage?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSForwardEnable.sMessage?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -52835,12 +52388,459 @@ record(longin, "TMO:SL2K4:MMS:BTM:PLC:stEPSP:nFlags_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSPowerEnable.nFlags?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSPowerEnable.nFlags?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
 record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSP:sFlagDesc_RBV") {
+  field(DESC, "semicolon-delimited nFlag variable")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSPowerEnable.sFlagDesc?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSP:sMessage_RBV") {
+  field(DESC, "Message from EPS to usr")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M26.stEPSPowerEnable.sMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "TMO:SL2K4:MMS:NTH:PLC:bError_RBV") {
+  field(DESC, "TRUE if we are in an error state")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/TS_MS=10/Main.M27.bError?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "TMO:SL2K4:MMS:NTH:PLC:bHardwareEnable_RBV") {
+  field(DESC, "TRUE if STO not hit")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.bHardwareEnable?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "TMO:SL2K4:MMS:NTH:PLC:bHomeCmd_RBV") {
+  field(DESC, "Start the homing routine")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.bHomeCmd?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "TMO:SL2K4:MMS:NTH:PLC:bHomeCmd") {
+  field(DESC, "Start the homing routine")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M27.bHomeCmd=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "TMO:SL2K4:MMS:NTH:PLC:bReset_RBV") {
+  field(DESC, "Used internally to reset errors")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.bReset?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "TMO:SL2K4:MMS:NTH:PLC:bReset") {
+  field(DESC, "Used internally to reset errors")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M27.bReset=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "TMO:SL2K4:MMS:NTH:PLC:bUserEnable_RBV") {
+  # Used to disable power entirely for an axis
+  field(DESC, "Used to disable powe...irely for an axis")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.bUserEnable?")
+  field(ZNAM, "DISABLE")
+  field(ONAM, "ENABLE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "TMO:SL2K4:MMS:NTH:PLC:bUserEnable") {
+  # Used to disable power entirely for an axis
+  field(DESC, "Used to disable powe...irely for an axis")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M27.bUserEnable=")
+  field(ZNAM, "DISABLE")
+  field(ONAM, "ENABLE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:fHomePosition_RBV") {
+  # Used internally and by the IOC to pick home position
+  field(DESC, "Used internally and ...ick home position")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.fHomePosition?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ao, "TMO:SL2K4:MMS:NTH:PLC:fHomePosition") {
+  # Used internally and by the IOC to pick home position
+  field(DESC, "Used internally and ...ick home position")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.M27.fHomePosition=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:fPosDiff_RBV") {
+  field(DESC, "Position lag difference")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.fPosDiff?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:nEncoderCount_RBV") {
+  field(DESC, "Count from encoder hardware")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.nEncoderCount?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:nErrorId_RBV") {
+  field(DESC, "Error code if nonzero")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/TS_MS=10/Main.M27.nErrorId?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:sErrorMessage_RBV") {
+  field(DESC, "Message to identify the error state")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/TS_MS=10/Main.M27.sErrorMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:PosLagEn_RBV") {
+  # TRUE if position lag monitor (also known as stall monitor) is enabled.
+  field(DESC, "TRUE if position lag...itor) is enabled.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.bCtrlEnablePosDiffControl?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMaxEn_RBV") {
+  # TRUE if controller static maximum limit is enabled.
+  field(DESC, "TRUE if controller s...limit is enabled.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.bEncEnableSoftEndMaxControl?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMinEn_RBV") {
+  # TRUE if controller static minimum limit is enabled.
+  field(DESC, "TRUE if controller s...limit is enabled.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.bEncEnableSoftEndMinControl?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:MaxAccel_RBV") {
+  # Maximum rate of increase in speed of the axis in EU/s^2.
+  field(DESC, "Maximum rate of incr...e axis in EU/s^2.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fAccelerationMax?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:PosLagVal_RBV") {
+  field(DESC, "Maximum magnitude of position lag in EU.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fCtrlPosDiffMax?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:PosLagTime_RBV") {
+  # Maximum allowable duration outside of maximum position lag value in seconds.
+  field(DESC, "Maximum allowable du...value in seconds.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fCtrlPosDiffMaxTime?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:MaxDecel_RBV") {
+  # Maximum rate of decrease in speed of the axis in EU/s^2.
+  field(DESC, "Maximum rate of decr...e axis in EU/s^2.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fDecelerationMax?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:EncOffset_RBV") {
+  field(DESC, "Encoder offset in EU.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fEncOffset?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:EncScaling_RBV") {
+  # Encoder scaling numerator / denominator in EU/COUNT.
+  field(DESC, "Encoder scaling nume...ator in EU/COUNT.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fEncScaleFactorInternal?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMax_RBV") {
+  # Maximum commandable position of the axis in EU.
+  field(DESC, "Maximum commandable ...f the axis in EU.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fEncSoftEndMax?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:SLimMin_RBV") {
+  # Minimum commandable position of the axis in EU.
+  field(DESC, "Minimum commandable ...f the axis in EU.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fEncSoftEndMin?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ai, "TMO:SL2K4:MMS:NTH:PLC:AxisPar:MaxVel_RBV") {
+  # Maximum commandable speed of the axis in EU/s.
+  field(DESC, "Maximum commandable ...the axis in EU/s.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stAxisParametersExposed.fVeloMaximum?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:stEPSB:nFlags_RBV") {
+  field(DESC, "Contains EPS flags")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSBackwardEnable.nFlags?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSB:sFlagDesc_RBV") {
+  field(DESC, "semicolon-delimited nFlag variable")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSBackwardEnable.sFlagDesc?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSB:sMessage_RBV") {
+  field(DESC, "Message from EPS to usr")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSBackwardEnable.sMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:stEPSF:nFlags_RBV") {
+  field(DESC, "Contains EPS flags")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSForwardEnable.nFlags?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSF:sFlagDesc_RBV") {
+  field(DESC, "semicolon-delimited nFlag variable")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSForwardEnable.sFlagDesc?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSF:sMessage_RBV") {
+  field(DESC, "Message from EPS to usr")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSForwardEnable.sMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(longin, "TMO:SL2K4:MMS:NTH:PLC:stEPSP:nFlags_RBV") {
+  field(DESC, "Contains EPS flags")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M27.stEPSPowerEnable.nFlags?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -52855,7 +52855,7 @@ record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSP:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "TMO:SL2K4:MMS:BTM:PLC:stEPSP:sMessage_RBV") {
+record(waveform, "TMO:SL2K4:MMS:NTH:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
