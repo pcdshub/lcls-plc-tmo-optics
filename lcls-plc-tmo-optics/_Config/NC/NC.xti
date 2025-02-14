@@ -1336,6 +1336,7 @@ External Setpoint Generation:
 		<AxisFolder Name="M3K4"/>
 		<AxisFolder Name="M4K4"/>
 		<AxisFolder Name="M5K4"/>
+		<AxisFolder Name="SL2K4"/>
 		<Axis File="M1K4-Yup.xti" Id="1"/>
 		<Axis File="M1K4-Ydwn.xti" Id="2"/>
 		<Axis File="M1K4-Xup.xti" Id="3"/>
@@ -2476,6 +2477,10 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Axis>
+		<Axis File="SL2K4_TOP.xti" Id="25"/>
+		<Axis File="SL2K4_BOTTOM.xti" Id="26"/>
+		<Axis File="SL2K4_NORTH.xti" Id="27"/>
+		<Axis File="SL2K4_SOUTH.xti" Id="28"/>
 	</NC>
 	<Mappings>
 		<OwnerA Name="Axes^M4K4 X">

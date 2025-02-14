@@ -10,7 +10,8 @@ END_VAR
 PRG_MR2K4_KBO();
 PRG_MR3K4_KBO();
 PRG_MR4K4_KBO();
-PRG_MR5K4_KBO();]]></ST>
+PRG_MR5K4_KBO();
+PRG_SL2K4_SCATTER();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
