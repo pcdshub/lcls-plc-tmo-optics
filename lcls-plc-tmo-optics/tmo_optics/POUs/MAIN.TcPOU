@@ -966,8 +966,11 @@ END_VAR]]></Declaration>
         M16.bHardwareEnable R= fM3K4DS_RTD_1 > 1000 OR bM3K4DS_RTD_1_Err;
 
     // SL2K4 BEGIN
-    fbM25(stMotionStage:=M25);
-
+    (*
+    Since Beckhoff does not support LVDT as an encoder, we handle this by writing the LVDT readback value into input->in->nDataIn1,
+    which is of type UINTARR2 (an array of two UINTs). On the other hand, LVDT readback value is a DINT, so we perform this conversion
+    to properly fit the DINT into the UINTARR2 array.
+    *)
     M25_position_LINT := M25_position;
     M25_position_LINT := M25_position_LINT + 2147483648;
     M25_position_UDINT := LINT_TO_UDINT(M25_position_LINT);
@@ -980,8 +983,13 @@ END_VAR]]></Declaration>
     M25.bHardwareEnable := TRUE;
     M25.bPowerSelf :=  TRUE;
 
-    fbM26(stMotionStage:=M26);
+    fbM25(stMotionStage:=M25);
 
+    (*
+    Since Beckhoff does not support LVDT as an encoder, we handle this by writing the LVDT readback value into input->in->nDataIn1,
+    which is of type UINTARR2 (an array of two UINTs). On the other hand, LVDT readback value is a DINT, so we perform this conversion
+    to properly fit the DINT into the UINTARR2 array.
+    *)
     M26_position_LINT := M26_position;
     M26_position_LINT := M26_position_LINT + 2147483648;
     M26_position_UDINT := LINT_TO_UDINT(M26_position_LINT);
@@ -994,8 +1002,13 @@ END_VAR]]></Declaration>
     M26.bHardwareEnable := TRUE;
     M26.bPowerSelf :=  TRUE;
 
-    fbM27(stMotionStage:=M27);
+    fbM26(stMotionStage:=M26);
 
+    (*
+    Since Beckhoff does not support LVDT as an encoder, we handle this by writing the LVDT readback value into input->in->nDataIn1,
+    which is of type UINTARR2 (an array of two UINTs). On the other hand, LVDT readback value is a DINT, so we perform this conversion
+    to properly fit the DINT into the UINTARR2 array.
+    *)
     M27_position_LINT := M27_position;
     M27_position_LINT := M27_position_LINT + 2147483648;
     M27_position_UDINT := LINT_TO_UDINT(M27_position_LINT);
@@ -1008,8 +1021,13 @@ END_VAR]]></Declaration>
     M27.bHardwareEnable := TRUE;
     M27.bPowerSelf :=  TRUE;
 
-    fbM28(stMotionStage:=M28);
+    fbM27(stMotionStage:=M27);
 
+    (*
+    Since Beckhoff does not support LVDT as an encoder, we handle this by writing the LVDT readback value into input->in->nDataIn1,
+    which is of type UINTARR2 (an array of two UINTs). On the other hand, LVDT readback value is a DINT, so we perform this conversion
+    to properly fit the DINT into the UINTARR2 array.
+    *)
     M28_position_LINT := M28_position;
     M28_position_LINT := M28_position_LINT + 2147483648;
     M28_position_UDINT := LINT_TO_UDINT(M28_position_LINT);
@@ -1021,6 +1039,8 @@ END_VAR]]></Declaration>
     M28.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     M28.bHardwareEnable := TRUE;
     M28.bPowerSelf :=  TRUE;
+
+    fbM28(stMotionStage:=M28);
     // SL2K4 END
 
 // Environment
