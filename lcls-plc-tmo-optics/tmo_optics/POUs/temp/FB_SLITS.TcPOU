@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="FB_SLITS" Id="{b20ac175-27c9-0d05-3c79-6a95fe08ff7d}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_SLITS
 VAR_IN_OUT
@@ -506,7 +506,7 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[
+        <ST><![CDATA[(*
 IF(rActApertureSizeX < (PMPS_GVL.stCurrentBeamParameters.astApertures[index].Width)+0.001)
     OR (rActApertureSizeY < (PMPS_GVL.stCurrentBeamParameters.astApertures[index].Height)+0.001) THEN
         FFO.i_xOK := FALSE;
@@ -518,7 +518,8 @@ END_IF
 FFO(i_xOK := ,
     i_xReset := ,
     i_xAutoReset :=TRUE,
-    io_fbFFHWO := this^.io_fbFFHWO);]]></ST>
+    io_fbFFHWO := this^.io_fbFFHWO);
+*)]]></ST>
       </Implementation>
     </Method>
     <Method Name="M_HomeBlade" Id="{8cbb5b1e-da93-4c77-b208-73c680cd39fe}">
@@ -706,7 +707,8 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[//Keep updating the status of the apertures PMPS
+        <ST><![CDATA[(*
+//Keep updating the status of the apertures PMPS
 This^.AptArrayStatus.Height := This^.rActApertureSizeY;
 This^.AptArrayStatus.Width := This^.rActApertureSizeX;
 This^.AptArrayStatus.xOK := NOT (This^.stTopBlade.bError) AND NOT (This^.stBottomBlade.bError)
@@ -737,7 +739,8 @@ END_IF
 FFO(i_xOK := ,
     i_xReset := ,
     i_xAutoReset :=TRUE,
-    io_fbFFHWO := io_fbFFHWO);]]></ST>
+    io_fbFFHWO := io_fbFFHWO);
+*)]]></ST>
       </Implementation>
     </Method>
   </POU>

@@ -1,4 +1,136 @@
-﻿<?xml version="1.0" encoding="utf-8"?><TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{7E367AFC-7D15-21FC-B273-8B8133DAF443}" GeneratedBy="TwinCAT XAE Plc"><DataTypes><DataType><Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name><BitSize>16</BitSize><BaseType>INT</BaseType><EnumInfo><Text>SERIALLINEMODE_DEFAULT</Text><Enum>0</Enum></EnumInfo><EnumInfo><Text>SERIALLINEMODE_KL6_3B_ALTERNATIVE</Text><Enum>1</Enum></EnumInfo><EnumInfo><Text>SERIALLINEMODE_KL6_5B_STANDARD</Text><Enum>2</Enum></EnumInfo><EnumInfo><Text>SERIALLINEMODE_KL6_22B_STANDARD</Text><Enum>3</Enum></EnumInfo><EnumInfo><Text>SERIALLINEMODE_PC_COM_PORT</Text><Enum>4</Enum></EnumInfo><EnumInfo><Text>SERIALLINEMODE_EL6_22B</Text><Enum>5</Enum></EnumInfo><EnumInfo><Text>SERIALLINEMODE_IE6_11B</Text><Enum>6</Enum></EnumInfo></DataType><DataType><Name Namespace="Tc2_SerialCom">ComError_t</Name><BitSize>16</BitSize><BaseType>INT</BaseType><EnumInfo><Text>COMERROR_NOERROR</Text><Enum>0</Enum></EnumInfo><EnumInfo><Text>COMERROR_PARAMETERCHANGED</Text><Enum>1</Enum><Comment><![CDATA[ input parameters changed during reception ]]></Comment></EnumInfo><EnumInfo><Text>COMERROR_TXBUFFOVERRUN</Text><Enum>2</Enum><Comment><![CDATA[ string > transmit buffer ]]></Comment></EnumInfo><EnumInfo><Text>COMERROR_STRINGOVERRUN</Text><Enum>10</Enum><Comment><![CDATA[ end of string ]]></Comment></EnumInfo><EnumInfo><Text>COMERROR_ZEROCHARINVALID</Text><Enum>11</Enum><Comment><![CDATA[ string cannot receive zero characters ]]></Comment></EnumInfo><EnumInfo><Text>COMERROR_INVALIDPOINTER</Text><Enum>20</Enum><Comment><![CDATA[ invalid data pointer, e. g. zero ]]></Comment></EnumInfo><EnumInfo><Text>COMERROR_INVALIDRXPOINTER</Text><Enum>21</Enum><Comment><![CDATA[ invalid data pointer for ReceiveData ]]></Comment></EnumInfo><EnumInfo><Text>COMERROR_INVALIDRXLENGTH</Text><Enum>22</Enum><Comment><![CDATA[ invalid length for ReceiveData, e. g. zero ]]></Comment></EnumInfo><EnumInfo><Text>COMERROR_DATASIZEOVERRUN</Text><Enum>23</Enum><Comment><![CDATA[ end of data block ]]></Comment></EnumInfo><EnumInfo><Text>COMERROR_INVALIDPROCESSDATASIZE</Text><Enum>24</Enum></EnumInfo><EnumInfo><Text>COMERROR_MODENOTSUPPORTED</Text><Enum>257</Enum><Comment><![CDATA[ mode not supported (3-Byte Terminals connectd to bus controllers) ]]></Comment></EnumInfo><EnumInfo><Text>COMERROR_INVALIDCHANNELNUMBER</Text><Enum>258</Enum></EnumInfo><EnumInfo><Text>COMERROR_INVALIDBAUDRATE</Text><Enum>4097</Enum></EnumInfo><EnumInfo><Text>COMERROR_INVALIDNUMDATABITS</Text><Enum>4098</Enum></EnumInfo><EnumInfo><Text>COMERROR_INVALIDNUMSTOPBITS</Text><Enum>4099</Enum></EnumInfo><EnumInfo><Text>COMERROR_INVALIDPARITY</Text><Enum>4100</Enum></EnumInfo><EnumInfo><Text>COMERROR_INVALIDHANDSHAKE</Text><Enum>4101</Enum></EnumInfo><EnumInfo><Text>COMERROR_INVALIDNUMREGISTERS</Text><Enum>4102</Enum></EnumInfo><EnumInfo><Text>COMERROR_INVALIDREGISTER</Text><Enum>4103</Enum></EnumInfo><EnumInfo><Text>COMERROR_TIMEOUT</Text><Enum>4104</Enum></EnumInfo></DataType><DataType><Name Namespace="Tc2_SerialCom">ComBuffer</Name><Comment><![CDATA[ This data type will be used as a software character buffer
+<?xml version='1.0' encoding='utf-8'?>
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{38E564A3-8983-B5AD-596F-E6641FBAAA20}" GeneratedBy="TwinCAT XAE Plc">
+  <DataTypes>
+    <DataType>
+      <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
+      <BitSize>16</BitSize>
+      <BaseType>INT</BaseType>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_DEFAULT</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_KL6_3B_ALTERNATIVE</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_KL6_5B_STANDARD</Text>
+        <Enum>2</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_KL6_22B_STANDARD</Text>
+        <Enum>3</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_PC_COM_PORT</Text>
+        <Enum>4</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_EL6_22B</Text>
+        <Enum>5</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_IE6_11B</Text>
+        <Enum>6</Enum>
+      </EnumInfo>
+    </DataType>
+    <DataType>
+      <Name Namespace="Tc2_SerialCom">ComError_t</Name>
+      <BitSize>16</BitSize>
+      <BaseType>INT</BaseType>
+      <EnumInfo>
+        <Text>COMERROR_NOERROR</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_PARAMETERCHANGED</Text>
+        <Enum>1</Enum>
+        <Comment> input parameters changed during reception </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_TXBUFFOVERRUN</Text>
+        <Enum>2</Enum>
+        <Comment> string &gt; transmit buffer </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_STRINGOVERRUN</Text>
+        <Enum>10</Enum>
+        <Comment> end of string </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_ZEROCHARINVALID</Text>
+        <Enum>11</Enum>
+        <Comment> string cannot receive zero characters </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDPOINTER</Text>
+        <Enum>20</Enum>
+        <Comment> invalid data pointer, e. g. zero </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDRXPOINTER</Text>
+        <Enum>21</Enum>
+        <Comment> invalid data pointer for ReceiveData </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDRXLENGTH</Text>
+        <Enum>22</Enum>
+        <Comment> invalid length for ReceiveData, e. g. zero </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_DATASIZEOVERRUN</Text>
+        <Enum>23</Enum>
+        <Comment> end of data block </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDPROCESSDATASIZE</Text>
+        <Enum>24</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_MODENOTSUPPORTED</Text>
+        <Enum>257</Enum>
+        <Comment> mode not supported (3-Byte Terminals connectd to bus controllers) </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDCHANNELNUMBER</Text>
+        <Enum>258</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDBAUDRATE</Text>
+        <Enum>4097</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDNUMDATABITS</Text>
+        <Enum>4098</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDNUMSTOPBITS</Text>
+        <Enum>4099</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDPARITY</Text>
+        <Enum>4100</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDHANDSHAKE</Text>
+        <Enum>4101</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDNUMREGISTERS</Text>
+        <Enum>4102</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDREGISTER</Text>
+        <Enum>4103</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_TIMEOUT</Text>
+        <Enum>4104</Enum>
+      </EnumInfo>
+    </DataType>
+    <DataType>
+      <Name Namespace="Tc2_SerialCom">ComBuffer</Name>
+      <Comment> This data type will be used as a software character buffer
    between serial line I/O and user functions as ReceiveByte
    or SendByte.
 </Comment>
@@ -89114,8 +89246,195 @@ MR4K4 MR5K4 STO button</Comment>
        These statistics are more detailed results of the tests. This information is used when results are
        being collected by an external software (such as TcUnit-Runner) to do for example Jenkins integration.
        This extra information however takes time to print, so by setting the following parameter to FALSE
-       it will speed up TcUnit finishing. ]]></Comment><BitSize>8</BitSize><BaseType>BOOL</BaseType><Default><Bool>true</Bool></Default><Properties><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>3376216</BitOffs></Symbol><Symbol><Name>GVL_TcUnit.NumberOfInitializedTestSuites</Name><Comment><![CDATA[ The assert function block instance should be 1:1 mapped to
-       the test suite instance path. ]]></Comment><BitSize>16</BitSize><BaseType>UINT</BaseType><Default><Value>0</Value></Default><Properties><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>3376224</BitOffs></Symbol><Symbol><Name>MOTION_GVL.nMaxStateMotorCount</Name><Comment><![CDATA[ Debug, records the highest number of motors used in an ND states block in the PLC. Can be used to limit MotionConstants.MAX_STATE_MOTORS to save on memory usage and PV count.]]></Comment><BitSize>16</BitSize><BaseType>UINT</BaseType><Properties><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>3376240</BitOffs></Symbol><Symbol><Name>GVL_TcUnit.CurrentTestSuiteBeingCalled</Name><Comment><![CDATA[ Pointer to current test suite being called ]]></Comment><BitSize>64</BitSize><BaseType PointerTo="1" Namespace="LCLS_General.TcUnit">FB_TestSuite</BaseType><Properties><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>3376256</BitOffs></Symbol><Symbol><Name>GVL_TcUnit.CurrentTestNameBeingCalled</Name><Comment><![CDATA[ Current name of test being called ]]></Comment><BitSize>2048</BitSize><BaseType Namespace="Tc2_System">T_MaxString</BaseType><Properties><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>3376320</BitOffs></Symbol><Symbol><Name>GVL_TcUnit.TestSuiteAddresses</Name><BitSize>32000</BitSize><BaseType PointerTo="1" Namespace="LCLS_General.TcUnit">FB_TestSuite</BaseType><ArrayInfo><LBound>1</LBound><Elements>500</Elements></ArrayInfo><Properties><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>3378368</BitOffs></Symbol><Symbol><Name>GVL_TcUnit.AdsLogger</Name><Comment><![CDATA[ Buffered ADS logger for output to the error list ]]></Comment><BitSize>4129152</BitSize><BaseType Namespace="LCLS_General.TcUnit">FB_ADSLogStringMessageFifoQueue</BaseType><Properties><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>3410368</BitOffs></Symbol><Symbol><Name>Global_Version.stLibVersion_TcUnit</Name><BitSize>288</BitSize><BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType><Default><SubItem><Name>.iMajor</Name><Value>1</Value></SubItem><SubItem><Name>.iMinor</Name><Value>0</Value></SubItem><SubItem><Name>.iBuild</Name><Value>1</Value></SubItem><SubItem><Name>.iRevision</Name><Value>0</Value></SubItem><SubItem><Name>.sVersion</Name><String>1.0.1.0</String></SubItem></Default><Properties><Property><Name>const_non_replaced</Name></Property><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>7539520</BitOffs></Symbol><Symbol><Name>Global_Version.stLibVersion_lcls_twincat_common_components</Name><BitSize>288</BitSize><BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType><Default><SubItem><Name>.iMajor</Name><Value>3</Value></SubItem><SubItem><Name>.iMinor</Name><Value>9</Value></SubItem><SubItem><Name>.iBuild</Name><Value>0</Value></SubItem><SubItem><Name>.iRevision</Name><Value>0</Value></SubItem><SubItem><Name>.nFlags</Name><Value>1</Value></SubItem><SubItem><Name>.sVersion</Name><String>3.9.0</String></SubItem></Default><Properties><Property><Name>const_non_replaced</Name></Property><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>7539808</BitOffs></Symbol><Symbol><Name>MOTION_GVL.fbPmpsFileReader</Name><Comment><![CDATA[ Global file reader instance, used in fbStandardPMPSDB]]></Comment><BitSize>935616</BitSize><BaseType Namespace="PMPS">FB_JsonFileToJsonDoc</BaseType><Properties><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>7540096</BitOffs></Symbol><Symbol><Name>MOTION_GVL.fbStandardPMPSDB</Name><Comment><![CDATA[ Global DB handler, Must be called in PLC project to use the PMPS DB for a motion project]]></Comment><BitSize>98368</BitSize><BaseType Namespace="lcls_twincat_motion">FB_Standard_PMPSDB</BaseType><Properties><Property><Name>pytmc</Name><Value>
+       it will speed up TcUnit finishing. </Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3376216</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TcUnit.NumberOfInitializedTestSuites</Name>
+            <Comment> The assert function block instance should be 1:1 mapped to
+       the test suite instance path. </Comment>
+            <BitSize>16</BitSize>
+            <BaseType>UINT</BaseType>
+            <Default>
+              <Value>0</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3376224</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MOTION_GVL.nMaxStateMotorCount</Name>
+            <Comment> Debug, records the highest number of motors used in an ND states block in the PLC. Can be used to limit MotionConstants.MAX_STATE_MOTORS to save on memory usage and PV count.</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>UINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3376240</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TcUnit.CurrentTestSuiteBeingCalled</Name>
+            <Comment> Pointer to current test suite being called </Comment>
+            <BitSize>64</BitSize>
+            <BaseType PointerTo="1" Namespace="LCLS_General.TcUnit">FB_TestSuite</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3376256</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TcUnit.CurrentTestNameBeingCalled</Name>
+            <Comment> Current name of test being called </Comment>
+            <BitSize>2048</BitSize>
+            <BaseType Namespace="Tc2_System">T_MaxString</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3376320</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TcUnit.TestSuiteAddresses</Name>
+            <BitSize>32000</BitSize>
+            <BaseType PointerTo="1" Namespace="LCLS_General.TcUnit">FB_TestSuite</BaseType>
+            <ArrayInfo>
+              <LBound>1</LBound>
+              <Elements>500</Elements>
+            </ArrayInfo>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3378368</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TcUnit.AdsLogger</Name>
+            <Comment> Buffered ADS logger for output to the error list </Comment>
+            <BitSize>4129152</BitSize>
+            <BaseType Namespace="LCLS_General.TcUnit">FB_ADSLogStringMessageFifoQueue</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3410368</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Version.stLibVersion_TcUnit</Name>
+            <BitSize>288</BitSize>
+            <BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.iMajor</Name>
+                <Value>1</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iMinor</Name>
+                <Value>0</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iBuild</Name>
+                <Value>1</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iRevision</Name>
+                <Value>0</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sVersion</Name>
+                <String>1.0.1.0</String>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>const_non_replaced</Name>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>7539520</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Version.stLibVersion_lcls_twincat_common_components</Name>
+            <BitSize>288</BitSize>
+            <BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.iMajor</Name>
+                <Value>3</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iMinor</Name>
+                <Value>9</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iBuild</Name>
+                <Value>0</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iRevision</Name>
+                <Value>0</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.nFlags</Name>
+                <Value>1</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sVersion</Name>
+                <String>3.9.0</String>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>const_non_replaced</Name>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>7539808</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MOTION_GVL.fbPmpsFileReader</Name>
+            <Comment> Global file reader instance, used in fbStandardPMPSDB</Comment>
+            <BitSize>935616</BitSize>
+            <BaseType Namespace="PMPS">FB_JsonFileToJsonDoc</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>7540096</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MOTION_GVL.fbStandardPMPSDB</Name>
+            <Comment> Global DB handler, Must be called in PLC project to use the PMPS DB for a motion project</Comment>
+            <BitSize>98368</BitSize>
+            <BaseType Namespace="lcls_twincat_motion">FB_Standard_PMPSDB</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
         pv: @(PREFIX)DB
         io: io
     </Value>
@@ -91886,8 +92205,196 @@ PMPS State Stage; bPowerSelf:=False</Comment>
                 <Name>pytmc</Name>
                 <Value>
             pv: MR5K4:KBO:MMS:PITCH
-        </Value></Property></Properties><BitOffs>649004736</BitOffs></Symbol><Symbol><Name>Main.fbMotionStageM24</Name><BitSize>327424</BitSize><BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType><BitOffs>649030656</BitOffs></Symbol><Symbol><Name>Main.M25</Name><Comment><![CDATA[ SL2K4-SCATTER: 4 Axes]]></Comment><BitSize>25920</BitSize><BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType><Default><SubItem><Name>.sName</Name><String>TMO:SL2K4:MMS:TOP</String></SubItem><SubItem><Name>.nEnableMode</Name><EnumText>E_StageEnableMode.DURING_MOTION</EnumText></SubItem><SubItem><Name>.bPowerSelf</Name><Bool>false</Bool></SubItem></Default><Properties><Property><Name>pytmc</Name><Value>pv: TMO:SL2K4:MMS:TOP</Value></Property><Property><Name>TcLinkTo</Name><Value>.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 1^Position</Value></Property></Properties><BitOffs>649358080</BitOffs></Symbol><Symbol><Name>Main.M26</Name><BitSize>25920</BitSize><BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType><Default><SubItem><Name>.sName</Name><String>TMO:SL2K4:MMS:BTM</String></SubItem><SubItem><Name>.nEnableMode</Name><EnumText>E_StageEnableMode.DURING_MOTION</EnumText></SubItem><SubItem><Name>.bPowerSelf</Name><Bool>false</Bool></SubItem></Default><Properties><Property><Name>pytmc</Name><Value>pv: TMO:SL2K4:MMS:BTM</Value></Property><Property><Name>TcLinkTo</Name><Value>.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 2^Position</Value></Property></Properties><BitOffs>649384000</BitOffs></Symbol><Symbol><Name>Main.M27</Name><BitSize>25920</BitSize><BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType><Default><SubItem><Name>.sName</Name><String>TMO:SL2K4:MMS:NTH</String></SubItem><SubItem><Name>.nEnableMode</Name><EnumText>E_StageEnableMode.DURING_MOTION</EnumText></SubItem><SubItem><Name>.bPowerSelf</Name><Bool>false</Bool></SubItem></Default><Properties><Property><Name>pytmc</Name><Value>pv: TMO:SL2K4:MMS:NTH</Value></Property><Property><Name>TcLinkTo</Name><Value>.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 1^Position</Value></Property></Properties><BitOffs>649409920</BitOffs></Symbol><Symbol><Name>Main.M28</Name><BitSize>25920</BitSize><BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType><Default><SubItem><Name>.sName</Name><String>TMO:SL2K4:MMS:STH</String></SubItem><SubItem><Name>.nEnableMode</Name><EnumText>E_StageEnableMode.DURING_MOTION</EnumText></SubItem><SubItem><Name>.bPowerSelf</Name><Bool>false</Bool></SubItem></Default><Properties><Property><Name>pytmc</Name><Value>pv: TMO:SL2K4:MMS:STH</Value></Property><Property><Name>TcLinkTo</Name><Value>.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 2^Position</Value></Property></Properties><BitOffs>649435840</BitOffs></Symbol><Symbol><Name>Main.fbM25</Name><BitSize>327424</BitSize><BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType><BitOffs>649461760</BitOffs></Symbol><Symbol><Name>Main.fbM26</Name><BitSize>327424</BitSize><BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType><BitOffs>649789184</BitOffs></Symbol><Symbol><Name>Main.fbM27</Name><BitSize>327424</BitSize><BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType><BitOffs>650116608</BitOffs></Symbol><Symbol><Name>Main.fbM28</Name><BitSize>327424</BitSize><BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType><BitOffs>650444032</BitOffs></Symbol><Symbol><Name>Main.M25_position_LINT</Name><BitSize>64</BitSize><BaseType>LINT</BaseType><BitOffs>650771584</BitOffs></Symbol><Symbol><Name>Main.M26_position_LINT</Name><BitSize>64</BitSize><BaseType>LINT</BaseType><BitOffs>650771648</BitOffs></Symbol><Symbol><Name>Main.M27_position_LINT</Name><BitSize>64</BitSize><BaseType>LINT</BaseType><BitOffs>650771712</BitOffs></Symbol><Symbol><Name>Main.M28_position_LINT</Name><BitSize>64</BitSize><BaseType>LINT</BaseType><BitOffs>650771776</BitOffs></Symbol><Symbol><Name>Main.nEncRefXM2K4</Name><Comment><![CDATA[ Encoder Reference Values
-MR2K4 X ENC REF]]></Comment><BitSize>32</BitSize><BaseType>UDINT</BaseType><Properties><Property><Name>pytmc</Name><Value>
+        </Value>
+              </Property>
+            </Properties>
+            <BitOffs>649004736</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.fbMotionStageM24</Name>
+            <BitSize>327424</BitSize>
+            <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
+            <BitOffs>649030656</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.M25</Name>
+            <Comment> SL2K4-SCATTER: 4 Axes</Comment>
+            <BitSize>25920</BitSize>
+            <BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.sName</Name>
+                <String>TMO:SL2K4:MMS:TOP</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nEnableMode</Name>
+                <EnumText>E_StageEnableMode.DURING_MOTION</EnumText>
+              </SubItem>
+              <SubItem>
+                <Name>.bPowerSelf</Name>
+                <Bool>false</Bool>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: TMO:SL2K4:MMS:TOP</Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 1^Position</Value>
+              </Property>
+            </Properties>
+            <BitOffs>649358080</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.M26</Name>
+            <BitSize>25920</BitSize>
+            <BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.sName</Name>
+                <String>TMO:SL2K4:MMS:BTM</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nEnableMode</Name>
+                <EnumText>E_StageEnableMode.DURING_MOTION</EnumText>
+              </SubItem>
+              <SubItem>
+                <Name>.bPowerSelf</Name>
+                <Bool>false</Bool>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: TMO:SL2K4:MMS:BTM</Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 145 (EL5072)^IND Inputs Channel 2^Position</Value>
+              </Property>
+            </Properties>
+            <BitOffs>649384000</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.M27</Name>
+            <BitSize>25920</BitSize>
+            <BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.sName</Name>
+                <String>TMO:SL2K4:MMS:NTH</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nEnableMode</Name>
+                <EnumText>E_StageEnableMode.DURING_MOTION</EnumText>
+              </SubItem>
+              <SubItem>
+                <Name>.bPowerSelf</Name>
+                <Bool>false</Bool>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: TMO:SL2K4:MMS:NTH</Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 1^Position</Value>
+              </Property>
+            </Properties>
+            <BitOffs>649409920</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.M28</Name>
+            <BitSize>25920</BitSize>
+            <BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.sName</Name>
+                <String>TMO:SL2K4:MMS:STH</String>
+              </SubItem>
+              <SubItem>
+                <Name>.nEnableMode</Name>
+                <EnumText>E_StageEnableMode.DURING_MOTION</EnumText>
+              </SubItem>
+              <SubItem>
+                <Name>.bPowerSelf</Name>
+                <Bool>false</Bool>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: TMO:SL2K4:MMS:STH</Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.nRawEncoderDINT      := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^Term 146 (EL5072)^IND Inputs Channel 2^Position</Value>
+              </Property>
+            </Properties>
+            <BitOffs>649435840</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.fbM25</Name>
+            <BitSize>327424</BitSize>
+            <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
+            <BitOffs>649461760</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.fbM26</Name>
+            <BitSize>327424</BitSize>
+            <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
+            <BitOffs>649789184</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.fbM27</Name>
+            <BitSize>327424</BitSize>
+            <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
+            <BitOffs>650116608</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.fbM28</Name>
+            <BitSize>327424</BitSize>
+            <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
+            <BitOffs>650444032</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.M25_position_LINT</Name>
+            <BitSize>64</BitSize>
+            <BaseType>LINT</BaseType>
+            <BitOffs>650771584</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.M26_position_LINT</Name>
+            <BitSize>64</BitSize>
+            <BaseType>LINT</BaseType>
+            <BitOffs>650771648</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.M27_position_LINT</Name>
+            <BitSize>64</BitSize>
+            <BaseType>LINT</BaseType>
+            <BitOffs>650771712</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.M28_position_LINT</Name>
+            <BitSize>64</BitSize>
+            <BaseType>LINT</BaseType>
+            <BitOffs>650771776</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Main.nEncRefXM2K4</Name>
+            <Comment> Encoder Reference Values
+MR2K4 X ENC REF</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
             pv: MR2K4:KBO:ENC:X:REF
             field: EGU cnt
             io: i
@@ -94513,7 +95020,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671395968</BitOffs>
+            <BitOffs>671396224</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcIPCDiagPlcApiEventClass</Name>
@@ -94585,7 +95092,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671396096</BitOffs>
+            <BitOffs>671396352</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
@@ -94649,4 +95156,72 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Value>
         pv: @(PREFIX)AccumulatedFastFaults
         io: i
-    </Value></Property><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>8579392</BitOffs></Symbol><Symbol><Name>PMPS_GVL.BP_jsonDoc</Name><BitSize>64</BitSize><BaseType GUID="{928162FC-F0DF-42B8-9EC0-1494F07A4E2F}">SJsonValue</BaseType><Properties><Property><Name>TcVarGlobal</Name></Property></Properties><BitOffs>8579456</BitOffs></Symbol></DataArea></DataAreas><Deployment /><EventClasses><EventClass><Type GUID="{BB2A9999-102E-421A-8D3D-B0660E07B1FE}">TcSystemEventClass</Type></EventClass><EventClass><Type GUID="{7D760066-D373-4A0C-B0F1-328B1620B0F0}">TcGeneralAdsEventClass</Type></EventClass><EventClass><Type GUID="{E759605A-2341-48FC-9F3F-C8FA405C4B24}">TcRouterEventClass</Type></EventClass><EventClass><Type GUID="{92F05393-06A8-48C2-8871-EAA38C1E3990}">TcRTimeEventClass</Type></EventClass><EventClass><Type GUID="{1D0C4BAC-ECF3-4F33-8F20-A12E77AB6387}">Win32EventClass</Type></EventClass><EventClass><Type GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Type></EventClass><EventClass><Type GUID="{CC929187-3970-4CF4-8F39-946BEC12422D}">TcIPCDiagEventClass</Type></EventClass><EventClass><Type GUID="{20226F4C-54BA-479F-BA48-FBE52D0E9CD5}">TcIPCDiagPlcApiEventClass</Type></EventClass></EventClasses><Properties><Property><Name>ApplicationName</Name><Value>Port_851</Value></Property><Property><Name>ChangeDate</Name><Value>2025-02-13T23:48:31</Value></Property><Property><Name>GeneratedCodeSize</Name><Value>1224704</Value></Property><Property><Name>GlobalDataSize</Name><Value>83578880</Value></Property></Properties></Module></Modules></TcModuleClass>
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>8579392</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PMPS_GVL.BP_jsonDoc</Name>
+            <BitSize>64</BitSize>
+            <BaseType GUID="{928162FC-F0DF-42B8-9EC0-1494F07A4E2F}">SJsonValue</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>8579456</BitOffs>
+          </Symbol>
+        </DataArea>
+      </DataAreas>
+      <Deployment/>
+      <EventClasses>
+        <EventClass>
+          <Type GUID="{BB2A9999-102E-421A-8D3D-B0660E07B1FE}">TcSystemEventClass</Type>
+        </EventClass>
+        <EventClass>
+          <Type GUID="{7D760066-D373-4A0C-B0F1-328B1620B0F0}">TcGeneralAdsEventClass</Type>
+        </EventClass>
+        <EventClass>
+          <Type GUID="{E759605A-2341-48FC-9F3F-C8FA405C4B24}">TcRouterEventClass</Type>
+        </EventClass>
+        <EventClass>
+          <Type GUID="{92F05393-06A8-48C2-8871-EAA38C1E3990}">TcRTimeEventClass</Type>
+        </EventClass>
+        <EventClass>
+          <Type GUID="{1D0C4BAC-ECF3-4F33-8F20-A12E77AB6387}">Win32EventClass</Type>
+        </EventClass>
+        <EventClass>
+          <Type GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Type>
+        </EventClass>
+        <EventClass>
+          <Type GUID="{CC929187-3970-4CF4-8F39-946BEC12422D}">TcIPCDiagEventClass</Type>
+        </EventClass>
+        <EventClass>
+          <Type GUID="{20226F4C-54BA-479F-BA48-FBE52D0E9CD5}">TcIPCDiagPlcApiEventClass</Type>
+        </EventClass>
+      </EventClasses>
+      <Properties>
+        <Property>
+          <Name>ApplicationName</Name>
+          <Value>Port_851</Value>
+        </Property>
+        <Property>
+          <Name>ChangeDate</Name>
+          <Value>2025-02-14T11:28:13</Value>
+        </Property>
+        <Property>
+          <Name>GeneratedCodeSize</Name>
+          <Value>1224704</Value>
+        </Property>
+        <Property>
+          <Name>GlobalDataSize</Name>
+          <Value>83578880</Value>
+        </Property>
+      </Properties>
+    </Module>
+  </Modules>
+</TcModuleClass>
