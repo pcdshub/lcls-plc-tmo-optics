@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{38E564A3-8983-B5AD-596F-E6641FBAAA20}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{3585C5C1-8FC3-295E-F4DD-A0B7D32DAD97}">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -2833,6 +2833,16 @@ MR4K4 MR5K4 STO button]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
+					<Comment><![CDATA[ M2K4 BENDER RTDs
+ M2K4 US RTDs]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>PRG_MR2K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
 					<Type>INT</Type>
@@ -3149,21 +3159,6 @@ MR4K4 MR5K4 STO button]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
-					<Comment><![CDATA[ M2K4 BENDER RTDs
- M2K4 US RTDs]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
-					<Comment><![CDATA[Raw encoder count]]></Comment>
-					<Type>LINT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
 					<Comment><![CDATA[ M2K4 DS RTDs]]></Comment>
 					<Type>INT</Type>
@@ -3171,6 +3166,11 @@ MR4K4 MR5K4 STO button]]></Comment>
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
 					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
+					<Comment><![CDATA[Raw encoder count]]></Comment>
+					<Type>LINT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>

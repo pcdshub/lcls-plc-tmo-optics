@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{38E564A3-8983-B5AD-596F-E6641FBAAA20}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{3585C5C1-8FC3-295E-F4DD-A0B7D32DAD97}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -76280,7 +76280,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <Name>P_Serial_Com.fbSerialLineControl_EL6001_M1K4</Name>
             <BitSize>10752</BitSize>
             <BaseType Namespace="Tc2_SerialCom">SerialLineControl</BaseType>
-            <BitOffs>663551232</BitOffs>
+            <BitOffs>663551296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM_Buffers.Serial_RXBuffer_M1K4</Name>
@@ -76292,7 +76292,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669317440</BitOffs>
+            <BitOffs>669317504</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM_Buffers.Serial_TXBuffer_M1K4</Name>
@@ -76303,21 +76303,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669319952</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>TwinCAT_SystemInfoVarList._TaskPouOid_SerialIO</Name>
-            <BitSize>32</BitSize>
-            <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
-            <Properties>
-              <Property>
-                <Name>no_init</Name>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>671370144</BitOffs>
+            <BitOffs>669320016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -76334,7 +76320,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>671370176</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>TwinCAT_SystemInfoVarList._TaskOid_SerialIO</Name>
+            <Name>TwinCAT_SystemInfoVarList._TaskPouOid_SerialIO</Name>
             <BitSize>32</BitSize>
             <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
             <Properties>
@@ -76346,6 +76332,20 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </Property>
             </Properties>
             <BitOffs>671375296</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>TwinCAT_SystemInfoVarList._TaskOid_SerialIO</Name>
+            <BitSize>32</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+            <Properties>
+              <Property>
+                <Name>no_init</Name>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>671375328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__SerialIO</Name>
@@ -76413,7 +76413,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669322496</BitOffs>
+            <BitOffs>669322560</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PiezoDriver</Name>
@@ -76427,7 +76427,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671375328</BitOffs>
+            <BitOffs>671375360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PiezoDriver</Name>
@@ -76441,7 +76441,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671375360</BitOffs>
+            <BitOffs>671375392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PiezoDriver</Name>
@@ -80415,7 +80415,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>650771968</BitOffs>
+            <BitOffs>650772000</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bDreamEnable2</Name>
@@ -80431,7 +80431,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>650771976</BitOffs>
+            <BitOffs>650772008</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.LAMPbSTOEnable1</Name>
@@ -80444,7 +80444,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>650771984</BitOffs>
+            <BitOffs>650772016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.LAMPbSTOEnable2</Name>
@@ -80456,7 +80456,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>650771992</BitOffs>
+            <BitOffs>650772024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fM3K4DS_RTD_3</Name>
@@ -80477,7 +80477,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657747968</BitOffs>
+            <BitOffs>657748000</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM2K4US_RTD_1_Err</Name>
@@ -80490,7 +80490,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748000</BitOffs>
+            <BitOffs>657748032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM2K4US_RTD_2_Err</Name>
@@ -80502,7 +80502,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748008</BitOffs>
+            <BitOffs>657748040</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM2K4US_RTD_3_Err</Name>
@@ -80514,7 +80514,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748016</BitOffs>
+            <BitOffs>657748048</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM2K4DS_RTD_1_Err</Name>
@@ -80526,7 +80526,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748024</BitOffs>
+            <BitOffs>657748056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM2K4DS_RTD_2_Err</Name>
@@ -80538,7 +80538,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748032</BitOffs>
+            <BitOffs>657748064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM2K4DS_RTD_3_Err</Name>
@@ -80550,7 +80550,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748040</BitOffs>
+            <BitOffs>657748072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM3K4US_RTD_1_Err</Name>
@@ -80562,7 +80562,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748048</BitOffs>
+            <BitOffs>657748080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM3K4US_RTD_2_Err</Name>
@@ -80574,7 +80574,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748056</BitOffs>
+            <BitOffs>657748088</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM3K4US_RTD_3_Err</Name>
@@ -80586,7 +80586,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748064</BitOffs>
+            <BitOffs>657748096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM3K4DS_RTD_1_Err</Name>
@@ -80598,7 +80598,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748072</BitOffs>
+            <BitOffs>657748104</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM3K4DS_RTD_2_Err</Name>
@@ -80610,7 +80610,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748080</BitOffs>
+            <BitOffs>657748112</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.bM3K4DS_RTD_3_Err</Name>
@@ -80622,7 +80622,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>657748088</BitOffs>
+            <BitOffs>657748120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_PMPS.fbArbiterIO.i_stCurrentBP</Name>
@@ -80638,7 +80638,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665692544</BitOffs>
+            <BitOffs>665692608</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_PMPS.fbArbiterIO.xTxPDO_toggle</Name>
@@ -80659,7 +80659,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665696064</BitOffs>
+            <BitOffs>665696128</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_PMPS.fbArbiterIO.xTxPDO_state</Name>
@@ -80680,7 +80680,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665696065</BitOffs>
+            <BitOffs>665696129</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_1.iRaw</Name>
@@ -80722,6 +80722,46 @@ MR4K4 MR5K4 STO button</Comment>
             <BitOffs>665865984</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
+            <Comment> M2K4 BENDER RTDs
+ M2K4 US RTDs</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 1^Value</Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>665866336</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIIB[EL3202-0010_M2K4US3_M2K4DS1]^RTD Inputs Channel 1^Value</Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>665866352</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>PRG_MR2K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
             <Comment> Connect this input to the terminal</Comment>
             <BitSize>16</BitSize>
@@ -80732,7 +80772,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665866560</BitOffs>
+            <BitOffs>665866624</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
@@ -80745,7 +80785,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665866944</BitOffs>
+            <BitOffs>665867008</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bError</Name>
@@ -80769,7 +80809,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665867464</BitOffs>
+            <BitOffs>665867528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bUnderrange</Name>
@@ -80781,7 +80821,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665867472</BitOffs>
+            <BitOffs>665867536</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bOverrange</Name>
@@ -80793,7 +80833,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665867480</BitOffs>
+            <BitOffs>665867544</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.iRaw</Name>
@@ -80805,7 +80845,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665867488</BitOffs>
+            <BitOffs>665867552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bError</Name>
@@ -80829,7 +80869,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665867720</BitOffs>
+            <BitOffs>665867784</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bUnderrange</Name>
@@ -80841,7 +80881,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665867728</BitOffs>
+            <BitOffs>665867792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.bOverrange</Name>
@@ -80853,7 +80893,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665867736</BitOffs>
+            <BitOffs>665867800</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD.iRaw</Name>
@@ -80865,7 +80905,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665867744</BitOffs>
+            <BitOffs>665867808</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
@@ -80878,7 +80918,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665868032</BitOffs>
+            <BitOffs>665868096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
@@ -80891,7 +80931,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665868416</BitOffs>
+            <BitOffs>665868480</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bError</Name>
@@ -80915,7 +80955,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665868936</BitOffs>
+            <BitOffs>665869000</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bUnderrange</Name>
@@ -80927,7 +80967,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665868944</BitOffs>
+            <BitOffs>665869008</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bOverrange</Name>
@@ -80939,7 +80979,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665868952</BitOffs>
+            <BitOffs>665869016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.iRaw</Name>
@@ -80951,7 +80991,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665868960</BitOffs>
+            <BitOffs>665869024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bError</Name>
@@ -80975,7 +81015,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665869192</BitOffs>
+            <BitOffs>665869256</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bUnderrange</Name>
@@ -80987,7 +81027,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665869200</BitOffs>
+            <BitOffs>665869264</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.bOverrange</Name>
@@ -80999,7 +81039,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665869208</BitOffs>
+            <BitOffs>665869272</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD.iRaw</Name>
@@ -81011,7 +81051,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665869216</BitOffs>
+            <BitOffs>665869280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR4K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
@@ -81024,7 +81064,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665869504</BitOffs>
+            <BitOffs>665869568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR4K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
@@ -81037,7 +81077,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665869888</BitOffs>
+            <BitOffs>665869952</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR5K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
@@ -81050,7 +81090,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665870464</BitOffs>
+            <BitOffs>665870528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR5K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
@@ -81063,7 +81103,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665870848</BitOffs>
+            <BitOffs>665870912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4.fbTopBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -81075,7 +81115,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>665876480</BitOffs>
+            <BitOffs>665876544</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4.fbBottomBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -81087,7 +81127,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>666203904</BitOffs>
+            <BitOffs>666203968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4.fbNorthBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -81099,7 +81139,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>666531328</BitOffs>
+            <BitOffs>666531392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4.fbSouthBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -81111,7 +81151,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>666858752</BitOffs>
+            <BitOffs>666858816</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4.AptArrayReq</Name>
@@ -81123,7 +81163,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667341824</BitOffs>
+            <BitOffs>667341888</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.bError</Name>
@@ -81147,7 +81187,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667423496</BitOffs>
+            <BitOffs>667423560</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.bUnderrange</Name>
@@ -81159,7 +81199,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667423504</BitOffs>
+            <BitOffs>667423568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.bOverrange</Name>
@@ -81171,7 +81211,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667423512</BitOffs>
+            <BitOffs>667423576</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingLTemp.iRaw</Name>
@@ -81183,7 +81223,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667423520</BitOffs>
+            <BitOffs>667423584</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.bError</Name>
@@ -81207,7 +81247,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667537736</BitOffs>
+            <BitOffs>667537800</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.bUnderrange</Name>
@@ -81219,7 +81259,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667537744</BitOffs>
+            <BitOffs>667537808</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.bOverrange</Name>
@@ -81231,7 +81271,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667537752</BitOffs>
+            <BitOffs>667537816</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffUpperCoatingRTemp.iRaw</Name>
@@ -81243,7 +81283,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667537760</BitOffs>
+            <BitOffs>667537824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.bError</Name>
@@ -81267,7 +81307,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667651976</BitOffs>
+            <BitOffs>667652040</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.bUnderrange</Name>
@@ -81279,7 +81319,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667651984</BitOffs>
+            <BitOffs>667652048</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.bOverrange</Name>
@@ -81291,7 +81331,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667651992</BitOffs>
+            <BitOffs>667652056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingLTemp.iRaw</Name>
@@ -81303,7 +81343,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667652000</BitOffs>
+            <BitOffs>667652064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.bError</Name>
@@ -81327,7 +81367,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667766216</BitOffs>
+            <BitOffs>667766280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.bUnderrange</Name>
@@ -81339,7 +81379,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667766224</BitOffs>
+            <BitOffs>667766288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.bOverrange</Name>
@@ -81351,7 +81391,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667766232</BitOffs>
+            <BitOffs>667766296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4.ffLowerCoatingRTemp.iRaw</Name>
@@ -81363,7 +81403,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>667766240</BitOffs>
+            <BitOffs>667766304</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bError</Name>
@@ -81387,7 +81427,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668081608</BitOffs>
+            <BitOffs>668081672</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bUnderrange</Name>
@@ -81399,7 +81439,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668081616</BitOffs>
+            <BitOffs>668081680</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.bOverrange</Name>
@@ -81411,7 +81451,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668081624</BitOffs>
+            <BitOffs>668081688</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingLTemp.iRaw</Name>
@@ -81423,7 +81463,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668081632</BitOffs>
+            <BitOffs>668081696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bError</Name>
@@ -81447,7 +81487,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668195848</BitOffs>
+            <BitOffs>668195912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bUnderrange</Name>
@@ -81459,7 +81499,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668195856</BitOffs>
+            <BitOffs>668195920</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.bOverrange</Name>
@@ -81471,7 +81511,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668195864</BitOffs>
+            <BitOffs>668195928</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffUpperCoatingRTemp.iRaw</Name>
@@ -81483,7 +81523,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668195872</BitOffs>
+            <BitOffs>668195936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bError</Name>
@@ -81507,7 +81547,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668310088</BitOffs>
+            <BitOffs>668310152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bUnderrange</Name>
@@ -81519,7 +81559,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668310096</BitOffs>
+            <BitOffs>668310160</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.bOverrange</Name>
@@ -81531,7 +81571,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668310104</BitOffs>
+            <BitOffs>668310168</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingLTemp.iRaw</Name>
@@ -81543,7 +81583,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668310112</BitOffs>
+            <BitOffs>668310176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bError</Name>
@@ -81567,7 +81607,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668424328</BitOffs>
+            <BitOffs>668424392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bUnderrange</Name>
@@ -81579,7 +81619,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668424336</BitOffs>
+            <BitOffs>668424400</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.bOverrange</Name>
@@ -81591,7 +81631,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668424344</BitOffs>
+            <BitOffs>668424408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4.ffLowerCoatingRTemp.iRaw</Name>
@@ -81603,7 +81643,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668424352</BitOffs>
+            <BitOffs>668424416</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bError</Name>
@@ -81627,7 +81667,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668739720</BitOffs>
+            <BitOffs>668739784</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bUnderrange</Name>
@@ -81639,7 +81679,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668739728</BitOffs>
+            <BitOffs>668739792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.bOverrange</Name>
@@ -81651,7 +81691,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668739736</BitOffs>
+            <BitOffs>668739800</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingLTemp.iRaw</Name>
@@ -81663,7 +81703,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668739744</BitOffs>
+            <BitOffs>668739808</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bError</Name>
@@ -81687,7 +81727,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668853960</BitOffs>
+            <BitOffs>668854024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bUnderrange</Name>
@@ -81699,7 +81739,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668853968</BitOffs>
+            <BitOffs>668854032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.bOverrange</Name>
@@ -81711,7 +81751,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668853976</BitOffs>
+            <BitOffs>668854040</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffUpperCoatingRTemp.iRaw</Name>
@@ -81723,7 +81763,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668853984</BitOffs>
+            <BitOffs>668854048</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bError</Name>
@@ -81747,7 +81787,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668968200</BitOffs>
+            <BitOffs>668968264</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bUnderrange</Name>
@@ -81759,7 +81799,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668968208</BitOffs>
+            <BitOffs>668968272</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.bOverrange</Name>
@@ -81771,7 +81811,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668968216</BitOffs>
+            <BitOffs>668968280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingLTemp.iRaw</Name>
@@ -81783,7 +81823,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>668968224</BitOffs>
+            <BitOffs>668968288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bError</Name>
@@ -81807,7 +81847,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>669082440</BitOffs>
+            <BitOffs>669082504</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bUnderrange</Name>
@@ -81819,7 +81859,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>669082448</BitOffs>
+            <BitOffs>669082512</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.bOverrange</Name>
@@ -81831,7 +81871,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>669082456</BitOffs>
+            <BitOffs>669082520</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4.ffLowerCoatingRTemp.iRaw</Name>
@@ -81843,60 +81883,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>669082464</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
-            <Comment> M2K4 BENDER RTDs
- M2K4 US RTDs</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M2K4US1_M2K4US2]^RTD Inputs Channel 1^Value</Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>669322464</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[EL3202-0010_M2K4US3_M2K4DS1]^RTD Inputs Channel 1^Value</Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>669322480</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
-            <Comment>Raw encoder count</Comment>
-            <BitSize>64</BitSize>
-            <BaseType>LINT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>669324928</BitOffs>
+            <BitOffs>669082528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
@@ -81916,7 +81903,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669325248</BitOffs>
+            <BitOffs>669322528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
@@ -81935,7 +81922,20 @@ MR4K4 MR5K4 STO button</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669325264</BitOffs>
+            <BitOffs>669322544</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
+            <Comment>Raw encoder count</Comment>
+            <BitSize>64</BitSize>
+            <BaseType>LINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>669324992</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4US_RTD_1</Name>
@@ -81956,7 +81956,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669325280</BitOffs>
+            <BitOffs>669325504</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4US_RTD_3</Name>
@@ -81975,7 +81975,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669325296</BitOffs>
+            <BitOffs>669325520</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4DS_RTD_1</Name>
@@ -81995,7 +81995,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669325504</BitOffs>
+            <BitOffs>669325536</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_RTD.nM3K4DS_RTD_3</Name>
@@ -82014,7 +82014,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669325520</BitOffs>
+            <BitOffs>669325552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bError</Name>
@@ -83395,7 +83395,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>650771840</BitOffs>
+            <BitOffs>650771872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M26_position_UDINT</Name>
@@ -83411,7 +83411,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>650771872</BitOffs>
+            <BitOffs>650771904</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M27_position_UDINT</Name>
@@ -83427,7 +83427,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>650771904</BitOffs>
+            <BitOffs>650771936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M28_position_UDINT</Name>
@@ -83443,7 +83443,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>650771936</BitOffs>
+            <BitOffs>650771968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_PMPS.fbArbiterIO.q_stRequestedBP</Name>
@@ -83459,7 +83459,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>665694304</BitOffs>
+            <BitOffs>665694368</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR1K4_SOMS.bActivateVarCool</Name>
@@ -83484,7 +83484,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>665862560</BitOffs>
+            <BitOffs>665866304</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4.fbTopBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -83496,7 +83496,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>665875456</BitOffs>
+            <BitOffs>665875520</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4.fbBottomBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -83508,7 +83508,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>666202880</BitOffs>
+            <BitOffs>666202944</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4.fbNorthBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -83520,7 +83520,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>666530304</BitOffs>
+            <BitOffs>666530368</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4.fbSouthBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -83532,7 +83532,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>666857728</BitOffs>
+            <BitOffs>666857792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4.AptArrayStatus</Name>
@@ -83544,7 +83544,7 @@ MR4K4 MR5K4 STO button</Comment>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>667341728</BitOffs>
+            <BitOffs>667341792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut</Name>
@@ -92224,7 +92224,7 @@ PMPS State Stage; bPowerSelf:=False</Comment>
             <Default>
               <SubItem>
                 <Name>.sName</Name>
-                <String>TMO:SL2K4:MMS:TOP</String>
+                <String>SL2K4:SCATTER:MMS:TOP</String>
               </SubItem>
               <SubItem>
                 <Name>.nEnableMode</Name>
@@ -92238,7 +92238,7 @@ PMPS State Stage; bPowerSelf:=False</Comment>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
-                <Value>pv: TMO:SL2K4:MMS:TOP</Value>
+                <Value>pv: SL2K4:SCATTER:MMS:TOP</Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -92254,7 +92254,7 @@ PMPS State Stage; bPowerSelf:=False</Comment>
             <Default>
               <SubItem>
                 <Name>.sName</Name>
-                <String>TMO:SL2K4:MMS:BTM</String>
+                <String>SL2K4:SCATTER:MMS:BOTTOM</String>
               </SubItem>
               <SubItem>
                 <Name>.nEnableMode</Name>
@@ -92268,7 +92268,7 @@ PMPS State Stage; bPowerSelf:=False</Comment>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
-                <Value>pv: TMO:SL2K4:MMS:BTM</Value>
+                <Value>pv: SL2K4:SCATTER:MMS:BOTTOM</Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -92284,7 +92284,7 @@ PMPS State Stage; bPowerSelf:=False</Comment>
             <Default>
               <SubItem>
                 <Name>.sName</Name>
-                <String>TMO:SL2K4:MMS:NTH</String>
+                <String>SL2K4:SCATTER:MMS:NORTH</String>
               </SubItem>
               <SubItem>
                 <Name>.nEnableMode</Name>
@@ -92298,7 +92298,7 @@ PMPS State Stage; bPowerSelf:=False</Comment>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
-                <Value>pv: TMO:SL2K4:MMS:NTH</Value>
+                <Value>pv: SL2K4:SCATTER:MMS:NORTH</Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -92314,7 +92314,7 @@ PMPS State Stage; bPowerSelf:=False</Comment>
             <Default>
               <SubItem>
                 <Name>.sName</Name>
-                <String>TMO:SL2K4:MMS:STH</String>
+                <String>SL2K4:SCATTER:MMS:SOUTH</String>
               </SubItem>
               <SubItem>
                 <Name>.nEnableMode</Name>
@@ -92328,7 +92328,7 @@ PMPS State Stage; bPowerSelf:=False</Comment>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
-                <Value>pv: TMO:SL2K4:MMS:STH</Value>
+                <Value>pv: SL2K4:SCATTER:MMS:SOUTH</Value>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
@@ -92386,22 +92386,14 @@ PMPS State Stage; bPowerSelf:=False</Comment>
             <BitOffs>650771776</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Main.nEncRefXM2K4</Name>
-            <Comment> Encoder Reference Values
-MR2K4 X ENC REF</Comment>
+            <Name>Main.DINT_MAX</Name>
+            <Comment> DINT data type maximum value </Comment>
             <BitSize>32</BitSize>
-            <BaseType>UDINT</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-            pv: MR2K4:KBO:ENC:X:REF
-            field: EGU cnt
-            io: i
-        </Value>
-              </Property>
-            </Properties>
-            <BitOffs>650772000</BitOffs>
+            <BaseType>DINT</BaseType>
+            <Default>
+              <Value>2147483647</Value>
+            </Default>
+            <BitOffs>650771840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fbXRMSErrorM2K4</Name>
@@ -92891,6 +92883,24 @@ MR2K4 X ENC RMS</Comment>
             <BitOffs>657747328</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>Main.nEncRefXM2K4</Name>
+            <Comment> Encoder Reference Values
+MR2K4 X ENC REF</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+            pv: MR2K4:KBO:ENC:X:REF
+            field: EGU cnt
+            io: i
+        </Value>
+              </Property>
+            </Properties>
+            <BitOffs>657747392</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>Main.nEncRefYM2K4</Name>
             <Comment>MR2K4 Y ENC REF</Comment>
             <BitSize>32</BitSize>
@@ -92905,7 +92915,7 @@ MR2K4 X ENC RMS</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747392</BitOffs>
+            <BitOffs>657747424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.nEncRefrYM2K4</Name>
@@ -92922,7 +92932,7 @@ MR2K4 X ENC RMS</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747424</BitOffs>
+            <BitOffs>657747456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.nEncRefXM3K4</Name>
@@ -92939,7 +92949,7 @@ MR2K4 X ENC RMS</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747456</BitOffs>
+            <BitOffs>657747488</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.nEncRefYM3K4</Name>
@@ -92956,7 +92966,7 @@ MR2K4 X ENC RMS</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747488</BitOffs>
+            <BitOffs>657747520</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.nEncRefrXM3K4</Name>
@@ -92973,7 +92983,7 @@ MR2K4 X ENC RMS</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747520</BitOffs>
+            <BitOffs>657747552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.nEncCntXM2K4</Name>
@@ -92991,7 +93001,7 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747552</BitOffs>
+            <BitOffs>657747584</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.nEncCntYM2K4</Name>
@@ -93008,7 +93018,7 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747584</BitOffs>
+            <BitOffs>657747616</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.nEncCntrYM2K4</Name>
@@ -93025,7 +93035,7 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747616</BitOffs>
+            <BitOffs>657747648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.nEncCntXM3K4</Name>
@@ -93042,7 +93052,7 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747648</BitOffs>
+            <BitOffs>657747680</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.nEncCntYM3K4</Name>
@@ -93059,7 +93069,7 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747680</BitOffs>
+            <BitOffs>657747712</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.nEncCntrXM3K4</Name>
@@ -93076,7 +93086,7 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747712</BitOffs>
+            <BitOffs>657747744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fM2K4US_RTD_1</Name>
@@ -93095,7 +93105,7 @@ MR2K4 X ENC CNT</Comment>
             </Value>
               </Property>
             </Properties>
-            <BitOffs>657747744</BitOffs>
+            <BitOffs>657747776</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fM2K4US_RTD_3</Name>
@@ -93112,7 +93122,7 @@ MR2K4 X ENC CNT</Comment>
             </Value>
               </Property>
             </Properties>
-            <BitOffs>657747776</BitOffs>
+            <BitOffs>657747808</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fM2K4DS_RTD_1</Name>
@@ -93130,7 +93140,7 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747808</BitOffs>
+            <BitOffs>657747840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fM2K4DS_RTD_3</Name>
@@ -93147,7 +93157,7 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747840</BitOffs>
+            <BitOffs>657747872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fM3K4US_RTD_1</Name>
@@ -93165,7 +93175,7 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747872</BitOffs>
+            <BitOffs>657747904</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fM3K4US_RTD_3</Name>
@@ -93182,7 +93192,7 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747904</BitOffs>
+            <BitOffs>657747936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fM3K4DS_RTD_1</Name>
@@ -93200,14 +93210,39 @@ MR2K4 X ENC CNT</Comment>
         </Value>
               </Property>
             </Properties>
-            <BitOffs>657747936</BitOffs>
+            <BitOffs>657747968</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_PMPS.bMR1K1_IN</Name>
+            <Comment>fbOutputStates : FB_StateParams;</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>657748128</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_PMPS.bST3K4_IN</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>657748136</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_PMPS.bMR1K3_IN</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>657748144</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_PMPS.bST1K4_IN</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>657748152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.fbLogHandler</Name>
             <Comment> Logging</Comment>
             <BitSize>5798336</BitSize>
             <BaseType Namespace="LCLS_General">FB_LogHandler</BaseType>
-            <BitOffs>657748096</BitOffs>
+            <BitOffs>657748160</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_States.fbMR1K4_Coating_States</Name>
@@ -93228,7 +93263,7 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>663571008</BitOffs>
+            <BitOffs>663571072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_States.fbMR2K4_Coating_States</Name>
@@ -93249,7 +93284,7 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>664267840</BitOffs>
+            <BitOffs>664267904</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_States.fbMR3K4_Coating_States</Name>
@@ -93270,19 +93305,19 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>664964928</BitOffs>
+            <BitOffs>664964992</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_PMPS.fb_vetoArbiter</Name>
             <BitSize>28352</BitSize>
             <BaseType Namespace="PMPS">FB_VetoArbiter</BaseType>
-            <BitOffs>665663232</BitOffs>
+            <BitOffs>665663296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_PMPS.fbArbiterIO</Name>
             <BitSize>145024</BitSize>
             <BaseType Namespace="PMPS">FB_SubSysToArbiter_IO</BaseType>
-            <BitOffs>665691584</BitOffs>
+            <BitOffs>665691648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_PMPS.ffFFO2ToFFO1</Name>
@@ -93306,61 +93341,7 @@ MR2K4 X ENC CNT</Comment>
                 <Value>13</Value>
               </SubItem>
             </Default>
-            <BitOffs>665836608</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_PMPS.bMR1K1_IN</Name>
-            <Comment>fbOutputStates : FB_StateParams;</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>665862528</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_PMPS.bST3K4_IN</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>665862536</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_PMPS.bMR1K3_IN</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>665862544</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_PMPS.bST1K4_IN</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>665862552</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_SL2K4_SCATTER.bMoveOk</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>true</Bool>
-            </Default>
-            <BitOffs>665862568</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_SL2K4_SCATTER.bExecuteMotion</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>true</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-    pv: SL2K4:SCATTER:GO;
-    io: io;
-    field: ZNAM False;
-    field: ONAM True;
-    </Value>
-              </Property>
-            </Properties>
-            <BitOffs>665862576</BitOffs>
+            <BitOffs>665836672</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR1K4_SOMS.fbCoolingPanel</Name>
@@ -93385,6 +93366,35 @@ MR2K4 X ENC CNT</Comment>
             <BitOffs>665864896</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>PRG_SL2K4_SCATTER.bMoveOk</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <BitOffs>665866312</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_SL2K4_SCATTER.bExecuteMotion</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+    pv: SL2K4:SCATTER:GO;
+    io: io;
+    field: ZNAM False;
+    field: ONAM True;
+    </Value>
+              </Property>
+            </Properties>
+            <BitOffs>665866320</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>PRG_MR2K4_KBO.fbCoolingPanel</Name>
             <Comment> M2K4 Flow Press Sensors</Comment>
             <BitSize>960</BitSize>
@@ -93403,7 +93413,7 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>665866304</BitOffs>
+            <BitOffs>665866368</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD</Name>
@@ -93427,7 +93437,7 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>665867264</BitOffs>
+            <BitOffs>665867328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR2K4_KBO.fbM2K4_Chin_Right_RTD</Name>
@@ -93450,7 +93460,7 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>665867520</BitOffs>
+            <BitOffs>665867584</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbCoolingPanel</Name>
@@ -93471,7 +93481,7 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>665867776</BitOffs>
+            <BitOffs>665867840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD</Name>
@@ -93495,7 +93505,7 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>665868736</BitOffs>
+            <BitOffs>665868800</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR3K4_KBO.fbM3K4_Chin_Right_RTD</Name>
@@ -93518,7 +93528,7 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>665868992</BitOffs>
+            <BitOffs>665869056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR4K4_KBO.fbCoolingPanel</Name>
@@ -93539,7 +93549,7 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>665869248</BitOffs>
+            <BitOffs>665869312</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_MR5K4_KBO.fbCoolingPanel</Name>
@@ -93560,7 +93570,7 @@ MR2K4 X ENC CNT</Comment>
     </Value>
               </Property>
             </Properties>
-            <BitOffs>665870208</BitOffs>
+            <BitOffs>665870272</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_SL2K4_SCATTER.fbSL2K4</Name>
@@ -93574,7 +93584,7 @@ MR2K4 X ENC CNT</Comment>
     io: io</Value>
               </Property>
             </Properties>
-            <BitOffs>665872512</BitOffs>
+            <BitOffs>665872576</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR1K4</Name>
@@ -93609,7 +93619,7 @@ From M. Seaberg
                 <String>B4C</String>
               </SubItem>
             </Default>
-            <BitOffs>667343104</BitOffs>
+            <BitOffs>667343168</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR2K4</Name>
@@ -93675,7 +93685,7 @@ Silicon surface: RBV &gt;= 7776781: 0000_0000_0001_1110 (allow everything below 
     </Value>
               </Property>
             </Properties>
-            <BitOffs>668001216</BitOffs>
+            <BitOffs>668001280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_StripeProtections.fbStripProtMR3K4</Name>
@@ -93742,7 +93752,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
     </Value>
               </Property>
             </Properties>
-            <BitOffs>668659328</BitOffs>
+            <BitOffs>668659392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K4_Constants.nYUP_ENC_REF</Name>
@@ -93757,7 +93767,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669324992</BitOffs>
+            <BitOffs>669325056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K4_Constants.nYDWN_ENC_REF</Name>
@@ -93771,7 +93781,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669325056</BitOffs>
+            <BitOffs>669325120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K4_Constants.nXUP_ENC_REF</Name>
@@ -93785,7 +93795,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669325120</BitOffs>
+            <BitOffs>669325184</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K4_Constants.nXDWN_ENC_REF</Name>
@@ -93799,7 +93809,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>669325184</BitOffs>
+            <BitOffs>669325248</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K4_Constants.nM2K4X_ENC_REF</Name>
@@ -93843,51 +93853,6 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
               </Property>
             </Properties>
             <BitOffs>669325440</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bLittleEndian</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>true</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>669325536</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bSimulationMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>false</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>669325544</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.nRegisterSize</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>WORD</BaseType>
-            <Default>
-              <Value>64</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>669325552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M3K4_Constants.nM3K4X_ENC_REF</Name>
@@ -94197,6 +94162,36 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
             <BitOffs>670871744</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>Constants.bLittleEndian</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>671367872</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bSimulationMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>false</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>671367880</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>Constants.RuntimeVersion</Name>
             <Comment> Does the target support multiple cores?</Comment>
             <BitSize>64</BitSize>
@@ -94224,7 +94219,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671367872</BitOffs>
+            <BitOffs>671367888</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersion</Name>
@@ -94254,7 +94249,22 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671367936</BitOffs>
+            <BitOffs>671367952</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.nRegisterSize</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>WORD</BaseType>
+            <Default>
+              <Value>64</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>671368016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nPackMode</Name>
@@ -94269,7 +94279,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671368000</BitOffs>
+            <BitOffs>671368032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bFPUSupport</Name>
@@ -94284,7 +94294,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671368016</BitOffs>
+            <BitOffs>671368048</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bMulticoreSupport</Name>
@@ -94298,7 +94308,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671368024</BitOffs>
+            <BitOffs>671368056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersionNumeric</Name>
@@ -94313,7 +94323,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671368032</BitOffs>
+            <BitOffs>671368064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersionNumeric</Name>
@@ -94328,7 +94338,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671368064</BitOffs>
+            <BitOffs>671368096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_LicenseInfoVarList._LicenseInfo</Name>
@@ -94449,7 +94459,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671368096</BitOffs>
+            <BitOffs>671368128</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskInfo</Name>
@@ -94481,7 +94491,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671375392</BitOffs>
+            <BitOffs>671375424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</Name>
@@ -94495,7 +94505,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671375424</BitOffs>
+            <BitOffs>671375456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PlcTask</Name>
@@ -95020,7 +95030,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671396224</BitOffs>
+            <BitOffs>671395968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcIPCDiagPlcApiEventClass</Name>
@@ -95092,7 +95102,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>671396352</BitOffs>
+            <BitOffs>671396096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
@@ -95211,7 +95221,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2025-02-14T11:28:13</Value>
+          <Value>2025-02-19T15:22:03</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
