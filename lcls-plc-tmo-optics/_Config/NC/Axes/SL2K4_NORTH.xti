@@ -1431,11 +1431,11 @@ External Setpoint Generation:
 			<Velo RefSearch="0.05" RefSync="0.025" SlowManual="0.1" FastManual="0.1" Maximum="0.5"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="0.005" PulseDistanceNeg="0.005"/>
 		</AxisPara>
-		<Encoder Name="Enc" EncType="4">
-			<EncPara ScaleFactorNumerator="1e-06" Offset="2147.483647" Inverse="true" MaxCount="#xffffffff">
+		<Encoder Name="Enc" EncType="16">
+			<EncPara ScaleFactorNumerator="1e-06" Inverse="true" MaxCount="#x0000ffff">
 				<SoftEndMinControl Enable="true" Range="0.3"/>
 				<SoftEndMaxControl Enable="true" Range="4.35"/>
-				<Inc RefMode="2" RefSoftSyncMask="#x0000ffff"/>
+				<Inc RefSoftSyncMask="#x0000ffff"/>
 			</EncPara>
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>
@@ -1493,7 +1493,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Encoder>
-		<Drive Name="Drive" DrvType="24">
+		<Drive Name="Drive" DrvType="5">
 			<DrvPara Inverse="true">
 				<Analog VeloReferenz="3" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
@@ -1586,27 +1586,4 @@ External Setpoint Generation:
 			</Var>
 		</Vars>
 	</Axis>
-	<Mappings>
-		<OwnerA>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^B940-009-R19-DRL-04 (EK1100)^SL2K4_BOTTOM">
-				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Error" Size="1" OffsA="3"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving negative" Size="1" OffsA="5"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving positive" Size="1" OffsA="4"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Ready" Size="1" OffsA="1"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Ready to enable" Size="1"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Torque reduced" Size="1" OffsA="6"/>
-				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Warning" Size="1" OffsA="2"/>
-				<Link VarA="Drive^Inputs^In^nState2" VarB="STM Status^Status^Digital input 1" Size="1" OffsA="3"/>
-				<Link VarA="Drive^Inputs^In^nState2" VarB="STM Status^Status^Digital input 2" Size="1" OffsA="4"/>
-				<Link VarA="Drive^Inputs^In^nState2" VarB="STM Status^Status^Sync error" Size="1" OffsA="5"/>
-				<Link VarA="Drive^Inputs^In^nState2" VarB="STM Status^Status^TxPDO Toggle" Size="1" OffsA="7"/>
-				<Link VarA="Drive^Inputs^In^nState4" VarB="WcState^InputToggle" Size="1" OffsA="1"/>
-				<Link VarA="Drive^Inputs^In^nState4" VarB="WcState^WcState" Size="1"/>
-				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="STM Control^Control^Enable" Size="1"/>
-				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="STM Control^Control^Reduce torque" Size="1" OffsA="2"/>
-				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="STM Control^Control^Reset" Size="1" OffsA="1"/>
-				<Link VarA="Drive^Outputs^Out^nDataOut2[0]" VarB="STM Velocity^Velocity"/>
-			</OwnerB>
-		</OwnerA>
-	</Mappings>
 </TcSmItem>

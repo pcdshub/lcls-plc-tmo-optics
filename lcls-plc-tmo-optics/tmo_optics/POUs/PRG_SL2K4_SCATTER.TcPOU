@@ -3,12 +3,26 @@
   <POU Name="PRG_SL2K4_SCATTER" Id="{73f08289-cc73-400e-8f0d-0b51b6dae585}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SL2K4_SCATTER
 VAR
+
+    fbMotionStage_m25: FB_MotionStage;
+    fbMotionStage_m26: FB_MotionStage;
+    fbMotionStage_m27: FB_MotionStage;
+    fbMotionStage_m28: FB_MotionStage;
+
+    {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_TOP^Enc^Inputs^In^nDataIn1'}
+    M25_position_UDINT AT %Q*: UDINT;
+    {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_BOTTOM^Enc^Inputs^In^nDataIn1'}
+    M26_position_UDINT AT %Q*: UDINT;
+    {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_NORTH^Enc^Inputs^In^nDataIn1'}
+    M27_position_UDINT AT %Q*: UDINT;
+    {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_SOUTH^Enc^Inputs^In^nDataIn1'}
+    M28_position_UDINT AT %Q*: UDINT;
+
     {attribute 'pytmc' := '
     pv: SL2K4:SCATTER
     io: io'}
     fbSL2K4: FB_SLITS;
 
-    bMoveOk:BOOL :=TRUE;
     {attribute 'pytmc' := '
     pv: SL2K4:SCATTER:GO;
     io: io;
@@ -18,15 +32,45 @@ VAR
     bExecuteMotion :BOOL :=TRUE;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbSL2K4(stTopBlade:=  Main.M25,
-        stBottomBlade:= Main.M26,
-        stNorthBlade:=  Main.M27,
-        stSouthBlade:=  Main.M28,
+      <ST><![CDATA[	M25_position_UDINT := DINT_TO_UDINT(GVL_Main.M25.nRawEncoderDINT);
+
+    GVL_Main.M25.bLimitBackwardEnable := TRUE;
+    GVL_Main.M25.bLimitForwardEnable := TRUE;
+    GVL_Main.M25.bHardwareEnable := TRUE;
+
+    fbMotionStage_m25(stMotionStage:=GVL_Main.M25);
+
+    M26_position_UDINT := DINT_TO_UDINT(GVL_Main.M26.nRawEncoderDINT);
+
+    GVL_Main.M26.bLimitBackwardEnable := TRUE;
+    GVL_Main.M26.bLimitForwardEnable := TRUE;
+    GVL_Main.M26.bHardwareEnable := TRUE;
+
+    fbMotionStage_m26(stMotionStage:=GVL_Main.M26);
+
+    M27_position_UDINT := DINT_TO_UDINT(GVL_Main.M27.nRawEncoderDINT);
+
+    GVL_Main.M27.bLimitBackwardEnable := TRUE;
+    GVL_Main.M27.bLimitForwardEnable := TRUE;
+    GVL_Main.M27.bHardwareEnable := TRUE;
+
+    fbMotionStage_m27(stMotionStage:=GVL_Main.M27);
+
+    M28_position_UDINT := DINT_TO_UDINT(GVL_Main.M28.nRawEncoderDINT);
+
+    GVL_Main.M28.bLimitBackwardEnable := TRUE;
+    GVL_Main.M28.bLimitForwardEnable := TRUE;
+    GVL_Main.M28.bHardwareEnable := TRUE;
+
+    fbMotionStage_m28(stMotionStage:=GVL_Main.M28);
+
+fbSL2K4(stTopBlade:= GVL_Main.M25,
+        stBottomBlade:=GVL_Main.M26,
+        stNorthBlade:= GVL_Main.M27,
+        stSouthBlade:= GVL_Main.M28,
         bExecuteMotion:=bExecuteMotion,
         io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
-        fbArbiter := GVL_PMPS.g_fbArbiter2);
-
-//fbSL2K4.M_CheckPMPS(2);]]></ST>
+        fbArbiter := GVL_PMPS.g_fbArbiter2);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

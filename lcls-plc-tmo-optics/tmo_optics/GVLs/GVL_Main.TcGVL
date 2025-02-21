@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL_Main" Id="{fc41bd45-f004-43ad-8266-dcc2d3ff2d2e}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+     // SL2K4-SCATTER: 4 Axes
+    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:TOP'}
+    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIIB[SL2K4-EL5072-E1]^IND Inputs Channel 1^Position'}
+    M25: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:TOP', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
+    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:BOTTOM'}
+    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIIB[SL2K4-EL5072-E1]^IND Inputs Channel 2^Position'}
+    M26: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:BOTTOM', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
+    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:NORTH'}
+    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIIB[SL2K4-EL5072-E2]^IND Inputs Channel 1^Position'}
+    M27: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:NORTH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
+    {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:SOUTH'}
+    {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIIB[SL2K4-EL5072-E2]^IND Inputs Channel 2^Position'}
+    M28: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:SOUTH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
+    // SL2K4 END
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
