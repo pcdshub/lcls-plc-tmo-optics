@@ -8,7 +8,7 @@ VAR
     fbMotionStage_m26: FB_MotionStage;
     fbMotionStage_m27: FB_MotionStage;
     fbMotionStage_m28: FB_MotionStage;
-    
+
     {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_TOP^Enc^Inputs^In^nDataIn1'}
     M25_position_UDINT AT %Q*: UDINT;
     {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_BOTTOM^Enc^Inputs^In^nDataIn1'}
@@ -17,7 +17,7 @@ VAR
     M27_position_UDINT AT %Q*: UDINT;
     {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_SOUTH^Enc^Inputs^In^nDataIn1'}
     M28_position_UDINT AT %Q*: UDINT;
-    
+
     {attribute 'pytmc' := '
     pv: SL2K4:SCATTER
     io: io'}
