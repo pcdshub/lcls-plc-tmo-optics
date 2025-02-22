@@ -37,6 +37,7 @@ END_VAR]]></Declaration>
     GVL_Main.M25.bLimitBackwardEnable := TRUE;
     GVL_Main.M25.bLimitForwardEnable := TRUE;
     GVL_Main.M25.bHardwareEnable := TRUE;
+    GVL_Main.M25.bPowerSelf := TRUE;
 
     fbMotionStage_m25(stMotionStage:=GVL_Main.M25);
 
@@ -45,6 +46,7 @@ END_VAR]]></Declaration>
     GVL_Main.M26.bLimitBackwardEnable := TRUE;
     GVL_Main.M26.bLimitForwardEnable := TRUE;
     GVL_Main.M26.bHardwareEnable := TRUE;
+    GVL_Main.M26.bPowerSelf := TRUE;
 
     fbMotionStage_m26(stMotionStage:=GVL_Main.M26);
 
@@ -53,6 +55,7 @@ END_VAR]]></Declaration>
     GVL_Main.M27.bLimitBackwardEnable := TRUE;
     GVL_Main.M27.bLimitForwardEnable := TRUE;
     GVL_Main.M27.bHardwareEnable := TRUE;
+    GVL_Main.M27.bPowerSelf := TRUE;
 
     fbMotionStage_m27(stMotionStage:=GVL_Main.M27);
 
@@ -61,6 +64,7 @@ END_VAR]]></Declaration>
     GVL_Main.M28.bLimitBackwardEnable := TRUE;
     GVL_Main.M28.bLimitForwardEnable := TRUE;
     GVL_Main.M28.bHardwareEnable := TRUE;
+    GVL_Main.M28.bPowerSelf := TRUE;
 
     fbMotionStage_m28(stMotionStage:=GVL_Main.M28);
 
