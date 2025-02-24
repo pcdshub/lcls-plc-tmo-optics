@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{8F390928-941D-466C-D842-BF01ECC1C55B}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{A8E9878D-37AA-19D6-42D2-135594B68C71}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -81811,7 +81811,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669223200</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.Axis.NcToPlc</Name>
+            <Name>GVL_SL2K4.M25.Axis.NcToPlc</Name>
             <BitSize>2048</BitSize>
             <BaseType GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}">NCTOPLC_AXIS_REF</BaseType>
             <Properties>
@@ -81823,7 +81823,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669224320</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.bLimitForwardEnable</Name>
+            <Name>GVL_SL2K4.M25.bLimitForwardEnable</Name>
             <Comment> NC Forward Limit Switch: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -81836,7 +81836,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669232256</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.bLimitBackwardEnable</Name>
+            <Name>GVL_SL2K4.M25.bLimitBackwardEnable</Name>
             <Comment> NC Backward Limit Switch: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -81849,7 +81849,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669232264</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.bHome</Name>
+            <Name>GVL_SL2K4.M25.bHome</Name>
             <Comment> NO Home Switch: TRUE if at home</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -81862,7 +81862,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669232272</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.bHardwareEnable</Name>
+            <Name>GVL_SL2K4.M25.bHardwareEnable</Name>
             <Comment> NC STO Input: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -81885,7 +81885,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669232288</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.nRawEncoderULINT</Name>
+            <Name>GVL_SL2K4.M25.nRawEncoderULINT</Name>
             <Comment> Raw encoder IO for ULINT (Biss-C)</Comment>
             <BitSize>64</BitSize>
             <BaseType>ULINT</BaseType>
@@ -81898,7 +81898,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669232320</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.nRawEncoderUINT</Name>
+            <Name>GVL_SL2K4.M25.nRawEncoderUINT</Name>
             <Comment> Raw encoder IO for UINT (Relative Encoders)</Comment>
             <BitSize>16</BitSize>
             <BaseType>UINT</BaseType>
@@ -81911,7 +81911,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669232384</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.nRawEncoderINT</Name>
+            <Name>GVL_SL2K4.M25.nRawEncoderINT</Name>
             <Comment> Raw encoder IO for INT (LVDT)</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -81924,7 +81924,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669232400</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.nRawEncoderDINT</Name>
+            <Name>GVL_SL2K4.M25.nRawEncoderDINT</Name>
             <Comment> Raw encoder IO for INT (EL5072 LVDT)</Comment>
             <BitSize>32</BitSize>
             <BaseType>DINT</BaseType>
@@ -81937,7 +81937,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669232416</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.Axis.NcToPlc</Name>
+            <Name>GVL_SL2K4.M26.Axis.NcToPlc</Name>
             <BitSize>2048</BitSize>
             <BaseType GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}">NCTOPLC_AXIS_REF</BaseType>
             <Properties>
@@ -81949,7 +81949,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669250240</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.bLimitForwardEnable</Name>
+            <Name>GVL_SL2K4.M26.bLimitForwardEnable</Name>
             <Comment> NC Forward Limit Switch: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -81962,7 +81962,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669258176</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.bLimitBackwardEnable</Name>
+            <Name>GVL_SL2K4.M26.bLimitBackwardEnable</Name>
             <Comment> NC Backward Limit Switch: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -81975,7 +81975,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669258184</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.bHome</Name>
+            <Name>GVL_SL2K4.M26.bHome</Name>
             <Comment> NO Home Switch: TRUE if at home</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -81988,7 +81988,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669258192</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.bHardwareEnable</Name>
+            <Name>GVL_SL2K4.M26.bHardwareEnable</Name>
             <Comment> NC STO Input: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -82011,7 +82011,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669258208</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.nRawEncoderULINT</Name>
+            <Name>GVL_SL2K4.M26.nRawEncoderULINT</Name>
             <Comment> Raw encoder IO for ULINT (Biss-C)</Comment>
             <BitSize>64</BitSize>
             <BaseType>ULINT</BaseType>
@@ -82024,7 +82024,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669258240</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.nRawEncoderUINT</Name>
+            <Name>GVL_SL2K4.M26.nRawEncoderUINT</Name>
             <Comment> Raw encoder IO for UINT (Relative Encoders)</Comment>
             <BitSize>16</BitSize>
             <BaseType>UINT</BaseType>
@@ -82037,7 +82037,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669258304</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.nRawEncoderINT</Name>
+            <Name>GVL_SL2K4.M26.nRawEncoderINT</Name>
             <Comment> Raw encoder IO for INT (LVDT)</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -82050,7 +82050,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669258320</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.nRawEncoderDINT</Name>
+            <Name>GVL_SL2K4.M26.nRawEncoderDINT</Name>
             <Comment> Raw encoder IO for INT (EL5072 LVDT)</Comment>
             <BitSize>32</BitSize>
             <BaseType>DINT</BaseType>
@@ -82063,7 +82063,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669258336</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.Axis.NcToPlc</Name>
+            <Name>GVL_SL2K4.M27.Axis.NcToPlc</Name>
             <BitSize>2048</BitSize>
             <BaseType GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}">NCTOPLC_AXIS_REF</BaseType>
             <Properties>
@@ -82075,7 +82075,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669276160</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.bLimitForwardEnable</Name>
+            <Name>GVL_SL2K4.M27.bLimitForwardEnable</Name>
             <Comment> NC Forward Limit Switch: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -82088,7 +82088,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669284096</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.bLimitBackwardEnable</Name>
+            <Name>GVL_SL2K4.M27.bLimitBackwardEnable</Name>
             <Comment> NC Backward Limit Switch: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -82101,7 +82101,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669284104</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.bHome</Name>
+            <Name>GVL_SL2K4.M27.bHome</Name>
             <Comment> NO Home Switch: TRUE if at home</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -82114,7 +82114,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669284112</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.bHardwareEnable</Name>
+            <Name>GVL_SL2K4.M27.bHardwareEnable</Name>
             <Comment> NC STO Input: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -82137,7 +82137,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669284128</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.nRawEncoderULINT</Name>
+            <Name>GVL_SL2K4.M27.nRawEncoderULINT</Name>
             <Comment> Raw encoder IO for ULINT (Biss-C)</Comment>
             <BitSize>64</BitSize>
             <BaseType>ULINT</BaseType>
@@ -82150,7 +82150,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669284160</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.nRawEncoderUINT</Name>
+            <Name>GVL_SL2K4.M27.nRawEncoderUINT</Name>
             <Comment> Raw encoder IO for UINT (Relative Encoders)</Comment>
             <BitSize>16</BitSize>
             <BaseType>UINT</BaseType>
@@ -82163,7 +82163,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669284224</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.nRawEncoderINT</Name>
+            <Name>GVL_SL2K4.M27.nRawEncoderINT</Name>
             <Comment> Raw encoder IO for INT (LVDT)</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -82176,7 +82176,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669284240</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.nRawEncoderDINT</Name>
+            <Name>GVL_SL2K4.M27.nRawEncoderDINT</Name>
             <Comment> Raw encoder IO for INT (EL5072 LVDT)</Comment>
             <BitSize>32</BitSize>
             <BaseType>DINT</BaseType>
@@ -82189,7 +82189,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669284256</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.Axis.NcToPlc</Name>
+            <Name>GVL_SL2K4.M28.Axis.NcToPlc</Name>
             <BitSize>2048</BitSize>
             <BaseType GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}">NCTOPLC_AXIS_REF</BaseType>
             <Properties>
@@ -82201,7 +82201,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669302080</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.bLimitForwardEnable</Name>
+            <Name>GVL_SL2K4.M28.bLimitForwardEnable</Name>
             <Comment> NC Forward Limit Switch: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -82214,7 +82214,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669310016</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.bLimitBackwardEnable</Name>
+            <Name>GVL_SL2K4.M28.bLimitBackwardEnable</Name>
             <Comment> NC Backward Limit Switch: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -82227,7 +82227,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669310024</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.bHome</Name>
+            <Name>GVL_SL2K4.M28.bHome</Name>
             <Comment> NO Home Switch: TRUE if at home</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -82240,7 +82240,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669310032</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.bHardwareEnable</Name>
+            <Name>GVL_SL2K4.M28.bHardwareEnable</Name>
             <Comment> NC STO Input: TRUE if ok to move</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -82263,7 +82263,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669310048</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.nRawEncoderULINT</Name>
+            <Name>GVL_SL2K4.M28.nRawEncoderULINT</Name>
             <Comment> Raw encoder IO for ULINT (Biss-C)</Comment>
             <BitSize>64</BitSize>
             <BaseType>ULINT</BaseType>
@@ -82276,7 +82276,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669310080</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.nRawEncoderUINT</Name>
+            <Name>GVL_SL2K4.M28.nRawEncoderUINT</Name>
             <Comment> Raw encoder IO for UINT (Relative Encoders)</Comment>
             <BitSize>16</BitSize>
             <BaseType>UINT</BaseType>
@@ -82289,7 +82289,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669310144</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.nRawEncoderINT</Name>
+            <Name>GVL_SL2K4.M28.nRawEncoderINT</Name>
             <Comment> Raw encoder IO for INT (LVDT)</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -82302,7 +82302,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669310160</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.nRawEncoderDINT</Name>
+            <Name>GVL_SL2K4.M28.nRawEncoderDINT</Name>
             <Comment> Raw encoder IO for INT (EL5072 LVDT)</Comment>
             <BitSize>32</BitSize>
             <BaseType>DINT</BaseType>
@@ -83385,7 +83385,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>667237664</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.Axis.PlcToNc</Name>
+            <Name>GVL_SL2K4.M25.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
             <BaseType GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}">PLCTONC_AXIS_REF</BaseType>
             <Properties>
@@ -83397,7 +83397,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669223296</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25.bBrakeRelease</Name>
+            <Name>GVL_SL2K4.M25.bBrakeRelease</Name>
             <Comment> NC Brake Output: TRUE to release brake</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -83410,7 +83410,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669232280</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.Axis.PlcToNc</Name>
+            <Name>GVL_SL2K4.M26.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
             <BaseType GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}">PLCTONC_AXIS_REF</BaseType>
             <Properties>
@@ -83422,7 +83422,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669249216</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26.bBrakeRelease</Name>
+            <Name>GVL_SL2K4.M26.bBrakeRelease</Name>
             <Comment> NC Brake Output: TRUE to release brake</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -83435,7 +83435,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669258200</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.Axis.PlcToNc</Name>
+            <Name>GVL_SL2K4.M27.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
             <BaseType GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}">PLCTONC_AXIS_REF</BaseType>
             <Properties>
@@ -83447,7 +83447,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669275136</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27.bBrakeRelease</Name>
+            <Name>GVL_SL2K4.M27.bBrakeRelease</Name>
             <Comment> NC Brake Output: TRUE to release brake</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -83460,7 +83460,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669284120</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.Axis.PlcToNc</Name>
+            <Name>GVL_SL2K4.M28.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
             <BaseType GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}">PLCTONC_AXIS_REF</BaseType>
             <Properties>
@@ -83472,7 +83472,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>669301056</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28.bBrakeRelease</Name>
+            <Name>GVL_SL2K4.M28.bBrakeRelease</Name>
             <Comment> NC Brake Output: TRUE to release brake</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -93890,7 +93890,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
             <BitOffs>669222976</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M25</Name>
+            <Name>GVL_SL2K4.M25</Name>
             <Comment> SL2K4-SCATTER: 4 Axes</Comment>
             <BitSize>25920</BitSize>
             <BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType>
@@ -93924,7 +93924,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
             <BitOffs>669223232</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M26</Name>
+            <Name>GVL_SL2K4.M26</Name>
             <BitSize>25920</BitSize>
             <BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType>
             <Default>
@@ -93957,7 +93957,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
             <BitOffs>669249152</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M27</Name>
+            <Name>GVL_SL2K4.M27</Name>
             <BitSize>25920</BitSize>
             <BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType>
             <Default>
@@ -93990,7 +93990,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
             <BitOffs>669275072</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Main.M28</Name>
+            <Name>GVL_SL2K4.M28</Name>
             <BitSize>25920</BitSize>
             <BaseType Namespace="lcls_twincat_motion">ST_MotionStage</BaseType>
             <Default>
@@ -95128,7 +95128,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2025-02-21T22:58:58</Value>
+          <Value>2025-02-24T11:49:19</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>

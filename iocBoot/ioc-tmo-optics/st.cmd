@@ -1,11 +1,11 @@
-#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.6.1/bin/rhel7-x86_64/adsIoc
+#!c:/Repos/ads-ioc/R0.6.1///bin/rhel7-x86_64/adsIoc
 ################### AUTO-GENERATED DO NOT EDIT ###################
 #
 #         Project: lcls-plc-tmo-optics.tsproj
 #        PLC name: tmo_optics (tmo_optics Instance)
-# Generated using: pytmc 2.17.0
-# Project version: 48ae8f9
-#    Project hash: 48ae8f981f5a6bd9ccd176482a374f322603e66f
+# Generated using: pytmc 2.15.2.dev0+g73bd2d9.d20230727
+# Project version: unknown
+#    Project hash: unknown
 #     PLC IP/host: 172.21.92.63
 #      PLC Net ID: 172.21.92.63.1.1
 #  ** Production mode IOC **
@@ -27,7 +27,7 @@
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "baljamal" )
+epicsEnvSet("ENGINEER", "" )
 epicsEnvSet("LOCATION", "PLC:TMO:OPTICS" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
@@ -50,7 +50,7 @@ epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
 epicsEnvSet("ADS_TIME_SOURCE",  "0")
 
 # Add a route to the PLC automatically:
-system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.92.63 ^172.*")
+system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.92.63 ^172.*$")
 
 # adsAsynPortDriverConfigure(portName, ipaddr, amsaddr, amsport,
 #    asynParamTableSize, priority, noAutoConnect, defaultSampleTimeMS,
@@ -461,7 +461,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "25")
 epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "TOP")
-epicsEnvSet("DESC",            "GVL_Main.M25 / SL2K4_TOP")
+epicsEnvSet("DESC",            "GVL_SL2K4.M25 / SL2K4_TOP")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -476,7 +476,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "26")
 epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "BOTTOM")
-epicsEnvSet("DESC",            "GVL_Main.M26 / SL2K4_BOTTOM")
+epicsEnvSet("DESC",            "GVL_SL2K4.M26 / SL2K4_BOTTOM")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -491,7 +491,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "27")
 epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "NORTH")
-epicsEnvSet("DESC",            "GVL_Main.M27 / SL2K4_NORTH")
+epicsEnvSet("DESC",            "GVL_SL2K4.M27 / SL2K4_NORTH")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -506,7 +506,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "28")
 epicsEnvSet("MOTOR_PREFIX",    "SL2K4:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "SOUTH")
-epicsEnvSet("DESC",            "GVL_Main.M28 / SL2K4_SOUTH")
+epicsEnvSet("DESC",            "GVL_SL2K4.M28 / SL2K4_SOUTH")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -529,7 +529,7 @@ dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,ID
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TMO:OPTICS,IDX=3")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TMO:OPTICS")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TMO:OPTICS,PROJECT=lcls-plc-tmo-optics.tsproj,HASH=48ae8f9,VERSION=48ae8f9,PYTMC=2.17.0,PLC_HOST=172.21.92.63")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TMO:OPTICS,PROJECT=lcls-plc-tmo-optics.tsproj,HASH=unknown,VERSION=unknown,PYTMC=2.15.2.dev0+g73bd2d9.d20230727,PLC_HOST=172.21.92.63")
 
 #   lcls-twincat-common-components: * (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TMO:OPTICS,DEPENDENCY=lcls-twincat-common-components,VERSION=*,VENDOR=SLAC")
