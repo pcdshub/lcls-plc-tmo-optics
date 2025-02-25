@@ -340,6 +340,35 @@ VAR
         M24 : ST_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
         fbMotionStageM24 : FB_MotionStage;
 
+        // SL2K4-SCATTER: 4 Axes
+        // In order to get LVDT linked to NC motion, you have to first link the IO in the NC to the stepper interface, then clear link  Axis->Inputs->In->nDataIn1->nDataIn1[0], then rebuild
+        {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:TOP'}
+        {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIIB[SL2K4-EL5072-E1]^IND Inputs Channel 1^Position'}
+        M25: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:TOP', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
+        {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:BOTTOM'}
+        {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIIB[SL2K4-EL5072-E1]^IND Inputs Channel 2^Position'}
+        M26: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:BOTTOM', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
+        {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:NORTH'}
+        {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIIB[SL2K4-EL5072-E2]^IND Inputs Channel 1^Position'}
+        M27: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:NORTH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
+        {attribute 'pytmc' := 'pv: SL2K4:SCATTER:MMS:SOUTH'}
+        {attribute 'TcLinkTo' := '.nRawEncoderDINT      := TIIB[SL2K4-EL5072-E2]^IND Inputs Channel 2^Position'}
+        M28: ST_MotionStage := (sName := 'SL2K4:SCATTER:MMS:SOUTH', nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE);
+
+        fbMotionStage_m25: FB_MotionStage;
+        fbMotionStage_m26: FB_MotionStage;
+        fbMotionStage_m27: FB_MotionStage;
+        fbMotionStage_m28: FB_MotionStage;
+
+        {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_TOP^Enc^Inputs^In^nDataIn1'}
+        M25_position_UDINT AT %Q*: UDINT;
+        {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_BOTTOM^Enc^Inputs^In^nDataIn1'}
+        M26_position_UDINT AT %Q*: UDINT;
+        {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_NORTH^Enc^Inputs^In^nDataIn1'}
+        M27_position_UDINT AT %Q*: UDINT;
+        {attribute 'TcLinkTo' := 'TINC^NC-Task 1 SAF^Axes^SL2K4_SOUTH^Enc^Inputs^In^nDataIn1'}
+        M28_position_UDINT AT %Q*: UDINT;
+
     //MR4K4 MR5K4 STO button
     {attribute 'TcLinkTo' := 'TIIB[Term 109 (EL1004)]^Channel 1^Input'}
     bDreamEnable1 AT %I* : BOOL;
@@ -920,6 +949,43 @@ END_VAR]]></Declaration>
         M11.bHardwareEnable R= fM2K4DS_RTD_1 > 1000 OR bM2K4DS_RTD_1_Err;
         M15.bHardwareEnable R= fM3K4US_RTD_1 > 1000 OR bM3K4US_RTD_1_Err;
         M16.bHardwareEnable R= fM3K4DS_RTD_1 > 1000 OR bM3K4DS_RTD_1_Err;
+
+    // SL2K4
+    M25_position_UDINT := DINT_TO_UDINT(Main.M25.nRawEncoderDINT);
+
+    Main.M25.bLimitBackwardEnable := TRUE;
+    Main.M25.bLimitForwardEnable := TRUE;
+    Main.M25.bHardwareEnable := TRUE;
+    Main.M25.bPowerSelf := TRUE;
+
+    fbMotionStage_m25(stMotionStage:=Main.M25);
+
+    M26_position_UDINT := DINT_TO_UDINT(Main.M26.nRawEncoderDINT);
+
+    Main.M26.bLimitBackwardEnable := TRUE;
+    Main.M26.bLimitForwardEnable := TRUE;
+    Main.M26.bHardwareEnable := TRUE;
+    Main.M26.bPowerSelf := TRUE;
+
+    fbMotionStage_m26(stMotionStage:=Main.M26);
+
+    M27_position_UDINT := DINT_TO_UDINT(Main.M27.nRawEncoderDINT);
+
+    Main.M27.bLimitBackwardEnable := TRUE;
+    Main.M27.bLimitForwardEnable := TRUE;
+    Main.M27.bHardwareEnable := TRUE;
+    Main.M27.bPowerSelf := TRUE;
+
+    fbMotionStage_m27(stMotionStage:=Main.M27);
+
+    M28_position_UDINT := DINT_TO_UDINT(Main.M28.nRawEncoderDINT);
+
+    Main.M28.bLimitBackwardEnable := TRUE;
+    Main.M28.bLimitForwardEnable := TRUE;
+    Main.M28.bHardwareEnable := TRUE;
+    Main.M28.bPowerSelf := TRUE;
+
+    fbMotionStage_m28(stMotionStage:=Main.M28);
 
 // Environment
     PRG_Environment();
