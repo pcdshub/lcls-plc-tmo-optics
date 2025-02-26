@@ -24,6 +24,9 @@
     <Compile Include="DUTs\ENUM_Si_B4C_Coating_States.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DUTs\E_HomeState.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GVLs\GVL_COM_Buffers.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -107,6 +110,9 @@
     <Compile Include="POUs\PRG_PMPS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_SL2K4_SCATTER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\PRG_States.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="POUs\Serial Comm\P_Serial_Com.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\temp\FB_SLITS.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="SerialIO.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -126,18 +135,19 @@
   <ItemGroup>
     <Folder Include="DUTs" />
     <Folder Include="GVLs" />
+    <Folder Include="POUs\temp" />
     <Folder Include="POUs\Serial Comm" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="lcls-twincat-common-components">
+      <DefaultResolution>lcls-twincat-common-components, * (SLAC)</DefaultResolution>
+      <Namespace>lcls_twincat_common_components</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="lcls-twincat-optics">
       <DefaultResolution>lcls-twincat-optics, * (SLAC)</DefaultResolution>
       <Namespace>lcls_twincat_optics</Namespace>
-    </PlaceholderReference>
-    <PlaceholderReference Include="lcls2-cc-lib">
-      <DefaultResolution>lcls2-cc-lib, * (SLAC)</DefaultResolution>
-      <Namespace>lcls2_cc_lib</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc2_MC2">
       <DefaultResolution>Tc2_MC2, * (Beckhoff Automation GmbH)</DefaultResolution>
@@ -168,7 +178,7 @@
     <LibraryReference Include="LCLS General,2.8.2,SLAC">
       <Namespace>LCLS_General</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-motion,4.0.9,SLAC">
+    <LibraryReference Include="lcls-twincat-motion,4.2.0,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
     </LibraryReference>
     <LibraryReference Include="PMPS,3.3.0,SLAC - LCLS">
@@ -180,13 +190,10 @@
       <Resolution>LCLS General, 2.8.2 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-motion">
-      <Resolution>lcls-twincat-motion, 4.0.9 (SLAC)</Resolution>
+      <Resolution>lcls-twincat-motion, 4.2.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-optics">
       <Resolution>lcls-twincat-optics, 0.8.0 (SLAC)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="lcls2-cc-lib">
-      <Resolution>lcls2-cc-lib, 2.0.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
       <Resolution>PMPS, 3.3.0 (SLAC - LCLS)</Resolution>
