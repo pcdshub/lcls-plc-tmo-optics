@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <GVL Name="GVL_SL2K4" Id="{fc41bd45-f004-43ad-8266-dcc2d3ff2d2e}">
-    <Declaration><![CDATA[{attribute 'qualified_only'}
-VAR_GLOBAL
-
-END_VAR]]></Declaration>
-  </GVL>
-</TcPlcObject>
