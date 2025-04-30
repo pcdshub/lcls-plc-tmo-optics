@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{9C838E67-D00C-0196-A25B-A6024E89C10D}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{3DF987F6-C15A-5B4B-4870-3DE72CC53B1C}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -83320,7 +83320,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>650445632</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Main.M25_position_UDINT</Name>
+            <Name>Main.nM25Position</Name>
             <BitSize>32</BitSize>
             <BaseType>UDINT</BaseType>
             <Properties>
@@ -83336,7 +83336,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>650771456</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Main.M26_position_UDINT</Name>
+            <Name>Main.nM26Position</Name>
             <BitSize>32</BitSize>
             <BaseType>UDINT</BaseType>
             <Properties>
@@ -83352,7 +83352,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>650771488</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Main.M27_position_UDINT</Name>
+            <Name>Main.nM27Position</Name>
             <BitSize>32</BitSize>
             <BaseType>UDINT</BaseType>
             <Properties>
@@ -83368,7 +83368,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>650771520</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Main.M28_position_UDINT</Name>
+            <Name>Main.nM28Position</Name>
             <BitSize>32</BitSize>
             <BaseType>UDINT</BaseType>
             <Properties>
@@ -95117,7 +95117,7 @@ Silicon surface: RBV &lt;= 4820000: 0000_0000_0001_1110 (allow everything betwee
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2025-02-25T14:38:01</Value>
+          <Value>2025-04-29T15:53:14</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
