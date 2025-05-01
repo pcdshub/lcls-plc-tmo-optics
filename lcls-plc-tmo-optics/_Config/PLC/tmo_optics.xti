@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{9C838E67-D00C-0196-A25B-A6024E89C10D}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{3DF987F6-C15A-5B4B-4870-3DE72CC53B1C}">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -3625,19 +3625,19 @@ External Setpoint Generation:
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.M25_position_UDINT</Name>
+					<Name>Main.nM25Position</Name>
 					<Type>UDINT</Type>
 				</Var>
 				<Var>
-					<Name>Main.M26_position_UDINT</Name>
+					<Name>Main.nM26Position</Name>
 					<Type>UDINT</Type>
 				</Var>
 				<Var>
-					<Name>Main.M27_position_UDINT</Name>
+					<Name>Main.nM27Position</Name>
 					<Type>UDINT</Type>
 				</Var>
 				<Var>
-					<Name>Main.M28_position_UDINT</Name>
+					<Name>Main.nM28Position</Name>
 					<Type>UDINT</Type>
 				</Var>
 				<Var>
@@ -4277,22 +4277,22 @@ External Setpoint Generation:
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^SL2K4_BOTTOM">
 				<Link VarA="PlcTask Inputs^Main.M26.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M26.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
-				<Link VarA="PlcTask Outputs^Main.M26_position_UDINT" VarB="Enc^Inputs^In^nDataIn1" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^Main.nM26Position" VarB="Enc^Inputs^In^nDataIn1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^SL2K4_NORTH">
 				<Link VarA="PlcTask Inputs^Main.M27.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M27.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
-				<Link VarA="PlcTask Outputs^Main.M27_position_UDINT" VarB="Enc^Inputs^In^nDataIn1" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^Main.nM27Position" VarB="Enc^Inputs^In^nDataIn1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^SL2K4_SOUTH">
 				<Link VarA="PlcTask Inputs^Main.M28.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M28.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
-				<Link VarA="PlcTask Outputs^Main.M28_position_UDINT" VarB="Enc^Inputs^In^nDataIn1" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^Main.nM28Position" VarB="Enc^Inputs^In^nDataIn1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^SL2K4_TOP">
 				<Link VarA="PlcTask Inputs^Main.M25.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M25.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
-				<Link VarA="PlcTask Outputs^Main.M25_position_UDINT" VarB="Enc^Inputs^In^nDataIn1" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^Main.nM25Position" VarB="Enc^Inputs^In^nDataIn1" AutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
