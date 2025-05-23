@@ -1362,8 +1362,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-28.961399" MaxCount="#xffffffff">
-					<SoftEndMinControl Enable="true" Range="-11.2"/>
-					<SoftEndMaxControl Enable="true" Range="13.2"/>
+					<SoftEndMinControl Range="-11.2"/>
+					<SoftEndMaxControl Range="13.2"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
@@ -2064,8 +2064,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
 				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.7766" MaxCount="#xffffffff">
-					<SoftEndMinControl Enable="true" Range="-12.3"/>
-					<SoftEndMaxControl Enable="true" Range="12.33"/>
+					<SoftEndMinControl Range="-12.3"/>
+					<SoftEndMaxControl Range="12.33"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
