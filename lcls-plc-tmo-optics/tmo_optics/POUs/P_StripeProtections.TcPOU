@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="P_StripeProtections" Id="{40ffbfa8-833e-45b2-a6cd-32aa1c1e46a6}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM P_StripeProtections
 VAR

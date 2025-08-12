@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CNestedPlcProjDef">
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.17" ClassName="CNestedPlcProjDef">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{2A5B491E-39C9-45F5-894E-3370A7A69E7D}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
@@ -429,13 +429,13 @@
 			<Name GUID="{F7B9FC50-054E-4547-B468-83A9E72D8064}" Namespace="MC" TcBaseType="true" HideType="true">NCTOPLC_AXIS_REF_STATE3_FLAGS</Name>
 			<BitSize>32</BitSize>
 			<SubItem>
-				<Name>TouchProbe1InputState </Name>
+				<Name>TouchProbe1InputState</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
 				<BitSize>1</BitSize>
 				<BitOffs>0</BitOffs>
 			</SubItem>
 			<SubItem>
-				<Name>TouchProbe2InputState </Name>
+				<Name>TouchProbe2InputState</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
 				<BitSize>1</BitSize>
 				<BitOffs>1</BitOffs>
@@ -852,7 +852,7 @@ External Setpoint Generation:
 			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
 		</DataType>
 		<DataType>
-			<Name GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Name GUID="{DBC6E421-3A65-252F-C75A-2A9B7C1BF832}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
 			<Comment><![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]></Comment>
 			<BitSize>128</BitSize>
 			<SubItem>
@@ -861,12 +861,6 @@ External Setpoint Generation:
 				<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
 				<BitSize>64</BitSize>
 				<BitOffs>0</BitOffs>
-				<Properties>
-					<Property>
-						<Name>TcAddressType</Name>
-						<Value>Input</Value>
-					</Property>
-				</Properties>
 			</SubItem>
 			<SubItem>
 				<Name>Status</Name>
@@ -906,7 +900,6 @@ External Setpoint Generation:
 				<Hide GUID="{D6F0EA12-B425-4603-9C4B-B4FD442416C3}"/>
 				<Hide GUID="{0FF3CAED-DFFA-453E-8BDC-2F6EE7142B14}"/>
 				<Hide GUID="{AC42932A-79BD-4670-8CF2-1DDEA2EE41C7}"/>
-				<Hide GUID="{EE241488-3DC7-4C48-A9D8-BB32379587BC}"/>
 				<Hide GUID="{EE241488-3DC7-4C48-A9D8-BB32379587BC}"/>
 			</Hides>
 		</DataType>
@@ -1146,9 +1139,7 @@ External Setpoint Generation:
 				<Hide GUID="{3F6D5E74-4433-4A11-8ADE-14BBEED361D6}"/>
 				<Hide GUID="{6E597FBD-95E0-4E3A-8361-F15F77CF10FA}"/>
 				<Hide GUID="{5F9FBCD0-8C11-4386-87CB-253F17D55690}"/>
-				<Hide GUID="{5F9FBCD0-8C11-4386-87CB-253F17D55690}"/>
 				<Hide GUID="{F4D82764-2299-4BB7-86C4-99ED0EBA5A76}"/>
-				<Hide GUID="{1E08C18A-0551-4C52-916A-1A7A2B58BA24}"/>
 				<Hide GUID="{1E08C18A-0551-4C52-916A-1A7A2B58BA24}"/>
 				<Hide GUID="{0C6A4924-E177-45F6-9AB0-6F9DB98D3474}"/>
 				<Hide GUID="{7BACB0F9-4BD8-4ADE-B8B1-2D069E1D0190}"/>
@@ -1349,31 +1340,455 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7FA5AD82-8B94-448C-8921-86A608467E2A}" Name="tmo_optics" PrjFilePath="..\..\tmo_optics\tmo_optics.plcproj" TmcFilePath="..\..\tmo_optics\tmo_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tmo_optics\tmo_optics.tmc" TmcHash="{E3DC40B3-3105-C192-41BB-E89C4D112308}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{13300A4C-E83E-1DA3-F132-EDE671C84BDA}" TmcPath="tmo_optics\tmo_optics.tmc">
 			<Name>tmo_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
-			<Vars VarGrpType="1">
-				<Name>SerialIO Inputs</Name>
+			<Vars VarGrpType="8" ContextId="2" AreaNo="36">
+				<Name>PlcTask Retains</Name>
 				<Var>
-					<Name>GVL_SerialIO.Serial_stComIn_M1K4</Name>
-					<Comment><![CDATA[Better have your inputs and outputs!
- M1K4]]></Comment>
-					<Type GUID="{2A5B491E-39C9-45F5-894E-3370A7A69E7D}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Name>PMPS_GVL.SuccessfulPreemption</Name>
+					<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
+					<Type>UDINT</Type>
+					<InOut>7</InOut>
+				</Var>
+				<Var>
+					<Name>PMPS_GVL.AccumulatedFF</Name>
+					<Comment><![CDATA[ Any time a FF occurs]]></Comment>
+					<Type>UDINT</Type>
+					<InOut>7</InOut>
+				</Var>
+				<Var>
+					<Name>PMPS_GVL.BP_jsonDoc</Name>
+					<Type>SJsonValue</Type>
+					<InOut>7</InOut>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="2" AreaNo="1">
-				<Name>SerialIO Outputs</Name>
+			<Vars VarGrpType="2" ContextId="2" AreaNo="33">
+				<Name>PlcTask Outputs</Name>
 				<Var>
-					<Name>GVL_SerialIO.Serial_stComOut_M1K4</Name>
-					<Type GUID="{A41184B3-910D-4EDC-A795-0B7B30E2790C}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Name>Main.M1.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m1.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M2.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M2.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m2.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M3.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M3.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m3.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M4.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M4.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m4.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M5.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M5.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m5.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.nM25Position</Name>
+					<Type>UDINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.M7.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M7.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m7.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M8.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M8.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m8.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M9.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M9.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m9.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M10.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M10.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m10.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M11.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M11.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m11.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M12.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M12.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m12.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M13.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M13.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m13.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M14.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M14.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m14.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M15.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M15.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m15.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M16.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M16.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m16.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M17.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M17.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStageM17.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M18.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M18.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStageM18.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M19.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M19.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStageM19.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M20.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M20.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStageM20.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M21.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M21.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStageM21.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M22.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M22.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStageM22.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M23.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M23.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStageM23.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M24.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M24.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStageM24.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M25.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M25.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.M26.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M26.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.M27.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M27.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.M28.Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.M28.bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m25.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m26.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m27.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbMotionStage_m28.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.nM26Position</Name>
+					<Type>UDINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.nM27Position</Name>
+					<Type>UDINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.nM28Position</Name>
+					<Type>UDINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_MR1K4_SOMS.bActivateVarCool</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_PMPS.fbArbiterIO.q_stRequestedBP</Name>
+					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2K4_SCATTER.fbSL2K4.fbTopBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2K4_SCATTER.fbSL2K4.fbBottomBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2K4_SCATTER.fbSL2K4.fbNorthBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2K4_SCATTER.fbSL2K4.fbSouthBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_SL2K4_SCATTER.fbSL2K4.AptArrayStatus</Name>
+					<Type GUID="{67AC048F-B785-4A4D-B941-B11E2213F502}">ST_PMPS_Aperture_IO</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="1" ContextId="2" AreaNo="32">
 				<Name>PlcTask Inputs</Name>
 				<Var>
-					<Name>lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
+					<Name>Main.bDreamEnable1</Name>
+					<Comment><![CDATA[MR4K4 MR5K4 STO button]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
 					<Comment><![CDATA[Raw encoder count]]></Comment>
 					<Type>LINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.bDreamEnable2</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.LAMPbSTOEnable1</Name>
+					<Comment><![CDATA[Emergency Stop for LAMP KBs (M2K4 and M3K4)]]></Comment>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
@@ -1627,19 +2042,19 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stYupEnc</Name>
 					<Comment><![CDATA[ Encoders]]></Comment>
-					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DBC6E421-3A65-252F-C75A-2A9B7C1BF832}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DBC6E421-3A65-252F-C75A-2A9B7C1BF832}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DBC6E421-3A65-252F-C75A-2A9B7C1BF832}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{DE508B70-ABB9-83DF-6AA5-FF9BDD51D9D9}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{DBC6E421-3A65-252F-C75A-2A9B7C1BF832}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1K4.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.PEnc.Count</Name>
@@ -1660,6 +2075,26 @@ External Setpoint Generation:
 					<Name>Main.M1K4.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.SEnc.Count</Name>
 					<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
 					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fSupplySecondY</Name>
+					<Comment><![CDATA[ Y Driver supply voltage cV]]></Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fMotorCurSecondY</Name>
+					<Comment><![CDATA[ Y Current DC current mA]]></Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fSupplySecondX</Name>
+					<Comment><![CDATA[ X Driver supply voltage cV]]></Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.M1K4.fMotorCurSecondX</Name>
+					<Comment><![CDATA[ X Current DC current mA]]></Comment>
+					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>Main.M7.Axis.NcToPlc</Name>
@@ -2718,26 +3153,8 @@ External Setpoint Generation:
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.bDreamEnable1</Name>
-					<Comment><![CDATA[MR4K4 MR5K4 STO button]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.bDreamEnable2</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.LAMPbSTOEnable1</Name>
-					<Comment><![CDATA[Emergency Stop for LAMP KBs (M2K4 and M3K4)]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>Main.LAMPbSTOEnable2</Name>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fM3K4DS_RTD_3</Name>
-					<Type>REAL</Type>
 				</Var>
 				<Var>
 					<Name>Main.bM2K4US_RTD_1_Err</Name>
@@ -2751,6 +3168,10 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.bM2K4US_RTD_3_Err</Name>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fM3K4DS_RTD_3</Name>
+					<Type>REAL</Type>
 				</Var>
 				<Var>
 					<Name>Main.bM2K4DS_RTD_1_Err</Name>
@@ -2801,35 +3222,29 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
-					<Comment><![CDATA[ M2K4 BENDER RTDs
- M2K4 US RTDs]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbPress_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_2.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MR2K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MR2K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MR2K4_KBO.fbM2K4_Chin_Left_RTD.bError</Name>
@@ -2866,12 +3281,12 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_MR3K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MR3K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MR3K4_KBO.fbM3K4_Chin_Left_RTD.bError</Name>
@@ -2908,22 +3323,22 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_MR4K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MR4K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MR5K4_KBO.fbCoolingPanel.fbFlow_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MR5K4_KBO.fbCoolingPanel.fbPress_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
-					<Type>INT</Type>
+					<Type>DINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_SL2K4_SCATTER.fbSL2K4.fbTopBlade.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -3138,6 +3553,17 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 				<Var>
+					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
+					<Comment><![CDATA[Raw encoder count]]></Comment>
+					<Type>LINT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_M2K4_RTD.nM2K4US_RTD_1</Name>
+					<Comment><![CDATA[ M2K4 BENDER RTDs
+ M2K4 US RTDs]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4US_RTD_3</Name>
 					<Type>INT</Type>
 				</Var>
@@ -3145,11 +3571,6 @@ External Setpoint Generation:
 					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_1</Name>
 					<Comment><![CDATA[ M2K4 DS RTDs]]></Comment>
 					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_M1K4.M1K4_Pitch.diEncCnt</Name>
-					<Comment><![CDATA[Raw encoder count]]></Comment>
-					<Type>LINT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_M2K4_RTD.nM2K4DS_RTD_3</Name>
@@ -3271,430 +3692,20 @@ External Setpoint Generation:
 					<Type>INT</Type>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="2" ContextId="2" AreaNo="33">
-				<Name>PlcTask Outputs</Name>
-				<Var>
-					<Name>Main.M1.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M1.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m1.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M2.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M2.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m2.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M3.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M3.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m3.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M4.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M4.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m4.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M5.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M5.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m5.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M7.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M7.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m7.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M8.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M8.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m8.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M9.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M9.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m9.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M10.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M10.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m10.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M11.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M11.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m11.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M12.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M12.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m12.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M13.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M13.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m13.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M14.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M14.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m14.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M15.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M15.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m15.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M16.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M16.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m16.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M17.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M17.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStageM17.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M18.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M18.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStageM18.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M19.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M19.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStageM19.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M20.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M20.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStageM20.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M21.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M21.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStageM21.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M22.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M22.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStageM22.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M23.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M23.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStageM23.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M24.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M24.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStageM24.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M25.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M25.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.M26.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M26.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.M27.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M27.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.M28.Axis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.M28.bBrakeRelease</Name>
-					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m25.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m26.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m27.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.fbMotionStage_m28.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>Main.nM25Position</Name>
-					<Type>UDINT</Type>
-				</Var>
-				<Var>
-					<Name>Main.nM26Position</Name>
-					<Type>UDINT</Type>
-				</Var>
-				<Var>
-					<Name>Main.nM27Position</Name>
-					<Type>UDINT</Type>
-				</Var>
-				<Var>
-					<Name>Main.nM28Position</Name>
-					<Type>UDINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_PMPS.fbArbiterIO.q_stRequestedBP</Name>
-					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
-				</Var>
-				<Var>
-					<Name>PRG_MR1K4_SOMS.bActivateVarCool</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_SL2K4_SCATTER.fbSL2K4.fbTopBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_SL2K4_SCATTER.fbSL2K4.fbBottomBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_SL2K4_SCATTER.fbSL2K4.fbNorthBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_SL2K4_SCATTER.fbSL2K4.fbSouthBlade.fbDriveVirtual.MasterAxis.PlcToNc</Name>
-					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_SL2K4_SCATTER.fbSL2K4.AptArrayStatus</Name>
-					<Type GUID="{67AC048F-B785-4A4D-B941-B11E2213F502}">ST_PMPS_Aperture_IO</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
+			<Vars VarGrpType="2" AreaNo="1">
+				<Name>SerialIO Outputs</Name>
+				<Var>
+					<Name>GVL_SerialIO.Serial_stComOut_M1K4</Name>
+					<Type GUID="{A41184B3-910D-4EDC-A795-0B7B30E2790C}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="8" ContextId="2" AreaNo="36">
-				<Name>PlcTask Retains</Name>
+			<Vars VarGrpType="1">
+				<Name>SerialIO Inputs</Name>
 				<Var>
-					<Name>PMPS_GVL.SuccessfulPreemption</Name>
-					<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
-					<Type>UDINT</Type>
-					<InOut>7</InOut>
-				</Var>
-				<Var>
-					<Name>PMPS_GVL.AccumulatedFF</Name>
-					<Comment><![CDATA[ Any time a FF occurs]]></Comment>
-					<Type>UDINT</Type>
-					<InOut>7</InOut>
-				</Var>
-				<Var>
-					<Name>PMPS_GVL.BP_jsonDoc</Name>
-					<Type>SJsonValue</Type>
-					<InOut>7</InOut>
+					<Name>GVL_SerialIO.Serial_stComIn_M1K4</Name>
+					<Comment><![CDATA[Better have your inputs and outputs!
+ M1K4]]></Comment>
+					<Type GUID="{2A5B491E-39C9-45F5-894E-3370A7A69E7D}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 			</Vars>
 			<UnrestoredVarLinks ImportTime="2022-04-08T14:33:07">
@@ -3813,7 +3824,7 @@ External Setpoint Generation:
 			</UnrestoredVarLinks>
 			<Contexts>
 				<Context>
-					<Id NeedCalleeCall="true">0</Id>
+					<Id>0</Id>
 					<Name>SerialIO</Name>
 					<ManualConfig>
 						<OTCID>#x02010070</OTCID>
@@ -3822,7 +3833,7 @@ External Setpoint Generation:
 					<CycleTime>2000000</CycleTime>
 				</Context>
 				<Context>
-					<Id NeedCalleeCall="true">1</Id>
+					<Id>1</Id>
 					<Name>PiezoDriver</Name>
 					<ManualConfig>
 						<OTCID>#x02010060</OTCID>
@@ -3831,7 +3842,7 @@ External Setpoint Generation:
 					<CycleTime>1000000</CycleTime>
 				</Context>
 				<Context>
-					<Id NeedCalleeCall="true">2</Id>
+					<Id>2</Id>
 					<Name>PlcTask</Name>
 					<ManualConfig>
 						<OTCID>#x02010030</OTCID>
@@ -3868,10 +3879,10 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M28.nRawEncoderDINT" VarB="IND Inputs Channel 2^Position" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 110 (EK1100)^EL3054_FWM_PRSM_MR45K4">
-				<Link VarA="PlcTask Inputs^PRG_MR4K4_KBO.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_MR4K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_MR5K4_KBO.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_MR5K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_MR4K4_KBO.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true" Size="16"/>
+				<Link VarA="PlcTask Inputs^PRG_MR4K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true" Size="16"/>
+				<Link VarA="PlcTask Inputs^PRG_MR5K4_KBO.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true" Size="16"/>
+				<Link VarA="PlcTask Inputs^PRG_MR5K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true" Size="16"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 39 (EK1122)^Term 110 (EK1100)^EL3204_M4K4">
 				<Link VarA="PlcTask Inputs^GVL_M4K4_RTD.nM4K4_Chin_Left_RTD.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
@@ -4021,10 +4032,10 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M15.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3054_FWM_PRSM">
-				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true" Size="16"/>
+				<Link VarA="PlcTask Inputs^PRG_MR2K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true" Size="16"/>
+				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true" Size="16"/>
+				<Link VarA="PlcTask Inputs^PRG_MR3K4_KBO.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true" Size="16"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 40 (EK1100)^EL3202-0010_M2K4DS2_M2K4DS3">
 				<Link VarA="PlcTask Inputs^GVL_M2K4_RTD.nM2K4DS_RTD_3" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
@@ -4099,9 +4110,9 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M1K4.fbRunHOMS.bSTOEnable2" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL3054_M1K4_FWM_PRSM">
-				<Link VarA="PlcTask Inputs^PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_2.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^PRG_MR1K4_SOMS.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true" Size="16"/>
+				<Link VarA="PlcTask Inputs^PRG_MR1K4_SOMS.fbCoolingPanel.fbFlow_2.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true" Size="16"/>
+				<Link VarA="PlcTask Inputs^PRG_MR1K4_SOMS.fbCoolingPanel.fbPress_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true" Size="16"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EK1122)^Term 6 (EK1100)^EL5042_M1K4_PitchBender">
 				<Link VarA="PlcTask Inputs^GVL_M1K4.M1K4_Pitch.diEncCnt" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
