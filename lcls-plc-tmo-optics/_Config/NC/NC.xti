@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CNcSafTaskDef" SubType="0">
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.17" ClassName="CNcSafTaskDef" SubType="0">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{76EB036C-07A7-446B-91CB-CECCF6977DF3}" TcBaseType="true" HideType="true">UINTARR2_2</Name>
@@ -1316,7 +1316,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<NC>
-		<SafTask Priority="4" CycleTime="20000" AmsPort="501" IoAtBegin="true">
+		<SafTask Priority="4" CycleTime="20000" AmsPort="501" Affinity="#x00000002" IoAtBegin="true">
 			<Name>NC-Task 1 SAF</Name>
 			<Vars VarGrpType="1" InsertType="1">
 				<Name>Inputs</Name>
@@ -1328,7 +1328,7 @@ External Setpoint Generation:
 				<Name>Image</Name>
 			</Image>
 		</SafTask>
-		<SvbTask Priority="8" CycleTime="100000" AmsPort="511">
+		<SvbTask Priority="8" CycleTime="100000" AmsPort="511" Affinity="#x00000002">
 			<Name>NC-Task 1 SVB</Name>
 		</SvbTask>
 		<AxisFolder Name="M1K4"/>
@@ -1361,7 +1361,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5e-06" Offset="-28.961399" MaxCount="#xffffffff">
+				<EncPara ScaleFactorNumerator="5e-06" Offset="-28.961399" MaxCount="#xffffffff" ReferenceSystem="1">
 					<SoftEndMinControl Range="-11.2"/>
 					<SoftEndMaxControl Range="13.2"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
@@ -1501,7 +1501,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5e-06" Offset="-30.3992" MaxCount="#xffffffff">
+				<EncPara ScaleFactorNumerator="5e-06" Offset="-30.3992" MaxCount="#xffffffff" ReferenceSystem="1">
 					<SoftEndMinControl Enable="true" Range="-0.5"/>
 					<SoftEndMaxControl Enable="true" Range="1.25"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
@@ -1641,7 +1641,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5e-06" Offset="-21445.3535" MaxCount="#xffffffff">
+				<EncPara ScaleFactorNumerator="5e-06" Offset="-21445.3535" MaxCount="#xffffffff" ReferenceSystem="1">
 					<SoftEndMinControl Enable="true" Range="-1.5"/>
 					<SoftEndMaxControl Enable="true" Range="0.85"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
@@ -1782,7 +1782,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="0.0025826" Offset="-132192.8499" MaxCount="#xffffffff">
+				<EncPara ScaleFactorNumerator="0.0025826" Offset="-132192.8499" MaxCount="#xffffffff" ReferenceSystem="1">
 					<FilterTime TPos="0.2"/>
 					<SoftEndMinControl Enable="true" Range="-300"/>
 					<SoftEndMaxControl Enable="true" Range="35"/>
@@ -1923,7 +1923,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.80379" MaxCount="#xffffffff">
+				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.80379" MaxCount="#xffffffff" ReferenceSystem="1">
 					<SoftEndMinControl Enable="true" Range="-2.3"/>
 					<SoftEndMaxControl Enable="true" Range="-0.37"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
@@ -2063,7 +2063,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.7766" MaxCount="#xffffffff">
+				<EncPara ScaleFactorNumerator="5e-06" Offset="-29.7766" MaxCount="#xffffffff" ReferenceSystem="1">
 					<SoftEndMinControl Range="-12.3"/>
 					<SoftEndMaxControl Range="12.33"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
@@ -2203,7 +2203,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5e-06" Offset="-21444.5039" MaxCount="#xffffffff">
+				<EncPara ScaleFactorNumerator="5e-06" Offset="-21444.5039" MaxCount="#xffffffff" ReferenceSystem="1">
 					<SoftEndMinControl Enable="true" Range="-0.69"/>
 					<SoftEndMaxControl Enable="true" Range="1.02"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
@@ -2344,7 +2344,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="0.00504" Offset="-198169.78" MaxCount="#xffffffff">
+				<EncPara ScaleFactorNumerator="0.00504" Offset="-198169.78" MaxCount="#xffffffff" ReferenceSystem="1">
 					<FilterTime TPos="0.2"/>
 					<SoftEndMinControl Enable="true" Range="-260"/>
 					<SoftEndMaxControl Enable="true" Range="200"/>
