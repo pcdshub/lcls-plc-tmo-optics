@@ -19,6 +19,7 @@ bin
 build
 db
 dbd
+envPaths
 
 # Vim ignores
 *.swp
