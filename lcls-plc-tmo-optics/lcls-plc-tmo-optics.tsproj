@@ -1,28 +1,37 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" TcVersionFixed="true">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.17" TcVersionFixed="true">
 	<Project ProjectGUID="{469D9277-D01A-45EE-A69D-357039FEE32B}" TargetNetId="172.21.92.63.1.1" Target64Bit="true" RelativeTargetNetId="true" RelativeIpAddresses="true" ShowHideConfigurations="#x306">
 		<System>
-			<Licenses IgnoreProjectLicenses="true" CacheOrCheckLicensesOnStartup="true">
-				<Target BkhfOrder="01451158">
-					<ManualSelect>{3FF18E97-7754-401B-93FB-70544DE28A13}</ManualSelect>
-					<ManualSelect>{66689887-CCBD-452C-AC9A-039D997C6E66}</ManualSelect>
-					<ManualSelect>{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</ManualSelect>
+			<Settings MaxCpus="4" NonWinCpus="3">
+				<Cpu CpuMemorySize="#x0"/>
+				<Cpu CpuId="1" CpuMemorySize="#x0"/>
+				<Cpu CpuId="2" CpuMemorySize="#x0"/>
+				<Cpu CpuId="3" CpuMemorySize="#x0"/>
+				<IoIdleTask Affinity="#x00000004"/>
+			</Settings>
+			<Licenses>
+				<Target BkhfOrder="01617000">
+					<ManualSelect>{57BD9670-089D-434A-85CF-90A857EE0EFF}</ManualSelect>
+					<ManualSelect>{BF78CFC7-2E63-42C3-8C07-BB6C346BFB8B}</ManualSelect>
 					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
-					<ManualSelect>{777F1598-583B-4503-99BB-7C02E0ABD97E}</ManualSelect>
-					<ManualSelect>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</ManualSelect>
-					<ManualSelect>{520DE751-9DB6-47CB-8240-BD5C466E7E64}</ManualSelect>
+					<TargetSelect TargetId="2">{57BD9670-089D-434A-85CF-90A857EE0EFF}</TargetSelect>
+					<TargetSelect TargetId="2">{777F1598-583B-4503-99BB-7C02E0ABD97E}</TargetSelect>
+					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>
+					<TargetSelect TargetId="2">{BF78CFC7-2E63-42C3-8C07-BB6C346BFB8B}</TargetSelect>
+					<TargetSelect TargetId="2">{66689887-CCBD-452C-AC9A-039D997C6E66}</TargetSelect>
 					<TargetSelect TargetId="2">{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</TargetSelect>
-					<LicenseDevice DongleHardwareId="2" DongleDevice="#x03020003" DongleLevel="50" DongleSystemId="{1D80F7C2-31ED-9281-AA5C-29E3F1BB5960}" DongleSerialNumber="0100061368"/>
+					<TargetSelect TargetId="2">{520DE751-9DB6-47CB-8240-BD5C466E7E64}</TargetSelect>
+					<LicenseDevice DongleHardwareId="2" DongleDevice="#x03020003" DongleLevel="50" DongleSystemId="{1D80F7C2-31ED-9281-AA5C-29E3F1BB5960}" DongleSerialNumber="0100061368" DongleCacheLicense="true"/>
 				</Target>
 			</Licenses>
 			<Tasks>
-				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" DisableFpExceptions="true" AdtTasks="true">
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" Affinity="#x00000008" DisableFpExceptions="true" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
-				<Task Id="6" Priority="3" CycleTime="10000" AmsPort="351" AdtTasks="true">
+				<Task Id="6" Priority="3" CycleTime="10000" AmsPort="351" Affinity="#x00000008" AdtTasks="true">
 					<Name>PiezoDriver</Name>
 				</Task>
-				<Task Id="7" Priority="1" CycleTime="20000" AmsPort="352" AdtTasks="true">
+				<Task Id="7" Priority="1" CycleTime="20000" AmsPort="352" Affinity="#x00000008" AdtTasks="true">
 					<Name>SerialIO</Name>
 				</Task>
 			</Tasks>
@@ -32,6 +41,7 @@
 		</Motion>
 		<Plc>
 			<Project File="tmo_optics.xti"/>
+			<PlcAuxTask Affinity="#x00000008"/>
 		</Plc>
 		<Io>
 			<Device File="Device 1 (EtherCAT).xti" Id="1"/>
