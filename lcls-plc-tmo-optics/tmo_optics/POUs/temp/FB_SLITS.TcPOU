@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FB_SLITS" Id="{b20ac175-27c9-0d05-3c79-6a95fe08ff7d}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_SLITS
 VAR_IN_OUT
@@ -217,6 +217,10 @@ VAR
     AptArrayStatus AT %Q* : ST_PMPS_Aperture_IO;
     AptArrayReq AT %I* : ST_PMPS_Aperture_IO;
 
+    rApertureOffsetX	: REAL :=  5;
+    rApertureOffsetY	: REAL :=  5;
+    rCenterOffsetX 	: REAL := -1;
+    rCenterOffsetY 	: REAL := -1;
 END_VAR
 
 
@@ -290,21 +294,21 @@ END_IF
 
 
 //Calculate requested target positions from requested gap and center
-fPosTopBlade := (rReqApertureSizeY/2) + (rReqCenterY + rEncoderOffsetTop) ;
-fPosBottomBlade := (-1*rReqApertureSizeY/2) + (rReqCenterY+rEncoderOffsetBottom);
+fPosTopBlade := ((rReqApertureSizeY-rApertureOffsetY)/2) + ((rReqCenterY-rCenterOffsetY) + rEncoderOffsetTop) ;
+fPosBottomBlade := (-1*(rReqApertureSizeY-rApertureOffsetY)/2) + ((rReqCenterY-rCenterOffsetY)+rEncoderOffsetBottom);
 
-fPosNorthBlade := (rReqApertureSizeX/2) + (rReqCenterX + rEncoderOffsetNorth);
-fPosSouthBlade := (-1*rReqApertureSizeX/2) + (rReqCenterX + rEncoderOffsetSouth);
+fPosNorthBlade := ((rReqApertureSizeX-rApertureOffsetX)/2) + ((rReqCenterX-rCenterOffsetX) + rEncoderOffsetNorth);
+fPosSouthBlade := (-1*(rReqApertureSizeX-rApertureOffsetX)/2) + ((rReqCenterX-rCenterOffsetX) + rEncoderOffsetSouth);
 
 
 //Calculate actual gap and center from actual stages positions
-rActApertureSizeX := LREAL_TO_REAL((stNorthBlade.stAxisStatus.fActPosition - rEncoderOffsetNorth) - (stSouthBlade.stAxisStatus.fActPosition- rEncoderOffsetSouth));
+rActApertureSizeX := rApertureOffsetX + LREAL_TO_REAL((stNorthBlade.stAxisStatus.fActPosition - rEncoderOffsetNorth) - (stSouthBlade.stAxisStatus.fActPosition- rEncoderOffsetSouth));
 
-rActApertureSizeY := LREAL_TO_REAL((stTopBlade.stAxisStatus.fActPosition - rEncoderOffsetTop) - (stBottomBlade.stAxisStatus.fActPosition - rEncoderOffsetBottom));
+rActApertureSizeY := rApertureOffsetY + LREAL_TO_REAL((stTopBlade.stAxisStatus.fActPosition - rEncoderOffsetTop) - (stBottomBlade.stAxisStatus.fActPosition - rEncoderOffsetBottom));
 
-rActCenterX := LREAL_TO_REAL((((stNorthBlade.stAxisStatus.fActPosition - rEncoderOffsetNorth)  + (stSouthBlade.stAxisStatus.fActPosition - rEncoderOffsetSouth ))/2));
+rActCenterX := rCenterOffsetX + LREAL_TO_REAL((((stNorthBlade.stAxisStatus.fActPosition - rEncoderOffsetNorth)  + (stSouthBlade.stAxisStatus.fActPosition - rEncoderOffsetSouth ))/2));
 
-rActCenterY := LREAL_TO_REAL((((stTopBlade.stAxisStatus.fActPosition - rEncoderOffsetTop) + (stBottomBlade.stAxisStatus.fActPosition - rEncoderOffsetBottom))/2));
+rActCenterY := rCenterOffsetY + LREAL_TO_REAL((((stTopBlade.stAxisStatus.fActPosition - rEncoderOffsetTop) + (stBottomBlade.stAxisStatus.fActPosition - rEncoderOffsetBottom))/2));
 
 
 
